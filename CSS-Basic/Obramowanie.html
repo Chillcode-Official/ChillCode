@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obramowanie-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Przepełnienie-Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Dopełnienie</a></li>
+            <li><a href="Obramowanie.html">Obramowanie</a></li>
+            <li><a href="Zarys.html">Zarys</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Border - Obramowanie CSS</h1>
+        <div class="section-with-image">
+            <p>
+                W CSS, border to właściwość, która umożliwia dodanie obramowania wokół elementu HTML. Obramowanie
+                składa się z trzech głównych części: szerokości, stylu i koloru. Szerokość określa grubość linii,
+                styl określa jak linie będą wyglądać (np. ciągłe, kropkowane, grube itp.), a kolor określa kolor
+                linii. Obramowanie można ustawić na jednej, kilku lub wszystkich stronach elementu.
+            </p>
+            <img src="/img/vector32.png" alt="">
+        </div>
+        <p class="text-container no-margin-top article tooltip">
+            CSS pozwala na bardzo dokładne kontrolowanie wyglądu obramowania. Oto główne aspekty obramowania, które można ustawić:
+            <code><a href="#" pro-tip="Można ustawić grubość obramowania w pikselach, punktach lub procentach.">width</a></code>
+            <code><a href="#" pro-tip="Można wybrać jeden z kilku dostępnych stylów, takich jak ciągły (ang. solid), kropkowany (ang. dotted), przerywany (ang. dashed) itp.">style</a></code>
+            <code><a href="#" pro-tip="Można ustawić kolor obramowania za pomocą nazwy koloru, kodu szesnastkowego lub RGB/RGBA.">color</a></code>
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  border-bottom-style: dotted;
+  border-left-color: red;
+  border-bottom-color: navajowhite;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border: 2px solid black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div style="padding: 6px; border-width: 4px;border-style: solid;border-color: black;border-bottom-style: dotted;border-left-color: red;border-bottom-color: navajowhite;  color: #cdd7ce">
+            Ten element div posiada wiele elementów obramowania
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                W powyższym przykładzie ustawiono grubość obramowania na 2 piksele, styl na "solid", a kolor na
+                czarny. Obramowanie górne ma grubość 4 pikseli, obramowanie dolne jest kropkowane, a obramowanie lewe jest czerwone.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Wszystkie Style Obramowania W CSS</h2>
+
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container gray-container no-margin-bottom"><code><a href="#" pro-tip="">Solid</a></code> Obramowanie jest ciągłe i jednolite.</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="">Dotted</a></code> Obramowanie składa się z kropek.</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container gray-container no-margin-bottom"><code><a href="#" pro-tip="">Dashed</a></code> Obramowanie składa się z kresek.</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="">Double</a></code> Definiuje podwójną granicę</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: double;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container gray-container no-margin-bottom"><code><a href="#" pro-tip="">Groove</a></code> Obramowanie jest rowkowane</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="">Ridge</a></code>Definiuje prążkowane obramowanie</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: groove;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: ridge;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container gray-container no-margin-bottom"><code><a href="#" pro-tip="">Inset</a></code> Definiuje wstawioną ramkę</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="">Outset</a></code>Definiuje granicę początkową</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: inset;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: outset;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container gray-container no-margin-bottom"><code><a href="#" pro-tip="">none</a></code> Obramowanie nie jest widoczne.</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="">hidden</a></code> Obramowanie jest ukryte</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 0;
+  border-style: none;
+}
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+element {
+  border-width: 2px;
+  border-style: hidden;
+  border-color: black;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Przykłady Wszystkich Obramowań</h2>
+        <div class="browser long-browser">
+            <p style="border-color: black; border-style: solid;padding:2px 7px;">Solid</p>
+            <p style="border-color: black; border-style: Dotted;padding:2px 7px;">Dotted</p>
+            <p style="border-color: black; border-style: Dashed;padding:2px 7px;">Dashed</p>
+            <p style="border-color: black; border-style: Double;padding:2px 7px;">Double</p>
+            <p style="border-color: black; border-style: Groove;padding:2px 7px;">Groove</p>
+            <p style="border-color: black; border-style: Ridge;padding:2px 7px;">Ridge</p>
+            <p style="border-color: black; border-style: Inset;padding:2px 7px;">Inset</p>
+            <p style="border-color: black; border-style: Outset;padding:2px 7px;">Outset</p>
+            <p style="border-color: black; border-style: none;padding:2px 7px;">none</p>
+            <p style="border-color: black; border-style: hidden;padding:2px 7px;">hidden</p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Obramowanie może zajmować dużo miejsca i wpłynąć na wygląd strony. Dlatego ważne jest,
+                aby dobrze przemyśleć ustawienia obramowania i upewnić się, że nie wprowadzają one negatywnego
+                wpływu na wygląd strony.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Zarys.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmienne C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+
+        <!--Zmienne w c# pierwszy artykuł-->
+
+        <h1>Zmienne Języka C#</h1>
+        <div class="section-with-image">
+            <div class="text-content">
+                <p>
+                    Zmienna w języku C# to pojemnik, który może przechowywać wartość.
+                    Zmienne są używane do przechowywania wielu różnych danych które
+                    są wykorzystywane w programie. Każda zmienna musi mieć określony
+                    typ, który określa rodzaj danych, jakie może przechowywać.
+                    Na przykład zmienna typu int (liczba całkowita) może
+                    przechowywać liczby całkowite, zmienne typu string ciąg znaków.
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector10.png" alt="">
+            </div>
+        </div>
+        <p class="text-container red-container">
+            Zmienne mogą być używane w programie do przechowywania
+            różnych danych, takich jak liczby, ciągi znaków, obiekty i wiele innych.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int x; // deklaracja zmiennej x typu int
+
+string name; // deklaracja zmiennej name typu string (ciąg znaków)
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+
+        <!--Definiowanie w c# drugi artykuł-->
+
+        <h1>Definiowanie zmiennych w C#</h1>
+        <div class="section-with-image">
+            <p>
+                Definiowanie zmiennych to proces tworzenia zmiennych w programie.
+                W języku C#, aby utworzyć zmienną, należy najpierw zadeklarować
+                ją, określając jej typ i nazwę. Następnie można przypisać jej
+                początkową wartość, jeśli to konieczne.
+            </p>
+            <div>
+                <img src="/img/vector4.png" alt="">
+            </div>
+        </div>
+        <p class="text-container green-container">
+            Jeśli zadeklarujesz zmienną typu int o nazwie "y",
+            ale nie przypiszesz jej żadnej wartości początkowej,
+            to jej domyślna wartość będzie równa 0.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int y;   //Domyślna wartość jest równa 0
+
+int x = 8;  //Deklaracja zmiennej x oraz domyślne przypisanie wartości 8
+
+string name = "Jake"  //deklaracja zmiennej name oraz przypisanie jej wartości "Jake"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container">
+            Możesz również zadeklarować kilka zmiennych jednocześnie, odzielając
+            je przcinkami, możesz wybrać odpowiedni typ danych dla swoich
+            potrzeb i użyć go do zadeklarowania zmiennej. Więcej informacji
+            o typach danych w języku C# można znaleźć karcie "Typy Dancyh".
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int a, b, c;  //deklaracja trzech zmiennych typu int o nazwach a, b i c
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+
+        <!--inicjowanie zmiennych c#-->
+
+        <h1>Inicjowanie zmiennych w C#</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Inicjowanie zmiennych to proces przypisywania początkowej wartości.
+                przy użyciu operatora przypisania <code><a href="#" pro-tip="hej">=</a></code>
+                możesz inicjować zmienne. Inicjowanie zmiennych jest ważne, ponieważ pozwala uniknąć błędów w kodzie i zapewnia, że
+                <code><a href="#" pro-tip="hej">zmienne</a></code>będą miały odpowiednie wartości początkowe dla swoich typów.
+            </p>
+            <div>
+                <img src="/img/vector6.png" alt="">
+            </div>
+        </div>
+        <p class="text-container no-margin-top">
+            Możesz również inicjować zmienną później, po jej zadeklarowaniu,
+            używając ponownie operatora przypisania.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int y;   // deklaracja zmiennej y typu int
+
+y = 10;   // inicjowanie zmiennej y wartością 10
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+
+        <!--Akceptowanie danych w c#-->
+
+        <h1>Akceptowanie danych od użytkownika </h1>
+        <div class="page-header"></div>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                W języku C# istnieje kilka sposobów na akceptowanie danych
+                od użytkownika. Jednym z najprostszych sposobów jest użycie
+                metody <code><a href="#" pro-tip="hej">Console.ReadLine()</a></code> Metoda ta pozwala odczytać ciąg
+                znaków, który zostanie wprowadzony przez użytkownika za pomocą
+                klawiatury.
+            </p>
+            <div class="images3">
+                <img src="/img/vector9.png" alt="">
+            </div>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+ Console.WriteLine("Proszę podać swoje imię:");
+
+ string name = Console.ReadLine();
+
+//output: Ciąg znaków wpisany przez użytkownika
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Metoda Console.ReadLine() zwraca ciąg znaków, więc
+            jeśli chcesz zapisać dane wejściowe użytkownika do
+            zmiennej typu innego niż string. Możesz użyć klasy <code><a href="#" pro-tip="hej">Convert</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+ Console.WriteLine("ile ma lat twój komputer:")
+
+ int wiek_komputera = Convert.ToInt32(Console.WriteLine());
+
+//output: Liczba wpisana przez użytkownika w konsoli
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Innym sposobem na akceptowanie danych od użytkownika jest użycie
+            metody <code><a href="#" pro-tip="hej">Parse</a></code> lub <code><a href="#" pro-tip="hej">TryParse</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+ Console.WriteLine("Podaj swój wiek:");
+
+ string wpisWieku;
+
+ int wiek = int.Parse(wpisWieku);
+
+//output: Liczba wpisana przez użytkownika w konsoli
+                </code>
+            </pre>
+        </div>
+        <div class="btn">
+            <a href="Pola.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>

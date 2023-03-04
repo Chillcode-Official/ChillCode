@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulacja_Domem-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-JavaScript.html">Czym jest JavaScript</a></li>
+            <li><a href="Podstawowa-skladnia-JavaScript.html">Podstawowa Składnia</a></li>
+            <li><a href="Wyjscie(output).html">Wyświetlanie</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Typy-Danych.html">Typy-Danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Operatory.html">Operatory</a></li>
+            <li><a href="Instrukcje-Warunkowe.html">Instrukcje-Warunkowe</a></li>
+            <li><a href="Pętle.html">Pętle</a></li>
+            <li><a href="Funkcje.html">Funkcje</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Obiekty.html">Obiekty</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Wartosci.html">Wartosci</a></li>
+            <li><a href="Referencje.html">Referencje</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Eventy.html">Eventy</a></li>
+            <li><a href="Manipulacja_DOM-em.html">Manipulacja_DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Biblioteki-JavaScript.html">Biblioteki-JavaScript</a></li>
+            <li><a href="Debugowanie-Kodu.html">Debugowanie-Kodu</a></li>
+            <li><a href="Testowanie-Kodu.html">Testowanie-Kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Czym jest (DOM)</h1>
+        <div class="section-with-image">
+            <p>
+                DOM jest fundamentalnym elementem programowania aplikacji webowych i jego zrozumienie jest kluczowe
+                dla tworzenia interaktywnych stron internetowych. DOM jest drzewem składającym się z elementów HTML,
+                które są reprezentowane jako obiekty w języku JavaScript. Każdy element HTML jest reprezentowany jako
+                obiekt, który można manipulować za pomocą kodu JavaScript.
+            </p>
+            <img src="/img/vector96.png" alt="">
+        </div>
+        <p class="text-container article tooltip">
+            Metoda <code><a href="#" pro-tip="">document.querySelector()</a></code> jest jednym ze sposobów na uzyskanie dostępu do elementu DOM. Można też
+            uzyskać dostęp do elementu poprzez identyfikator np <code><a href="#" pro-tip="">document.getElementById()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+const element = document.getElementById('my-element');
+element.innerHTML = 'Hello World!';
+                </code>
+            </pre>
+        </div>
+        <p class="text-container highlight-text">
+            Reakcja na kliknięcie przycisku o identyfikatorze <code>my-button</code>
+        </p>
+        <div class="code-block">
+             <pre>
+                 <code>
+const button = document.getElementById('my-button');
+button.addEventListener('click', function() {
+  console.log('Button was clicked');
+});
+                 </code>
+             </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-no-margin-top tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Metoda <code><a href="#" pro-tip="">document.getElementById()</a></code> jest prostym sposobem na uzyskanie dostępu do elementu za
+                pomocą jego identyfikatora. Jeśli jednak chcesz wybrać elementy na podstawie innych kryteriów,
+                na przykład klasy CSS, tagu lub selektora, to metoda <code><a href="#" pro-tip="">document.querySelector()</a></code> będzie bardziej odpowiednia.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Manipulacja Domem</h1>
+        <div class="section-with-image">
+            <p>
+                Manipulacja DOM-em (ang. Document Object Model) to proces modyfikowania drzewa elementów HTML i XML w
+                przeglądarce internetowej za pomocą języka JavaScript. DOM to reprezentacja struktury dokumentu HTML lub
+                XML, w postaci drzewa, które składa się z elementów HTML lub XML i atrybutów. Każdy element jest
+                reprezentowany jako obiekt w modelu DOM, co umożliwia programistom manipulowanie tymi elementami z poziomu skryptów JavaScript.
+            </p>
+            <div>
+                <img src="/img/vector165.png" alt="">
+            </div>
+        </div>
+        <p class="text-container lightGreen-container article tooltip no-margin-top">
+            W JavaScript można uzyskać dostęp do <code><a href="#" pro-tip="">elementów DOMU</a></code> i zmieniać ich właściwości i styl. Oto kilka przykładów:
+        </p>
+        <div class="double-elements">
+            <p class="text-container green-container">Dodanie nowego elementu do strony:</p>
+            <p class="text-container green-container">Dodanie obsługi zdarzenia kliknięcia przycisku:</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+// utworzenie nowego elementu div
+const newElement = document.createElement('div');
+
+// dodanie tekstu do nowego elementu
+newElement.innerHTML = 'Nowy element';
+
+// dodanie nowego elementu do drzewa DOM
+document.body.appendChild(newElement);
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+// pobranie przycisku o ID 'my-button'
+const button =document.getElementById('my-button');
+
+// dodanie obsługi zdarzenia kliknięcia
+button.addEventListener('click', function() {
+
+  alert('Kliknięto przycisk!');
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container green-container">Zmiana koloru tła elementu:</p>
+            <p class="text-container green-container">Usunięcie elementu ze strony:</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+// pobranie elementu o ID 'block'
+const element = document.getElementById('block');
+
+// zmiana koloru tła na niebieski
+element.style.backgroundColor = 'blue';
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+// pobranie elementu o ID 'my-element'
+const element = document.getElementById('block');
+
+// usunięcie elementu z drzewa DOM
+element.parentNode.removeChild(element);
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container green-container">Zmiana zawartości elementu:</p>
+            <p class="text-container green-container">Zmiana atrybutu elementu:</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+// pobranie elementu o ID 'block'
+const element = document.getElementById('block');
+
+// zmiana zawartości elementu
+element.innerHTML = 'Nowa zawartość';
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+// pobranie elementu obrazka o ID 'my-image'
+const image = document.getElementById('my-image');
+
+// zmiana atrybutu 'src'
+image.setAttribute('src', 'new-image.jpg');
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="alert-card alert-card3 alert-card-no-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Te to tylko podstawowe przykłady manipulowania DOM w JavaScript. Istnieje wiele innych metod i właściwości, które można wykorzystać do tworzenia interaktywnych aplikacji webowych.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Metody DOMU</h1>
+        <div class="section-with-image">
+            <p>
+                Te przykłady pokazują jak używać niektórych z najważniejszych metod DOM w języku JavaScript.
+                Są one tylko wstępem i powinny dać Ci wyobrażenie o tym, jak można z nich korzystać w swoich
+                projektach. W rzeczywistości te metody są bardziej złożone i pozwalają na wiele innych ciekawych
+                rzeczy. Zaleca się zapoznanie się z dokumentacją języka JavaScript, aby uzyskać pełne rozeznanie
+                w dostępnych metodach i ich możliwościach.
+            </p>
+            <img src="/img/vector155.png" alt="">
+        </div>
+        <div class="double-elements">
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">document.querySelector()</a></code>- zwraca pierwszy element zgodny z podanym selektorem </p>
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">element.innerHTML</a></code>- zwraca lub ustawia HTML wewnątrz elementu</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const header = document.querySelector('header');
+header.style.backgroundColor = 'red';
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const list = document.querySelector(&apos;ul&apos;);
+list.innerHTML = &apos;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;li&gt;Item 3&lt;/li&gt;&apos;;
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">element.classList</a></code>- zwraca listę klas dla elementu i pozwala na dodawanie, usuwanie lub sprawdzanie obecności klas</p>
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">document.createElement()</a></code>- tworzy nowy element DOM</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const button = document.querySelector('button');
+button.classList.add('active');
+button.classList.remove('active');
+console.log(button.classList.contains('active'));
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const newListItem = document.createElement('li');
+newListItem.innerText = 'Item 4';
+const list = document.querySelector('ul');
+list.appendChild(newListItem);
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">element.setAttribute()</a></code>- ustawia wartość atrybutu dla elementu</p>
+            <p class="text-container white-container article tooltip"><code><a href="#" pro-tip="">element.addEventListener()</a></code>- dodaje zdarzenie do elementu</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const image = document.querySelector('img');
+
+image.setAttribute('alt', 'A beautiful sunset');
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+  console.log('Button was clicked');
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="Manipulacja-stylami-CSS.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

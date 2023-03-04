@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pozycja-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Przepełnienie-Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Dopełnienie</a></li>
+            <li><a href="Obramowanie.html">Obramowanie</a></li>
+            <li><a href="Zarys.html">Zarys</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Pozycja W Języku CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Pozycja w CSS określa jak element jest ułożony na stronie internetowej. Właściwość position
+                umożliwia określenie jak element jest umieszczany względem innych elementów i jak będzie się
+                zachowywał podczas przewijania strony.
+            </p>
+            <img src="/img/vector117.png" alt="">
+        </div>
+        <p class="text-container orange-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="Pozycja static jest domyślną i oznacza, że element jest ustawiony w sposób naturalny i nie można go przesunąć.">position: static</a></code> element jest ustawiony w naturalny sposób w tekście i nie można go przesunąć:
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+            <pre>
+                <code>
+div {
+  position: static;
+}
+                </code>
+            </pre>
+            </div>
+            <div class="browser small-browser">
+                <p style="position: static">Ten element &ltp&gt ma pozycję: statyczną</p>
+            </div>
+        </div>
+        <p class="text-container orange-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="Pozycja relative pozwala na ustawienie elementu względem jego pozycji naturalnej. Można go przesunąć za pomocą właściwości top, bottom, left i right.">position: relative</a></code> element jest ustawiony względem swojej pozycji naturalnej, ale można go przesunąć:
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+            <pre>
+                <code>
+div {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+                </code>
+            </pre>
+            </div>
+            <div class="browser small-browser">
+                <p style="position:relative;top:20px;left:30px;">Ten element &ltp&gt ma pozycję: relatywną</p>
+            </div>
+        </div>
+        <p class="text-container orange-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="Pozycja absolute oznacza, że element jest ustawiony względem pierwszego kontenera, który ma pozycję nie-statyczną. Można go przesunąć za pomocą właściwości top, bottom, left i right. Jeśli żaden kontener nie jest ustawiony jako nie-statyczny, element będzie ustawiony względem głównego kontenera (body).">position: absolute</a></code> element jest ustawiony względem pierwszego kontenera, który ma pozycję nie-statyczną (lub względem głównego kontenera, jeśli żaden inny nie jest ustawiony):
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+            <pre>
+                <code>
+div {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 250px;
+  height: 80px;
+}
+                </code>
+            </pre>
+            </div>
+            <div style="position: relative" class="browser small-browser">
+                <div style="border-width:3px;border-style:solid;position: absolute;top: 60px;right: 10px;width: 250px;height: 80px;">
+                    <p>Ten element &ltdiv&gt ma pozycję: absolutną</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-container orange-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="Pozycja fixed oznacza, że element jest ustawiony względem okna przeglądarki i nie zmienia swojej pozycji podczas przewijania. Można go przesunąć za pomocą właściwości top, bottom, left i right.">position: fixed</a></code>  element jest ustawiony względem okna przeglądarki i nie zmienia swojej pozycji podczas przewijania:
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+            <pre>
+                <code>
+div {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+}
+                </code>
+            </pre>
+            </div>
+            <div class="browser small-browser">
+                <p style="position: fixed">Ten element &ltp&gt ma pozycję: fixed</p>
+            </div>
+        </div>
+        <div class="alert-card alert-card3 tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                <code><a href="#" pro-tip="">Kontenery Pozycjonowania</a></code> Każdy element z pozycją nie-statyczną staje się kontenerem pozycjonowania
+                dla elementów z pozycją absolutną i względną.
+            </p>
+        </div>
+        <div class="page-header"></div>
+       <div class="btn">
+           <a href="Przepelnienie.html"><button>Dalej</button></a>
+       </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

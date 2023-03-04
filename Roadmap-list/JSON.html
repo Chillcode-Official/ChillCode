@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>JSON W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                W języku C# istnieje kilka bibliotek, które umożliwiają pracę z danymi JSON. Jedną z
+                najpopularniejszych jest Newtonsoft.Json, która zapewnia funkcje do serializacji i deserializacji
+                danych JSON. Można ją łatwo zaimportować za pomocą narzędzia NuGet. Innymi popularnymi bibliotekami
+                są System.Text.Json oraz Json.NET.
+            </p>
+            <img src="/img/vector50.png" alt="">
+        </div>
+        <p class="text-container gray-container article tooltip">
+            <code><a href="#" pro-tip="">Newtonsoft.Json</a></code> to biblioteka, która jest szeroko stosowana w języku C# do pracy z danymi JSON.
+            Umożliwia ona łatwą <code><a href="#" pro-tip="">serializacje</a></code> i
+            <code><a href="#" pro-tip="">deserializacje</a></code> obiektów C# do formatu JSON oraz odwrotnie.
+        </p>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Aby użyć tej biblioteki, należy ją najpierw zaimportować za pomocą narzędzia NuGet. Następnie,
+                w celu zserializowania obiektu do formatu JSON, można użyć metody JsonConvert.SerializeObject()
+                i podać obiekt jako argument. Analogicznie, aby zdeserializować dane JSON do obiektu C#, można
+                użyć metody JsonConvert.DeserializeObject() i podać typ obiektu docelowego oraz dane JSON jako
+                argumenty.
+            </p>
+        </div>
+        <p class="text-container  gray-container">
+            Oto przykład serializacji obiektu C# do formatu JSON za pomocą biblioteki Newtonsoft.Json:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using Newtonsoft.Json;
+
+class Student
+{
+    public string Imie { get; set; }
+
+    public string Nazwisko { get; set; }
+
+    public int Wiek { get; set; }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Student student = new Student
+        {
+            Imie = "Jan",
+            Nazwisko = "Kowalski",
+            Wiek = 20
+        };
+
+        string json = JsonConvert.SerializeObject(student);
+
+        Console.WriteLine(json);
+    }
+}
+
+
+//output:  {"Imie":"Jan", "Nazwisko":"Kowalski", "Wiek":20}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                Kod powyżej tworzy obiekt typu Student i przypisuje mu odpowiednie wartości. Następnie,
+                obiekt ten jest serializowany do formatu JSON za pomocą metody JsonConvert.SerializeObject()
+                i wynik jest wyświetlany na konsoli.
+            </p>
+        </div>
+        <p class="text-container gray-container">
+            Oto przykład deserializacji danych JSON do obiektu C# za pomocą biblioteki Newtonsoft.Json:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using Newtonsoft.Json;
+
+class Student
+{
+    public string Imie { get; set; }
+
+    public string Nazwisko { get; set; }
+
+    public int Wiek { get; set; }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string json = "{\"Imie\":\"Jan\",\"Nazwisko\":\"Kowalski\",\"Wiek\":20}";
+
+        Student student = JsonConvert.DeserializeObject&ltStudent&gt(json);
+
+        Console.WriteLine("Imie: " + student.Imie);
+
+        Console.WriteLine("Nazwisko: " + student.Nazwisko);
+
+        Console.WriteLine("Wiek: " + student.Wiek);
+    }
+}
+
+
+//output:
+
+Imie: Jan
+Nazwisko: Kowalski
+Wiek: 20
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, dane JSON są przypisane do zmiennej json. Następnie,
+                dane te są deserializowane do obiektu typu Student za pomocą metody JsonConvert.DeserializeObject().
+                Obiekt ten jest następnie wykorzystywany do wyświetlenia poszczególnych właściwości na konsoli.
+            </p>
+        </div>
+        <p class="text-container gray-container">
+            Poniżej przedstawiam kolejny przykład użycia biblioteki Newtonsoft.Json do serializacji i deserializacji danych JSON w języku C#:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Tworzymy listę obiektów do serializacji
+        var produkty = new List&ltProdukt&gt
+        {
+            new Produkt { Nazwa = "Jablko", Cena = 2.5 },
+
+            new Produkt { Nazwa = "Banan", Cena = 1.5 },
+
+            new Produkt { Nazwa = "Pomarańcza", Cena = 3.5 }
+        };
+
+
+        // Serializujemy listę do formatu JSON
+        string json = JsonConvert.SerializeObject(produkty);
+        Console.WriteLine(json);
+
+
+        // Deserializujemy dane JSON do listy obiektów C#
+        List&ltProdukt&gt produkty2 = JsonConvert.DeserializeObject&ltList&ltProdukt&gt&gt(json);
+
+
+        foreach (var produkt in produkty2)
+        {
+            Console.WriteLine(produkt.Nazwa + " - " + produkt.Cena);
+        }
+    }
+}
+
+class Produkt
+{
+    public string Nazwa { get; set; }
+
+    public double Cena { get; set; }
+}
+
+//output:
+
+[{"Nazwa":"Jablko","Cena":2.5}, {"Nazwa":"Banan","Cena":1.5}, {"Nazwa":"Pomarańcza","Cena":3.5}]
+
+Jablko - 2,5
+Banan - 1,5
+Pomarańcza - 3,5
+
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie tworzymy listę obiektów klasy Produkt z kilkoma właściwościami.
+                Następnie korzystając z metody JsonConvert.SerializeObject() serializujemy listę do formatu
+                JSON i wyświetlamy ją na konsoli. Potem za pomocą metody JsonConvert.DeserializeObject&ltT&gt()
+                deserializujemy dane JSON do listy obiektów C# i wyświetlamy informacje o każdym produkcie.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Json.NET to kolejna popularna biblioteka do pracy z danymi JSON w języku C#. Podobnie jak Newtonsoft.Json,
+                umożliwia ona łatwą serializację i deserializację obiektów C# do formatu JSON oraz odwrotnie. Biblioteka
+                ta oferuje również dodatkowe funkcje takie jak obsługa linii typów, kontrola formatowania, a także możliwość
+                dostosowywania procesu serializacji i deserializacji za pomocą atrybutów i konwerterów.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="XML.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

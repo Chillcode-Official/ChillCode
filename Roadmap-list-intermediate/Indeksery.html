@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Indeksery</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Refleksja.html">Refleksja</a></li>
+            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
+            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
+            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+            <li><a href="Indeksery.html">Indeksery</a></li>
+            <li><a href="Delegaty.html">Delegaty</a></li>
+            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Indeksery W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                Indeksery w języku C# pozwalają na dostęp do elementów kolekcji, takiej jak tablica lub lista,
+                za pomocą operatora []. Indekser jest specyficznym rodzajem właściwości, która pozwala na odczytanie
+                lub zapisanie wartości elementu kolekcji za pomocą notacji z indeksem.
+            </p>
+            <img src="/img/vector58.png" alt="">
+        </div>
+        <p class="text-container white-container">
+            przykład użycia indekserów w języku C#, w którym tworzona jest klasa Matrix, reprezentująca
+            macierz o określonym rozmiarze.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Macierz m1 = new Macierz(2, 3);
+        m1[0, 0] = 1;
+        m1[0, 1] = 2;
+        m1[0, 2] = 3;
+        m1[1, 0] = 4;
+        m1[1, 1] = 5;
+        m1[1, 2] = 6;
+
+        Macierz m2 = new Macierz(2, 3);
+        m2[0, 0] = 12;
+        m2[0, 1] = 10;
+        m2[0, 2] = 8;
+        m2[1, 0] = 6;
+        m2[1, 1] = 4;
+        m2[1, 2] = 2;
+
+        Macierz macierz3 = m1 + m2;
+
+        for (int i = 0; i < macierz3.Wiersze; i++)
+        {
+            for (int j = 0; j < macierz3.Kolumny; j++)
+                Console.Write(macierz3[i, j] + " ");
+            Console.WriteLine();
+        }
+
+    }
+}
+
+
+class Macierz
+{
+    private int[,] _macierz;
+
+    public Macierz(int wiersze, int kolumny)
+    {
+        _macierz = new int[wiersze, kolumny];
+    }
+
+
+    public int Wiersze { get { return _macierz.GetLength(0); } }
+    public int Kolumny { get { return _macierz.GetLength(1); } }
+
+
+    public int this[int wiersz, int kolumna]
+    {
+        get { return _macierz[wiersz, kolumna]; }
+        set { _macierz[wiersz, kolumna] = value; }
+    }
+
+
+    public static Macierz operator +(Macierz m1, Macierz m2)
+    {
+        if (m1.Wiersze != m2.Wiersze || m1.Kolumny != m2.Kolumny)
+            throw new Exception("Nie można dodać macierzy o różnych rozmiarach.");
+
+
+        Macierz wynik = new Macierz(m1.Wiersze, m1.Kolumny);
+
+        for (int i = 0; i < m1.Wiersze; i++)
+
+        for (int j = 0; j < m1.Kolumny; j++)
+            wynik[i, j] = m1[i, j] + m2[i, j];
+
+        return wynik;
+    }
+}
+}
+
+
+//output:
+
+13 12 11
+10 9 8
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Przeciążanie Indekserów</h1>
+        <div class="section-with-image">
+             <p>
+                 Przeciążanie indekserów to proces tworzenia kilku różnych indekserów w tej samej klasie, z
+                 różnym zestawem parametrów. Indeksery pozwalają na dostęp do elementów kolekcji za pomocą
+                 notacji z indeksem, takiej jak kolekcja[indeks]
+             </p>
+            <img src="/img/vector64.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Aby przeciążyć indekser, należy utworzyć kilka metod get i/lub set, każda z inną liczbą i typami parametrów.
+            Każda z tych metod będzie reprezentować indekser o innym zestawie parametrów.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKolekcja
+{
+    private int[] _elementy = new int[10];
+
+
+    public int this[int indeks]
+    {
+        get { return _elementy[indeks]; }
+
+        set { _elementy[indeks] = value; }
+    }
+
+
+    public int this[string klucz]
+    {
+        get { return _elementy[int.Parse(klucz)]; }
+
+        set { _elementy[int.Parse(klucz)] = value; }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            W powyższym przykładzie, klasa MyList zawiera dwa różne indeksery: jeden przyjmujący int jako argument,
+            a drugi przyjmujący string. Dzięki temu, możemy ustawić lub pobrać wartość z tablicy _items za pomocą
+            list[0] lub list["1"]
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class MyList
+{
+    private int[] _elementy = new int[10];
+
+    public int this[int indeks]
+    {
+        get { return _elementy[indeks]; }
+
+        set { _elementy[indeks] = value; }
+    }
+
+
+    public int this[string indeks]
+    {
+        get { return _elementy[int.Parse(indeks)]; }
+
+        set { _elementy[int.Parse(indeks)] = value; }
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        MyList lista = new MyList();
+
+        lista[0] = 1;
+
+        lista["1"] = 2;
+
+        Console.WriteLine(lista[0]);
+        Console.WriteLine(lista["1"]);
+    }
+}
+
+
+//output:
+
+1
+2
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Delegaty.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

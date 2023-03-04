@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Klasa</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Szybki-start.html">Szybki start</a></li>
+            <li><a href="Układ-siatki-Grid.html">Układ siatki Grid</a></li>
+            <li><a href="Klasa.html">Klasa</a></li>
+            <li><a href="Style-tekstowe.html">Style-tekstowe</a></li>
+            <li><a href="Komponenty.html">Komponenty</a></li>
+            <li><a href="Zasady-responsywnego-projektowania.html">Zasady-responsywnego-projektowania</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Integracja-z-innymi-bibliotekami.html">Integracja-z-innymi-bibliotekami</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Klasa w Bootstrap</h1>
+        <div class="section-with-image">
+            <p>
+                Klasy Bootstrapa są definiowane jako atrybuty HTML, które można dodać do elementów strony w celu dostosowania ich wyglądu i zachowania. Na przykład, jeśli chcesz dodać styl przycisku do elementu HTML &ltbutton&gt, możesz dodać klasę "btn" do tego elementu.
+            </p>
+            <img src="/img/vector16.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list no-margin-top">
+            <div class="double-elements">
+                <h4>Przykłady klas w Bootstrapie:</h4>
+                <p class="black-list">Więcej znajdziesz tutaj: <a target="_blank" href="https://getbootstrap.com/docs/5.3/components/alerts/">Bootstrap Docs</a></p>
+            </div>
+            <ul class="article tooltip">
+                <li><code><a href="#" pro-tip="">.container</a></code>- definiuje kontener, który ogranicza szerokość treści na stronie</li>
+                <li><code><a href="#" pro-tip="">.row</a></code>- definiuje wiersz w kontenerze</li>
+                <li><code><a href="#" pro-tip="">.btn</a></code>- definiuje przycisk</li>
+                <li><code><a href="#" pro-tip="">.navbar</a></code> - definiuje pasek nawigacyjny</li>
+                <li><code><a href="#" pro-tip="">.form-control</a></code>- definiuje formularz kontrolny (takie jak pole tekstowe lub wybór z listy)</li>
+            </ul>
+        </div>
+
+        <div class="page-header"></div>
+        <p>
+            Oto przykład użycia klas Bootstrapa w jednym bloku kodu HTML:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+      &lt;h2&gt;Nag&lstrok;&oacute;wek&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor son justo malesuada bibendum.&lt;/p&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Przycisk&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-6&quot;&gt;
+      &lt;img src=&quot;obraz.jpg&quot; alt=&quot;Obraz&quot; class=&quot;img-responsive&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <h2>W powyższym kodzie:</h2>
+        <p class="text-container lightGreen-container">
+            Klasa "container" definiuje kontener, który ogranicza szerokość treści na stronie.
+            Klasa "row" definiuje wiersz w kontenerze.
+            Klasy "col-sm-6" definiują dwie kolumny o równej szerokości (50% szerokości wiersza) w wierszu dla widoku na małych i większych ekranach (dla ekranów o szerokości większej lub równej 576 pikseli).
+            Element &lth2&gt i &ltp&gt są zwykłymi elementami HTML. Klasa "btn btn-primary" definiuje przycisk z domyślnym stylem i kolorystyką przycisku głównego. Element &ltimg&gt ma klasę "img-responsive", która sprawia, że obraz dostosowuje się do szerokości kontenera.
+        </p>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Klasy Bootstrapa pozwalają na szybkie projektowanie responsywnych interfejsów użytkownika, ponieważ dostarczają one gotowe style i funkcjonalności, które można łatwo dostosować do własnych potrzeb.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Style-tekstowe.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

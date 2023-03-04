@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ASP.NET(Implementajca-Uwierzytlenienia )</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-ASP.NET-Core.html">Wprowadzenie do ASP.NET-Core</a></li>
+            <li><a href="Szybki-Start.html">Szybki-Start</a></li>
+            <li><a href="Struktura-Projektu.html">Struktura projektu</a></li>
+            <li><a href="Tworzenie-Kontrolerów-Akcji.html">Tworzenie kontrolerów i akcji</a></li>
+            <li><a href="Routing.html">Routing</a></li>
+            <li><a href="Modelowanie-Danych.html">Modelowanie danych</a></li>
+            <li><a href="Widoki-RazorViewEngine-TagHelpers.html">Widoki RazorViewEngine i TagHelpers</a></li>
+            <li><a href="Dostęp-Do-Danych.html">Dostęp do danych</a></li>
+            <li><a href="Middleware.html">Middleware</a></li>
+            <li><a href="Implementacja-Uwierzytelnienia-Autoryzacji.html">Implementacja uwierzytelnienia i autoryzacji</a></li>
+            <li><a href="Obsługa-Błędów.html">Obsługa błędów</a></li>
+            <li><a href="Stylowanie-Aplikacji.html">Stylowanie aplikacji</a></li>
+            <li><a href="Implementacja-Serwisów-RESTful.html">Implementacja serwisów RESTful</a></li>
+            <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
+            <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
+            <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
+            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Implementacja Uwierzytelnienia</h1>
+        <div class="section-with-image">
+            <p>
+                Uwierzytelnienie to proces weryfikacji tożsamości użytkownika. Polega na sprawdzeniu, czy użytkownik jest tym, za kogo się podaje, poprzez weryfikację podanych danych uwierzytelniających, takich jak login i hasło, certyfikat czy token.
+            </p>
+            <img src="/img/vector12.png" alt="">
+        </div>
+       <div class="text-container lightWhite-container black-list no-margin-top">
+           <p class="text-container lightWhite-container no-margin-top">
+               W ASP.NET Core dostępne są różne sposoby implementacji uwierzytelnienia, w zależności od potrzeb aplikacji. W tym odpowiedzi opiszę, jak można zaimplementować uwierzytelnienie w oparciu o uwierzytelnienie oparte na formularzach.
+           </p>
+           <div class="page-header"></div>
+           <div class="line"></div>
+           <div class="text-content">
+               <h3>Krok 1: Dodanie pakietów NuGet</h3>
+               <p>
+                   Aby zaimplementować uwierzytelnienie oparte na formularzach, należy dodać pakiet NuGet Microsoft.AspNetCore.Authentication oraz pakiet zawierający moduł uwierzytelniający dla konkretnego dostawcy, np. Microsoft.AspNetCore.Authentication.Cookies, jeśli chcemy użyć uwierzytelnienia opartego na plikach cookie.
+               </p>
+           </div>
+           <div class="line"></div>
+           <div class="page-header"></div>
+           <div class="text-content">
+                <h3>Krok 2: Konfiguracja usługi uwierzytelniania</h3>
+               <p>
+                   W pliku Startup.cs należy dodać konfigurację usługi uwierzytelniania w metodzie ConfigureServices. Można to zrobić, używając metody AddAuthentication i określając metodę uwierzytelnienia, jaką chcemy użyć. W przypadku uwierzytelnienia opartego na formularzach, można skorzystać z metody AddCookie.
+               </p>
+               <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login";
+    });
+                        </code>
+                    </pre>
+               </div>
+               <div class="line minus-margin-top"></div>
+               <div class="page-header"></div>
+                <div class="text-content">
+                    <h3>Krok 3: Konfiguracja uwierzytelniania w środowisku</h3>
+                    <p>
+                        Następnie należy skonfigurować uwierzytelnienie w środowisku. W pliku Startup.cs należy dodać wywołanie metody UseAuthentication w metodzie Configure.
+                    </p>
+                    <div class="code-block code-block-margin-top">
+                        <pre>
+                            <code>
+app.UseAuthentication();
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+               <div class="line minus-margin-top"></div>
+               <div class="page-header"></div>
+               <div class="text-content">
+                   <h3>Krok 4: Dodanie formularza logowania</h3>
+                   <p>
+                       Aby umożliwić użytkownikowi logowanie, należy dodać formularz logowania w widoku. W formularzu należy przesłać nazwę użytkownika i hasło do kontrolera, który przeprowadzi proces uwierzytelnienia.
+                   </p>
+                   <div class="code-block code-block-margin-top">
+                       <pre>
+                           <code>
+&lt;form method=&quot;post&quot; asp-controller=&quot;Account&quot; asp-action=&quot;Login&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;Username&quot; /&gt;
+    &lt;input type=&quot;password&quot; name=&quot;Password&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Log in&quot; /&gt;
+&lt;/form&gt;
+                           </code>
+                       </pre>
+                   </div>
+               </div>
+               <div class="line minus-margin-top"></div>
+               <div class="page-header"></div>
+               <div class="text-content">
+                   <h3>Krok 5: Konfiguracja autoryzacji</h3>
+                   <p>
+                       Aby skonfigurować autoryzację, należy dodać atrybut [Authorize] do kontrolerów lub akcji, które wymagają uwierzytelnienia. W przypadku uwierzytelnienia opartego na formularzach, można również użyć atrybutu [AllowAnonymous], aby umożliwić dostęp do niektórych akcji bez konieczności logowania.
+                   </p>
+                   <div class="code-block code-block-margin-top">
+                       <pre>
+                           <code>
+[Authorize]
+public class SecureController : Controller
+{
+    // akcje wymagające uwierzytelnienia
+}
+
+[AllowAnonymous]
+public class PublicController : Controller
+{
+    // akcje dostępne dla wszystkich użytkowników
+}
+                           </code>
+                       </pre>
+                   </div>
+                   <div class="line minus-margin-top"></div>
+               </div>
+           </div>
+       </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                To tylko przykładowa implementacja uwierzytelnienia w ASP.NET Core. W zależności od wymagań aplikacji, można skorzystać z innych metod uwierzytelnienia, takich jak uwierzytelnianie tokenów JWT lub uwierzytelnianie przez platformę społecznościową (Facebook, Google, itp.). Implementacja tych metod również wymaga zainstalowania odpowiednich pakietów NuGet i skonfigurowania aplikacji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Obsługa-Błędów.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabele HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Tabele W Języku HTML</h1>
+                <p>
+                    Tabela w języku HTML to struktura danych składająca się z wierszy i komórek,
+                    która jest używana do przedstawienia danych w postaci tabeli.
+                    Tabela HTML jest używana do przedstawiania różnego rodzaju danych,
+                    takich jak dane statystyczne, dane finansowe, dane kontaktowe i inne.
+                </p>
+            </div>
+            <img src="/img/vector60.png" alt="">
+        </div>
+        <p class="text-container azure-container article tooltip no-margin-top">
+            Aby utworzyć tabelę w języku HTML, należy użyć znacznika
+            <code><a href="#" pro-tip="">table</a></code>.
+            Wewnątrz tego znacznika umieszcza się znacznik <code><a href="#" pro-tip="">tr</a></code> (table row) dla każdego wiersza tabeli,
+            a następnie znacznik <code><a href="#" pro-tip="">td</a></code> (table data) dla każdej komórki tabeli. W przykładzie
+            poniżej znajduje się prosta tabela z dwoma wierszami i trzema komórkami:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Imię&lt;/th&gt;
+    &lt;th&gt;Adres&lt;/th&gt;
+    &lt;th&gt;Telefon&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jan Kowalski&lt;/td&gt;
+    &lt;td&gt;ul. Nowa 12, Warszawa&lt;/td&gt;
+    &lt;td&gt;555-555-555&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Maria Nowak&lt;/td&gt;
+    &lt;td&gt;ul. Stroma 23, Krak&oacute;w&lt;/td&gt;
+    &lt;td&gt;555-555-556&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Adam Smith&lt;/td&gt;
+    &lt;td&gt;ul. Wiejska 45, Pozna&nacute;&lt;/td&gt;
+    &lt;td&gt;555-555-557&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+
+            <table>
+                <tr>
+                    <th>Imię</th>
+                    <th>Adres</th>
+                    <th>Telefon</th>
+                </tr>
+                <tr>
+                    <td>Jan Kowalski&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>ul. Nowa 12, Warszawa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>555-555-555</td>
+                </tr>
+                <tr>
+                    <td>Maria Nowak</td>
+                    <td>ul. Stroma 23, Kraków</td>
+                    <td>555-555-556</td>
+                </tr>
+                <tr>
+                    <td>Adam Smith</td>
+                    <td>ul. Wiejska 45, Poznań</td>
+                    <td>555-555-557</td>
+                </tr>
+            </table>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Zasięg Tabeli</h1>
+        <div class="section-with-image">
+            <p>
+                Tabela HTML ma zasięg, który definiuje zakres komórek, do których dotyczy nagłówek lub stopka tabeli.
+                Zasięg nagłówka tabeli określa, które komórki są opisane przez nagłówek, a zasięg stopki tabeli
+                określa, które komórki są opisane przez stopkę.
+            </p>
+            <img src="/img/vector72.png" alt="">
+        </div>
+        <p class="text-container article tooltip no-margin-top">
+            Istnieją trzy rodzaje zasięgu:
+            <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w kolumnie">col</a></code>
+            <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w wierszu">row</a></code>
+            <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w grupie wierszy">rowgroup</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;table&#x3E;
+  &#x3C;tr&#x3E;
+    &#x3C;th scope=&#x22;col&#x22;&#x3E;Nazwa produktu&#x3C;/th&#x3E;
+    &#x3C;th scope=&#x22;col&#x22;&#x3E;Cena&#x3C;/th&#x3E;
+    &#x3C;th scope=&#x22;col&#x22;&#x3E;Ilo&#x15B;&#x107;&#x3C;/th&#x3E;
+  &#x3C;/tr&#x3E;
+  &#x3C;tr&#x3E;
+    &#x3C;th scope=&#x22;row&#x22;&#x3E;Mleko&#x3C;/th&#x3E;
+    &#x3C;td&#x3E;3,50 z&#x142;&#x3C;/td&#x3E;
+    &#x3C;td&#x3E;10&#x3C;/td&#x3E;
+  &#x3C;/tr&#x3E;
+  &#x3C;tr&#x3E;
+    &#x3C;th scope=&#x22;row&#x22;&#x3E;Chleb&#x3C;/th&#x3E;
+    &#x3C;td&#x3E;2,50 z&#x142;&#x3C;/td&#x3E;
+    &#x3C;td&#x3E;20&#x3C;/td&#x3E;
+  &#x3C;/tr&#x3E;
+  &#x3C;tr&#x3E;
+    &#x3C;th scope=&#x22;row&#x22;&#x3E;Jajka&#x3C;/th&#x3E;
+    &#x3C;td&#x3E;5,00 z&#x142;&#x3C;/td&#x3E;
+    &#x3C;td&#x3E;15&#x3C;/td&#x3E;
+  &#x3C;/tr&#x3E;
+&#x3C;/table&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="double-elements">
+            <div class="browser browser-no-margin-top">
+                <table>
+                    <tr>
+                        <th scope="col">Nazwa produktu</th>
+                        <th scope="col">Cena</th>
+                        <th scope="col">Ilość</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mleko</th>
+                        <td>3,50 zł</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chleb</th>
+                        <td>2,50 zł</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jajka</th>
+                        <td>5,00 zł</td>
+                        <td>15</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="alert-card article tooltip">
+                <img src="/img/warning.png" alt="">
+                <b>Uwaga</b>
+                <p>
+                    Aby określić zasięg nagłówka lub stopki tabeli, należy użyć atrybutu
+                    <code><a href="#" pro-tip="">scope</a></code> znacznika
+                    <code><a href="#" pro-tip="">th</a></code> lub
+                    <code><a href="#" pro-tip="">tf</a></code>
+                </p>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Sekcje Tabeli</h1>
+        <div class="section-with-image">
+            <p>
+                Sekcje tabeli HTML służą do grupowania komórek tabeli w logiczne grupy, ułatwiając organizację i stylizację danych.
+                co wpływa na lepszą czytelność tabeli.
+            </p>
+            <img src="/img/vector84.png" alt="">
+        </div>
+        <p class="text-container gray-container article tooltip no-margin-top">
+            Oto przykład tabeli HTML z zastosowaniem sekcji
+            <code><a href="#" pro-tip="zawiera nagłówki tabeli, które są wyświetlane na górze tabeli. Zwykle służy do wyświetlania nazw kolumn tabeli.">&ltthead&gt</a></code>
+            <code><a href="#" pro-tip="zawiera główne dane tabeli. Zwykle służy do wyświetlania danych tabeli.">&lttbody&gt</a></code>
+            <code><a href="#" pro-tip="zawiera podsumowanie danych tabeli, które jest wyświetlane na dole tabeli. Zwykle służy do wyświetlania sumy, średniej, itp.">&lttfoot&gt</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;Produkt&lt;/th&gt;
+      &lt;th&gt;Cena&lt;/th&gt;
+      &lt;th&gt;Ilo&sacute;&cacute;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Komputer&lt;/td&gt;
+      &lt;td&gt;3000$&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Monitor&lt;/td&gt;
+      &lt;td&gt;500$&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;3&quot;&gt;Suma&lt;/td&gt;
+      &lt;td&gt;15000$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser browser-no-margin-top">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produkt</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;1</td>
+                    <td>&nbsp;&nbsp;&nbsp;Komputer</td>
+                    <td>&nbsp;&nbsp;&nbsp;3000$</td>
+                    <td>&nbsp;&nbsp;&nbsp;5</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;2</td>
+                    <td>&nbsp;&nbsp;&nbsp;Monitor</td>
+                    <td>&nbsp;&nbsp;&nbsp;500$</td>
+                    <td>&nbsp;&nbsp;&nbsp;10</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="1">Suma:</td>
+                    <td>20000$</td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Atrybuty Tabeli</h1>
+        <div class="section-with-image">
+            <p>
+                Atrybuty tabeli HTML to opcjonalne parametry, które można dodać do elementu &lttable&Gt lub do
+                innych elementów wewnątrz tabeli, aby zmienić wygląd lub zachowanie tabeli, aby była ona czytelna i
+                przejrzysta dla użytkownika.
+            </p>
+            <img src="/img/vector62.png" alt="">
+        </div>
+        <div class="text-container lightBrown-container article tooltip">
+            <p>
+                najważniejszych atrybutów tabeli HTML to:
+                <code><a href="#" pro-tip="określa grubość ramki wokół tabeli.">border</a></code>
+                <code><a href="#" pro-tip="określa odstęp między krawędzią komórki a jej zawartością.">cellpadding</a></code>
+                <code><a href="#" pro-tip="określa odstęp między komórkami tabeli.">cellspacing</a></code>
+                <code><a href="#" pro-tip="określa szerokość tabeli.">width</a></code>
+                <code><a href="#" pro-tip="określa wysokość tabeli.">height</a></code>
+                <code><a href="#" pro-tip="określa kolor tła tabeli">bgcolor</a></code>
+                <code><a href="#" pro-tip="określa krótki opis tabeli (dostępny dla czytników ekranów)">summary</a></code>
+                <code><a href="#" pro-tip="okre&sacute;la pozycj&eogon; tabeli na stronie (mo&zdot;liwe warto&sacute;ci: &quot;left&quot;, &quot;center&quot;, &quot;right&quot;)">align</a></code>
+                <code><a href="#" pro-tip="określa położenie zawartości komórek tabeli na osi pionowej (top, middle, bottom).">valign</a></code>
+                <code><a href="#" pro-tip="określa liczbę kolumn, które ma zajmować dana komórka.">colspan</a></code>
+                <code><a href="#" pro-tip="określa liczbę wierszy, które ma zajmować dana komórka.">rowspan</a></code>
+                <code><a href="#" pro-tip="określa nagłówek tabeli (wymagany element nagłówka dla tabel)">caption</a></code>
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+
+&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; width=&quot;50%&quot; align=&quot;center&quot; bgcolor=&quot;#f08080&quot;&gt;
+  &lt;caption&gt;Lista produkt&oacute;w&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Nazwa produktu&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Cena&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Ilo&sacute;&cacute;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Mleko&lt;/th&gt;
+      &lt;td&gt;3,50 z&lstrok;&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Chleb&lt;/th&gt;
+      &lt;td&gt;2,50 z&lstrok;&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;Jajka&lt;/th&gt;
+      &lt;td&gt;5,00 z&lstrok;&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;2&quot;&gt;&Lstrok;&aogon;czna ilo&sacute;&cacute; produkt&oacute;w:&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;summary&gt;Tabela przedstawia list&eogon; produkt&oacute;w z ich cenami i ilo&sacute;ci&aogon; dost&eogon;pn&aogon; w sklepie&lt;/summary&gt;
+&lt;/table&gt;
+
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <table border="1" cellpadding="5" cellspacing="0" width="50%" align="center" bgcolor="#f08080">
+                <caption>Lista produktów</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Nazwa produktu</th>
+                    <th scope="col">Cena</th>
+                    <th scope="col">Ilość</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Mleko</th>
+                    <td>3,50 zł</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Chleb</th>
+                    <td>2,50 zł</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <th scope="row">Jajka</th>
+                    <td>5,00 zł</td>
+                    <td>15</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2">Łączna ilość produktów:</td>
+                    <td>45</td>
+                </tr>
+                </tfoot>
+                <summary>Tabela przedstawia listę produktów z ich cenami i ilością dostępną w sklepie</summary>
+            </table>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Symbole.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

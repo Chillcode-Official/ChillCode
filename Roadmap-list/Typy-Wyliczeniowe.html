@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Typy-Wartościowe C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Typy Wyliczeniowe</h1>
+        <div class="section-with-image">
+            <p>
+                Typy wyliczeniowe (zwane również "enumami") w języku C# są sposobem na zdefiniowanie zestawu
+                nazwanych wartości. Są one przydatne w sytuacjach, gdy zmienna może mieć tylko jedną z
+                predefiniowanego zestawu wartości. Typy wyliczeniowe są definiowane przy użyciu słowa kluczowego
+                enum, a wartości wewnątrz typu wyliczeniowego są określane jako lista nazw oddzielonych przecinkami.
+            </p>
+            <img src="/img/vector56.png" alt="">
+        </div>
+        <p class="text-container purple-container article tooltip no-margin-top">
+            Typy takie w języku C# deklarowane są za pomocą słowa kluczowego <code><a href="#" pro-tip="">enum</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+enum Dni { Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Domyślnie typ podstawowy typu wyliczeniowego jest int, ale może być zmieniony na
+            dowolny typ całkowity, taki jak byte, sbyte, short, ushort, int, uint, long lub ulong.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+enum Dni : byte { Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Oto przykład użycia typów wyliczeniowych do reprezentowania kolorów:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+enum Kolory { Czerwony, Zielony, Niebieski };
+
+Kolory mójKolor = Kolory.Zielony;
+
+
+
+if (mójKolor == Kolory.Czerwony)
+{
+    Console.WriteLine("Kolor jest czerwony.");
+}
+
+
+else if (mójKolor == Kolory.Zielony)
+{
+    Console.WriteLine("Kolor jest zielony.");
+}
+
+
+else if (mójKolor == Kolory.Niebieski)
+{
+    Console.WriteLine("Kolor jest niebieski.");
+}
+
+
+//output: Kolor jest zielony
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Można również przypisać wartości liczbowe do nazw wartości typu wyliczeniowego:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+enum PoryRoku { Zima = 1, Wiosna = 2, Lato = 3, Jesień = 4 };
+
+PoryRoku obecnaPoraRoku = PoryRoku.Wiosna;
+
+Console.WriteLine("Obecna pora roku to: " + obecnaPoraRoku);
+
+
+//output: Obecna pora roku to: Wiosna
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Możemy również używać typów wyliczeniowych jako argumentów funkcji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+void MalujPokój(Kolory kolor)
+{
+    switch (kolor)
+    {
+        case Kolory.Czerwony:
+            Console.WriteLine("Malowanie pokoju na czerwono...");
+            break;
+
+
+        case Kolory.Zielony:
+            Console.WriteLine("Malowanie pokoju na zielono...");
+            break;
+
+
+        case Kolory.Niebieski:
+            Console.WriteLine("Malowanie pokoju na niebiesko...");
+            break;
+    }
+}
+
+MalujPokój(Kolory.Niebieski);
+
+
+//output: Malowanie pokoju na niebiesko
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                typy wyliczeniowe są przydatne do reprezentowania zestawów wartości, które mogą być przypisane
+                do zmiennych, oraz ułatwiają kodowanie instrukcji warunkowych i funkcji.
+            </p>
+        </div>
+        <div class="btn">
+            <a href="Interfejsy.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>

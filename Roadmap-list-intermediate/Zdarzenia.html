@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zdarzenia</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Refleksja.html">Refleksja</a></li>
+            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
+            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
+            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+            <li><a href="Indeksery.html">Indeksery</a></li>
+            <li><a href="Delegaty.html">Delegaty</a></li>
+            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Zdarzenia W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                W języku C# zdarzenie to mechanizm pozwalający na rejestrowanie i reagowanie na różnego rodzaju
+                sytuacje, takie jak kliknięcie przycisku, zmiana wartości pola tekstowego, itp. Zdarzenia są
+                zdefiniowane jako specjalne typy delegatów, które mogą być używane do rejestrowania i
+                wywoływania procedur obsługi zdarzeń.
+            </p>
+            <img src="/img/vector89.png" alt="">
+        </div>
+        <p class="text-container blue-container no-margin-top">
+            Aby utworzyć zdarzenie, należy najpierw zdefiniować delegat, który określa sygnaturę metody
+            obsługującej zdarzenie. Następnie należy utworzyć zmienną, która będzie przechowywała instancję
+            tego delegatu, oraz metodę, która będzie wywoływana, gdy zdarzenie zostanie zgłoszone.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+public class Licznik
+{
+    private int wartosc;
+
+    public event EventHandler ZmianaLicznika;
+
+
+    public int Wartosc
+    {
+        get { return wartosc; }
+        set
+        {
+            wartosc = value;
+
+            OnCountChanged();
+        }
+    }
+
+
+    protected virtual void OnCountChanged()
+    {
+        ZmianaLicznika?.Invoke(this, EventArgs.Empty);
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Licznik licznik = new Licznik();
+
+        licznik.ZmianaLicznika += Licznik_ZmianaLicznika;
+
+
+        for (int i = 0; i <= 3; i++)
+        {
+            licznik.Wartosc = i;
+
+            Console.WriteLine("Licznik: " + licznik.Wartosc + "\n");
+        }
+    }
+
+
+    private static void Licznik_ZmianaLicznika(object sender, EventArgs e)
+    {
+        Console.WriteLine("Licznik zmienił wartość!");
+    }
+}
+
+
+//output:
+
+
+Licznik zmienił wartość!
+Licznik: 0
+
+Licznik zmienił wartość!
+Licznik: 1
+
+Licznik zmienił wartość!
+Licznik: 2
+
+Licznik zmienił wartość!
+Licznik: 3
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Deklarowanie Zdarzeń</h1>
+        <div class="section-with-image">
+            <p>
+                Aby zadeklarować zdarzenie w języku C#, należy użyć słowa kluczowego "event" sekwencyjnie z typem
+                delegata, który zdefiniuje sygnaturę metod obsługujących zdarzenie. Nazwa zdarzenia jest nazwą
+                zmiennej i musi spełniać reguły nazewnictwa języka C#.
+            </p>
+            <img src="/img/vector100.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top">
+            Przykład deklaracji zdarzenia:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+public class MyClass
+{
+    public event EventHandler MyEvent;
+    //...
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightPink-container">
+            Możesz też zdefiniować własnego delegata, jeśli potrzebujesz przekazywać inne typy danych niż EventArgs.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+public delegate void MyEventHandler(string message);
+
+public class MyClass
+{
+    public event MyEventHandler MyEvent;
+    //...
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightPink-container">
+            Przykład programu, w którym zdarzenia są używane do powiadomienia o zmianie stanu pojazdu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+public class Pojazd
+{
+    private int aktualnaPredkosc;
+    public event EventHandler&ltPredkoscZmienionaEventArgs&gt PredkoscZmieniona;
+
+
+    public int predkosc
+    {
+        get { return aktualnaPredkosc; }
+        set
+        {
+            aktualnaPredkosc = value;
+
+            OnPredkoscZmieniona();
+        }
+    }
+
+
+    private void OnPredkoscZmieniona()
+    {
+        var args = new PredkoscZmienionaEventArgs(aktualnaPredkosc);
+
+        PredkoscZmieniona?.Invoke(this, args);
+    }
+}
+
+
+public class PredkoscZmienionaEventArgs : EventArgs
+{
+    public int NowaPredkosc { get; }
+
+    public PredkoscZmienionaEventArgs(int nowaPredkosc)
+    {
+        NowaPredkosc = nowaPredkosc;
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Pojazd pojazd = new Pojazd();
+
+        pojazd = new Pojazd();
+        pojazd.PredkoscZmieniona += Pojazd_PredkoscZmieniona;
+        pojazd.predkosc = 50;
+        pojazd.predkosc = 60;
+        pojazd.predkosc = 70;
+    }
+
+
+    private static void Pojazd_PredkoscZmieniona(object sender, PredkoscZmienionaEventArgs e)
+    {
+        Console.WriteLine("Nowa prędkość pojazdu: " + e.NowaPredkosc + " km/h");
+    }
+}
+
+
+//output:
+
+
+Nowa prędkość pojazdu: 50 km/h
+Nowa prędkość pojazdu: 60 km/h
+Nowa prędkość pojazdu: 70 km/h
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, klasa Pojazd posiada zmienną "predkosc" oraz zdarzenie "PredkoscZmieniona"
+                typu EventHandler&ltPredkoscZmienionaEventArgs&gt. Zmienna "predkosc" jest używana do przechowywania
+                aktualnej prędkości pojazdu. Właściwość "Predkosc" jest używana do ustawiania prędkości pojazdu
+                i wywoływania zdarzenia "PredkoscZmieniona" przez metodę OnPredkoscZmieniona. W metodzie Main,
+                rejestrujemy nasłuchiwanie na "PredkoscZmieniona" i wywołujemy event po każdej zmianie predkosci.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Metody-anonimowe.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

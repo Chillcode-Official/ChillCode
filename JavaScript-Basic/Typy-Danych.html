@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Typy-Danych-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-JavaScript.html">Czym jest JavaScript</a></li>
+            <li><a href="Podstawowa-skladnia-JavaScript.html">Podstawowa Składnia</a></li>
+            <li><a href="Wyjscie(output).html">Wyświetlanie</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Typy-Danych.html">Typy-Danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Operatory.html">Operatory</a></li>
+            <li><a href="Instrukcje-Warunkowe.html">Instrukcje-Warunkowe</a></li>
+            <li><a href="Pętle.html">Pętle</a></li>
+            <li><a href="Funkcje.html">Funkcje</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Obiekty.html">Obiekty</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Wartosci.html">Wartosci</a></li>
+            <li><a href="Referencje.html">Referencje</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Eventy.html">Eventy</a></li>
+            <li><a href="Manipulacja_DOM-em.html">Manipulacja_DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Biblioteki-JavaScript.html">Biblioteki-JavaScript</a></li>
+            <li><a href="Debugowanie-Kodu.html">Debugowanie-Kodu</a></li>
+            <li><a href="Testowanie-Kodu.html">Testowanie-Kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy Prymitywne JavaScript</h1>
+                <p>
+                    Typy prymitywne (primitive-types) w języku JavaScript to typy danych, które są podstawowymi rodzajami
+                    danych w tym języku. Są one niezmiennymi wartościami, które nie są obiektami i nie
+                    posiadają żadnych metod ani właściwości.
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector85.png" alt="">
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container lightPink-container no-margin-bottom"><code><a href="#" pro-tip="String jest typem danych reprezentującym ciąg znaków. Można je tworzyć za pomocą pojedynczych lub podwójnych cudzysłowów.">String</a></code> - ciąg znaków, np. "Hello World"</p>
+            <p class="text-container lightPink-container no-margin-bottom"><code><a href="#" pro-tip="Number to typ danych, który reprezentuje liczby. Może to być liczba całkowita lub zmiennoprzecinkowa.">Number</a></code> - liczby, np. 42 lub 3.14</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+var name = "John Doe";
+
+console.log(name.length); // Output: 8
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+var age = 30;
+
+console.log(age + 5); // Output: 35
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements article tooltip">
+            <p class="text-container lightPink-container no-margin-bottom"><code><a href="#" pro-tip="Boolean jest typem danych, który reprezentuje wartość logiczną true lub false.">Boolean</a></code> - wartość logiczna, true lub false</p>
+            <p class="text-container lightPink-container no-margin-bottom"><code><a href="#" pro-tip="Undefined jest typem danych, który reprezentuje brak wartości. Każda zmienna, która nie została zainicjowana, jest typu Undefined.">Undefined</a></code> - wartość niezdefiniowana</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+var isValid = true;
+
+console.log(!isValid); // Output: false
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block">
+                <pre>
+                    <code>
+var x;
+
+console.log(typeof x); // Output: undefined
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <p class="text-container lightPink-container article tooltip">
+            <code><a href="#" pro-tip="Null jest typem danych, który reprezentuje brak wartości. Można go użyć, aby wyraźnie oznaczyć brak wartości.">Null</a></code> - wartość null
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+var y = null;
+console.log(typeof y); // Output: object (null jest traktowany jako obiekt w JavaScript)
+                </code>
+            </pre>
+        </div>
+       <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy Odniesienia JavaScript</h1>
+                <p>
+                    Typy odniesienia (ang. reference types) w języku JavaScript to typy danych, które
+                    są reprezentowane jako obiekty i których wartości są przechowywane w pamięci jako
+                    odniesienia do miejsca, gdzie znajdują się ich wartości. Wartość typów odniesienia
+                    może być zmieniona, a same typy posiadają właściwości i metody.
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector32.png" alt="">
+            </div>
+        </div>
+        <div class="double-elements no-margin-bottom article tooltip">
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="Object to typ danych, który reprezentuje grupę par klucz-wartość. Obiekty są tworzone za pomocą nawiasów klamrowych {}. ">Object</a></code> - obiekty, np. {key1: value1, key2: value2}</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="Function to typ danych, który reprezentuje funkcję. Funkcje są tworzone za pomocą słowa kluczowego function">Function</a></code> - funkcje, np. function add(a, b) {return a + b;}</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+var person = {firstName: "John", lastName: "Doe"};
+
+console.log(person.firstName); // Output: John
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+function add(a, b) {return a + b;}
+
+console.log(add(2, 3)); // Output: 5
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements article tooltip">
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="Array to typ danych, który reprezentuje kolekcję wartości. Tablice są tworzone za pomocą nawiasów kwadratowych []">Array</a></code> - tablice, np. [1, 2, 3, 4, 5]</p>
+            <p class="text-container no-margin-bottom"><code><a href="#" pro-tip="Date to typ danych, który reprezentuje datę i czas. Obiekty daty i czasu są tworzone za pomocą konstruktora Date.">Date</a></code> - obiekt daty i czasu, np. new Date()</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+var numbers = [1, 2, 3, 4, 5];
+console.log(numbers[2]); // Output: 3
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+var now = new Date();
+console.log(now.getMonth()); // Output: (aktualny miesiąc, 0-based)
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <p class="text-container article tooltip">
+            <code><a href="#" pro-tip="RegExp (ang. Regular Expression) to typ odniesienia w języku JavaScript, który służy do definiowania i wyszukiwania ciągów tekstu na podstawie wzorca. ">RegExp</a></code> - wyrażenia regularne, np. /pattern/
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+var pattern = /\d+/;
+console.log(pattern.test("I have 30 apples.")); // Output: true
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Zmienne.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

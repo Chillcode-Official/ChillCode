@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ASP.NET(Widoki-RazorViewEngine-TagHelpers)</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-ASP.NET-Core.html">Wprowadzenie do ASP.NET-Core</a></li>
+            <li><a href="Szybki-Start.html">Szybki-Start</a></li>
+            <li><a href="Struktura-Projektu.html">Struktura projektu</a></li>
+            <li><a href="Tworzenie-Kontrolerów-Akcji.html">Tworzenie kontrolerów i akcji</a></li>
+            <li><a href="Routing.html">Routing</a></li>
+            <li><a href="Modelowanie-Danych.html">Modelowanie danych</a></li>
+            <li><a href="Widoki-RazorViewEngine-TagHelpers.html">Widoki RazorViewEngine i TagHelpers</a></li>
+            <li><a href="Dostęp-Do-Danych.html">Dostęp do danych</a></li>
+            <li><a href="Middleware.html">Middleware</a></li>
+            <li><a href="Implementacja-Uwierzytelnienia-Autoryzacji.html">Implementacja uwierzytelnienia i autoryzacji</a></li>
+            <li><a href="Obsługa-Błędów.html">Obsługa błędów</a></li>
+            <li><a href="Stylowanie-Aplikacji.html">Stylowanie aplikacji</a></li>
+            <li><a href="Implementacja-Serwisów-RESTful.html">Implementacja serwisów RESTful</a></li>
+            <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
+            <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
+            <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
+            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Widoki Razor View Engine</h1>
+        <div class="section-with-image">
+            <p>
+                Widoki w ASP.NET Core to elementy aplikacji, które odpowiadają za prezentowanie interfejsu użytkownika. Widoki pozwalają na dynamiczne generowanie kodu HTML, który jest wysyłany do przeglądarki użytkownika.
+            </p>
+            <img src="/img/vector12.png" alt="">
+        </div>
+        <p class="text-container lightBrown-container no-margin-top">
+            W ASP.NET Core do generowania widoków używa się silnika Razor View Engine. Silnik ten umożliwia łączenie kodu C# z kodem HTML, dzięki czemu można tworzyć dynamiczne strony internetowe, które mogą wykorzystywać dane z bazy danych i logikę biznesową aplikacji.
+        </p>
+        <div class="page-header"></div>
+        <code>Przykładowy kod widoku Razor w ASP.NET Core:</code>
+        <div class="code-block">
+            <pre>
+                <code>
+@model Product
+
+&lt;h2&gt;@Model.Name&lt;/h2&gt;
+&lt;p&gt;@Model.Description&lt;/p&gt;
+&lt;p&gt;Price: @Model.Price&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                W tym przykładzie widok Razor jest wykorzystywany do wyświetlania informacji o produkcie. Kod HTML jest uzupełniany o instrukcje C#, takie jak @Model.Name, które pozwalają na wyświetlanie danych z obiektu modelu Product.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Widoki Tag Helpers</h1>
+        <div class="section-with-image">
+            <p>
+                W ASP.NET Core do generowania kodu HTML w widokach można również używać Tag Helpers. Tag Helpers to specjalne elementy HTML, które są przetwarzane przez silnik Razor i umożliwiają wykonywanie akcji, takich jak generowanie linków, formularzy, przycisków itp.
+            </p>
+            <img src="/img/vector16.png" alt="">
+        </div>
+        <div class="page-header"></div>
+        <code>Przykładowy kod Tag Helpera w ASP.NET Core:</code>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;form asp-action=&quot;AddProduct&quot; method=&quot;post&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;productName&quot;&gt;Product Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;productName&quot; name=&quot;Name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;productPrice&quot;&gt;Price&lt;/label&gt;
+        &lt;input type=&quot;number&quot; class=&quot;form-control&quot; id=&quot;productPrice&quot; name=&quot;Price&quot;&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Add Product&lt;/button&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                W tym przykładzie Tag Helper asp-action jest wykorzystywany do generowania adresu URL akcji AddProduct kontrolera, a metoda HTTP formularza jest ustawiona na "post". Tag Helpery pozwalają na łatwe i wygodne generowanie kodu HTML, który może być interaktywny i reagować na akcje użytkownika.
+            </p>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Podsumowując, widoki w ASP.NET Core umożliwiają generowanie interfejsu użytkownika za pomocą silnika Razor View Engine i Tag Helperów. Silnik Razor pozwala na generowanie dynamicznego kodu HTML, a Tag Helpery ułatwiają tworzenie interaktywnych elementów HTML.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Dostęp-Do-Danych.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

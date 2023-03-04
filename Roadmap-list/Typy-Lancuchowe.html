@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Typy-Referencyjne C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Właściwości I Metody Klasy String</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Klasa <code><a href="#" pro-tip="hej">System.String</a></code> w języku C# posiada dwie
+                główne właściwości oraz wiele Metod.
+            </p>
+            <img src="/img/vector75.png" alt="">
+        </div>
+        <p class="text-container lightPink-container article tooltip no-margin-top">
+            Właściwość <code><a href="#" pro-tip="zwraca liczbę znaków w ciągu. ">Length</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World!";
+
+int length = str.Length; // length zawiera wartość 12
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightPink-container article tooltip">
+            Właściwość <code><a href="#" pro-tip="pozwala na dostęp do poszczególnych znaków w ciągu. ">Chars[]</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World!";
+
+char firstChar = str[0]; // firstChar zawiera wartość 'H'
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="łączy dwa lub więcej ciągów.">Concat</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str1 = "Hello";
+
+string str2 = " World";
+
+string str3 = string.Concat(str1, str2); // str3 zawiera wartość "Hello World"
+
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="porównuje dwa ciągi i zwraca wartość 0, jeśli są równe, liczbę ujemną, jeśli pierwszy jest mniejszy, lub liczbę dodatnią, jeśli pierwszy jest większy.">Compare</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str1 = "Hello";
+
+string str2 = "World";
+
+int result = string.Compare(str1, str2); // result zawiera wartość -15
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="sprawdza, czy ciąg zawiera podciąg. ">Contains</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+bool result = str.Contains("World"); // result zawiera wartość true
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="zwraca podciąg ciągu.">Substring</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+string result = str.Substring(6); // result zawiera wartość "World"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="zamienia ciąg na małe litery. ">ToLower</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+string result = str.ToLower(); // result zawiera wartość "hello world"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="zamienia wszystkie wystąpienia jednego podciągu na inny.">Replace</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+string result = str.Replace("World", "Universe"); // result zawiera wartość "Hello Universe"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="dzieli ciąg na tablicę podciągów, korzystając z podanego separatora.">Split</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+string[] result = str.Split(' '); // result zawiera tablicę zawierającą "Hello" i "World"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="usuwa białe znaki z początku i końca ciągu.">Trim</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "   Hello World   ";
+
+string result = str.Trim();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="usuwa określoną liczbę znaków od danego indeksu.">Remove</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+string result = str.Remove(6, 5); // result zawiera wartość "Hello"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="zwraca indeks pierwszego wystąpienia podciągu w ciągu. ">IndexOf</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World";
+
+int result = str.IndexOf("World"); // result zawiera wartość 6
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="zwraca indeks ostatniego wystąpienia podciągu w ciągu. ">LastIndexOf</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello World, World";
+
+int result = str.LastIndexOf("World"); // result zawiera wartość 13
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="wstawia podciąg w ciągu na określonym indeksie.">Insert</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello";
+
+string result = str.Insert(5, " World"); // result zawiera wartość "Hello World"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="łączy elementy tablicy ciągów za pomocą separatora.">Join</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string[] strArray = { "Hello", "World" };
+
+string result = string.Join(" ", strArray); // result zawiera wartość "Hello World"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="dodaje znaki z lewej strony ciągu, aby osiągnąć określoną długość.">PadLeft</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello";
+
+string result = str.PadLeft(10, '*'); // result zawiera wartość "****Hello"
+                </code>
+            </pre>
+        </div>
+        <p class="text-container pink-container article tooltip">
+            Metoda <code><a href="#" pro-tip="dodaje znaki z prawej strony ciągu, aby osiągnąć określoną długość.">PadRight</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "Hello";
+
+string result = str.PadRight(10, '*'); // result zawiera wartość "Hello****"
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Typy-Wyliczeniowe.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

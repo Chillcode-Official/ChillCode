@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Lista Uporządkowana</h1>
+        <div class="section-with-image">
+            <p>
+                Lista uporządkowana (ang. ordered list) jest rodzajem listy, w której elementy są uporządkowane
+                według określonego kryterium, takiego jak chronologia, kolejność alfabetyczna lub liczbowa.
+            </p>
+            <img src="/img/vector39.png" alt="">
+        </div>
+        <p class="text-container red-container no-margin-top article tooltip">
+            Aby utworzyć listę uporządkowaną w HTML, należy użyć tagu <code><a href="#" pro-tip="">&ltol&gt</a></code> (ang. ordered list). Każdy
+        element listy powinien być oznaczony tagiem <code><a href="#" pro-tip="">&ltli&gt</a></code> (ang. list item)
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ol&#x3E;
+
+  &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Drugi element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Trzeci element&#x3C;/li&#x3E;
+
+&#x3C;/ol&#x3E;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Listy uporządkowane mogą mieć również różne rodzaje numeracji, takie jak rzymskie cyfry lub litery.
+            Można to ustawić za pomocą atrybutu <code><a href="#" pro-tip="">type</a></code> tagu
+            <code><a href="#" pro-tip="">&ltol&gt</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ol type=&#x22;I&#x22;&#x3E;
+
+  &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Drugi element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Trzeci element&#x3C;/li&#x3E;
+
+&#x3C;/ol&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="double-elements">
+            <div class="browser medium-browser">
+                <ol>
+                    <li>Pierwszy element</li>
+                    <li>Drugi element</li>
+                    <li>Trzeci element</li>
+                </ol>
+            </div>
+            <div class="browser medium-browser">
+                <ol type="I">
+                    <li>Pierwszy element</li>
+                    <li>Drugi element</li>
+                    <li>Trzeci element</li>
+                </ol>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Lista Nieuporządkowana</h1>
+        <div class="section-with-image">
+            <p>
+                Nieuporządkowana lista HTML (ang. unordered list) jest tworzona przy użyciu znacznika
+            &ltul&gt (ang. unordered list). Każdy pojedynczy element listy jest oznaczany przez znacznik
+            &ltli&gt (ang. list item). W takiej liście każdy element jest oznaczony punktem (bullet point).
+            </p>
+            <img src="/img/vector142.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top">
+
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ul&#x3E;
+
+  &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Drugi element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Trzeci element&#x3C;/li&#x3E;
+
+&#x3C;/ul&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <ul>
+                <li>Pierwszy element</li>
+                <li>Drugi element</li>
+                <li>Trzeci element</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightPink-container article tooltip">
+            <code><a href="#" pro-tip="">list-style-type</a></code> pozwala na określenie rodzaju punktu
+            przed każdym elementem nieuporządkowanej listy HTML. Wyróżniamy
+            <code><a href="#" pro-tip="standardowy rodzaj punktu (domyślnie ustawiony)">disc</a></code>
+            <code><a href="#" pro-tip="rodzaj punktu w postaci kółka">circle</a></code>
+            <code><a href="#" pro-tip="rodzaj punktu w postaci kwadratu">square</a></code>
+            <code><a href="#" pro-tip="ukrycie punktu">none</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ul style=&#x22;list-style-type:disc;&#x22;&#x3E;
+  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:circle;&#x22;&#x3E;
+  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:square;&#x22;&#x3E;
+  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:none;&#x22;&#x3E;
+  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="double-elements">
+            <div class="browser medium-browser list-disc">
+                <ul>
+                    <li>Honey</li>
+                    <li>Peanuts</li>
+                    <li>Fruits</li>
+                </ul>
+            </div>
+            <div class="browser medium-browser list-circle">
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="browser medium-browser list-square">
+                <ul>
+                    <li>Lays</li>
+                    <li>Beer</li>
+                    <li>Juice</li>
+                </ul>
+            </div>
+            <div class="browser medium-browser list-none">
+                <ul>
+                    <li>Vodka</li>
+                    <li>Coca-cola</li>
+                    <li>Whisky</li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Lista Definicyjna</h1>
+                <p>
+                    Lista definicyjna HTML (ang. definition list) jest używana do tworzenia list, w których każdy element
+                    składa się z pojęcia i jego definicji. Listy definicyjne są często używane do tworzenia
+                    słowników, list pojęć i innych typów list, w których istnieje pojęcie i jego definicja.
+                </p>
+            </div>
+            <img src="/img/vector115.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top article tooltip">
+            Elementy listy definicyjnej składają się z trzech głównych tagów:
+            <code><a href="#" pro-tip="">&ltdl&gt</a></code>
+            <code><a href="#" pro-tip="">&ltdt&gt</a></code>
+            <code><a href="#" pro-tip="">&ltdd&gt</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;dl&#x3E;
+ &#x3C;dt&#x3E;Html&#x3C;/dt&#x3E;
+ &#x3C;dd&#x3E;J&#x119;zyk opisu stron internetowych&#x3C;/dd&#x3E;
+
+ &#x3C;dt&#x3E;SoloLearn&#x3C;/dt&#x3E;
+ &#x3C;dd&#x3E;Serwis kt&#xF3;ry nauczy ci&#x119; programowania&#x3C;/dd&#x3E;
+&#x3C;/dl&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <dl>
+                <dt><b>HTML</b></dt>
+                <dd>Język opisu stron internetowych</dd>
+                <br>
+                <dt><b>SoloLearn</b></dt>
+                <dd>Serwis który nauczy cię programowania</dd>
+            </dl>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 article tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+            Warto zauważyć, że tagi <code><a href="#" pro-tip="">&ltdt&gt</a></code> i
+            <code><a href="#" pro-tip="">&ltdd&gt</a></code>
+            muszą być używane w parze i znajdować się wewnątrz tagu
+            <code><a href="#" pro-tip="">&ltdl&gt</a></code>
+            W przeciwnym razie lista definicyjna nie będzie poprawnie działać.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Zagnieżdżanie List</h1>
+                <p>
+                    Zagnieżdżanie list HTML polega na umieszczeniu jednej listy wewnątrz innej listy. Jest to
+                    przydatne, gdy chcemy przedstawić zestawienie informacji w postaci hierarchicznej lub gdy
+                    chcemy przedstawić informacje w postaci poziomów zagłębienia.
+                </p>
+            </div>
+            <img src="/img/vector105.png" alt="">
+        </div>
+        <p class="text-container azure-container article tooltip no-margin-top">
+            Aby zagnieżdżać listy, należy po prostu umieścić tagi listy wewnątrz odpowiedniego tagu
+            <code><a href="#" pro-tip="">&ltli&gt</a></code>.
+        </p>
+        <div class="big-page-header"></div>
+        <h2>Zagnieżdżona Lista Uporządkowana</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ol&#x3E;
+  &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Drugi element
+    &#x3C;ol&#x3E;
+      &#x3C;li&#x3E;Podelement&#x3C;/li&#x3E;
+      &#x3C;li&#x3E;Podelement&#x3C;/li&#x3E;
+    &#x3C;/ol&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Trzeci element&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <ol>
+                <li>Pierwszy element</li>
+                <li>Drugi element
+                    <ol>
+                        <li>Podelement</li>
+                        <li>Podelement</li>
+                    </ol>
+                </li>
+                <li>Trzeci element</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Zagnieżdżona lista Nieuporządkowana</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+&#x3C;ul&#x3E;
+  &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Drugi element
+    &#x3C;ul&#x3E;
+      &#x3C;li&#x3E;Podelement&#x3C;/li&#x3E;
+      &#x3C;li&#x3E;Podelement&#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Trzeci element&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <ul>
+                <li>Pierwszy element</li>
+                <li>Drugi element
+                    <ul>
+                        <li>Podelement</li>
+                        <li>Podelement</li>
+                    </ul>
+                </li>
+                <li>Trzeci element</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Linki.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

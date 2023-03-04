@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Selektory-jQuery</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Manipulacja-DOM-em.html">Manipulacja-DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Obsługa-zdarzeń.html">Obsługa zdarzeń</a></li>
+            <li><a href="Efekty-animacje.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Wtyczki.html">Wtyczki</a></li>
+            <li><a href="Tworzenie-aplikacji-webowych.html">Tworzenie-aplikacji-webowych</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="jQuery-VS-JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Selektory jQuery</h1>
+        <div class="section-with-image">
+            <p>
+                Selektory w jQuery to ciągi znaków, które pozwalają na identyfikację elementów HTML w drzewie DOM, są bardzo podobne do selektorów CSS i pozwalają na wybieranie elementów na
+                podstawie ich nazw, klas, atrybutów, relacji z innymi elementami, a nawet na podstawie ich pozycji w drzewie DOM. Oto kilka przykładów selektorów w jQuery:
+            </p>
+            <img src="/img/vector100.png" alt="">
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container article tooltip">Wybierz wszystkie elementy <code><a href="#" pro-tip="">&ltp&gt</a></code> na stronie:</p>
+            <p class="text-container lightGray-container article tooltip">Wybierz elementy o klasie <code><a href="#" pro-tip="">intro</a></code></p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("p")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$(".intro")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightGray-container article tooltip">Wybierz elementy o atrybucie <code><a href="#" pro-tip="">href</a></code> zaczynającym się od <code><a
+                    href="#" pro-tip="">https</a></code></p>
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy <code><a href="#" pro-tip="">&lta&gt</a></code> znajdujące się w elemencie <code><a
+                    href="#" pro-tip="">&ltdiv&gt</a></code> o id "main"</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("[href^='https']")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("#main a")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy <code><a href="#" pro-tip="">&ltinput&gt</a></code> typu <code><a
+                    href="#" pro-tip="">text</a></code> znajdujące się w formularzu o id "myForm"</p>
+            <p class="text-container lightGray-container article tooltip">Wybierz elementy <code><a href="#" pro-tip="">&ltli&gt</a></code> znajdujące się w elemencie o klasie "menu"
+            i mające <code><a href="#" pro-tip="">dzieci</a></code> elementu <code><a href="#" pro-tip="">&lta&gt</a></code></p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("#myForm input[type='text']")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$(".menu li:has(a)")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <p class="text-container pink-container no-margin-top article tooltip">
+            W <code><a href="#" pro-tip="">jQuery</a></code> selektory można łączyć ze sobą, aby uzyskać bardziej skomplikowane zapytania. Przykładowo,
+            aby wybrać wszystkie elementy &ltli&gt znajdujące się w elemencie &ltul&gt o klasie "menu" oraz mające atrybut
+            "data-price" większy niż 10, można użyć następującego zapytania:
+        </p>
+        <div class="code-block code-block-margin-top">
+             <pre>
+                 <code>
+$("ul.menu li[data-price > '10']")
+                 </code>
+             </pre>
+        </div>
+        <div class="text-container gray-container minus-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                Powyższe zapytanie wybierze wszystkie elementy &ltli&gt spełniające warunki zapytania, czyli będące
+                dziećmi elementu &ltulgt o klasie "menu" oraz posiadające atrybut "data-price" większy niż 10.
+            </p>
+        </div>
+        <div class="page-header"></div>
+        <div class="line line-white"></div>
+        <p class="text-container pink-container">
+            jQuery posiada wiele selektorów wbudowanych, ale również można tworzyć własne selektory. Do tego celu
+            można wykorzystać metodę $.expr.createSelector(). Przykładowo, aby stworzyć własny selektor wybierający
+            elementy &lta&gt z atrybutem "target" o wartości "_blank", można użyć następującego kodu:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$.expr.createSelector( "targetBlankA", function( elem ) {
+
+  return $( elem ).is( "a" ) && $( elem ).attr( "target" ) === "_blank";
+});
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container minus-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                Powyższy kod stworzy nowy selektor "targetBlankA", który można użyć w zapytaniach
+                tak samo jak selektory wbudowane w jQuery.
+            </p>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Podsumowując, selektory w jQuery to bardzo przydatne narzędzie do wybierania elementów na
+                stronie internetowej. Dzięki nim można w łatwy sposób manipulować elementami HTML i stylami,
+                co przyczynia się do łatwiejszej i bardziej efektywnej pracy z interfejsem użytkownika.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <code>Wiele przykładów użycia selektorów w jQuery</code>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <p class="text-container pink-container article tooltip">Wybierz elementy <code><a href="#" pro-tip="">&ltinput&gt</a></code> typu "checkbox":</p>
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy &ltinput&gt typu "radio" o wartości "female":</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("input[type='checkbox']")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("input[type='radio'][value='female']")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy &lta&gt z atrybutem "href" zaczynającym się od "#" lub "mailto:":</p>
+            <p class="text-container pink-container article tooltip">Wybierz elementy &ltoption&gt w elemencie &ltselect&gt o id "mySelect":</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("a[href^='#'], a[href^='mailto:']")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("#mySelect option")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container pink-container article tooltip">Wybierz elementy &lttd&gt znajdujące się w rzędzie o indeksie 3 w tabeli o klasie "table":</p>
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy &ltinput&gt typu "text" znajdujące się po elementach &ltlabel&gt z klasą "required":</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$(".table tr:eq(3) td")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("label.required + input[type='text']")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy &ltdiv&gt o klasie "content", które nie są elementami &ltsection&gt ani &ltarticle&gt:</p>
+            <p class="text-container pink-container article tooltip">Wybierz elementy &lta&gt z atrybutem "title" o wartości zaczynającej się od "Open":</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("div.content:not(section, article)")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("a[title^='Open']")
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container pink-container article tooltip">Wybierz elementy &ltli&gt znajdujące się w elemencie &ltul&gt o id "myList" oraz posiadające klasę "active":</p>
+            <p class="text-container lightPink-container article tooltip">Wybierz elementy &ltinput&gt typu "text" znajdujące się w elemencie &ltform&gt o id "myForm" oraz posiadające atrybut "name" z wartością "username":</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("#myList li.active")
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$("#myForm input[type='text'][name='username']")
+                        </code>
+                    </pre>
+                </div>
+        </div>
+        <div class="alert-card alert-card3 alert-card-no-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                W jQuery istnieje wiele innych selektorów, które pozwalają na precyzyjne wybieranie elementów
+                na stronie internetowej. Dzięki nim możliwe jest łatwe i szybkie manipulowanie elementami, co
+                przyczynia się do tworzenia interfejsów użytkownika o wysokiej jakości.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Manipulacja-DOM-em.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

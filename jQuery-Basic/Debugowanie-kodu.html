@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-Debugowanie-kodu</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Manipulacja-DOM-em.html">Manipulacja-DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Obsługa-zdarzeń.html">Obsługa zdarzeń</a></li>
+            <li><a href="Efekty-animacje.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Wtyczki.html">Wtyczki</a></li>
+            <li><a href="Tworzenie-aplikacji-webowych.html">Tworzenie-aplikacji-webowych</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="jQuery-VS-JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Debugowanie kodu</h1>
+                <p>
+                    Debugowanie kodu w jQuery to proces znajdowania i usuwania błędów w kodzie, który uniemożliwia prawidłowe
+                    działanie strony internetowej lub aplikacji internetowej.  Proces ten polega na analizie kodu jQuery,
+                    znalezieniu błędów, wyeliminowaniu ich i przetestowaniu kodu, aby upewnić się, że działa poprawnie.
+                </p>
+            </div>
+            <img src="/img/vector54.png" alt="">
+        </div>
+        <p class="text-container lightOrange-container no-margin-top">
+            Debugowanie kodu w jQuery można przeprowadzić na kilka sposobów.
+        </p>
+        <div class="big-page-header"></div>
+        <code>console.log()</code>
+        <p class="text-container gray-container article tooltip">
+            <code><a href="#" pro-tip="">console.log()</a></code>-
+            Możesz dodać metode console.log() w kodzie jQuery, aby wyświetlić wartości zmiennych, które Cię interesują. W ten sposób możesz zobaczyć, co dzieje się w kodzie i czy wartości zmiennych są poprawne. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function() {
+  var x = 5;
+  console.log(x);
+});
+                </code>
+            </pre>
+        </div>
+        <code>Debugger</code>
+        <p class="text-container lightOrange-container article tooltip">
+            <code><a href="#" pro-tip="">debugger</a></code>-
+            Możesz użyć debuggera, aby zatrzymać wykonanie kodu jQuery w danym punkcie i obejrzeć wartości zmiennych w czasie rzeczywistym. Aby użyć debuggera, umieść słowo kluczowe debugger w miejscu, w którym chcesz zatrzymać wykonanie kodu. Następnie otwórz narzędzia developerskie w przeglądarce i przejdź do zakładki "Debugger". Wybierz plik z kodem jQuery i znajdź miejsce, w którym umieściłeś słowo kluczowe debugger. Po wykonaniu kodu jQuery zatrzyma się w tym miejscu, a Ty będziesz mógł obejrzeć wartości zmiennych.
+        </p>
+        <img style="width: 900px; height: 500px" src="/img/google-debugger1.png" alt="">
+        <div class="big-page-header"></div>
+        <code>Narzędzia deweloperskie</code>
+        <p class="text-container lightGray-container article tooltip">
+            Narzędzia deweloperskie w przeglądarce mogą również pomóc w debugowaniu kodu jQuery. Możesz użyć zakładki "Console", aby wyświetlić błędy lub wyświetlić wartości zmiennych. Możesz również użyć zakładki "Sources", aby przejrzeć kod jQuery i zobaczyć, co się dzieje.
+        </p>
+        <div class="big-page-header"></div>
+        <code>Sprawdź składnię kodu</code>
+        <p class="text-container lightGray-container article tooltip">
+            Jeśli Twój kod jQuery nie działa poprawnie, sprawdź, czy nie ma w nim błędów składniowych. Często błędy składniowe są łatwe do znalezienia i można je naprawić szybko.
+        </p>
+        <div class="big-page-header"></div>
+        <code>Przetestuj kod</code>
+        <p class="text-container lightGray-container">
+            Jeśli wszystkie inne sposoby zawiodą, możesz przetestować swój kod jQuery na prostym pliku HTML. Umieść kod jQuery na stronie HTML i sprawdź, czy działa poprawnie. Jeśli nie działa, możesz sprawdzić, czy Twój kod działa na innej przeglądarce lub czy używasz poprawnej wersji jQuery.
+        </p>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="jQuery-VS-JavaScript.html"><button>Dalej</button></a>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

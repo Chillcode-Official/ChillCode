@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-VS-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Manipulacja-DOM-em.html">Manipulacja-DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Obsługa-zdarzeń.html">Obsługa zdarzeń</a></li>
+            <li><a href="Efekty-animacje.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Wtyczki.html">Wtyczki</a></li>
+            <li><a href="Tworzenie-aplikacji-webowych.html">Tworzenie-aplikacji-webowych</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="jQuery-VS-JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>jQuery VS JavaScript</h1>
+        <div class="section-with-image">
+            <p>
+                jQuery to biblioteka JavaScript, która umożliwia łatwiejszą pracę z kodem JavaScript, zwłaszcza w przypadku
+                manipulacji dokumentem HTML i obsługi zdarzeń interaktywnych. Oto kilka porównań między jQuery a czystym JavaScriptem:
+            </p>
+            <img src="/img/vector130.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list highlight-text">
+             <ul>
+                 <li><code>Składnia</code> - jQuery oferuje uproszczoną składnię, która jest bardziej intuicyjna i łatwiejsza do zrozumienia niż czysty JavaScript. Na przykład, aby wybrać element HTML, który ma klasę "example", w jQuery używamy polecenia $('.example'), podczas gdy w czystym JavaScript używamy metody document.querySelector('.example').</li>
+                 <br>
+                 <li><code>Wieloplatformowość</code> - jQuery działa na różnych przeglądarkach i urządzeniach, zapewniając jednolite zachowanie w różnych środowiskach. W przeciwieństwie do tego, niektóre funkcje czystego JavaScriptu mogą działać inaczej w różnych przeglądarkach.</li>
+                 <br>
+                 <li><code>Efekty wizualne</code> - jQuery oferuje bogate biblioteki animacji i efektów wizualnych, które ułatwiają tworzenie interaktywnych i dynamicznych stron internetowych. W czystym JavaScript, tworzenie takich efektów wymagałoby więcej pracy i czasu.</li>
+                 <br>
+                 <li><code>Rozmiar pliku</code> - Jedną z wad jQuery jest to, że biblioteka jest dość duża, co oznacza, że jej pobieranie i ładowanie na stronie może wpłynąć na czas ładowania strony. Z drugiej strony, czysty JavaScript ma mniejszy rozmiar, ponieważ nie zawiera dodatkowych funkcji i bibliotek.</li>
+                 <br>
+                 <li><code>Szybkość działania</code> - W zależności od zastosowania, jQuery może działać wolniej niż czysty JavaScript, ponieważ wprowadza dodatkowe warstwy abstrakcji, które wpływają na wydajność. W przypadku prostych zadań, czysty JavaScript działa szybciej niż jQuery.</li>
+             </ul>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Podsumowując, wybór między jQuery a czystym JavaScriptem zależy od wielu czynników, takich jak poziom doświadczenia programisty, potrzeby projektu, oraz wymagania dotyczące wydajności i szybkości ładowania strony internetowej. Wiele projektów korzysta z obu narzędzi, aby osiągnąć najlepsze efekty.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Przykłady Porównania</h1>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <code>Selekcja elementów HTML - jQuery</code>
+            <code>Selekcja elementów HTML - JavaScript</code>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// selekcja elementu o id 'block' i zmiana tekstu
+$('#myElement').text('Nowy tekst');
+
+
+// selekcja elementów z klasą 'myClass' ukrycie ich
+$('.myClass').hide();
+
+
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// selekcja elementu o id 'myElement' i zmiana jego tekstu
+var element = document.getElementById('myElement');
+element.textContent = 'Nowy tekst';
+
+// selekcja elementów z klasą 'myClass' i ukrycie ich
+var elements = document.querySelectorAll('.myClass');
+elements.forEach(function(element) {
+    element.style.display = 'none';
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code>Obsługa zdarzeń - jQuery</code>
+            <code>Obsługa zdarzeń - JavaScript</code>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// obsługa kliknięcia na element o id 'myButton'
+$('#myButton').on('click', function() {
+    alert('Kliknięto przycisk!');
+});
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// obsługa kliknięcia na element o id 'myButton'
+var button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Kliknięto przycisk!');
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code>Animacja elementów HTML jQuery</code>
+            <code>Animacja elementów HTML JavaScript</code>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// animacja ukrywania i pokazywania
+// elementu o id 'myElement'
+
+$('#myElement').toggle('slow');
+
+// animacja zmiany koloru tła
+// elementu o id 'myElement'
+
+$('#myElement').animate({backgroundColor:
+'#000000'}, 'slow');
+
+
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-medium">
+                <pre>
+                    <code>
+// animacja ukrywania i pokazywania elementu o id 'myElement'
+var element = document.getElementById('myElement');
+if (element.style.display === 'none') {
+    element.style.display = 'block';
+} else {
+    element.style.display = 'none';
+}
+
+// animacja zmiany koloru tła elementu o id 'myElement'
+var element = document.getElementById('myElement');
+element.style.transition = 'background-color 0.5s ease-in-out';
+element.style.backgroundColor = '#000000';
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Podsumowanie.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

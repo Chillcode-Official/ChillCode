@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kombinatory-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Przepełnienie-Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Dopełnienie</a></li>
+            <li><a href="Obramowanie.html">Obramowanie</a></li>
+            <li><a href="Zarys.html">Zarys</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Combinators - Kombinatory CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Kombinator w CSS to symbol używany do określenia relacji między dwoma elementami w dokumencie HTML i do zastosowania odpowiednich stylów do tych elementów. Dzięki kombinatorom można precyzyjnie określić, które elementy powinny być objęte stylami, co pozwala na bardziej złożone projektowanie stron internetowych.
+            </p>
+            <img src="/img/vector131.png" alt="">
+        </div>
+        <div class="text-container article tooltip no-margin-top">
+            <p>
+                Oto typy kombinatorów CSS:
+            </p>
+            <ul>
+                <li style="color: whitesmoke;"><code><a href="#" pro-tip="">Selektor potomka</a></code> (Spacja)</li>
+                <li style="color: whitesmoke;"><code><a href="#" pro-tip="">Selektor dziecka</a></code> (">")</li>
+                <li style="color: whitesmoke;"><code><a href="#" pro-tip="">Selektor sąsiedniego rodzeństwa</a></code> ("+")</li>
+                <li style="color: whitesmoke;"><code><a href="#" pro-tip="">Selektor ogólny rodzeństwa</a></code> ("~")</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Selektor Potomka (Space)</h2>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+.container p {
+    color: darkgreen;
+  }
+                    </code>
+                </pre>
+            </div>
+            <div class="browser small-browser">
+                <div>
+                    <p style="color: darkgreen;">To jest paragraf.</p>
+                    <div>
+                        <p style="color: darkgreen;">To jest inny paragraf.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-container article tooltip minus-margin-top">
+            <code><a href="#" pro-tip="">Selektor potomka</a></code> (spacja): Celuje w element, który jest potomkiem innego elementu. Przykład:
+            .container p będzie działać na wszystkie paragrafy wewnątrz elementu o klasie "container".
+        </p>
+        <div class="line"></div>
+        <div class="big-page-header"></div>
+        <h2>Selektor Dziecka (">")</h2>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+ .container > p {
+    font-weight: bold;
+  }
+                    </code>
+                </pre>
+            </div>
+            <div class="browser small-browser">
+                <div>
+                    <p style="color: darkgreen; font-weight: bold">To jest paragraf.</p>
+                    <div>
+                        <p style="color: darkgreen;">To jest inny paragraf.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-container article tooltip minus-margin-top">
+            <code><a href="#" pro-tip="">Selektor dziecka</a></code> (">"): Celuje w element, który jest bezpośrednim
+            potomkiem innego elementu. Przykład: .container > p będzie działać tylko na paragrafy, które są
+            bezpośrednimi potomkami elementu o klasie "container".
+        </p>
+        <div class="line"></div>
+        <div class="big-page-header"></div>
+        <h2>Selektor Sąsiedniego Rodzeństwa ("+")</h2>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+h2 + p {
+    font-style: italic;
+  }
+                    </code>
+                </pre>
+            </div>
+            <div class="browser small-browser">
+                <h2 style="color: #252323; font-style: italic;">To jest nagłówek</h2>
+                <p style="font-style: italic">To jest paragraf.</p>
+            </div>
+        </div>
+        <p class="text-container article tooltip minus-margin-top">
+            <code><a href="#" pro-tip="">Selektor sąsiedniego rodzeństwa</a></code> ("+"): Celuje w element, który
+            jest następnym bratem innego elementu. Przykład: h2 + p będzie działać tylko na pierwszy paragraf zaraz po nagłówku h2.
+        </p>
+        <div class="line"></div>
+        <div class="big-page-header"></div>
+        <h2>Selektor Ogólny Rodzeństwa ("~")</h2>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+h2 ~ p {
+    background-color: #f3b6b6;
+  }
+                    </code>
+                </pre>
+            </div>
+            <div class="browser small-browser">
+                <h2 style="color: #252323;">To jest nagłówek</h2>
+                <p style="background-color: #f3b6b6;">To jest paragraf.</p>
+                <div>
+                    <p>To jest jeszcze inny paragraf.</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-container article tooltip minus-margin-top">
+            <code><a href="#" pro-tip="">Selektor ogólny rodzeństwa</a></code> ("~"): Celuje w element, który jest
+            bratem innego elementu, niezależnie od tego, ile innych elementów jest między nimi. Przykład: h2 ~ p
+            będzie działać na wszystkie paragrafy, które są bratami nagłówka h2.
+        </p>
+        <div class="line"></div>
+        <div class="big-page-header"></div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="PseudoKlasy.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

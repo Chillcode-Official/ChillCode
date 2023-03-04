@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Typy-Generyczne C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy Generyczne W Języku C#</h1>
+                <p>
+                    Typy generyczne w języku C# pozwalają na tworzenie klas, metod i interfejsów, które mogą
+                    przyjmować różne typy danych jako argumenty. Dzięki temu możemy napisać ogólniejszy kod,
+                    który będzie mógł być użyty z różnymi typami danych, bez konieczności jego duplikowania
+                    dla każdego z nich. Typy generyczne są oznaczane przez <> po nazwie klasy lub metody, w
+                    której są używane.
+                </p>
+            </div>
+            <img src="/img/vector57.png" alt="">
+        </div>
+        <p class="text-container white-container article tooltip">
+            przykład klasy generycznej "Kolejka" w języku C#, która pozwala na przechowywanie elementów w kolejności
+            <code><a href="#" pro-tip="">FIFO</a></code> (First In First Out).
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+static void Main(string[] agrs)
+{
+    Kolejka&ltint&gt kolejka = new Kolejka&ltint&gt(3);
+
+    kolejka.Dodaj(1);
+    kolejka.Dodaj(2);
+    kolejka.Dodaj(3);
+
+    Console.WriteLine(kolejka.Pobierz());
+    Console.WriteLine(kolejka.Pobierz());
+    Console.WriteLine(kolejka.Pobierz());
+}
+
+class Kolejka&ltT&gt
+{
+    private T[] elementy;
+    private int poczatek = 0;
+    private int koniec = 0;
+
+
+    public Kolejka(int rozmiar)
+    {
+        elementy = new T[rozmiar];
+    }
+
+
+    public void Dodaj(T element)
+    {
+        if (koniec == elementy.Length)
+        {
+            T[] noweElementy = new T[elementy.Length * 2];
+
+            Array.Copy(elementy, noweElementy, elementy.Length);
+
+            elementy = noweElementy;
+        }
+
+        elementy[koniec++] = element;
+    }
+
+
+    public T Pobierz()
+    {
+        if (Pusta)
+        {
+            throw new InvalidOperationException("Kolejka jest pusta");
+        }
+
+        T element = elementy[poczatek];
+
+        elementy[poczatek++] = default(T);
+
+        return element;
+    }
+
+
+    public bool Pusta
+    {
+        get { return poczatek == koniec; }
+    }
+}
+
+
+//output:
+
+1
+2
+3
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Cechy Typów Generycznych</h1>
+        <div class="page-header"></div>
+        <div class="white-color">
+            <ul>
+                <li>Typy generyczne pozwalają na ogólniejsze podejście do programowania poprzez użycie jednego kodu dla różnych typów danych.</li>
+                <li>Typy generyczne umożliwiają tworzenie klas, metod i interfejsów, które mogą przyjmować różne typy danych jako argumenty.</li>
+                <li>Typy generyczne pozwalają na uniknięcie konieczności duplikowania kodu dla różnych typów danych.</li>
+            </ul>
+            <ul>
+                <li>Typy generyczne pozwalają na tworzenie bardziej elastycznego i łatwiejszego w użyciu kodu.</li>
+                <li>Typy generyczne pozwalają na zwiększenie czytelności kodu poprzez jasne oznaczanie jakiego typu danych jest oczekiwany w danej klasie, metodzie czy interfejsie.</li>
+                <li>W języku C# istnieje również możliwość używania ograniczeń na typach generycznych (np. klasa lub metoda generyczna przyjmująca tylko typy implementujące określony interfejs)</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Metody Generyczne</h1>
+        <div class="section-with-image">
+            <p>
+                Metody generyczne to metody, które mogą przyjmować różne typy danych jako argumenty.
+                W języku C#, aby utworzyć metodę generyczną, należy określić typ generyczny po nazwie
+                metody, używając znaku <>.
+            </p>
+            <img src="/img/vector66.png" alt="">
+        </div>
+        <p class="text-container gray-container no-margin-top">
+            Metoda generyczna pozwala na uniwersalne i elastyczne wykorzystanie metody, dzięki czemu możemy
+            używać tej samej metody dla różnych typów danych bez konieczności tworzenia osobnych metod dla
+            każdego typu danych.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKlasa {
+
+    public static T Max&ltT&gt(T a, T b) where T : IComparable&ltT&gt {
+
+        return (a.CompareTo(b) > 0) ? a : b;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, metoda Max jest metodą generyczną, która przyjmuje dwa argumenty
+                typu T i zwraca typ T. Metoda ta porównuje oba argumenty i zwraca ten, który jest większy.
+                Możemy teraz użyć tej metody dla różnych typów danych, np. int, double, string.
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Sortowanie
+{
+    public static void Posortuj&ltT&gt(T[] elementy, PorownanieDelegat&ltT&gt porownanie)
+    {
+
+        for (int i = 0; i < elementy.Length - 1; i++)
+        {
+
+            for (int j = i + 1; j < elementy.Length; j++)
+            {
+
+                if (porownanie(elementy[i], elementy[j]) > 0)
+                {
+                    T tymczasowa = elementy[i];
+                    elementy[i] = elementy[j];
+                    elementy[j] = tymczasowa;
+                }
+            }
+        }
+    }
+}
+
+delegate int PorownanieDelegat&ltT&gt(T a, T b);
+
+
+class Program
+{
+    static void Main()
+    {
+        int[] liczby = { 3, 7, 4, 2, 8, 6 };  //sortuje liczby od najmniejszej do największej
+
+        Sortowanie.Posortuj(liczby, PorownajLiczby);
+
+        foreach (int liczba in liczby)
+        {
+            Console.Write(liczba + " ");
+        }
+        // wyświetla: 2 3 4 6 7 8
+
+        string[] nazwiska = { "\nKowalski", "Nowak", "Wiśniewski" };
+
+        Sortowanie.Posortuj(nazwiska, PorownajNazwiska);
+
+        foreach (string nazwisko in nazwiska)
+        {
+            Console.Write(nazwisko + " ");
+        }
+        // wyświetla: Kowalski Nowak Wiśniewski
+    }
+
+
+    static int PorownajLiczby(int a, int b)
+    {
+        return a.CompareTo(b);
+    }
+
+
+    static int PorownajNazwiska(string a, string b)
+    {
+        return string.Compare(a, b);
+    }
+}
+
+
+//output:
+
+2 3 4 6 7 8
+Kowalski Nowak Wiśniewski
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container">
+            W powyższym przykładzie używamy metody generycznej do implementacji systemu sortowania dla różnych typów danych.
+        </p>
+        <div class="big-page-header"></div>
+        <h1>Delegaty Generyczne</h1>
+        <div class="section-with-image">
+            <p>
+                Delegaty generyczne to specjalny rodzaj delegatów, które pozwalają na przechowywanie referencji
+                do metod generycznych. Delegat generyczny jest określony przez typ generyczny i ma takie same
+                ograniczenia na typach generycznych jak metoda, do której jest przypisany.
+            </p>
+            <img src="/img/vector46.png" alt="">
+        </div>
+        <p class="text-container article tooltip">
+            Aby utworzyć delegata generycznego, należy zdefiniować nowy typ delegata za pomocą słowa
+            kluczowego <code><a href="#" pro-tip="">delegate</a></code>, a następnie określić typ generyczny po nazwie delegata, używając
+            znaku <>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+delegate T MojDelegat&ltT&gt(T arg);
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie MyDelegate jest delegatem generycznym, który przyjmuje jeden argument typu T i zwraca typ T.
+            </p>
+        </div>
+        <p class="text-container">
+            Delegaty generyczne mogą być używane do przechowywania referencji do metod generycznych, a następnie wywoływania ich przez delegata.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKlasa
+{
+    public static T ZrobCos&ltT&gt(T arg)
+    {
+        // ...
+        return arg;
+    }
+}
+
+
+class Program
+{
+    static void Main()
+    {
+        MojDelagat&ltint&gt del = MojaKlasa.ZrobCos;
+
+        int wynik = del(5);
+
+        Console.WriteLine(wynik); // wyświetla 5
+    }
+}
+
+
+//output: 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            przykład, w którym używamy delegatów generycznych do implementacji systemu porównywania elementów w kolekcji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Kolekcja&ltT&gt
+{
+    private T[] elementy;
+
+    public Kolekcja(T[] elementy)
+    {
+        this.elementy = elementy;
+    }
+
+    public void Sortuj(PorownajDelegat&ltT&gt porownaj)
+    {
+        Array.Sort(elementy, (x, y) => porownaj(x, y));
+    }
+}
+
+delegate int PorownajDelegat&ltT&gt(T x, T y);
+
+class Program
+{
+    static void Main()
+    {
+        int[] liczby = { 3, 7, 4, 2, 8, 6 };
+
+        var kolekcja = new Kolekcja&ltint&gt(liczby);
+
+        kolekcja.Sortuj(PorownajLiczby);
+
+        foreach (int liczba in liczby)
+        {
+            Console.Write(liczba + " ");
+        }
+        // wyświetla: 2 3 4 6 7 8
+
+
+        string[] slowa = { "abc", "def", "ghi", "jkl"};
+
+        var kolekcja2 = new Kolekcja&ltstring&gt(slowa);
+
+        kolekcja2.Sortuj(PorownajSlowa);
+
+        foreach (string slowo in slowa)
+        {
+            Console.Write(slowo + " ");
+        }
+        // wyświetla: abc def ghi jkl
+    }
+
+
+    static int PorownajLiczby(int x, int y)
+    {
+        return x - y;
+    }
+
+    static int PorownajSlowa(string x, string y)
+    {
+        return x.CompareTo(y);
+    }
+}
+
+
+//output:
+
+2 3 4 6 7 8
+abc def ghi jkl
+                </code>
+            </pre>
+        </div>
+        <p class="text-container article tooltip">
+            W tym przykładzie, delegaty <code><a href="#" pro-tip="porównuje liczby po prostu odejmując y od x, co daje wynik ujemny, zero lub dodatni.">PorownajLiczby</a></code> i
+            <code><a href="#" pro-tip="używa metody CompareTo klasy string, która zwraca wartość ujemną, zero lub dodatnią w zależności od tego, czy x jest mniejsze, równe lub większe od y.">PorownajSlowa</a></code> zwracają wartość int, która jest
+            używana przez metodę Array.Sort do określenia kolejności elementów w tablicy.
+        </p>
+        <div class="alert-card">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Dzięki temu, że klasa Kolekcja posiada metodę Sortuj z delegatem generycznym, możemy łatwo
+                posortować różne kolekcje różnych typów danych za pomocą różnych kryteriów porównywania, bez
+                konieczności tworzenia nowych metod sortujących dla każdego z nich.
+            </p>
+        </div>
+        <div class="btn">
+            <a href="JSON.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>

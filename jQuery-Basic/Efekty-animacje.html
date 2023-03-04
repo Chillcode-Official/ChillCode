@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Efekty-Animacje-jQuery</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Manipulacja-DOM-em.html">Manipulacja-DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Obsługa-zdarzeń.html">Obsługa zdarzeń</a></li>
+            <li><a href="Efekty-animacje.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Wtyczki.html">Wtyczki</a></li>
+            <li><a href="Tworzenie-aplikacji-webowych.html">Tworzenie-aplikacji-webowych</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="jQuery-VS-JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Efekty I Animacje</h1>
+        <div class="section-with-image">
+            <p>
+                jQuery to popularna biblioteka JavaScript, która pozwala na łatwe i szybkie manipulowanie elementami na stronie internetowej. Wśród wielu funkcji i metod oferowanych przez jQuery,
+                znajdują się także funkcje do tworzenia efektów i animacji, które mogą wzbogacić wizualny aspekt strony i uatrakcyjnić interakcje użytkownika z nią.
+            </p>
+            <img src="/img/vector115.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Efekty i animacje w jQuery opierają się na manipulacji właściwościami CSS elementów na stronie, takimi jak pozycja, kolor, przezroczystość,
+            rozmiar czy styl. Dzięki temu można tworzyć różnego rodzaju efekty, takie jak płynne przesuwanie elementów, pojawianie się i znikanie elementów,
+            zmiana kolorów i stylów, a nawet bardziej złożone animacje, takie jak obracanie, skalowanie czy zmiana kształtu.
+        </p>
+        <div class="big-page-header"></div>
+        <h2>Przykłady użycia różnych funkcji jQuery do tworzenia efektów i animacji:</h2>
+        <div class="page-header"></div>
+        <p class="text-container gray-container article tooltip">
+            <code><a href="#" pro-tip="">slideUp()</a></code> |
+            <code><a href="#" pro-tip="">slideDown()</a></code>- przykład ukrywania i pokazywania elementu po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").slideToggle();
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container article tooltip">
+            <code><a href="#" pro-tip="">fadeIn()</a></code> |
+            <code><a href="#" pro-tip="">fadeOut()</a></code>- przykład płynnego przejścia między dwoma elementami po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p:first").fadeOut("slow", function(){
+            $("p:last").fadeIn("slow");
+        });
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            <code><a href="#" pro-tip="">animate()</a></code>- przykład płynnego przesuwania elementu po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '250px'});
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container article tooltip">
+            <code><a href="#" pro-tip="">toggle() </a></code>- przykład przełączania między dwoma stanami elementu po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            <code><a href="#" pro-tip="">delay()</a></code>- przykład opóźnienia animacji o 1 sekundę po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p:first").slideUp(300).delay(1000).slideDown(300);
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container article tooltip">
+            <code><a href="#" pro-tip="">stop()</a></code>- przykład zatrzymania animacji po kliknięciu na przycisk:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '250px'}, 5000);
+    });
+    $("button.stop").click(function(){
+        $("div").stop();
+    });
+});
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-no-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                jQuery oferuje wiele funkcji i metod do tworzenia animacji i efektów, takich jak animate(), fadeTo(), slideToggle(), toggleClass()
+                czy queue(). Można również stosować różne funkcje easingów, aby uzyskać bardziej naturalne i płynne efekty. Wszystkie te funkcje i
+                metody mogą być łączone ze sobą, co pozwala na tworzenie bardziej skomplikowanych animacji i efektów na stronie internetowej.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="AJAX.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

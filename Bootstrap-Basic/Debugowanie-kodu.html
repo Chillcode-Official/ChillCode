@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Debugowanie-kodu</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Szybki-start.html">Szybki start</a></li>
+            <li><a href="Układ-siatki-Grid.html">Układ siatki Grid</a></li>
+            <li><a href="Klasa.html">Klasa</a></li>
+            <li><a href="Style-tekstowe.html">Style-tekstowe</a></li>
+            <li><a href="Komponenty.html">Komponenty</a></li>
+            <li><a href="Zasady-responsywnego-projektowania.html">Zasady-responsywnego-projektowania</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Integracja-z-innymi-bibliotekami.html">Integracja-z-innymi-bibliotekami</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Debugowanie Kodu</h1>
+        <div class="section-with-image">
+            <p>
+                Bootstrap 5 to popularny framework CSS, który jest używany do tworzenia responsywnych stron internetowych. Debugowanie kodu w Bootstrap 5 polega na zlokalizowaniu i naprawieniu błędów w kodzie, które mogą prowadzić do nieprawidłowego działania strony. Oto kilka sposobów na debugowanie kodu
+            </p>
+            <img src="/img/vector16.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container no-margin-top highlight-text highlight-text-black">
+            <i>Przeglądarka</i> - Przeglądarka oferuje narzędzia deweloperskie, które pozwalają na debugowanie kodu CSS i JavaScript. Możesz wykorzystać narzędzia takie jak "Inspect Element" lub "Developer Tools" w przeglądarce, aby zidentyfikować błędy w kodzie.
+        </p>
+        <div class="text-container gray-container white-list">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <ol>
+                <li>Otwórz stronę internetową, na której występuje problem.</li>
+                <br>
+                <li>Kliknij prawym przyciskiem myszy na element, który chcesz sprawdzić, a następnie wybierz "Inspect Element".</li>
+                <br>
+                <li>Przeglądaj kod HTML, CSS i JavaScript w inspektorze elementów, aby zidentyfikować problemy i testować różne zmiany na żywo.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightGreen-container highlight-text ">
+            <i>Konsola JavaScript</i> - Bootstrap 5 wykorzystuje wiele funkcji JavaScript, które mogą prowadzić do błędów. Możesz użyć konsoli JavaScript, aby zidentyfikować błędy w kodzie i zobaczyć, jakie funkcje są wywoływane.
+        </p>
+        <div class="text-container gray-container white-list">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <ol>
+                <li>Otwórz stronę internetową, na której występuje problem.</li>
+                <br>
+                <li>Kliknij prawym przyciskiem myszy na stronie i wybierz "Inspect Element".</li>
+                <br>
+                <li>Przejdź do zakładki "Console".</li>
+                <br>
+                <li>Zidentyfikuj błędy w kodzie JavaScript i przetestuj różne funkcje i metody, aby znaleźć rozwiązanie problemu.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightGreen-container highlight-text highlight-text-black article tooltip">
+            <i>Testy jednostkowe</i> - Testowanie jednostkowe to proces sprawdzania, czy pojedyncze elementy kodu działają zgodnie z oczekiwaniami. Możesz napisać testy jednostkowe dla kodu Bootstrap 5, aby upewnić się, że wszystko działa poprawnie. Na przykład przy użyciu oprogramowania "Jasmine"
+        </p>
+        <div class="text-container gray-container white-list">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <ol>
+                <li>Zainstaluj "Jasmine" w swoim projekcie Bootstrap 5.</li>
+                <br>
+                <li>Napisz testy jednostkowe dla różnych funkcji JavaScript.</li>
+                <br>
+                <li>Uruchom testy, aby upewnić się, że funkcje działają zgodnie z oczekiwaniami.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightGreen-container highlight-text highlight-text-black">
+            <i>Wtyczki do przeglądarki</i> - Istnieją różne wtyczki dostępne dla popularnych przeglądarek internetowych, takich jak Chrome i Firefox, które ułatwiają debugowanie kodu. Na przykład, wtyczka "CSS Peeper" pozwala na łatwe przeglądanie stylów CSS na stronie internetowej.
+        </p>
+        <div class="text-container gray-container white-list">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <ol>
+                <li>Zainstaluj wtyczkę "CSS Peeper" w przeglądarce internetowej.</li>
+                <br>
+                <li>Otwórz stronę internetową, na której chcesz użyć wtyczki.</li>
+                <br>
+                <li>Kliknij ikonę "CSS Peeper" w pasku narzędzi przeglądarki.</li>
+                <br>
+                <li>Wybierz element, którego chcesz sprawdzić, aby zobaczyć jego styl CSS.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightGreen-container highlight-text highlight-text-black">
+            <i>Narzędzia do kontroli wersji</i> - Jeśli korzystasz z systemu kontroli wersji, takiego jak Git, możesz łatwo przeglądać historię zmian w kodzie Bootstrap 5 i zidentyfikować, które zmiany wprowadziły błędy.
+        </p>
+        <div class="text-container gray-container white-list">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <ol>
+                <li>Zainstaluj system kontroli wersji "Git" w swoim projekcie Bootstrap 5.</li>
+                <br>
+                <li>Użyj poleceń "git log" i "git diff" do przeglądania historii zmian w kodzie.</li>
+                <br>
+                <li>Zidentyfikuj zmiany, które mogą być przyczyną problemów, i wykonaj odpowiednie kroki, aby je naprawić.</li>
+            </ol>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Te narzędzia i metody mogą pomóc w debugowaniu kodu w Bootstrap 5 i upewnieniu się, że Twoja strona internetowa działa zgodnie z oczekiwaniami.
+            </p>
+        </div>
+        <div class="text-container blue-container">
+            <img src="/img/warning.png" alt="">
+            <b>Ważne</b>
+            <p>
+                Najważniejsze jest, aby dokładnie przejrzeć kod i zidentyfikować, gdzie znajdują się błędy, a następnie podjąć odpowiednie kroki, aby je naprawić.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Podsumowanie.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

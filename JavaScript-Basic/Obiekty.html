@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obiekty-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-JavaScript.html">Czym jest JavaScript</a></li>
+            <li><a href="Podstawowa-skladnia-JavaScript.html">Podstawowa Składnia</a></li>
+            <li><a href="Wyjscie(output).html">Wyświetlanie</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Typy-Danych.html">Typy-Danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Operatory.html">Operatory</a></li>
+            <li><a href="Instrukcje-Warunkowe.html">Instrukcje-Warunkowe</a></li>
+            <li><a href="Pętle.html">Pętle</a></li>
+            <li><a href="Funkcje.html">Funkcje</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Obiekty.html">Obiekty</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Wartosci.html">Wartosci</a></li>
+            <li><a href="Referencje.html">Referencje</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Eventy.html">Eventy</a></li>
+            <li><a href="Manipulacja_DOM-em.html">Manipulacja_DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Biblioteki-JavaScript.html">Biblioteki-JavaScript</a></li>
+            <li><a href="Debugowanie-Kodu.html">Debugowanie-Kodu</a></li>
+            <li><a href="Testowanie-Kodu.html">Testowanie-Kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>(Obiekty)</h1>
+        <div class="section-with-image">
+            <p>
+                Obiekty w języku JavaScript to jedna z podstawowych konstrukcji programowania. Obiekty służą do
+                tworzenia i przechowywania zmiennych oraz funkcji, które są związane ze sobą w jednym miejscu. Obiekty
+                w języku JavaScript są typem dynamicznym i nie wymagają określania ich typu przed użyciem.
+            </p>
+            <div>
+                <img src="/img/vector100.png" alt="">
+            </div>
+        </div>
+        <p class="text-container lightPink-container no-margin-top">
+            Obiekty są tworzone za pomocą nawiasów klamrowych i składają się z właściwości i metod. Właściwości to
+            zmienne przypisane do obiektu, a metody to funkcje, które są częścią obiektu.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+let person = {
+
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+
+  getFullName: function() {
+                    
+    return this.firstName + " " + this.lastName;
+  }
+};
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie person jest obiektem, który posiada cztery właściwości: firstName, lastName,
+                age i metodę getFullName. Właściwości i metody są odwoływane za pomocą operatora ., np.
+                person.firstName lub person.getFullName().
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>(Konstruktory) tworzenie obiektów</h1>
+        <div class="section-with-image">
+             <p>
+                 Konstruktory to funkcje w języku JavaScript, które służą do tworzenia nowych obiektów z określonymi
+                 właściwościami i metodami. Konstruktory są bardzo przydatne w tworzeniu wielu instancji obiektów o
+                 podobnych właściwościach i metodach.
+             </p>
+            <img src="/img/vector40.png" alt="">
+        </div>
+        <p class="text-container blue-container article tooltip no-margin-top">
+            W <code><a href="#" pro-tip="">konstruktorze</a></code> zazwyczaj używa się słowa kluczowego <code><a href="#" pro-tip="">this</a></code>, aby odwołać się do właściwości i metod, które należą do tworzonego obiektu. Właściwości
+            i metody te są zazwyczaj przekazywane jako parametry konstruktora.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+function Person(name, age) {
+
+  this.name = name;
+  this.age = age;
+
+  this.introduce = function() {
+
+    console.log("My name is " + this.name + " and I am " + this.age + " years old.");
+  };
+}
+
+
+var john = new Person("John", 30);
+var jane = new Person("Jane", 25);
+
+
+john.introduce(); // My name is John and I am 30 years old.
+jane.introduce(); // My name is Jane and I am 25 years old.
+
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie funkcja Person służy jako konstruktor do tworzenia obiektów john i jane,
+                które mają właściwości name i age, oraz metodę <code><a href="#" pro-tip="">introduce</a></code>.
+            </p>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Aby utworzyć nowy obiekt za pomocą konstruktora, użyj słowa kluczowego <code><a href="#" pro-tip="">new</a></code> przed nazwą konstruktora.
+            W powyższym przykładzie john i jane to nowe obiekty, które zostały utworzone za pomocą konstruktora Person.
+        </p>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Korzystanie z konstruktorów pozwala na tworzenie wielu instancji obiektów o podobnych właściwościach
+                i metodach, co ułatwia tworzenie i zarządzanie aplikacją.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>(Object.create) tworzenie obiektów</h1>
+        <div class="section-with-image">
+            <p>
+                Metoda Object.create() to jedna z metod w języku JavaScript, która służy do tworzenia nowych obiektów z określonymi właściwościami i prototypami.
+                W przeciwieństwie do konstruktora, metoda Object.create() tworzy nowy obiekt bez wywoływania żadnej funkcji konstruktora. Zamiast tego, jako argumenty metody przekazuje się obiekt prototypu i opcjonalny obiekt z właściwościami.
+            </p>
+            <img src="/img/vector94.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container article tooltip no-margin-top">
+            Oto przykład użycia metody <code><a href="#" pro-tip="">Object.create()</a></code> do utworzenia nowego obiektu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+let personPrototype = {
+
+  introduce: function() {
+    console.log("My name is " + this.name + " and I am " + this.age + " years old.");
+  }
+};
+
+
+let john = Object.create(personPrototype, {
+  name: {
+    value: "John"
+  },
+
+  age:{
+    value: 30
+  }
+});
+
+john.introduce(); // My name is John and I am 30 years old.
+
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie utworzono prototyp personPrototype, który zawiera metodę introduce.
+                Następnie, utworzono nowy obiekt john za pomocą metody Object.create(), w której jako pierwszy
+                argument przekazano prototyp personPrototype, a jako drugi argument obiekt z właściwościami name i age.
+            </p>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            Metoda Object.create() tworzy nowy obiekt john z właściwościami name i age, które zostały przekazane
+            jako drugi argument. Obiekt john dziedziczy również metodę introduce z prototypu personPrototype.
+        </p>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Korzystanie z metody Object.create() pozwala na tworzenie nowych obiektów z określonymi prototypami
+                i właściwościami bez konieczności tworzenia funkcji konstruktora. Jest to szczególnie przydatne, gdy
+                potrzebujemy utworzyć wiele instancji obiektów o podobnych właściwościach i prototypach.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Funkcje-Matematyczne.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

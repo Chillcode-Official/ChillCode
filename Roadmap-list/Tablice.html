@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obiekty C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Tablice W Języku C#</h1>
+        <div class="section-with-image">
+           <p>
+               Tablice (<strong>arrays</strong>) w języku C# są podstawowym typem danych służącym do przechowywania
+               wielu elementów tego samego typu. Tablice mogą zawierać elementy typu liczbowego, znakowego
+               lub innego typu referencyjnego, takiego jak obiekty. Każda tablica ma określoną liczbę elementów
+               i jest indeksowana, co pozwala na dostęp do poszczególnych elementów za pomocą indeksów.
+           </p>
+            <img src="/img/vector34.png" alt="">
+        </div>
+        <p class="text-container purple-container article tooltip">
+            Aby utworzyć tablicę, należy użyć operatora <code><a href="#" pro-tip="hej">new</a></code> oraz określić typ elementów oraz liczbę elementów.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[3];  //Ten kod tworzy tablicę o nazwie "liczby" zawierającą 3 elementy typu int.
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Tablica można też zainicjalizować od razu z wartościami:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Wartości można przypisać do tablicy w momencie deklaracji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+double[] liczby = {2.15, 5.5};
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Inicjowanie tablicy za pomocą pętli:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Program
+{
+    int[] liczby = new int[7];
+
+
+    for (int i = 0; i < liczby.Length; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+//output:
+
+0
+1
+2
+3
+4
+5
+6
+                   </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                Ten kod tworzy tablicę o nazwie "liczby" zawierającą 7 elementów typu int, a następnie
+                przypisuje każdemu z nich wartość odpowiadającą indeksowi elementu.
+            </p>
+        </div>
+        <p class="text-container purple-container article tooltip">
+            Inicjowanie tablicy za pomocą metody klasy <code><a href="#" pro-tip="hej">Enumerable.Range</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = Enumerable.Range(1, 5).ToArray();
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <h2>Dostęp Do Elementów Tablicy</h2>
+        <p class=" article tooltip">
+            Aby uzyskać dostęp do elementów tablicy w języku C#, należy użyć operatora indeksującego <code><a href="#" pro-tip="hej">[]</a></code>.
+            Indeks elementu tablicy to jego pozycja w tablicy, zaczynając od 0.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    int[] liczby = new int[] {1, 2, 3, 4, 5};
+
+    int pierwszy = liczby[0];
+
+    int ostatni = liczby[liczby.Length - 1];
+
+    liczby[1] = 8;  //zmianna wartości 2 na 8
+
+    Console.WriteLine(pierwszy + ostatni + liczby[1]);  // 1 + 5 + 8
+}
+
+//output:  14
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Rodzaje Tablic W Języku C#</h1>
+        <div class="section-with-image">
+            <div class="text-content article tooltip">
+                <p>
+                     W języku C# możemy spotkać się z kilkoma koncepcjami pracy z tablicami. Między innymi:
+                </p>
+                <ul>
+                    <li><code><a href="#" pro-tip="hek">Tablice Wielowymiarowe</a></code></li>
+                    <li><code><a href="#" pro-tip="hek">Tablice Postrzępione</a></code></li>
+                    <li><code><a href="#" pro-tip="hek">Tablice Parametryczne</a></code></li>
+                    <li><code><a href="#" pro-tip="hek">Przekazywanie Tablic Do Metody</a></code></li>
+                </ul>
+            </div>
+            <img class="image-bottom" src="/img/vector51.png" alt="">
+        </div>
+        <p class="text-container cream-container">
+            Liczba wymiarów i długość każdego wymiaru są ustalane podczas tworzenia wystąpienia tablicy.
+            Tych wartości nie można zmienić w okresie istnienia wystąpienia.
+        </p>
+        <div class="big-page-header"></div>
+        <h2>Tablice Wielowymiarowe</h2>
+        <p class="text-content-500width">
+            Tablice wielowymiarowe w języku C# są to tablice, które zawierają inne tablice. Służą one do przechowywania
+            danych w postaci tabeli, gdzie każdy wiersz i każda kolumna reprezentuje inną wartość.
+        </p>
+        <div class="page-header"></div>
+        <div class="code-block">
+            <pre>
+                <code>
+int[,] tablica2D = new int[3, 4];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container">
+            Ten kod tworzy tablicę dwuwymiarową o nazwie "tablica2D" zawierającą 3 wiersze i 4 kolumny, każdy z elementów jest pusty.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[,,] tablica3D = new int[3, 4, 2];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container">
+            Ten kod tworzy tablicę trójwymiarową o nazwie "tablica3D" zawierającą 3 warstwy, 4 wiersze i 2 kolumny, każdy z elementów jest pusty.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int pierwszy = tablica2D[0, 0];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container">
+            Ten kod przypisuje pierwszy element tablicy dwuwymiarowej (wiersz 0, kolumna 0) do zmiennej pierwszy.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    int[,] tablica3D = new int[3,4] {
+
+        { 0,1,2,3 },  //wiersz o indeksie 0
+
+        { 4,5,6,6 },  //wiersz o indeksie 1
+
+        { 8,9,10,11 }  };  //wiersz o indeksie 2
+
+
+    Console.WriteLine(tablica3D[2,2] + tablica3D[0,3]);  // 10 + 3
+
+}
+
+//output: 13
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Ważne jest, aby pamiętać że indeks każdego wymiaru musi być liczbą całkowitą oraz nie może być
+                mniejszy niż 0 lub większy niż liczba elementów w danym wymiarze minus 1. Próba uzyskania dostępu
+                do elementu poza zakresem tablicy spowoduje błąd w kodzie.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice Postrzępione</h2>
+        <p class="text-content-500width">
+            Tablice postrzępione (ang. jagged arrays) w języku C# są to tablice, w których każdy element jest
+            również tablicą. Są to tablice, w których każdy wiersz może mieć inną liczbę kolumn.
+        </p>
+        <div class="page-header"></div>
+        <div class="code-block">
+            <pre>
+                <code>
+int[][] tablicaPostrzepiona = new int[3][];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container brown-container">
+            Ten kod tworzy tablicę postrzępioną o nazwie "tablicaPostrzepiona" zawierającą 3 elementy.
+            Każdy z tych elementów jest tablicą int, ale jeszcze nie ma ustalonej liczby kolumn.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+tablicaPostrzepiona[0] = new int[4];
+
+tablicaPostrzepiona[1] = new int[2];
+
+tablicaPostrzepiona[2] = new int[3];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container brown-container">
+            Ten kod przypisuje do pierwszego elementu tablicy postrzępionej 4 kolumny, do drugiego 2 kolumny, a do trzeciego 3 kolumny.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int pierwszy = tablicaPostrzepiona[0][0];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container brown-container">
+            Ten kod przypisuje pierwszy element pierwszej tablicy w tablicy postrzępionej (wiersz 0, kolumna 0) do zmiennej pierwszy
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    int[][] T = new int[][] {
+
+        new int[] {2,4},
+
+        new int[] {6,8},
+
+        new int[] {10,12} };
+
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            Console.WriteLine("T[{0}, {1}] = {2}", i, j, T[i][j]);
+        }
+    }
+}
+
+//output:
+
+T[0, 0] = 2
+
+T[0, 1] = 4
+
+[1, 0] = 6
+
+T[1, 1] = 8
+
+T[2, 0] = 10
+
+T[2, 1] = 12
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice Parametryczne</h2>
+        <p class="text-content-500width">
+            Tablice parametryczne (ang. generyczne) w języku C# są to klasy lub interfejsy, które
+            pozwalają na przechowywanie różnych typów danych. Umożliwiają one tworzenie klas kontenerów,
+            które są niezależne od typu danych przechowywanych.
+        </p>
+        <div class="page-header"></div>
+        <p class="text-container article tooltip">
+            Użycie takiej tablicy możliwe jest po zastoswaniu słowa kluczowego <code><a href="#" pro-tip="Pozwala na przekazanie tablicy parametrycznej do metody jako ostatni argument. Metoda może otrzymać dowolną liczbę elementów, które zostaną zamienione na tablicę parametryczną w momencie wywołania.">params</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    static void Wyswietl(params int[] liczby)
+    {
+
+        foreach (int liczba in liczby)
+        {
+        Console.Write(liczba + " ");
+        }
+
+    Console.WriteLine();
+}
+
+    static void Main(string[] args)
+    {
+        Wyswietl(1, 2, 3, 4, 5);
+
+        Wyswietl(6, 7, 8);
+
+        Wyswietl(9, 10);
+    }
+}
+
+//output:
+
+1 2 3 4 5
+6 7 8
+9 10
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie metoda "Wyswietl" przyjmuje tablicę parametryczną "liczby"
+                jako ostatni argument i wyświetla każdy element tablicy na ekranie. W metodzie Main,
+                przekazywane są różne liczby jako argumenty, które zostają zamienione na tablicę parametryczną
+                i przekazane do metody "Wyswietl".
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    static double Srednia(params double[] liczby)
+    {
+        double suma = 0;
+
+        for (int i = 0; i < liczby.Length; i++)
+        {
+            suma += liczby[i];
+        }
+
+        return suma / liczby.Length;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine(Srednia(2, 5, 6, 3, 10));  // 2 + 5 + 6 + 3 + 10 = 26 / 5 = 5,2
+    }
+}
+
+//output: 5,2
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, metoda Srednia przyjmuje tablicę parametryczną "liczby" jako argument i zwraca średnią z podanych liczb.
+            </p>
+        </div>
+
+        <p class="text-container">
+            Jak widzisz, params pozwala na tworzenie bardziej elastycznych i uniwersalnych metod, które mogą przyjmować różne liczby argumentów.
+        </p>
+        <div class="big-page-header"></div>
+        <h2>Przekazywanie Tablic Do Metody</h2>
+        <p class="text-content-500width">
+            W języku C#, tablice są traktowane jako obiekty i mogą być przekazywane do metod jako argumenty. W przypadku przekazania tablicy do metody, metoda otrzymuje referencję do tablicy, co oznacza, że metoda ma dostęp do oryginalnej tablicy i może ją zmieniać.
+        </p>
+        <div class="page-header"></div>
+        <div class="code-block">
+            <pre>
+                <code>
+using System
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+
+        Wyswietl(liczby);
+    }
+
+    static void Wyswietl(int[] liczby)
+    {
+        foreach (int liczba in liczby)
+        {
+            Console.WriteLine(liczba);
+        }
+    }
+}
+
+//output:
+
+1
+2
+3
+4
+5
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p class="article tooltip">
+                Jeśli chcesz uniknąć zmiany oryginalnej tablicy w metodzie, możesz przekazać kopię tablicy.
+                Możesz to zrobić poprzez przekazanie tablicy jako "params" lub skopiowanie tablicy za pomocą
+                metody "Array.Clone()" lub "Array.Copy()" przed przekazaniem.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Właściwości I Metody Klasy Array</h1>
+        <div class="section-with-image">
+            <p>
+                lasa Array w języku C# jest klasą bazową dla wszystkich typów tablic w C# i zawiera wiele
+                właściwości i metod, które pozwalają na manipulowanie tablicami. Oto kilka przykładów
+                najważniejszych właściwości i metod klasy Array:
+            </p>
+            <img src="/img/vector48.png" alt="">
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Właściowość <code><a href="#" pro-tip="Zwraca liczbę elementów w tablicy.">Length</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+
+int ilosc = liczby.Length;
+
+Console.WriteLine(ilosc);
+
+
+//output: 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Właściwość <code><a href="#" pro-tip="Zwraca liczbę wymiarów tablicy.">Rank</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[,] tablica2D = new int[3, 4];
+
+int liczbaWymiarow = tablica2D.Rank;
+
+Console.WriteLine(liczbaWymiarow);
+
+
+//output: 2
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Zwraca liczbę elementów w danym wymiarze tablicy.">GetLength</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[,] tablica2D = new int[3, 4];
+
+int liczbaElementow = tablica2D.GetLength(0);
+
+Console.WriteLine(liczbaElementow);
+
+
+//output: 3
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Zwraca indeks dolny granicy danego wymiaru tablicy.">GetLowerBound()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[5] {1,2,3,4,5};
+
+int lowerBound = liczby.GetLowerBound(0);
+
+Console.WriteLine(lowerBound);
+
+
+//output: 0
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Zwraca indeks górnej granicy danego wymiaru tablicy.">GetUpperBound()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+nt[] liczby = new int[5] {1,2,3,4,5};
+
+int upperBound = liczby.GetUpperBound(0);
+
+Console.WriteLine(upperBound);
+
+
+//output: 4
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Odwraca kolejność elementów w tablicy.">Reverse()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+
+Array.Reverse(liczby);
+
+
+foreach(int i in liczby)
+{
+    Console.Write(i + " ");
+}
+
+
+//output: 5 4 3 2 1
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Sortuje elementy tablicy w kolejności rosnącej.">Sort()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 4, 2, 5, 1, 3 };
+
+Array.Sort(liczby);
+
+
+foreach(int i in liczby)
+{
+    Console.Write(i + " ");
+}
+
+
+//output: 1 2 3 4 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Czyści elementy tablicy od podanego indeksu i liczby elementów.">Clear()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+
+Array.Clear(liczby, 1, 3);
+
+
+foreach(int i in liczby)
+{
+    Console.Write(i + " ");
+}
+
+//output: 1 0 0 0 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Zwraca indeks pierwszego wystąpienia podanego elementu w tablicy.">IndexOf()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 4, 5 };
+
+int index = Array.IndexOf(liczby, 3);
+
+Console.WriteLine(index);
+
+
+//output: 2
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Zwraca indeks ostatniego wystąpienia podanego elementu w tablicy.">LastIndexOf()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int[] liczby = new int[] { 1, 2, 3, 2, 1 };
+
+int index = Array.LastIndexOf(liczby, 2);
+
+Console.WriteLine(index);
+
+
+//output: 3
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Kolekcje.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

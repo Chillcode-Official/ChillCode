@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Elementy Blokowe HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Elementy Blokowe W HTML</h1>
+                <p>
+                    HTML (Hypertext Markup Language) to język znaczników, który służy do tworzenia i strukturyzacji treści
+                    na stronie internetowej. Elementy blokowe to elementy HTML, które tworzą bloki treści i zajmują całą
+                    dostępną szerokość.
+                </p>
+            </div>
+            <img src="/img/vector43.png" alt="">
+        </div>
+        <div class="text-container lightPink-container no-margin-top article tooltip">
+            <p>
+                Przykłady elementów blokowych to:
+                <code><a href="#" pro-tip="">div</a></code>
+                <code><a href="#" pro-tip="">p</a></code>
+                <code><a href="#" pro-tip="">h1-h6</a></code>
+                <code><a href="#" pro-tip="">ul</a></code>
+                <code><a href="#" pro-tip="">ol</a></code>
+                <code><a href="#" pro-tip="">table</a></code>
+                <code><a href="#" pro-tip="">form</a></code>
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;div id=&quot;header&quot;&gt;
+        &lt;h1&gt;M&oacute;j blog&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;main&quot;&gt;
+        &lt;p&gt;Witaj na moim blogu! Na tej stronie znajdziesz ciekawe artyku&lstrok;y o r&oacute;&zdot;nych tematach.&lt;/p&gt;
+        &lt;div id=&quot;articles&quot;&gt;
+            &lt;h2&gt;Artyku&lstrok;y&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Jak zacz&aogon;&cacute; swoj&aogon; przygod&eogon; z programowaniem&lt;/li&gt;
+                &lt;li&gt;10 sposob&oacute;w na poprawienie swojej produktywno&sacute;ci&lt;/li&gt;
+                &lt;li&gt;Jak zdoby&cacute; pierwszy milion?&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;Najnowsze artyku&lstrok;y&lt;/h2&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Jak zdoby&cacute; pierwszy milion?&lt;/li&gt;
+                &lt;li&gt;10 sposob&oacute;w na poprawienie swojej produktywno&sacute;ci&lt;/li&gt;
+                &lt;li&gt;Jak zacz&aogon;&cacute; swoj&aogon; przygod&eogon; z programowaniem&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;sidebar&quot;&gt;
+        &lt;h2&gt;Kategorie&lt;/h2&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Kategoria&lt;/th&gt;
+                &lt;th&gt;Liczba artyku&lstrok;&oacute;w&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Programowanie&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Produktywno&sacute;&cacute;&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Biznes&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;h2&gt;Newsletter&lt;/h2&gt;
+        &lt;form&gt;
+            &lt;label for=&quot;email&quot;&gt;Podaj sw&oacute;j adres email:&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Zapisz si&eogon;&quot;&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;footer&quot;&gt;
+        &lt;p&gt;Copyright &copy; 2021 M&oacute;j blog&lt;/p&gt;
+    &lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top gray-container">
+            <div id="header">
+                <h1>Mój blog</h1>
+            </div>
+            <div id="main">
+                <p>Witaj na moim blogu! Na tej stronie znajdziesz ciekawe artykuły o różnych tematach.</p>
+                <div id="articles">
+                    <h2>Artykuły</h2>
+                    <ul>
+                        <li>Jak zacząć swoją przygodę z programowaniem</li>
+                        <li>10 sposobów na poprawienie swojej produktywności</li>
+                        <li>Jak zdobyć pierwszy milion?</li>
+                    </ul>
+                    <h2>Najnowsze artykuły</h2>
+                    <ol>
+                        <li>Jak zdobyć pierwszy milion?</li>
+                        <li>10 sposobów na poprawienie swojej produktywności</li>
+                        <li>Jak zacząć swoją przygodę z programowaniem</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="sidebar">
+                <h2>Kategorie</h2>
+                <table>
+                    <tr>
+                        <th>Kategoria</th>
+                        <th>Liczba artykułów</th>
+                    </tr>
+                    <tr>
+                        <td>Programowanie</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Produktywność</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Biznes</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+                <h2>Newsletter</h2>
+                <form>
+                    <label for="email">Podaj swój adres email:</label>
+                    <input type="email" id="email" name="email">
+                    <input type="submit" value="Zapisz się">
+                </form>
+            </div>
+            <div id="footer">
+                <p>Copyright © 2021 Mój blog</p>
+            </div>
+        </div>
+        <div class=""></div>
+        <div class="big-page-header"></div>
+        <h1>Elementy Liniowe W HTML</h1>
+        <div class="section-with-image">
+            <p>
+                Elementy liniowe w HTML to elementy, które tworzą treść w poziomie, w linii. Nie zajmują
+                one całej szerokości dostępnej dla rodzica, zamiast tego zajmują tylko tyle miejsca, ile
+                jest potrzebne do zawarcia swojej zawartości.
+            </p>
+            <img src="/img/vector6.png" alt="">
+        </div>
+        <div class="text-container article tooltip">
+            <p>
+                Przykłady elementów liniowych w HTML to:
+                <code><a href="#" pro-tip="">a</a></code>
+                <code><a href="#" pro-tip="">b</a></code>
+                <code><a href="#" pro-tip="">i</a></code>
+                <code><a href="#" pro-tip="">strong</a></code>
+                <code><a href="#" pro-tip="">img</a></code>
+                <code><a href="#" pro-tip="">span</a></code>
+                <code><a href="#" pro-tip="">em</a></code>
+                <code><a href="#" pro-tip="">br</a></code>
+                <code><a href="#" pro-tip="">input</a></code>
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p&gt;&lt;i&gt;Witaj&lt;/i&gt; na mojej stronie! &lt;span&gt;Jestem&lt;/span&gt; &lt;strong&gt;ekspertem&lt;/strong&gt;
+w dziedzinie &lt;em&gt;programowania&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Zapraszam Ci&eogon; do zapoznania si&eogon; z &lt;a href=&quot;https://JustCode.pl/podroz&quot;&gt;moimi artyku&lstrok;ami&lt;/a&gt; na temat C#&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Oto kilka zdj&eogon;&cacute; z moich ostatnich podr&oacute;&zdot;y:&lt;/b&gt;&lt;/p&gt;
+&lt;img src=&quot;/img/podroz1.jpg&quot; alt=&quot;Zdj&eogon;cie z podr&oacute;&zdot;y&quot;&gt;
+&lt;img src=&quot;/img/podroz2.jpg&quot; alt=&quot;Zdj&eogon;cie z podr&oacute;&zdot;y&quot;&gt;
+&lt;img src=&quot;/img/podroz3.jpg&quot; alt=&quot;Zdj&eogon;cie z podr&oacute;&zdot;y&quot;&gt;
+
+&lt;p&gt;Je&sacute;li chcesz si&eogon; ze mn&aogon; &lt;span&gt;skontaktowa&cacute;&lt;/span&gt;, wype&lstrok;nij poni&zdot;szy &lt;em&gt;formularz&lt;/em&gt; kontaktowy:&lt;/p&gt;
+
+&lt;form&gt;
+    &lt;label for=&quot;name&quot;&gt;Imi&eogon; i nazwisko:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;&lt;br&gt;
+
+    &lt;label for=&quot;email&quot;&gt;Adres email:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;
+
+    &lt;label for=&quot;message&quot;&gt;Wiadomo&sacute;&cacute;:&lt;/label&gt;
+    &lt;textarea id=&quot;message&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;br&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Wy&sacute;lij&quot;&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser browser-no-margin-top">
+            <p><i>Witaj</i> na mojej stronie! <span>Jestem</span> <strong>ekspertem</strong> w dziedzinie <em>programowania</em>.</p>
+            <p>Zapraszam Cię do zapoznania się z <a href="https://mojastrona.pl/artykuly">moimi artykułami</a> na temat <em>C#</em> i <em>C++</em>.</p>
+            <p><b>Oto kilka zdjęć z moich ostatnich podróży:</b></p>
+            <img src="/img/podroz1.jpg" alt="Zdjęcie z podróży">
+            <img src="/img/podroz2.jpg" alt="Zdjęcie z podróży">
+            <img src="/img/podroz3.jpg" alt="Zdjęcie z podróży">
+            <p>Jeśli chcesz się ze mną <span>skontaktować</span>, wypełnij poniższy <em>formularz</em> kontaktowy:</p>
+            <form>
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Adres email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Wyślij">
+            </form>
+
+        </div>
+    <div class="alert-card alert-card3">
+        <img src="/img/warning.png" alt="">
+        <b>Uwaga</b>
+        <p>
+            Podobnie jak elementy blokowe, elementy liniowe mogą być używane w różnych kombinacjach do tworzenia
+            różnych elementów interfejsu użytkownika i treści na stronie internetowej.
+        </p>
+    </div>
+    <div class="big-page-header"></div>
+    <div class="btn">
+        <a href="KlasyId.html"><button>Dalej</button></a>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

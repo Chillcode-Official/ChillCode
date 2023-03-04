@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX-jQuery</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Manipulacja-DOM-em.html">Manipulacja-DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Obsługa-zdarzeń.html">Obsługa zdarzeń</a></li>
+            <li><a href="Efekty-animacje.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Wtyczki.html">Wtyczki</a></li>
+            <li><a href="Tworzenie-aplikacji-webowych.html">Tworzenie-aplikacji-webowych</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="jQuery-VS-JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>AJAX jQuery</h1>
+        <div class="section-with-image">
+            <p>
+                AJAX to skrót od "Asynchronous JavaScript and XML", czyli asynchroniczny JavaScript i XML. Jest to technologia, która umożliwia przesyłanie danych z serwera do klienta i z powrotem bez konieczności przeładowania całej strony.
+                jQuery jest popularną biblioteką JavaScript, która ułatwia manipulowanie dokumentami HTML, obsługę zdarzeń, animacje i wiele innych funkcji. jQuery udostępnia wiele metod do wysyłania asynchronicznych żądań AJAX.
+            </p>
+            <img src="/img/vector123.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container article tooltip  no-margin-top">
+            Aby wysłać zapytanie <code><a href="#" pro-tip="">AJAX</a></code> przy użyciu jQuery, możemy użyć metody
+            <code><a href="#" pro-tip="">$.ajax()</a></code>, która pozwala na wysyłanie żądań HTTP do serwera.
+            Metoda ta przyjmuje kilka parametrów, w tym:
+        </p>
+        <div class="text-container lightWhite-container black-list highlight-text">
+            <ul>
+                <li><code>url</code>: adres URL, pod którym znajduje się plik obsługujący żądanie</li>
+                <li><code>type</code>: typ żądania (np. GET lub POST)</li>
+                <li><code>data</code>: dane wysyłane w żądaniu</li>
+                <li><code>dataType</code>: typ danych oczekiwanych w odpowiedzi (np. json lub html)</li>
+                <li><code>success</code>: funkcja wywoływana po pomyślnym zakończeniu żądania</li>
+                <li><code>error</code>: funkcja wywoływana w przypadku wystąpienia błędu</li>
+            </ul>
+        </div>
+        <div class="page-header"></div>
+        <code>Przykładowe użycie metody $.ajax():</code>
+        <div class="code-block">
+            <pre>
+                <code>
+$.ajax({
+
+  url: "http://example.com/data",
+  type: "GET",
+  dataType: "json",
+  success: function(data) {
+    console.log(data);
+  },
+
+  error: function(xhr, status, error) {
+    console.error(status + ": " + error);
+  }
+});
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container minus-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                W tym przykładzie wysyłamy żądanie GET pod adres "http://example.com/data" i oczekujemy odpowiedzi w formacie JSON. Po pomyślnym zakończeniu żądania, dane zostaną wyświetlone w konsoli przeglądarki. W przypadku wystąpienia błędu, zostanie wyświetlony komunikat z opisem błędu.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Metoda $.ajax() to tylko jedna z wielu metod do wysyłania asynchronicznych żądań AJAX dostępnych w jQuery. Można też użyć metod $.get(), $.post(), $.getJSON() i wiele innych. Każda z tych metod ma swoje specyficzne zastosowanie i pozwala na dokładniejsze dostosowanie żądań do wymagań aplikacji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Metoda .load()</h1>
+        <div class="section-with-image">
+            <p>
+                Metoda .load() jest jedną z najprostszych metod do ładowania zawartości dynamicznie na stronie. Umożliwia pobranie zawartości z innej strony i wstawienie jej do wybranej sekcji na stronie. Może być również używana do wysyłania danych do serwera i pobrania odpowiedzi w celu aktualizacji zawartości na stronie.
+            </p>
+            <img src="/img/vector96.png" alt="">
+        </div>
+        <p class="text-container no-margin-top">
+            W tym przykładzie pobieramy zawartość strony 'http://example.com/data.html' i wstawiamy ją do elementu o id 'myDiv'.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+$('#myDiv').load('http://example.com/data.html');
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Metoda .get()</h1>
+                <p>
+                    Metoda .get() jest używana do pobierania danych z serwera za pomocą metody GET. Można ją wykorzystać do pobierania danych w formacie HTML, JSON lub tekstowym. Metoda .get() umożliwia również przekazanie parametrów zapytania, które mogą być używane na serwerze do generowania odpowiedzi.
+                </p>
+            </div>
+            <img src="/img/vector97.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            W tym przykładzie wysyłamy zapytanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane na stronie w elemencie o id 'myDiv'.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+$.get('http://example.com/data.json', function(data) {
+  // wyświetlenie danych na stronie
+  $('#myDiv').html(data.text);
+});
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Metoda .post()</h1>
+                <p>
+                    Metoda .post() jest używana do wysyłania danych na serwer za pomocą metody POST. Może być wykorzystana do wysyłania formularzy lub innych danych z elementów strony. Metoda .post() umożliwia również przekazanie parametrów zapytania, które mogą być używane na serwerze do generowania odpowiedzi.
+                </p>
+            </div>
+            <img src="/img/vector77.png" alt="">
+        </div>
+        <p class="text-container blue-container no-margin-top">
+            W tym przykładzie pobieramy zawartość strony 'http://example.com/data.html' i wstawiamy ją do elementu o id 'myDiv'.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+var formData = {
+  name: 'John',
+  email: 'john@example.com'
+};
+
+$.post('http://example.com/submit.php', formData, function(data) {
+  // wyświetlenie potwierdzenia na stronie
+  $('#myDiv').html(data.message);
+});
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Przykłady użycia AJAX w jQuery</h1>
+        <div class="page-header"></div>
+        <code>Pobieranie danych z serwera</code>
+        <p class="text-container lightGreen-container">
+            W poniższym przykładzie wysyłamy żądanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane w elemencie strony o id 'myDiv'.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$.ajax({
+  url: 'http://example.com/data.json',
+  dataType: 'json',
+  success: function(data) {
+    // wyświetlenie danych na stronie
+    $('#myDiv').html(data.text);
+  }
+});
+                </code>
+            </pre>
+        </div>
+        <code>Wysyłanie danych z formularza na serwer</code>
+        <p class="text-container lightGreen-container">
+            W poniższym przykładzie wysyłamy dane z formularza na adres 'http://example.com/submit.php' za pomocą metody POST. Kiedy serwer zwróci odpowiedź, wyświetlamy potwierdzenie na stronie.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$('#myForm').submit(function(e) {
+  e.preventDefault();
+  var formData = $(this).serialize();
+
+  $.ajax({
+    url: 'http://example.com/submit.php',
+    type: 'POST',
+    data: formData,
+    success: function(data) {
+      // wyświetlenie potwierdzenia na stronie
+      $('#myDiv').html(data.message);
+    }
+  });
+});
+                </code>
+            </pre>
+        </div>
+        <code>Ładowanie danych dynamicznie</code>
+        <p class="text-container lightGreen-container">
+            W poniższym przykładzie ładowanie danych rozpoczyna się po kliknięciu przycisku o id 'myButton'. Wysyłamy żądanie GET pod adres 'http://example.com/data.html' i oczekujemy odpowiedzi w formacie HTML. Kiedy serwer zwróci odpowiedź, wstawiamy dane na stronie w elemencie o id 'myDiv'.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$('#myButton').click(function() {
+  $.ajax({
+    url: 'http://example.com/data.html',
+    dataType: 'html',
+    success: function(data) {
+      // wstawienie danych na stronie
+      $('#myDiv').html(data);
+    }
+  });
+});
+                </code>
+            </pre>
+        </div>
+        <code>Aktualizacja zawartości co pewien czas</code>
+        <p class="text-container lightGreen-container">
+            W poniższym przykładzie co 5 sekund wysyłamy żądanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane na stronie w elemencie o id 'myDiv'.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+setInterval(function() {
+  $.ajax({
+    url: 'http://example.com/data.json',
+    dataType: 'json',
+    success: function(data) {
+      // wyświetlenie danych na stronie
+      $('#myDiv').html(data.text);
+    }
+  });
+}, 5000);
+                </code>
+            </pre>
+        </div>
+        <div class="btn">
+            <a href="Wtyczki.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

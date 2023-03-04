@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Atrybuty</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Refleksja.html">Refleksja</a></li>
+            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
+            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
+            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+            <li><a href="Indeksery.html">Indeksery</a></li>
+            <li><a href="Delegaty.html">Delegaty</a></li>
+            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Atrybuty W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                Atrybuty (ang. Attributes) w języku C# to specyficznego rodzaju komentarze, które pozwalają
+                na przypisanie dodatkowych informacji do elementów programu, takich jak klasy, metody, zmienne.
+                Służą one do opisania i określenia niektórych cech elementów programu, takich jak np.
+                dostępność, sposób serializacji, itp. Atrybuty są definiowane jako klasy i mogą być używane
+                przez narzędzia programistyczne, takie jak narzędzia do generowania dokumentacji, narzędzia do testowania jednostkowego itp.
+            </p>
+            <img src="/img/vector81.png" alt="">
+        </div>
+        <p class="text-container orange-container no-margin-top">
+            Definiowanie atrybutów w języku C# polega na stworzeniu nowej klasy, która dziedziczy po klasie bazowej
+            "Attribute" lub po jednej z jej klas pochodnych. Klasa ta musi posiadać publiczny konstruktor bezparametrowy.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+[Atrybut(parametry_wskazujace, wlasciowosci = value,)]
+
+class MojaKlasa
+{
+    // ...
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container orange-container">
+            Atrybuty mogą mieć również parametry, które można ustawić przy jego użyciu.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+[Atrybut(value1, value2, param1=5, param2="hejka")]
+
+class MojaKlasa
+{
+    // ...
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container orange-container article tooltip">
+            W języku C# istnieje kilka predefiniowanych atrybutów, które mogą być używane bez konieczności ich definiowania. Są to m.in.:
+            <code><a href="#" pro-tip="oznacza, że dany element programu jest przestarzały i powinien być zastąpiony przez inny. Jest on przydatny, gdy chcemy poinformować programistów o tym, że dany element jest już nieaktualny i nie powinien być już używany.">[Obsolete]</a></code>
+            <code><a href="#" pro-tip="pozwala na kompilowanie kodu warunkowo, na podstawie wartości zdefiniowanej w parametrze. Jest on przydatny, gdy chcemy, aby pewne fragmenty kodu były kompilowane tylko w określonych warunkach, np. na różnych platformach lub przy użyciu różnych zmiennych kompilacji.">[Conditional]</a></code>
+            <code><a href="#" pro-tip="służy do określenia, na jakie elementy programu może być przypisany dany atrybut. Jest on przydatny, gdy chcemy ograniczyć, gdzie dany atrybut może być użyty, aby uniknąć błędów w kodzie lub niezamierzonych skutków.">[AttributeUsage]</a></code>
+            <code><a href="#" pro-tip="oznacza, że dana klasa lub struct jest serializowalny, co oznacza, że jej stan może być zapisany do pliku lub przesłany przez sieć. Serializacja pozwala na zapisanie stanu obiektu do pliku lub przesłanie go przez sieć, a następnie na odtworzenie tego stanu w innym miejscu lub czasie.">[Serializable]</a></code>
+            <code><a href="#" pro-tip="pozwala na użycie funkcji z biblioteki dynamicznej DLL (Dynamic Link Library) w kodzie C#. Jest to przydatne, gdy chcemy użyć funkcji, które nie są dostępne w bibliotekach C# natywnych, lub gdy chcemy użyć funkcji z biblioteki, która jest napisana w innym języku, np. C++.">[DllImport]</a></code>
+
+        </p>
+        <div class="alert-card alert-card3 article tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Atrybuty mają swoje klasy bazowe zdefiniowane w przestrzeni nazw <code><a href="#" pro-tip="">System</a></code>
+                i <code><a href="#" pro-tip="">System.Diagnostics</a></code>
+                Są też atrybuty specyficzne dla narzędzi, takie jak na przykład
+                <code><a href="#" pro-tip="">[XmlElement]</a></code><code><a href="#" pro-tip="">[DataMember]</a></code>
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut [Obsolete]</h2>
+        <p class= text-content-500width>
+            Przykład jak używać atrybutu <b>[Obsolete]</b> wraz z kilkoma różnymi opcjami w celu
+            oznaczenia przestarzałej metody i poinformowania programistów o tym, że powinni oni używać nowszej
+            wersji tej metody:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKlasa
+{
+    // Nowa wersja metody
+    public void NowaMetoda()
+    {
+        // ...
+    }
+
+    [Obsolete("Metoda 'StaraMetoda' jest przestarzała. Proszę używać 'NowaMetoda' zamiast niej.", false)]
+    public void StaraMetoda()
+    {
+        // ...
+    }
+
+    [Obsolete("Metoda 'StaraMetoda2' jest stara. Zostanie usunięta w następnej wersji biblioteki.", true)]
+    public void StaraMetoda2()
+    {
+        // ...
+    }
+
+    public void JakasMetoda()
+    {
+        StaraMetoda(); // generuje ostrzeżenie
+
+        StaraMetoda2(); // generuje błąd
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, metoda StaraMetoda jest oznaczona jako przestarzała za pomocą atrybutu
+                [Obsolete]. Kiedy programista będzie próbował użyć tej metody, otrzyma komunikat "Metoda
+                'StaraMetoda' jest przestarzała. Proszę używać 'NowaMetoda' zamiast niej." i kompilator zgłosi ostrzeżenie.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Atrybut [Obsolete] jest bardzo przydatny w procesie rozwoju oprogramowania, ponieważ pozwala
+                na oznaczenie przestarzałych elementów kodu i poinformowanie programistów o tym, że powinni
+                oni przestawić się na nowszą wersję. Dzięki temu możliwe jest uniknięcie problemów związanych
+                z używaniem przestarzałych elementów kodu oraz zapewnienie, że kod jest aktualny i bezpieczny.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut [Conditional]</h2>
+        <p class= text-content-500width>
+            Przykład pokazuje, jak używać atrybutu <b>[Conditional]</b> w celu oznaczenia metody, która ma
+            być wykonywana tylko w przypadku, gdy zdefiniowane są określone stałe preprocesora:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKlasa
+{
+    [Conditional("DEBUG")]
+    [Conditional("TEST")]
+
+    public void DebugMethod()
+    {
+        // Kod który będzie wykonywany tylko w trybie debugowania i testowania
+    }
+
+
+    public void MojaMetoda()
+    {
+        DebugMethod(); // Ta metoda będzie wykonywana tylko jeśli stałe "DEBUG" oraz "TEST" są zdefiniowane
+        // ...
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, metoda DebugMethod jest oznaczona atrybutem [Conditional("DEBUG")]
+                oraz [Conditional("TEST")], co oznacza, że będzie ona wykonywana tylko w przypadku, gdy
+                zdefiniowane są stałe preprocesora o nazwie "DEBUG" i "TEST".
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Atrybut [Conditional] pozwala na warunkowe wykonywanie kodu w zależności od stałych preprocesora,
+                co jest przydatne podczas tworzenia aplikacji, gdy chcemy wykonywać pewne czynności tylko w trybie
+                debugowania lub testowania, a inne tylko w trybie produkcyjnym.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut [AttributeUsage]</h2>
+        <p class= text-content-500width>
+            przykład pokazuje, jak używać atrybutu <b>[AttributeUsage]</b> w celu określenia, jakiego typu elementy
+            mogą być oznaczone przez nasz niestandardowy atrybut:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+[AttributeUsage(AttributeTargets.Class | attributeTargets.Method, AllowMultiple = true)]
+
+class MojeAtrybuty : Attribute
+{
+    public string Opis { get; set; }
+
+    public MojeAtrybuty(string opis)
+    {
+        this.Opis = opis;
+    }
+}
+
+
+[MojeAtrybuty("To jest opis klasy")]
+class MojaKlasa
+{
+    [MojeAtrybuty("To jest opis metody")]
+
+    public void MojaMetoda()
+    {
+        //..
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, atrybut MojeAtrybuty jest oznaczony atrybutem [attributeUsage] z parametrem
+                attributeTargets.Class | attributeTargets.Method, co oznacza, że atrybut ten może być używany tylko
+                w odniesieniu do klas i metod. Atrybut [attributeUsage] posiada kilka opcjonalnych parametrów, z
+                których jednym jest AllowMultiple (bool) oznacza czy dany atrybut może być używany wielokrotnie na jednym elemencie.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Dzięki atrybutowi [attributeUsage] możemy określić, jakiego typu elementy mogą być
+                oznaczone przez nasz niestandardowy atrybut i uniknąć problemów związanych z nieprawidłowym
+                użyciem tego atrybutu.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut [Serializable]</h2>
+        <p class= text-content-500width>
+            Przykład pokazuje, jak używać atrybutu <b>[Serializable]</b> w celu oznaczenia klasy, która będzie
+            możliwa do serializacji, czyli przekształcenia na strumień danych:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+[Serializable]
+class MojaKlasa
+{
+    public int Liczba;
+
+    public string Napis;
+
+
+    public MojaKlasa(int liczba, string napis)
+    {
+        this.Liczba = liczba;
+
+        this.Napis = napis;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, klasa MojaKlasa jest oznaczona atrybutem [Serializable], co oznacza,
+                że będzie ona możliwa do serializacji. Serializacja polega na przekształceniu obiektu na strumień
+                danych, co pozwala na jego przechowywanie, przesyłanie lub kopiowanie.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Atrybut [Serializable] jest wykorzystywany przez narzędzia serializacji, takie jak
+                BinaryFormatter lub XmlSerializer, które automatycznie zserializują obiekt, jednak
+                nie ma konieczności, aby wszystkie pola były serializowane.
+                W przypadku, gdy niektóre pola nie powinny być serializowane, możemy skorzystać z atrybutu [NonSerialized].
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut [DllImport]</h2>
+        <p class= text-content-500width>
+            Przykład pokazuje, jak używać atrybutu <b>[DllImport]</b> w celu oznaczenia metody, która będzie wywoływana
+            z zewnętrznej biblioteki DLL:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class MojaKlasa
+{
+    [DllImport("user32.dll")]
+    public static extern int MessageBox(int hWnd, string tekst, string podpis, uint rodzaj);
+
+
+    public static void UzyjMessageBox()
+    {
+        MessageBox(0, "Tekst wiadomości", "Tytuł", 0);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, metoda MessageBox jest oznaczona atrybutem [DllImport("user32.dll")],
+                co oznacza, że będzie ona wywoływana z biblioteki DLL o nazwie "user32.dll". Atrybut [DllImport]
+                jest używany do oznaczania metod, które są implementowane w zewnętrznych bibliotekach DLL i
+                pozwala na wykonywanie ich z poziomu aplikacji napisanej w C#.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Dzięki atrybutowi [DllImport] możemy określić, jakie metody z zewnętrznych bibliotek DLL mogą
+                być wywoływane przez naszą aplikację i uniknąć problemów związanych z brakiem dostępności tych metod.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Niestandardowe Atrybuty</h1>
+        <div class="section-with-image">
+            <p>
+                Niestandardowe atrybuty to atrybuty, które zostały stworzone przez programistę i nie są dostarczane
+                przez platformę .NET. Aby utworzyć niestandardowy atrybut, trzeba stworzyć klasę dziedziczącą po
+                klasie System.Attribute lub jednej z pochodnych.
+            </p>
+            <img src="/img/vector103.png" alt="">
+        </div>
+        <p class="text-container azure-container no-margin-top">
+            Następnie, tą klasę używamy jako atrybut dla innych elementów kodu, takich jak klasy, metody, pola itp.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+[AttributeUsage(AttributeTargets.Class | attributeTargets.Method)]
+
+public class MojeAtrybuty : Attribute
+{
+    public string Opis { get; set; }
+
+    public MojeAtrybuty(string opis)
+    {
+        this.Opis = opis;
+    }
+}
+
+
+[MojeAtrybuty("To jest opis klasy")]
+class MojaKlasa
+{
+    [MojeAtrybuty("To jest opis metody")]
+    public void MojaMetoda()
+    {
+        //..
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <h2>Deklaracja Atrybutu Niestandardowego</h2>
+        <p class="text-container azure-container">
+            Przykład deklaracji atrybutu niestandardowego.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property)]
+public class MojeAtrybuty : Attribute
+{
+    public class attributeTargets
+    {
+
+    }
+
+    public string Opis { get; set; }
+
+    public int Wersja { get; set; }
+
+
+    public MojeAtrybuty(string opis, int wersja)
+    {
+        this.Opis = opis;
+        this.Wersja = wersja;
+    }
+}
+
+
+[MojeAtrybuty("To jest opis klasy", 1)]
+class MojaKlasa
+{
+    [MojeAtrybuty("To jest opis metody", 3)]
+    public void MojaMetoda()
+    {
+
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Type typKlasy = typeof(MojaKlasa);
+
+        // Pobieranie atrybutów z klasy
+        var atrybutyKlasy = typKlasy.GetCustomAttributes(typeof(MojeAtrybuty), true);
+
+        foreach (MojeAtrybuty atrybut in atrybutyKlasy)
+        {
+            Console.WriteLine("Opis klasy: " + atrybut.Opis);
+            Console.WriteLine("Wersja klasy: " + atrybut.Wersja + "\n");
+        }
+
+
+        // Pobieranie atrybutów z metody
+        var metoda = typKlasy.GetMethod("MojaMetoda");
+
+        var atrybutyMetody = metoda.GetCustomAttributes(typeof(MojeAtrybuty), true);
+
+        foreach (MojeAtrybuty atrybut in atrybutyMetody)
+        {
+            Console.WriteLine("Opis metody: " + atrybut.Opis);
+            Console.WriteLine("Wersja metody: " + atrybut.Wersja);
+        }
+    }
+}
+
+
+//output:
+
+Opis klasy: To jest opis klasy
+Wersja klasy: 1
+
+Opis metody: To jest opis metody
+Wersja metody: 3
+
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W powyższym przykładzie, stworzyliśmy niestandardowy atrybut o nazwie MojeAtrybuty, który posiada
+                2 właściwości - Opis i Wersja oraz konstruktor, który pozwala na inicjalizację tych właściwości.
+                Atrybut jest oznaczony atrybutem [attributeUsage] co oznacza w jakim celu jest używany. Następnie
+                używamy tego atrybutu do oznaczenia klasy, metody, pola itp. W metodzie Main odczytujemy te atrybuty
+                z poszczególnych elementów kodu i wyświetlamy informacje zawarte w nich.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Konstruowanie Atrybutu Niestandardowego</h2>
+        <p class="text-container azure-container">
+            Przykład konstruowania i używania niestandardowego atrybutu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+public class DebugInfo : Attribute
+{
+    public string Developer { get; set; }
+    public string LastModified { get; set; }
+
+
+    public DebugInfo(string developer, string lastModified)
+    {
+        this.Developer = developer;
+        this.LastModified = lastModified;
+    }
+}
+
+
+class Pracownicy
+{
+    [DebugInfo("Jan Kowalski", "2022-05-04\n")]
+    public void Miecz()
+    {
+
+    }
+
+    [DebugInfo("Anna Nowak", "2022-02-15")]
+    public int Tarcza { get; set; }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Pobierz typ klasy Pracownicy
+        Type typKlasy = typeof(Pracownicy);
+
+
+        // Pobierz atrybut DebugInfo dla metody Pracownicy
+        var uzbrojenie = typKlasy.GetMethod("Miecz");
+
+        var atrybutyMiecza = uzbrojenie.GetCustomAttributes(typeof(DebugInfo), true);
+
+        foreach (DebugInfo atrybut in atrybutyMiecza)
+        {
+            Console.WriteLine("Developer: " + atrybut.Developer);
+
+            Console.WriteLine("Data modyfikacji miecza: " + atrybut.LastModified);
+        }
+
+        // Pobierz atrybut DebugInfo dla właściwości MojePole
+        var wyposazenie = typKlasy.GetProperty("Tarcza");
+
+        var atrybutyTarczy = wyposazenie.GetCustomAttributes(typeof(DebugInfo), true);
+
+        foreach (DebugInfo atrybut in atrybutyTarczy)
+        {
+            Console.WriteLine("Developer: " + atrybut.Developer);
+
+            Console.WriteLine("Data modyfikacji tarczy: " + atrybut.LastModified);
+        }
+    }
+}
+
+
+//output:
+
+Developer: Jan Kowalski
+Data modyfikacji miecza: 2022-05-04
+
+Developer: Anna Nowak
+Data modyfikacji tarczy: 2022-02-15
+
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, tworzymy atrybut DebugInfo, który posiada dwa pola: Developer i LastModified.
+                Następnie używamy tego atrybutu do oznaczenia metody Miecz i pola Tarcza w klasie Pracownicy.
+                W konstruktorze atrybutu, przypisujemy wartości dla pola Developer i LastModified. Ten atrybut może
+                być użyty przez developerów do oznaczania elementów, które są przeznaczone do debugowania lub do
+                przechowywania informacji o ostatnim zmodyfikowaniu danego elementu.
+            </p>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Atrybuty można odczytywać za pomocą <code><a href="#" pro-tip="">reflection</a></code>
+            </p>
+        </div>
+        <div class="btn">
+            <a href="Refleksja.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ASP.NET(Dostęp-do-danych)</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-ASP.NET-Core.html">Wprowadzenie do ASP.NET-Core</a></li>
+            <li><a href="Szybki-Start.html">Szybki-Start</a></li>
+            <li><a href="Struktura-Projektu.html">Struktura projektu</a></li>
+            <li><a href="Tworzenie-Kontrolerów-Akcji.html">Tworzenie kontrolerów i akcji</a></li>
+            <li><a href="Routing.html">Routing</a></li>
+            <li><a href="Modelowanie-Danych.html">Modelowanie danych</a></li>
+            <li><a href="Widoki-RazorViewEngine-TagHelpers.html">Widoki RazorViewEngine i TagHelpers</a></li>
+            <li><a href="Dostęp-Do-Danych.html">Dostęp do danych</a></li>
+            <li><a href="Middleware.html">Middleware</a></li>
+            <li><a href="Implementacja-Uwierzytelnienia-Autoryzacji.html">Implementacja uwierzytelnienia i autoryzacji</a></li>
+            <li><a href="Obsługa-Błędów.html">Obsługa błędów</a></li>
+            <li><a href="Stylowanie-Aplikacji.html">Stylowanie aplikacji</a></li>
+            <li><a href="Implementacja-Serwisów-RESTful.html">Implementacja serwisów RESTful</a></li>
+            <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
+            <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
+            <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
+            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Entity Framework Core i SQL Server</h1>
+        <div class="section-with-image">
+            <p>
+                Aby uzyskać dostęp do danych w aplikacji ASP.NET Core, można wykorzystać Entity Framework Core i bazę danych SQL Server. Entity Framework Core to narzędzie ORM (Object-Relational Mapping), które umożliwia łatwe mapowanie obiektów C# na rekordy w bazie danych. W połączeniu z bazą danych SQL Server można uzyskać łatwy i wydajny dostęp do danych z poziomu aplikacji.
+            </p>
+            <img src="/img/vector12.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list no-margin-top">
+            <p class="text-container lightWhite-container no-margin-top">
+                Aby rozpocząć korzystanie z Entity Framework Core w aplikacji ASP.NET Core, należy wykonać kilka kroków:
+            </p>
+            <div class="page-header"></div>
+            <div class="line"></div>
+            <div class="text-content">
+                <h4>Zainstaluj bibliotekę Entity Framework Core za pomocą menedżera pakietów NuGet:</h4>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+Install-Package Microsoft.EntityFrameworkCore
+                        </code>
+                     </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h4>Zainstaluj bibliotekę dla bazy danych SQL Server za pomocą menedżera pakietów NuGet:</h4>
+                <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h4>Utwórz klasę dziedziczącą po klasie DbContext, która będzie reprezentować kontekst bazy danych. Kontekst bazy danych zawiera definicje tabel i relacji między nimi.</h4>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+public class MyDbContext : DbContext
+{
+    public MyDbContext(DbContextOptions&ltMyDbContext&gt options) : base(options)
+    {
+        /..
+    }
+
+    public DbSet&ltProduct&gt Products { get; set; }
+}
+                        </code>
+                     </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h4>Skonfiguruj połączenie z bazą danych w pliku appsettings.json:</h4>
+                <div class="code-block code-block-margin-top">
+                <pre>
+                     <code>
+"ConnectionStrings": {
+    "MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;"
+}
+                     </code>
+                </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h4>Zarejestruj kontekst bazy danych w serwisach aplikacji w pliku Startup.cs:</h4>
+                <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext&ltMyDbContext&gt(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
+}
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h4>Aby wykonywać zapytania do bazy danych, utwórz repozytorium, które będzie wykorzystywać kontekst bazy danych do wykonywania operacji CRUD (Create, Read, Update, Delete).</h4>
+                <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+public class ProductRepository
+{
+    private readonly MyDbContext _dbContext;
+
+    public ProductRepository(MyDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public async Task&ltList&ltProduct&gt&gt GetAll()
+    {
+        return await _dbContext.Products.ToListAsync();
+    }
+
+    public async Task&ltProduct&gt GetById(int id)
+    {
+        return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    public async Task Add(Product product)
+    {
+        await _dbContext.Products.AddAsync(product);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task Update(Product product)
+    {
+        _dbContext.Products.Update(product);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task Delete(int id)
+    {
+        var product = await GetById(id);
+        _dbContext.Products.Remove(product);
+        await _dbContext.SaveChangesAsync();
+    }
+}
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div class="line minus-margin-top"></div>
+            <div class="page-header"></div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Middleware.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

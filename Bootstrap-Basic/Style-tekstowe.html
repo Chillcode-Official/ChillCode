@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Style-tekstowe</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Szybki-start.html">Szybki start</a></li>
+            <li><a href="Układ-siatki-Grid.html">Układ siatki Grid</a></li>
+            <li><a href="Klasa.html">Klasa</a></li>
+            <li><a href="Style-tekstowe.html">Style-tekstowe</a></li>
+            <li><a href="Komponenty.html">Komponenty</a></li>
+            <li><a href="Zasady-responsywnego-projektowania.html">Zasady-responsywnego-projektowania</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Integracja-z-innymi-bibliotekami.html">Integracja-z-innymi-bibliotekami</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Style Tekstowe</h1>
+        <div class="section-with-image">
+            <p>
+                Style tekstowe w Bootstrap 5 to zbiór klas CSS, które umożliwiają formatowanie tekstu na stronie internetowej. Bootstrap 5 oferuje wiele klas, które umożliwiają dodanie stylów do elementów tekstowych, takich jak nagłówki, akapity, cytaty i wiele innych. Można zastosować różne style tekstu, takie jak rozmiar, waga, kolor, tło, obramowanie, wyrównanie, zaokrąglenie i wiele innych.
+            </p>
+            <img src="/img/vector16.png" alt="">
+        </div>
+        <p class="text-container no-margin-top article tooltip">
+            Stylowanie tekstu w Bootstrap 5 odbywa się poprzez dodanie odpowiedniej klasy CSS do elementu tekstowego, na przykład
+            <code><a href="#" pro-tip="">&lth1&gt</a></code>,
+            <code><a href="#" pro-tip="">&ltp&gt</a></code>,
+            <code><a href="#" pro-tip="">&ltblockquot&gt</a></code> itp. Klasa CSS może być dodana bezpośrednio do elementu HTML lub do arkusza stylów CSS.
+            Bootstrap 5 oferuje szereg stylów tekstowych, które można zastosować do różnych elementów na stronie internetowej. Oto kilka przykładów:
+        </p>
+        <div class="big-page-header"></div>
+        <p class="text-container lightGreen-container article tooltip">
+            <i class="highlight-text">Nagłówki</i> Bootstrap 5 oferuje 6 poziomów nagłówków (od h1 do h6), które można stylizować przy użyciu klas
+            <code><a href="#" pro-tip="">h1</a></code>
+            <code><a href="#" pro-tip="">h2</a></code>
+            <code><a href="#" pro-tip="">h3</a></code>
+            <code><a href="#" pro-tip="">h4</a></code>
+            <code><a href="#" pro-tip="">h5</a></code>
+            <code><a href="#" pro-tip="">h6</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;h1 class=&quot;h1&quot;&gt;Nag&lstrok;&oacute;wek pierwszego poziomu&lt;/h1&gt;
+&lt;h2 class=&quot;h2&quot;&gt;Nag&lstrok;&oacute;wek drugiego poziomu&lt;/h2&gt;
+&lt;h3 class=&quot;h3&quot;&gt;Nag&lstrok;&oacute;wek trzeciego poziomu&lt;/h3&gt;
+&lt;h4 class=&quot;h4&quot;&gt;Nag&lstrok;&oacute;wek czwartego poziomu&lt;/h4&gt;
+&lt;h5 class=&quot;h5&quot;&gt;Nag&lstrok;&oacute;wek pi&aogon;tego poziomu&lt;/h5&gt;
+&lt;h6 class=&quot;h6&quot;&gt;Nag&lstrok;&oacute;wek sz&oacute;stego poziomu&lt;/h6&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="text-container lightGreen-container article tooltip">
+            <p>
+                <i class="highlight-text">Tekst</i> Bootstrap 5 oferuje wiele klas, które można zastosować do tekstu, takich jak
+                <code><a href="#" pro-tip="">lead</a></code>,
+                <code><a href="#" pro-tip="">display-1</a></code>,
+                <code><a href="#" pro-tip="">font-weight-bold</a></code>,
+                <code><a href="#" pro-tip="">text-muted</a></code>,
+                <code><a href="#" pro-tip="">text-primary</a></code>,
+                <code><a href="#" pro-tip="">text-secondary</a></code>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code><a href="#" pro-tip="">text-success</a></code>,
+                <code><a href="#" pro-tip="">text-danger</a></code>,
+                <code><a href="#" pro-tip="">text-warning</a></code>,
+                <code><a href="#" pro-tip="">text-info</a></code>,
+                <code><a href="#" pro-tip="">text-dark</a></code>,
+                <code><a href="#" pro-tip="">text-white</a></code>.
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;lead&quot;&gt;To jest wiod&aogon;cy tekst.&lt;/p&gt;
+&lt;h1 class=&quot;display-1&quot;&gt;To jest tekst z du&zdot;&aogon; czcionk&aogon;.&lt;/h1&gt;
+&lt;p class=&quot;font-weight-bold&quot;&gt;To jest pogrubiony tekst.&lt;/p&gt;
+&lt;p class=&quot;text-muted&quot;&gt;To jest tekst w kolorze szarym.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;To jest tekst w kolorze g&lstrok;&oacute;wnym (domy&sacute;lnie niebieskim).&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;To jest tekst w kolorze zielonym.&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;To jest tekst w kolorze czerwonym.&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;To jest tekst w kolorze &zdot;&oacute;&lstrok;tym.&lt;/p&gt;
+&lt;p class=&quot;text-info&quot;&gt;To jest tekst w kolorze niebieskim (odpowiadaj&aogon;cym kolorowi informacji).&lt;/p&gt;
+&lt;p class=&quot;text-dark&quot;&gt;To jest tekst w ciemnym kolorze.&lt;/p&gt;
+&lt;p class=&quot;text-white bg-dark&quot;&gt;To jest tekst w bia&lstrok;ym kolorze na ciemnym tle.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <i class="highlight-text">Lista punktowana</i> oraz
+            <i class="highlight-text">Lista numerowana</i> Bootstrap 5 oferuje klasę <code><a href="#" pro-tip="">list-unstyled</a></code>,
+            która usuwa domyślne style CSS z listy punktowanej lub numerowanej. Można również użyć klas
+            list-inline i list-inline-item do tworzenia list poziomych.
+            <code><a href="#" pro-tip="">list-inline</a></code> oraz
+            <code><a href="#" pro-tip="">list-inline-item</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;ul class=&quot;list-unstyled&quot;&gt;
+  &lt;li&gt;Punkt 1&lt;/li&gt;
+  &lt;li&gt;Punkt 2&lt;/li&gt;
+  &lt;li&gt;Punkt 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class=&quot;list-unstyled&quot;&gt;
+  &lt;li&gt;Numer 1&lt;/li&gt;
+  &lt;li&gt;Numer 2&lt;/li&gt;
+  &lt;li&gt;Numer 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul class=&quot;list-inline&quot;&gt;
+  &lt;li class=&quot;list-inline-item&quot;&gt;Element 1&lt;/li&gt;
+  &lt;li class=&quot;list-inline-item&quot;&gt;Element 2&lt;/li&gt;
+  &lt;li class=&quot;list-inline-item&quot;&gt;Element 3&lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+           <i class="highlight-text">Cytaty</i> Bootstrap 5 oferuje klasę <code><a href="#" pro-tip="">blockquote</a></code>,
+            która umożliwia tworzenie bloków z cytatem. Można również dodać autorstwo cytatu przy użyciu klas <code><a href="#" pro-tip="">blockquote-footer</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;blockquote class=&quot;blockquote&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote class=&quot;blockquote&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+  &lt;footer class=&quot;blockquote-footer&quot;&gt;Autor cytatu&lt;/footer&gt;
+&lt;/blockquote&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="text-container lightGreen-container article tooltip">
+             <p>
+                 <i class="highlight-text">Tekst zaokrąglony</i> oferuje klasę <code><a href="#" pro-tip="">rounded</a></code>,
+                 która umożliwia dodanie zaokrąglonego kształtu do elementów. Można również zastosować klasę
+                 <code><a href="#" pro-tip="">rounded-top</a></code>,
+                 <code><a href="#" pro-tip="">rounded-bottom</a></code>,
+                 <code><a href="#" pro-tip="">rounded-start</a></code>,
+                 <code><a href="#" pro-tip="">rounded-end</a></code>,
+                 <code><a href="#" pro-tip="">rounded-circle</a></code>,
+                 <code><a href="#" pro-tip="">rounded-pill</a></code>.
+             </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;rounded&quot;&gt;To jest tekst z zaokr&aogon;glonym kszta&lstrok;tem.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-top&quot;&gt;To jest tekst z zaokr&aogon;glonym g&oacute;rnym kszta&lstrok;tem.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-bottom&quot;&gt;To jest tekst z zaokr&aogon;glonym dolnym kszta&lstrok;tem.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-start&quot;&gt;To jest tekst z zaokr&aogon;glonym lewym kszta&lstrok;tem.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-end&quot;&gt;To jest tekst z zaokr&aogon;glonym prawym kszta&lstrok;tem.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-circle&quot;&gt;To jest tekst z zaokr&aogon;glonym kszta&lstrok;tem ko&lstrok;a.&lt;/p&gt;
+
+&lt;p class=&quot;rounded-pill&quot;&gt;To jest tekst z zaokr&aogon;glonym kszta&lstrok;tem pigu&lstrok;ki.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <i class="highlight-text">Tekst wyrównany</i> oferuje również klasę text-{value},
+            która umożliwia ustawienie wyrównania tekstu w elementach. Dostępne wartości to
+            <code><a href="#" pro-tip="">start</a></code>
+            <code><a href="#" pro-tip="">end</a></code>
+            <code><a href="#" pro-tip="">center</a></code>
+            <code><a href="#" pro-tip="">justify</a></code>
+            <code><a href="#" pro-tip="">nowrap</a></code>
+            <code><a href="#" pro-tip="">wrap</a></code>
+            <code><a href="#" pro-tip="">wrap-reverse</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;text-start&quot;&gt;To jest tekst wyr&oacute;wnany do lewej.&lt;/p&gt;
+
+&lt;p class=&quot;text-end&quot;&gt;To jest tekst wyr&oacute;wnany do prawej.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;To jest tekst wyr&oacute;wnany do &sacute;rodka.&lt;/p&gt;
+
+&lt;p class=&quot;text-justify&quot;&gt;To jest tekst wyr&oacute;wnany do lewej i prawej.&lt;/p&gt;
+
+&lt;p class=&quot;text-nowrap&quot;&gt;To jest tekst, kt&oacute;ry nie jest zawijany do nowej linii.&lt;/p&gt;
+
+&lt;p class=&quot;text-wrap&quot;&gt;To jest tekst, kt&oacute;ry jest zawijany do nowej linii.&lt;/p&gt;
+
+&lt;p class=&quot;text-wrap-reverse&quot;&gt;To jest tekst, kt&oacute;ry jest zawijany do nowej linii w odwrotnym kierunku.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <i class="highlight-text">Tekst gradientowy</i> to styl tekstowy, który umożliwia dodanie gradientu kolorów do tekstu. aby utworzyć tekst gradientowy, należy do elementu tekstowego dodać klasę
+            <code><a href="#" pro-tip="">bg-gradient-{color}</a></code> oraz
+            <code><a href="#" pro-tip="">text-gradient-{color}</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;bg-gradient-primary text-white&quot;&gt;To jest tekst z gradientowym t&lstrok;em i gradientowym tekstem.&lt;/p&gt;
+
+&lt;p class=&quot;text-gradient-secondary&quot;&gt;To jest tekst z gradientowym kolorem.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+           <i class="highlight-text">Tekst cieniowany</i> oferuje klasę text-shadow-{value}
+            która umożliwia dodanie cienia do tekstu. Dostępne wartości to sm, md, lg.
+            <code><a href="#" pro-tip="">sm</a></code>,
+            <code><a href="#" pro-tip="">md</a></code>,
+            <code><a href="#" pro-tip="">lg</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;text-shadow-sm&quot;&gt;To jest tekst z cieniem ma&lstrok;ego rozmiaru.&lt;/p&gt;
+
+&lt;p class=&quot;text-shadow-md&quot;&gt;To jest tekst z cieniem &sacute;redniego rozmiaru.&lt;/p&gt;
+
+&lt;p class=&quot;text-shadow-lg&quot;&gt;To jest tekst z cieniem du&zdot;ego rozmiaru.&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="text-container green-container">
+            <p>
+                To tylko kilka przykładów stylów tekstowych oferowanych przez Bootstrap 5. Można również zastosować wiele innych, aby uzyskać różne style tekstu na stronie internetowej.
+            </p>
+            <p style="float: right">
+                Więcej znajdziesz tutaj: <a style="color: #4a4fc5" target="_blank" href="https://getbootstrap.com/docs/5.3/components/alerts/">Bootstrap Docs</a>
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Dzięki stylom tekstowym w Bootstrap 5 można szybko i łatwo zmienić wygląd tekstu na stronie internetowej, bez konieczności pisania dużo kodu CSS.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Komponenty.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

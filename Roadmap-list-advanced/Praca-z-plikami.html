@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Praca Z Plikami</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="LINQ.html">LINQ</a></li>
+            <li><a href="Praca-z-plikami.html">Praca z plikami</a></li>
+            <li><a href="Programowanie-obiektowe.html">Programowanie obiektowe</a> </li>
+            <li><a href="Serializacja-Deserializacja.html">Serializacja oraz Deserializacja</a></li>
+            <li><a href="Asynchronicznosc.html">Asychroniczność</a></li>
+            <li><a href="Szyfrowanie-danych.html">Szyfrowanie danych</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Klasa FileStream</h1>
+        <div class="section-with-image">
+            <p>
+                Klasa FileStream jest klasą w języku C#, która pochodzi z biblioteki System.IO i umożliwia pracę
+                z plikami w trybie binarnym. Umożliwia ona operacje takie jak odczyt i zapis danych binarnych
+                z/do pliku, a także udostępnia metody do pobierania pozycji w pliku, zmiany pozycji w pliku,
+                zamknięcia pliku. Konstruktor klasy FileStream przyjmuje dwa parametry - ścieżkę do pliku oraz tryb
+                otwarcia pliku
+            </p>
+            <img src="/img/vector42.png" alt="">
+        </div>
+        <p class="text-container cream-container">
+            Przykład tworzenia obiektu FileStream i zapis do pliku:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream fs = new FileStream("plik.bin", FileMode.OpenOrCreate))
+{
+    byte[] dane = new byte[] { 1, 2, 3, 4, 5 };
+
+    fs.Write(dane, 0, dane.Length);
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container article tooltip">
+            Aby odczytać dane z pliku, można użyć metody <code><a href="#" pro-tip="">Read</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream fs = new FileStream("plik.bin", FileMode.Open))
+{
+    byte[] dane = new byte[5];
+
+    int ilosc = fs.Read(dane, 0, dane.Length);
+
+    for (int i = 0; i < ilosc; i++)
+    {
+        Console.Write(dane[i] + " ");
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container article tooltip">
+            Oto przykład użycia klasy FileStream do pracy z <code><a href="#" pro-tip="">plikiem binarnym</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Tworzenie nowego pliku binarnego lub otwarcie istniejącego
+        using (FileStream fs = new FileStream("plik.bin", FileMode.OpenOrCreate))
+        {
+            // Zapis danych do pliku
+            byte[] dane = new byte[] { 1, 2, 3, 4, 5 };
+            fs.Write(dane, 0, dane.Length);
+            Console.WriteLine("Dane zapisane do pliku.");
+
+
+            // Przesuwanie pozycji w pliku
+            fs.Position = 0;
+
+            Console.WriteLine("Pozycja w pliku ustawiona na początek.");
+
+
+            // Odczyt danych z pliku
+            byte[] odczytaneDane = new byte[5];
+            int ilosc = fs.Read(odczytaneDane, 0, odczytaneDane.Length);
+            Console.Write("Odczytane dane: ");
+
+
+            for (int i = 0; i < ilosc; i++)
+            {
+                Console.Write(odczytaneDane[i] + " ");
+            }
+
+            Console.WriteLine();
+
+
+            // Zmiana pozycji w pliku
+            fs.Position = fs.Length;
+            Console.WriteLine("\nPozycja w pliku ustawiona na koniec.");
+
+
+            // Dodawanie danych do pliku
+            byte[] noweDane = new byte[] { 6, 7, 8 };
+            fs.Write(noweDane, 0, noweDane.Length);
+            Console.WriteLine("Nowe dane zapisane do pliku.");
+        }
+
+        // Odczytanie danych z pliku po jego zamknięciu
+        using (FileStream fs = new FileStream("plik.bin", FileMode.Open))
+        {
+            byte[] dane = new byte[8];
+            int ilosc = fs.Read(dane, 0, dane.Length);
+            Console.Write("Dane z pliku po zamknięciu: ");
+
+
+            for (int i = 0; i < ilosc; i++)
+            {
+                Console.Write(dane[i] + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+
+
+//output:
+
+Dane zapisane do pliku.
+Pozycja w pliku ustawiona na początek.
+Odczytane dane: 1 2 3 4 5
+
+Pozycja w pliku ustawiona na koniec.
+Nowe dane zapisane do pliku.
+Dane z pliku po zamknięciu: 1 2 3 4 5 6 7 8
+
+                </code>
+            </pre>
+        </div>
+        <p class="text-container cream-container no-margin-top">
+            Jest to tylko przykład, jak można używać klasy FileStream do pracy z plikami binarnymi,
+            ale istnieje wiele innych sposobów i scenariuszy, w których ta klasa może być używana.
+        </p>
+        <div class="alert-card alert-card3 tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Klasa <code><a href="#" pro-tip="">FileStream</a></code> jest przydatna przy pracy z plikami binarnymi, takimi jak obrazy, dźwięki czy
+                pliki wykonywalne. Jest ona używana tam gdzie potrzebujemy dostępu do bajtów pliku zamiast
+                zawartości tekstowej.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Klasa I/O</h1>
+        <div class="section-with-image">
+            <p>
+                Klasa System.IO (Input/Output) jest biblioteką klas w języku C#, która zawiera metody i klasy
+                do pracy z plikami i katalogami na dysku. Klasa ta pozwala na operacje takie jak tworzenie,
+                otwieranie, zapisywanie i usuwanie plików oraz operacje na katalogach, takie jak tworzenie,
+                przenoszenie, kopiowanie i usuwanie folderów.
+            </p>
+            <img src="/img/vector12.png" alt="">
+        </div>
+        <div class="text-container gray-container article tooltip">
+            <p>
+                Klasa <code><a href="#" pro-tip="Klasa ta zawiera metody statyczne do pracy z plikami, takie jak tworzenie, kopiowanie, przenoszenie, usuwanie, sprawdzanie czy plik istnieje.">File</a></code>
+            </p>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+// Tworzenie nowego pliku lub otwarcie istniejącego
+File.WriteAllText("plik.txt", "Tekst do zapisania");
+Console.WriteLine("Tekst zapisany do pliku.");
+
+// Odczytanie zawartości pliku
+string zawartosc = File.ReadAllText("plik.txt");
+Console.WriteLine("Zawartość pliku: " + zawartosc);
+
+// Sprawdzenie czy plik istnieje
+bool czyIstnieje = File.Exists("plik.txt");
+Console.WriteLine("Czy plik istnieje: " + czyIstnieje);
+
+// Usuwanie pliku
+File.Delete("plik.txt");
+Console.WriteLine("Plik usunięty.");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasa ta zawiera metody statyczne do pracy z katalogami, takie jak tworzenie, kopiowanie, przenoszenie, usuwanie, sprawdzanie czy katalog istnieje.">Directory</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+// Tworzenie nowego katalogu
+Directory.CreateDirectory("nowy_folder");
+Console.WriteLine("Katalog utworzony.");
+
+// Przesuwanie katalogu
+Directory.Move("nowy_folder", "przeniesiony_folder");
+Console.WriteLine("Katalog przeniesiony.");
+
+// Sprawdzenie czy katalog istnieje
+bool czyIstnieje = Directory.Exists("przeniesiony_folder");
+Console.WriteLine("Czy katalog istnieje: " + czyIstnieje);
+
+// Usuwanie katalogu
+Directory.Delete("przeniesiony_folder", true);
+Console.WriteLine("Katalog usunięty.");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="pozwala na pracę z katalogami i ich zawartością. Posiada wiele metod i właściwości pozwalających na operacje takie jak: tworzenie, usuwanie, przesuwanie oraz kopiowanie katalogów, pobieranie informacji o katalogu (np. nazwa, rozmiar, data utworzenia) oraz pobieranie plików i podfolderów z katalogu.">DirectoryInfo</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+DirectoryInfo katalog = new DirectoryInfo("folder");
+
+// Pobranie plików z katalogu
+FileInfo[] pliki = katalog.GetFiles();
+foreach (FileInfo plik in pliki)
+{
+    Console.WriteLine("Nazwa pliku: " + plik.Name);
+}
+
+// Pobranie podfolderów z katalogu
+DirectoryInfo[] podfoldery = katalog.GetDirectories();
+foreach (DirectoryInfo podfolder in podfoldery)
+{
+    Console.WriteLine("Nazwa podfolderu: " + podfolder.Name);
+}
+
+// Usuwanie katalogu (wraz z zawartością)
+katalog.Delete(true);
+Console.WriteLine("Katalog i jego zawartość zostały usunięte.");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasa ta zawiera metody statyczne do pracy z ścieżkami plików, takie jak konkatenacja, pobieranie nazwy pliku lub rozszerzenia pliku.">Path</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string sciezka = @"C:\folder\podfolder\plik.txt";
+
+// Pobranie nazwy pliku
+string nazwaPliku = Path.GetFileName(sciezka);
+Console.WriteLine("Nazwa pliku: " + nazwaPliku);
+
+// Pobranie rozszerzenia pliku
+string rozszerzenie = Path.GetExtension(sciezka);
+Console.WriteLine("Rozszerzenie pliku: " + rozszerzenie);
+
+// Pobranie katalogu nadrzędnego
+string katalogNadrzedny = Path.GetDirectoryName(sciezka);
+Console.WriteLine("Katalog nadrzędny: " + katalogNadrzedny);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="zapewnia dostęp do informacji o pliku lub katalogu, takich jak data utworzenia, rozmiar, atrybuty.">FileInfo</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+FileInfo plik = new FileInfo("plik.txt");
+
+// Pobranie rozmiaru pliku
+long rozmiar = plik.Length;
+Console.WriteLine("Rozmiar pliku: " + rozmiar + " bajtów.");
+
+// Pobranie daty utworzenia pliku
+DateTime dataUtworzenia = plik.CreationTime;
+Console.WriteLine("Data utworzenia pliku: " + dataUtworzenia);
+
+// Zmiana nazwy pliku
+plik.MoveTo("nowa_nazwa.txt");
+Console.WriteLine("Nazwa pliku zmieniona.");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Interfejs ten zapewnia ogólne funkcjonalności do pracy z strumieniami danych.">Stream</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream plik = new FileStream("plik.bin", FileMode.OpenOrCreate))
+using (StreamWriter sw = new StreamWriter(plik))
+{
+    sw.WriteLine("Tekst do zapisania");
+    Console.WriteLine("Tekst zapisany do pliku.");
+}
+
+using (FileStream plik = new FileStream("plik.bin", FileMode.Open))
+using (StreamReader sr = new StreamReader(plik))
+{
+    string zawartosc = sr.ReadLine();
+    Console.WriteLine("Zawartość pliku: " + zawartosc);
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasy te umożliwiają odczyt i zapis danych tekstowych z/do pliku.">StreamReader i StreamWriter</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream plik = new FileStream("plik.txt", FileMode.OpenOrCreate))
+using (StreamWriter sw = new StreamWriter(plik))
+{
+    sw.WriteLine("Tekst do zapisania");
+    Console.WriteLine("Tekst zapisany do pliku.");
+}
+
+using (FileStream plik = new FileStream("plik.txt", FileMode.Open))
+using (StreamReader sr = new StreamReader(plik))
+{
+    string zawartosc = sr.ReadLine();
+    Console.WriteLine("Zawartość pliku: " + zawartosc);
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasy te umożliwiają odczyt i zapis danych binarnych z/do pliku.">BinaryReader i BinaryWriter</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream plik = new FileStream("plik.bin", FileMode.OpenOrCreate))
+using (BinaryWriter bw = new BinaryWriter(plik))
+{
+    bw.Write(123);
+    bw.Write("Tekst do zapisania");
+    Console.WriteLine("Dane zapisane do pliku.");
+}
+
+using (FileStream plik = new FileStream("plik.bin", FileMode.Open))
+using (BinaryReader br = new BinaryReader(plik))
+{
+    int liczba = br.ReadInt32();
+    string tekst = br.ReadString();
+    Console.WriteLine("Odczytane dane: " + liczba + ", " + tekst);
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasa ta umożliwia pracę z plikami w trybie binarnym.">FileStream</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream plik = new FileStream("plik.bin", FileMode.Create))
+{
+    byte[] dane = { 1, 2, 3, 4, 5 };
+    plik.Write(dane, 0, dane.Length);
+    Console.WriteLine("Dane zapisane do pliku.");
+}
+
+using (FileStream plik = new FileStream("plik.bin", FileMode.Open))
+{
+    byte[] odczytaneDane = new byte[5];
+    plik.Read(odczytaneDane, 0, odczytaneDane.Length);
+    Console.WriteLine("Odczytane dane: " + string.Join(",", odczytaneDane));
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasa ta umożliwia buforowanie danych, aby zwiększyć wydajność operacji wejścia/wyjścia.">BufferedStream </a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (FileStream plik = new FileStream("plik.bin", FileMode.OpenOrCreate))
+using (BufferedStream bs = new BufferedStream(plik))
+using (BinaryWriter bw = new BinaryWriter(bs))
+{
+    bw.Write(123);
+    bw.Write("Tekst do zapisania");
+    Console.WriteLine("Dane zapisane do pliku z buforowaniem.");
+}
+
+using (FileStream plik = new FileStream("plik.bin", FileMode.Open))
+using (BufferedStream bs = new BufferedStream(plik))
+using (BinaryReader br = new BinaryReader(bs))
+{
+    int liczba = br.ReadInt32();
+    string tekst = br.ReadString();
+    Console.WriteLine("Odczytane dane: " + liczba + ", " + tekst);
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Klasa <code><a href="#" pro-tip="Klasa ta umożliwia pracę z danymi w pamięci jako strumień.">MemoryStream</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using (MemoryStream ms = new MemoryStream())
+using (BinaryWriter bw = new BinaryWriter(ms))
+{
+    bw.Write(123);
+    bw.Write("Tekst do zapisania");
+    Console.WriteLine("Dane zapisane do strumienia pamięci.");
+
+    ms.Position = 0;
+    using (BinaryReader br = new BinaryReader(ms))
+    {
+        int liczba = br.ReadInt32();
+        string tekst = br.ReadString();
+        Console.WriteLine("Odczytane dane: " + liczba + ", " + tekst);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Powyższe przykłady ukazują szereg klas i interfejsów zawartych w klasie System.IO, pozwalają one na pracę
+                z plikami i katalogami. W zależności od potrzeb projektu, mogą być potrzebne inne klasy lub metody,
+                które również znajdują się w tej bibliotece.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Programowanie-obiektowe.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

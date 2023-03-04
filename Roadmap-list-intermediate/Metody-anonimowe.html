@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Metody-Anonimowe</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Refleksja.html">Refleksja</a></li>
+            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
+            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
+            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+            <li><a href="Indeksery.html">Indeksery</a></li>
+            <li><a href="Delegaty.html">Delegaty</a></li>
+            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Metody Anonimowe W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                Metody anonimowe w języku C# są to metody, które nie posiadają nazwy i są definiowane bezpośrednio
+                w miejscu ich użycia. Są one często używane do tworzenia delegatów lub jako parametry do innych metod.
+            </p>
+            <img src="/img/vector84.png" alt="">
+        </div>
+        <p class="text-container gray-container article tooltip no-margin-top">
+            Można je tworzyć za pomocą składni <code><a href="#" pro-tip="">delegate</a></code>
+            lub za pomocą składni <code><a href="#" pro-tip="">lambada</a></code>.
+            Przykład metody anonimowej za pomocą składni delegate:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+delegate void MyDelegate(int x);
+
+MyDelegate myDelegate = delegate(int x) { Console.WriteLine(x); };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container">
+            Przykład metody anonimowej za pomocą składni lambda:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Func&ltint, int&gt myDelegate = x => x * x;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container">
+            przykład pokazujący jak użyć metody anonimowej do sortowania listy liczb całkowitych:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List&ltint&gt numbers = new List&ltint&gt { 9, 4, 2, 7, 5, 3 };
+
+
+        // Użycie metody anonimowej za pomocą składni delegate do sortowania listy liczb rosnąco
+        numbers.Sort(delegate(int x, int y) { return x.CompareTo(y); });
+
+
+        // Użycie metody anonimowej za pomocą składni lambda do sortowania listy liczb malejąco
+        numbers.Sort((x, y) => y.CompareTo(x));
+
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
+
+
+//output:
+
+9
+7
+5
+4
+3
+2
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Metody anonimowe są często używane w programowaniu zdarzeniowym, takim jak reakcja na przyciski
+                lub inne elementy interfejsu użytkownika, a także w przypadku programowania funkcyjnego, takim
+                jak kompozycja funkcji lub przetwarzanie kolekcji danych
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Unsafe-code.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

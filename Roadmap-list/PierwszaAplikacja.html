@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Basic.css">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image small-gap">
+            <div class="text-content">
+                <h1>Hello World = Witaj Świecie</h1>
+                <p>
+                    Program "Hello, World" jest podstawowym
+                    programem od którego zaczyna każdy
+                    początkujący programista.
+                </p>
+            </div>
+            <img src="/img/vector3.png" alt="">
+        </div>
+   <div class="code-block">
+       <pre>
+           <code>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World");
+    }
+}
+
+//Output: Hello world
+           </code>
+       </pre>
+   </div>
+    <div class="page-header"></div>
+    <div class="article tooltip">
+        <h1>Podstawowe pojęcia</h1>
+        <!--Using system-->
+        <p><code><a href="#" pro-tip="using System - używa biblioteki System. Co daje kilka przydatnych klas, takich jak Console lub funkcje/metody, takie jak WriteLine.">using System</a></code> umożliwia przydzielenie do naszego programu przestrzeni nazw <code><a href="#" pro-tip="System - biblioteka przestrzei nazw, posiadająca klasy ułatwiające pisanie kodu.">System</a></code>
+         Która używa zorganizowanych bibliotek zawierających wiele ważnych elementów jak typy, kolekcje i wiele
+         innych przestrzeni nazw które ułatwiają nam pisanie programów w języku C#.</p>
+        <!--Class program-->
+        <p><code><a href="#" pro-tip="Nazwa twojej klasy punktu wejścia.">class Program</a></code> jest to klasa o nazwie Program która zawiera dane oraz definicje
+        metod <br>używanych przez program.</p>
+        <!--Static void Main-->
+        <p><code><a href="#" pro-tip="static - oznacza, że metoda należy do klasy Program, a nie do obiektu klasy Program.">static</a></code> jest modyfikatorem dołączonym do pustej funkcji <code><a href="#" pro-tip="void - metoda która nie zwraca wartości.">void</a></code> o nazwie
+            <code><a href="#" pro-tip="Głowna klasa, możesz ją nazwać jak chcesz.">Main</a></code> cały ten wiersz kodu jest punktem wejścia programu wykonywalnego.</p>
+        <!--Console.WriteLine-->
+        <p><code><a href="#" pro-tip="WriteLine to metoda klasy Console zdefiniowana w przestrzeni nazw System. Wykonanie tej metody skutkuje wyświetleniem w naszej konsoli wiadomości którą umieścimy w nawiasach.; ">Console.WriteLine()</a></code> zapisuje określoną wartość ciągu znaków, a następnie wyrzuca nasz
+        tekst do standardowego strumienia wyjściowego. Czyli pokazuje nasz ciąg znaków (tekst). </p>
+        <!--komentarze-->
+        <p><code><a href="#" pro-tip="Komentarz jednolinijkowy, jest ignorowany przez kompilator, pomaga odnaleźć się w kodzie oraz jest dobrą praktyką czystego kodu.">//</a></code> Najprostszy komentarz jedno linijkowy który w żaden sposób nie wpływa na program
+        lecz jest wzorcem pisania estetycznego i łatwego w odczytaniu kodu. </p>
+    </div>
+        <div class="btn">
+            <a href="Typy.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

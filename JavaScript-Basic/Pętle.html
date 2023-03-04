@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pętle-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-JavaScript.html">Czym jest JavaScript</a></li>
+            <li><a href="Podstawowa-skladnia-JavaScript.html">Podstawowa Składnia</a></li>
+            <li><a href="Wyjscie(output).html">Wyświetlanie</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Typy-Danych.html">Typy-Danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Operatory.html">Operatory</a></li>
+            <li><a href="Instrukcje-Warunkowe.html">Instrukcje-Warunkowe</a></li>
+            <li><a href="Pętle.html">Pętle</a></li>
+            <li><a href="Funkcje.html">Funkcje</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Obiekty.html">Obiekty</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Wartosci.html">Wartosci</a></li>
+            <li><a href="Referencje.html">Referencje</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Eventy.html">Eventy</a></li>
+            <li><a href="Manipulacja_DOM-em.html">Manipulacja_DOM-em</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Biblioteki-JavaScript.html">Biblioteki-JavaScript</a></li>
+            <li><a href="Debugowanie-Kodu.html">Debugowanie-Kodu</a></li>
+            <li><a href="Testowanie-Kodu.html">Testowanie-Kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Pętla (for) JavaScript</h1>
+        <div class="section-with-image">
+            <p>
+                Pętla for jest jednym z głównych typów pętli w języku JavaScript, która pozwala wykonywać
+                określoną czynność wiele razy, aż do momentu, gdy warunek nie jest już spełniony. Składa się z
+                trzech części: inicjalizacji, warunku i aktualizacji.
+            </p>
+            <div>
+                <img src="/img/vector38.png" alt="">
+            </div>
+        </div>
+        <p class="text-container lightPink-container article tooltip">
+            Składnia pętli <code><a href="#" pro-tip="">for</a></code> wygląda następująco:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+for (inicjalizacja; warunek; aktualizacja) {
+
+  // kod, który będzie wykonywany w pętli
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container lightWhite-container black-list article tooltip highlight-text">
+            <ol>
+                <li><code>Inicjalizacja</code>: jest wykonywana tylko raz na początku pętli i jest używana do zainicjalizowania zmiennej liczącej.</li>
+                <li><code>Warunek</code>: jest sprawdzany przed każdym wykonaniem kodu w pętli. Jeśli jest prawdziwy, kod w pętli jest wykonywany, w przeciwnym razie pętla jest zakończona.</li>
+                <li><code>Aktualizacja</code>: jest wykonywana po każdym wykonaniu kodu w pętli i jest używana do aktualizacji zmiennej liczącej.</li>
+            </ol>
+        </div>
+        <p class="text-container lightPink-container">
+            Oto przykład pętli for w języku JavaScript, która wypisuje liczby od 1 do 10. W tym przykładzie, zmienna
+            i jest zainicjalizowana jako 1, warunek sprawdzania i <= 10 jest wykonywany przed każdym wykonaniem kodu
+            w pętli, a zmienna i jest aktualizowana o 1 po każdym wykonaniu kodu w pętli.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+for (let i = 1; i <= 4; i++) {
+
+  console.log(i);
+}
+
+//output:
+
+1
+2
+3
+4
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Pętla (while) JavaScript</h1>
+        <div class="section-with-image">
+            <p>
+                Pętla while jest używana do powtarzania określonego kodu, dopóki warunek jest spełniony. Składa się tylko z dwóch części: warunku i kodu.
+            </p>
+            <div>
+                <img src="/img/vector31.png" alt="">
+            </div>
+        </div>
+        <div class="double-elements">
+            <div>
+                <p class="text-container blue-container article tooltip">
+                    Składnia pętli <code><a href="#" pro-tip="">while</a></code> wygląda następująco:
+                </p>
+                <div class="code-block">
+            <pre>
+                <code>
+while (warunek) {
+
+  // kod, który będzie wykonywany w pętli
+}
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div class="alert-card alert-card-medium alert-margin-bottom">
+                <img src="/img/warning.png" alt="">
+                <b>Uwaga</b>
+                <p>
+                    Warunek jest sprawdzany przed każdym wykonaniem kodu w pętli. Jeśli jest prawdziwy, kod w
+                    pętli jest wykonywany, w przeciwnym razie pętla jest zakończona.
+                </p>
+            </div>
+        </div>
+        <p class="text-container blue-container highlight-text">
+            Oto przykład pętli while w języku JavaScript, która wypisuje liczby od 1 do 10. W tym przykładzie,
+            zmienna i jest zainicjalizowana jako 1, a warunek sprawdzania i <= 10 jest wykonywany przed każdym
+            wykonaniem kodu w pętli. Zmienna i jest aktualizowana o 1 po każdym wykonaniu kodu w pętli.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+let i = 1;
+
+while (i <= 3) {
+
+  console.log(i);
+  i++;
+}
+
+//output:
+
+1
+2
+3
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Pętla (do..while) JavaScript</h1>
+        <div class="section-with-image">
+            <p>
+                Pętla while jest używana do powtarzania określonego kodu, dopóki warunek jest spełniony. Składa się tylko z dwóch części: warunku i kodu.
+            </p>
+            <div>
+                <img src="/img/vector136.png" alt="">
+            </div>
+        </div>
+        <div class="double-elements">
+            <div>
+                <p class="text-container red-container article tooltip no-margin-top">
+                    Składnia pętli <code><a href="#" pro-tip="">do..while</a></code> wygląda następująco:
+                </p>
+                <div class="code-block">
+            <pre>
+                <code>
+do {
+
+  // kod, który będzie wykonywany w pętli
+
+} while (warunek);
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div class="alert-card alert-card-medium alert-margin-bottom">
+                <img src="/img/warning.png" alt="">
+                <b>Uwaga</b>
+                <p>
+                    Warunek jest sprawdzany po każdym wykonaniu kodu w pętli. Jeśli jest prawdziwy, kod w pętli
+                    jest wykonywany ponownie, w przeciwnym razie pętla jest zakończona.
+                </p>
+            </div>
+        </div>
+        <p class="text-container red-container highlight-text">
+            Oto przykład pętli do...while w języku JavaScript, która wypisuje liczby od 1 do 10. W tym przykładzie,
+            zmienna i jest zainicjalizowana jako 1, a kod w pętli jest wykonywany co najmniej raz. Warunek sprawdzania
+            i <= 10 jest wykonywany po każdym wykonaniu kodu w pętli i, jeśli jest prawdziwy, kod jest
+            wykonywany ponownie. Zmienna i jest aktualizowana o 1 po każdym wykonaniu kodu w pętli.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+let i = 1;
+
+do {
+
+  console.log(i);
+  i++;
+
+} while (i <= 5);
+
+//output:
+
+1
+2
+3
+4
+5
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Funkcje.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

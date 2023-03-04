@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Układ-siatki-Grid</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Szybki-start.html">Szybki start</a></li>
+            <li><a href="Układ-siatki-Grid.html">Układ siatki Grid</a></li>
+            <li><a href="Klasa.html">Klasa</a></li>
+            <li><a href="Style-tekstowe.html">Style-tekstowe</a></li>
+            <li><a href="Komponenty.html">Komponenty</a></li>
+            <li><a href="Zasady-responsywnego-projektowania.html">Zasady-responsywnego-projektowania</a></li>
+            <li><a href="Manipulacja-stylami-CSS.html">Manipulacja-stylami-CSS</a></li>
+            <li><a href="Integracja-z-innymi-bibliotekami.html">Integracja-z-innymi-bibliotekami</a></li>
+            <li><a href="Debugowanie-kodu.html">Debugowanie-kodu</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Układ Siatki (Grid)</h1>
+        <div class="section-with-image">
+            <p>
+                System siatki Bootstrap to responsywny system układu strony internetowej opracowany przez Twittera, który umożliwia tworzenie responsywnych układów stron internetowych, dzieląc stronę internetową na szereg wierszy i kolumn. System siatki Bootstrap wykorzystuje 12-kolumnowy układ, który może być łatwo dostosowany do konkretnych potrzeb strony internetowej.
+            </p>
+            <img src="/img/vector16.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container no-margin-top article tooltip">
+            System siatki składa się z trzech podstawowych elementów:
+            <code><a href="#" pro-tip="Kontenery są używane do opakowania całej treści strony internetowej. Mają ustaloną szerokość i służą do wyśrodkowania treści strony internetowej.">kontenerów</a></code>
+            <code><a href="#" pro-tip="Wiersze służą do podziału treści na grupy poziome. Są umieszczone wewnątrz kontenera i mogą być używane do podziału strony internetowej na różne sekcje.">wierszy</a></code>
+            <code><a href="#" pro-tip="Kolumny służą do podziału wierszy na sekcje pionowe. Są umieszczone wewnątrz wierszy i mogą być używane do tworzenia responsywnych układów. System siatki ma 12 kolumn, a programiści mogą wybrać dowolną liczbę kolumn dla każdej grupy kolumn.">kolumn</a></code>
+        </p>
+        <div class="page-header"></div>
+        <p>Przykładowy kod HTML, który pokazuje podstawową strukturę siatki Bootstrap 5:</p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Moja strona z siatk&aogon; Bootstrap&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;p&gt;To jest pierwsza kolumna.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;p&gt;To jest druga kolumna.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <h2>W powyższym kodzie:</h2>
+        <div class="text-content article tooltip">
+            <p>
+                Dołączyliśmy arkusz stylów Bootstrap za pomocą atrybutu <code><a href="#" pro-tip="">href</a></code> w elemencie <code><a href="#" pro-tip="">link</a></code>.
+                <br>
+                Utworzyliśmy kontener, który zawiera jedną sekcję z dwoma kolumnami.
+                <br>
+                Użyliśmy klasy <code><a href="#" pro-tip="">.col-md-6</a></code>, aby podzielić wiersz na dwie kolumny,
+                <br>
+                z których każda zajmuje połowę szerokości ekranu na urządzeniach o szerokości większej niż 768 pikseli.
+                <br>
+                Dołączyliśmy plik JavaScript Bootstrap za pomocą atrybutu <code><a href="#" pro-tip="">src</a></code> w elemencie <code><a href="#" pro-tip="">script</a></code>.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                System siatki Bootstrap składa się z 12 kolumn, które mogą być dowolnie grupowane i umieszczane w wierszach. Programiści mogą użyć różnych klas CSS, aby określić, jak szerokie powinny być kolumny i jak powinny się zachowywać na różnych urządzeniach. Na przykład, klasa .col-sm-4 oznacza, że dana kolumna powinna zajmować 4 z 12 dostępnych kolumn na ekranie o szerokości mniejszej niż 576 pikseli, czyli na małych ekranach smartfonów. Natomiast klasa .col-md-6 oznacza, że dana kolumna powinna zajmować 6 z 12 dostępnych kolumn na ekranie o szerokości większej niż 576 pikseli, ale mniejszej niż 992 piksele, czyli na ekranach tabletów i większych smartfonów.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Klasa.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

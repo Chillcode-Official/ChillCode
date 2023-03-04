@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Float-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Przepełnienie-Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Dopełnienie</a></li>
+            <li><a href="Obramowanie.html">Obramowanie</a></li>
+            <li><a href="Zarys.html">Zarys</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Właściwość float W Języku CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Właściwość "float" w CSS służy do ustawiania elementów na stronie w taki sposób, że są one
+                wyświetlane na bokach strony, zamiast w swoim normalnym miejscu, jakby były ustawione jako
+                "block". Wartości tej właściwości to "left", "right", "none" (domyślna) i "inherit". Właściwość
+                ta jest często używana do układania elementów na stronie, takich jak obrazy i tekst.
+            </p>
+            <img src="/img/vector132.png" alt="">
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Można ustawić element jako
+            <code><a href="#" pro-tip="">float: left</a></code> lub
+            <code><a href="#" pro-tip="">float: right</a></code>
+            aby ustawić go po lewej lub prawej stronie,
+            zostawiając tekst i inne elementy wokół niego w swoim normalnym miejscu. Jeśli chcesz, aby element nie
+            był ustawiony jako "float", możesz ustawić "float: none".
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+img {
+  float: left;
+  margin-right: 10px;
+}
+                </code>
+            </pre>
+        </div>
+        <h2>Lewy float</h2>
+        <div class="vertical-element-position">
+            <p>
+                <img style="float:left; margin-right:10px;" src="/img/podroz3.jpg" alt="obraz">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin tellus vel nunc congue,
+                eget condimentum metus tempor.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Brak float</h2>
+        <div>
+            <p>
+                <img src="/img/podroz3.jpg" alt="obraz">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
+                nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+                facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+                risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Układ Kolumn Z float</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+.col1 {
+  float: left;
+  width: 33.33%;
+}
+
+.col2 {
+  float: left;
+  width: 33.33%;
+}
+
+.col3 {
+  float: left;
+  width: 33.33%;
+}
+                </code>
+            </pre>
+        </div>
+        <div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
+            <p>Kolumna 1</p>
+        </div>
+        <div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
+            <p>Kolumna 2</p>
+        </div>
+        <div style="float:left; width: 30.33%; border: lime solid 2px; text-align: center">
+            <p>Kolumna 3</p>
+        </div>
+        <h1 style="margin-top: 150px">Właściwość Clear CSS</h1>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <p class="text-container lightOrange-container text-container-medium article tooltip">
+                W języku CSS, właściwość "clear" jest używana do określenia, jak element powinien wyglądać
+                względem elementów flotujących wokół niego. Wartości jakie może przyjmować to:
+                <code><a href="#" pro-tip="">left</a></code>
+                <code><a href="#" pro-tip="">right</a></code>
+                <code><a href="#" pro-tip="">both</a></code>
+                <code><a href="#" pro-tip="">none</a></code>
+            </p>
+            <div class="code-block">
+                <pre>
+                    <code>
+.element {
+  clear: both;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="alert-card alert-card3 tooltip">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Ważne jest, aby pamiętać, że elementy ustawione jako
+                <code><a href="#" pro-tip="">float</a></code>
+                nie mają wpływu na rozmiar rodzica, więc jeśli chcesz, aby rodzic automatycznie
+                dostosowywał swój rozmiar do elementów "float", należy użyć właściwości
+                <code><a href="#" pro-tip="">clear</a></code>.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Kombinatory.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

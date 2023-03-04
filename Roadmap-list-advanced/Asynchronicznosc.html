@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Asynchroniczność</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="LINQ.html">LINQ</a></li>
+            <li><a href="Praca-z-plikami.html">Praca z plikami</a></li>
+            <li><a href="Programowanie-obiektowe.html">Programowanie obiektowe</a> </li>
+            <li><a href="Serializacja-Deserializacja.html">Serializacja oraz Deserializacja</a></li>
+            <li><a href="Asynchronicznosc.html">Asychroniczność</a></li>
+            <li><a href="Szyfrowanie-danych.html">Szyfrowanie danych</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Asynchroniczność W Języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                Asynchroniczność w języku C# jest realizowana przy użyciu dwóch głównych mechanizmów:
+                asynchronicznych metod i zadań. Asynchroniczne metody pozwalają na uruchomienie kodu w tle,
+                pozostawiając główny wątek niezablokowanym, co pozwala na pracę z interfejsem użytkownika i
+                obsługę innych zadań. Z kolei zadania pozwalają na tworzenie skoordynowanego, wielowątkowego kodu,
+                który może być łatwo skalowalny i elastyczny. Oba te mechanizmy pozwalają na programowanie w sposób
+                asynchroniczny w języku C#.
+            </p>
+            <img src="/img/vector90.png" alt="">
+        </div>
+        <p class="text-container orange-container">
+            Przykład użycia asynchroniczności w C#, który ilustruje jak asynchroniczne metody i zadania mogą
+            być użyte do zwiększenia wydajności aplikacji. Przykład ten pokazuje aplikację konsolową, która
+            przetwarza dużą liczbę danych wejściowych:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        var data = GetLargeDataSet();
+        var tasks = new List&ltTask&ltint&gt&gt();
+
+
+        // Podziel dane na kilka mniejszych zbiorów
+        var chunks = SplitDataIntoChunks(data);
+
+
+        // Utwórz i uruchom zadania dla każdego zbioru danych
+        foreach (var chunk in chunks)
+        {
+            tasks.Add(ProcessDataAsync(chunk));
+        }
+
+
+        // Czekaj na zakończenie wszystkich zadań
+        Task.WaitAll(tasks.ToArray());
+
+
+        // Podsumuj wynik
+        int result = 0;
+
+        foreach (var task in tasks)
+        {
+            result += task.Result;
+        }
+
+        Console.WriteLine("Wynik: " + result);
+    }
+
+
+    static async Task&ltint&gt ProcessDataAsync(int[] data)
+    {
+        return await Task.Run(() =>
+        {
+            // Przetwarzanie danych
+            int result = 0;
+
+            foreach (var item in data)
+            {
+                result += item;
+            }
+            return result;
+        });
+    }
+
+
+    static int[] GetLargeDataSet()
+    {
+        // Pobieranie dużego zbioru danych
+        return Enumerable.Range(1, 1000000).ToArray();
+    }
+
+
+    static List&ltint[]&gt SplitDataIntoChunks(int[] data)
+    {
+        // Podzielenie danych na mniejsze zbiory
+        var chunks = new List&ltint[]&gt();
+        var chunkSize = 10000;
+
+        for (int i = 0; i < data.Length; i += chunkSize)
+        {
+            chunks.Add(data.Skip(i).Take(chunkSize).ToArray());
+        }
+
+        return chunks;
+    }
+}
+
+
+//output:
+
+Wynik: 1784293664
+
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Asynchroniczne Metody</h1>
+        <div class="section-with-image">
+            <p>
+                Asynchroniczne metody to metody oznaczone przez modyfikator "async", które pozwalają na uruchamianie
+                kodu w tle, pozostawiając główny wątek niezablokowanym. Asynchroniczne metody pozwalają na wykonywanie
+                operacji, które mogą zająć dużo czasu, takich jak pobieranie danych z sieci czy zapis do pliku,
+                bez blokowania głównego wątku aplikacji. Dzięki temu aplikacja pozostaje responsywna, pozwalając
+                na np. reakcję na interakcję użytkownika.
+            </p>
+            <img src="/img/vector18.png" alt="">
+        </div>
+        <p class="text-container green-container no-margin-top">
+            Aby stworzyć asynchroniczną metodę, należy dodać modyfikator "async" przed sygnaturą metody
+            oraz zwracać obiekt typu Task lub Task<T> (gdzie T jest typem zwracanego wyniku). Asynchroniczne
+            metody mogą również używać instrukcji "await" do pauzowania wykonywania metody do momentu
+            zakończenia asynchronicznego zadania.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+public async Task&ltint&gt GetDataFromAPIAsync(string url)
+{
+    using (var client = new HttpClient())
+    {
+        // Pobieranie danych z API za pomocą HttpClient
+        var result = await client.GetAsync(url);
+
+        // Odczytanie zawartości odpowiedzi jako ciągu znaków
+        var data = await result.Content.ReadAsStringAsync();
+
+        // Zwrócenie długości pobranych danych jako wyniku
+        return data.Length;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container">
+            Przykład asynchronicznej metody, która ilustruje jak asynchroniczność może być użyta do zwiększenia
+            wydajności aplikacji podczas przetwarzania dużych zbiorów danych:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class DataProcessor
+{
+    private readonly HttpClient _client;
+
+    public DataProcessor()
+    {
+        _client = new HttpClient();
+    }
+
+
+    public async Task&ltint&gt ProcessDataAsync(string url)
+    {
+        // Pobieranie danych z API
+        var result = await _client.GetAsync(url);
+        var data = await result.Content.ReadAsStringAsync();
+
+
+        // Podzielenie danych na mniejsze zbiory
+        var chunks = SplitDataIntoChunks(data);
+
+
+        // Utworzenie listy zadań
+        var tasks = new List&ltTask&ltint&gt&gt();
+
+
+        // Utworzenie i uruchomienie zadań dla każdego zbioru danych
+        foreach (var chunk in chunks)
+        {
+            tasks.Add(ProcessDataChunkAsync(chunk));
+        }
+
+
+        // Czekanie na zakończenie wszystkich zadań
+        await Task.WhenAll(tasks);
+
+
+        // Podsumowanie wyniku
+        int result = 0;
+
+        foreach (var task in tasks)
+        {
+            result += task.Result;
+        }
+
+        return result;
+    }
+
+
+    private List&ltstring&gt SplitDataIntoChunks(string data)
+    {
+        // implementacja podziału danych na mniejsze zbiory
+    }
+
+
+    private async Task&ltint&gtProcessDataChunkAsync(string chunk)
+    {
+        // Przetwarzanie danych w zbiorze
+        // np. liczenie słów w ciągu znaków
+        var words = chunk.Split(' ');
+        return words.Length;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Asynchroniczne Zadania</h1>
+        <div class="section-with-image">
+            <p>
+                Asynchroniczne zadania (Task) to mechanizm pozwalający na tworzenie skoordynowanego, wielowątkowego
+                kodu w języku C#. Zadania pozwalają na rozłożenie zadań na wiele równoległych wątków, co zwiększa
+                wydajność aplikacji. Programista może łatwo skonfigurować zadania, aby wykonywały się równolegle
+                lub sekwencyjnie, a także łatwo kontrolować ich stan i wynik.
+            </p>
+            <img src="/img/vector20.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Aby utworzyć zadanie, należy użyć klasy Task
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Task task = new Task(() => DoWork());
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Aby utworzyć, metody Task.Run()
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Task task = Task.Run(() => DoWork());
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Zadania mogą być również skoordynowane za pomocą metod takich jak Task.WhenAll() oraz Task.WhenAny() ,
+            które pozwalają na czekanie na zakończenie wszystkich lub dowolnego zadania
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Task task1 = Task.Run(() => DoWork1());
+Task task2 = Task.Run(() => DoWork2());
+
+Task.WaitAll(task1, task2);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            Przykład użycia asynchronicznych zadań w C#, który ilustruje jak asynchroniczne zadania mogą być
+            użyte do zwiększenia wydajności aplikacji. Przykład ten pokazuje aplikację konsolową, która pobiera
+            dane z dwóch różnych źródeł i sumuje je:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Utwórz zadania do pobierania danych
+        Task&ltint&gt task1 = GetDataFromAPIAsync("https://api1.com/data");
+        Task&ltint&gt task2 = GetDataFromFileAsync("data.txt");
+
+
+        // Czekaj na zakończenie obu zadań
+        Task.WaitAll(task1, task2);
+
+
+        // Podsumuj wynik
+        int result = task1.Result + task2.Result;
+        Console.WriteLine("Wynik: " + result);
+    }
+
+
+    static async Task&ltint&gt GetDataFromAPIAsync(string url)
+    {
+        using (var client = new HttpClient())
+        {
+            var result = await client.GetAsync(url);
+            var data = await result.Content.ReadAsStringAsync();
+            return data.Length;
+        }
+    }
+
+
+    static async Task&ltint&gt GetDataFromFileAsync(string path)
+    {
+        using (var reader = new StreamReader(path))
+        {
+            var data = await
+            return data.Length;
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Szyfrowanie-danych.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Konwersja-Typów C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Niejawna Konwersja Typów</h1>
+        <div class="section-with-image">
+            <p>
+                Konwersja niejawna, zwana również konwersją automatyczną, polega na przekształceniu jednego
+                typu na inny bez konieczności użycia operatora rzutowania lub metody konwersji. Jest to możliwe,
+                gdy jeden typ jest podtypem drugiego.
+            </p>
+            <img src="/img/vector53.png" alt="">
+        </div>
+        <p class="text-container gray-container no-margin-top">
+            Przykład konwersji niejawnej:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int x = 5;
+
+long y = x; // konwersja niejawna z int na long
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container">
+            Niektóre typy danych nie mogą być skonwertowane na inne typy niejawnie, w takim przypadku
+            wymagane jest użycie operatora rzutowania lub metody konwersji.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+float a = 5.5f;
+
+int b = a; //konwersja niejawna z float na int. utrata precyzji
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Jawna Konwersja Typów</h1>
+        <div class="section-with-image">
+            <p>
+                Konwersja jawna, zwana również konwersją rzutowaniem, polega na przekształceniu jednego
+                typu na inny przy użyciu operatora rzutowania lub metody konwersji. Jest to potrzebne,
+                gdy konwersja niejawna jest niemożliwa lub gdy chcemy zmienić typ danych, niezależnie od
+                tego, czy jest to bezpieczne czy nie.
+            </p>
+            <img src="/img/vector62.png" alt="">
+        </div>
+        <p class="text-container lightBrown-container no-margin-top">
+            Przykład konwersji jawnej za pomocą operatora rzutowania:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+double a = 5.5;
+
+int b = (int)a; // jawna konwersja z double na int
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightBrown-container">
+            Przykład konwersji jawnej za pomocą metody konwersji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "5";
+
+int number = Convert.ToInt32(str); // jawna konwersja z string na int
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Metody Konwersji Typów</h1>
+        <div class="section-with-image">
+            <p>
+                W języku C# istnieje kilka metod konwersji typów, które pozwalają na bezpieczne przekształcanie jednego typu na inny. Oto kilka przykładów:
+            </p>
+            <img src="/img/vector73.png" alt="">
+        </div>
+        <p class="text-container red-container article tooltip no-margin-top">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na liczbę całkowitą.">Convert.ToInt32()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "5";
+
+int number = Convert.ToInt32(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na liczbę zmiennoprzecinkową.">Convert.ToDouble()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "5.5";
+
+double number = Convert.ToDouble(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na wartość logiczną.">Convert.ToBoolean()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "true";
+
+bool b = Convert.ToBoolean(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na pojedynczy znak.">Convert.ToChar()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "a";
+
+char c = Convert.ToChar(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na liczbę dziesiętną.">Convert.ToDecimal()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "5.5";
+
+decimal number = Convert.ToDecimal(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków na obiekt typu DateTime.">Convert.ToDateTime()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string str = "2022-01-01";
+
+DateTime date = Convert.ToDateTime(str);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Konwertuje ciąg znaków lub liczbę całkowitą na liczbę typu byte.">Convert.ToByte()</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int i = 255;
+
+byte b2 = Convert.ToByte(i);
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Te metody są przydatne gdy chcesz przekształcić typ danych na inny ale nie jesteś pewien czy jest to bezpieczne.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Typy-Lancuchowe.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>

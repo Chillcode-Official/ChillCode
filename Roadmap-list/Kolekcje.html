@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolekcje C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Basic.html">Czym jest język C#</a></li>
+            <li><a href="SkładniaCsharp.html">Podstawowa składania C#</a></li>
+            <li><a href="PierwszaAplikacja.html">Pierwsza Aplikacja "Hello World"</a> </li>
+            <li><a href="Typy.html">Typy danych</a></li>
+            <li><a href="Zmienne.html">Zmienne</a></li>
+            <li><a href="Pola.html">Pola</a></li>
+            <li><a href="Wlasciwosci.html">Właściwości</a></li>
+            <li><a href="Stale.html">Stałe</a></li>
+            <li><a href="Metody.html">Metody</a></li>
+            <li><a href="Instrukcje.html">Instrukcje warunkowe</a></li>
+            <li><a href="Petle.html">Pętle</a></li>
+            <li><a href="Tablice.html">Tablice</a></li>
+            <li><a href="Kolekcje.html">Kolekcje</a></li>
+            <li><a href="Klasy.html">Klasy</a></li>
+            <li><a href="Dziedziczenie.html">Dziedziczenie</a></li>
+            <li><a href="Polimorfizm.html">Polimorfizm</a></li>
+            <li><a href="Konwersja-Typów.html">Konwersja typów</a></li>
+            <li><a href="Typy-Lancuchowe.html">Typy łańcuchowe</a></li>
+            <li><a href="Typy-Wyliczeniowe.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfejsy.html">Interfejsy</a></li>
+            <li><a href="Klasy-Statyczne.html">Klasy statyczne</a></li>
+            <li><a href="Klasy-Abstrakcyjne.html">Klasy Abrstrakcyjne</a></li>
+            <li><a href="PrzestrzenieNazw.html">Przestrzenie nazw</a></li>
+            <li><a href="Wyjatki.html">Wyjątki</a></li>
+            <li><a href="Typy-Generyczne.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Kolekcje w języku C#</h1>
+        <div class="section-with-image">
+            <p>
+                Kolekcje są to obiekty, które służą do przechowywania i zarządzania grupą innych obiektów.
+                Są one często używane w aplikacjach, ponieważ umożliwiają łatwe dodawanie, usuwanie i
+                wyszukiwanie elementów oraz udostępniają wiele przydatnych metod i właściwości.
+            </p>
+            <img src="/img/vector37.png" alt="">
+        </div>
+        <p class="text-container article tooltip no-margin-top">
+            W języku C# istnieje kilka rodzajów kolekcji, takich jak: <code><a href="#" pro-tip="hej">Listy</a></code>
+            <code><a href="#" pro-tip="hej">Słowniki</a></code><code><a href="#" pro-tip="hej">Kolejki</a></code>
+            <code><a href="#" pro-tip="hej">Stosy</a></code>
+        </p>
+        <div class="alert-card article tooltip no-margin-top">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                W języku C# istnieje również interfejs <code><a href="#" pro-tip="Pozwala na iterowanie przez elementy kolekcji za pomocą pętli foreach. Wiele klas kolekcji implementuje ten interfejs, dzięki czemu można je łatwo przeglądać i manipulować ich elementami.">IEnumerable</a></code>.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Listy C#</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Listy w języku C# są to dynamiczne tablicę, które pozwalają na dodawanie i usuwanie
+                elementów w dowolnym miejscu. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">List&ltT&gt</a></code>, gdzie <b>T</b>
+                jest typem elementów przechowywanych w liście.
+            </p>
+            <img src="/img/vector18.png" alt="">
+        </div>
+        <p class="text-container green-container no-margin-top">
+            Aby utworzyć pustą listę, można użyć następującego kodu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+List&ltint&gt numbers = new List&ltint&gt();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container article tooltip">
+            Lista z parametrami typu <code><a href="#" pro-tip="hej">string</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+List&ltstring&gt names = new List&ltstring&gt { "Ala", "Bartek", "Cezary" };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container article tooltip">
+            Aby dodać element do listy, można użyć metody <code><a href="#" pro-tip="hej">Add</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+names.Add("Dawid");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container article tooltip">
+            Aby usunąć element z listy, można użyć metody <code><a href="#" pro-tip="hej">Remove</a></code>
+            lub <code><a href="#" pro-tip="hej">RemoveAt</a></code>, która usuwa element na określonym indeksie
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+names.Remove("Ala");
+
+names.RemoveAt(0); // usuwa element na indeksie 0
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container article tooltip">
+            Można również sprawdzić, czy lista zawiera określony element za pomocą metody <code><a href="#" pro-tip="hej">Contains</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+if (names.Contains("Bartek"))
+{
+    Console.WriteLine("Lista zawiera element Bartek.");
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container green-container article tooltip">
+            Aby przeiterować przez elementy listy, można użyć pętli <code><a href="#" pro-tip="hej">foreach</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Listy są bardzo przydatnymi kolekcjami i są często używane w aplikacjach,
+                ponieważ umożliwiają łatwe dodawanie, usuwanie i wyszukiwanie elementów oraz
+                udostępniają wiele przydatnych metod i właściwości.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Słowniki C#</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Słowniki w języku C# to kolekcje przechowujące pary klucz-wartość, gdzie klucz
+                jest używany do szybkiego wyszukiwania wartości. Można je utworzyć za pomocą
+                klasy <code><a href="#" pro-tip="hej">Dictionary&ltTKey</a></code> <code><a href="#" pro-tip="hej">TValue&gt</a></code>
+            </p>
+            <img src="/img/vector17.png" alt="">
+        </div>
+        <p class="text-container gray-container no-margin-top">
+            Aby utworzyć pusty słownik, można użyć następującego kodu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Dictionary&ltstring, int> scores = new Dictionary&ltstring, int>();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby dodać parę klucz-wartość do słownika, można użyć indeksatora lub metody <code><a href="#" pro-tip="hej">Add</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+scores["Ala"] = 10;
+
+scores.Add("Bartek", 20);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby uzyskać wartość dla określonego klucza, można również użyć <code><a href="#" pro-tip="hej">indeksatora</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int score = scores["Alice"];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby sprawdzić, czy słownik zawiera określony klucz, można użyć metody <code><a href="#" pro-tip="hej">ContainsKey</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+if (scores.ContainsKey("Charlie"))
+{
+    Console.WriteLine("Słownik zawiera klucz Charlie.");
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby usunąć parę klucz-wartość ze słownika, można użyć metody <code><a href="#" pro-tip="hej">Remove</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+scores.Remove("Ala");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby przeiterować przez pary klucz-wartość w słowniku, można użyć pętli foreach i właściwości <code><a
+                href="#" pro-tip="hej">Keys</a></code> lub <code><a href="#" pro-tip="hej">Value</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+foreach (string key in scores.Keys)
+{
+    Console.WriteLine($"{key}: {scores[key]}");
+}
+
+
+foreach (int value in scores.Values)
+{
+    Console.WriteLine(value);
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Słowniki są bardzo przydatnymi kolekcjami, które pozwalają na szybkie wyszukiwanie
+                wartości na podstawie klucza. Są często używane w aplikacjach do przechowywania danych,
+                takich jak mapowanie nazw użytkowników do ich ID lub mapowanie nazw produktów do ich cen.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Kolejki C#</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Kolejki w języku C# są to uporządkowane kolekcje, w których elementy są dodawane na
+                jednym końcu i usuwane z drugiego. Są one używane do przechowywania elementów w kolejności,
+                w jakiej zostały dodane. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">Queue&ltT&gt</a></code>, gdzie <b>T</b> jest typem
+                elementów przechowywanych w kolejce.
+            </p>
+            <div class="image-bottom">
+                <img src="/img/vector24.png" alt="">
+            </div>
+        </div>
+        <p class="text-container red-container no-margin-top">
+            Aby utworzyć pustą kolejkę, można użyć następującego kodu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Queue&ltint&gt numbers = new Queue&ltint&gt();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Można również utworzyć kolejkę zawierającą początkowe elementy, przekazując je jako parametry do <code><a
+                href="#" pro-tip="hej">konstruktora</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Queue&ltstring&gt names = new Queue&ltstring&gt { "Ala", "Bartek", "Cezary" };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Aby dodać element do kolejki, można użyć metody <code><a href="#" pro-tip="hej">Enqueue</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+names.Enqueue("Dawid");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Aby usunąć element z kolejki, można użyć metody <code><a href="#" pro-tip="hej">Dequeue</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string name = names.Dequeue();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Jeśli chcesz sprawdzić, jaki jest element na początku kolejki bez jego usuwania, użyj właściwości <code><a
+                href="#" pro-tip="hej">Peek</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string first = names.Peek();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Aby przeiterować przez elementy kolejki, można użyć pętli <code><a href="#" pro-tip="">foreach</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+foreach (string name in names)
+{
+    Cosole.WriteLine(name);
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Kolejki są przydatnymi kolekcjami, które są często używane w aplikacjach do przechowywania
+                elementów w kolejności, w jakiej mają być przetworzone lub obsłużone. Na przykład, mogą
+                być używane do przechowywania zadań do wykonania w kolejce lub wiadomości do wysłania w kolejce.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Stosy C#</h1>
+        <div class="section-with-image">
+            <p class="article tooltip">
+                Stosy w języku C# są to uporządkowane kolekcje, które używają zasady <code><a href="#" pro-tip="hej">LIFO</a></code>
+                <strong>(Last In, First Out)</strong>, oznaczającej, że ostatni element dodany jest
+                pierwszym usuwanym. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">Stack&ltT&gt</a></code>, gdzie
+                <b>T</b> jest typem elementów przechowywanych na stosie.
+            </p>
+            <img src="/img/vector31.png" alt="">
+        </div>
+        <p class="text-container blue-container no-margin-top">
+            Aby utworzyć pusty stos, można użyć następującego kodu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Stack&ltint&gt numbers = new Stack&ltint&gt();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Można również utworzyć stos zawierającą początkowe elementy, przekazując je jako parametry do <code><a
+                href="#" pro-tip="hej">konstruktora</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Stack&ltstring&gt names = new Stack&ltstring&gt { "Ala", "Bartek", "Cezary" };
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Aby dodać element do stosu, można użyć metody <code><a href="#" pro-tip="hej">Push</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+names.Push("Dawid");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Aby usunąć element ze stosu, można użyć metody <code><a href="#" pro-tip="hej">Pop</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string name = names.Pop();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Można również sprawdzić, jaki jest element na początku kolejki bez jego usuwania, użyj właściwości <code><a
+                href="#" pro-tip="hej">Peek</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+string top = names.Peek();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container article tooltip">
+            Aby przeiterować przez elementy stosu, można użyć pętli <code><a href="#" pro-tip="">foreach</a></code>,
+            ale należy pamiętać, że elementy będą zwracane w odwrotnej kolejności niż są przechowywane na stosie.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+foreach (string name in names)
+{
+    Cosole.WriteLine(name);
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Kolejki są przydatnymi kolekcjami, które są często używane w aplikacjach do przechowywania
+                elementów w kolejności, w jakiej mają być przetworzone lub obsłużone. Na przykład, mogą
+                być używane do przechowywania zadań do wykonania w kolejce lub wiadomości do wysłania w kolejce.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Klasy.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

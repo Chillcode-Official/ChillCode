@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Padding-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Padding</a></li>
+            <li><a href="Obramowanie.html">Borders</a></li>
+            <li><a href="Zarys.html">Outline</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Padding - Dopełnienie CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Padding w CSS jest to właściwość, która służy do dodawania marginesu wewnętrznego do elementu HTML.
+                Margines wewnętrzny jest to przestrzeń pomiędzy zawartością elementu a jego obrysem. Właściwość padding
+                może być ustawiona dla każdej ze stron elementu lub dla wszystkich jednocześnie. Może być
+                również ustawiona na stałą wartość, np. 20 pikseli, lub procentowo w stosunku do wielkości
+                elementu rodzica.
+            </p>
+            <img src="/img/vector140.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Ustawienie <code><a href="#" pro-tip="">padding</a></code> dla wszystkich stron na 20 pikseli.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+.element {
+   padding: 65px;
+}
+                </code>
+            </pre>
+        </div>
+        <div style="width: 500px;padding:65px;border-width:1px;border-style:solid; border-color: #0aaeb3; color: white">
+            Ten element ma padding 65px.
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Ustawienie <code><a href="#" pro-tip="">padding</a></code> dla każdej ze stron na różną wartość:
+        </p>
+
+        <div class="code-block">
+        <pre>
+            <code>
+.element {
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;
+}          </code>
+        </pre>
+        </div>
+        <div style="width: 500px;padding-left: 25px;padding-top: 10px;padding-right: 15px;padding-bottom: 20px;border-width:1px;border-style:solid; border-color: greenyellow; color: white">
+            Ten element ma wiele dopełnień.
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Ustawienie <code><a href="#" pro-tip="">padding</a></code> po lewej stronie elementu na 10% jego szerokości:
+        </p>
+
+        <div class="code-block">
+            <pre>
+                <code>
+.element {
+   padding-left: 10%;
+}
+                </code>
+            </pre>
+        </div>
+        <div style="width: 500px;padding-left: 10%; border-width:1px;border-style:solid; border-color: red; color: white">
+            Ten element ma 10% padding po lewej stronie elementu.
+        </div>
+        <div class="big-page-header"></div>
+        <div class="text-container black-container white-list article">
+            <ul>
+                <li>padding-top: 20px; - dodaje 20 pikseli marginesu na górnej stronie elementu.</li>
+                <li>padding-right: 10%; - dodaje 10% szerokości elementu rodzica jako margines po prawej stron</li>
+            </ul>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Padding jest narzędziem, które pozwala na lepszą kontrolę nad wyglądem naszej
+                strony internetowej i dostosowanie go do naszych potrzeb i wymagań.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Obramowanie.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

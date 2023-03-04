@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Komentarze HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Komentarze W Języku HTML</h1>
+        <div class="section-with-image">
+            <p>
+                Komentarze w języku HTML służą do dodawania informacji dla programistów lub innych osób edytujących
+                kod strony. Mogą one zawierać informacje dotyczące działania kodu, instrukcje dotyczące edycji lub
+                uwagi dotyczące projektu.
+            </p>
+            <img src="/img/vector100.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Aby dodać komentarz w języku HTML, użyj znacznika <code><a href="#" pro-tip="">&lt!-- --&gt</a></code>.
+            Wszystko, co znajduje się między tymi znacznikami, będzie traktowane jako komentarz i nie będzie
+            widoczne dla użytkownika.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!-- To jest komentarz w HTML --&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightPink-container">
+            Dzięki komentarzom możesz umieszczać powiadomienia i przypomnienia w swoim kodzie HTML:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!-- Ten kod jest w fazie test&oacute;w, prosz&eogon; go nie edytowa&cacute; --&gt;
+
+&lt;div class=&quot;test-section&quot;&gt;
+  &lt;p&gt;Tre&sacute;&cacute; sekcji testowej&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Koniec kodu testowego --&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightPink-container">
+            Komentarze mogą być również używane do wyłączania części kodu bez usuwania go całkowicie.
+            W tym celu należy zamieścić komentarz przed i po kodzie, który ma zostać wyłączony.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!-- Ten kod jest przestarza&lstrok;y, prosz&eogon; u&zdot;y&cacute; nowszej wersji --&gt;
+
+&lt;!--
+
+&lt;div class=&quot;old-section&quot;&gt;
+  &lt;p&gt;Tre&sacute;&cacute; sekcji przestarza&lstrok;ej&lt;/p&gt;
+&lt;/div&gt;
+
+--&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Jak widzisz w tych przykładach, komentarze mogą być używane do różnych celów, takich jak opisanie
+                działania kodu, oznaczenie kodu jako testowego lub przestarzałego i udzielanie instrukcji dotyczących edycji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Kolory.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

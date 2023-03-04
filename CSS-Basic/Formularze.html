@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-CSS.html">Czym jest CSS</a></li>
+            <li><a href="Podstawowa-skladnia-CSS.html">Podstawowa Składnia CSS</a></li>
+            <li><a href="Selektory.html">Selektory</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Tlo.html">Tło</a></li>
+            <li><a href="Wysokosc-Szerokosc.html">Wysokość-Szerokość</a></li>
+            <li><a href="Pozycja.html">Pozycja</a></li>
+            <li><a href="Przepelnienie.html">Przepełnienie-Overflow</a></li>
+            <li><a href="Marginesy.html">Marginesy</a></li>
+            <li><a href="Dopelnienie.html">Dopełnienie</a></li>
+            <li><a href="Obramowanie.html">Obramowanie</a></li>
+            <li><a href="Zarys.html">Zarys</a></li>
+            <li><a href="Tekst-CSS.html">Tekst</a></li>
+            <li><a href="Czcionki-CSS.html">Czcionki</a></li>
+            <li><a href="Wyswietlanie.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Listy.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Wlasciowsc-float.html">Właściwość float</a></li>
+            <li><a href="Kombinatory.html">Kombinatory</a></li>
+            <li><a href="PseudoKlasy.html">Pseudo Klasy</a></li>
+            <li><a href="PseudoElementy.html">Pseudo Elementy</a></li>
+            <li><a href="Pasek-Nawigacyjny.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Jednostki.html">Jednostki</a></li>
+            <li><a href="Przezroczystosc.html">Przezroczystość</a></li>
+            <li><a href="Formularze.html">Formularze</a></li>
+            <li><a href="Liczniki.html">Liczniki</a></li>
+            <li><a href="Funkcje-Matematyczne.html">Funkcje Matematyczne</a></li>
+            <li><a href="Hierarchicznosc.html">Hierarchiczność</a></li>
+            <li><a href="Selektory-Atrybutow.html">Selektory Atrybutów</a></li>
+            <li><a href="Uklad-strony-CSS.html">Układ Strony CSS</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Forms - Formularze CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Formularze w CSS to koncepcja polegająca na stylizowaniu formularzy za pomocą języka CSS. Możesz
+                zmienić wygląd pól tekstowych, przycisków, etykiet i innych elementów formularza, aby pasowały
+                do projektu lub wizualizacji twojej strony internetowej. Aby to zrobić, możesz użyć reguł CSS
+                i klas lub identyfikatorów CSS, aby określić wygląd poszczególnych elementów formularza.
+            </p>
+            <img src="/img/vector21.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Stylizowanie formularzy za pomocą CSS jest bardzo ważne dla projektowania atrakcyjnej i przyjaznej
+            dla użytkownika strony internetowej. CSS pozwala na zmianę koloru tła, koloru tekstu, tła pola
+            tekstowego, krawędzi, marginesów i wielu innych właściwości, które wpływają na wygląd i użyteczność formularza.
+        </p>
+        <div class="form-example">
+            <form action="">
+                <h2>Contact Form</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+.form-example form {
+padding: 30px;
+background-color: lightgray;
+border-radius: 10px;
+box-shadow: 2px 2px 10px #7800ff;
+}
+
+.form-example h2 {
+text-align: center;
+margin-bottom: 30px;
+color: black;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.form-example label {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.form-example input[type="text"],
+input[type="email"],  textarea {
+padding: 10px;
+border: 2px solid gray;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.form-example button[type="submit"] {
+background-color: #454581;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.form-example button[type="submit"]:hover {
+background-color: #2e2eff;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container">
+            W skrócie, stylizowanie formularzy za pomocą CSS jest ważne dla projektowania atrakcyjnej i
+            przyjaznej dla użytkownika strony internetowej, a także dla zapewnienia, że formularze są
+            łatwe w użyciu na wszystkich urządzeniach i zapewniają dobre doświadczenie dla użytkownika.
+        </p>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Liczniki.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

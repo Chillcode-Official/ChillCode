@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Programowanie Obiektowe</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="LINQ.html">LINQ</a></li>
+            <li><a href="Praca-z-plikami.html">Praca z plikami</a></li>
+            <li><a href="Programowanie-obiektowe.html">Programowanie obiektowe</a> </li>
+            <li><a href="Serializacja-Deserializacja.html">Serializacja oraz Deserializacja</a></li>
+            <li><a href="Asynchronicznosc.html">Asychroniczność</a></li>
+            <li><a href="Szyfrowanie-danych.html">Szyfrowanie danych</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div>
+                <h1>Programowanie Obiektowe</h1>
+                <p>
+                    Programowanie obiektowe w języku C# polega na tworzeniu klas i obiektów, które reprezentują
+                    rzeczywiste modele w aplikacji. Klasy zawierają pola (atrybuty) i metody, które opisują zachowanie
+                    obiektów. Obiekty są tworzone na podstawie klas i mogą komunikować się ze sobą poprzez wywoływanie
+                    metod. Programowanie obiektowe w C# również obejmuje dziedziczenie, polimorfizm i enkapsulację,
+                    co umożliwia tworzenie złożonych i elastycznych aplikacji.
+                </p>
+            </div>
+            <img src="/img/vector83.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container no-margin-top article tooltip">
+            <code><a href="#" pro-tip="">Klasa</a></code> jest podstawowym elementem programowania obiektowego w języku C#. Jest to szablon, z którego
+            tworzy się obiekty. Klasa zawiera pola (atrybuty), które opisują stan obiektu, oraz metody, które
+            opisują jego zachowanie.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Car
+{
+    public string Make;
+    public string Model;
+    public int Year;
+
+    public void StartEngine()
+    {
+        Console.WriteLine("Engine started.");
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Obiekt</a></code> jest konkretną <code><a href="#" pro-tip="">instancją</a></code>
+            klasy. Tworzy się go poprzez użycie słowa kluczowego <code><a href="#" pro-tip="">new</a></code> i nazwę klasy.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Car myCar = new Car();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Dziedziczenie</a></code> pozwala na tworzenie nowych klas na podstawie już istniejących.
+            Dziedzicząca klasa automatycznie dziedziczy pola i metody klasy bazowej.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class SportsCar : Car
+{
+    public void StartTurbo()
+    {
+        Console.WriteLine("Turbo started.");
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Polimorfizm</a></code> pozwala na używanie obiektów różnych klas jako obiektów klasy bazowej.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+Car myCar = new SportsCar();
+
+myCar.StartEngine();
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Enkapsulacja</a></code> polega na ukrywaniu szczegółów implementacji klasy przed innymi obiektami.
+            Dzięki temu można zmienić implementację klasy bez wpływu na inne obiekty.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Car
+{
+    private int _speed;
+
+    public int Speed
+    {
+        get { return _speed; }
+        set { _speed = value; }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Interfejsy</a></code> to kolejny ważny element programowania obiektowego w języku C#. Interfejs jest to zestaw
+            metod, które muszą być zaimplementowane przez klasę, która go implementuje. Interfejsy pozwalają na
+            określenie zachowania, jakie powinien mieć obiekt, bez określania jego implementacji.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+interface IDrivable
+{
+    void Drive();
+}
+
+class Car : IDrivable
+{
+    public void Drive()
+    {
+        Console.WriteLine("Driving...");
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">abstrakcyjna klasa</a></code> która jest klasą, która nie może być instancjonowana, lecz może posiadać
+            metody abstrakcyjne, które muszą być zaimplementowane przez klasy pochodne.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+abstract class Shape
+{
+    public abstract double GetArea();
+}
+
+class Square : Shape
+{
+    private int _side;
+
+    public Square(int side)
+    {
+        _side = side;
+    }
+
+    public override double GetArea()
+    {
+        return _side * _side;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Eventy</a></code> pozwalają na zdefiniowanie zdarzenia, które może wystąpić w aplikacji, i reagowanie na nie.
+            Zdarzenie jest zdefiniowane jako delegat, który określa typ zwracany i parametry, które ma przyjmować
+            metoda obsługi zdarzenia.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Button
+{
+    public event EventHandler Click;
+
+    public void OnClick()
+    {
+        Click?.Invoke(this, EventArgs.Empty);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Generyki</a></code> pozwalają na tworzenie klas, metod lub interfejsów, które przyjmują jako argument typ
+            generyczny. Dzięki temu klasy lub metody mogą pracować z różnymi typami danych, bez konieczności
+            tworzenia oddzielnej implementacji dla każdego z nich.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class List&ltT&gt
+{
+    private T[] _items;
+
+    public void Add(T item)
+    {
+        // Add item to list
+    }
+
+    public T this[int index]
+    {
+        get { return _items[index]; }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Wyjątki</a></code> (Exceptions) to specjalne obiekty, które służą do obsługi błędów i wyjątków w aplikacji.
+            Służą do informowania o błędach, które wystąpiły podczas działania programu.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+try
+{
+    // Code that might throw an exception
+}
+
+catch (Exception ex)
+{
+    // Code to handle the exception
+}
+
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Kolekcje</a></code> (Collections) to specjalne obiekty, które pozwalają na przechowywanie i zarządzanie danymi
+            w aplikacji. C# posiada wiele gotowych kolekcji, takich jak List, Dictionary, HashSet itp.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+List&ltstring&gt names = new List&ltstring&gt();
+
+names.Add("bartek");
+names.Add("Jan");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">Asynchroniczność</a></code> (Asynchrony) pozwala na wykonywanie operacji w tle, bez blokowania głównego
+            wątku aplikacji. C# posiada składnię asynchronicznej metody, która umożliwia łatwe tworzenie
+            asynchronicznych operacji.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+async Task DoWorkAsync()
+{
+    // Asynchronous code
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGreen-container article tooltip">
+            <code><a href="#" pro-tip="">LINQ</a></code> (Language Integrated Query) to składnia zapytań językowych, która pozwala na łatwe tworzenie zapytań do kolekcji danych.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+List&ltstring&gt names = new List&ltstring&gt() { "bartek", "Jan", "Bobert" };
+var filteredNames = from name in names
+
+                    where name.StartsWith("J")
+
+                    select name;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Programowanie obiektowe w języku C# pozwala na tworzenie złożonych i elastycznych aplikacji.
+                Dzięki wykorzystaniu klas, dziedziczenia, polimorfizmu, interfejsów, wyjątków, kolekcji itp.
+                Przy użyciu tych elementów możemy stworzyć programy, które są łatwe do rozszerzania i utrzymania.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Serializacja-Deserializacja.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

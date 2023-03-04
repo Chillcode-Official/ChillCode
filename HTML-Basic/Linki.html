@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Linki HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Linki W Języku HTML</h1>
+                <p>
+                    Link HTML, zwany również hiperłączem, to element, który pozwala na przenoszenie użytkownika
+                    między stronami internetowymi lub na inne części tej samej strony. Linki są tworzone za pomocą
+                    tagu &lta&gt w języku HTML i mogą być używane do przenoszenia na strony internetowe, pliki,
+                    obrazy, filmy, sekcje na stronie itp.
+                </p>
+            </div>
+            <img src="/img/vector129.png" alt="">
+        </div>
+        <p class="text-container orange-container article tooltip no-margin-top">
+            Linki tworzy się za pomocą tagu <code><a href="#" pro-tip="">&lta&gt</a></code>.
+            oraz atrybutu <code><a href="#" pro-tip="">href</a></code> który służy do określenia adresu
+            <code><a href="#" pro-tip="">URL</a></code> docelowego dla linku.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;a href=&quot;https://www.SoloLearn.com&quot;&gt;Odwied&zacute; nasz&aogon; stron&eogon;&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser browser-no-margin-top">
+            <a href="https://www.SoloLearn.com">Odwiedź naszą stronę</a>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Atrybut target</h2>
+        <p class="text-content-500width article tooltip">
+            Atrybut target w tagu <code><a href="#" pro-tip="">&lta&gt</a></code> HTML służy do określenia, w jakim oknie lub zakładce przeglądarki ma być otwarty link.
+        </p>
+        <p class="text-container article tooltip orange-container">
+            Najczęściej używane wartości atrybutów <code><a href="#" pro-tip="">target</a></code> to między innymi:
+            <code><a href="#" pro-tip="">_blank</a></code> oraz
+            <code><a href="#" pro-tip="">_self</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!-- Klikni&eogon;cie na link otworzy nowe okno przegl&aogon;darki z adresem &quot;https://www.SoloLearn.com&quot; --&gt;
+
+&lt;a href=&quot;https://www.SoloLearn.com&quot; target=&quot;_blank&quot;&gt;Link do innej strony&lt;/a&gt;
+
+
+
+&lt!-- Klikni&eogon;cie na link &quot;O nas&quot; przeniesie u&zdot;ytkownika do sekcji z id &quot;about&quot; na tej samej stronie --&gt
+
+&lt;a href=&quot;#about&quot; target=&quot;_self&quot;&gt;O nas&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser browser-no-margin-top">
+            <a href="https://www.SoloLearn.com" target="_blank">Link do innej strony</a><br><br>
+
+            <a href="#" target="_self">O nas</a>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Linki HTML Do Sekcji</h1>
+        <div class="section-with-image">
+            <p>
+                Linki HTML do sekcji to linki, które przenoszą użytkownika na określoną sekcję na tej samej stronie,
+                zamiast przenosić go na inną stronę lub adres URL. Aby stworzyć link do sekcji, należy użyć atrybutu
+                href w tagu &lta&gt i podać identyfikator (ang. id) sekcji jako wartość.
+            </p>
+            <img src="/img/vector84.png" alt="">
+        </div>
+        <p class="text-container gray-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="">Identyfikator sekcji</a></code> jest atrybutem HTML, który jest używany do oznaczenia elementu na stronie.
+            Aby stworzyć sekcję z identyfikatorem, należy dodać atrybut <code><a href="#" pro-tip="">id</a></code> do tagu sekcji.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt!-- Kliknięcie na link "O nas" przeniesie użytkownika na sekcję o id "about" na tej samej stronie. --&gt
+
+&lt;a href=&quot;#about&quot;&gt;O nas&lt;/a&gt;
+...
+&lt;section id=&quot;about&quot;&gt;
+  &lt;h1&gt;O nas&lt;/h1&gt;
+  &lt;p&gt;Informacje o naszej firmie&lt;/p&gt;
+&lt;/section&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Można również używać linków do przeskakiwania na inne miejsca na stronie, np. do nagłówka,
+            stopki itd. wystarczy użyć <code><a href="#" pro-tip="">id</a></code> tego elementu jako wartości
+            <code><a href="#" pro-tip="">href</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt!-- Kliknięcie na link "do stopki" przeniesie użytkownika na sekcję o id "footer" na dół strony. --&gt
+
+&lt;a href=&quot;#footer&quot;&gt;Do stopki&lt;/a&gt;
+...
+&lt;footer id=&quot;footer&quot;&gt;
+  &lt;p&gt;Copyright &copy;2022&lt;/p&gt;
+&lt;/footer&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>Jest to bardzo przydatne w przypadku stron z długą zawartością, pozwala na szybkie przeskakiwanie do
+                ważnych sekcji strony bez konieczności przewijania całej strony.</p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Linki HTML Do Podstron</h1>
+                <p>
+                    Linki HTML do podstron to linki, które przenoszą użytkownika na inną podstronę na tej samej domenie.
+                    Można to zrobić za pomocą atrybutu href w tagu &lta&gt, podając adres URL lub ścieżkę do podstrony jako
+                    wartość.
+                </p>
+            </div>
+            <img src="/img/vector96.png" alt="">
+        </div>
+        <p class="text-container no-margin-top">
+            Jeśli adres URL jest absolutny, to link przeniesie użytkownika na inną stronę na tej samej domenie
+            lub na innej domenie. Jeśli adres URL jest względny, to link przeniesie użytkownika na inną podstronę
+            na tej samej domenie.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt!-- Kliknięcie na link przeniesie użytkownika na podstronę "https://www.SoloLearn.com/Coding" --&gt
+
+&lt;a href=&quot;https://www.SoloLern.com/Coding&quot;&gt;Programowanie&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container article tooltip">
+            przykład linku do podstrony z względnym adresem <code><a href="#" pro-tip="">URL</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;a href=&quot;/Coding&quot;&gt;Programowanie&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container article tooltip">
+            Można również używać linków do innych plików, takich jak pliki <code><a href="#" pro-tip="">PDF</a></code>, obrazy lub filmy. W takim
+            przypadku, należy podać pełną ścieżkę do pliku jako wartość atrybutu <code><a href="#" pro-tip="">href</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt!--Kliknięcie na link "Mój obraz" przeniesie użytkownika na plik "images/myimage.jpg" na tej samej domenie--&gt
+
+&lt;a href=&quot;images/myimage.jpg&quot;&gt;M&oacute;j obraz&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Linki do podstron są bardzo przydatne, ponieważ pozwalają na łatwe przemieszczanie się po
+                stronie i udostępnianie innych podstron lub plików użytkownikom, co pozwala na lepsze zarządzanie
+                i dostępność zawartości strony.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Linki Zewnętrzne</h2>
+        <p class="text-content-500width">
+            W powyższym przykładzie, tekst "Wyszukaj na Google" jest widoczny dla użytkownika jako link,
+            a po kliknięciu na niego, przeniesie on użytkownika na stronę google.com.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;a href=&quot;https://www.google.com&quot;&gt;Wyszukaj na Google&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser browser-no-margin-top">
+            <a href="https://www.google.com">Wyszukaj na Google</a>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Obrazy.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

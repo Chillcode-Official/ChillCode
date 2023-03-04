@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ASP.NET(Tworzenie-Kontrolerów-Akcji)</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Wprowadzenie-ASP.NET-Core.html">Wprowadzenie do ASP.NET-Core</a></li>
+            <li><a href="Szybki-Start.html">Szybki-Start</a></li>
+            <li><a href="Struktura-Projektu.html">Struktura projektu</a></li>
+            <li><a href="Tworzenie-Kontrolerów-Akcji.html">Tworzenie kontrolerów i akcji</a></li>
+            <li><a href="Routing.html">Routing</a></li>
+            <li><a href="Modelowanie-Danych.html">Modelowanie danych</a></li>
+            <li><a href="Widoki-RazorViewEngine-TagHelpers.html">Widoki RazorViewEngine i TagHelpers</a></li>
+            <li><a href="Dostęp-Do-Danych.html">Dostęp do danych</a></li>
+            <li><a href="Middleware.html">Middleware</a></li>
+            <li><a href="Implementacja-Uwierzytelnienia-Autoryzacji.html">Implementacja uwierzytelnienia i autoryzacji</a></li>
+            <li><a href="Obsługa-Błędów.html">Obsługa błędów</a></li>
+            <li><a href="Stylowanie-Aplikacji.html">Stylowanie aplikacji</a></li>
+            <li><a href="Implementacja-Serwisów-RESTful.html">Implementacja serwisów RESTful</a></li>
+            <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
+            <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
+            <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
+            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Tworzenie Kontrolerów i Akcji</h1>
+        <div class="section-with-image">
+            <p>
+                Kontrolery i akcje są kluczowymi elementami w ASP.NET Core, ponieważ odpowiadają za obsługę żądań HTTP, przetwarzanie danych i zwracanie wyników. Poniżej przedstawiam przykładowy proces tworzenia kontrolera i akcji w ASP.NET Core:
+            </p>
+            <img src="/img/vector12.png" alt="">
+        </div>
+        <div class="text-container black-container white-list no-margin-top">
+            <p>
+                Krok 1: Utworzenie kontrolera
+            </p>
+            <ul>
+                <li>Kliknij prawym przyciskiem myszy na folderze "Controllers" w swoim projekcie</li>
+                <li>Wybierz "Add" > "Controller"</li>
+                <li>Wybierz jeden z szablonów kontrolera, takich jak "API Controller - Empty" lub "MVC Controller - Empty"</li>
+                <li>Nadaj kontrolerowi nazwę i kliknij "Add"</li>
+            </ul>
+            <p>
+                Krok 2: Dodanie akcji
+            </p>
+            <ul>
+                <li>W kontrolerze znajdź metodę, która odpowiada na żądanie HTTP</li>
+                <li>Dodaj atrybut [HttpGet], aby określić typ żądania, który ma być obsługiwany przez akcję</li>
+                <li>Dodaj kod, który przetwarza dane i zwraca wynik</li>
+            </ul>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container">Przykład kodu kontrolera z jedną akcją, która zwraca "Hello, World!" jako wynik:</p>
+        <div class="code-block">
+            <pre>
+                <code>
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/[controller]")]
+public class HelloWorldController : ControllerBase
+{
+    [HttpGet]
+    public ActionResult&ltstring&gt Get()
+    {
+        return "Hello, World!";
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjaśnienie</b>
+            <p>
+                W tym przykładzie kontroler nazywa się "HelloWorldController", a akcja "Get" jest oznaczona atrybutem [HttpGet], co oznacza, że ta akcja będzie obsługiwać żądania HTTP GET. W akcji zwracana jest wartość "Hello, World!".
+            </p>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container blue-container">
+            <img src="/img/warning.png" alt="">
+            <b>Ważne</b>
+            <p>
+                Pamiętaj, że kontrolery i akcje muszą być zadeklarowane w odpowiedniej przestrzeni nazw i muszą dziedziczyć odpowiednio po klasach bazowych ControllerBase lub Controller w przypadku kontrolerów MVC.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Routing.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

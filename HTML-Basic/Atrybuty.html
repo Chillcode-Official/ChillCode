@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Atrybuty HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Atrybuty W Języku HTML</h1>
+        <div class="section-with-image">
+            <p>
+                Atrybuty HTML to specyficzne dla danego elementu właściwości, które pozwalają na określenie jego
+                zachowania lub wyglądu. Służą do określania różnych właściwości elementów HTML. Mogą one mieć
+                różne cele, takie jak określenie linków, zawartości, stylów, zachowania i wielu innych. Atrybuty
+                są zawsze zdefiniowane jako pary "nazwa/wartość" i są zawarte w tagu HTML.
+            </p>
+            <img src="/img/vector119.png" alt="">
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip=" u&zdot;ywany w elemencie &quot;a&quot; (link) w celu okre&sacute;lenia adresu URL docelowego">href</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;a href=&quot;https://www.example.com&quot;&gt;Link do strony&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="u&zdot;ywany w elemencie &quot;img&quot; (obraz) w celu okre&sacute;lenia &zacute;r&oacute;d&lstrok;a obrazu">src</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="używany w różnych elementach w celu określenia klasy CSS, która ma zostać zastosowana">class</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p class=&quot;text-blue&quot;&gt;Tekst niebieski&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="używany do identyfikowania konkretnego elementu HTML">id</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;div id=&quot;header&quot;&gt;Zawarto&sacute;&cacute; nag&lstrok;&oacute;wka&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="używany do określenia stylów CSS bezpośrednio w elemencie HTML">style</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p style=&quot;color: blue;&quot;&gt;Tekst niebieski&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="służy do określenia rozmiaru elementu">width</a></code> oraz
+            <code><a href="#" pro-tip="służy do określenia rozmiaru elementu">height</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;img src=&quot;image.jpg&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="używany do określenia tytułu elementu. Tytuł ten jest pokazywany jako etykieta po najechaniu myszką na element.">title</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;a href=&quot;https://www.example.com&quot; title=&quot;Strona przyk&lstrok;adowa&quot;&gt;Link&lt;/a&gt;
+
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container no-margin-top article tooltip">
+            Atrybut <code><a href="#" pro-tip="używany do określenia języka, w którym jest napisana strona. Jest to przydatne dla przeglądarek, wyszukiwarek i narzędzi dla osób niedosłyszących, ponieważ pozwala im na lepsze rozumienie strony.">lang</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;html lang=&quot;pl&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Jak widzisz, atrybuty HTML pozwalają na różnego rodzaju konfiguracje i personalizacje elementów,
+                co jest bardzo przydatne w tworzeniu różnorodnych stron internetowych.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Lista.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

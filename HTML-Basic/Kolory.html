@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolory HTML</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Czym-jest-HTML.html">Czym jest HTML</a></li>
+            <li><a href="Podstawowy-dokument-HTML.html">Podstawowy dokument HTML</a></li>
+            <li><a href="Paragraf.html">Paragraf</a></li>
+            <li><a href="Tekst-HTML.html">Formatowanie tekstu</a></li>
+            <li><a href="Komentarze.html">Komentarze</a></li>
+            <li><a href="Kolory.html">Kolory</a></li>
+            <li><a href="Atrybuty.html">Atrybuty</a></li>
+            <li><a href="Lista.html">Lista</a></li>
+            <li><a href="Linki.html">Linki</a></li>
+            <li><a href="Obrazy.html">Obrazy</a></li>
+            <li><a href="Tabele.html">Tabele</a></li>
+            <li><a href="Symbole.html">Symbole</a></li>
+            <li><a href="Cytaty.html">Cytaty</a></li>
+            <li><a href="Elementy-blokowe.html">Elementy Blokowe</a></li>
+            <li><a href="KlasyId.html">Klasy oraz Id</a></li>
+            <li><a href="Układ-HTML.html">Układ strony</a></li>
+            <li><a href="Responsywność.html">Responsywaność</a></li>
+            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Kolory W Jezyku HTML</h1>
+                <p>
+                    W języku HTML, kolory mogą być określane za pomocą kodów szesnastkowych (np. #FF0000 dla czerwonego)
+                    lub nazw (np. "red" dla czerwonego). Można je używać w atrybutach HTML, takich jak "style" lub
+                    "bgcolor" do określenia kolorów tekstu, tła itp.
+                </p>
+            </div>
+            <img src="/img/vector141.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top article tooltip">
+            Aby ustawić kolor tła elementu HTML, można użyć atrybutu <code><a href="#" pro-tip="">style</a></code>
+            lub <code><a href="#" pro-tip="">bgcolor</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lth1&gtHello world&lth1&gt
+
+&lt;body style=&quot;background-color: #FFC0CBFF;&quot;&gt;
+
+&lt;body bgcolor=&quot;pink&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container no-margin-topa article tooltip">
+            Aby ustawić kolor tekstu, można użyć atrybutu <code><a href="#" pro-tip="">style</a></code>
+            lub <code><a href="#" pro-tip="">color</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;p style=&quot;color: blue;&quot;&gt;Tekst&lt;/p&gt;
+
+&lt;font color=&quot;green&quot;&gt;Tekst&lt;/font&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="double-elements">
+            <div class="browser pink-container">
+
+                <p style="color: blue;">Tekst niebieski</p>
+
+                <font color="green">Tekst zielony</font>
+            </div>
+            <div class="alert-card">
+                <img src="/img/warning.png" alt="">
+                <b>Uwaga</b>
+                <p>
+                    Jest tez mnóstwo bibliotek i narzędzi do generowania kolorów, takich jak "paleta kolorów" czy
+                    "picker kolorów" które mogą być pomocne przy tworzeniu stron internetowych.
+                </p>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Kolor Ramki</h2>
+        <p class="text-container purple-container article tooltip">
+            Ustawienie koloru ramki przy użyciu atrybutu <code><a href="#" pro-tip="">style</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;h2 style=&quot;border:2px solid Violet;&quot;&gt;Hello World&lt;/h1&gt;
+                </code>
+            </pre>
+        </div>
+        <h2 class="no-margin-top" style="border:2px solid Violet;">Hello World</h2>
+        <div class="big-page-header"></div>
+        <h1>Wartości Kolorów</h1>
+        <div class="section-with-image">
+            <p>
+                W języku HTML i CSS istnieją 4 różne systemy wartości kolorów: RGB (czerwień, zieleń, niebieski),
+                HEX (heksadecymalne), HSL (odcień, nasycenie, jasność) i CMYK (cyjan, magenta, żółty, key).
+                Każdy z nich określa kolor przez różne składniki i jest używany w różnych sytuacjach, np.
+                RGB jest często używany w tworzeniu stron internetowych, podczas gdy CMYK jest używany głównie w druku.
+            </p>
+            <img src="/img/vector140.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Ustawienie koloru tła strony internetowej przy użyciu <code><a href="#" pro-tip="">rgb</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;body style=&quot;background-color: rgb(128, 255, 0);&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser green-container"></div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightPink-container article tooltip">
+            Ustawienie koloru tła strony internetowej przy użyciu <code><a href="#" pro-tip="">hsla</a></code>
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;body style=&quot;background-color: hsla(9, 100%, 64%, 0.6);&quot;&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="browser long-browser hsl-color">
+
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Nazwy Kolorów</h1>
+        <p>
+            W HTML kolor można określić za pomocą nazwy koloru. więcej kolorów znajdziesz tu
+            <button><a href="https://www.w3schools.com/colors/colors_names.asp">W3 schools kolorki</a></button>
+        </p>
+        <div class="double-elements">
+            <div class="browser medium-browser indianred-container">
+                <h2>Indian Red</h2>
+            </div>
+            <div class="browser medium-browser blueviolet-container">
+                <h2>Blue Violet</h2>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="browser darkslategray medium-browser">
+                <h2>Dark Slate Gray</h2>
+            </div>
+            <div class="browser medium-browser aquamarine-container">
+                <h2>Medium Aquamarine</h2>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="browser medium-browser slateblue-container">
+                <h2>Slate Blue</h2>
+            </div>
+            <div class="browser medium-browser coral-container">
+                <h2>Coral</h2>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="browser medium-browser sandybrown-container">
+                <h2>Sandy Brown</h2>
+            </div>
+            <div class="browser medium-browser hotpink-container">
+                <h2>Hot Pink</h2>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Atrybuty.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
