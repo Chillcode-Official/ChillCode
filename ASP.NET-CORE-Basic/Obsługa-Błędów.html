@@ -42,7 +42,7 @@
             <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
             <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
             <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
-            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Wdrażanie-Aplikacji.html">Wdrażanie aplikacji</a></li>
             <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
             <li><a href="Podsumowanie.html">Podsumowanie</a></li>
         </ol>
@@ -100,7 +100,45 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
                 W powyższym przykładzie, w zależności od trybu uruchomienia aplikacji (tryb deweloperski lub produkcyjny), używany jest odpowiedni middleware: UseDeveloperExceptionPage w trybie deweloperskim lub UseExceptionHandler i UseHsts w trybie produkcyjnym. Middleware UseStatusCodePagesWithReExecute umożliwia wyświetlanie komunikatów błędów w przypadku niepowodzenia żądania HTTP.
             </p>
         </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightBrown-container">
+            Dodatkowo, w kontrolerze ErrorController można zaimplementować akcję Index, która będzie obsługiwała wyjątki i wyświetlała komunikaty błędów. Na przykład W tym przypadku, akcja Index obsługuje błędy HTTP, takie jak 404 lub 500, i wyświetla odpowiednie komunikaty błędów na widoku Error.cshtml.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+public class ErrorController : Controller
+{
+    [Route("Error/{statusCode}")]
+    public IActionResult Index(int statusCode)
+    {
+        switch (statusCode)
+        {
+            case 404:
+                ViewBag.ErrorMessage = "Nie znaleziono strony.";
+                break;
+            default:
+                ViewBag.ErrorMessage = "Wystąpił błąd.";
+                break;
+        }
 
+        return View();
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container blue-container">
+            <img src="/img/warning.png" alt="">
+            <b>Ważne</b>
+            <p>
+                Obsługa błędów jest bardzo ważna dla poprawnej pracy aplikacji internetowej, a dzięki wbudowanym middleware'om w ASP.NET Core oraz zaimplementowaniu odpowiedniego kontrolera i widoków, można zapewnić użytkownikom wysoki poziom dostępności i wygodne korzystanie z aplikacji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Stylowanie-Aplikacji.html"><button>Dalej</button></a>
+        </div>
     </div>
 </div>
 </body>

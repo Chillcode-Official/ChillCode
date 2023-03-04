@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>ASP.NET(Testowanie aplikacji)</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -42,19 +42,59 @@
             <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
             <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
             <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
-            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Wdrażanie-Aplikacji.html">Wdrażanie aplikacji</a></li>
             <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
             <li><a href="Podsumowanie.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
-        <h1></h1>
+        <h1>Testowanie Aplikacji</h1>
         <div class="section-with-image">
             <p>
-
+                ASP.NET Core jest frameworkiem do tworzenia aplikacji webowych opartych na platformie .NET Core. W celu zapewnienia jakości i niezawodności aplikacji, ważne jest przetestowanie ich przed wdrożeniem.
             </p>
             <img src="/img/vector12.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list no-margin-top">
+            <p class="text-container lightWhite-container no-margin-top">
+                Istnieją różne podejścia do testowania aplikacji ASP.NET Core, w tym:
+            </p>
+            <div class="page-header"></div>
+            <div class="line"></div>
+            <div class="text-content">
+                <h3>1: Testy jednostkowe (Unit tests)</h3>
+                <p>
+                    Sprawdzają pojedyncze jednostki kodu, takie jak metody lub funkcje. Testy jednostkowe są bardzo ważne, ponieważ pozwalają na wczesne wykrycie błędów w kodzie i zwiększenie jego jakości. Do pisania testów jednostkowych w ASP.NET Core można wykorzystać framework do testowania, takie jak NUnit, MSTest lub xUnit.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h3>2: Testy integracyjne (Integration tests)</h3>
+                <p>
+                    Sprawdzają, czy poszczególne części aplikacji współpracują ze sobą poprawnie. Testy integracyjne są ważne, ponieważ pozwalają na weryfikację, czy aplikacja działa zgodnie z oczekiwaniami, gdy wiele jej części jest ze sobą połączonych. Do pisania testów integracyjnych w ASP.NET Core można wykorzystać narzędzia, takie jak Selenium, czy TestStack.White.
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <h3>3: Testy akceptacyjne (Acceptance tests)</h3>
+                <p>
+                    Sprawdzają, czy aplikacja spełnia wymagania biznesowe i jest gotowa do wdrożenia. Testy akceptacyjne są ważne, ponieważ pozwalają na weryfikację, czy aplikacja działa zgodnie z oczekiwaniami klienta. Do pisania testów akceptacyjnych w ASP.NET Core można wykorzystać narzędzia, takie jak SpecFlow, FitNesse lub Cucumber.
+                </p>
+            </div>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Wszystkie powyższe podejścia do testowania aplikacji ASP.NET Core powinny być stosowane w celu zapewnienia jak najwyższej jakości aplikacji i minimalizacji błędów przed wdrożeniem. W ASP.NET Core frameworku istnieją także mechanizmy do automatycznego testowania aplikacji, takie jak Test Explorer i Test Runner, które pozwalają na łatwe uruchamianie i zarządzanie testami w Visual Studio.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Debugowanie-Aplikacji.html"><button>Dalej</button></a>
         </div>
     </div>
 </div>

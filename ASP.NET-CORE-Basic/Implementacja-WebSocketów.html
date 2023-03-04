@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>ASP.NET(Implementacja-WebSocketów)</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -42,19 +42,159 @@
             <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
             <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
             <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
-            <li><a href="Deployowanie-Aplikacji.html">Deployowanie aplikacji</a></li>
+            <li><a href="Wdrażanie-Aplikacji.html">Wdrażanie aplikacji</a></li>
             <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
             <li><a href="Podsumowanie.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
-        <h1></h1>
+        <h1>Implementajca WebSocketów</h1>
         <div class="section-with-image">
             <p>
-
+                WebSocket to technologia pozwalająca na dwukierunkową komunikację pomiędzy przeglądarką internetową a serwerem, która umożliwia niskopoziomowe przesyłanie danych w czasie rzeczywistym. W przypadku ASP.NET Core, WebSockety można zaimplementować w celu umożliwienia komunikacji pomiędzy przeglądarką a serwerem za pomocą protokołu WebSocket.
             </p>
             <img src="/img/vector12.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list no-margin-top">
+            <p class="text-container lightWhite-container no-margin-top">
+                Aby zaimplementować WebSocket w ASP.NET Core, należy wykonać kilka kroków:
+            </p>
+            <div class="page-header"></div>
+            <div class="line"></div>
+            <div class="text-content">
+                <h3>Krok 1: </h3>
+                <p>
+                    Dodaj obsługę w pliku Startup.cs poprzez wywołanie metody UseWebSockets() na obiekcie IApplicationBuilder.
+                </p>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    // ...
+    app.UseWebSockets();
+    // ...
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="line minus-margin-top"></div>
+            </div>
+            <div class="text-content">
+                <h3>Krok 2: </h3>
+                <p>
+                    Dodaj obsługę WebSocket w kontrolerze. W tym celu utwórz akcję, która będzie obsługiwać połączenia WebSocket i skorzystaj z metody HttpContext.WebSockets.AcceptAsync() do zaakceptowania połączenia.
+                </p>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+[HttpGet("/ws")]
+public async Task WebSocketHandler()
+{
+    var webSocket = await HttpContext.WebSockets.AcceptAsync();
+    // Obsługa połączenia WebSocket.
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="line minus-margin-top"></div>
+            </div>
+            <div class="text-content">
+                <h3>Krok 3: </h3>
+                <p>
+                    W ramach obsługi połączenia WebSocket możesz korzystać z różnych metod WebSocket, takich jak ReceiveAsync(), SendAsync() czy CloseAsync(), aby przesyłać dane pomiędzy klientem a serwerem.
+                </p>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+[HttpGet("/ws")]
+public async Task WebSocketHandler()
+{
+    var webSocket = await HttpContext.WebSockets.AcceptAsync();
+
+    while (webSocket.State == WebSocketState.Open)
+    {
+        var buffer = new ArraySegment&ltbyte&gt(new byte[1024]);
+        var result = await webSocket.ReceiveAsync(buffer, CancellationToken.None);
+
+        if (result.MessageType == WebSocketMessageType.Text)
+        {
+            var message = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, result.Count);
+            var responseMessage = $"You sent {result.Count} bytes: {message}";
+            var responseBuffer = new ArraySegment&ltbyte&gt(Encoding.UTF8.GetBytes(responseMessage));
+            await webSocket.SendAsync(responseBuffer, WebSocketMessageType.Text, true, CancellationToken.None);
+        }
+        else if (result.MessageType == WebSocketMessageType.Close)
+        {
+            await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
+        }
+    }
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="line minus-margin-top"></div>
+            </div>
+            <div class="text-content">
+                <h3>Krok 4: </h3>
+                <p>
+                    Możesz również użyć middleware'ów WebSocket, takich jak MapWebSocketManager&ltT&gt(), który pozwala na prostą obsługę wielu połączeń WebSocket za pomocą jednego menedżera.
+                </p>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    // ...
+    app.UseWebSockets();
+    app.MapWebSocketManager&ltMyWebSocketHandler&gt("/ws");
+    // ...
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="line minus-margin-top"></div>
+                <div class="page-header"></div>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code>
+public class MyWebSocketHandler : WebSocketHandler
+{
+    public MyWebSocketHandler(WebSocketManager webSocketManager) : base(webSocketManager)
+    {
+    }
+
+    public override async Task OnConnectedAsync(WebSocket socket)
+    {
+        await base.OnConnectedAsync(socket);
+        // Obsługa nowego połączenia WebSocket.
+    }
+
+    public override async Task ReceiveAsync(WebSocket socket, WebSocketReceiveResult result, byte[] buffer)
+    {
+        // Obsługa otrzymanej wiadomości.
+    }
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="line minus-margin-top"></div>
+            </div>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Oprócz powyższych kroków, warto pamiętać, żeby korzystać z CancellationToken, aby w odpowiedni sposób obsłużyć przerwanie połączenia oraz zaimplementować obsługę błędów.
+            </p>
+        </div>
+        <p class="text-container lightBrown-container">
+            Dzięki implementacji WebSocketów w ASP.NET Core, aplikacja jest w stanie obsługiwać interaktywną i natychmiastową komunikację z klientem, co może być szczególnie przydatne w aplikacjach wymagających ciągłego przesyłania danych w czasie rzeczywistym, takich jak czaty, gry online czy transmisje wideo na żywo.
+        </p>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Testowanie-Aplikacji.html"><button>Dalej</button></a>
         </div>
     </div>
 </div>
