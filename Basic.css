@@ -1009,6 +1009,47 @@ div.auto{
     color: white;
 }
 
+/* DropDown text elements*/
+
+.drop-text-container.dropdown-content{
+    position: relative;
+    background-color: transparent;
+    width: 900px;
+    height: 300px;
+    z-index: 1;
+}
+.drop-text-container{
+    box-sizing: border-box;
+    padding-top: 10px;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: transparent;
+    width: 850px;
+    height: 300px;
+    z-index: 1;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 
 
 
