@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cplusplus(Tablice)</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -43,14 +43,351 @@
     </div>
 
     <div class="content">
-        <h1></h1>
+        <h1>Tablice</h1>
         <div class="section-with-image">
             <p>
-
+                W C++ tablice to struktury danych, które umożliwiają przechowywanie i manipulowanie kolekcjami wartości tego samego typu. Tablica składa się z określonej liczby elementów, a każdy element ma unikalny indeks, który określa jego położenie w tablicy.
             </p>
             <img src="/img/vector12.png" alt="">
         </div>
+        <p class="text-container no-margin-bottom">
+            Aby zadeklarować tablicę w C++, musisz podać typ danych, który będzie przechowywany w tablicy, nazwę tablicy i liczbę elementów, które ma zawierać tablica. Na przykład:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int tablica[5]; // Deklaracja tablicy typu int o rozmiarze 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możesz także zainicjować tablicę podczas deklaracji, podając początkowe wartości elementów. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int tablica[5] = {1, 2, 3, 4, 5}; // Inicjowanie tablicy typu int o rozmiarze 5
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby uzyskać dostęp do elementów tablicy, musisz użyć indeksu elementu, który chcesz pobrać lub zmodyfikować. Indeksy tablic zaczynają się od zera, więc pierwszy element w tablicy będzie miał indeks 0, drugi - indeks 1, itd. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int drugi_element = tablica[1]; // Przypisanie drugiego elementu tablicy do zmiennej
 
+tablica[2] = 10; // Przypisanie wartości 10 trzeciemu elementowi tablicy
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możesz również iterować po elementach tablicy przy użyciu pętli. Na przykład, poniższy kod wypisuje wszystkie elementy tablicy na standardowe wyjście:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+for(int i = 0; i < 5; i++)
+{
+    cout << tablica[i] << endl;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Rodzaje Tablic</h1>
+        <div class="section-with-image">
+            <div class="text-content highlight-text">
+                 <p>
+                     W C++ istnieją różne rodzaje tablic, które różnią się sposobem ich deklaracji i funkcjonalnością. Poniżej przedstawiam krótkie omówienie kilku rodzajów tablic w C++:
+                 </p>
+                <br>
+                <ul>
+                    <li><i>Tablice jednowymiarowe</i></li>
+                    <br>
+                    <li><i>Tablice wielowymiarowe</i></li>
+                    <br>
+                    <li><i>Tablice dynamiczne</i></li>
+                    <br>
+                    <li><i>Tablice stałowymiarowe</i></li>
+
+                </ul>
+            </div>
+            <img src="/img/vector189.png" alt="">
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice jednowymiarowe</h2>
+        <div class="section-with-image">
+            <p>
+                Tablica jednowymiarowa w C++ to struktura danych, która pozwala na przechowywanie wartości tego samego typu danych w jednym wymiarze. W C++ indeksy tablic zaczynają się od zera, więc pierwszy element ma indeks 0, drugi element ma indeks 1, itd.
+            </p>
+            <img src="/img/vector10.png" alt="">
+        </div>
+        <p class="text-container no-margin-top">
+            Aby utworzyć tablicę jednowymiarową w C++, należy użyć deklaracji, która ma postać:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+typ_danych nazwa_tablicy[rozmiar];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Przykładowa deklaracja tablicy jednowymiarowej przechowującej pięć liczb całkowitych wygląda następująco:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int tablica[5];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy także zainicjować tablicę podczas deklaracji, podając początkowe wartości elementów w nawiasach klamrowych. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int tablica[5] = {1, 2, 3, 4, 5};
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby uzyskać dostęp do elementów tablicy, musimy odwołać się do nich przez indeks. Na przykład, aby przypisać wartość 10 do drugiego elementu tablicy, możemy użyć poniższego kodu:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+tablica[1] = 10;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy również iterować po elementach tablicy za pomocą pętli. Przykładowy kod, który wyświetla wszystkie elementy tablicy, wygląda następująco:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+for (int i = 0; i < 5; i++) {
+  cout << tablica[i] << " ";
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Warto zauważyć, że nie możemy odwołać się do elementu tablicy poza jej granicami, ponieważ spowoduje to błąd wykonania programu. Dlatego ważne jest, aby upewnić się, że indeks elementu, do którego się odwołujemy, mieści się w zakresie 0 do rozmiar-1.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice wielowymiarowe</h2>
+        <div class="section-with-image">
+            <p>
+                Tablice wielowymiarowe to struktury danych, które pozwalają na przechowywanie elementów o różnych typach w więcej niż jednym wymiarze. W C++ tablice wielowymiarowe mogą mieć dowolną liczbę wymiarów, ale najczęściej stosowane są tablice dwuwymiarowe (macierze) lub trójwymiarowe (np. do reprezentowania trójwymiarowych struktur w przestrzeni).
+            </p>
+            <img src="/img/vector10.png" alt="">
+        </div>
+        <p class="text-container no-margin-top">
+            Tablica dwuwymiarowa to tablica, która posiada dwie współrzędne indeksowe (np. wiersz i kolumna). Aby zadeklarować taką tablicę, należy użyć deklaracji:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+typ_danych nazwa_tablicy[liczba_wierszy][liczba_kolumn];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            aby utworzyć tablicę dwuwymiarową przechowującą liczby całkowite o 3 wierszach i 4 kolumnach, należy użyć następującej deklaracji:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int tablica_dwuwymiarowa[3][4];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy także zainicjować tablicę dwuwymiarową podczas deklaracji, podając początkowe wartości elementów w nawiasach klamrowych. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+int tablica_dwuwymiarowa[3][4] = {
+  {1, 2, 3, 4},
+  {5, 6, 7, 8},
+  {9, 10, 11, 12}
+};
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby uzyskać dostęp do elementów tablicy dwuwymiarowej, musimy podać dwa indeksy - pierwszy indeks odnosi się do wiersza, a drugi do kolumny. Na przykład, aby przypisać wartość 10 do elementu znajdującego się w drugim wierszu i trzeciej kolumnie, możemy użyć poniższego kodu:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+tablica_dwuwymiarowa[1][2] = 10;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy również iterować po elementach tablicy dwuwymiarowej za pomocą pętli zagnieżdżonych. Przykładowy kod, który wyświetla wszystkie elementy tablicy, wygląda następująco:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 4; j++) {
+    cout << tablica_dwuwymiarowa[i][j] << " ";
+  }
+  cout << endl;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice dynamiczne</h2>
+        <div class="section-with-image">
+            <p>
+                Tablice dynamiczne to struktury danych, które pozwalają na przechowywanie elementów o różnych typach i dynamiczną alokację pamięci w trakcie działania programu. W odróżnieniu od tablic statycznych, które mają stałą liczbę elementów i rozmiar określony w trakcie kompilacji, tablice dynamiczne pozwalają na tworzenie tablic o zmiennej liczbie elementów i rozmiarze.
+            </p>
+            <img src="/img/vector10.png" alt="">
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Alokacja pamięci dla tablicy dynamicznej w C++ odbywa się za pomocą operatora new, który przydziela odpowiednią ilość pamięci w czasie wykonania programu. Należy zauważyć, że alokacja pamięci musi zostać zwolniona w celu uniknięcia wycieków pamięci. Do tego celu używamy operatora delete.
+            </p>
+        </div>
+        <p class="text-container no-margin-top">
+            Aby zadeklarować tablicę dynamiczną, musimy określić typ danych, który będzie przechowywany w tablicy, oraz jej rozmiar. Deklaracja tablicy dynamicznej wygląda następująco:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+typ_danych *nazwa_tablicy = new typ_danych[rozmiar];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            aby utworzyć tablicę dynamiczną przechowującą 10 liczb całkowitych, możemy użyć następującej deklaracji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int *tablica_dynamiczna = new int[10];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby uzyskać dostęp do elementów tablicy dynamicznej, podajemy indeks elementu w nawiasach kwadratowych po nazwie tablicy. Na przykład, aby przypisać wartość 5 do elementu o indeksie 3, możemy użyć poniższego kodu:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+tablica_dynamiczna[3] = 5;
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy również iterować po elementach tablicy dynamicznej za pomocą pętli. Przykładowy kod, który wyświetla wszystkie elementy tablicy, wygląda następująco:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+for (int i = 0; i < 10; i++) {
+  cout << tablica_dynamiczna[i] << " ";
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby zwolnić zaalokowaną pamięć dla tablicy dynamicznej, musimy użyć operatora delete:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+delete[] tablica_dynamiczna;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Warto zauważyć, że w przypadku tablic dynamicznych, które nie zostały zwolnione, następuje wyciek pamięci, co może prowadzić do problemów z wydajnością i stabilnością programu.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Tablice stałowymiarowe</h2>
+        <div class="section-with-image">
+            <p>
+                Tablice stałowymiarowe to struktury danych, które pozwalają na przechowywanie elementów tego samego typu w jednym lub więcej wymiarach. Rozmiar tablicy stałowymiarowej musi być określony w trakcie kompilacji i nie może być zmieniany w czasie działania programu.
+            </p>
+            <img src="/img/vector10.png" alt="">
+        </div>
+        <p class="text-container no-margin-top">
+            W C++ można zadeklarować tablicę stałowymiarową używając składni:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+typ nazwa_tablicy[rozmiar_1][rozmiar_2]...[rozmiar_n];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Na przykład, aby utworzyć tablicę stałowymiarową przechowującą 3 wiersze i 4 kolumny liczb całkowitych, możemy użyć następującej deklaracji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int tablica[3][4];
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Aby uzyskać dostęp do elementów tablicy stałowymiarowej, musimy użyć indeksów dla każdego wymiaru. Indeksowanie tablicy zaczyna się od 0, więc aby uzyskać dostęp do pierwszego elementu w tablicy, musimy użyć indeksów [0][0].
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+tablica[0][0] = 10;  // przypisanie wartości 10 do pierwszego elementu
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możemy również iterować po elementach tablicy stałowymiarowej za pomocą pętli. Na przykład, aby wyświetlić wszystkie elementy tablicy, możemy użyć zagnieżdżonej pętli for.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+for (int i = 0; i < 3; i++) {
+  for (int j = 0; j < 4; j++) {
+    cout << tablica[i][j] << " ";
+  }
+  cout << endl;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Warto zauważyć, że deklaracja tablicy stałowymiarowej wymaga określenia stałego rozmiaru w czasie kompilacji, co oznacza, że ​​rozmiar tablicy nie może być zmieniany w trakcie działania programu. Tablice stałowymiarowe są bardziej wydajne niż tablice dynamiczne, ponieważ ich rozmiar jest ustalony i znany w trakcie kompilacji, co umożliwia zoptymalizowanie dostępu do pamięci.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Funkcje.html"><button>Dalej</button></a>
+        </div>
     </div>
 </div>
 </body>
