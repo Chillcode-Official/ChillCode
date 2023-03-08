@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cplusplus(Typy-Danych)</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -43,13 +44,176 @@
     </div>
 
     <div class="content">
-        <h1></h1>
+        <h1>Typy Danych</h1>
         <div class="section-with-image">
             <p>
-
+                W C++ typy danych określają rodzaj danych, które mogą być przechowywane w zmiennych. Typ danych określa zakres wartości, jakie mogą być przechowywane w zmiennej, jakie operacje można wykonywać na zmiennej i jak wiele pamięci jest potrzebne do przechowywania wartości zmiennej.
             </p>
             <img src="/img/vector12.png" alt="">
         </div>
+        <div class="text-container lightWhite-container black-list no-margin-top">
+            <div class="text-content">
+                <h3>Przykłady użycia różnych typów danych w C++:</h3>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="dropdown">
+                <button class="drop-text-container" onclick="toggleDropdown(this)">(Całkowite)</button>
+                <div class="dropdown-content">
+                    <div class="double-elements">
+                        <p>
+                            Przechowują wartości całkowite, takie jak -3, 0, 100 itp. W C++ są dostępne różne typy całkowite, w tym: int, short, long, long long.
+                        </p>
+                        <div class="code-block code-block-margin-top">
+                            <pre>
+                                <code>
+int liczba = 10;
+int wynik = liczba + 5;
+cout << "Wynik: " << wynik << endl;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="page-header"></div>
+            <div class="dropdown">
+                <button class="drop-text-container" onclick="toggleDropdown(this)">(Zmiennoprzecinkowe)</button>
+                <div class="dropdown-content">
+                    <div class="double-elements">
+                        <p>
+                            Przechowują liczby zmiennoprzecinkowe, takie jak 3,14 lub 2,71828. W C++ dostępne są dwa typy zmiennoprzecinkowe: float (32 bity) i double (64 bity).
+                        </p>
+                        <div class="code-block code-block-margin-top">
+                            <pre>
+                                <code>
+float n = 3.14;
+double m = 2.71828;
+double wynik = n * m;
+cout << "Wynik: " << wynik << endl;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="page-header"></div>
+            <div class="dropdown">
+                <button class="drop-text-container" onclick="toggleDropdown(this)">(Znakowe)</button>
+                <div class="dropdown-content">
+                    <div class="double-elements">
+                        <p>
+                            Przechowuje pojedynczy znak, takie jak 'a' lub '7'. Typ char przechowuje wartości całkowite z zakresu -128 do 127 lub 0 do 255, w zależności od tego, czy jest to typ char ze znakiem, czy bez znaku.
+                        </p>
+                        <div class="code-block code-block-margin-top">
+                            <pre>
+                                <code>
+char litera = 'a';
+
+cout << "Litera: " << litera << endl;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="page-header"></div>
+            <div class="dropdown">
+                <button class="drop-text-container" onclick="toggleDropdown(this)">(Logiczne)</button>
+                <div class="dropdown-content">
+                    <div class="double-elements">
+                        <p>
+                            Przechowuje wartości logiczne true (prawda) lub false (fałsz). Typ bool jest często używany w instrukcjach warunkowych i pętlach.
+                        </p>
+                        <div class="code-block code-block-margin-top">
+                            <pre>
+                                <code>
+bool prawda = true;
+
+if (prawda) {
+    cout << "Prawda!" << endl;
+}
+else {
+    cout << "Fałsz!" << endl;
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="page-header"></div>
+            <div class="dropdown">
+                <button class="drop-text-container" onclick="toggleDropdown(this)">(Wyliczeniowe)</button>
+                <div class="dropdown-content">
+                    <div class="double-elements">
+                        <p>
+                            Przechowuje wartości zdefiniowane przez programistę. Typ wyliczeniowy jest przydatny w przypadku, gdy chcemy użyć nazwy zamiast liczby.
+                        </p>
+                        <div class="code-block code-block-margin-top">
+                            <pre>
+                                <code>
+enum Kierunki {GORA, DOL, LEWO, PRAWO};
+Kierunki kierunek = GORA;
+
+if (kierunek == GORA){
+    cout << "Kierunek: Góra" << endl;
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="code-block">
+            <pre>
+                <code>
+#include &ltiostream&gt
+
+int main() {
+
+    short n = 5;      //liczba całkowita o małej pojemności
+
+    int n = 10;       //liczba całkowita o średniej pojemności
+
+    long n = 100;     //liczba całkowita o wysokiej pojemności
+
+    long long n = 100;     //liczba całkowita o największej pojemności
+
+    float = 2,13;      //liczba zmiennoprzecinkowa z pojedynczą precyzją,
+
+    double = 2,71828;    //liczba zmiennoprzecinkowa z podwójną precyzją.
+
+    char znak = 'Z';   //służy do przechowywania pojedynczych znaków
+
+    bool prawda = true;   //typ logiczny prawda lub fałsz
+
+
+return 0;
+
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Oprócz tego, istnieją również biblioteki standardowe C++, takie jak string, array, vector, itp., które zawierają wiele innych typów danych i struktur danych. Każdy typ danych ma swoje ograniczenia i należy
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Operatory.html"><button>Dalej</button></a>
+        </div>
+
 
     </div>
 </div>

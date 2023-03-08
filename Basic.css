@@ -45,6 +45,9 @@ code{
 .white-list table td{
     color: white;
 }
+.white-list p{
+    color: white;
+}
 .black-list ul li{
     color: #131313;
 }
