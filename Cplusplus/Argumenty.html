@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cplusplus(Argumenty)</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -43,14 +43,191 @@
     </div>
 
     <div class="content">
-        <h1></h1>
+        <h1>Argumenty</h1>
         <div class="section-with-image">
             <p>
-
+                W języku C++, argumenty to wartości przekazywane do funkcji podczas jej wywołania. Funkcja może przyjmować jeden lub więcej argumentów, które określają informacje, na podstawie których funkcja będzie działać.
             </p>
             <img src="/img/vector12.png" alt="">
         </div>
+        <p class="text-container no-margin-top">
+            Przykładowo, jeśli mamy funkcję dodawania dwóch liczb:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int dodaj(int a, int b) {
+    return a + b;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Funkcja ta przyjmuje dwa argumenty typu int o nazwach a i b. Gdy funkcja jest wywoływana, wartości przekazywane jako argumenty zostaną przypisane do zmiennych a i b. Na przykład, jeśli wywołujemy tę funkcję w ten sposób:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int wynik = dodaj(3, 5);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Zmienna wynik będzie miała wartość 8, ponieważ funkcja dodaj zostanie wywołana z argumentami 3 i 5, a następnie zwróci ich sumę.
+        </p>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Argumenty mogą mieć różne typy, w zależności od potrzeb funkcji. Funkcja może również przyjmować argumenty opcjonalne, które nie muszą być przekazywane podczas wywoływania funkcji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Przykłady użycia Argumentów</h1>
+        <div class="section-with-image">
+            <p>
+                Możliwe jest przekazywanie argumentów przez wartość lub przez referencję. Gdy argument jest przekazywany przez wartość, funkcja tworzy kopię wartości argumentu. Gdy argument jest przekazywany przez referencję, funkcja otrzymuje bezpośredni dostęp do zmiennej argumentu i może ją zmodyfikować. Aby przekazać argument przez referencję, należy użyć operatora &. Na przykład:
+            </p>
+            <img src="/img/vector10.png" alt="">
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+void zwieksz(int& x) {
+    x++;
+}
 
+int main() {
+    int a = 5;
+    zwieksz(a);
+    cout << a << endl; // wypisze "6"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Można przekazywać tablice jako argumenty funkcji. W języku C++ tablice są przekazywane przez referencję, więc funkcja otrzymuje bezpośredni dostęp do elementów tablicy. Na przykład:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+void wypisz(int tab[], int rozmiar) {
+    for (int i = 0; i < rozmiar; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int tablica[] = {1, 2, 3, 4, 5};
+    wypisz(tablica, 5); // wypisze "1 2 3 4 5"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Funkcje mogą mieć wiele argumentów. Przykładowo, funkcja sqrt z biblioteki matematycznej przyjmuje jeden argument typu double i zwraca pierwiastek kwadratowy tej wartości. Funkcja pow przyjmuje dwa argumenty typu double i zwraca pierwszy argument podniesiony do potęgi drugiego argumentu. Oto przykład użycia tych funkcji:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+#include &ltcmath&gt
+#include &ltiostream&gt
+
+using namespace std;
+
+int main() {
+    double x = 16.0;
+    double y = 2.0;
+    double pierwiastek = sqrt(x);
+    double potega = pow(x, y);
+    cout << "Pierwiastek kwadratowy z " << x << " to " << pierwiastek << endl;
+    cout << x << " do potęgi " << y << " to " << potega << endl;
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Argumenty można domyślnie inicjować, co pozwala na wywołanie funkcji bez podawania wartości tych argumentów. Argumenty domyślne muszą być zdefiniowane w prototypie funkcji. Na przykład:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+void wypisz_wiadomosc(string imie = "świecie") {
+    cout << "Witaj, " << imie << "!" << endl;
+}
+
+int main() {
+    wypisz_wiadomosc(); // wypisze "Witaj, świecie!"
+    wypisz_wiadomosc("Jan"); // wypisze "Witaj, Jan!"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Argumenty można również przekazywać jako wartości domyślne. W takim przypadku funkcja korzysta z wartości domyślnych, jeśli argumenty nie zostały przekazane podczas wywoływania funkcji. Na przykład:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+void podziel(int x = 10, int y = 2) {
+    cout << x / y << endl;
+}
+
+int main() {
+    podziel(); // wypisze "5"
+    podziel(20); // wypisze "10"
+    podziel(20, 4); // wypisze "5"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container">
+            Możliwe jest przekazywanie argumentów z użyciem operatora .... W ten sposób można przekazać dowolną liczbę argumentów o różnych typach. Funkcja musi mieć określoną liczbę argumentów wymaganych, ale może również przyjąć argumenty opcjonalne. Mechanizm ten jest nazywany "argumentami zmiennych". Na przykład:
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+#include &ltiostream&gt
+#include &ltcstdarg&gt
+
+using namespace std;
+
+int suma(int liczba_argumentow, ...) {
+    int suma = 0;
+    va_list argumenty;
+    va_start(argumenty, liczba_argumentow);
+    for (int i = 0; i < liczba_argumentow; i++) {
+        suma += va_arg(argumenty, int);
+    }
+    va_end(argumenty);
+    return suma;
+}
+
+int main() {
+    int wynik = suma(4, 1, 2, 3, 4);
+    cout << wynik << endl; // wypisze "10"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                To tylko kilka przykładów na temat argumentów w języku C++. W C++ istnieje wiele sposobów przekazywania argumentów do funkcji, co pozwala na bardziej elastyczne i efektywne programowanie.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Wartości-Zwracane.html"><button>Dalej</button></a>
+        </div>
     </div>
 </div>
 </body>
