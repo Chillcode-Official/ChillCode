@@ -1,0 +1,75 @@
+
+/* alert card elements*/
+.alert-card{
+    width: 500px;
+    border-radius: 10px;
+    padding: 3px 20px;
+    box-sizing: border-box;
+    background-position: center;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 25px;
+    background-color: #3b2e57;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+.alert-card p{
+    margin-top: 15px;
+}
+.alert-card b{
+    text-align: left;
+    position: relative;
+    font-size: 24px;
+    color: #edd7fb;
+    bottom: 15px;
+}
+.alert-card img{
+    margin-top: 14px;
+}
+.alert-card code{
+    background-color: #1e1e1e;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding: 4px 7px 4px;
+    line-height: 160%;
+    margin: 3px;
+    border-radius: 5px;
+}
+.alert-card.alert-card-red{
+    background-color: #733232;
+}
+.alert-card.alert-card-red b{
+    color: #f3c2c2;
+}
+.alert-card.alert-card-blue{
+    background-color: #26375e;
+}
+.alert-card.alert-card-blue b{
+    color: #f3c2c2;
+}
+.alert-card.alert-card-gray{
+    background-color: #29343a;
+}
+.alert-card.alert-card-gray b{
+    color: #ecdada;
+}
+.alert-card1{
+    width: 540px;
+}
+.alert-card2{
+    width: 850px;
+}
+.alert-card3{
+    width: 900px;
+}
+.alert-card.alert-card-medium{
+    width: 430px;
+}
+.alert-card.alert-card-no-margin-top{
+    margin-top: 0;
+}
+.alert-card.alert-margin-bottom {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,30 @@
+
+/* Article contents (spis treści)*/
+.contents{
+    width: 340px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #131313;
+    border: 1px solid black;
+}
+.contents ul li{
+    list-style: square;
+    padding-top: 6px;
+}
+.contents a{
+    color: #7d3ac4;
+    text-decoration: none;
+    text-underline: none;
+}
+.contents span {
+    box-sizing: border-box;
+    position: static;
+    background-color: #19191a;
+    width: 100%;
+}
+.contents p{
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px;
+}

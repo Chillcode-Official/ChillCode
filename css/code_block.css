@@ -1,0 +1,40 @@
+
+/*Code-Block elements*/
+.code-block pre code {
+    font-size: 14px;
+    border: 3px solid #0e0d0d;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+}
+.code-block pre{
+    margin: 0;
+}
+.code-block.code-block-medium{
+    width: 430px;
+}
+.code-block.code-block-margin-top{
+    margin-top: -20px;
+}
+
+/* <code></code> and article elements */
+.article code {
+    background-color: #1e1e1e;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding: 4px 7px 4px;
+    line-height: 160%;
+    margin: 3px;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+}
+.article.tooltip-nowrap{
+    white-space: nowrap;
+}
+.article p{
+    word-wrap: break-word;
+    line-height: 50px;
+}
+.article li{
+    line-height: 40px;
+}

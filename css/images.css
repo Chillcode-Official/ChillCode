@@ -1,0 +1,25 @@
+/*Image Galery Elements*/
+.image {
+    display: inline-block;
+    width: 32.33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+
+/* Icon images elements */
+
+.icon-img-big{
+    width: 70px;
+    margin-bottom: -20px;
+}
+.icon-img-small{
+    width: 50px;
+    margin-bottom: -10px;
+}

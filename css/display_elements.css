@@ -1,0 +1,32 @@
+
+/*Display Elements*/
+.child{
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: #fff;
+    border: 1px solid #c7b8b8;
+    color: black;
+    box-sizing: border-box;
+}
+.block-element {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 8px;
+    background-color: lightblue;
+}
+.block-element.inline-element{
+    display: inline;
+}
+.block-element.inline-block-element{
+    display: inline-block;
+}
+.block-element.flex-element{
+    display: flex;
+}
+.visible{
+    visibility: visible;
+}
+.hidden{
+    visibility: hidden;
+}

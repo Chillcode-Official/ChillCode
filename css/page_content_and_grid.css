@@ -1,0 +1,72 @@
+/* Page content and Grid */
+.page-content{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-areas: 'top-menu top-menu' 'left-menu content';
+    grid-template-columns: 300px 900px;
+    gap: 20px 150px;
+}
+
+/* Main text Article */
+.content{
+    grid-area: content;
+    padding-top: 80px;
+}
+
+/*Double Elements*/
+.double-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+/*Triple Elements*/
+.triple-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+/*Quadruple elements*/
+.quadruple-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/*section with image elements*/
+.section-with-image {
+    display: grid;
+    grid-template-columns: 500px auto;
+    gap: 40px;
+}
+
+.section-with-image.small-gap {
+    gap: 20px;
+}
+
+.section-with-image .image-higher{
+    margin-top: -25px;
+}
+.section-with-image .image-right{
+    float: right;
+}
+.section-with-image .image-bottom {
+    align-self: end;
+}
+.section-with-image ol{
+    color: #b46969;
+}
+.section-with-image ul li{
+    color: #b46969;
+}
+.section-with-image li p{
+    color: #c2cece;
+    margin: 0;
+    line-height: 2em;
+}
+
+.selection-p p::selection{
+    background-color: #d48852;
+    color: white;
+}
