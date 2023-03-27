@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap {Komponenty}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+            <li><a href="Class.html">Klasa</a></li>
+            <li><a href="Text_styles.html">Style tekstowe</a></li>
+            <li><a href="Components.html">Komponenty</a></li>
+            <li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+            <li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Komponenty</h1>
+                <p>
+                    Bootstrap 5 to framework front-endowy, który oferuje wiele gotowych komponentów, które można wykorzystać do tworzenia responsywnych i atrakcyjnych stron internetowych. Komponenty w Bootstrap 5 to gotowe elementy interfejsu użytkownika, takie jak menu nawigacyjne, przyciski, formularze, karty produktów, okna modalne, sliderów i wiele więcej.
+                </p>
+            </div>
+            <img src="/img/vector153.png" alt="">
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <div>
+                <h2><img class="icon-img-small"  src="/img/icon_button.png" alt=""> Button</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie przycisków, które można dostosować pod kątem rozmiaru, koloru i stylu.">Button</a></code> - przycisk
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;button type=&quot;button&quot;
+class=&quot;btn btn-primary&quot;&gt;Przycisk&lt;/button&gt;
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-clear">
+                            <button type="button" class="my-button">Przycisk</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2><img class="icon-img-small"  src="/img/icon_spinner.png" alt=""> Spinner</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie animowanych ikon ładowania.">Spinner</a></code> - wskaźnik ładowania
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;visually-hidden&quot;&gt;&Lstrok;adowanie...&lt;/span&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            Ładowanie...
+                            <div class="my-spinner" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <div>
+                <h2><img class="icon-img-small" src="/img/icon_navbar(2).png" alt=""> Navbar</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie nawigacji na stronie. Można dostosować kolor, logo i przyciski nawigacyjne.">Navbar</a></code> - nawigacja strony internetowej
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Moja strona&lt;/a&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+      &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+      &lt;ul class=&quot;navbar-nav&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Strona g&lstrok;&oacute;wna&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;O nas&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Kontakt&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Moja strona</a>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Strona główna</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">O nas</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Kontakt</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2><img class="icon-img-small"  src="/img/icon_carousel.png" alt=""> Carousel</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie sliderów, na których można umieszczać zdjęcia i tekst.">Carousel</a></code> - slajder obrazów
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;div id=&quot;carouselExampleControls&quot; class=&quot;carousel slide&quot; data-bs-ride=&quot;carousel&quot;&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
+      &lt;img src=&quot;obraz1.jpg&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
+      &lt;img src=&quot;obraz2.jpg&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
+      &lt;img src=&quot;obraz3.jpg&quot; class=&quot;d-block w-100&quot; alt=&quot;...&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleControls&quot;  data-bs-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleControls&quot;  data-bs-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/img/winter.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <div>
+                <h2><img class="icon-img-small"  src="/img/icon_card.png" alt=""> Card</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie kontenerów z informacjami, takimi jak zdjęcia, tytuły, opisy i przyciski.">Card</a></code> - karta z informacjami
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;div class=&quot;card&quot; style=&quot;width: 18rem;&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h5 class=&quot;card-title&quot;&gt;Tytu&lstrok; karty&lt;/h5&gt;
+    &lt;p class=&quot;card-text&quot;&gt;Tre&sacute;&cacute; karty&lt;/p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Przycisk&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-white-link">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tytuł karty</h5>
+                                    <p class="card-text">Treść karty</p>
+                                    <a href="#" class="btn2">Przycisk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2><img class="icon-img-small"  src="/img/icon_dropDown.png" alt=""> Dropdown</h2>
+                <p class="text-container red-container article tooltip">
+                    <code><a href="#" pro-tip="komponent, który umożliwia tworzenie rozwijanych menu, które można dostosować pod kątem koloru i stylu.">Dropdown</a></code> - rozwijane menu
+                </p>
+                <div class="code-block code-block-medium code-block-margin-top">
+                    <pre>
+                        <code>
+&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;btn btn-secondary dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenuButton&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+    Wybierz opcj&eogon;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuButton&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Opcja 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Opcja 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Opcja 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-clear output-content">
+                            <div class="dropdown list-none">
+                                <button class="dropdown-toggle" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                                    Wybierz opcję
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a href="#">Opcja 1</a></li>
+                                    <li><a href="#">Opcja 2</a></li>
+                                    <li><a href="#">Opcja 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Oczywiście, powyższe to tylko niektóre z wielu komponentów dostępnych w Bootstrap 5. Framework ten oferuje wiele innych funkcjonalności, które można wykorzystać do tworzenia zaawansowanych i interaktywnych stron internetowych.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Responsive_design_principles.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

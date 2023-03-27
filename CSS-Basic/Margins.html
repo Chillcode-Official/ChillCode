@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS {Margins}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Marginesy</h1>
+        <div class="section-with-image highlight-container">
+            <p>
+                Marginesy to przestrzenie wokół elementów na stronie internetowej, które oddzielają je od innych
+                elementów i pozwalają na lepsze formatowanie strony. Można je ustawić za pomocą CSS, używając
+                właściwości <span>margin-top</span>, <span>margin-bottom</span>, <span>margin-left</span> i <span>margin-right</span>. Wartość marginesów
+                może być ustawiona w jednostkach pikseli, procentach, punktach, milimetrach itp.
+            </p>
+            <img src="/img/vector34.png" alt="">
+        </div>
+        <div class="double-elements">
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="określa odległość elementu od górnej krawędzi innego elementu.">Margin-top</a></code> odległość od górnej krawędzi</p>
+            <p class="text-container lightWhite-container color-text-black article tooltip"><code><a href="#" pro-tip="określa odległość elementu od prawej krawędzi innego elementu. ">Margin-right</a></code> odległość od prawej</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+.element {
+  margin-top: 30px;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+.element {
+  margin-right: 10%;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div style="border-width:1px;border-style:solid;border-color:#ff00ff;margin-top:20px;padding:5px;color: #d3cec0">
+            Ten element ma margines top 30px.
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <p class="text-container lightWhite-container color-text-black article tooltip"><code><a href="#" pro-tip="określa odległość elementu od dolnej krawędzi innego elementu.">Margin-bottom</a></code> odległość od dolnej</p>
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="określa odległość elementu od lewej krawędzi innego elementu.">Margin-left</a></code> odległość od lewej krawędzi</p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+.element {
+  margin-bottom: 30px;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+.element {
+  margin-left: 80px;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div style="border-width:1px;border-style:solid;border-color:#d48852;margin-left:80px;padding:5px;color: #d3cec0">
+            Ten element ma margines left 80px.
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <div class="text-content">
+                <p class="text-container purple-container no-margin-top article tooltip">
+                    <code><a href="#" pro-tip="Właściwość, która pozwala na ustawienie marginesów elementu. Marginesy to odstępy pomiędzy elementem a innymi elementami na stronie. Właściwość margin może być stosowana do wszystkich elementów HTML.">Margin</a></code>
+                    jest to skrócona wersja wszystkich właściwości marginesów.
+                </p>
+                <p class="text-container purple-container">
+                    Można też ustawić jedną wartość dla wszystkich marginesów wtedy
+                    wszystkie marginesy będą miały tę samą wartość
+                </p>
+            </div>
+            <div class="code-block">
+            <pre>
+                <code>
+.element {
+  margin: 10px 20px 30px 40px;
+}
+
+-------------------------------------------------
+
+.element {
+  margin: 10px;
+}
+
+                </code>
+            </pre>
+            </div>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Marginesy w CSS są jednym z najważniejszych elementów projektowania stron internetowych.
+                Dają one projektantom kontrolę nad tym, jak elementy na stronie będą wyglądać i jak będą ze sobą współdziałać.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Padding.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

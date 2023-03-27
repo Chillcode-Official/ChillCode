@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS {Comments}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Komentarze</h1>
+        <div class="section-with-image highlight-text">
+            <p>
+                W CSS komentarze są dodawane za pomocą symboli <code>/*</code> oraz <code>*/</code>. Wszystko, co znajduje się pomiędzy
+                tymi symbolami, jest uważane za komentarz i jest ignorowane przez przeglądarkę. Służą one do
+                dodawania notatek i opisów do kodu, aby ułatwić jego czytanie i zrozumienie.
+            </p>
+            <img src="/img/vector3.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top article tooltip">
+            Przykłady użycia wszystkich komentarzy w CSS:
+            <code><a href="#" pro-tip="służą do komentowania bloków kodu CSS i są zapisywane między znacznikami /* a */. Komentarze blokowe mogą zajmować wiele linii, ale nie mogą być zagnieżdżone w innych komentarzach.">Blokowe</a></code>
+            <code><a href="#" pro-tip="służą do komentowania pojedynczych linii kodu CSS i są zapisywane między znakami // a końcem linii. Komentarze liniowe nie mogą zajmować więcej niż jednej linii.">Liniowe</a></code>
+            <code><a href="#" pro-tip="służą do ukrywania fragmentów kodu CSS, które nie są używane, ale są potrzebne do celów dokumentacyjnych lub do późniejszego wykorzystania. Komentarze ukryte są zapisywane między znacznikami /*# a */ i nie są wyświetlane w przeglądarce internetowej.">ukryte</a></code>
+        </p>
+        <div class="big-page-header"></div>
+        <code><img class="icon-img-small" src="/img/icon_komentarz_blokowy.png" alt=""> Komentarz blokowy</code>
+        <div class="code-block">
+            <pre>
+                <code>
+/* To jest komentarz blokowy może zawierać kilka linii */
+
+p {
+
+  color: red;   /* To jest komentarz blokowy w sekcji stylów */
+
+}
+                </code>
+            </pre>
+        </div>
+        <code><img style="width: 50px; margin-bottom: -18px" src="/img/icon_komentarzLiniowy.png" alt=""> Komentarz liniowy</code>
+        <div class="code-block">
+            <pre>
+                <code>
+p {
+
+  color: red; // To jest komentarz liniowy
+
+}
+                </code>
+            </pre>
+        </div>
+        <code><img class="icon-img-small" src="/img/icon_komentarzUkryty.png" alt=""> Komentarz ukryty</code>
+        <div class="code-block">
+            <pre>
+                <code>
+p {
+
+  /* color: blue; */ /* To jest komentarz, który ukrywa kod */
+
+  color: red;
+
+}
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+
+            <p>
+                Pamiętaj, że komentarze służą do dodawania notatek i opisów do kodu, aby ułatwić jego czytanie i zrozumienie, 
+                a także do debugowania kodu. Dlatego ważne jest, aby korzystać z komentarzy w sposób umiejętny i zachować jasność 
+                i czytelność kodu.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Colors.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

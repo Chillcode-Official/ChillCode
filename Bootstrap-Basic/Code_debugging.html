@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap {Debugowanie kodu}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+            <li><a href="Class.html">Klasa</a></li>
+            <li><a href="Text_styles.html">Style tekstowe</a></li>
+            <li><a href="Components.html">Komponenty</a></li>
+            <li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+            <li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Debugowanie Kodu</h1>
+                <p>
+                    Bootstrap 5 to popularny framework CSS, który jest używany do tworzenia responsywnych stron internetowych. Debugowanie kodu w Bootstrap 5 polega na zlokalizowaniu i naprawieniu błędów w kodzie, które mogą prowadzić do nieprawidłowego działania strony.
+                </p>
+            </div>
+            <img src="/img/vector151.png" alt="">
+        </div>
+        <p class="text-container lightOrange-container no-margin-top">
+            Oto kilka sposobów na debugowanie kodu
+        </p>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_chrome.png" alt=""> Przeglądarka</h2>
+        <p class="text-container red-container no-margin-top">
+            Przeglądarka oferuje narzędzia deweloperskie, które pozwalają na debugowanie kodu CSS i JavaScript. Możesz wykorzystać narzędzia takie jak "Inspect Element" lub "Developer Tools" w przeglądarce, aby zidentyfikować błędy w kodzie.
+        </p>
+        <div class="alert-card alert-card3 alert-card-gray white-list">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <ol>
+                <li>Otwórz stronę internetową, na której występuje problem.</li>
+                <br>
+                <li>Kliknij prawym przyciskiem myszy na element, który chcesz sprawdzić, a następnie wybierz "Inspect Element".</li>
+                <br>
+                <li>Przeglądaj kod HTML, CSS i JavaScript w inspektorze elementów, aby zidentyfikować problemy i testować różne zmiany na żywo.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_js-file.png" alt=""> Konsola JavaScript</h2>
+        <p class="text-container light-container color-text-gray ">
+            Bootstrap 5 wykorzystuje wiele funkcji JavaScript, które mogą prowadzić do błędów. Możesz użyć konsoli JavaScript, aby zidentyfikować błędy w kodzie i zobaczyć, jakie funkcje są wywoływane.
+        </p>
+        <div class="alert-card alert-card3 alert-card-gray white-list">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <ol>
+                <li>Otwórz stronę internetową, na której występuje problem.</li>
+                <br>
+                <li>Kliknij prawym przyciskiem myszy na stronie i wybierz "Inspect Element".</li>
+                <br>
+                <li>Przejdź do zakładki "Console".</li>
+                <br>
+                <li>Zidentyfikuj błędy w kodzie JavaScript i przetestuj różne funkcje i metody, aby znaleźć rozwiązanie problemu.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_testing.png" alt=""> Testy jednostkowe</h2>
+        <p class="text-container red-container">
+            Testowanie jednostkowe to proces sprawdzania, czy pojedyncze elementy kodu działają zgodnie z oczekiwaniami. Możesz napisać testy jednostkowe dla kodu Bootstrap 5, aby upewnić się, że wszystko działa poprawnie. Na przykład przy użyciu oprogramowania "Jasmine"
+        </p>
+        <div class="alert-card alert-card3 alert-card-gray white-list">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <ol>
+                <li>Zainstaluj "Jasmine" w swoim projekcie Bootstrap 5.</li>
+                <br>
+                <li>Napisz testy jednostkowe dla różnych funkcji JavaScript.</li>
+                <br>
+                <li>Uruchom testy, aby upewnić się, że funkcje działają zgodnie z oczekiwaniami.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_plugin(3).png" alt=""> Wtyczki do przeglądarki</h2>
+        <p class="text-container light-container color-text-gray">
+            Istnieją różne wtyczki dostępne dla popularnych przeglądarek internetowych, takich jak Chrome i Firefox, które ułatwiają debugowanie kodu. Na przykład, wtyczka "CSS Peeper" pozwala na łatwe przeglądanie stylów CSS na stronie internetowej.
+        </p>
+        <div class="alert-card alert-card3 alert-card-gray white-list">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <ol>
+                <li>Zainstaluj wtyczkę "CSS Peeper" w przeglądarce internetowej.</li>
+                <br>
+                <li>Otwórz stronę internetową, na której chcesz użyć wtyczki.</li>
+                <br>
+                <li>Kliknij ikonę "CSS Peeper" w pasku narzędzi przeglądarki.</li>
+                <br>
+                <li>Wybierz element, którego chcesz sprawdzić, aby zobaczyć jego styl CSS.</li>
+            </ol>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_developTools.png" alt=""> Narzędzia do kontroli wersji</h2>
+        <p class="text-container red-container">
+            Jeśli korzystasz z systemu kontroli wersji, takiego jak Git, możesz łatwo przeglądać historię zmian w kodzie Bootstrap 5 i zidentyfikować, które zmiany wprowadziły błędy.
+        </p>
+        <div class="alert-card alert-card3 alert-card-gray white-list">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <ol>
+                <li>Zainstaluj system kontroli wersji "Git" w swoim projekcie Bootstrap 5.</li>
+                <br>
+                <li>Użyj poleceń "git log" i "git diff" do przeglądania historii zmian w kodzie.</li>
+                <br>
+                <li>Zidentyfikuj zmiany, które mogą być przyczyną problemów, i wykonaj odpowiednie kroki, aby je naprawić.</li>
+            </ol>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Te narzędzia i metody mogą pomóc w debugowaniu kodu w Bootstrap 5 i upewnieniu się, że Twoja strona internetowa działa zgodnie z oczekiwaniami.
+            </p>
+        </div>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b> Ważne</b>
+            <div class="line"></div>
+            <p>
+                Najważniejsze jest, aby dokładnie przejrzeć kod i zidentyfikować, gdzie znajdują się błędy, a następnie podjąć odpowiednie kroki, aby je naprawić.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Summary.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

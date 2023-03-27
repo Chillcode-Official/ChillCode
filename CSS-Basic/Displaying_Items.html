@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS {Displaying items}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Wyświetlanie Elementów CSS</h1>
+        <div class="section-with-image highlight-container">
+            <p>
+                Display jest jedną z najważniejszych właściwości w CSS, ponieważ kontroluje sposób, w jaki
+                elementy HTML są wyświetlane na stronie. Wartości "<span>display</span>" pozwalają na precyzyjne kontrolowanie układu elementów na stronie.
+            </p>
+            <img src="/img/vector58.png" alt="">
+        </div>
+        <p class="text-container white-container no-margin-top article tooltip">
+            Właściwość
+            <code><a href="#" pro-tip="Ustawia element na tryb blokowy, co oznacza, że element wypełni całą dostępną przestrzeń poziomo i będzie wyświetlany w następnej linii. ">block</a></code>
+            Ustawienie bloku na stronie:
+        </p>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-medium code-block-margin-top">
+                <pre>
+                    <code class="language-xml">
+&lt;div style="display: block;"&gt;
+
+      &lt;h1&gt;Tytu&lstrok;&lt;/h1&gt;
+      &lt;p&gt;To jest przyk&lstrok;adowy tekst.&lt;/p&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output">
+                            <div style="margin: 10px; padding: 20px; border: 1px solid #000;">
+
+                                <h1>Tytuł</h1>
+                                <p>To jest przykładowy tekst.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-medium code-block-margin-top">
+                <pre>
+                    <code>
+div {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #000;
+}
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container gray-container no-margin-top article tooltip">
+            Właściwość
+            <code><a href="#" pro-tip="Ustawia element na tryb liniowy, co oznacza, że element będzie wyświetlany w tej samej linii co inne elementy typu inline lub tekst.">inline</a></code>
+            Ustawienie elementu jako inline:
+        </p>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code class="language-xml">
+
+&lt;p&gt;To &lt;span&gt;tekst&lt;/span&gt; z elementem inline.&lt;/p&gt;
+
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output">
+                            <p>To <span style="display: inline">tekst</span> z elementem inline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+span {
+  display: inline;
+}
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container white-container no-margin-top article tooltip">
+            Właściwość
+            <code><a href="#" pro-tip="Łączy cechy elementów inline i block. Element ten może mieć ustawiony margines, padding oraz szerokość i wysokość, ale zachowuje się jak element inline.">inline-block</a></code>
+            Ustawienie elementu jako inline-block:
+        </p>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+&lt;div&gt;
+  &lt;button&gt;Przycisk 1&lt;/button&gt;
+  &lt;button&gt;Przycisk 2&lt;/button&gt;
+  &lt;button&gt;Przycisk 3&lt;/button&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output">
+                            <div style="display: inline-block; margin: 10px; padding: 10px;">
+                                <button>Przycisk 1</button>
+                                <button>Przycisk 2</button>
+                                <button>Przycisk 3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-medium code-block-margin-top">
+                <pre>
+                    <code>
+button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container gray-container no-margin-top article tooltip">
+            Właściwość
+            <code><a href="#" pro-tip="Ustawia element na tryb elastycznego kontenera, który pozwala na łatwe zarządzanie układem elementów wewnątrz.">flex</a></code>
+            Ustawienie elementu jako kontenera flex:
+        </p>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div&gt;Element 1&lt;/div&gt;
+  &lt;div&gt;Element 2&lt;/div&gt;
+  &lt;div&gt;Element 3&lt;/div&gt;
+&lt;/div&gt;
+
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output">
+                            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                            <div>Element 1</div>
+                            <div>Element 2</div>
+                            <div>Element 3</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="code-block code-block-medium code-block-margin-top">
+                <pre>
+                    <code>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container white-container no-margin-top article tooltip">
+            Właściwość
+            <code><a href="#" pro-tip="Całkowicie ukrywa element i przestrzeń, którą zajmował, nie zostaje zajęta przez inne elementy.">none</a></code>
+            Ukrycie elementu:
+        </p>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+
+&lt;div style=&quot;display: none;&quot;&gt;Ten element nie jest widoczny&lt;/div&gt;
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content highlight-container">
+                <h1>Visibility</h1>
+                <p>
+                    Wartość "<span>visible</span>" oznacza, że element jest widoczny na stronie.
+                    Wartość "<span>hidden</span>" oznacza, że element jest ukryty, ale pozostaje w miejscu, w którym jest
+                    umieszczony, więc pozostawia swoje miejsce, a inne elementy na stronie są przesunięte w to miejsce.
+                </p>
+            </div>
+            <img src="/img/vector112.png" alt="">
+        </div>
+        <p class="text-container gray-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="Ukrywa element, ale zachowuje jego przestrzeń, która może zostać zajęta przez inne elementy">visibility</a></code>
+            Ukrycie oraz Pokazanie elementu:
+        </p>
+        <!--
+         <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+&lt;img id=&quot;element&quot; src=&quot;/img/winter.jpg&quot; alt=&quot;&quot; style=&quot;visibility: visible;&quot; &gt;
+
+&lt;button onclick=&quot;document.getElementById(&apos;element&apos;).style.visibility = &apos;hidden&apos;&quot;&gt;Ukryj element&lt;/button&gt;
+
+&lt;button onclick=&quot;document.getElementById(&apos;element&apos;).style.visibility = &apos;visible&apos;&quot;&gt;Poka&zdot; element&lt;/button&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <img id="element" src="/img/winter.jpg" alt="" style="visibility: visible;" >
+
+                    <button class="btn-example" onclick="document.getElementById('element').style.visibility = 'hidden'">Ukryj element</button>
+
+                    <button class="btn-example" onclick="document.getElementById('element').style.visibility = 'visible'">Pokaż element</button>
+                </div>
+            </div>
+        </div>
+         -->
+        <div class="double-elements">
+            <div class="text-content">
+                <img id="element" src="/img/sunset.jpg" alt="" style="visibility: visible;" >
+                <button class="btn-example" style="display: flex; padding: 5px; width: 100px; margin-bottom: 8px; margin-right: 100px;" onclick="document.getElementById('element').style.visibility = 'hidden'">Ukryj element</button>
+                <button class="btn-example" style="display: flex; padding: 5px; width: 100px" onclick="document.getElementById('element').style.visibility = 'visible'">Pokaż element</button>
+            </div>
+            <div class="code-block code-block-medium">
+                <code><img class="icon-img-small" src="/img/icon_html.png" alt="">Html</code>
+                <pre>
+                    <code>
+&lt;img id=&quot;element&quot; src=&quot;/img/podroz3.jpg&quot; alt=&quot;&quot; style=&quot;visibility: visible;&quot; &gt;
+
+&lt;button onclick=&quot;document.getElementById(&apos;element&apos;).style.visibility = &apos;hidden&apos;&quot;&gt;Ukryj element&lt;/button&gt;
+
+&lt;button onclick=&quot;document.getElementById(&apos;element&apos;).style.visibility = &apos;visible&apos;&quot;&gt;Poka&zdot; element&lt;/button&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Pictures.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>>

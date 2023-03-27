@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrazy-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content highlight-container">
+                <h1>Galeria Obrazów CSS</h1>
+                <p>
+                    Galeria obrazów w CSS może być realizowana na kilka sposobów, jednym z nich jest tworzenie
+                    kilku elementów HTML (np. <span>divów</span>) i stylizowanie ich za pomocą CSS tak, aby wyglądały jak obrazki.
+                </p>
+            </div>
+            <img src="/img/vector194.png" alt="">
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <div>
+                <code><img class="icon-img-small" src="/img/html-icon.png" alt="">Html</code>
+                <div class="code-block">
+                    <pre>
+                        <code class="language-xml">
+&lt;div class=&quot;image&quot;&gt;
+  &lt;img src=&quot;obrazek1.jpg&quot;&gt;
+
+
+&lt;div class=&quot;image&quot;&gt;
+  &lt;img src=&quot;obrazek2.jpg&quot;&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;image&quot;&gt;
+  &lt;img src=&quot;obrazek3.jpg&quot;&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <code><img class="icon-img-small" src="/img/icon_css.png" alt="">Css</code>
+                <div class="code-block">
+                    <pre>
+                        <code>
+.image {
+   display: inline-block;
+   width: 33.33%;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+img {
+   width: 100%;
+   height: auto;
+   border: 2px solid black;
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <div class="gallery">
+                        <div class="image">
+                            <img src="/img/sunrise.jpg" alt="Image 1">
+                        </div>
+                        <div class="image">
+                            <img src="/img/winter.jpg" alt="Image 2">
+                        </div>
+                        <div class="image">
+                            <img src="/img/sunset.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W powyższym przykładzie elementy <span>&ltdiv class="image"&gt</span> są stylizowane tak, aby wyglądały jak
+                obrazki i ułożone jako jedna linia. Szerokość każdego z nich jest ustawiona na 33,33% tak, aby każdy
+                z nich zajmował jedną trzecią szerokości całej galerii. Wewnątrz każdego elementu <span>&ltdiv class="image"&gt</span> jest tag <span>&ltimg&gt</span> z odpowiednim obrazkiem.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Tabels.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

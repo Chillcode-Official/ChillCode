@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabele-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Tabele W Języku CSS</h1>
+                <p>
+                    CSS pozwala na zmianę wyglądu tabeli, takiego jak kolory, kształty, marginesy i wiele innych.
+                    To pozwala na uzyskanie bardziej atrakcyjnego wyglądu tabel i umożliwia łatwą zmianę wyglądu w
+                    całym dokumencie bez potrzeby modyfikowania każdej tabeli oddzielnie.
+                </p>
+            </div>
+            <img src="/img/vector20.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Oto przykład, jak można wykorzystać CSS do formatowania tabeli:
+        </p>
+        <div class="double-elements">
+            <div class="code-block">
+                <pre>
+                    <code>
+table {
+    width: 75%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid #d6aeff;
+    padding: 8px;
+    background-color: #8c8686;
+    font-weight: bold;
+}
+
+td{
+    background-color: #696666;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="tableExample">
+                <table class="margin-top">
+                    <thead>
+                    <tr>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Wiek</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Jan</td>
+                        <td>Kowalski</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Anna</td>
+                        <td>Nowak</td>
+                        <td>25</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h1><img class="icon-img-big" src="/img/icon_table.png" alt=""> Właściwości Tabeli CSS</h1>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="Właściwość border ustawia grubość, styl oraz kolor obramowania elementu. Przykład: border: 1px solid black; stworzy obramowanie o grubości 1 piksela, czarnej kolorystyce i stylu solid wokół elementu.">border</a></code> - określa grubość obramowania</p>
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="Właściwość width ustawia szerokość elementu. Przykład: width: 200px; ustawi szerokość elementu na 200 pikseli.">width</a></code> i <code><a href="#" pro-tip="Właściwość height ustawia wysokość elementu. Przykład: height: 100px; ustawi wysokość elementu na 100 pikseli.">height</a></code> - szerokość i wysokość</p>
+
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  border: 2px solid black;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  width: 150px;
+  height: 50px;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="Właściwość text-align ustawia poziome wyrównanie tekstu wewnątrz elementu. Przykład: text-align: center; wyśrodkuje tekst wewnątrz elementu.">text-align</a></code> - określa wyrównanie tekstu w komórkach tabeli</p>
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="Właściwość vertical-align ustawia pionowe wyrównanie elementów w linii (takich jak obrazy lub tekst) wewnątrz bloku liniowego. Przykład: vertical-align: middle; wyśrodkuje element w pionie na środku linii.">vertical-align</a></code> - określa wyrównanie pionowe zawartości komórek tabeli</p>
+
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  text-align: center;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  vertical-align: top;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip=" Właściwość background-color ustawia kolor tła elementu.">background-color</a></code> - określa kolor tła tabeli</p>
+            <p class="text-container purple-container article tooltip"><code><a href="#" pro-tip="Właściwość padding ustawia odstęp między zawartością elementu a jego obramowaniem. Przykład: padding: 10px; stworzy odstęp o szerokości 10 pikseli między zawartością elementu a jego obramowaniem. Można także ustawić odstęp dla każdej strony osobno używając następującej składni: padding-top, padding-right, padding-bottom i padding-left.">padding</a></code> - określa odstęp od komórek tabeli</p>
+
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  background-color: lightgray;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+td, th {
+  padding: 10px;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="alert-card tooltip">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Pamiętaj, że te reguły dotyczą tylko wybranych komórek w tabeli. Aby dostosować wygląd całej
+                tabeli, reguły te należy dostosować do
+                <code><a href="#" pro-tip="">table</a></code> zamiast do
+                <code><a href="#" pro-tip="">td</a></code> i
+                <code><a href="#" pro-tip="">th</a></code>
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="list.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

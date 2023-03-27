@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript {Eventy}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Objects.html">Obiekty</a></li>
+            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+            <li><a href="Values.html">Wartości</a></li>
+            <li><a href="Reference.html">Referencje</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Events.html">Eventy</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Eventy</h1>
+                <p>
+                    Eventy w języku JavaScript to zdarzenia wywoływane przez użytkownika lub przez przeglądarkę w
+                    odpowiedzi na określone akcje. Zdarzenia te mogą być związane z interakcją użytkownika z aplikacją,
+                    takimi jak kliknięcia, wprowadzanie danych, przesuwanie myszką lub zmiana rozmiaru okna przeglądarki.
+                    Można je obsłużyć za pomocą kilku sposobów, takich jak:
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector29.png" alt="">
+            </div>
+        </div>
+        <p class="text-container purple-container article tooltip no-margin-top">
+            Wykorzystanie wbudowanej w przeglądarkę funkcji <code><a href="#" pro-tip="addEventListener to metoda, która służy do dodawania funkcji obsługi zdarzeń do elementów DOM (Document Object Model) w sposób programowy. Dzięki temu można w łatwy sposób reagować na zdarzenia, takie jak kliknięcie myszą, naciśnięcie klawisza czy załadowanie strony, bez konieczności umieszczania kodu w atrybutach HTML elementów.">addEventListener</a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+document.getElementById("myBtn").addEventListener("click", function(){
+  alert("Button was clicked");
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container article tooltip no-margin-top">
+            Użycie skróconej wersji  <code><a href="#" pro-tip="addEventListener to metoda, która służy do dodawania funkcji obsługi zdarzeń do elementów DOM (Document Object Model) w sposób programowy. Dzięki temu można w łatwy sposób reagować na zdarzenia, takie jak kliknięcie myszą, naciśnięcie klawisza czy załadowanie strony, bez konieczności umieszczania kodu w atrybutach HTML elementów.">addEventListener</a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+document.getElementById("myBtn").onclick = function(){
+  alert("Button was clicked");
+};
+                </code>
+            </pre>
+        </div>
+        <p class="text-container purple-container article tooltip no-margin-top">
+            Użycie atrybutu <code><a href="#" pro-tip="Atrybut on-event to sposób obsługi zdarzeń w HTML, który pozwala na umieszczenie kodu JavaScript w atrybucie HTML elementu, który ma reagować na dane zdarzenie. Wartość atrybutu składa się z nazwy zdarzenia poprzedzonej prefiksem on- oraz kodu JavaScript, który ma zostać wykonany w momencie wykrycia zdarzenia.">on-event</a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+&lt;button id=&quot;myBtn&quot; onclick=&quot;alert(&apos;Button was clicked&apos;)&quot;&gt;Click me&lt;/button&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <button class="btn-example" onclick="alert('Button was clicked')">Kliknij mnie</button>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Te trzy sposoby są do siebie podobne, jednak zaleca się stosowanie pierwszej metody, ponieważ pozwala
+                ona na dodawanie wielu obsług zdarzeń do jednego elementu, co jest trudne do osiągnięcia przy użyciu dwóch pozostałych sposobów.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Obsługa Zdarzeń</h1>
+        <div class="section-with-image">
+            <p>
+                Obsługa zdarzeń jest bardzo prosta i polega na dodaniu do elementu HTML funkcji, która będzie
+                wykonywana w momencie zaistnienia określonego zdarzenia. W celu dodania funkcji obsługującej
+                zdarzenie można skorzystać z wyżej wspomnianych trzech sposobów.
+            </p>
+            <img src="/img/vector65.png" alt="">
+        </div>
+        <div class="text-container gray-container article tooltip white-list">
+            <h3 class="color-text-white">
+                Niektóre ze zdarzeń, które można obsłużyć w języku JavaScript.
+            </h3>
+            <div class="line"></div>
+            <ul>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik kliknie na element.">click</a></code> Kliknięcie przycisku</li>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy wartość elementu formularza zostanie zmieniona (np. gdy użytkownik wybierze inny element w menu rozwijanym).">change</a></code> Zmiana wartości pola tekstowego</li>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik wciśnie klawisz na klawiaturze (nie jest wywoływane, gdy klawisz jest przytrzymywany).">keypress</a></code> Naciśnięcie klawisza na klawiaturze</li>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik porusza myszą nad elementem.">mousemove</a></code> Przesuwanie kursora myszki</li>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy element lub cała strona została w pełni załadowana.">load</a></code> Załadowanie strony</li>
+                <li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik zmienia rozmiar okna przeglądarki.">resize</a></code> Zmiana rozmiaru okna przeglądarki </li>
+            </ul>
+        </div>
+        <div class="page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_resize.png" alt=""> Zmiana rozmiaru okna</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;div id=&quot;myDiv&quot;&gt;Zmie&nacute; rozmiar okna przegl&aogon;darki&lt;/div&gt;
+
+&lt;script&gt;
+    const div = document.querySelector(&apos;#myDiv&apos;);
+
+    window.addEventListener(&apos;resize&apos;, () =&gt; {
+        div.textContent = &grave;Nowy rozmiar okna: ${window.innerWidth} x ${window.innerHeight}&grave;;
+    });
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    <div id="myDiv">Zmień rozmiar okna przeglądarki</div>
+
+                    <script>
+                        const div = document.querySelector('#myDiv');
+
+                        window.addEventListener('resize', () => {
+                            div.textContent = `Nowy rozmiar okna: ${window.innerWidth} x ${window.innerHeight}`;
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Pamiętaj, że obsługa zdarzeń jest jednym z najważniejszych aspektów tworzenia interaktywnych
+                stron internetowych i jest bardzo pomocna w codziennym życiu programisty. Dlatego warto poświęcić
+                czas na zgłębienie tego tematu.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Właściwości Eventów</h1>
+                <p>
+                    W języku JavaScript każde zdarzenie jest reprezentowane przez obiekt Event i posiada szereg
+                    właściwości opisujących jego stan i szczegóły. Poniżej wymieniono niektóre z nich:
+                </p>
+            </div>
+            <img src="/img/vector39.png" alt="">
+        </div>
+        <div class="double-elements">
+            <p class="text-container red-container article tooltip">
+                <code><a href="#" pro-tip="właściwość obiektu Event, która zwraca nazwę zdarzenia, które zostało wywołane. Na przykład, click, mouseover, keydown, itp.">type</a></code> Zwraca nazwę zdarzenia.
+            </p>
+            <p class="text-container red-container article tooltip">
+                <code><a href="#" pro-tip="właściwość obiektu Event, która zwraca element DOM, który był celem zdarzenia. Na przykład, jeśli kliknięto przycisk, właściwość target zwróci ten przycisk.">target</a></code> Zwraca element, który wywołał zdarzenie.
+            </p>
+        </div>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+            <pre>
+                <code>
+document.addEventListener("click", function(event) {
+  console.log(event.type);
+});
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+            <pre>
+                <code>
+document.addEventListener("click", function(event) {
+  console.log(event.target);
+});
+                </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="double-elements">
+            <p class="text-container red-container article tooltip">
+                <code><a href="#" pro-tip="właściwości obiektu Event, która zwraca pozycję kursora myszy względem lewego górnego rogu okna przeglądarki. clientX zwraca położenie kursora względem osi X">clientX</a></code> oraz
+                <code><a href="#" pro-tip="właściwości obiektu Event, która zwraca pozycję kursora myszy względem lewego górnego rogu okna przeglądarki. clientY zwraca położenie kursora względem osi Y">clientY</a></code> Zwracają pozycję kursora myszy w oknie przeglądarki.
+            </p>
+            <p class="text-container red-container article tooltip">
+                <code><a href="#" pro-tip="właściwość obiektu Event, która zwraca wartość numeryczną klawisza, który został wciśnięty. Ta właściwość jest często używana w przypadku zdarzeń związanych z klawiaturą, takich jak keydown i keyup">keyCode</a></code> Zwraca kod klawisza, który został naciśnięty.
+            </p>
+        </div>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+            <pre>
+                <code>
+document.addEventListener("mousemove", function(event) {
+  console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
+});
+                </code>
+            </pre>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-margin-top code-block-medium">
+            <pre>
+                <code>
+document.addEventListener("keyup", function(event){
+  console.log(event.keyCode);
+});
+                </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            <code><a href="#" pro-tip="Metoda ta zapobiega domyślnej akcji, która ma zostać wykonana podczas obsługi zdarzenia. Na przykład, gdy użytkownik kliknie na link, domyślną akcją jest przekierowanie do strony, którą link wskazuje. Wywołanie metody preventDefault() podczas obsługi zdarzenia kliknięcia na linku uniemożliwi to przekierowanie.">preventDefault()</a></code> Zapobiega domyślnej akcji przeglądarki dla danego zdarzenia.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+document.querySelector("a").addEventListener("click", function(event) {
+  event.preventDefault();
+  console.log("Link was clicked, default action was prevented");
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container azure-container article tooltip">
+            <code><a href="#" pro-tip="Metoda ta zapobiega dalszej propagacji zdarzenia wzdłuż drzewa DOM (Document Object Model), co oznacza, że ​​zdarzenie nie będzie przekazywane do kolejnych elementów. Na przykład, gdy użytkownik kliknie na element, który znajduje się wewnątrz innego elementu, takiego jak przycisk wewnątrz diva, zdarzenie kliknięcia zostanie przekazane do obu elementów - przycisku i diva. Jeśli chcesz zatrzymać dalszą propagację">stopPropagation()</a></code> Zatrzymuje propagowanie zdarzenia do innych elementów w hierarchii dokumentu.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+document.addEventListener("click", function(event) {
+  console.log("Document was clicked");
+  event.stopPropagation();
+});
+
+document.querySelector("button").addEventListener("click", function(event) {
+  console.log("Button was clicked");
+});
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-no-margin-top">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Oto tylko kilka przykładów, jak można używać właściwości obiektu Event w języku JavaScript.
+                W zależności od potrzeb i typu zdarzenia mogą być dostępne różne właściwości i metody.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="DOM_manipulation.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

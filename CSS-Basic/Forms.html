@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularze-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div>
+                <h1>Formularze CSS</h1>
+                <p>
+                    Formularze w CSS to koncepcja polegająca na stylizowaniu formularzy za pomocą języka CSS. Możesz
+                    zmienić wygląd pól tekstowych, przycisków, etykiet i innych elementów formularza, aby pasowały
+                    do projektu lub wizualizacji twojej strony internetowej. Aby to zrobić, możesz użyć reguł CSS
+                    i klas lub identyfikatorów CSS, aby określić wygląd poszczególnych elementów formularza.
+                </p>
+            </div>
+            <img src="/img/vector21.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Stylizowanie formularzy za pomocą CSS jest bardzo ważne dla projektowania atrakcyjnej i przyjaznej
+            dla użytkownika strony internetowej. CSS pozwala na zmianę koloru tła, koloru tekstu, tła pola
+            tekstowego, krawędzi, marginesów i wielu innych właściwości, które wpływają na wygląd i użyteczność formularza.
+        </p>
+        <div class="page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_forms.png" alt="">Przykład formularza</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+.form-example form {
+padding: 30px;
+background-color: lightgray;
+border-radius: 10px;
+box-shadow: 2px 2px 10px #7800ff;
+}
+
+.form-example h2 {
+text-align: center;
+margin-bottom: 30px;
+color: black;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.form-example label {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.form-example input[type="text"],
+input[type="email"],  textarea {
+padding: 10px;
+border: 2px solid gray;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.form-example button[type="submit"] {
+background-color: #454581;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.form-example button[type="submit"]:hover {
+background-color: #2e2eff;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-long">
+                    <div class="form-example">
+                        <form action="">
+                            <h2><img style="width: 50px; margin-bottom: -10px;" src="/img/registration.png" alt=""> Contact Form</h2>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                W skrócie, stylizowanie formularzy za pomocą CSS jest ważne dla projektowania atrakcyjnej i
+                przyjaznej dla użytkownika strony internetowej, a także dla zapewnienia, że formularze są
+                łatwe w użyciu na wszystkich urządzeniach i zapewniają dobre doświadczenie dla użytkownika.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Counters.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

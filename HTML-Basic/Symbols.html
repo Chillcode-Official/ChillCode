@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>HTML{Symbols}</title>
+    <title>HTML {Symbole}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
@@ -52,8 +54,7 @@
         <h1>Symbole</h1>
         <div class="section-with-image">
             <p>
-                Symbole to specjalne znaki, które mogą być używane w kodzie HTML do wyświetlania różnych <span class="color-text-red">symboli
-                graficznych</span>, takich jak <span class="color-text-yellow">monety</span>, <span class="color-text-yellow">prawa autorskie</span>, <span class="color-text-yellow">symbole matematyczne</span> i tym podobne.
+                Symbole to specjalne znaki, które mogą być używane w kodzie HTML do wyświetlania różnych symboli graficznych, takich jak monety, prawa autorskie, symbole matematyczne i tym podobne.
             </p>
             <img src="/img/vector24.png" alt="">
         </div>
@@ -63,31 +64,43 @@
             lub nazwanym <code><a href="#" pro-tip="Kody Unicode odwołują się do każdego znaku w systemie, w tym do liter, cyfr, znaków interpunkcyjnych, symboli matematycznych, ikon graficznych i innych. Każdy kod Unicode to liczba szesnastkowa, złożona z czterech cyfr szesnastkowych, np. U+0041 dla litery A, U+0042 dla litery B itd.">odwołaniom do znaków</a></code>.
         </p>
         <div class="double-elements">
-            <div class="code-block">
+            <div class="text-content">
+                <div class="code-block code-block-margin-top">
                 <pre>
                     <code>
-&lt;p&gt;Pokazuje "&amp;euro;"&lt;/p&gt;
+&lt;p&gt;Symbol &amp;euro;&lt;/p&gt;
                     </code>
                 </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            <p>Symbol &euro;</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="code-block">
+            <div class="text-content">
+                <div class="code-block code-block-margin-top">
                 <pre>
                     <code>
-&lt;p&gt;Pokazuje "&amp;#36;"&lt;/p&gt;
+&lt;p&gt;Symbol &amp;#36;&lt;/p&gt;
                     </code>
                 </pre>
-            </div>
-        </div>
-        <div class="double-elements">
-            <div class="browser browser-no-margin-top">
-                Pokazuje "€" &nbsp;
-            </div>
-            <div class="browser browser-no-margin-top">
-                Pokazuje "$"
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            <p>Symbol &#36;</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="page-header"></div>
-        <div class="text-container black-container white-list">
+        <div class="white-list Table">
             <table>
                 <tr>
                     <th style="width: 1%">Symbol</th>
@@ -121,7 +134,7 @@
                 </tr>
                 <tr>
                     <td>©</td>
-                    <td><p>&amp;#169;;</p></td>
+                    <td><p>&amp;#169;</p></td>
                     <td><p>&amp;copy;</p></td>
                 </tr>
                 <tr>

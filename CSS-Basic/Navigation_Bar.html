@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pasek-Nawigacyjny-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pasek Nawigacyjny</h1>
+                <p>
+                    Navbar w CSS to element interfejsu użytkownika, który zazwyczaj zawiera nazwę strony, odnośniki
+                    do głównych sekcji i opcje wyszukiwania. Można go stworzyć za pomocą HTML i CSS. Jeśli chodzi o stylizację, istnieją różne opcje, takie jak ustawienie
+                    tła, koloru tekstu, marginesów i paddingów, wielkości i wyglądu czcionek, a także efektów hover dla
+                    odnośników. Można też dostosować wygląd paska nawigacyjnego do różnych rozmiarów ekranu, np.
+                    zmieniając jego wygląd na wersję mobilną.
+                </p>
+            </div>
+            <img src="/img/vector161.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container no-margin-top">
+            Oprócz podstawowego HTML i CSS, pasek nawigacyjny może zawierać różne dodatkowe elementy, takie jak logo,
+            formularze wyszukiwania, ikony i wiele innych. Można też dodać interaktywność, taką jak rozwijane menu
+            podrzędne dla sekcji strony.
+        </p>
+        <div class="big-page-header"></div>
+        <code><img class="icon-img-small" src="/img/icon_css.png" alt="">CSS</code>
+        <div class="code-block">
+            <pre>
+                <code>
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 4px solid #494646;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+                </code>
+            </pre>
+        </div>
+        <code><img class="icon-img-small" src="/img/icon_html.png" alt="">HTML</code>
+        <div class="code-block">
+            <pre>
+                <code>
+
+&lt;nav&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-long output-clear">
+                    <nav class="nav-example">
+                        <a style="color: white">Home</a>
+                        <a style="color: white">About</a>
+                        <a style="color: white">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Można też stosować gotowe biblioteki CSS, takie jak Bootstrap, Foundation lub Materialize, które
+                zawierają gotowe style dla paska nawigacyjnego i innych elementów interfejsu.
+                Ogólnie rzecz biorąc, pasek nawigacyjny jest ważnym elementem interfejsu strony i pomaga użytkownikom
+                łatwo poruszać się po niej. Dlatego warto poświęcić czas na jego odpowiednie zaprojektowanie i zaimplementowanie.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Transparency.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

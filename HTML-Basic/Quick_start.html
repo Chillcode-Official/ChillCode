@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>HTML{Quick start}</title>
+  <title>HTML {Szybki start}</title>
   <link rel="stylesheet" href="../Basic.css"/>
 
   <!-- Highlight JS init: -->
   <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
   <script src="/Highlight/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
+  <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
       <li><a href="Symbols.html">Symbole</a></li>
       <li><a href="Quotations.html">Cytaty</a></li>
       <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+      <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
       <li><a href="Class_Id.html">Klasy oraz Id</a></li>
       <li><a href="Layout_HTML.html">Układ strony</a></li>
-      <li><a href="Responsiveness.html">Responsywaność</a></li>
+      <li><a href="Responsiveness.html">Responsywność</a></li>
       <li><a href="Summary.html">Podsumowanie</a></li>
     </ol>
   </div>
@@ -52,27 +54,28 @@
     <h1>Szybki start w HTML</h1>
     <div class="section-with-image">
       <p>
-        Cześć! HTML (<b>Hypertext Markup Language</b>) to podstawowy język używany do tworzenia stron internetowych. Oto kilka podstawowych kroków, które pozwolą Ci rozpocząć pracę z HTML:
+        Cześć! HTML (Hypertext Markup Language) to podstawowy język używany do tworzenia stron internetowych. Oto kilka podstawowych kroków, które pozwolą Ci rozpocząć pracę z HTML:
       </p>
       <img src="/img/vector44.png" alt="">
     </div>
-    <div class="text-container lightWhite-container black-list no-margin-top">
+    <div class="text-container lightWhite-container black-list no-margin-top tooltip">
       <div class="text-content">
         <h3>
           Oto krótki przewodnik, jak zacząć pisać w HTML:
         </h3>
       </div>
-      <div class="text-content list-spacing highlight-text-black">
+      <div class="line"></div>
+      <div class="text-content list-spacing">
         <ol>
-          <li>Otwórz edytor tekstu. Możesz użyć prostego edytora tekstu, takiego jak Notatnik lub bardziej zaawansowanego, takiego jak <code>Visual Studio Code</code>.</li>
-          <li>Utwórz nowy plik i zapisz go z rozszerzeniem .html.</li>
-          <li>Rozpocznij pisanie kodu HTML od tagu <strong>&lthtml&gt</strong>, który otwiera i zamyka wszystkie elementy HTML.</li>
+          <li>Otwórz edytor tekstu. Możesz użyć prostego edytora tekstu, takiego jak Notatnik lub bardziej zaawansowanego, takiego jak <code><a href="#" pro-tip="Visual Studio Code to popularny edytor kodu źródłowego rozwijany przez firmę Microsoft. Jest to bezpłatne i open-source'owe narzędzie, które można używać do edycji, debugowania i tworzenia aplikacji programistycznych. Obsługuje różne języki programowania, takie jak C++, Python, JavaScript i wiele innych.">Visual Studio Code</a></code>.</li>
+          <li>Utwórz nowy plik i zapisz go z rozszerzeniem <span class="highlight-text"><code>.html</code></span>.</li>
+          <li>Rozpocznij pisanie kodu HTML od tagu &lt;html&gt;, który otwiera i zamyka wszystkie elementy HTML.</li>
           <li>Po zakończeniu pisania kodu HTML, zapisz plik i otwórz go w przeglądarce internetowej, aby zobaczyć, jak wygląda Twoja strona.</li>
         </ol>
       </div>
     </div>
     <div class="page-header"></div>
-    <code>Oto przykładowy kod HTML dla prostej strony internetowej:</code>
+    <code><img class="icon-img-big" src="/img/icon_htmlSite.png" alt=""> Przykładowy kod HTML dla prostej strony internetowej:</code>
     <div class="code-block">
       <pre>
         <code>
@@ -102,7 +105,7 @@
   &lt;article&gt;
     &lt;h2&gt;Tytu&lstrok; artyku&lstrok;u&lt;/h2&gt;
     &lt;p&gt;To jest m&oacute;j pierwszy artyku&lstrok; na stronie internetowej.&lt;/p&gt;
-    &lt;img src=&quot;obraz.jpg&quot; alt=&quot;Opis obrazu&quot;&gt;
+    &lt;img src=&quot;flower.jpg&quot; alt=&quot;Opis obrazu&quot;&gt;
   &lt;/article&gt;
 &lt;/main&gt;
 
@@ -114,6 +117,34 @@
         </code>
       </pre>
     </div>
+    <div class="dropdown minus-margin-top">
+      <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+      <div class="dropdown-content">
+        <div class="output output-content">
+          <h1>Moja pierwsza strona internetowa</h1>
+          <nav>
+            <ul>
+              <li><a href="#">Strona główna</a></li>
+              <li><a href="#">O mnie</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+          </nav>
+
+          <main>
+            <article>
+              <h2 class="normal-h2">Tytuł artykułu</h2>
+              <p>To jest mój pierwszy artykuł na stronie internetowej.</p>
+              <img style="width: 50px;" src="/img/flower.png" alt="Opis obrazu">
+            </article>
+          </main>
+
+          <footer>
+            <p>© 2023 Moja pierwsza strona internetowa</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
     <div class="alert-card alert-card3 alert-card-red">
       <img style="width: 50px;" src="/img/Congratulations3.png" alt="">
       <b>Gratulacje</b>

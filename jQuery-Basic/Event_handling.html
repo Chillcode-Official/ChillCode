@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obsługa-zdarzeń-jQuery</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+            <li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Plugins.html">Wtyczki</a></li>
+            <li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+            <li><a href="Debug_code.html">Debugowanie kodu</a></li>
+            <li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Obsługa Zdarzeń</h1>
+        <div class="section-with-image">
+            <p>
+                Obsługa zdarzeń w jQuery to jedna z podstawowych funkcjonalności biblioteki jQuery, która pozwala na
+                przypisywanie funkcji do różnych zdarzeń wywoływanych przez interakcję użytkownika z elementami strony,
+                takich jak kliknięcie, najechanie kursorem, wciśnięcie klawisza na klawiaturze czy zmiana wartości formularza.
+                W jQuery obsługa zdarzeń polega na przypisaniu funkcji do zdarzenia wywoływanego przez element na stronie.
+                Można to zrobić na kilka sposobów:
+            </p>
+            <img src="/img/vector129.png" alt="">
+        </div>
+        <p class="text-container lightOrange-container article tooltip no-margin-top">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do jednego lub wielu elementów DOM. ">on()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia. Przyjmuje dwa parametry: nazwę zdarzenia oraz funkcję do wykonania w momencie wywołania zdarzenia.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "button" ).on( "click", function() {
+  alert( "Kliknięto przycisk!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGray-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzenia kliknięcia myszą na elemencie DOM.">click()</a></code> - metoda ta jest skrótem dla metody on("click").
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "button" ).click(function() {
+  alert( "Kliknięto przycisk!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do jednego lub wielu elementów DOM.">bind()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia, ale jest mniej popularna od metody on(). Przyjmuje dwa parametry: nazwę zdarzenia oraz funkcję do wykonania w momencie wywołania zdarzenia. Przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "button" ).bind( "click", function() {
+  alert( "Kliknięto przycisk!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGray-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do elementu nadrzędnego, który może przechwytywać zdarzenia dla elementów potomnych, nawet jeśli zostały one dodane dynamicznie.">delegate()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia dla elementów potomnych danego elementu. Przyjmuje trzy parametry: selektor elementu, na którym zostanie wywołane zdarzenie, nazwę zdarzenia oraz funkcję do wykonania w momencie wywołania zdarzenia. Przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "div" ).delegate( "button", "click", function() {
+  alert( "Kliknięto przycisk w elemencie DIV!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzeń mouseenter i mouseleave dla elementów DOM.">hover()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia mouseenter (czyli najechanie kursorem na element) oraz mouseleave (czyli zjechanie kursorem z elementu). Przyjmuje dwa parametry: funkcję do wykonania w momencie najechania oraz funkcję do wykonania w momencie zjechania z elementu. Przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "button" ).hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGray-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzenia naciśnięcia klawisza na klawiaturze. ">keydown()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia naciśnięcia klawisza na klawiaturze. Przyjmuje funkcję do wykonania w momencie naciśnięcia klawisza.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( document ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+    event.preventDefault();
+    alert( "Naciśnięto klawisz ENTER!" );
+  }
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzenia przesłania formularza">submit()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia przesłania formularza. Przyjmuje funkcję do wykonania w momencie przesłania formularza.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( "form" ).submit(function( event ) {
+  event.preventDefault();
+  alert( "Formularz został przesłany!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGray-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzenia zmiany rozmiaru okna przeglądarki.">resize()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia zmiany rozmiaru okna przeglądarki. Przyjmuje funkcję do wykonania w momencie zmiany rozmiaru okna przeglądarki.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( window ).resize(function() {
+  alert( "Okno przeglądarki zmieniło rozmiar!" );
+});
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Metoda <code><a href="#" pro-tip="Metoda ta służy do podpięcia funkcji obsługi zdarzenia do zdarzenia przewijania strony.">scroll()</a></code> - metoda ta służy do przypisania funkcji do zdarzenia przewijania strony. Przyjmuje funkcję do wykonania w momencie przewijania strony.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+$( window ).scroll(function() {
+  alert( "Przewinięto stronę!" );
+});
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Dzięki obsłudze zdarzeń w jQuery możemy reagować na akcje użytkowników i wykonywać różne operacje, takie jak zmiana stylu elementów,
+                wyświetlanie okien dialogowych, wysyłanie formularzy czy pobieranie danych z serwera. Biblioteka jQuery oferuje wiele metod umożliwiających
+                łatwe i intuicyjne przypisanie funkcji do zdarzeń, co pozwala na bardziej efektywne i zwięzłe pisanie kodu JavaScript.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Effects_and_animations.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Responsywność HTML</title>
+    <title>HTML {Responsiveness}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,15 +42,16 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
-        <h1>Responsywność W Języku HTML</h1>
+        <h1>Responsywność strony</h1>
         <div class="section-with-image">
             <p>
                 Responsywny projekt w HTML oznacza projektowanie strony internetowej, która dostosowuje się
@@ -59,14 +61,10 @@
             </p>
             <img src="/img/responsywnosc.png" alt="">
         </div>
-        <p class="text-container red-container no-margin-top">
-            Przykład użycia kwerend mediów CSS w HTML:
-        </p>
-        <div class="code-block">
+        <h2><img class="icon-img-big" src="/img/icon_responsive.png" alt=""> Przykład użycia kwerend mediów CSS w HTML</h2>
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;style&gt;
-
   /* Styl dla ekran&oacute;w wi&eogon;kszych ni&zdot; 480px */
   @media only screen and (min-width: 480px) {
     .container {
@@ -83,15 +81,13 @@
       margin: auto; /* Automatyczne marginesy */
     }
   }
-
-&lt;/style&gt;
-
                 </code>
             </pre>
         </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
             <p>
                 W powyższym przykładzie, kontener z klasą .container będzie miał szerokość 80% i marginesy
                 automatyczne dla urządzeń o szerokości co najmniej 480 pikseli. Dla urządzeń o szerokości

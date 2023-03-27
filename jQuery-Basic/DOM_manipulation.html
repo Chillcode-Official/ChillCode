@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery {Manipulacja DOM-em-}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+            <li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Plugins.html">Wtyczki</a></li>
+            <li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+            <li><a href="Debug_code.html">Debugowanie kodu</a></li>
+            <li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Manipulacja DOM-em</h1>
+        <div class="section-with-image">
+            <p>
+                Manipulacja DOM-em w jQuery to proces wykorzystujący wiele metod, które umożliwiają dodawanie,
+                usuwanie i modyfikowanie elementów HTML na stronie internetowej. Metody te są wywoływane na obiektach
+                jQuery, które reprezentują elementy HTML.
+            </p>
+            <img src="/img/vector9.png" alt="">
+        </div>
+        <p class="text-container black-container no-margin-top">
+            Oto kilka przykładów użycia metod jQuery:
+        </p>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <code><img class="icon-img-small" src="/img/icon_additional(2).png" alt=""> Dodawanie elementu HTML do strony</code>
+            <code><img class="icon-img-small" src="/img/icon_removal(2).png" alt=""> Usuwanie elementu HTML ze strony</code>
+        </div>
+        <div class="double-elements">
+            <p class="text-container blue-container article tooltip">
+                Aby dodać nowy element HTML na stronie, użyjemy metody <code><a href="#" pro-tip="metoda ta dodaje zawartość na końcu wybranego elementu.">append()</a></code>. Na przykład, aby dodać nowy paragraf
+                na końcu diva z id "moj_div", użyjemy:
+            </p>
+            <p class="text-container light-container color-text-gray article tooltip">
+                Aby usunąć element HTML ze strony, użyjemy metody <code><a href="#" pro-tip="metoda ta usuwa wybrany element.">remove()</a></code>. Na przykład,
+                aby usunąć div z id "moj_div", użyjemy:
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).append( "&ltp&gt to paragraf &lt/p&gt" );
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).remove();
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code><img class="icon-img-small" src="/img/icon_style-sheet.png" alt=""> Zmiana stylu elementu HTML</code>
+            <code><img class="icon-img-small" src="/img/icon_text-mining.png" alt=""> Zmiana tekstu elementu HTML</code>
+        </div>
+        <div class="double-elements">
+            <p class="text-container blue-container article tooltip">
+                Aby zmienić styl elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta ustawia lub zwraca wartość atrybutu CSS wybranego elementu.">css()</a></code>. Na przykład, aby zmienić kolor tła diva z id "moj_div" na czerwony, użyjemy:
+            </p>
+            <p class="text-container light-container color-text-gray article tooltip">
+                Aby zmienić tekst elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta ustawia lub zwraca tekst wybranego elementu.">text()</a></code>. Na przykład, aby zmienić tekst paragrafu z id "moj_paragraf" na "Nowy tekst", użyjemy:
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).css( "background-color", "red" );
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_paragraf" ).text( "Nowy tekst" );
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code><img class="icon-img-small" src="/img/icon_searching.png" alt=""> Wyszukiwanie elementów HTML</code>
+            <code><img class="icon-img-small" src="/img/icon_modification(1).png" alt=""> Modyfikacja zawartości elementu</code>
+        </div>
+        <div class="double-elements">
+            <p class="text-container blue-container article tooltip">
+                Aby wyszukać elementy HTML na stronie, użyjemy metody <code><a href="#" pro-tip="metoda ta znajduje elementy, które są potomkami wybranego elementu.">find()</a></code>. Na przykład, aby wyszukać wszystkie linki w divie z id "moj_div", użyjemy:
+            </p>
+            <p class="text-container light-container color-text-gray article tooltip">
+                Aby zmienić zawartość elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta ustawia lub zwraca kod HTML wybranego elementu.">html()</a></code>. Na przykład, aby zmienić tekst w elemencie z id "moj_div" na "Nowy tekst", użyjemy:
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).find( "a" );
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).html( "Nowy tekst" );
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code><img class="icon-img-small" src="/img/icon_additional(1).png" alt=""> Dodawanie klasy CSS do elementu</code>
+            <code><img class="icon-img-small" src="/img/icon_removal(1).png" alt=""> Usuwanie klasy CSS z elementu</code>
+        </div>
+        <div class="double-elements">
+            <p class="text-container blue-container article tooltip">
+                Aby dodać klasę CSS do elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta dodaje klasę do wybranego elementu.">addClass()</a></code>. Na przykład, aby dodać klasę "kolorowy" do diva z id "moj_div", użyjemy:
+            </p>
+            <p class="text-container light-container color-text-gray article tooltip">
+                Aby usunąć klasę CSS z elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta usuwa klasę z wybranego elementu.">removeClass()</a></code>. Na przykład, aby usunąć klasę "kolorowy" z diva z id "moj_div", użyjemy:
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).addClass( "kolorowy" );
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_div" ).removeClass( "kolorowy" );
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <code><img class="icon-img-small" src="/img/icon_modification(2).png" alt=""> Modyfikacja atrybutu HTML</code>
+            <code><img class="icon-img-small" src="/img/icon_obsługaZdarzeń.png" alt=""> Obsługa zdarzeń</code>
+        </div>
+        <div class="double-elements">
+            <p class="text-container blue-container article tooltip">
+                Aby zmienić wartość atrybutu HTML elementu, użyjemy metody <code><a href="#" pro-tip="metoda ta ustawia lub zwraca wartość atrybutu wybranego elementu.">attr()</a></code>. Na przykład, aby zmienić wartość atrybutu "href" w linku z id "moj_link" na "https://www.google.com", użyjemy:
+            </p>
+            <p class="text-container light-container color-text-gray article tooltip">
+                Aby dodać funkcję obsługi zdarzeń do elementu HTML, użyjemy metody <code><a href="#" pro-tip="metoda ta rejestruje funkcję do wywołania po zdarzeniu.">on()</a></code>. Na przykład, aby wywołać funkcję po kliknięciu przycisku z id "moj_przycisk", użyjemy:
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_link" ).attr(
+
+"href", "https://www.google.com" );
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+$( "#moj_przycisk" ).on( "click", function() {
+  alert( "Kliknięto przycisk" );
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                To tylko kilka przykładów użycia metod jQuery. Biblioteka ta oferuje wiele innych metod i funkcji, które pozwalają na dokładniejszą kontrolę nad elementami HTML na stronie.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="CSS_style_manipulation.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Lista HTML</title>
+    <title>HTML {Lista}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
@@ -63,9 +65,9 @@
             Aby utworzyć listę uporządkowaną w HTML, należy użyć tagu <code><a href="#" pro-tip="Służy do tworzenia listy numerowanej (czyli z numerami lub literami jako punktami)">&ltol&gt</a></code>. Każdy
             element listy powinien być oznaczony tagiem <code><a href="#" pro-tip="Znacznik służący do tworzenia pojedynczego punktu na liście, zarówno w przypadku listy numerowanej, jak i wypunktowanej">&ltli&gt</a></code>.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
+                <code class="language-xml">
 &#x3C;ol&#x3E;
 
   &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
@@ -76,13 +78,26 @@
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
+                    <ol>
+                        <li>Pierwszy element</li>
+                        <li>Drugi element</li>
+                        <li>Trzeci element</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
         <p class="text-container red-container article tooltip">
             Listy uporządkowane mogą mieć również różne rodzaje numeracji, takie jak rzymskie cyfry lub litery.
             Można to ustawić za pomocą atrybutu <code><a href="#" pro-tip="Służy do określenia typu zawartości znajdującej się w elemencie">type</a></code>.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
+                <code class="language-xml">
 &#x3C;ol type=&#x22;I&#x22;&#x3E;
 
   &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
@@ -93,36 +108,36 @@
                 </code>
             </pre>
         </div>
-        <div class="double-elements">
-            <div class="browser medium-browser">
-                <ol>
-                    <li>Pierwszy element</li>
-                    <li>Drugi element</li>
-                    <li>Trzeci element</li>
-                </ol>
-            </div>
-            <div class="browser medium-browser">
-                <ol type="I">
-                    <li>Pierwszy element</li>
-                    <li>Drugi element</li>
-                    <li>Trzeci element</li>
-                </ol>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
+                    <ol type="I">
+
+                        <li>Pierwszy element</li>
+                        <li>Drugi element</li>
+                        <li>Trzeci element</li>
+
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="big-page-header"></div>
-        <h1>Lista Nieuporządkowana</h1>
         <div class="section-with-image">
-            <p>
-                HTML Lista Nieuporządkowana to lista, która składa się z elementów nieuporządkowanych, czyli bez określonej kolejności. Elementy te zazwyczaj wyświetlane są w postaci wypunktowania.
-            </p>
+            <div class="text-content">
+                <h1>Lista Nieuporządkowana</h1>
+                <p>
+                    HTML Lista Nieuporządkowana to lista, która składa się z elementów nieuporządkowanych, czyli bez określonej kolejności. Elementy te zazwyczaj wyświetlane są w postaci wypunktowania.
+                </p>
+            </div>
             <img src="/img/vector176.png" alt="">
         </div>
         <p class="text-container lightPink-container no-margin-top article tooltip">
             Do utworzenia listy nieuporządkowanej w HTML używa się znacznika <code><a href="#" pro-tip="Służy do tworzenia listy wypunktowanej (czyli z kropkami, kwadratami lub kołami jako punktami)">&ltul&gt</a></code> oraz dla każdego elementu listy, znacznika <code><a href="#" pro-tip="Znacznik służący do tworzenia pojedynczego punktu na liście, zarówno w przypadku listy numerowanej, jak i wypunktowanej">&ltli&gt</a></code>.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
+                <code class="language-xml">
 &#x3C;ul&#x3E;
 
   &#x3C;li&#x3E;Pierwszy element&#x3C;/li&#x3E;
@@ -133,13 +148,19 @@
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <ul>
-                <li>Pierwszy element</li>
-                <li>Drugi element</li>
-                <li>Trzeci element</li>
-            </ul>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-list">
+                    <ul>
+                        <li>Pierwszy element</li>
+                        <li>Drugi element</li>
+                        <li>Trzeci element</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
         <div class="big-page-header"></div>
         <p class="text-container lightPink-container article tooltip">
             <code><a href="#" pro-tip="Właściwość CSS, która określa rodzaj punktów w liście. Można jej użyć do zmiany wyglądu punktów, które są domyślnie ustawione przez przeglądarkę.">list-style-type</a></code> pozwala na określenie rodzaju punktu
@@ -149,68 +170,63 @@
             <code><a href="#" pro-tip="rodzaj punktu w postaci kwadratu">square</a></code>
             <code><a href="#" pro-tip="ukrycie punktu">none</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
 &#x3C;ul style=&#x22;list-style-type:disc;&#x22;&#x3E;
-  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;mleko &lt;img src=&quot;milk.png&quot;&gt;&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;miód &lt;img src=&quot;honey.png&quot;&gt;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;
 
 
 &#x3C;ul style=&#x22;list-style-type:circle;&#x22;&#x3E;
-  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;kawa &lt;img src=&quot;coffee.png&quot;&gt;&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;herbata &lt;img src=&quot;tea.png&quot;&gt;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;
 
 
 &#x3C;ul style=&#x22;list-style-type:square;&#x22;&#x3E;
-  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Lays &lt;img src=&quot;chips.png&quot;&gt;&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;piwo &lt;img src=&quot;beer.png&quot;&gt;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;
 
 
 &#x3C;ul style=&#x22;list-style-type:none;&#x22;&#x3E;
-  &#x3C;li&#x3E;Honey&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;peanuts&#x3C;/li&#x3E;
-  &#x3C;li&#x3E;Milk&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;wódka &lt;img src=&quot;vodka.png&quot;&gt;&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;pepsi &lt;img src=&quot;pepsi.png&quot;&gt;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;
                 </code>
             </pre>
         </div>
-        <div class="double-elements">
-            <div class="browser medium-browser list-disc">
-                <ul>
-                    <li>Honey</li>
-                    <li>Peanuts</li>
-                    <li>Fruits</li>
-                </ul>
-            </div>
-            <div class="browser medium-browser list-circle">
-                <ul>
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                    <li>Milk</li>
-                </ul>
-            </div>
-        </div>
-        <div class="double-elements">
-            <div class="browser medium-browser list-square">
-                <ul>
-                    <li>Lays</li>
-                    <li>Beer</li>
-                    <li>Juice</li>
-                </ul>
-            </div>
-            <div class="browser medium-browser list-none">
-                <ul>
-                    <li>Vodka</li>
-                    <li>Coca-cola</li>
-                    <li>Whisky</li>
-                </ul>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-list">
+                    <div class="list-disc">
+                        <ul>
+                            <li>mleko <img style="width: 30px;" src="/img/icon_milk.png" alt=""></li>
+                            <li>miód <img style="width: 30px;" src="/img/icon_honey.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="list-circle">
+                        <ul>
+                            <li>kawa <img style="width: 30px;" src="/img/icon_coffee-cup.png" alt=""></li>
+                            <li>herbata <img style="width: 30px;" src="/img/icon_tea.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="list-square">
+                        <ul>
+                            <li>Lays <img style="width: 30px;" src="/img/icon_lays.png" alt=""></li>
+                            <li>piwo <img style="width: 30px;" src="/img/icon_beer.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="list-none">
+                        <ul>
+                            <li>pepsi <img style="width: 30px;" src="/img/icon_pepsi.png" alt=""></li>
+                            <li>Whisky <img style="width: 30px;" src="/img/icon_whisky.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="big-page-header"></div>
@@ -218,7 +234,7 @@
             <div class="text-content">
                 <h1>Lista Definicyjna</h1>
                 <p>
-                    Lista definicyjna HTML (ang. definition list) jest używana do tworzenia list, w których każdy element
+                    Lista definicyjna w HTML jest używana do tworzenia list, w których każdy element
                     składa się z pojęcia i jego definicji. Listy definicyjne są często używane do tworzenia
                     słowników, list pojęć i innych typów list, w których istnieje pojęcie i jego definicja.
                 </p>
@@ -233,25 +249,30 @@
         </p>
         <div class="code-block">
             <pre>
-                <code>
-&#x3C;dl&#x3E;
- &#x3C;dt&#x3E;Html&#x3C;/dt&#x3E;
- &#x3C;dd&#x3E;J&#x119;zyk opisu stron internetowych&#x3C;/dd&#x3E;
+                <code class="language-xml">
+&lt;dl&gt;
+ &lt;dt&gt;HTML`&lt;/dt&gt;
+ &lt;dd&gt;J&eogon;zyk opisu stron internetowych&lt;/dd&gt;&lt;br&gt;
 
- &#x3C;dt&#x3E;SoloLearn&#x3C;/dt&#x3E;
- &#x3C;dd&#x3E;Serwis kt&#xF3;ry nauczy ci&#x119; programowania&#x3C;/dd&#x3E;
-&#x3C;/dl&#x3E;
+ &lt;dt&gt;ChillCode&lt;/dt&gt;
+ &lt;dd&gt;Serwis kt&oacute;ry nauczy ci&eogon; programowania&lt;/dd&gt;
+&lt;/dl&gt;
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <dl>
-                <dt><b>HTML</b></dt>
-                <dd>Język opisu stron internetowych</dd>
-                <br>
-                <dt><b>SoloLearn</b></dt>
-                <dd>Serwis który nauczy cię programowania</dd>
-            </dl>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <dl>
+                        <dt><b class="color-text-black">HTML'</b></dt>
+                        <dd>Język opisu stron internetowych</dd>
+                        <br>
+                        <dt><b class="color-text-black">ChillCode</b></dt>
+                        <dd>Serwis który nauczy cię programowania</dd>
+                    </dl>
+                </div>
+            </div>
         </div>
         <div class="page-header"></div>
         <div class="alert-card alert-card3">
@@ -259,7 +280,7 @@
             <b>Note</b>
             <div class="line"></div>
             <p>
-                Warto zauważyć, że tagi <strong>&ltdt&gt</strong> i <strong>&ltdd&gt</strong> muszą być używane w parze i znajdować się wewnątrz tagu <strong>&ltddl&gt</strong> W przeciwnym razie lista definicyjna nie będzie poprawnie działać.
+                Warto zauważyć, że tagi &ltdt&gt i &ltdd&gt muszą być używane w parze i znajdować się wewnątrz tagu &ltddl&gt W przeciwnym razie lista definicyjna nie będzie poprawnie działać.
             </p>
         </div>
         <div class="big-page-header"></div>
@@ -279,10 +300,10 @@
             <code><a href="#" pro-tip="">&ltli&gt</a></code>.
         </p>
         <div class="big-page-header"></div>
-        <code>Zagnieżdżona Lista Uporządkowana</code>
+        <code><img class="icon-img-small" src="/img/icon_numberList.png" alt=""> Zagnieżdżona Lista Uporządkowana</code>
         <div class="code-block">
             <pre>
-                <code>
+                <code class="language-xml">
 &lt;ol&gt;
   &lt;li&gt;Pierwszy punkt&lt;/li&gt;
   &lt;li&gt;Drugi punkt
@@ -296,50 +317,61 @@
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <ol>
-                <li>Pierwszy punkt</li>
-                <li>Drugi punkt
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
                     <ol>
-                        <li style="margin-bottom: 5px;">Punkt 2.1</li>
-                        <li>Punkt 2.2</li>
+                        <li>Pierwszy punkt</li>
+                        <li>Drugi punkt
+                            <ol>
+                                <li>Punkt 2.1</li>
+                                <li>Punkt 2.2</li>
+                            </ol>
+                        </li>
+                        <li>Trzeci punkt</li>
                     </ol>
-                </li>
-                <li>Trzeci punkt</li>
-            </ol>
+                </div>
+            </div>
         </div>
         <div class="big-page-header"></div>
-        <code>Zagnieżdżona lista Nieuporządkowana</code>
+        <code><img class="icon-img-small"  src="/img/icon_dotList.png" alt=""> Zagnieżdżona lista Nieuporządkowana</code>
         <div class="code-block">
             <pre>
-                <code>
+                <code class="language-xml">
 &lt;ul&gt;
-  &lt;li&gt;Piwo&lt;/li&gt;
-  &lt;li&gt;Wino&lt;/li&gt;
+  &lt;li&gt;Piwo &lt;img src=&quot;beer.png&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;Wino &lt;img src=&quot;wine.png&quot;&gt;&lt;/li&gt;
   &lt;li&gt;
     Jab&lstrok;ka
     &lt;ul&gt;
-      &lt;li&gt;Zielone&lt;/li&gt;
-      &lt;li&gt;Czerwone&lt;/li&gt;
+      &lt;li&gt;Zielone &lt;img src=&quot;greenApple.png&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;Czerwone &lt;img src=&quot;redApple.png&quot;&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <ul>
-                <li>Piwo</li>
-                <li>Wino</li>
-                <li>
-                    Jabłka
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-list">
                     <ul>
-                        <li class="no-margin-bottom">Zielone</li>
-                        <li>Czerwone</li>
+                        <li>Piwo <img style="width: 30px;" src="/img/icon_beer.png" alt=""></li>
+                        <li>Wino <img style="width: 30px;" src="/img/icon_wine.png" alt=""></li>
+                        <li>
+                            Jabłka
+                            <ul>
+                                <li>Zielone <img style="width: 30px;" src="/img/icon_greenApple.png" alt=""></li>
+                                <li>Czerwone <img style="width: 30px;" src="/img/icon_redApple.png" alt=""></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
+        <div class="page-header"></div>
         <div class="alert-card alert-card3">
             <img style="width: 50px;" src="/img/note.png" alt="">
             <b>Note</b>

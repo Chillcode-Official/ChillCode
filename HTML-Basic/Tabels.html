@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>HTML{Tables}</title>
+    <title>HTML {Tables}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
@@ -53,22 +55,22 @@
             <div class="text-content">
                 <h1>Tabele</h1>
                 <p>
-                    Tabela w języku HTML to struktura danych składająca się z <span class="color-text-blue">wierszy</span> i <span class="color-text-green">komórek</span>,
+                    Tabela w języku HTML to struktura danych składająca się z wierszy i komórek,
                     używana jest do przedstawienia danych w postaci tabeli.
                     Używamy tabel w HTML do przedstawienia różnych danych,
-                    takich jak <span class="color-text-yellow">dane statystyczne</span>, <span class="color-text-yellow">dane finansowe</span>,<span class="color-text-yellow">dane kontaktowe </span> i tym podobne.
+                    takich jak dane statystyczne, dane finansowe, dane kontaktowe i tym podobne.
                 </p>
             </div>
-            <img src="/img/vector60.png" alt="">
+            <img src="/img/vector195.png" alt="">
         </div>
         <p class="text-container azure-container article tooltip no-margin-top">
-            Aby utworzyć tabelę , należy użyć znacznika
+            Aby utworzyć tabelę, należy użyć znacznika
             <code><a href="#" pro-tip="Definiuje całą tabelę">table</a></code>.
             Wewnątrz tego znacznika umieszcza się znacznik <code><a href="#" pro-tip="Definiuje wiersz tabeli">tr</a></code> (table row) dla każdego wiersza tabeli,
             a następnie znacznik <code><a href="#" pro-tip="Definiuje komórkę tabeli">td</a></code> (table data) dla każdej komórki tabeli. W przykładzie
             poniżej znajduje się prosta tabela z dwoma wierszami i trzema komórkami:
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
 &lt;table&gt;
@@ -87,57 +89,62 @@
     &lt;td&gt;ul. Stroma 23, Krak&oacute;w&lt;/td&gt;
     &lt;td&gt;555-555-556&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Adam Smith&lt;/td&gt;
-    &lt;td&gt;ul. Wiejska 45, Pozna&nacute;&lt;/td&gt;
-    &lt;td&gt;555-555-557&lt;/td&gt;
-  &lt;/tr&gt;
 &lt;/table&gt;
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-
-            <table>
-                <tr>
-                    <th>Imię</th>
-                    <th>Adres</th>
-                    <th>Telefon</th>
-                </tr>
-                <tr>
-                    <td>Jan Kowalski&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>ul. Nowa 12, Warszawa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>555-555-555</td>
-                </tr>
-                <tr>
-                    <td>Maria Nowak</td>
-                    <td>ul. Stroma 23, Kraków</td>
-                    <td>555-555-556</td>
-                </tr>
-                <tr>
-                    <td>Adam Smith</td>
-                    <td>ul. Wiejska 45, Poznań</td>
-                    <td>555-555-557</td>
-                </tr>
-            </table>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <table>
+                        <tr>
+                            <th class="color-text-black">Imię</th>
+                            <th class="color-text-black">Adres</th>
+                            <th class="color-text-black">Telefon</th>
+                        </tr>
+                        <tr>
+                            <td>Jan Kowalski</td>
+                            <td>ul. Nowa 12, Warszawa</td>
+                            <td>555-555-555</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Nowak</td>
+                            <td>ul. Stroma 23, Kraków</td>
+                            <td>555-555-556</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Możesz dostosować tabele, dodając więcej wierszy i kolumn, zmieniając tekst w komórkach i stosując style za pomocą CSS.
+            </p>
         </div>
         <div class="big-page-header"></div>
-        <h1>Zasięg Tabeli</h1>
         <div class="section-with-image">
-            <p>
-                Tabela ma zasięg, który definiuje <span class="color-text-red">zakres komórek</span>, których dotyczy <span class="color-text-yellow">nagłówek</span> lub <span class="color-text-yellow">stopka</span> tabeli.
-                Zasięg nagłówka tabeli określa, które komórki są opisane przez nagłówek, a zasięg stopki tabeli
-                określa, które komórki są opisane przez stopkę.
-            </p>
-            <img src="/img/vector72.png" alt="">
+            <div class="text-content">
+                <h1>Zasięg Tabeli</h1>
+                <p>
+                    Tabela ma zasięg, który definiuje zakres komórek, których dotyczy nagłówek lub stopka tabeli.
+                    Zasięg nagłówka tabeli określa, które komórki są opisane przez nagłówek, a zasięg stopki tabeli
+                    określa, które komórki są opisane przez stopkę.
+                </p>
+            </div>
+            <img src="/img/vector182.png" alt="">
         </div>
         <p class="text-container article tooltip no-margin-top">
-            Istnieją trzy rodzaje zasięgu:
+            Istnieją trzy rodzaje zasięgu tabeli:
             <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w kolumnie">col</a></code>
             <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w wierszu">row</a></code>
             <code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w grupie wierszy">rowgroup</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
 &#x3C;table&#x3E;
@@ -165,60 +172,63 @@
                 </code>
             </pre>
         </div>
-        <div class="double-elements">
-            <div class="browser browser-no-margin-top">
-                <table>
-                    <tr>
-                        <th scope="col">Nazwa produktu</th>
-                        <th scope="col">Cena</th>
-                        <th scope="col">Ilość</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mleko</th>
-                        <td>3,50 zł</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Chleb</th>
-                        <td>2,50 zł</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Jajka</th>
-                        <td>5,00 zł</td>
-                        <td>15</td>
-                    </tr>
-                </table>
-
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <table>
+                        <tr>
+                            <th class="color-text-black" scope="col">Nazwa produktu</th>
+                            <th class="color-text-black" scope="col">Cena</th>
+                            <th class="color-text-black" scope="col">Ilość</th>
+                        </tr>
+                        <tr>
+                            <th class="color-text-gray" scope="row">Mleko</th>
+                            <td>3,50 zł</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th class="color-text-gray" scope="row">Chleb</th>
+                            <td>2,50 zł</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th class="color-text-gray" scope="row">Jajka</th>
+                            <td>5,00 zł</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="alert-card article tooltip">
-                <img style="width: 50px;" src="/img/note.png" alt="">
-                <b>Note</b>
-                <div class="line"></div>
-                <p>
-                    Aby określić zasięg nagłówka lub stopki tabeli, należy użyć atrybutu
-                    <code><a href="#" pro-tip="Pozwala określić, czy dany nagłówek lub stopka tabeli odnosi się tylko do jednej kolumny lub jednego wiersza, czy może obejmuje większy obszar">scope</a></code> znacznika
-                    <code><a href="#" pro-tip="Określa nagłówek tabeli">th</a></code> lub
-                    <code><a href="#" pro-tip="Określa stopkę tabeli">tf</a></code>
-                </p>
-            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 article tooltip">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Aby określić zasięg nagłówka lub stopki tabeli, należy użyć atrybutu
+                <code><a href="#" pro-tip="Pozwala określić, czy dany nagłówek lub stopka tabeli odnosi się tylko do jednej kolumny lub jednego wiersza, czy może obejmuje większy obszar">scope</a></code> znacznika
+                <code><a href="#" pro-tip="Określa nagłówek tabeli">th</a></code> lub
+                <code><a href="#" pro-tip="Określa stopkę tabeli">tf</a></code>
+            </p>
         </div>
         <div class="big-page-header"></div>
         <h1>Sekcje Tabeli</h1>
         <div class="section-with-image">
             <p>
-                Sekcje tabeli służą do grupowania <span class="color-text-purple">komórek</span> tabeli w logiczne grupy, ułatwiając organizację i stylizację danych.
+                Sekcje tabeli służą do grupowania komórek tabeli w logiczne grupy, ułatwiając organizację i stylizację danych.
                 co wpływa na lepszą czytelność tabeli.
             </p>
             <img src="/img/vector84.png" alt="">
         </div>
         <p class="text-container gray-container article tooltip no-margin-top">
-            Oto przykład tabeli HTML z zastosowaniem sekcji
+            Główne sekcje tabeli to między innymi:
             <code><a href="#" pro-tip="zawiera nagłówki tabeli, które są wyświetlane na górze tabeli. Zwykle służy do wyświetlania nazw kolumn tabeli.">&ltthead&gt</a></code>
             <code><a href="#" pro-tip="zawiera główne dane tabeli. Zwykle służy do wyświetlania danych tabeli.">&lttbody&gt</a></code>
             <code><a href="#" pro-tip="zawiera podsumowanie danych tabeli, które jest wyświetlane na dole tabeli. Zwykle służy do wyświetlania sumy, średniej, itp.">&lttfoot&gt</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
 &lt;table&gt;
@@ -252,49 +262,56 @@
                 </code>
             </pre>
         </div>
-        <div class="browser browser-no-margin-top">
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Produkt</th>
-                    <th>Cena</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;1</td>
-                    <td>&nbsp;&nbsp;&nbsp;Komputer</td>
-                    <td>&nbsp;&nbsp;&nbsp;3000$</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;2</td>
-                    <td>&nbsp;&nbsp;&nbsp;Monitor</td>
-                    <td>&nbsp;&nbsp;&nbsp;500$</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="1">Suma:</td>
-                    <td>20000$</td>
-                </tr>
-                </tfoot>
-            </table>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="color-text-gray">Drużyna</th>
+                            <th class="color-text-gray">Zwycięstwa</th>
+                            <th class="color-text-gray">Porażki</th>
+                            <th class="color-text-gray">Procent wygranych</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>SK Telecom T1</td>
+                            <td>23</td>
+                            <td>7</td>
+                            <td>76.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Fnatic</td>
+                            <td>19</td>
+                            <td>11</td>
+                            <td>63.3%</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
+                </div>
+            </div>
         </div>
         <div class="big-page-header"></div>
-        <h1>Atrybuty Tabeli</h1>
         <div class="section-with-image">
-            <p>
-                Atrybuty tabeli to opcjonalne parametry, które można dodać do elementu <span class="color-text-red">&lttable&gt</span> lub do
-                innych elementów wewnątrz tabeli, aby zmienić wygląd lub zachowanie tabeli, aby była ona czytelna i
-                przejrzysta dla użytkownika.
-            </p>
+            <div class="text-content highlight-container">
+                <h1>Atrybuty Tabeli</h1>
+                <p>
+                    Atrybuty tabeli to opcjonalne parametry, które można dodać do elementu <span>&lttable&gt</span> lub do
+                    innych elementów wewnątrz tabeli, aby zmienić wygląd lub zachowanie tabeli, aby była ona czytelna i
+                    przejrzysta dla użytkownika.
+                </p>
+            </div>
             <img src="/img/vector62.png" alt="">
         </div>
-        <div class="text-container lightBrown-container article tooltip">
+        <div class="text-container light-container black-list article tooltip">
+            <div class="text-content">
+                <h3>Najważniejsze atrybuty tabeli w HTML to:</h3>
+            </div>
+            <div class="line"></div>
             <p>
-                najważniejszych atrybutów tabeli HTML to:
                 <code><a href="#" pro-tip="określa grubość ramki wokół tabeli.">border</a></code>
                 <code><a href="#" pro-tip="określa odstęp między krawędzią komórki a jej zawartością.">cellpadding</a></code>
                 <code><a href="#" pro-tip="określa odstęp między komórkami tabeli.">cellspacing</a></code>
@@ -312,80 +329,74 @@
         <div class="code-block">
             <pre>
                 <code>
+&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; bgcolor=&quot;#f2f2f2&quot; align=&quot;center&quot;
+valign=&quot;middle&quot; summary=&quot;Wyniki mecz&oacute;w&quot;&gt;
 
-&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; width=&quot;50%&quot; align=&quot;center&quot; bgcolor=&quot;#f08080&quot;&gt;
-  &lt;caption&gt;Lista produkt&oacute;w&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Nazwa produktu&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Cena&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Ilo&sacute;&cacute;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Mleko&lt;/th&gt;
-      &lt;td&gt;3,50 z&lstrok;&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Chleb&lt;/th&gt;
-      &lt;td&gt;2,50 z&lstrok;&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;row&quot;&gt;Jajka&lt;/th&gt;
-      &lt;td&gt;5,00 z&lstrok;&lt;/td&gt;
-      &lt;td&gt;15&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td colspan=&quot;2&quot;&gt;&Lstrok;&aogon;czna ilo&sacute;&cacute; produkt&oacute;w:&lt;/td&gt;
-      &lt;td&gt;45&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-  &lt;summary&gt;Tabela przedstawia list&eogon; produkt&oacute;w z ich cenami i ilo&sacute;ci&aogon; dost&eogon;pn&aogon; w sklepie&lt;/summary&gt;
+  &lt;caption&gt;Wyniki mecz&oacute;w&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Data&lt;/th&gt;
+    &lt;th&gt;Gospodarz&lt;/th&gt;
+    &lt;th&gt;Go&sacute;&cacute;&lt;/th&gt;
+    &lt;th&gt;Wynik&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;02.03.2023&lt;/td&gt;
+    &lt;td&gt;Real Madryt&lt;/td&gt;
+    &lt;td&gt;Barcelona&lt;/td&gt;
+    &lt;td&gt;3:1&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;04.03.2023&lt;/td&gt;
+    &lt;td&gt;Liverpool&lt;/td&gt;
+    &lt;td&gt;Manchester United&lt;/td&gt;
+    &lt;td&gt;2:0&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;05.03.2023&lt;/td&gt;
+    &lt;td&gt;Paris Saint-Germain&lt;/td&gt;
+    &lt;td&gt;Marseille&lt;/td&gt;
+    &lt;td&gt;2:2&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;
 
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <table border="1" cellpadding="5" cellspacing="0" width="50%" align="center" bgcolor="#f08080">
-                <caption style="margin-top: 20px;">Lista produktów</caption>
-                <thead>
-                <tr>
-                    <th scope="col">Nazwa produktu</th>
-                    <th scope="col">Cena</th>
-                    <th scope="col">Ilość</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">Mleko</th>
-                    <td>3,50 zł</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <th scope="row">Chleb</th>
-                    <td>2,50 zł</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <th scope="row">Jajka</th>
-                    <td>5,00 zł</td>
-                    <td>15</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="2">Łączna ilość produktów:</td>
-                    <td>45</td>
-                </tr>
-                </tfoot>
-                <summary>Tabela przedstawia listę produktów z ich cenami i ilością dostępną w sklepie</summary>
-            </table>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <table border="1" cellpadding="5" cellspacing="0" width="600" bgcolor="#f2f2f2" align="center" valign="middle" summary="Wyniki meczów">
+                        <caption>Wyniki meczów</caption>
+                        <tr>
+                            <th class="color-text-gray">Data</th>
+                            <th class="color-text-gray">Gospodarz</th>
+                            <th class="color-text-gray">Gość</th>
+                            <th class="color-text-gray">Wynik</th>
+                        </tr>
+                        <tr>
+                            <td>02.03.2023</td>
+                            <td>Real Madryt</td>
+                            <td>Barcelona</td>
+                            <td>3:1</td>
+                        </tr>
+                        <tr>
+                            <td>04.03.2023</td>
+                            <td>Liverpool</td>
+                            <td>Manchester United</td>
+                            <td>2:0</td>
+                        </tr>
+                        <tr>
+                            <td>05.03.2023</td>
+                            <td>Paris Saint-Germain</td>
+                            <td>Marseille</td>
+                            <td>2:2</td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
         </div>
         <div class="big-page-header"></div>
         <div class="btn">

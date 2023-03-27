@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>HTML{Images}</title>
+    <title>HTML {Obrazy}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,67 +42,94 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
         <div class="section-with-image">
-            <div class="text-content">
+            <div class="text-content highlight-container">
                 <h1>Obrazy</h1>
                 <p>
                     Obrazy w języku HTML to graficzne elementy, które mogą być dodawane do stron internetowych.
-                    Są one umieszczane na stronie za pomocą tagu <span class="color-text-red">&ltimg&gt</span> i są referencyjne przez adres <span class="color-text-purple">URL</span>.
-                    Obraz może być w formacie <span class="color-text-yellow">jpg</span>, <span class="color-text-yellow">png</span>, <span class="color-text-yellow">gif</span>, <span class="color-text-yellow">svg</span> itp.
+                    Są one umieszczane na stronie za pomocą tagu <span>&ltimg&gt</span> i są referencyjne przez adres URL.
+                    Obraz może być w formacie <span>jpg</span>, <span>png</span>, <span>gif</span>, <span>svg</span> itp.
                 </p>
             </div>
             <img src="/img/vector146.png" alt="">
         </div>
         <p class="text-container lightPink-container no-margin-top article tooltip">
-            Aby dodać obraz do strony, użyj tagu <code><a href="#" pro-tip="Element HTML, który służy do wyświetlania obrazów na stronie internetowej">&ltimg&gt</a></code>  i ustaw atrybut <code><a href="#" pro-tip="S&lstrok;u&zdot;y do wskazania &zacute;r&oacute;d&lstrok;a pliku multimedialnego, takiego jak obraz, audio, wideo czy skrypt. Atrybut &quot;src&quot; jest wymagany w niekt&oacute;rych elementach HTML, takich jak &lt;img&gt;, &lt;audio&gt;, &lt;video&gt; lub &lt;script&gt;, kt&oacute;re wymagaj&aogon; pliku &zacute;r&oacute;d&lstrok;owego do wy&sacute;wietlenia lub odtworzenia">src</a></code> na <span class="color-text-purple">adres URL</span> obrazu.
+            Aby dodać obraz do strony, użyj tagu <code><a href="#" pro-tip="Element HTML, który służy do wyświetlania obrazów na stronie internetowej">&ltimg&gt</a></code>  i ustaw atrybut <code><a href="#" pro-tip="S&lstrok;u&zdot;y do wskazania &zacute;r&oacute;d&lstrok;a pliku multimedialnego, takiego jak obraz, audio, wideo czy skrypt. Atrybut &quot;src&quot; jest wymagany w niekt&oacute;rych elementach HTML, takich jak &lt;img&gt;, &lt;audio&gt;, &lt;video&gt; lub &lt;script&gt;, kt&oacute;re wymagaj&aogon; pliku &zacute;r&oacute;d&lstrok;owego do wy&sacute;wietlenia lub odtworzenia">src</a></code> na adres URL obrazu.
             Możesz również dodać atrybut <code><a href="#" pro-tip="Służy do określania alternatywnego tekstu dla elementu, który jest nieodpowiedni lub niedostępny do wyświetlenia. Atrybut ten jest zwykle używany wraz z elementem <img> i jest zalecany dla wszystkich obrazów na stronie internetowej ze względu na jego ważną funkcję dostępności.">alt</a></code> z tekstem alternatywnym, który pojawi się, gdy obraz jest niedostępny.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot;&gt;
+&lt;img src=&quot;mushroom.png&quot; alt=&quot;Opis obrazu&quot;&gt;
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <img style="width: 50px;" src="/img/icon_mushroom.png" alt="Grzybek">
+                </div>
+            </div>
+        </div>
         <div class="big-page-header"></div>
         <div class="section-with-image">
-            <div class="text-content">
+            <div class="text-content highlight-container">
                 <h1>Szerokość I Wysokość</h1>
                 <p>
-                    Szerokość i wysokość obrazu w HTML mogą być ustawione za pomocą atrybutów "<span class="color-text-green">width</span>" i "<span class="color-text-green">height</span>"
-                    w tagu <span class="color-text-red">&ltimg&gt</span>. Szerokość i wysokość mogą być określone w pikselach lub procentach.
+                    Szerokość i wysokość obrazu w HTML mogą być ustawione za pomocą atrybutów "<span>width</span>" i "<span>height</span>"
+                    w tagu <span>&ltimg&gt</span>. Szerokość i wysokość mogą być określone w pikselach lub procentach.
                 </p>
             </div>
             <img src="/img/vector15.png" alt="">
         </div>
-        <p class="text-container no-margin-top highlight-text">
-            Poniższy przykład ustawia szerokość obrazu na <code>300 pikseli</code> i wysokość na <code>200 pikseli</code>.
+        <p class="text-container no-margin-top">
+            Poniższy przykład ustawia szerokość obrazu na 300 pikseli i wysokość na 200 pikseli.
         </p>
         <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
+&lt;img src=&quot;winter.jpg&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
                 </code>
             </pre>
         </div>
-        <p class="text-container highlight-text">
-            Poniższy przykład skaluje obraz do <code>50%</code> oryginalnego rozmiaru.
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <img src="/img/winter.jpg" alt="Opis obrazu" width="300" height="200">
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container gray-container">
+            Poniższy przykład skaluje obraz do 50% oryginalnego rozmiaru.
         </p>
         <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
+&lt;img src=&quot;winter.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <img src="/img/winter.jpg" alt="Opis obrazu" width="50%" height="50%">
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
         <div class="alert-card alert-card3">
             <img style="width: 50px;" src="/img/note.png" alt="">
             <b>Note</b>
@@ -117,7 +145,7 @@
             <p>
                 Tytuł obrazu jest opcjonalnym atrybutem, który pojawia się jako podpowiedź po najechaniu na
                 obraz za pomocą kursora myszy. Natomiast podpis zdjęcia używany jest do grupowania elementów graficznych,
-                takich jak <span class="color-text-purple">obrazy</span>, wraz z ich <span class="color-text-yellow">opisami</span> i <span class="color-text-orange">podpisami</span>.
+                takich jak obrazy, wraz z ich opisami i podpisami.
             </p>
             <img src="/img/vector16.png" alt="">
         </div>
@@ -126,26 +154,47 @@
             <code><a href="#" pro-tip="Dodaje opis do danego elementu, który pojawia się po najechaniu na niego kursorem myszy">title</a></code> w tagu
             <code><a href="#" pro-tip="Element HTML, który służy do wyświetlania obrazów na stronie internetowej">&ltimg&gt</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot; title=&quot;Tytu&lstrok; obrazu&quot;&gt;
+&lt;img src=&quot;television.png&quot; title=&quot;Tytu&lstrok; obrazu&quot;&gt;
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <img style="width: 50px;" src="/img/icon_television.png" alt="Opis obrazu" title="Tytuł obrazu">
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
         <p class="text-container lightGreen-container article tooltip">
             Tag <code><a href="#" pro-tip="Służy do opisywania zawartości obiektu, umieszcza tekst bezpośrednio pod elementem">&ltfigcaption&gt</a></code> jest używany do umieszczenia tekstu podpisu bezpośrednio pod obrazem.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
 &lt;figure&gt;
-    &lt;img src=&quot;image.jpg&quot; alt=&quot;Opis obrazu&quot;&gt;
+    &lt;img src=&quot;television.png&quot;&gt;
     &lt;figcaption&gt;Podpis zdj&eogon;cia&lt;/figcaption&gt;
 &lt;/figure&gt;
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <figure>
+                        <img style="width: 50px;" src="/img/icon_television.png" alt="Opis obrazu">
+                        <figcaption>Podpis zdjęcia</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
         <div class="big-page-header"></div>
         <div class="btn">
             <a href="Tabels.html"><button>Dalej</button></a>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript {Manipulacja-Stylami-CSS }</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Objects.html">Obiekty</a></li>
+            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+            <li><a href="Values.html">Wartości</a></li>
+            <li><a href="Reference.html">Referencje</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Events.html">Eventy</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Manipulacja Stylami CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Manipulacja stylami CSS w języku JavaScript polega na programowym zmienianiu stylów CSS elementów HTML.
+                Za pomocą JavaScriptu można zmienić niemal każdą właściwość CSS, taką jak kolor, rozmiar, marginesy,
+                obramowanie, tło itp. Do manipulacji stylami CSS można użyć różnych metod i właściwości elementów DOM.
+            </p>
+            <div>
+                <img src="/img/vector117.png" alt="">
+            </div>
+        </div>
+        <p class="text-container lightOrange-container article tooltip no-margin-top">
+            Manipulowanie stylami CSS za pomocą JavaScript polega na zmianie wartości atrybutów stylów dla określonego
+            elementu HTML. Można to zrobić na kilka sposobów, na przykład za pomocą metod takich jak:
+            <code><a href="#" pro-tip="pozwala na ustawienie wartości stylu CSS na elemencie HTML. Metoda ta przyjmuje dwa argumenty: property - nazwa właściwości stylu CSS (np. backgroundColor) i value - wartość, jaką chcemy przypisać (np. red)">element.style.property = value</a></code> oraz
+            <code><a href="#" pro-tip="pozwala na pobranie obiektu CSSStyleDeclaration, który zawiera wartości stylów CSS dla danego elementu HTML. ">window.getComputedStyle(element)</a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.querySelector("p");
+element.style.color = "red";
+element.style.fontSize = "20px";
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightOrange-container article tooltip">
+            Możesz także dodać lub usunąć klasy CSS dla elementu za pomocą metod takich jak
+            <code><a href="#" pro-tip="pozwala na dodanie klasy do listy klas dla danego elementu HTML.">element.classList.add</a></code> oraz
+            <code><a href="#" pro-tip="pozwala na usunięcie klasy z listy klas dla danego elementu HTML.">element.classList.remove</a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.querySelector("p");
+element.classList.add("highlight");
+element.classList.remove("highlight");
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Zmiany stylów CSS mogą być wywoływane w odpowiedzi na różne zdarzenia, takie jak kliknięcie przycisku
+                czy przesunięcie suwaka. Manipulacja stylami CSS za pomocą JavaScriptu pozwala na tworzenie bardziej
+                interaktywnych stron internetowych.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <!--  -->
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_colorText.png" alt=""> Zmiana koloru tekstu</h2>
+        <p class="text-container blue-container">
+            Można zmienić kolor tekstu na stronie, reagując na działania użytkownika, takie jak kliknięcie przycisku.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const button = document.querySelector("button");
+const paragraphs = document.querySelectorAll("p");
+
+button.addEventListener("click", function() {
+  for (const paragraph of paragraphs) {
+    paragraph.style.color = "red";
+  }
+});
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_background.png" alt=""> Zmiana tła</h2>
+        <p class="text-container lightGreen-container">
+            Można zmienić tło elementu na stronie, reagując na działania użytkownika, takie jak przesuwanie suwaka.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const slider = document.querySelector("input[type='range']");
+const box = document.querySelector(".box");
+
+slider.addEventListener("input", function() {
+  const value = slider.value;
+  box.style.backgroundColor = `rgb(${value}, ${value}, ${value})`;
+});
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_research.png" alt=""> Dodawanie i usuwanie klas CSS</h2>
+        <p class="text-container red-container">
+            Można dodać lub usunąć klasę CSS do elementu na stronie, reagując na działania użytkownika, takie jak kliknięcie przycisku.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const button = document.querySelector("button");
+const box = document.querySelector(".box");
+
+button.addEventListener("click", function() {
+  if (box.classList.contains("highlight")) {
+    box.classList.remove("highlight");
+  } else {
+    box.classList.add("highlight");
+  }
+});
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-no-margin-top">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                To tylko kilka przykładów, jak można używać JavaScriptu do manipulowania stylami CSS. W rzeczywistych
+                aplikacjach można używać bardziej skomplikowanych technik, takich jak animacje, transformacje i efekty
+                parallax, aby stworzyć bardziej interaktywne i atrakcyjne strony internetowe.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Metody I Właściwości</h1>
+                <p>
+                    Metody i właściwości do manipulacji stylami CSS to narzędzia, które umożliwiają programowe zmienianie
+                    stylów CSS elementów HTML za pomocą języka JavaScript. Te metody i właściwości umożliwiają dostęp do
+                    stylów CSS elementu, a także umożliwiają dodawanie, usuwanie i zmianę wartości stylów. Oto najczęściej
+                    używane metody i właściwości do manipulowania stylami CSS w języku JavaScript:
+                </p>
+            </div>
+            <img src="/img/vector153.png" alt="">
+        </div>
+        <p class="text-container red-container article tooltip no-margin-top">
+            <code><a href="#" pro-tip="właściwość obiektu Element w JavaScript, która pozwala na dostęp i manipulowanie stylami CSS danego elementu HTML. Można używać jej do ustawiania lub pobierania stylów bezpośrednio z elementu. Na przykład, aby zmienić kolor tła elementu, można użyć element.style.backgroundColor = red;">element.style</a></code>- ta właściwość pozwala na dostęp do stylów
+            wewnętrznych elementu i umożliwia ustawianie nowych wartości. Można użyć tej właściwości do ustawienia
+            różnych stylów, takich jak kolor, tło, marginesy itp.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.getElementById("my-element");
+element.style.color = "red";
+                </code>
+            </pre>
+        </div>
+        <p class="text-container light-container color-text-gray article tooltip">
+            <code><a href="#" pro-tip="właściwość obiektu Element w JavaScript, która pozwala na dostęp i manipulowanie listą klas CSS danego elementu HTML. Można używać jej do dodawania, usuwania lub sprawdzania klas na elemencie. Na przykład, aby dodać klasę CSS do elementu, można użyć element.classList.add(nazwa-klasy);">element.classList</a></code>- właściwość pozwalająca na dostęp do listy klas CSS elementu
+            i umożliwia dodawanie, usuwanie i przełączanie klas.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.getElementById("my-element");
+element.classList.add("my-class");
+element.classList.remove("another-class");
+element.classList.toggle("toggle-class");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            <code><a href="#" pro-tip="metoda globalnego obiektu window w JavaScript, która zwraca obiekt CSSStyleDeclaration zawierający obliczone style CSS dla danego elementu HTML. Można używać jej do pobierania wartości stylów CSS, które zostały zdefiniowane za pomocą reguł CSS lub ustawione za pomocą JavaScript.">window.getComputedStyle(element)</a></code>- metoda pozwalająca na uzyskanie
+            obiektu CSSStyleDeclaration, który zawiera obliczone wartości stylów CSS dla danego elementu.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.getElementById("my-element");
+const styles = window.getComputedStyle(element);
+const color = styles.getPropertyValue("color");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container light-container color-text-gray article tooltip">
+            <code><a href="#" pro-tip="metoda obiektu Element w JavaScript, która pozwala na ustawienie wartości stylów CSS dla danego elementu HTML. Można używać jej do ustawiania stylów, które nie są dostępne bezpośrednio przez właściwość element.style. Na przykład, aby ustawić priorytet stylu, można użyć element.style.setProperty(color, red, important);">element.style.setProperty(name, value, priority)</a></code>- ta metoda
+            umożliwia ustawienie określonej wartości dla konkretnej właściwości CSS.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.getElementById("my-element");
+element.style.setProperty("color", "red", "important");
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            <code><a href="#" pro-tip="metoda obiektu Element w JavaScript, która usuwa wartość stylu CSS dla danego elementu HTML. Można używać jej do usuwania stylów, które zostały ustawione za pomocą JavaScript lub zdefiniowane w regułach CSS.">element.style.removeProperty(name)</a></code>- metoda umożliwiająca usunięcie
+            określonej właściwości CSS z elementu.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const element = document.getElementById("my-element");
+element.style.removeProperty("color");
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="JavaScript_libraries.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

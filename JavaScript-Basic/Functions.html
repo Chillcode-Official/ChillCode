@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcje-JavaScript</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Objects.html">Obiekty</a></li>
+            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+            <li><a href="Values.html">Wartości</a></li>
+            <li><a href="Reference.html">Referencje</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Events.html">Eventy</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Funkcje</h1>
+                <p>
+                    W języku JavaScript funkcje są niezwykle ważnymi i potężnymi konstrukcjami językowymi, które
+                    pozwalają na organizację i modernizacje kodu. Funkcje są również ważne dla programowania funkcyjnego
+                    i pozwalają na przekazywanie i zwracanie wartości.
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector10.png" alt="">
+            </div>
+        </div>
+        <p class="text-container red-container no-margin-top article tooltip">
+            Aby utworzyć <code><a href="#" pro-tip="Funkcja to blok kodu, który wykonuje określone zadanie. Umożliwia ona napisanie kodu, który jest bardziej zorganizowany, modułowy i łatwiejszy w utrzymaniu.">funkcję</a></code> w języku JavaScript, można użyć następującej składni:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+function nazwaFunkcji(argumenty) {
+
+    // Ciało funkcji
+    // ...
+    return wartość;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container gray-container article tooltip">
+            Aby wywołać funkcję, należy podać jej nazwę i opcjonalnie argumenty:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+function dodajLiczby(liczba1, liczba2) {
+
+  return liczba1 + liczba2;
+}
+
+// Możesz wywołać tę funkcję, przekazując dwie liczby jako argumenty, w ten sposób
+var suma = dodajLiczby(3, 4);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            W języku JavaScript istnieją również <code><a href="#" pro-tip="Funkcje strzałkowe to alternatywny sposób definiowania funkcji. Funkcję strzałkową definiuje się za pomocą operatora strzałki =>. Zamiast słowa kluczowego function, wpisuje się listę parametrów w nawiasach okrągłych, a blok kodu umieszcza się po prawej stronie strzałki.">funkcje strzałkowe</a></code>, które są krótszym i bardziej elastycznym sposobem tworzenia funkcji:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+const dodaj = (a, b) => {
+
+  return a + b;
+}
+                </code>
+            </pre>
+        </div>
+        <div>
+            <div class="alert-card alert-card3">
+                <img style="width: 50px;" src="/img/note.png" alt="">
+                <b>Note</b>
+                <div class="line"></div>
+                <p>
+                    Funkcje w języku JavaScript są również przekazywane jako argumenty innych funkcji i mogą być
+                    zwracane jako wartość z innej funkcji. To pozwala na budowanie skomplikowanych aplikacji i
+                    programowanie funkcyjne.
+                </p>
+            </div>
+        </div>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b>Ważne</b>
+            <div class="line"></div>
+            <p>
+                Jednym z ważnych konceptów związanych z funkcjami jest ich zmienność. Funkcje w języku JavaScript
+                są zmiennymi i mogą być przypisane do innych zmiennych, a nawet przekazywane jako argumenty innych
+                funkcji. Funkcje są także w stanie zwracać inne funkcje jako wartości zwrotne.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Funkcja Anonimowa</h1>
+        <div class="section-with-image">
+            <p>
+                Funkcja anonimowa to funkcja, która nie posiada nazwy. Są one często używane w języku JavaScript
+                jako argumenty przekazywane do innych funkcji lub jako funkcje zwrotne. Funkcje anonimowe są
+                również często używane do tworzenia funkcji, które są tylko raz używane w aplikacji.
+            </p>
+            <img src="/img/vector21.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top article tooltip">
+            Oto przykład <code><a href="#" pro-tip="Jest to funkcja, która jest przypisana do zmiennej lub argumentu funkcji, a następnie wywoływana poprzez tę zmienną lub argument. Funkcje anonimowe są powszechne w języku JavaScript i są często używane do definiowania funkcji zwrotnych (callback) lub do tworzenia funkcji wyrażeń.">funkcji anonimowej</a></code> w języku JavaScript:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+// Funkcja anonimowa jako argument przekazywany do funkcji setTimeout
+setTimeout(function() {
+
+  console.log("Czas minął!");
+
+}, 1000);
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    Czas minął!
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container purple-container article tooltip">
+            Można również przypisać funkcję anonimową do zmiennej i użyć jej jako <code><a href="#" pro-tip="to funkcja, która jest przekazywana jako argument do innej funkcji i jest wywoływana w momencie, gdy ta funkcja wykona swoje zadanie. Funkcje zwrotne są bardzo powszechne w języku JavaScript, ponieważ wiele funkcji w języku JavaScript jest asynchronicznych, co oznacza, że ich wykonanie może zająć pewien czas, a funkcje zwrotne pozwalają na obsługę wyniku wykonania funkcji asynchronicznej.">funkcji zwrotnej</a></code>:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+let przywitajSię = function(imię) {
+
+  console.log("Witaj, " + imię);
+};
+
+przywitajSię("Jan");
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    Witaj, Jan
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Funkcje anonimowe są często używane w języku JavaScript do tworzenia funkcji, które są używane
+                tylko raz, a następnie są usuwane. Jest to przydatne, ponieważ pozwala uniknąć zanieczyszczenia
+                globalnego zasięgu zmiennych.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Wszystkie właściwości Funkcji</h1>
+        <div class="section-with-image">
+            <p>
+                W języku JavaScript funkcja jest obiektem, więc posiada kilka właściwości i metod. Oto kilka najważniejszych właściwości funkcji:
+            </p>
+            <img src="/img/vector45.png" alt="">
+        </div>
+        <p class="text-container lightPink-container article tooltip no-margin-top">
+             <code><a href="#" pro-tip="Właściwość ta zawiera obiekt prototypu funkcji, który jest używany do ustawienia łańcucha prototypów dla obiektów tworzonych z użyciem konstruktora funkcji. Można do niego dodawać metody i właściwości, które będą dostępne dla wszystkich obiektów stworzonych z użyciem tego konstruktora.">prototype</a></code> jest wbudowanym obiektem, który jest dostępny
+            dla wszystkich funkcji. Służy do tworzenia dziedziczenia między obiektami.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+function Person(imię, nazwisko) {
+  this.imię = imię;
+  this.nazwisko = nazwisko;
+}
+
+Person.prototype.przedstawSię = function() {
+  console.log("Cześć, jestem " + this.imię + " " + this.nazwisko);
+};
+
+var jan = new Person("Jan", "Kowalski");
+jan.przedstawSię();
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    Cześć, jestem Jan Kowalski
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="Właściwość ta zwraca liczbę parametrów formalnych (nie biorąc pod uwagę parametrów domyślnych) funkcji.">length</a></code> zwraca liczbę argumentów, jakie funkcja oczekuje na wejściu.</p>
+            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="Właściwość ta zwraca nazwę funkcji.">name</a></code> zwraca nazwę funkcji.</p>
+        </div>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.length);
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-padding">
+                            2
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.name);
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-padding">
+                            sum
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="Właściwość ta zawiera obiekt reprezentujący argumenty przekazane do funkcji. Nie jest to tablica, ale podobny obiekt z właściwościami numerycznymi dla każdego argumentu i właściwością length.">arguments</a></code> jest obiektem zawierającym argumenty, które zostały przekazane do funkcji.</p>
+            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="Metoda ta wywołuje funkcję z określonym obiektem jako wartością this i przekazuje argumenty jako osobne argumenty do funkcji.">call()</a></code> pozwala wywołać funkcję i przekazać do niej listę argumentów.</p>
+        </div>
+        <div class="double-elements">
+            <div>
+                <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+function sum() {
+  var result = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
+}
+
+console.log(sum(1, 2, 3, 4));
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-padding">
+                            10
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="code-block code-block-margin-top">
+                <pre>
+                    <code>
+function przywitajSię(imię) {
+
+  console.log("Witaj, " + imię);
+}
+
+var imiona = ["Jan", "Anna", "Piotr"];
+for (var i = 0; i < imiona.length; i++) {
+  przywitajSię.call(null, imiona[i]);
+}
+                    </code>
+                </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content output-padding output-list">
+                            <ul>
+                                <li>Witaj, Jan</li>
+                                <li>Witaj, Anna</li>
+                                <li>Witaj, Piotr</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container lightPink-container article tooltip">
+             <code><a href="#" pro-tip="Metoda ta wywołuje funkcję z określonym obiektem jako wartością this i przekazuje argumenty jako tablicę.">apply()</a></code> pozwala wywołać funkcję i przekazać do niej tablicę argumentów.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+function sum() {
+  var result = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+  return result;
+}
+
+var liczby = [1, 2, 3, 4];
+console.log(sum.apply(null, liczby));
+
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    10
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container lightPink-container article tooltip">
+             <code><a href="#" pro-tip="Metoda ta zwraca nową funkcję, która ma określoną wartość this i określone argumenty przekazane do funkcji jako argumenty wiązania. Funkcja zwrócona przez bind() może być wywołana później z tą samą wartością this i argumentami przekazanymi do bind().">bind()</a></code> tworzy nową funkcję, która jest połączona z bieżącą funkcją i
+            przypisana do określonego kontekstu.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+var przywitajSię = function(imię) {
+  console.log("Witaj, " + imię + ", jestem " + this.nazwa);
+}.bind({nazwa: "ChatGPT"});
+
+przywitajSię("Jan");
+
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    Witaj, Jan, jestem Ignacy
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Te właściwości pozwalają na bardziej zaawansowane wykorzystywanie funkcji w języku JavaScript.
+            </p>
+        </div>
+        <div class="btn">
+            <a href="Tables.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

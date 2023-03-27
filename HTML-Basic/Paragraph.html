@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>HTML{Paragraph}</title>
+    <title>HTML {Paragraf}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
@@ -51,38 +53,41 @@
     <div class="content">
         <h1>Paragraf</h1>
         <div class="section-with-image">
-            <div class="text-content">
+            <div class="text-content highlight-container">
                 <p>
                     Paragraf jest jednym z podstawowych elementów HTML i jest używany do organizowania tekstu na stronie.
                     Można go używać zarówno do tworzenia dłuższych tekstów, jak i krótszych fragmentów.
-                    Tekst pomiędzy tagami <span class="color-text-orange">&lt/p&gt</span> a <span class="color-text-orange">&lt/p&gt</span> jest traktowany jako akapit i jest automatycznie odstępny od innych
+                    Tekst pomiędzy tagami <span>&lt/p&gt</span> a <span>&lt/p&gt</span> jest traktowany jako akapit i jest automatycznie odstępny od innych
                     elementów na stronie.
                 </p>
             </div>
             <img src="/img/vector11.png" alt="">
         </div>
-        <p class="text-container brown-container no-margin-top article tooltip">
+        <p class="text-container orange-container no-margin-top article tooltip">
             Tag <code><a href="#" pro-tip="Element HTML, który oznacza akapit. Tekst umieszczony wewnątrz elementu <p> jest wyświetlany w bloku, z odstępem na górze i na dole. Element ten służy do organizowania tekstu na stronie internetowej i często jest stosowany do wstawiania treści artykułów.">&ltp&gt</a></code> jest używany do tworzenia akapitów tekstu w HTML.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
-&ltp&gt To jest paragraf tekstu. Może zawierać różnego rodzaju informacje, takie jak opisy, definicje itp &lt/p&gt
+                <code class="language-xml">
+&ltp&gt jest paragraf tekstu. Może zawierać różnego rodzaju informacje, takie jak opisy, definicje itp &lt/p&gt
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top">
-            <p class="normal-p">
-                To jest paragraf tekstu. Może zawierać różnego rodzaju informacje, takie jak opisy, definicje itp
-            </p>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-long">
+                    <p>To jest paragraf tekstu. Może zawierać różnego rodzaju informacje, takie jak opisy, definicje itp..</p>
+                </div>
+            </div>
         </div>
         <div class="big-page-header"></div>
         <h1>Nagłówek</h1>
         <div class="section-with-image">
-            <div class="text-content color-text-orange">
+            <div class="text-content color-text-orange highlight-container">
                 <p>
                     Nagłówki w HTML to tagi, które służą do tworzenia nagłówków i podnagłówków na stronie internetowej.
-                    Są one oznaczone przez tagi <span>&lth1&gt</span> do <span>&lth6&gt</span>. Tag <b>&lth1&gt</b> jest największy i najważniejszy, a <b>&lth6&gt</b> jest
+                    Są one oznaczone przez tagi &lth1&gt do &lth6&gt. Tag <span>&lth1&gt</span> jest największy i najważniejszy, a <span>&lth6&gt</span> jest
                     najmniejszy i najmniej ważny. Nagłówki służą do tworzenia struktury dokumentu i ułatwienia nawigacji
                     po stronie.
                 </p>
@@ -90,17 +95,17 @@
             <img src="/img/vector8.png" alt="">
         </div>
         <p class="text-container cream-container article tooltip no-margin-top">
-            Tagi <code><a href="#" pro-tip="Element HTML, który oznacza nagłówek pierwszego poziomu. Element ten jest zwykle używany do wyróżniania najważniejszego nagłówka na stronie, na przykład tytułu artykułu lub nazwy firmy. Tekst umieszczony wewnątrz elementu <h1> jest zwykle wyświetlany w większej czcionce i może mieć inny styl lub kolor niż pozostały tekst na stronie.">&lth1&gt</a></code> do
-            <code><a href="#" pro-tip="Element HTML, który oznacza nagłówek szóstego poziomu. Element ten jest najmniejszym nagłówkiem w hierarchii nagłówków i jest rzadko stosowany, ponieważ jest mało widoczny i mały w stosunku do reszty tekstu na stronie. Zazwyczaj używa się go do wyróżnienia podtytułów lub innych mniej ważnych informacji na stronie.">&lth6&gt</a></code> są używane do tworzenia nagłówków na stronie.
+            Tagi <code><a href="#" pro-tip="Element HTML, który oznacza nagłówek pierwszego poziomu. Element ten jest zwykle używany do wyróżniania najważniejszego nagłówka na stronie, na przykład tytułu artykułu lub nazwy firmy. Tekst umieszczony wewnątrz elementu <h1> jest zwykle wyświetlany w większej czcionce i może mieć inny styl lub kolor niż pozostały tekst na stronie">&lth1&gt</a></code> do
+            <code><a href="#" pro-tip="Element HTML, który oznacza nagłówek szóstego poziomu. Element ten jest najmniejszym nagłówkiem w hierarchii nagłówków i jest rzadko stosowany, ponieważ jest mało widoczny i mały w stosunku do reszty tekstu na stronie. Zazwyczaj używa się go do wyróżnienia podtytułów lub innych mniej ważnych informacji na stronie">&lth6&gt</a></code> są używane do tworzenia nagłówków na stronie.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
-&lth1&gtNagłówek h1&ltH1&gt
+                <code class="language-xml">
+&lt;h1&gt; Nagłówek h1 &lt;/h1&gt;
 
-&lth2&gtNagłówek h2&ltH2&gt
+&lt;h2&gt; Nagłówek h2 &lt;/h2&gt;
 
-&lth3&gtNagłówek h3&ltH3&gt
+&lt;h3&gt; Nagłówek h3 &lt;/h3&gt;
                 </code>
             </pre>
         </div>
@@ -125,46 +130,51 @@
             </div>
         </div>
         <div class="big-page-header"></div>
-        <h1>Nowa Linia W HTML</h1>
-        <p>W HTML istnieje kilka sposobów na utworzenie nowej linii:
+        <h1>Nowa Linia</h1>
+        <p>W HTML istnieje kilka sposobów na utworzenie nowej linii:</p>
         <p class="text-container gray-container article tooltip">
-             Tag <code><a href="#" pro-tip="Tag HTML używany do wstawienia przejścia do nowej linii bez tworzenia nowego akapitu. Można go stosować między innymi wewnątrz elementów p, div, td, th itp.">&ltbr&gt</a></code> jest używany do tworzenia nowej linii.
+             Przy użyciu znacznika <code><a href="#" pro-tip="Tag HTML używany do wstawienia przejścia do nowej linii bez tworzenia nowego akapitu. Można go stosować między innymi wewnątrz elementów p, div, td, th itp.">&ltbr&gt</a></code> (line break), który powoduje przejście do nowej linii.
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
-&ltp&gtTo jest pierwsza linia. &ltbr&gt To jest druga linia.&lt/p&gt
+                <code class="language-xml">
+&ltp&gt
+    To jest pierwsza linia. &ltbr&gt To jest druga linia.
+&lt/p&gt
                 </code>
             </pre>
         </div>
-        <p class="text-container gray-container article tooltip">
-            Znak <code><a href="#" pro-tip="Znak specjalny używany w niektórych językach programowania do oznaczenia przejścia do nowej linii w tekście.">\n</a></code> może być użyty w ciągu tekstowym, aby utworzyć nową linię.
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
+                    <p>To jest pierwsza linia. <br> To jest druga linia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container gray-container article tooltip tooltip">
+             Można też użyć znacznika <code><a href="#" pro-tip="">&lt;p&gt;</a></code>, który powoduje rozpoczęcie nowego akapitu i przejście do nowej linii:
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
-                <code>
-&ltp&gtTo jest pierwsza linia.\n To jest druga linia.&lt/p&gt
+                <code class="language-xml">
+&lt;p&gt; Przyk&lstrok;adowy tekst. &lt;/p&gt;
+
+&lt;p&gt; Kolejna linia tekstu. &lt;/p&gt;
                 </code>
             </pre>
         </div>
-        <p class="text-container gray-container article tooltip">
-            Atrybut <code><a href="#" pro-tip="Jest to atrybut CSS, który można dodać do elementu HTML, aby zachować oryginalną spację i formatowanie tekstu, tak jak zostało ono napisane w kodzie źródłowym. Element ten może być przydatny w przypadku wyświetlania kodu źródłowego lub innych fragmentów tekstu wymagających zachowania oryginalnej struktury.">style="white-space: pre;</a></code>
-            może być użyty dla tagu <code><a href="#" pro-tip="Element HTML, który oznacza akapit. Tekst umieszczony wewnątrz elementu <p> jest wyświetlany w bloku, z odstępem na górze i na dole. Element ten służy do organizowania tekstu na stronie internetowej i często jest stosowany do wstawiania treści artykułów.">&ltp&gt</a></code> lub
-            <code><a href="#" pro-tip="Element HTML, który służy do grupowania innych elementów HTML i organizowania ich w bloki. Element ten może być używany do tworzenia kontenerów na różne sekcje strony internetowej, takich jak nagłówek, stopka, treść artykułu itp. Element <div> może być stylizowany za pomocą CSS, aby nadać mu odpowiednie wymiary i układ na stronie.">&ltdiv&gt</a></code> aby zachować formatowanie
-            tekstu, w tym nowe linie.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
-&ltp style="white-space: pre;"&gt To jest pierwsza linia.
-To jest druga linia.&lt/p&gt
-                </code>
-            </pre>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
+                    <p>Przykładowy tekst. <br> Kolejna linia tekstu.</p>
+                </div>
+            </div>
         </div>
-        <div class="browser browser-no-margin-top">
-            <p class="normal-p">To jest pierwsza linia.</p>
-            <p class="normal-p">To jest druga linia.</p>
-        </div>
+
+
         <div class="btn">
             <a href="Text_HTML.html"><button>Dalej</button></a>
         </div>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript {Funkcje matematyczne}</title>
+  <link rel="stylesheet" href="../Basic.css"/>
+
+  <!-- Highlight JS init: -->
+  <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+  <script src="/Highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+      <section>
+        <ul>
+          <button><li><a href="../EduBear.html">Home</a></li></button>
+          <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+          <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+          <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+        </ul>
+      </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Objects.html">Obiekty</a></li>
+            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+            <li><a href="Values.html">Wartości</a></li>
+            <li><a href="Reference.html">Referencje</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Events.html">Eventy</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+      <div class="section-with-image">
+        <div class="text-content">
+          <h1>Funkcje Matematyczne</h1>
+          <p>
+            Funkcje matematyczne w języku JavaScript to funkcje dostępne w bibliotece Math, które umożliwiają wykonywanie
+            różnych obliczeń matematycznych, takich jak obliczanie pierwiastka, potęgi, logarytmu, trigonometrii i wiele
+            innych. Są one dostępne jako metody obiektu Math i można je wywoływać w swoim kodzie, aby wykonać określone obliczenia.
+          </p>
+        </div>
+        <div>
+          <img src="/img/vector81.png" alt="">
+        </div>
+      </div>
+      <p class="text-container lightOrange-container article tooltip no-margin-top">
+        Przykład użycia kilku <code><a href="#" pro-tip="W JavaScript istnieje wiele funkcji matematycznych, które są dostępne w ramach standardowej biblioteki języka. Te funkcje umożliwiają wykonywanie operacji matematycznych w programie, takich jak obliczenia arytmetyczne, zaawansowane funkcje matematyczne i inne.">funkcji matematycznych</a></code> w języku JavaScript:
+      </p>
+      <div class="code-block code-block-margin-top">
+         <pre>
+           <code>
+// Obliczenie wartości bezwzględnej liczby
+console.log(Math.abs(-5)); // 5
+
+
+// Zaokrąglenie liczby do najbliższej całkowitej
+console.log(Math.round(4.7)); // 5
+console.log(Math.round(4.4)); // 4
+
+
+// Obliczenie największej i najmniejszej z kilku liczb
+console.log(Math.max(1, 2, 3, 4, 5)); // 5
+console.log(Math.min(1, 2, 3, 4, 5)); // 1
+
+
+// Potęgowanie
+console.log(Math.pow(2, 3)); // 8
+
+
+// Obliczenie pierwiastka kwadratowego
+console.log(Math.sqrt(16)); // 4
+
+
+// Losowanie liczby zmiennoprzecinkowej z zakresu (0, 1)
+console.log(Math.random());
+           </code>
+         </pre>
+      </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    5<br>
+                    5<br>
+                    4<br>
+                    5<br>
+                    1<br>
+                    8<br>
+                    4<br>
+                    0.8375510964886597
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container lightOrange-container">
+        Składnia użycia funkcji matematycznych jest następująca:
+      </p>
+    <div class="code-block code-block-margin-top">
+      <pre>
+        <code>
+Math.nazwa_funkcji(argumenty);
+        </code>
+      </pre>
+    </div>
+    <div class="alert-card alert-card3 alert-card-gray">
+        <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+        <b>Wyjaśnienie</b>
+        <div class="line"></div>
+        <p>
+        nazwa_funkcji jest nazwą funkcji matematycznej, a argumenty to wartości, które są wprowadzane do funkcji
+        jako argumenty i są używane do wykonywania obliczeń. Funkcje matematyczne zwracają wartość, która jest wynikiem obliczeń.
+      </p>
+    </div>
+    <div class="big-page-header"></div>
+    <h2 class="page-header"><img class="icon-img-big" src="/img/maths.png" alt=""> Najpopularniejsze Funkcję Matematyczne</h2>
+    <p>
+        dostępne w języku JavaScript wraz z przykładami użycia:
+    </p>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca wartość bezwzględną liczby x.">Math.abs(x)</a></code>- zwraca wartość bezwzględną liczby x.</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca najmniejszą całkowitą liczbę, która jest większa lub równa liczbie x.">Math.ceil(x)</a></code>- zwraca najmniejszą liczbę całkowitą większą lub równą x.</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.abs(-5); // 5
+          </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+           <code>
+Math.ceil(4.2); // 5
+           </code>
+        </pre>
+      </div>
+    </div>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca największą całkowitą liczbę, która jest mniejsza lub równa liczbie x.">Math.floor(x)</a></code>- zwraca największą liczbę całkowitą mniejszą lub równą x.</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca największą wartość spośród podanych">Math.max(a,b)</a></code>- zwraca największą wartość spośród argumentów a, b..</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.floor(4.9); // 4
+          </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.max(1, 2, 3, 4); // 4
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca najmniejszą wartość spośród podanych">Math.min(a,b)</a></code>- zwraca najmniejszą wartość spośród argumentów a, b..</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca wartość liczby x podniesionej do potęgi y">Math.pow(x, y)</a></code>- zwraca wartość x podniesione do potęgi y.</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+       <pre>
+          <code>
+Math.min(1, 2, 3, 4); // 1
+          </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.pow(2, 3); // 8
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca wartość liczby x zaokrągloną do najbliższej całkowitej liczby.">Math.round(x)</a></code>- zwraca najbliższą liczbę całkowitą dla liczby x.</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca pierwiastek z liczby x">Math.sqrt(x)</a></code>- zwraca pierwiastek kwadratowy liczby x.</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.round(4.5); // 5
+         </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.sqrt(16); // 4
+        </code>
+       </pre>
+      </div>
+    </div>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca losową liczbę z przedziału od 0 (włącznie) do 1 (wyłącznie).">Math.random()</a></code>- zwraca losową liczbę z przedziału [0, 1).</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca sinus kąta x (w radianach).">Math.sin(x)</a></code>- zwraca sinus kąta x wyrażonego w radianach.</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.random(); // 0.123456789
+         </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.sin(Math.PI/2); // 1
+        </code>
+       </pre>
+      </div>
+    </div>
+    <div class="double-elements">
+      <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca cosinus kąta x (w radianach).">Math.cos(x)</a></code>- zwraca kosinus kąta x wyrażonego w radianach.</p>
+      <p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="funkcja matematyczna która zwraca logarytm liczby x.">Math.log(x)</a></code>- zwraca logarytm naturalny liczby x.</p>
+    </div>
+    <div class="double-elements">
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.cos(Math.PI); // -1
+         </code>
+        </pre>
+      </div>
+      <div class="code-block code-block-margin-top">
+        <pre>
+          <code>
+Math.log(10); // 2.302585092994046
+        </code>
+       </pre>
+      </div>
+    </div>
+      <div class="alert-card">
+          <img style="width: 50px;" src="/img/note.png" alt="">
+          <b>Note</b>
+          <div class="line"></div>
+          <p>
+          Te przykłady pokazują, jak użyć funkcji matematycznych w języku JavaScript do wykonywania różnych obliczeń.
+        </p>
+      </div>
+      <div class="btn">
+        <a href="Values.html"><button>Dalej</button></a>
+      </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

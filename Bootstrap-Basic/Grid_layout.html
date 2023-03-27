@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap {-Układ siatki Grid}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+            <li><a href="Class.html">Klasa</a></li>
+            <li><a href="Text_styles.html">Style tekstowe</a></li>
+            <li><a href="Components.html">Komponenty</a></li>
+            <li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+            <li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Układ siatki Grid</h1>
+                <p>
+                    System siatki Bootstrap to responsywny system układu strony internetowej opracowany przez Twittera, który umożliwia tworzenie responsywnych układów stron internetowych, dzieląc stronę internetową na szereg wierszy i kolumn. System siatki Bootstrap wykorzystuje 12-kolumnowy układ, który może być łatwo dostosowany do konkretnych potrzeb strony internetowej.
+                </p>
+            </div>
+            <img src="/img/vector173.png" alt="">
+        </div>
+        <p class="text-container lightGreen-container no-margin-top article tooltip">
+            System siatki składa się z trzech podstawowych elementów:
+            <code><a href="#" pro-tip="Kontenery są używane do opakowania całej treści strony internetowej. Mają ustaloną szerokość i służą do wyśrodkowania treści strony internetowej.">kontenerów</a></code>
+            <code><a href="#" pro-tip="Wiersze służą do podziału treści na grupy poziome. Są umieszczone wewnątrz kontenera i mogą być używane do podziału strony internetowej na różne sekcje.">wierszy</a></code>
+            <code><a href="#" pro-tip="Kolumny służą do podziału wierszy na sekcje pionowe. Są umieszczone wewnątrz wierszy i mogą być używane do tworzenia responsywnych układów. System siatki ma 12 kolumn, a programiści mogą wybrać dowolną liczbę kolumn dla każdej grupy kolumn.">kolumn</a></code>
+        </p>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_layout(1).png" alt=""> kod HTML, który tworzy podstawową strukturę siatki grid</h2>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Moja strona z siatk&aogon; Bootstrap&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;p&gt;To jest pierwsza kolumna.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;p&gt;To jest druga kolumna.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>To jest pierwsza kolumna.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>To jest druga kolumna.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                Dołączyliśmy arkusz stylów Bootstrap za pomocą atrybutu href w elemencie link.
+                Utworzyliśmy kontener, który zawiera jedną sekcję z dwoma kolumnami.
+                Użyliśmy klasy .col-md-6, aby podzielić wiersz na dwie kolumny,
+                z których każda zajmuje połowę szerokości ekranu na urządzeniach o szerokości większej niż 768 pikseli.
+                Dołączyliśmy plik JavaScript Bootstrap za pomocą atrybutu src w elemencie script.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                System siatki Bootstrap składa się z 12 kolumn, które mogą być dowolnie grupowane i umieszczane w wierszach. Programiści mogą użyć różnych klas CSS, aby określić, jak szerokie powinny być kolumny i jak powinny się zachowywać na różnych urządzeniach. Na przykład, klasa .col-sm-4 oznacza, że dana kolumna powinna zajmować 4 z 12 dostępnych kolumn na ekranie o szerokości mniejszej niż 576 pikseli, czyli na małych ekranach smartfonów. Natomiast klasa .col-md-6 oznacza, że dana kolumna powinna zajmować 6 z 12 dostępnych kolumn na ekranie o szerokości większej niż 576 pikseli, ale mniejszej niż 992 piksele, czyli na ekranach tabletów i większych smartfonów.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Class.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

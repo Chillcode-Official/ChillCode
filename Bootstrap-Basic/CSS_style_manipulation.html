@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap {Manipulacja stylami CSS}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+            <li><a href="Class.html">Klasa</a></li>
+            <li><a href="Text_styles.html">Style tekstowe</a></li>
+            <li><a href="Components.html">Komponenty</a></li>
+            <li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+            <li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Manipulacja Stylami CSS</h1>
+                <p>
+                    Bootstrap 5 jest biblioteką stylów CSS, która zapewnia wiele gotowych stylów i komponentów, które możesz wykorzystać na swojej stronie internetowej. Jednak czasami będziesz chciał dostosować styl elementu do swoich potrzeb. W tym celu możesz użyć różnych technik manipulacji stylami CSS w Bootstrap 5.
+                </p>
+            </div>
+            <img src="/img/vector129.png" alt="">
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_colorWheel.png" alt=""> Nadpisanie stylów CSS Bootstrapa</h2>
+        <p class="text-container lightOrange-container highlight-container">
+            Jeśli chcesz zmienić styl elementu, który jest już stylizowany przez Bootstrapa, możesz nadpisać styl Bootstrapa, używając własnych stylów CSS. Aby to zrobić, dodaj nową klasę CSS do elementu i nadpisz odpowiednie właściwości CSS. Na przykład, jeśli chcesz zmienić kolor przycisku Bootstrapa, możesz użyć poniższego kodu CSS:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+/* HTML */
+&lt;button class=&quot;btn btn-primary btn-custom&quot;&gt;Custom Button&lt;/button&gt;
+
+
+
+/* CSS */
+.btn-custom {
+  background-color: red;
+  color: white;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <button style="background-color: #7b2222;" class="btn-custom">Custom Button</button>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_meter.png" alt=""> Wykorzystanie zmiennych CSS Bootstrapa</h2>
+        <p class="text-container gray-container">
+            Bootstrap 5 wprowadza zmienną CSS, która umożliwia łatwe dostosowanie stylów do potrzeb projektu. Aby skorzystać z tych zmiennych, musisz użyć właściwości var() w swoim stylu CSS i przypisać im wartości zmiennych Bootstrapa. Na przykład, jeśli chcesz dostosować kolor tła całej strony internetowej, możesz użyć poniższego kodu CSS:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+body {
+  background-color: var(--bs-primary);
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_color-palette.png" alt=""> Dodawanie stylów CSS do konkretnych komponentów Bootstrapa</h2>
+        <p class="text-container lightOrange-container">
+            W Bootstrapie 5 każdy komponent ma swoją klasę CSS. Możesz dodać swoje własne style do konkretnego komponentu, dodając je po prostu do klasy komponentu. Na przykład, jeśli chcesz dodać dodatkowy margines do elementu typu card Bootstrapa, możesz użyć poniższego kodu CSS:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+// HTML
+&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h5 class=&quot;card-title&quot;&gt;Card Title&lt;/h5&gt;
+    &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the of the content.&lt;/p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+/* CSS */
+.card {
+  margin-bottom: 20px;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <div  style="margin-bottom: 20px;" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Some quick example text to build on the of the content.</p>
+                            <a href="#" class="btn-custom btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big"  src="/img/icon_paper.png" alt=""> Używanie pseudo-selektorów CSS</h2>
+        <p class="text-container gray-container">
+            Bootstrap 5 wykorzystuje wiele pseudo-selektorów CSS, które pozwalają na dostosowanie stylów w zależności od stanu elementu. Na przykład, jeśli chcesz zmienić kolor tekstu przycisku, gdy jest najechany, możesz użyć poniższego kodu CSS:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+//HTML
+&lt;button class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+
+
+/* CSS */
+.btn:hover {
+  color: pink;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-clear">
+                    <button style="color: pink;" class="btn-custom btn-primary">Button</button>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b>Ważne</b>
+            <div class="line"></div>
+            <p>
+                Zmienne CSS są zdefiniowane w pliku bootstrap.scss i można do nich odwoływać się w innych plikach CSS.
+            </p>
+        </div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Bootstrap 5 daje dużą swobodę w manipulacji stylami CSS, co umożliwia dostosowanie wyglądu stron internetowych do indywidualnych potrzeb i preferencji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Integration_with_other_libraries.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

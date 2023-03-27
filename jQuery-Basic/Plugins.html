@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery {Wtyczki}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+            <li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+            <li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+            <li><a href="AJAX.html">AJAX</a></li>
+            <li><a href="Plugins.html">Wtyczki</a></li>
+            <li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+            <li><a href="Debug_code.html">Debugowanie kodu</a></li>
+            <li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Wtyczki jQuery</h1>
+                <p>
+                    Wtyczki jQuery (jQuery plugins) to dodatkowe funkcjonalności napisane w języku JavaScript, które rozszerzają podstawowe funkcje
+                    biblioteki jQuery. Dzięki nim można łatwiej i szybciej tworzyć interaktywne i dynamiczne strony internetowe.
+                    Wtyczki jQuery są łatwe do zaimplementowania na stronie internetowej poprzez dołączenie pliku JavaScript z wtyczką do kodu HTML.
+                </p>
+            </div>
+            <img src="/img/vector121.png" alt="">
+        </div>
+        <div class="text-container light-container black-list article tooltip">
+            <div class="text-content">
+                <h3>
+                    Istnieje wiele wtyczek jQuery, które można wykorzystać. Oto parę przykładów:
+                </h3>
+            </div>
+            <div class="line"></div>
+            <ul>
+                <li><code><a href="#" pro-tip="jest to biblioteka interfejsów użytkownika (UI), która dostarcza wiele gotowych narzędzi do tworzenia zaawansowanych interfejsów użytkownika, takich jak okna dialogowe, suwaki, kalendarze, zakładki itp. Dzięki temu można szybciej i łatwiej tworzyć bogate w funkcje interfejsy użytkownika.">jQuery UI</a></code>- zawiera szereg narzędzi do budowania interfejsów użytkownika, takich jak: przeciągnij i upuść, selektory dat, okna dialogowe, menu, zakładki i wiele innych.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka do walidacji formularzy HTML. Umożliwia tworzenie reguł walidacji i komunikatów błędów, które są wyświetlane użytkownikowi w przypadku wprowadzenia nieprawidłowych danych. Dzięki temu można zapobiec wprowadzeniu nieprawidłowych danych przez użytkownika i ułatwić mu wypełnienie formularza.">jQuery Validation</a></code>- umożliwia walidację formularzy internetowych, takich jak sprawdzanie poprawności adresu e-mail, numeru telefonu lub formatu daty.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka do tworzenia pokazu slajdów na stronie internetowej. Umożliwia dodanie różnych efektów przejścia między slajdami, takich jak przesunięcie, pojawienie się, zanikanie itp. Dzięki temu można w atrakcyjny sposób prezentować zdjęcia, grafiki i inne treści na stronie.">jQuery Cycle</a></code>- umożliwia łatwe tworzenie animacji i karuzel zdjęć.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka do wyświetlania zdjęć i innych mediów w specjalnym oknie modalnym. Dzięki temu można wyświetlać duże zdjęcia lub galerie zdjęć w sposób, który nie przesłania całej strony internetowej.">jQuery Lightbox</a></code>- umożliwia łatwe tworzenie galerii zdjęć.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka do tworzenia zaawansowanych tabel na stronie internetowej. Umożliwia sortowanie, filtrowanie, paginację i wiele innych funkcji dla dużych i złożonych tabel. Dzięki temu można łatwiej wyświetlać i przeglądać duże ilości danych na stronie internetowej.">jQuery DataTables</a></code>- umożliwia łatwe i szybkie tworzenie tabel z paginacją, sortowaniem i wyszukiwaniem.</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Wtyczki do interfejsu użytkownika</h1>
+        <div class="section-with-image">
+            <p>
+                Wtyczki jQuery do interfejsu użytkownika umożliwiają tworzenie zaawansowanych elementów interfejsu użytkownika w łatwy i szybki sposób. Dzięki nim można stworzyć interaktywne i dynamiczne strony internetowe bez konieczności pisania skomplikowanego kodu JavaScript.
+            </p>
+            <img src="/img/vector62.png" alt="">
+        </div>
+        <div class="text-container lightOrange-container white-list article tooltip no-margin-top color-text-white">
+            <div class="text-content">
+                <h3>
+                    Oto kilka popularnych wtyczek jQuery do interfejsu użytkownika:
+                </h3>
+            </div>
+            <div class="line"></div>
+            <ul>
+                <li><code><a href="#" pro-tip="jest to biblioteka interfejsów użytkownika (UI), która dostarcza wiele gotowych narzędzi do tworzenia zaawansowanych interfejsów użytkownika, takich jak okna dialogowe, suwaki, kalendarze, zakładki itp. Dzięki temu można szybciej i łatwiej tworzyć bogate w funkcje interfejsy użytkownika.">jQuery UI</a></code> popularna wtyczka do interfejsu użytkownika z narzędziami do budowania interfejsów takimi jak: przeciągnij i upuść, selektory dat, okna dialogowe, zakładki, suwaki i inne.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia tworzenie akordeonów na stronie internetowej. Akordeon to lista elementów, w której po kliknięciu na jeden z elementów, rozwija się sekcja zawierająca dodatkową treść. Umożliwia to wygodne ukrywanie i wyświetlanie dodatkowych informacji na stronie.">jQuery Accordion</a></code> prosta wtyczka do tworzenia akordeonu, czyli interaktywnego elementu interfejsu użytkownika, który pozwala na wyświetlanie i ukrywanie zawartości. </li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia tworzenie menu kontekstowych na stronie internetowej. Menu kontekstowe pojawia się po kliknięciu prawym przyciskiem myszy i zawiera dostępne opcje dla danego elementu. Umożliwia to łatwe i szybkie dostarczanie różnych funkcjonalności użytkownikom.">jQuery Context Menu</a></code> umożliwia łatwe dodanie kontekstowego menu</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia dostosowanie wyglądu i funkcjonalności paska przewijania na stronie internetowej. Umożliwia m.in. dostosowanie kolorów, grubości paska, stylu przycisków, obsługi myszy i wiele innych.">jQuery Scrollbar</a></code> pozwala na dostosowanie paska przewijania do wyglądu strony internetowej</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia wybór daty z kalendarza na stronie internetowej. Umożliwia dostosowanie wyglądu kalendarza, wybór formatu daty, dodawanie ikon do pól daty i wiele innych.">jQuery Datepicker</a></code>- umożliwia łatwe wybieranie daty z kalendarza.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia dodanie funkcjonalności automatycznego uzupełniania tekstu w polach formularza na stronie internetowej. Po wpisaniu kilku liter, pojawiają się sugestie uzupełnienia, co ułatwia wprowadzanie danych przez użytkowników.">jQuery Autocomplete</a></code>- umożliwia tworzenie pól tekstowych z funkcją auto uzupełniania.</li>
+                <li><code><a href="#" pro-tip="jest to wtyczka, która umożliwia wyświetlanie podpowiedzi przy najechaniu myszą na element na stronie internetowej. Umożliwia dostosowanie wyglądu podpowiedzi, opóźnienia wyświetlania i wiele innych.">jQuery Tooltip</a></code>- umożliwia łatwe dodanie etykiet z podpowiedziami do elementów strony.</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_plugin(2).png" alt=""> Wtyczka jQuery UI tworząca proste menu zakładek:</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Przyk&lstrok;ad u&zdot;ycia wtyczki jQuery UI&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css&quot;&gt;
+  &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://code.jquery.com/ui/1.13.0/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+    #tabs {
+      width: 500px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;tabs&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#tab1&quot;&gt;Zak&lstrok;adka 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tab2&quot;&gt;Zak&lstrok;adka 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tab3&quot;&gt;Zak&lstrok;adka 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&quot;tab1&quot;&gt;
+      &lt;p&gt;Tre&sacute;&cacute; zak&lstrok;adki 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab2&quot;&gt;
+      &lt;p&gt;Tre&sacute;&cacute; zak&lstrok;adki 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab3&quot;&gt;
+      &lt;p&gt;Tre&sacute;&cacute; zak&lstrok;adki 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    $(function() {
+      $(&quot;#tabs&quot;).tabs();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W powyższym przykładzie dołączamy wtyczkę jQuery UI z serwera sieciowego, tworzymy menu zakładek za pomocą elementów HTML i wywołujemy funkcję tabs() na elemencie z identyfikatorem "tabs". Funkcja ta tworzy interfejs użytkownika dla menu zakładek. Dzięki temu użytkownik może łatwo przełączać między zakładkami i wyświetlać ich treści.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Wtyczki do efektów animacji</h1>
+        <div class="section-with-image">
+            <p>
+                Wtyczki jQuery do efektów animacji umożliwiają tworzenie efektów wizualnych na stronie internetowej, takich jak przesuwające się elementy, rozwijane menu, podświetlanie elementów po najechaniu kursorem myszy i wiele innych. Dzięki nim można zwiększyć atrakcyjność strony i zrobić wrażenie na użytkownikach.
+            </p>
+            <img src="/img/vector8.png" alt="">
+        </div>
+        <div class="text-container lightWhite-container black-list article tooltip no-margin-top">
+            <div class="text-content">
+                <h3>
+                    Poniżej przedstawiam kilka popularnych wtyczek jQuery do efektów animacji:
+                </h3>
+            </div>
+            <div class="line"></div>
+            <ul>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia animowanie elementów na stronie internetowej. Można animować różne właściwości elementów, takie jak np. kolor, rozmiar, pozycję czy przezroczystość. Umożliwia to tworzenie dynamicznych efektów, które przyciągają uwagę użytkowników.">jQuery Animate</a></code>- pozwala na animowanie różnych właściwości CSS</li>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia tworzenie prezentacji zdjęć i slajdów na stronie internetowej. Umożliwia dostosowanie przejść między slajdami, czasu trwania prezentacji, dodanie napisów, miniatur i wiele innych.">jQuery Cycle2</a></code>- umożliwia tworzenie efektów przejścia slajdów</li>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektów przejść między animowanymi elementami. Umożliwia dostosowanie szybkości animacji, łagodzenie przejść i wiele innych.">jQuery Easing</a></code>- umożliwia dodanie animacji, które łagodnie zmieniają prędkość lub tempo</li>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektów najechania myszą na elementy na stronie internetowej. Umożliwia dostosowanie wyglądu elementów, animacji i wiele innych.">jQuery Hover</a></code>- umożliwia dodanie animacji do elementów, które są wywoływane</li>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektu paralaksy na stronie internetowej. Umożliwia tworzenie efektów 3D, gdzie elementy na stronie internetowej poruszają się z różnymi prędkościami, co daje wrażenie głębi.">jQuery Parallax</a></code>- umożliwia tworzenie efektów paralaksy</li>
+                <li><code><a href="#" pro-tip="to wtyczka, która umożliwia tworzenie wykresów na stronie internetowej. Umożliwia dostosowanie typu wykresu, kolorów, stylu i wiele innych. Wykresy te są bardzo przydatne w wizualizacji danych na stronie internetowej.">jQuery Sparklines</a></code>- umożliwia tworzenie małych wykresów lub grafik</li>
+            </ul>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_animate.png" alt=""> Wtyczka jQuery Animate, która przesuwa element w prawo:</h2>
+        <div class="code-block">
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Przyk&lstrok;ad u&zdot;ycia wtyczki jQuery Animate&lt;/title&gt;
+  &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+    #box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      left: 0;
+      top: 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    $(function() {
+      $(&quot;#box&quot;).click(function() {
+        $(this).animate({ left: &quot;+=200px&quot; }, 1000);
+      });
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W powyższym przykładzie po kliknięciu na element o id "box", używamy funkcji animate() do przesunięcia elementu w prawo o 200 pikseli. Animacja trwa 1000 milisekund (czyli 1 sekundę). Dzięki temu użytkownik może łatwo interaktywnie przesuwać elementy na stronie internetowej.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Creating_web_applications.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

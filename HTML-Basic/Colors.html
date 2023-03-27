@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Kolory HTML</title>
+    <title>HTML {Kolory}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,9 +42,10 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
@@ -53,9 +55,9 @@
             <div class="text-content color-text-red">
                 <h1>Kolory W Jezyku HTML</h1>
                 <p>
-                    W języku HTML, kolory mogą być określane za pomocą kodów szesnastkowych (np. <span>#FF0000</span> dla czerwonego)
-                    lub nazw (np. "<span>red</span>" dla czerwonego). Można je używać w atrybutach HTML, takich jak "<strong>style</strong>" lub
-                    "<strong>bgcolor</strong>" do określenia kolorów tekstu, tła itp.
+                    W języku HTML, kolory mogą być określane za pomocą kodów szesnastkowych (np. <span class="color-text-red">#FF0000</span> dla czerwonego)
+                    lub nazw (np. "red" dla czerwonego). Można je używać w atrybutach HTML, takich jak "style" lub
+                    "bgcolor" do określenia kolorów tekstu, tła itp.
                 </p>
             </div>
             <img src="/img/vector141.png" alt="">
@@ -64,10 +66,10 @@
             Aby ustawić kolor tła elementu HTML, można użyć atrybutu <code><a href="#" pro-tip="Atrybut języka HTML, który pozwala na określenie stylu danego elementu na stronie. Atrybut ten jest często używany do zmiany koloru tekstu, tła, czcionki, marginesów, wyrównania, wielkości elementu i innych właściwości. Styl można zdefiniować bezpośrednio w atrybucie style lub w oddzielnym arkuszu stylów CSS.">style</a></code>
             lub <code><a href="#" pro-tip="Atrybut języka HTML, który pozwala na określenie koloru tła danego elementu na stronie. Atrybut ten jest stosowany wewnątrz elementów, takich jak <body>, <table>, <td> i innych, aby ustawić kolor tła dla całej strony lub jej fragmentów. Wartość atrybutu bgcolor jest zwykle podawana jako nazwa koloru lub kod koloru w formacie szesnastkowym.">bgcolor</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lth1&gtHello world&lth1&gt
+&lth1&gtSnorlax &lt;img src=&quot;snorlax.png&quot;&gt; &lth1&gt
 
 &lt;body style=&quot;background-color: #FFC0CBFF;&quot;&gt;
 
@@ -75,35 +77,46 @@
                 </code>
             </pre>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div style="background-color: pink;" class="output">
+                    <h1>Snorlax <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_snorlax.png" alt=""></h1>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
         <p class="text-container purple-container no-margin-topa article tooltip">
             Aby ustawić kolor tekstu, można użyć atrybutu <code><a href="#" pro-tip="Atrybut języka HTML, który pozwala na określenie stylu danego elementu na stronie. Atrybut ten jest często używany do zmiany koloru tekstu, tła, czcionki, marginesów, wyrównania, wielkości elementu i innych właściwości. Styl można zdefiniować bezpośrednio w atrybucie style lub w oddzielnym arkuszu stylów CSS.">style</a></code>
             lub <code><a href="#" pro-tip="Atrybut języka HTML, który pozwala na określenie koloru tła danego elementu na stronie. Atrybut ten jest stosowany wewnątrz elementów, takich jak <body>, <table>, <td> i innych, aby ustawić kolor tła dla całej strony lub jej fragmentów. Wartość atrybutu bgcolor jest zwykle podawana jako nazwa koloru lub kod koloru w formacie szesnastkowym.">color</a></code>
         </p>
-        <div class="code-block">
+        <div class="code-block code-block-margin-top">
             <pre>
                 <code>
-&lt;p style=&quot;color: blue;&quot;&gt;Tekst&lt;/p&gt;
+&lt;p style=&quot;color: blue;&quot;&gt;Niebieski rekin &lt;img src=&quot;shark.png&quot;&gt; &lt;/p&gt;
 
-&lt;font color=&quot;green&quot;&gt;Tekst&lt;/font&gt;
+&lt;font color=&quot;green&quot;&gt;Jestem porannym ptaszkiem &lt;img src=&quot;goblin.png&quot;&gt; &lt;/font&gt;
                 </code>
             </pre>
         </div>
-        <div class="double-elements">
-            <div class="browser pink-container">
-
-                <p style="color: blue;">Tekst niebieski</p>
-
-                <font color="green">Tekst zielony</font>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output">
+                    <p style="color: blue;">Niebieski rekin <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_shark.png" alt=""></p>
+                    <font color="green">Jestem porannym ptaszkiem <img style="width: 40px; margin-top: -10px;;" src="/img/icon_goblin.png" alt=""></font>
+                </div>
             </div>
-            <div class="alert-card">
-                <img style="width: 50px;" src="/img/note.png" alt="">
-                <b>Note</b>
-                <div class="line"></div>
-                <p>
-                    Jest tez mnóstwo bibliotek i narzędzi do generowania kolorów, takich jak "paleta kolorów" czy
-                    "picker kolorów" które mogą być pomocne przy tworzeniu stron internetowych.
-                </p>
-            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Jest tez mnóstwo bibliotek i narzędzi do generowania kolorów, takich jak "paleta kolorów" czy
+                "picker kolorów" które mogą być pomocne przy tworzeniu stron internetowych.
+            </p>
         </div>
         <div class="big-page-header"></div>
         <h2>Kolor Ramki</h2>
@@ -117,16 +130,22 @@
                 </code>
             </pre>
         </div>
-        <h2 class="no-margin-top" style="border:2px solid Violet;">Hello World</h2>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-long output-clear">
+                    <h2 style="border:2px solid Violet;">Hello World</h2>
+                </div>
+            </div>
+        </div>
         <div class="big-page-header"></div>
         <div class="section-with-image">
-            <div class="text-content">
+            <div class="text-content highlight-text">
                 <h1>Wartości Kolorów</h1>
                 <p>
-                    W języku HTML i CSS istnieją 4 różne systemy wartości kolorów: RGB (<span class="color-text-red">czerwień</span>, <span class="color-text-green">zieleń</span>, <span class="color-text-blue">niebieski</span>),
-                    HEX (<strong>heksadecymalne</strong>) oraz HSL (<span class="color-text-yellow">odcień</span>, <span class="color-text-yellow">nasycenie</span>, <span class="color-text-yellow">jasność</span>).
-                    Każdy z nich określa kolor przez różne składniki i jest używany w różnych sytuacjach, np.
-                    RGB jest często używany w tworzeniu stron internetowych.
+                    W języku HTML i CSS istnieją 3 różne systemy wartości kolorów: <code>RGB</code> (<span class="color-text-red">czerwień</span>, <span class="color-text-green">zieleń</span>, <span class="color-text-blue">niebieski</span>),
+                    <code>HEX</code> (heksadecymalne) i <code>HSL</code> (odcień, nasycenie, jasność).
+                    Każdy z nich określa kolor przez różne składniki i jest używany w różnych sytuacjach.
                 </p>
             </div>
             <img src="/img/vector140.png" alt="">
@@ -136,8 +155,8 @@
         </p>
         <div class="code-block">
             <pre>
-                <code>
-&lt;body style=&quot;background-color: rgb(128, 255, 0);&quot;&gt;
+                <code class="language-xml">
+&lt;body style=&quot;background-color: rgb(128, 255, 0);&quot;&gt;  &lt;!-- kolor zielony --&gt;
                 </code>
             </pre>
         </div>
@@ -148,8 +167,8 @@
         </p>
         <div class="code-block">
             <pre>
-                <code>
-&lt;body style=&quot;background-color: hsla(9, 100%, 64%, 0.6);&quot;&gt;
+                <code class="language-xml">
+&lt;body style=&quot;background-color: hsla(9, 100%, 64%, 0.6);&quot;&gt;  &lt;!-- kolor pomara&nacute;czowy --&gt;
                 </code>
             </pre>
         </div>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Selektory-Atrybutów-CSS</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/Aboutme/Aboutme.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Selectors.html">Selektory</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Colors.html">Kolory</a></li>
+            <li><a href="Background.html">Tło</a></li>
+            <li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+            <li><a href="Position.html">Pozycja</a></li>
+            <li><a href="Overflow.html">Przepełnienie</a></li>
+            <li><a href="Margins.html">Marginesy</a></li>
+            <li><a href="Padding.html">Dopełnienie</a></li>
+            <li><a href="Border.html">Obramowanie</a></li>
+            <li><a href="Outline.html">Zarys</a></li>
+            <li><a href="Text.html">Tekst</a></li>
+            <li><a href="fonts.html">Czcionki</a></li>
+            <li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+            <li><a href="Pictures.html">Obrazy</a></li>
+            <li><a href="Tabels.html">Tabele</a></li>
+            <li><a href="list.html">Listy</a></li>
+            <li><a href="Z-index.html">Z-index</a></li>
+            <li><a href="Float_property.html">Właściwość float</a></li>
+            <li><a href="Combinators.html">Kombinatory</a></li>
+            <li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
+            <li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+            <li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+            <li><a href="Transparency.html">Przezroczystość</a></li>
+            <li><a href="Forms.html">Formularze</a></li>
+            <li><a href="Counters.html">Liczniki</a></li>
+            <li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+            <li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Selektory Atrybutów CSS</h1>
+        <div class="section-with-image">
+            <p>
+                Selektory atrybutów CSS umożliwiają wybieranie elementów HTML na podstawie ich atrybutów i wartości
+                tych atrybutów. Są one zapisywane w nawiasach kwadratowych po nazwie selektora.elektory atrybutów są
+                przydatne w sytuacjach, gdy potrzebujemy zastosować styl do elementów o określonym atrybucie lub
+                wartości atrybutu. Przykłady selektorów atrybutów:
+            </p>
+            <img src="/img/vector146.png" alt="">
+        </div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut, niezależnie od jego wartości.">[attribute]</a></code>
+                Wybieranie elementów o określonym atrybucie
+            </p>
+            <p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości dokładnie równej podanej wartości.">[attribute = value]</a></code>
+                Wybieranie elementów z określoną wartością atrybutu
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top code-block-medium">
+                <pre>
+                    <code>
+input[type] {
+  padding: 10px;
+  margin: 20px;
+
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+}
+                </code>
+            </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type] wybierze wszystkie elementy input z atrybutem type.
+                            W tym przykładzie każdy element input posiadający atrybut type będzie miał padding równy 10px i margines równy 20px.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type="text"] wybierze wszystkie elementy input z atrybutem type o wartości "text".
+                            W tym przykładzie, każdy element input o atrybucie type o wartości "text" będzie miał szerokość 300px, wysokość 40px i czcionkę o rozmiarze 16px
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podane słowo.">[attribute ~= value]</a></code>
+                Wybieranie elementów, których wartość atrybutu zawiera określony ciąg znaków
+            </p>
+            <p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków, a następnie myślnikiem lub kończącej się na tym ciągu.">[attribute |= value]</a></code>
+                Wybieranie elementów, których wartość atrybutu zaczyna się od określonego ciągu znaków lub jest równa temu ciągowi znaków z podanym znakiem separatora (np. "-")
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type~="text"] {
+  border: 1px solid black;
+}
+                </code>
+            </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type|="text"] {
+  background-color: lightgray;
+}
+                </code>
+            </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type~="text"] wybierze wszystkie elementy input z atrybutem type z wartością zawierającą ciąg "text".
+                            W tym przykładzie każdy element input o atrybucie type z wartością zawierającą ciąg "text" będzie miał granicę o grubości 1px i kolorze czarnym.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type|="text"] wybierze wszystkie elementy input z atrybutem type o wartości "text" lub "text-input".
+                            W tym przykładzie, każdy element input o atrybucie type o wartości zaczynającej się od "text" lub równej "text-" będzie miał kolor tła jasnoszary.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków.">[attribute ^= value]</a></code>
+                Wybieranie elementów, których wartość atrybutu zaczyna się od określonego ciągu znaków
+            </p>
+            <p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
+                <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości kończącej się podanym ciągiem znaków.">[attribute $= value]</a></code>
+                Wybieranie elementów, których wartość atrybutu kończy się określonym ciągiem znaków
+            </p>
+        </div>
+        <div class="double-elements">
+            <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type^="text"] {
+  text-align: center;
+}
+                </code>
+            </pre>
+            </div>
+            <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type$="text"] {
+  font-weight: bold;
+}
+                </code>
+            </pre>
+            </div>
+        </div>
+        <div class="double-elements">
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type^="text"] wybierze wszystkie elementy input z atrybutem type o wartości zaczynającej się od ciągu "text".
+                            W tym przykładzie, każdy element input o atrybucie type o wartości zaczynającej się od ciągu "text" będzie miał wyrównanie tekstu do środka.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown minus-margin-top">
+                <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+                <div class="dropdown-content">
+                    <div class="alert-card alert-card3 alert-card-medium alert-card-gray">
+                        <p>
+                            input[type$="text"] wybierze wszystkie elementy input z atrybutem type o wartości kończącej się na ciąg "text".
+                            W tym przykładzie, każdy element input o atrybucie type o wartości kończącej się na ciąg "text" będzie miał pogrubioną czcionkę.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container light-container color-text-gray no-margin-top article tooltip highlight-container highlight-container-lightPink">
+            <code><a href="#" pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podany ciąg znaków.">[attribute *= value]</a></code>
+            Wybieranie elementów, których wartość atrybutu zawiera określony ciąg znaków
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+input[type*="text"] {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+            <div class="dropdown-content">
+                <div class="alert-card alert-card3 alert-card-gray">
+                    <p>
+                        input[type*="text"] wybierze wszystkie elementy input z atrybutem type z wartością zawierającą ciąg "text".
+                        W tym przykładzie, wszystkie elementy input będą mieć obramowanie zaokrąglone o promieniu 10px i cień o szerokości 2px i wysokości 2px z kolorem szarym, ponieważ ich wartość atrybutu type zawiera ciąg znaków "text".
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Summary.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

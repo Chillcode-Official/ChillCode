@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Klasy/Id HTML</title>
+    <title>HTML {Class-Id}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -41,49 +42,56 @@
             <li><a href="Symbols.html">Symbole</a></li>
             <li><a href="Quotations.html">Cytaty</a></li>
             <li><a href="Block_elements.html">Elementy Blokowe</a></li>
+            <li><a href="Linear_elements.html">Elementy Liniowe</a></li>
             <li><a href="Class_Id.html">Klasy oraz Id</a></li>
             <li><a href="Layout_HTML.html">Układ strony</a></li>
-            <li><a href="Responsiveness.html">Responsywaność</a></li>
+            <li><a href="Responsiveness.html">Responsywność</a></li>
             <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
-        <h1>Klasy Oraz Id</h1>
         <div class="section-with-image">
-            <p>
-                Atrybut "id" w HTML służy do określenia unikalnego identyfikatora dla elementu HTML. Może być
-                używany do stylizowania konkretnego elementu za pomocą CSS. Natomiast Atrybut "class" w HTML służy
-                do określenia nazwy klasy dla elementu HTML. Nazwa klasy może być używana do grupowania elementów
-                i zastosowania wspólnej stylizacji lub interakcji za pomocą JavaScript.
-            </p>
+            <div class="text-content">
+                <h1>Klasy Oraz Id</h1>
+                <p>
+                    Atrybut id służy do określenia unikalnego identyfikatora dla elementu HTML. Może być
+                    używany do stylizowania konkretnego elementu za pomocą CSS. Natomiast Atrybut class w HTML służy
+                    do określenia nazwy klasy dla elementu HTML. Nazwa klasy może być używana do grupowania elementów
+                    i zastosowania wspólnej stylizacji lub interakcji za pomocą JavaScript.
+                </p>
+            </div>
             <img src="/img/vector145.png" alt="">
         </div>
         <p class="text-container azure-container no-margin-top article tooltip">
-            <code><a href="#" pro-tip="">Klasy</a></code>
-            oraz <code><a href="#" pro-tip="">id</a></code>
-            w HTML są używane do identyfikowania elementów HTML, aby określić, jak mają być wyświetlane na stronie.
+            <code><a href="#" pro-tip="klasa jest atrybutem elementu, który służy do określania nazwy jednego lub więcej stylów CSS, które mają być zastosowane do tego elementu. Definicja klasy składa się z słowa kluczowego &quot;class&quot;, a następnie nazwy klasy, która może składać się z liter, cyfr, myślników i podkreśleń. Nazwa klasy nie może zaczynać się od cyfry i nie może zawierać spacji.">Klasy</a></code>
+            oraz <code><a href="#" pro-tip="ID jest atrybutem elementu, który służy do określania unikalnego identyfikatora dla danego elementu. Każdy element na stronie internetowej powinien mieć unikalny ID, który może być używany do identyfikacji elementu przez skrypty JavaScript lub do tworzenia odnośników do tego elementu. Definicja ID składa się z słowa kluczowego &quot;id&quot;, a następnie unikalnej nazwy ID.">id</a></code>
+            w HTML są używane do identyfikowania elementów, aby określić, jak mają być wyświetlane na stronie. Poniżej przedstawiam przykład użycia.
         </p>
+        <div class="big-page-header"></div>
+        <code><img class="icon-img-small" src="/img/icon_css.png" alt="">Css</code>
         <div class="code-block">
             <pre>
-                <code>
-&lt;style&gt;
-
-  .highlight {
+                <code class="language-css">
+.highlight {
     background-color: yellow;
   }
 
-  .red-text {
-    color: red;
-  }
+.red-text {
+color: #c21c29;
+}
 
-  #intro {
-    font-size: 18px;
-    font-style: italic;
-  }
-
-&lt;/style&gt;
-
+#intro {
+font-size: 18px;
+font-style: italic;
+}
+                </code>
+            </pre>
+        </div>
+        <code><img class="icon-img-small" src="/img/icon_html.png" alt="">Html</code>
+        <div class="code-block">
+            <pre>
+                <code class="language-xml">
 &lt;h1 class=&quot;highlight&quot;&gt;Nag&lstrok;&oacute;wek z klas&aogon; &quot;highlight&quot;&lt;/h1&gt;
 
 &lt;h2 id=&quot;intro&quot;&gt;Nag&lstrok;&oacute;wek z id &quot;intro&quot;&lt;/h2&gt;
@@ -92,15 +100,23 @@
                 </code>
             </pre>
         </div>
-        <div class="browser long-browser browser-no-margin-top red-text intro highlight">
-            <h1>Nagłówek z klasą "highlight"</h1>
-            <h2>Nagłówek z id "intro"</h2>
-            <p>Paragraf z klasą "red-text"</p>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    <div class="red-text intro highlight">
+                        <h1 style="background-color: yellow;">Nagłówek z klasą "highlight"</h1>
+                        <h2 style="font-size: 18px; font-style: italic;" class="color-text-gray">Nagłówek z id "intro"</h2>
+                        <p style="color: #c21c29;">Paragraf z klasą "red-text"</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="page-header"></div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
             <p>
                 Ten blok kodu to HTML z wykorzystaniem klas i id do stylizacji elementów na stronie.
                 Sekcja &ltstyle&gt zawiera definicje stylów CSS, klasa "highlight" ustawia tło na żółte, klasa
@@ -108,11 +124,11 @@
                 kursywę. Elementy HTML, nagłówek h1, h2 i paragraf p, będą wyświetlane zgodnie z definicjami stylów CSS.
             </p>
         </div>
-        <div class="page-header"></div>
         <div class="double-elements">
             <div class="alert-card alert-card-medium">
-                <img src="/img/warning.png" alt="">
-                <b>Uwaga</b>
+                <img style="width: 50px;" src="/img/note.png" alt="">
+                <b>Note</b>
+                <div class="line"></div>
                 <p>
                     Podsumowując, atrybut "class" jest bardzo przydatnym narzędziem w tworzeniu stron internetowych,
                     ponieważ umożliwia grupowanie elementów i zastosowanie wspólnej stylizacji lub interakcji dla
@@ -120,8 +136,9 @@
                 </p>
             </div>
             <div class="alert-card alert-card-medium">
-                <img src="/img/warning.png" alt="">
-                <b>Uwaga</b>
+                <img style="width: 50px;" src="/img/note.png" alt="">
+                <b>Note</b>
+                <div class="line"></div>
                 <p>
                     Podsumowując, atrybut "id" jest bardzo przydatnym narzędziem w tworzeniu stron internetowych,
                     ponieważ umożliwia precyzyjne określenie elementów na stronie do celów stylizacji lub interakcji
@@ -129,19 +146,7 @@
                 </p>
             </div>
         </div>
-        <div class="big-page-header"></div>
-        <h2>Najważniejsze cechy Klas oraz Id</h2>
-        <div class="text-container black-container white-list article">
-            <ol>
-                <li>Klasy i id służą do stylizacji elementów HTML na stronie.</li>
-                <li>Klasa jest definiowana jako styl CSS i może być powiązana z wieloma elementami HTML.</li>
-                <li>Id jest unikalnym identyfikatorem elementu HTML i powinien być używany tylko dla jednego elementu na stronie.</li>
-                <li>CSS definicje stylów są nakładane na elementy HTML za pomocą klas lub id.</li>
-                <li>Id ma większy priorytet niż klasa podczas aplikowania stylów.</li>
-                <li>Należy unikać powtarzania się nazw klas i id na stronie.</li>
-                <li>Klasa i id powinny być nazwane w sposób opisowy, aby łatwiej było zrozumieć ich cel.</li>
-            </ol>
-        </div>
+
         <div class="big-page-header"></div>
         <div class="btn">
             <a href="Layout_HTML.html"><button>Dalej</button></a>
