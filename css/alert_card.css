@@ -55,14 +55,8 @@
 .alert-card.alert-card-gray b{
     color: #ecdada;
 }
-.alert-card1{
-    width: 540px;
-}
-.alert-card2{
-    width: 850px;
-}
 .alert-card3{
-    width: 900px;
+    width: 100%;
 }
 .alert-card.alert-card-medium{
     width: 430px;

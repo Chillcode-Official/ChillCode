@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>ASP.NET(Middleware-Żądania HTTP)</title>
+    <title>ASP.NET {Obsługa-błędów}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -51,38 +51,47 @@
     <div class="content">
         <div class="section-with-image">
             <div class="text-content">
-                <h1>Middleware I żądania HTTP</h1>
+                <h1>Obsługa Błędów</h1>
                 <p>
-                    Middleware w ASP.NET Core to oprogramowanie, które przetwarza żądania HTTP i generuje odpowiedzi. Każde żądanie HTTP w aplikacji ASP.NET Core przechodzi przez zestaw middleware'ów, które przetwarzają żądanie i/lub odpowiedź.Można utworzyć niestandardowe middleware'y w celu wykonywania określonych operacji, takich jak logowanie, uwierzytelnianie, weryfikacja uprawnień i wiele innych.
+                    Obsługa błędów jest ważnym elementem każdej aplikacji internetowej. W ASP.NET Core istnieje wiele sposobów na obsługę błędów, a jednym z najprostszych i najskuteczniejszych sposobów jest skorzystanie z middleware'ów UseExceptionHandler i UseStatusCodePages.
                 </p>
             </div>
-            <img src="/img/vector54.png" alt="">
+            <img class="minus-margin-top" src="/img/vector79.png" alt="">
         </div>
-        <p class="text-container lightBrown-container no-margin-top">
-            Aby utworzyć niestandardowe middleware w ASP.NET Core, należy utworzyć klasę, która implementuje interfejs IMiddleware, a następnie zarejestrować ją w kolekcji middleware'ów w metodzie Configure klasy Startup.
-        </p>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_http(3).png" alt=""> Utworzenie middleware do logowania żądań HTTP:</h2>
+        <h2><img class="icon-img-big" src="/img/icon_error.png" alt=""> Przykład konfiguracji obsługi błędów w ASP.NET Core:</h2>
         <div class="code-block">
-             <pre>
-                 <code>
-public class LoggingMiddleware : IMiddleware
+                <pre>
+                    <code class="language-csharp">
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    private readonly ILogger&ltLoggingMiddleware&gt _logger;
-
-    public LoggingMiddleware(ILogger&ltLoggingMiddleware&gt logger)
+    if (env.IsDevelopment())
     {
-        _logger = logger;
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseExceptionHandler("/Error");
+        app.UseHsts();
     }
 
-    public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+    app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
+    // pozostałe middlewares
+
+    app.UseHttpsRedirection();
+    app.UseStaticFiles();
+    app.UseRouting();
+    app.UseAuthentication();
+    app.UseAuthorization();
+    app.UseEndpoints(endpoints =>
     {
-        _logger.LogInformation($"Handling HTTP request: {context.Request.Method} {context.Request.Path}");
-        await next(context);
-    }
+        endpoints.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
+    });
 }
-                 </code>
-             </pre>
+                    </code>
+                </pre>
         </div>
         <div class="minus-margin-top"></div>
         <div class="alert-card alert-card3 alert-card-gray">
@@ -90,24 +99,34 @@ public class LoggingMiddleware : IMiddleware
             <b>Wyjaśnienie</b>
             <div class="line"></div>
             <p>
-                W tym przykładzie utworzono klasę LoggingMiddleware, która implementuje interfejs IMiddleware. Konstruktor klasy przyjmuje interfejs ILogger, który umożliwia zapisywanie logów. Metoda InvokeAsync zawiera kod, który loguje informacje o żądaniu HTTP, a następnie wywołuje kolejny middleware w łańcuchu.
+                W powyższym przykładzie, w zależności od trybu uruchomienia aplikacji (tryb deweloperski lub produkcyjny), używany jest odpowiedni middleware: UseDeveloperExceptionPage w trybie deweloperskim lub UseExceptionHandler i UseHsts w trybie produkcyjnym. Middleware UseStatusCodePagesWithReExecute umożliwia wyświetlanie komunikatów błędów w przypadku niepowodzenia żądania HTTP.
             </p>
         </div>
         <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_configure(1).png" alt=""> Rejestracja middleware'u w klasie Startup, w metodzie Configure:</h2>
+        <h2><img class="icon-img-big" src="/img/icon_error(2).png" alt=""> Akcja Index obsługująca wyjątki i wyświetlająca komunikaty błędów:</h2>
         <div class="code-block">
-            <pre>
-                <code>
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+                <pre>
+                    <code class="language-csharp">
+public class ErrorController : Controller
 {
-    // ...
+    [Route("Error/{statusCode}")]
+    public IActionResult Index(int statusCode)
+    {
+        switch (statusCode)
+        {
+            case 404:
+                ViewBag.ErrorMessage = "Nie znaleziono strony.";
+                break;
+            default:
+                ViewBag.ErrorMessage = "Wystąpił błąd.";
+                break;
+        }
 
-    app.UseMiddleware&ltLoggingMiddleware&gt();
-
-    // ...
+        return View();
+    }
 }
-                </code>
-            </pre>
+                    </code>
+                </pre>
         </div>
         <div class="minus-margin-top"></div>
         <div class="alert-card alert-card3 alert-card-gray">
@@ -115,7 +134,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
             <b>Wyjaśnienie</b>
             <div class="line"></div>
             <p>
-                W tym przykładzie zarejestrowano middleware LoggingMiddleware za pomocą metody UseMiddleware na obiekcie IApplicationBuilder.
+                W tym przypadku, akcja Index obsługuje błędy HTTP, takie jak 404 lub 500, i wyświetla odpowiednie komunikaty błędów na widoku Error.cshtml.
             </p>
         </div>
         <div class="big-page-header"></div>
@@ -124,20 +143,12 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
             <b>Ważne</b>
             <div class="line"></div>
             <p>
-                Kolejność rejestracji middleware'ów jest ważna, ponieważ każdy middleware w łańcuchu przetwarza żądanie HTTP w kolejności rejestracji.
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Można również wykorzystać wbudowane middleware'y w ASP.NET Core do przetwarzania żądań HTTP i odpowiedzi. Na przykład, middleware UseRouting służy do przetwarzania routingu żądań HTTP, a middleware UseEndpoints służy do przetwarzania żądań HTTP i generowania odpowiedzi.
+                Obsługa błędów jest bardzo ważna dla poprawnej pracy aplikacji internetowej, a dzięki wbudowanym middleware'om w ASP.NET Core oraz zaimplementowaniu odpowiedniego kontrolera i widoków, można zapewnić użytkownikom wysoki poziom dostępności i wygodne korzystanie z aplikacji.
             </p>
         </div>
         <div class="big-page-header"></div>
         <div class="btn">
-            <a href="Implementation_of_authentication.html"><button>Dalej</button></a>
+            <a href="Application_styling.html"><button>Dalej</button></a>
         </div>
     </div>
 </div>

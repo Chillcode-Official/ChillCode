@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>ASP.NET(Debugowanie-aplikacji)</title>
+    <title>ASP.NET {Debugowanie-aplikacji}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
@@ -26,42 +26,40 @@
 
     <div class="roadmap-list">
         <ol>
-            <li><a href="Wprowadzenie-ASP.NET-Core.html">Wprowadzenie do ASP.NET-Core</a></li>
-            <li><a href="Szybki-Start.html">Szybki-Start</a></li>
-            <li><a href="Struktura-Projektu.html">Struktura projektu</a></li>
-            <li><a href="Tworzenie-Kontrolerów-Akcji.html">Tworzenie kontrolerów i akcji</a></li>
+            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="Project_structure.html">Struktura projektu</a></li>
+            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
             <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Modelowanie-Danych.html">Modelowanie danych</a></li>
-            <li><a href="Widoki-RazorViewEngine-TagHelpers.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Dostęp-Do-Danych.html">Dostęp do danych</a></li>
+            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
+            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
             <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementacja-Uwierzytelnienia-Autoryzacji.html">Implementacja uwierzytelnienia i autoryzacji</a></li>
-            <li><a href="Obsługa-Błędów.html">Obsługa błędów</a></li>
-            <li><a href="Stylowanie-Aplikacji.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementacja-Serwisów-RESTful.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="Implementacja-WebSocketów.html">Implementacja WebSocketów</a></li>
-            <li><a href="Testowanie-Aplikacji.html">Testowanie aplikacji</a></li>
-            <li><a href="Debugowanie-Aplikacji.html">Debugowanie aplikacji</a></li>
-            <li><a href="Wdrażanie-Aplikacji.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integracja-Aplikacji-Z-Innymi-Technologiami.html">Integracja-Aplikacji-Z-Innymi-Technologiami</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
+            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+            <li><a href="Error_handling.html">Obsługa błędów</a></li>
+            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
         </ol>
     </div>
 
     <div class="content">
-        <h1>Debugowanie Aplikacji</h1>
         <div class="section-with-image">
-            <p>
-                Debugowanie aplikacji w kontekście ASP.NET Core to proces znajdowania i naprawiania błędów w kodzie aplikacji webowej napisanej przy użyciu platformy ASP.NET Core. Debugowanie jest ważnym etapem w procesie tworzenia aplikacji, ponieważ pozwala na identyfikację błędów w kodzie i naprawienie ich, zanim aplikacja zostanie wdrożona do produkcji.
-            </p>
-            <img src="/img/vector12.png" alt="">
+            <div class="text-content">
+                <h1>Debugowanie Aplikacji</h1>
+                <p>
+                    Debugowanie aplikacji w kontekście ASP.NET Core to proces znajdowania i naprawiania błędów w kodzie aplikacji webowej napisanej przy użyciu platformy ASP.NET Core. Debugowanie jest ważnym etapem w procesie tworzenia aplikacji, ponieważ pozwala na identyfikację błędów w kodzie i naprawienie ich, zanim aplikacja zostanie wdrożona do produkcji.
+                </p>
+            </div>
+            <img src="/img/vector102.png" alt="">
         </div>
+        <h2><img class="icon-img-big" src="/img/icon_configure(5).png" alt=""> Istnieje kilka sposobów na debugowanie aplikacji między innymi:</h2>
         <div class="text-container lightWhite-container black-list no-margin-top">
-            <p class="text-container lightWhite-container no-margin-top">
-                Debugowanie aplikacji ASP.NET Core to proces, w którym programista stara się znaleźć i naprawić błędy w kodzie aplikacji. W ASP.NET Core istnieje kilka sposobów na debugowanie aplikacji, w tym:
-            </p>
-            <div class="page-header"></div>
-            <div class="line"></div>
             <div class="text-content">
                 <h3>1: Debugowanie lokalne</h3>
                 <p>
@@ -100,24 +98,26 @@
                     Używanie debuggera, aby zatrzymać działanie aplikacji w konkretnym punkcie i przeanalizować jej stan. Debugger jest przydatny, gdy chcesz znaleźć i naprawić błędy w kodzie aplikacji.
                 </p>
             </div>
-            <div class="line"></div>
-            <div class="page-header"></div>
-            <div class="text-content">
-                <h3>Podsumowanie</h3>
-                <p>Wszystkie te metody debugowania są przydatne w różnych sytuacjach, w zależności od tego, co chcesz osiągnąć. Dobrym zwyczajem jest stosowanie ich w połączeniu, aby osiągnąć najlepsze wyniki debugowania aplikacji.</p>
-            </div>
         </div>
-        <div class="page-header"></div>
-        <div class="text-container blue-container">
-            <img src="/img/warning.png" alt="">
-            <b>Ważne</b>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Wszystkie te metody debugowania są przydatne w różnych sytuacjach, w zależności od tego, co chcesz osiągnąć. Dobrym zwyczajem jest stosowanie ich w połączeniu, aby osiągnąć najlepsze wyniki debugowania aplikacji.
+            </p>
+        </div>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b> Ważne</b>
+            <div class="line"></div>
             <p>
                 ważne jest, aby poświęcić wystarczająco dużo czasu na debugowanie, aby upewnić się, że aplikacja działa zgodnie z oczekiwaniami i spełnia wymagania użytkowników.
             </p>
         </div>
         <div class="big-page-header"></div>
         <div class="btn">
-            <a href="Wdrażanie-Aplikacji.html"><button>Dalej</button></a>
+            <a href="Application_deployment.html"><button>Dalej</button></a>
         </div>
     </div>
 </div>

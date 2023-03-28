@@ -2,13 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>ASP.NET {Routing}</title>
+    <title>ASP.NET {Tworzenie kontrolerów akcji}</title>
     <link rel="stylesheet" href="../Basic.css"/>
 
     <!-- Highlight JS init: -->
     <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
     <script src="/Highlight/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
 </head>
 <body>
 
@@ -51,91 +52,84 @@
     <div class="content">
         <div class="section-with-image">
             <div class="text-content">
-                <h1>Routing</h1>
+                <h1>Tworzenie Kontrolerów i Akcji</h1>
                 <p>
-                    Routing w ASP.NET Core to mechanizm, który odpowiada za przetwarzanie żądań HTTP i przekierowywanie ich do odpowiedniego kontrolera i akcji. Routing opiera się na mapowaniu adresu URL żądania na odpowiedni kontroler i akcję.
+                    Tworzenie kontrolerów i akcji w ASP.NET Core to proces tworzenia klasy kontrolera i jej metod, które obsługują zapytania HTTP do aplikacji internetowej. Kontrolery są odpowiedzialne za przyjmowanie żądań HTTP i przetwarzanie ich, a następnie zwracanie odpowiedzi.
                 </p>
             </div>
-            <img src="/img/vector42.png" alt="">
+            <img src="/img/vector115.png" alt="">
         </div>
-        <p class="text-container lightBrown-container no-margin-top">
-            W ASP.NET Core routing jest skonfigurowany w klasie Startup.cs w metodzie ConfigureServices() za pomocą metody AddControllers() lub AddMvc() w przypadku kontrolerów MVC. Metoda ta dodaje routing do aplikacji i rejestruje kontrolery w aplikacji. Przykładowy kod konfiguracji routing w ASP.NET Core:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddControllers();
-
-    services.AddRouting(options =>
-    {
-        options.LowercaseUrls = true;
-        options.AppendTrailingSlash = true;
-    });
-}
-
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    // ...
-
-    app.UseRouting();
-
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
-
-    // ...
-}
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
+        <div class="text-container light-container black-list no-margin-top">
+            <div class="text-content">
+                <h3>Proces tworzenia kontrolera i akcji w ASP.NET Core: </h3>
+            </div>
             <div class="line"></div>
-            <p>
-                W powyższym przykładzie metoda AddControllers() dodaje kontrolery do aplikacji, a metoda AddRouting() dodaje routing i konfiguruje opcje, takie jak "LowercaseUrls" i "AppendTrailingSlash". Metoda UseRouting() konfiguruje middleware routingu, a metoda MapControllers() mapuje adresy URL do akcji kontrolera.
-            </p>
+            <h4>
+                Krok 1: Utworzenie kontrolera
+            </h4>
+            <ul>
+                <li>Kliknij prawym przyciskiem myszy na folderze "Controllers" w swoim projekcie</li>
+                <li>Wybierz "Add" > "Controller"</li>
+                <li>Wybierz jeden z szablonów kontrolera, takich jak "API Controller - Empty" lub "MVC Controller - Empty"</li>
+                <li>Nadaj kontrolerowi nazwę i kliknij "Add"</li>
+            </ul>
+            <h4>
+                Krok 2: Dodanie akcji
+            </h4>
+            <ul>
+                <li>W kontrolerze znajdź metodę, która odpowiada na żądanie HTTP</li>
+                <li>Dodaj atrybut [HttpGet], aby określić typ żądania, który ma być obsługiwany przez akcję</li>
+                <li>Dodaj kod, który przetwarza dane i zwraca wynik</li>
+            </ul>
         </div>
         <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_http(1).png" alt=""> Routing przekazywane żądaniem HTTP</h2>
-        <div class="double-elements">
-            <div class="code-block">
+        <h3 class="color-text-white"><img class="icon-img-big" src="/img/icon_controller.png" alt=""> Kod kontrolera z jedną akcją, zwracającą "Hello, World!":</h3>
+        <div class="code-block">
             <pre>
                 <code>
-[HttpGet("{id}")]
-public IActionResult Get(int id)
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/[controller]")]
+public class HelloWorldController : ControllerBase
 {
-    // ...
+    [HttpGet]
+    public ActionResult&ltstring&gt Get()
+    {
+        return "Hello, World!";
+    }
 }
                 </code>
             </pre>
-            </div>
-            <p class="text-content-500width">
-                Routing w ASP.NET Core opiera się na szablonach adresów URL i parametrach, które mogą być przekazywane z żądaniem HTTP. Na przykład, poniższy kod konfiguruje szablon adresu URL dla akcji "Get" kontrolera "ProductController" z parametrem "id":
-            </p>
         </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/code.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content output-padding">
+                    Hello, World!
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
         <div class="alert-card alert-card3 alert-card-gray">
             <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
             <b>Wyjaśnienie</b>
             <div class="line"></div>
             <p>
-                W tym przypadku adres URL będzie miał postać "/Product/{id}", gdzie "{id}" jest parametrem przekazywanym z żądaniem HTTP. Routing w ASP.NET Core automatycznie dopasuje wartość parametru z żądania do parametru akcji "id".
+                W tym przykładzie kontroler nazywa się "HelloWorldController", a akcja "Get" jest oznaczona atrybutem [HttpGet], co oznacza, że ta akcja będzie obsługiwać żądania HTTP GET. W akcji zwracana jest wartość "Hello, World!".
             </p>
         </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b>Ważne</b>
             <div class="line"></div>
             <p>
-                Warto zaznaczyć, że routing w ASP.NET Core jest elastyczny i może być dostosowany do potrzeb konkretnego projektu. Dlatego ważne jest, aby zrozumieć, jak działa routing i jak go skonfigurować w swojej aplikacji.
+                Pamiętaj, że kontrolery i akcje muszą być zadeklarowane w odpowiedniej przestrzeni nazw i muszą dziedziczyć odpowiednio po klasach bazowych ControllerBase lub Controller w przypadku kontrolerów MVC.
             </p>
         </div>
         <div class="big-page-header"></div>
         <div class="btn">
-            <a href="Data_modeling.html"><button>Dalej</button></a>
+            <a href="Routing.html"><button>Dalej</button></a>
         </div>
     </div>
 </div>
