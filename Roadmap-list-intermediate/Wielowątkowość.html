@@ -1,195 +1,195 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Wielowątkowość</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Wielowątkowość</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Atrybuty.html">Atrybuty</a></li>
-            <li><a href="Refleksja.html">Refleksja</a></li>
-            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
-            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
-            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
-            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
-            <li><a href="Indeksery.html">Indeksery</a></li>
-            <li><a href="Delegaty.html">Delegaty</a></li>
-            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Atrybuty.html">Atrybuty</a></li>
+						<li><a href="Refleksja.html">Refleksja</a></li>
+						<li><a href="Zdarzenia.html">Zdarzenia</a></li>
+						<li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+						<li><a href="Unsafe-code.html">Unsafe-code</a></li>
+						<li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+						<li><a href="Indeksery.html">Indeksery</a></li>
+						<li><a href="Delegaty.html">Delegaty</a></li>
+						<li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+						<li><a href="Podsumowanie.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Wielowątkowość W Języku c#</h1>
-        <div class="section-with-image">
-            <p>
-                W języku C#, wielowątkowość jest realizowana przez użycie klasy Thread oraz interfejsu ThreadStart.
-                Klasa Thread pozwala na utworzenie nowego wątku, a interfejs ThreadStart określa metodę,
-                która będzie wykonywana przez nowo utworzony wątek. W celu synchronizacji wątków, można użyć
-                klas Monitor, Mutex lub Semaphore.
-            </p>
-            <img src="/img/vector88.png" alt="">
-        </div>
-        <p class="text-container no-margin-top">
-            Wielowątkowość pozwala na równoległe wykonywanie wielu zadań przez różne wątki, co może przyspieszyć działanie programu.
-        </p>
-        <div class="big-page-header"></div>
-        <h2>Cykl Życia Wątku</h2>
-        <p>
-            Cykl życia wątku to ciąg zdarzeń, które zachodzą od jego utworzenia do zakończenia działania.
-        </p>
-        <div class="text-container black-container white-list article">
-            <ol>
-                <li>Utworzenie: Wątek jest tworzony przy pomocy klasy Thread lub delegatów.</li>
-                <li>Uruchomienie: Wątek jest uruchamiany przy pomocy metody Start().</li>
-                <li>Działanie: Wątek wykonuje swoją pracę, czyli wykonuje określoną logikę biznesową.</li>
-                <li>Zakończenie: Wątek kończy swoje działanie z powodzeniem lub z powodu wyjątku.</li>
-                <li>Zakończenie ze zwolnieniem zasobów: Wątek zostaje zakończony i zwalniane są zasoby związane z jego działaniem.</li>
-                <li>Przerwanie: Wątek jest przerywany przez inny wątek.</li>
-                <li>Zakończenie ze zwolnieniem zasobów po przerwaniu: Wątek zostaje przerwany i zwalniane są zasoby związane z jego działaniem.</li>
-            </ol>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Główny Wątek</h1>
-        <div class="section-with-image">
-            <p class="text-content-500width">
-                Główny wątek jest to pierwszy wątek, który jest uruchamiany przez program. Jest to wątek, który
-                jest tworzony automatycznie przez system operacyjny w momencie uruchomienia programu i jest
-                odpowiedzialny za wykonywanie kodu z metody Main() lub innego punktu wejścia do programu.
-            </p>
-            <img src="/img/vector95.png" alt="">
-        </div>
-        <p class="text-container gray-container no-margin-top">
-            Aby uzyskać dostęp do obecnie działającego wątku, można użyć statycznej właściwości CurrentThread
-            klasy Thread. Poniżej przykład, który demonstruje jak używać tej właściwości:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<h1>Wielowątkowość W Języku c#</h1>
+				<div class="section-with-image">
+						<p>
+								W języku C#, wielowątkowość jest realizowana przez użycie klasy Thread oraz interfejsu ThreadStart.
+								Klasa Thread pozwala na utworzenie nowego wątku, a interfejs ThreadStart określa metodę,
+								która będzie wykonywana przez nowo utworzony wątek. W celu synchronizacji wątków, można użyć
+								klas Monitor, Mutex lub Semaphore.
+						</p>
+						<img src="/img/vector88.png" alt="">
+				</div>
+				<p class="text-container no-margin-top">
+						Wielowątkowość pozwala na równoległe wykonywanie wielu zadań przez różne wątki, co może przyspieszyć działanie programu.
+				</p>
+				<div class="big-page-header"></div>
+				<h2>Cykl Życia Wątku</h2>
+				<p>
+						Cykl życia wątku to ciąg zdarzeń, które zachodzą od jego utworzenia do zakończenia działania.
+				</p>
+				<div class="text-container black-container white-list article">
+						<ol>
+								<li>Utworzenie: Wątek jest tworzony przy pomocy klasy Thread lub delegatów.</li>
+								<li>Uruchomienie: Wątek jest uruchamiany przy pomocy metody Start().</li>
+								<li>Działanie: Wątek wykonuje swoją pracę, czyli wykonuje określoną logikę biznesową.</li>
+								<li>Zakończenie: Wątek kończy swoje działanie z powodzeniem lub z powodu wyjątku.</li>
+								<li>Zakończenie ze zwolnieniem zasobów: Wątek zostaje zakończony i zwalniane są zasoby związane z jego działaniem.</li>
+								<li>Przerwanie: Wątek jest przerywany przez inny wątek.</li>
+								<li>Zakończenie ze zwolnieniem zasobów po przerwaniu: Wątek zostaje przerwany i zwalniane są zasoby związane z jego działaniem.</li>
+						</ol>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Główny Wątek</h1>
+				<div class="section-with-image">
+						<p class="text-content-500width">
+								Główny wątek jest to pierwszy wątek, który jest uruchamiany przez program. Jest to wątek, który
+								jest tworzony automatycznie przez system operacyjny w momencie uruchomienia programu i jest
+								odpowiedzialny za wykonywanie kodu z metody Main() lub innego punktu wejścia do programu.
+						</p>
+						<img src="/img/vector95.png" alt="">
+				</div>
+				<p class="text-container gray-container no-margin-top">
+						Aby uzyskać dostęp do obecnie działającego wątku, można użyć statycznej właściwości CurrentThread
+						klasy Thread. Poniżej przykład, który demonstruje jak używać tej właściwości:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.Threading;
 
 class Program
 {
-    static void Main()
-    {
+		static void Main()
+		{
 
-        // Pobranie referencji do obecnie działającego wątku
-        Thread currentThread = Thread.CurrentThread;
+				// Pobranie referencji do obecnie działającego wątku
+				Thread currentThread = Thread.CurrentThread;
 
-        currentThread.Name = "Zakupy w sklepie";
+				currentThread.Name = "Zakupy w sklepie";
 
 
-        // Wypisanie informacji o wątku
-        Console.WriteLine("Nazwa wątku: " + currentThread.Name);
-    }
+				// Wypisanie informacji o wątku
+				Console.WriteLine("Nazwa wątku: " + currentThread.Name);
+		}
 }
 
 
 //output: Nazwa wątku: Zakupy w sklepie
-                </code>
-            </pre>
-        </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
-            <p>
-                W powyższym przykładzie, pobieramy referencję do obecnie działającego wątku przy pomocy właściwości
-                CurrentThread, a następnie wypisujemy kilka informacji o tym wątku: nazwę, identyfikator oraz priorytet.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Tworzenie Wątków</h1>
-        <div class="section-with-image">
-            <p class="text-content-500width">
-                Tworzenie wątków to proces, który polega na utworzeniu nowego, niezależnego "toru wykonawczego"
-                w programie. Wątek jest jednostką, która jest wykonywana przez procesor i posiada swój własny
-                stos oraz rejestry. Wątki mogą wykonywać się równolegle lub w sposób przeplatany (ang. multitasking),
-                co pozwala na efektywniejsze wykorzystanie zasobów procesora. Tworzenie wątków pozwala na
-                rozdzielenie pracy na kilka niezależnych od siebie części, co pozwala na równoległe wykonywanie
-                różnych zadań.
-            </p>
-            <img src="/img/vector14.png" alt="">
-        </div>
-        <div class="text-container cream-container">
-        <p>
-            przykład kodu, który demonstruje użycie wielu wątków do rozwiązania problemu obliczeniowego:
-        </p>
-        </div>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="text-container gray-container">
+						<img src="/img/warning.png" alt="">
+						<b>Wyjasnienie</b>
+						<p>
+								W powyższym przykładzie, pobieramy referencję do obecnie działającego wątku przy pomocy właściwości
+								CurrentThread, a następnie wypisujemy kilka informacji o tym wątku: nazwę, identyfikator oraz priorytet.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Tworzenie Wątków</h1>
+				<div class="section-with-image">
+						<p class="text-content-500width">
+								Tworzenie wątków to proces, który polega na utworzeniu nowego, niezależnego "toru wykonawczego"
+								w programie. Wątek jest jednostką, która jest wykonywana przez procesor i posiada swój własny
+								stos oraz rejestry. Wątki mogą wykonywać się równolegle lub w sposób przeplatany (ang. multitasking),
+								co pozwala na efektywniejsze wykorzystanie zasobów procesora. Tworzenie wątków pozwala na
+								rozdzielenie pracy na kilka niezależnych od siebie części, co pozwala na równoległe wykonywanie
+								różnych zadań.
+						</p>
+						<img src="/img/vector14.png" alt="">
+				</div>
+				<div class="text-container cream-container">
+				<p>
+						przykład kodu, który demonstruje użycie wielu wątków do rozwiązania problemu obliczeniowego:
+				</p>
+				</div>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.Threading;
 
 class Program
 {
-    // tablica na wyniki
-    static int[] _results;
+		// tablica na wyniki
+		static int[] _results;
 
 
-    static void Main()
-    {
-        // ilość wątków
-        int n = 10;
-        _results = new int[n];
+		static void Main()
+		{
+				// ilość wątków
+				int n = 10;
+				_results = new int[n];
 
 
-        // tablica wątków
-        Thread[] threads = new Thread[n];
+				// tablica wątków
+				Thread[] threads = new Thread[n];
 
 
-        // tworzymy i uruchamiamy wszystkie wątki
-        for (int i = 0; i < n; i++)
-        {
-            // zmienna tymczasowa, aby zachować wartość i dla każdego wątku
-            int temp = i;
-            threads[i] = new Thread(() => Calculate(temp));
-            threads[i].Start();
-        }
+				// tworzymy i uruchamiamy wszystkie wątki
+				for (int i = 0; i < n; i++)
+				{
+						// zmienna tymczasowa, aby zachować wartość i dla każdego wątku
+						int temp = i;
+						threads[i] = new Thread(() => Calculate(temp));
+						threads[i].Start();
+				}
 
 
-        // czekamy aż wszystkie wątki zakończą pracę
-        for (int i = 0; i < n; i++)
-        {
-            threads[i].Join();
-        }
+				// czekamy aż wszystkie wątki zakończą pracę
+				for (int i = 0; i < n; i++)
+				{
+						threads[i].Join();
+				}
 
 
-        // wypisujemy wyniki
-        for (int i = 0; i < n; i++)
-        {
-            Console.WriteLine(_results[i]);
-        }
-    }
+				// wypisujemy wyniki
+				for (int i = 0; i < n; i++)
+				{
+						Console.WriteLine(_results[i]);
+				}
+		}
 
 
-    // metoda wykonywana przez każdy wątek
-    static void Calculate(int index)
-    {
-        // obliczenia
-        _results[index] = index * index;
-    }
+		// metoda wykonywana przez każdy wątek
+		static void Calculate(int index)
+		{
+				// obliczenia
+				_results[index] = index * index;
+		}
 }
 
 
@@ -205,118 +205,118 @@ class Program
 49
 64
 81
-                </code>
-            </pre>
-        </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
-            <p>
-                W powyższym kodzie tworzymy 10 wątków, każdy z nich wykonuje metodę Calculate z indeksem i. Wszystkie
-                wątki pracują równolegle, dzięki czemu cały proces obliczeniowy jest szybszy niż gdyby był wykonywany
-                przez jeden wątek. Metoda Join() pozwala na zaczekanie aż wszystkie wątki zakończą swoje działanie.
-                Dzięki temu zabiegowi, zapewniamy sobie, że wynik zostanie zwrócony po zakończeniu działania wszystkich wątków.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Zarządzanie Wątkami</h1>
-        <div class="section-with-image">
-            <p class="text-content-500width">
-                Zarządzanie wątkami polega na kontrolowaniu i koordynowaniu działania wątków w programie.
-                Może to obejmować tworzenie, uruchamianie, zatrzymywanie i zabijanie wątków.
-            </p>
-            <img src="/img/vector40.png" alt="">
-        </div>
-        <p class="text-container blue-container no-margin-top">
-            Pozwala na koordynację i synchronizację działań wielu wątków.
-        </p>
-        <div class="big-page-header"></div>
-        <h2>Mechanizmy Zarządzające Wątkami</h2>
-        <p>
-            W języku C#, istnieje kilka mechanizmów pozwalających na zarządzanie wątkami, takich jak:
-        </p>
-        <div class="text-container black-container white-list article">
-            <ul>
-                <li>Tworzenie i uruchamianie wątków: można to zrobić za pomocą klasy Thread lub delegatów.</li>
-                <li>Zatrzymywanie wątków: można to zrobić za pomocą metody Thread.Abort(), która przerywa działanie wątku lub metody Thread.Join(), która czeka na zakończenie działania wątku.</li>
-                <li>Synchronizacja wątków: można to zrobić za pomocą mechanizmów synchronizacji, takich jak obiekty lock, semafory i eventy, które pozwalają na kontrolowanie dostępu do zasobów współdzielonych przez wiele wątków.</li>
-            </ul>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container blue-container">
-            Przykład programu, który ilustruje różne aspekty zarządzania wątkami. W tym przykładzie używamy
-            klasy ManualResetEvent do synchronizacji między wątkami i klasy Interlocked do bezpiecznego
-            operowania na zmiennych:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="text-container gray-container">
+						<img src="/img/warning.png" alt="">
+						<b>Wyjasnienie</b>
+						<p>
+								W powyższym kodzie tworzymy 10 wątków, każdy z nich wykonuje metodę Calculate z indeksem i. Wszystkie
+								wątki pracują równolegle, dzięki czemu cały proces obliczeniowy jest szybszy niż gdyby był wykonywany
+								przez jeden wątek. Metoda Join() pozwala na zaczekanie aż wszystkie wątki zakończą swoje działanie.
+								Dzięki temu zabiegowi, zapewniamy sobie, że wynik zostanie zwrócony po zakończeniu działania wszystkich wątków.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Zarządzanie Wątkami</h1>
+				<div class="section-with-image">
+						<p class="text-content-500width">
+								Zarządzanie wątkami polega na kontrolowaniu i koordynowaniu działania wątków w programie.
+								Może to obejmować tworzenie, uruchamianie, zatrzymywanie i zabijanie wątków.
+						</p>
+						<img src="/img/vector40.png" alt="">
+				</div>
+				<p class="text-container blue-container no-margin-top">
+						Pozwala na koordynację i synchronizację działań wielu wątków.
+				</p>
+				<div class="big-page-header"></div>
+				<h2>Mechanizmy Zarządzające Wątkami</h2>
+				<p>
+						W języku C#, istnieje kilka mechanizmów pozwalających na zarządzanie wątkami, takich jak:
+				</p>
+				<div class="text-container black-container white-list article">
+						<ul>
+								<li>Tworzenie i uruchamianie wątków: można to zrobić za pomocą klasy Thread lub delegatów.</li>
+								<li>Zatrzymywanie wątków: można to zrobić za pomocą metody Thread.Abort(), która przerywa działanie wątku lub metody Thread.Join(), która czeka na zakończenie działania wątku.</li>
+								<li>Synchronizacja wątków: można to zrobić za pomocą mechanizmów synchronizacji, takich jak obiekty lock, semafory i eventy, które pozwalają na kontrolowanie dostępu do zasobów współdzielonych przez wiele wątków.</li>
+						</ul>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container blue-container">
+						Przykład programu, który ilustruje różne aspekty zarządzania wątkami. W tym przykładzie używamy
+						klasy ManualResetEvent do synchronizacji między wątkami i klasy Interlocked do bezpiecznego
+						operowania na zmiennych:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.Threading;
 
 class Program
 {
-    static bool _isRunning = true;
-    static int _counter;
-    static ManualResetEvent _event = new ManualResetEvent(false);
+		static bool _isRunning = true;
+		static int _counter;
+		static ManualResetEvent _event = new ManualResetEvent(false);
 
 
-    static void Main()
-    {
-        // Tworzenie nowego wątku
-        Thread workerThread = new Thread(WorkerMethod);
-        workerThread.Start();
+		static void Main()
+		{
+				// Tworzenie nowego wątku
+				Thread workerThread = new Thread(WorkerMethod);
+				workerThread.Start();
 
 
-        // Pętla kontrolna
-        while (_isRunning)
-        {
-            // Użytkownik wprowadza liczbę
-            Console.WriteLine("\nWprowadź liczbę:");
-            int number = int.Parse(Console.ReadLine());
+				// Pętla kontrolna
+				while (_isRunning)
+				{
+						// Użytkownik wprowadza liczbę
+						Console.WriteLine("\nWprowadź liczbę:");
+						int number = int.Parse(Console.ReadLine());
 
 
-            // Sprawdzanie, czy liczba jest większa od 0
-            if (number > 0)
-            {
-                Interlocked.Exchange(ref _counter, number);
-                _event.Set();
-            }
+						// Sprawdzanie, czy liczba jest większa od 0
+						if (number > 0)
+						{
+								Interlocked.Exchange(ref _counter, number);
+								_event.Set();
+						}
 
-            else
-            {
-                _isRunning = false;
-                _event.Set();
-                workerThread.Join();
+						else
+						{
+								_isRunning = false;
+								_event.Set();
+								workerThread.Join();
 
-                Console.WriteLine("Program zakończył działanie.");
-            }
-        }
-    }
+								Console.WriteLine("Program zakończył działanie.");
+						}
+				}
+		}
 
 
-    static void WorkerMethod()
-    {
-        while (_isRunning)
-        {
-            _event.WaitOne();
-            if (!_isRunning)
-                break;
+		static void WorkerMethod()
+		{
+				while (_isRunning)
+				{
+						_event.WaitOne();
+						if (!_isRunning)
+								break;
 
-            int number = Interlocked.Exchange(ref _counter, 0);
+						int number = Interlocked.Exchange(ref _counter, 0);
 
-            int factorial = 1;
+						int factorial = 1;
 
-            for (int i = 1; i <= number; i++)
-            {
-                factorial *= i;
-            }
+						for (int i = 1; i <= number; i++)
+						{
+								factorial *= i;
+						}
 
-            Console.WriteLine("Silnia liczby {0} wynosi {1}", number, factorial);
+						Console.WriteLine("Silnia liczby {0} wynosi {1}", number, factorial);
 
-            _event.Reset();
-        }
-    }
+						_event.Reset();
+				}
+		}
 }
 
 
@@ -327,85 +327,85 @@ Wprowadź liczbę:
 
 Wprowadź liczbę:
 Silnia liczby 5 wynosi 120
-                </code>
-            </pre>
-        </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
-            <p>
-                W tym przykładzie, główny wątek wysyła dane do wątku workerThread poprzez ustawienie wartości
-                zmiennej _counter i ustawienie obiektu _event. Wątek workerThread czeka na sygnał z obiektu
-                _event i po otrzymaniu sygnału, odczytuje wartość zmiennej _counter, oblicza silnię i drukuje
-                wynik. Następnie resetuje _event i czeka na kolejny sygnał.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Niszczenie Wątków</h1>
-        <div class="section-with-image">
-            <p>
-                Niszczenie wątków w języku C# można wykonać przy użyciu metody Abort() z klasy Thread.
-                Ta metoda przerywa działanie wątku, jednak jest to niezalecane ze względu na potencjalne
-                problemy związane z bezpieczeństwem i stabilnością programu.
-            </p>
-            <img src="/img/vector85.png" alt="">
-        </div>
-        <p class="text-container lightPink-container no-margin-top">
-            Zamiast tego zaleca się użycie metody Join() lub Wait() w celu oczekiwania na
-            zakończenie działania wątku, a następnie użycie metody Interrupt() w celu poinformowania wątku,
-            że jego praca jest już niepotrzebna.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="text-container gray-container">
+						<img src="/img/warning.png" alt="">
+						<b>Wyjasnienie</b>
+						<p>
+								W tym przykładzie, główny wątek wysyła dane do wątku workerThread poprzez ustawienie wartości
+								zmiennej _counter i ustawienie obiektu _event. Wątek workerThread czeka na sygnał z obiektu
+								_event i po otrzymaniu sygnału, odczytuje wartość zmiennej _counter, oblicza silnię i drukuje
+								wynik. Następnie resetuje _event i czeka na kolejny sygnał.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Niszczenie Wątków</h1>
+				<div class="section-with-image">
+						<p>
+								Niszczenie wątków w języku C# można wykonać przy użyciu metody Abort() z klasy Thread.
+								Ta metoda przerywa działanie wątku, jednak jest to niezalecane ze względu na potencjalne
+								problemy związane z bezpieczeństwem i stabilnością programu.
+						</p>
+						<img src="/img/vector85.png" alt="">
+				</div>
+				<p class="text-container lightPink-container no-margin-top">
+						Zamiast tego zaleca się użycie metody Join() lub Wait() w celu oczekiwania na
+						zakończenie działania wątku, a następnie użycie metody Interrupt() w celu poinformowania wątku,
+						że jego praca jest już niepotrzebna.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.Threading;
 
 class Program
 {
-    static bool _isRunning = true;
-    static Thread _workerThread;
+		static bool _isRunning = true;
+		static Thread _workerThread;
 
 
-    static void Main()
-    {
-        _workerThread = new Thread(WorkerMethod);
-        _workerThread.Start();
+		static void Main()
+		{
+				_workerThread = new Thread(WorkerMethod);
+				_workerThread.Start();
 
 
-        // Pętla kontrolna
-        while (_isRunning)
-        {
-            Console.WriteLine("Naciśnij klawisz 'q', aby zakończyć działanie programu:");
-            var key = Console.ReadKey();
+				// Pętla kontrolna
+				while (_isRunning)
+				{
+						Console.WriteLine("Naciśnij klawisz 'q', aby zakończyć działanie programu:");
+						var key = Console.ReadKey();
 
-            if (key.Key == ConsoleKey.Q)
-            {
-                _isRunning = false;
-                _workerThread.Interrupt();
-                _workerThread.Join();
-                Console.WriteLine("Program zakończył działanie.");
-            }
-        }
-    }
+						if (key.Key == ConsoleKey.Q)
+						{
+								_isRunning = false;
+								_workerThread.Interrupt();
+								_workerThread.Join();
+								Console.WriteLine("Program zakończył działanie.");
+						}
+				}
+		}
 
 
-    static void WorkerMethod()
-    {
-        try
-        {
-            while (_isRunning)
-            {
-                // Działanie wątku
-                Console.WriteLine("Wątek działa...");
-                Thread.Sleep(1000);
-            }
-        }
-        catch (ThreadInterruptedException)
-        {
-            Console.WriteLine("Wątek został przerwany.");
-        }
-    }
+		static void WorkerMethod()
+		{
+				try
+				{
+						while (_isRunning)
+						{
+								// Działanie wątku
+								Console.WriteLine("Wątek działa...");
+								Thread.Sleep(1000);
+						}
+				}
+				catch (ThreadInterruptedException)
+				{
+						Console.WriteLine("Wątek został przerwany.");
+				}
+		}
 }
 
 
@@ -417,167 +417,167 @@ Wątek działa...
 Wątek działa...
 Wątek został przerwany.
 Program zakończył działanie.
-                </code>
-            </pre>
-        </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
-            <p>
-                W powyższym przykładzie, główny wątek programu tworzy nowy wątek workerThread, który jest uruchamiany
-                przy użyciu metody Start(). Następnie, główny wątek oczekuje na zakończenie działania wątku
-                workerThread przy użyciu metody Join(). Wewnątrz metody WorkerMethod() znajduje się pętla, która
-                jest wykonywana dopóki zmienna shouldStop nie jest ustawiona na true. Kiedy główny wątek kończy
-                swoje działanie, zmienna shouldStop jest ustawiona na true i pętla przestaje być wykonywana, a
-                wątek kończy swoje działanie.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Właściwości Klasy Thread</h1>
-        <div class="section-with-image">
-            <p>
-                Klasa Thread w języku C# pozwala na tworzenie i uruchamianie nowych wątków w programie.
-                Posiada ona następujące ważniejsze właściwości:
-            </p>
-            <img src="/img/vector72.png" alt="">
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="ustawia wątek jako w tle lub w przodzie">IsBackground</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="text-container gray-container">
+						<img src="/img/warning.png" alt="">
+						<b>Wyjasnienie</b>
+						<p>
+								W powyższym przykładzie, główny wątek programu tworzy nowy wątek workerThread, który jest uruchamiany
+								przy użyciu metody Start(). Następnie, główny wątek oczekuje na zakończenie działania wątku
+								workerThread przy użyciu metody Join(). Wewnątrz metody WorkerMethod() znajduje się pętla, która
+								jest wykonywana dopóki zmienna shouldStop nie jest ustawiona na true. Kiedy główny wątek kończy
+								swoje działanie, zmienna shouldStop jest ustawiona na true i pętla przestaje być wykonywana, a
+								wątek kończy swoje działanie.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Właściwości Klasy Thread</h1>
+				<div class="section-with-image">
+						<p>
+								Klasa Thread w języku C# pozwala na tworzenie i uruchamianie nowych wątków w programie.
+								Posiada ona następujące ważniejsze właściwości:
+						</p>
+						<img src="/img/vector72.png" alt="">
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="ustawia wątek jako w tle lub w przodzie">IsBackground</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.IsBackground = true;
 
 t.Start();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="wyświetla identyfikator wątku">ManagedThreadId</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="wyświetla identyfikator wątku">ManagedThreadId</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start();
 
 Console.WriteLine("Identyfikator wątku: " + t.ManagedThreadId);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="nadaje nazwę wątkowi">Name</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="nadaje nazwę wątkowi">Name</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Name = "Mój wątek";
 
 t.Start();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="ustawia priorytet wątku">Priority</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="ustawia priorytet wątku">Priority</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Priority = ThreadPriority.Highest;
 
 t.Start();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="wyświetla stan wątku">ThreadState</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="wyświetla stan wątku">ThreadState</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start();
 
 Console.WriteLine("Stan wątku: " + t.ThreadState);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="sprawdza czy dany wątek jest z puli wątków">IsThreadPoolThread</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="sprawdza czy dany wątek jest z puli wątków">IsThreadPoolThread</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 
 t.Start();
 
 if(t.IsThreadPoolThread)
 {
-    Console.WriteLine("Wątek jest z puli wątków");
+		Console.WriteLine("Wątek jest z puli wątków");
 }
 
 else
 {
-    Console.WriteLine("Wątek jest nie jest z puli wątków");
+		Console.WriteLine("Wątek jest nie jest z puli wątków");
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="ustawia lub zwraca kulturę dla bieżącego wątku">CurrentCulture</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="ustawia lub zwraca kulturę dla bieżącego wątku">CurrentCulture</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");
 
 Console.WriteLine("Bieżąca kultura: " + Thread.CurrentThread.CurrentCulture);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Właściwość <code><a href="#" pro-tip="ustawia lub zwraca kulturę interfejsu użytkownika dla bieżącego wątku">CurrentUICulture</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Właściwość <code><a href="#" pro-tip="ustawia lub zwraca kulturę interfejsu użytkownika dla bieżącego wątku">CurrentUICulture</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-FR");
 
 Console.WriteLine("Bieżąca kultura interfejsu użytkownika: " + Thread.CurrentThread.CurrentUICulture);
-                </code>
-            </pre>
-        </div>
-        <h1>Metody Klasy Thread</h1>
-        <div class="section-with-image">
-            <p>
-                Klasa Thread w języku c# służy do tworzenia i zarządzania wątkami. Zawiera ona różne
-                metody pozwalające na kontrolowanie działania wątków, takie jak:
-            </p>
-            <img src="/img/vector34.png" alt="">
-        </div>
-        <p class="text-container purple-container article tooltip no-margin-top">
-            Metoda <code><a href="#" pro-tip="przerywa działanie wątku.">Abort()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<h1>Metody Klasy Thread</h1>
+				<div class="section-with-image">
+						<p>
+								Klasa Thread w języku c# służy do tworzenia i zarządzania wątkami. Zawiera ona różne
+								metody pozwalające na kontrolowanie działania wątków, takie jak:
+						</p>
+						<img src="/img/vector34.png" alt="">
+				</div>
+				<p class="text-container purple-container article tooltip no-margin-top">
+						Metoda <code><a href="#" pro-tip="przerywa działanie wątku.">Abort()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start();
 t.Abort();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="czeka na zakończenie działania wątku.">Join()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="czeka na zakończenie działania wątku.">Join()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 
 t.Start();
@@ -585,15 +585,15 @@ t.Start();
 t.Join();
 
 Console.WriteLine("Wątek zakończył działanie.");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="wznawia działanie wstrzymanego wątku.">Resume()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="wznawia działanie wstrzymanego wątku.">Resume()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start();
 t.Suspend();
@@ -603,144 +603,144 @@ Console.WriteLine("Wątek wstrzymany.");
 t.Resume();
 
 Console.WriteLine("Wątek wznowiony.");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="rozpoczyna działanie wątku.">Start()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="rozpoczyna działanie wątku.">Start()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start()
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="wstrzymuje działanie wątku.">Suspend()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="wstrzymuje działanie wątku.">Suspend()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 t.Start();
 t.Suspend();
 
 Console.WriteLine("Wątek wstrzymany.");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="przerywa działanie wątku, który jest w trakcie wykonywania wywołania metody Sleep, Join lub Wait.">Interrupt()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="przerywa działanie wątku, który jest w trakcie wykonywania wywołania metody Sleep, Join lub Wait.">Interrupt()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread t = new Thread(new ThreadStart(MyMethod));
 
 t.Start();
 t.Interrupt();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zatrzymuje działanie wątku na określony czas.">Sleep(int millisecondsTimeout)</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zatrzymuje działanie wątku na określony czas.">Sleep(int millisecondsTimeout)</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.Sleep(1000); // zatrzymuje działanie wątku na 1 sekundę.
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="powoduje, że procesor przetwarza instrukcje w pętli określoną liczbę razy.">SpinWait(int iterations)</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="powoduje, że procesor przetwarza instrukcje w pętli określoną liczbę razy.">SpinWait(int iterations)</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.SpinWait(1000);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca bieżący obiekt Thread.">CurrentThread</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca bieżący obiekt Thread.">CurrentThread</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread currentThread = Thread.CurrentThread;
 
 Console.WriteLine("Identyfikator wątku: " + currentThread.ManagedThreadId);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="oznacza początek regionu krytycznego dla bieżącego wątku.">BeginCriticalRegion(</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="oznacza początek regionu krytycznego dla bieżącego wątku.">BeginCriticalRegion(</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.BeginCriticalRegion();
 
 // kod wykonywany w regionie krytycznym
 Thread.EndCriticalRegion();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="oznacza koniec regionu krytycznego dla bieżącego wątku.">EndCriticalRegion()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="oznacza koniec regionu krytycznego dla bieżącego wątku.">EndCriticalRegion()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.BeginCriticalRegion();
 
 // kod wykonywany w regionie krytycznym
 Thread.EndCriticalRegion();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="wymusza synchronizację buforów pamięci między różnymi wątkami.">MemoryBarrier()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="wymusza synchronizację buforów pamięci między różnymi wątkami.">MemoryBarrier()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Thread.MemoryBarrier();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="odczytuje wartość zmiennej w sposób zapewniający atomowość operacji.">VolatileRead(ref T address)</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="odczytuje wartość zmiennej w sposób zapewniający atomowość operacji.">VolatileRead(ref T address)</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int myValue = 0;
 
 int readValue = Thread.VolatileRead(ref myValue);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zapisuje wartość zmiennej w sposób zapewniający atomowość operacji.">VolatileWrite(ref T address, T value)</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zapisuje wartość zmiennej w sposób zapewniający atomowość operacji.">VolatileWrite(ref T address, T value)</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int myValue = 0;
 
 Thread.VolatileWrite(ref myValue, 10);
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Podsumowanie.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Podsumowanie.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

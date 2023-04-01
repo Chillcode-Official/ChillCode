@@ -1,143 +1,143 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET {Routing}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET {Routing}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Routing</h1>
-                <p>
-                    Routing w ASP.NET Core to mechanizm, który odpowiada za przetwarzanie żądań HTTP i przekierowywanie ich do odpowiedniego kontrolera i akcji. Routing opiera się na mapowaniu adresu URL żądania na odpowiedni kontroler i akcję.
-                </p>
-            </div>
-            <img src="/img/vector42.png" alt="">
-        </div>
-        <p class="text-container lightBrown-container no-margin-top">
-            W ASP.NET Core routing jest skonfigurowany w klasie Startup.cs w metodzie ConfigureServices() za pomocą metody AddControllers() lub AddMvc() w przypadku kontrolerów MVC. Metoda ta dodaje routing do aplikacji i rejestruje kontrolery w aplikacji. Przykładowy kod konfiguracji routing w ASP.NET Core:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Routing</h1>
+								<p>
+										Routing w ASP.NET Core to mechanizm, który odpowiada za przetwarzanie żądań HTTP i przekierowywanie ich do odpowiedniego kontrolera i akcji. Routing opiera się na mapowaniu adresu URL żądania na odpowiedni kontroler i akcję.
+								</p>
+						</div>
+						<img src="/img/vector42.png" alt="">
+				</div>
+				<p class="text-container lightBrown-container no-margin-top">
+						W ASP.NET Core routing jest skonfigurowany w klasie Startup.cs w metodzie ConfigureServices() za pomocą metody AddControllers() lub AddMvc() w przypadku kontrolerów MVC. Metoda ta dodaje routing do aplikacji i rejestruje kontrolery w aplikacji. Przykładowy kod konfiguracji routing w ASP.NET Core:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddControllers();
+		services.AddControllers();
 
-    services.AddRouting(options =>
-    {
-        options.LowercaseUrls = true;
-        options.AppendTrailingSlash = true;
-    });
+		services.AddRouting(options =>
+		{
+				options.LowercaseUrls = true;
+				options.AppendTrailingSlash = true;
+		});
 }
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    // ...
+		// ...
 
-    app.UseRouting();
+		app.UseRouting();
 
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
+		app.UseEndpoints(endpoints =>
+		{
+				endpoints.MapControllers();
+		});
 
-    // ...
+		// ...
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W powyższym przykładzie metoda AddControllers() dodaje kontrolery do aplikacji, a metoda AddRouting() dodaje routing i konfiguruje opcje, takie jak "LowercaseUrls" i "AppendTrailingSlash". Metoda UseRouting() konfiguruje middleware routingu, a metoda MapControllers() mapuje adresy URL do akcji kontrolera.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_http(1).png" alt=""> Routing przekazywane żądaniem HTTP</h2>
-        <div class="double-elements">
-            <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W powyższym przykładzie metoda AddControllers() dodaje kontrolery do aplikacji, a metoda AddRouting() dodaje routing i konfiguruje opcje, takie jak "LowercaseUrls" i "AppendTrailingSlash". Metoda UseRouting() konfiguruje middleware routingu, a metoda MapControllers() mapuje adresy URL do akcji kontrolera.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_http(1).png" alt=""> Routing przekazywane żądaniem HTTP</h2>
+				<div class="double-elements">
+						<div class="code-block">
+						<pre>
+								<code>
 [HttpGet("{id}")]
 public IActionResult Get(int id)
 {
-    // ...
+		// ...
 }
-                </code>
-            </pre>
-            </div>
-            <p class="text-content-500width">
-                Routing w ASP.NET Core opiera się na szablonach adresów URL i parametrach, które mogą być przekazywane z żądaniem HTTP. Na przykład, poniższy kod konfiguruje szablon adresu URL dla akcji "Get" kontrolera "ProductController" z parametrem "id":
-            </p>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przypadku adres URL będzie miał postać "/Product/{id}", gdzie "{id}" jest parametrem przekazywanym z żądaniem HTTP. Routing w ASP.NET Core automatycznie dopasuje wartość parametru z żądania do parametru akcji "id".
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Warto zaznaczyć, że routing w ASP.NET Core jest elastyczny i może być dostosowany do potrzeb konkretnego projektu. Dlatego ważne jest, aby zrozumieć, jak działa routing i jak go skonfigurować w swojej aplikacji.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Data_modeling.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+						</div>
+						<p class="text-content-500width">
+								Routing w ASP.NET Core opiera się na szablonach adresów URL i parametrach, które mogą być przekazywane z żądaniem HTTP. Na przykład, poniższy kod konfiguruje szablon adresu URL dla akcji "Get" kontrolera "ProductController" z parametrem "id":
+						</p>
+				</div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przypadku adres URL będzie miał postać "/Product/{id}", gdzie "{id}" jest parametrem przekazywanym z żądaniem HTTP. Routing w ASP.NET Core automatycznie dopasuje wartość parametru z żądania do parametru akcji "id".
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Warto zaznaczyć, że routing w ASP.NET Core jest elastyczny i może być dostosowany do potrzeb konkretnego projektu. Dlatego ważne jest, aby zrozumieć, jak działa routing i jak go skonfigurować w swojej aplikacji.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Data_modeling.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

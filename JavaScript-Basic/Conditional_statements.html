@@ -1,367 +1,367 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript {Instrukcje warunkowe}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>JavaScript {Instrukcje warunkowe}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Objects.html">Obiekty</a></li>
-            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-            <li><a href="Values.html">Wartości</a></li>
-            <li><a href="Reference.html">Referencje</a></li>
-            <li><a href="Methods.html">Metody</a></li>
-            <li><a href="Events.html">Eventy</a></li>
-            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Objects.html">Obiekty</a></li>
+						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+						<li><a href="Values.html">Wartości</a></li>
+						<li><a href="Reference.html">Referencje</a></li>
+						<li><a href="Methods.html">Metody</a></li>
+						<li><a href="Events.html">Eventy</a></li>
+						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (If)</h1>
-                <p>
-                    Instrukcja if to najprostsza i najbardziej podstawowa instrukcja warunkowa w języku JavaScript.
-                    Służy do wykonywania określonego kodu tylko wtedy, gdy określony warunek jest prawdziwy.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector9.png" alt="">
-            </div>
-        </div>
-        <p class="text-container light-container color-text-gray article tooltip no-margin-top">
-            warunek jest wyrażeniem, które jest interpretowane jako wartość logiczna <code><a href="#" pro-tip="Wartość true oznacza, że warunek jest spełniony lub wartość jest prawdziwa">true <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-            lub <code><a href="#" pro-tip="wartość false oznacza, że warunek nie jest spełniony lub wartość jest fałszywa.">false <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>. Na przykład, może to być porównanie dwóch wartości:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-javascript">
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (If)</h1>
+								<p>
+										Instrukcja if to najprostsza i najbardziej podstawowa instrukcja warunkowa w języku JavaScript.
+										Służy do wykonywania określonego kodu tylko wtedy, gdy określony warunek jest prawdziwy.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector9.png" alt="">
+						</div>
+				</div>
+				<p class="text-container light-container color-text-gray article tooltip no-margin-top">
+						warunek jest wyrażeniem, które jest interpretowane jako wartość logiczna <code><a href="#" pro-tip="Wartość true oznacza, że warunek jest spełniony lub wartość jest prawdziwa">true <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						lub <code><a href="#" pro-tip="wartość false oznacza, że warunek nie jest spełniony lub wartość jest fałszywa.">false <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>. Na przykład, może to być porównanie dwóch wartości:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
 if (warunek) {
 
-  /* kod do wykonania, gdy warunek jest prawdziwy */
+	/* kod do wykonania, gdy warunek jest prawdziwy */
 }
-                </code>
-            </pre>
-        </div>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let x = 30;
 let y = 20;
 
 if (x > y) {
-  console.log("x jest większe od y");
+	console.log("x jest większe od y");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    x jest większe od y
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-gray tooltip">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W poniższym przykładzie, warunek x > y jest sprawdzany. Jeśli jest to prawda, komunikat "x jest większe
-                od y" jest wyświetlany w konsoli. W przeciwnym razie, kod w bloku <code><a href="#" pro-tip="Warunkowa instrukcja if w JavaScript służy do wykonania pewnej części kodu tylko wtedy, gdy określony warunek jest spełniony.">if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest ignorowany i program kontynuuje
-                wykonywanie dalszych instrukcji.
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Pamiętaj, że blok kodu zawarty w instrukcji if musi być zawarty w nawiasach klamrowych {}, nawet jeśli zawiera tylko jedną instrukcję.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (else)</h1>
-                <p>
-                    Instrukcja else jest używana w połączeniu z instrukcją if i pozwala na wykonywanie innego kodu,
-                    jeśli warunek w instrukcji if jest fałszywy.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector4.png" alt="">
-            </div>
-        </div>
-        <p class="text-container lightGreen-container article tooltip no-margin-top">
-            Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="nstrukcja else może być użyta po instrukcji if i służy do wykonania pewnej części kodu, gdy warunek z instrukcji if nie został spełniony.">else <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										x jest większe od y
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-gray tooltip">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W poniższym przykładzie, warunek x > y jest sprawdzany. Jeśli jest to prawda, komunikat "x jest większe
+								od y" jest wyświetlany w konsoli. W przeciwnym razie, kod w bloku <code><a href="#" pro-tip="Warunkowa instrukcja if w JavaScript służy do wykonania pewnej części kodu tylko wtedy, gdy określony warunek jest spełniony.">if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest ignorowany i program kontynuuje
+								wykonywanie dalszych instrukcji.
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Pamiętaj, że blok kodu zawarty w instrukcji if musi być zawarty w nawiasach klamrowych {}, nawet jeśli zawiera tylko jedną instrukcję.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (else)</h1>
+								<p>
+										Instrukcja else jest używana w połączeniu z instrukcją if i pozwala na wykonywanie innego kodu,
+										jeśli warunek w instrukcji if jest fałszywy.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector4.png" alt="">
+						</div>
+				</div>
+				<p class="text-container lightGreen-container article tooltip no-margin-top">
+						Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="nstrukcja else może być użyta po instrukcji if i służy do wykonania pewnej części kodu, gdy warunek z instrukcji if nie został spełniony.">else <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 if (warunek) {
-  // kod do wykonania, gdy warunek jest prawdziwy
+	// kod do wykonania, gdy warunek jest prawdziwy
 }
 
 else {
-  // kod do wykonania, gdy warunek jest fałszywy
+	// kod do wykonania, gdy warunek jest fałszywy
 }
-                </code>
-            </pre>
-        </div>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let x = 10;
 let y = 20;
 
 if (x > y) {
-  console.log("x jest większe od y");
+	console.log("x jest większe od y");
 }
 
 else {
-  console.log("x nie jest większe od y");
+	console.log("x nie jest większe od y");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    x nie jest większe od y
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-gray highlight-container highlight-container-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W poniższym przykładzie, warunek <span>x > y</span> jest sprawdzany w instrukcji if. Jeśli jest to prawda, komunikat
-                "<span>x jest większe od y</span>" jest wyświetlany w konsoli. W przeciwnym razie kod w bloku else jest wykonywany
-                i komunikat "<span>x nie jest większe od y</span>" jest wyświetlany w konsoli.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (else..if)</h1>
-                <p>
-                    Instrukcja else if jest używana w połączeniu z instrukcją if i pozwala na wykonywanie
-                    różnych bloków kodu w zależności od kilku różnych warunków.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector23.png" alt="">
-            </div>
-        </div>
-        <p class="text-container article tooltip no-margin-top">
-            Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="Instrukcja else if może być użyta po instrukcji if lub po innej instrukcji else if i służy do wykonania pewnej części kodu, gdy spełniony jest inny warunek niż w poprzedniej instrukcji if lub else if. Można użyć wielu instrukcji else if, aby przetestować wiele warunków.">else if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-javascript">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										x nie jest większe od y
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-gray highlight-container highlight-container-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W poniższym przykładzie, warunek <span>x > y</span> jest sprawdzany w instrukcji if. Jeśli jest to prawda, komunikat
+								"<span>x jest większe od y</span>" jest wyświetlany w konsoli. W przeciwnym razie kod w bloku else jest wykonywany
+								i komunikat "<span>x nie jest większe od y</span>" jest wyświetlany w konsoli.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (else..if)</h1>
+								<p>
+										Instrukcja else if jest używana w połączeniu z instrukcją if i pozwala na wykonywanie
+										różnych bloków kodu w zależności od kilku różnych warunków.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector23.png" alt="">
+						</div>
+				</div>
+				<p class="text-container article tooltip no-margin-top">
+						Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="Instrukcja else if może być użyta po instrukcji if lub po innej instrukcji else if i służy do wykonania pewnej części kodu, gdy spełniony jest inny warunek niż w poprzedniej instrukcji if lub else if. Można użyć wielu instrukcji else if, aby przetestować wiele warunków.">else if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
 if (warunek1) {
-  // kod do wykonania, gdy warunek1 jest prawdziwy
+	// kod do wykonania, gdy warunek1 jest prawdziwy
 }
 
 else if (warunek2) {
-  // kod do wykonania, gdy warunek1 jest fałszywy i warunek2 jest prawdziwy
+	// kod do wykonania, gdy warunek1 jest fałszywy i warunek2 jest prawdziwy
 }
 
 else if (warunek3) {
-  // kod do wykonania, gdy warunek1 i warunek2 są fałszywe i warunek3 jest prawdziwy
+	// kod do wykonania, gdy warunek1 i warunek2 są fałszywe i warunek3 jest prawdziwy
 } ...
 
 else {
-  // kod do wykonania, gdy wszystkie powyższe warunki są fałszywe
+	// kod do wykonania, gdy wszystkie powyższe warunki są fałszywe
 }
-                </code>
-            </pre>
-        </div>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="code-block">
+						<pre>
+								<code>
 let x = 10;
 
 
 if (x === 0) {
-  console.log("x jest równe zero");
+	console.log("x jest równe zero");
 }
 
 
 else if (x < 0) {
-  console.log("x jest mniejsze od zera");
+	console.log("x jest mniejsze od zera");
 }
 
 
 else if (x > 0) {
-  console.log("x jest większe od zera");
+	console.log("x jest większe od zera");
 }
 
 
 else {
-  console.log("x jest innej wartości niż zero");
+	console.log("x jest innej wartości niż zero");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    x jest większe od zera
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W poniższym przykładzie, każdy warunek jest sprawdzany w kolejności od pierwszego do ostatniego.
-                Jeśli warunek jest prawdziwy, odpowiadający mu kod jest wykonywany i pozostałe instrukcje są ignorowane.
-                W przeciwnym razie, program przechodzi do następnej instrukcji.
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Możesz dodać tyle instrukcji else if, ile chcesz, aby tworzyć bardziej złożone decyzje. Pamiętaj, że nie
-                jest wymagane użycie instrukcji else, ale warto ją zawrzeć, aby uwzględnić wszystkie możliwe
-                wartości i uniknąć błędów.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (switch)</h1>
-                <p>
-                    Instrukcja switch jest alternatywą dla instrukcji if i else if, pozwala na sprawdzenie wartości
-                    zmiennych względem kilku możliwych wartości (przypadków) i wykonywanie odpowiedniego bloku kodu dla każdej z tych wartości.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector34.png" alt="">
-            </div>
-        </div>
-        <p class="text-container purple-container article tooltip no-margin-top">
-            Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="Instrukcja switch służy do testowania różnych wartości i wykonania różnych fragmentów kodu, w zależności od wartości testowanej zmiennej. W instrukcji switch każdy case definiuje wartość, która ma zostać porównana z wartością zmiennej. Jeśli wartość zmiennej pasuje do wartości w danym case, zostanie wykonany odpowiadający mu blok kodu.">switch <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-javascript">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										x jest większe od zera
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W poniższym przykładzie, każdy warunek jest sprawdzany w kolejności od pierwszego do ostatniego.
+								Jeśli warunek jest prawdziwy, odpowiadający mu kod jest wykonywany i pozostałe instrukcje są ignorowane.
+								W przeciwnym razie, program przechodzi do następnej instrukcji.
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Możesz dodać tyle instrukcji else if, ile chcesz, aby tworzyć bardziej złożone decyzje. Pamiętaj, że nie
+								jest wymagane użycie instrukcji else, ale warto ją zawrzeć, aby uwzględnić wszystkie możliwe
+								wartości i uniknąć błędów.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (switch)</h1>
+								<p>
+										Instrukcja switch jest alternatywą dla instrukcji if i else if, pozwala na sprawdzenie wartości
+										zmiennych względem kilku możliwych wartości (przypadków) i wykonywanie odpowiedniego bloku kodu dla każdej z tych wartości.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector34.png" alt="">
+						</div>
+				</div>
+				<p class="text-container purple-container article tooltip no-margin-top">
+						Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="Instrukcja switch służy do testowania różnych wartości i wykonania różnych fragmentów kodu, w zależności od wartości testowanej zmiennej. W instrukcji switch każdy case definiuje wartość, która ma zostać porównana z wartością zmiennej. Jeśli wartość zmiennej pasuje do wartości w danym case, zostanie wykonany odpowiadający mu blok kodu.">switch <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
 switch (wartość) {
 
-  case wartość 1:
-    // kod do wykonania, gdy wartość jest równa wartości1
-    break;
+	case wartość 1:
+		// kod do wykonania, gdy wartość jest równa wartości1
+		break;
 
 
-  case wartość 2:
-    // kod do wykonania, gdy wartość jest równa wartości2
-    break;
+	case wartość 2:
+		// kod do wykonania, gdy wartość jest równa wartości2
+		break;
 
-  ...
-  default:
-    // kod do wykonania, gdy wartość nie jest równa żadnej z powyższych wartości
+	...
+	default:
+		// kod do wykonania, gdy wartość nie jest równa żadnej z powyższych wartości
 }
-                </code>
-            </pre>
-        </div>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="code-block">
+						<pre>
+								<code>
 let x = "czarny";
 
 switch (x) {
 
-  case "czerwony":
-    console.log("x jest czerwony");
-    break;
+	case "czerwony":
+		console.log("x jest czerwony");
+		break;
 
-  case "zielony":
-    console.log("x jest zielony");
-    break;
+	case "zielony":
+		console.log("x jest zielony");
+		break;
 
-  case "niebieski":
-    console.log("x jest niebieski");
-    break;
+	case "niebieski":
+		console.log("x jest niebieski");
+		break;
 
-  default:
-    console.log("x nie jest żadnym z powyższych kolorów");
+	default:
+		console.log("x nie jest żadnym z powyższych kolorów");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    x nie jest żadnym z powyższych kolorów
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W poniższym przykładzie, wartość zmiennej x jest porównywana z każdym z możliwych przypadków
-                (w naszym przypadku: "czerwony", "zielony", "niebieski"). Jeśli wartość jest równa jednej z tych
-                wartości, odpowiadający mu kod jest wykonywany i instrukcja break jest używana, aby zatrzymać dalsze
-                wykonywanie programu. W przeciwnym razie, program przechodzi do następnego przypadku. Jeśli żadne z
-                przypadków nie jest prawdziwe, kod z bloku default jest wykonywany.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Loops.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										x nie jest żadnym z powyższych kolorów
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W poniższym przykładzie, wartość zmiennej x jest porównywana z każdym z możliwych przypadków
+								(w naszym przypadku: "czerwony", "zielony", "niebieski"). Jeśli wartość jest równa jednej z tych
+								wartości, odpowiadający mu kod jest wykonywany i instrukcja break jest używana, aby zatrzymać dalsze
+								wykonywanie programu. W przeciwnym razie, program przechodzi do następnego przypadku. Jeśli żadne z
+								przypadków nie jest prawdziwe, kod z bloku default jest wykonywany.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Loops.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

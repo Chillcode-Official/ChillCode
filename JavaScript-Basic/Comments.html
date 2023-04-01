@@ -1,107 +1,107 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>JavaScript {Komentarze}</title>
-  <link rel="stylesheet" href="../Basic.css"/>
+	<meta charset="UTF-8">
+	<title>JavaScript {Komentarze}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
 
-  <!-- Highlight JS init: -->
-  <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-  <script src="/Highlight/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-  <div class="navbar">
-    <section>
-      <ul>
-        <button><li><a href="../EduBear.html">Home</a></li></button>
-        <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-        <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-        <button><li><a href="/About/About.html">About me</a></li></button>
-      </ul>
-    </section>
-  </div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-  <div class="roadmap-list">
-    <ol>
-      <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-      <li><a href="Quick_start.html">Szybki start</a></li>
-      <li><a href="First_program.html">Pierwszy program</a></li>
-      <li><a href="Output_methods.html">Metody wyjściowe</a></li>
-      <li><a href="Comments.html">Komentarze</a></li>
-      <li><a href="Data_types.html">Typy danych</a></li>
-      <li><a href="Variables.html">Zmienne</a></li>
-      <li><a href="Operators.html">Operatory</a></li>
-      <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-      <li><a href="Loops.html">Pętle</a></li>
-      <li><a href="Functions.html">Funkcje</a></li>
-      <li><a href="Tables.html">Tablice</a></li>
-      <li><a href="Objects.html">Obiekty</a></li>
-      <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-      <li><a href="Values.html">Wartości</a></li>
-      <li><a href="Reference.html">Referencje</a></li>
-      <li><a href="Methods.html">Metody</a></li>
-      <li><a href="Events.html">Eventy</a></li>
-      <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-      <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-      <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-      <li><a href="Summary.html">Podsumowanie</a></li>
-    </ol>
-  </div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
-  <div class="content">
-    <h1>Komentarze</h1>
-    <div class="section-with-image">
-      <p>
-        Komentarze w JavaScript są używane do opisywania intencji kodu i ułatwiania jego zrozumienia
-        przez innych programistów lub przez samego siebie w przyszłości. Komentarze pozwalają także na wyjaśnienie
-        działania poszczególnych fragmentów kodu, co jest szczególnie przydatne w przypadku skomplikowanych algorytmów.
-      </p>
-      <div>
-        <img src="/img/vector3.png" alt="">
-      </div>
-    </div>
-    <p class="text-container purple-container no-margin-top article tooltip">
-      Komentarze w JavaScript to między innymi komentarz <code><a href="#" pro-tip="komentarz liniowy zaczyna się od dwóch ukośników (//) i jest używany do umieszczenia komentarza w jednej linii kodu. Komentarz ten nie jest interpretowany przez przeglądarkę lub środowisko wykonawcze JavaScript, a jedynie służy jako notatka dla programisty.">liniowy <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz <code><a href="#" pro-tip="komentarz wieloliniowy zaczyna się od ukośnika i gwiazdki (/*) i kończy się gwiazdką i ukośnikiem (*/), i może zawierać wiele linii tekstu. Komentarz ten jest również używany do umieszczania notatek lub opisów kodu dla programisty, ale różni się od komentarza liniowego tym, że może obejmować wiele linii kodu.">wieloliniowy <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-    </p>
-    <div class="big-page-header"></div>
-    <code><img style="width: 50px; margin-bottom: -20px;" src="/img/icon_komentarzLiniowy.png" alt=""> Komentarz liniowy</code>
-    <div class="code-block">
-      <pre>
-        <code>
+	<div class="content">
+		<h1>Komentarze</h1>
+		<div class="section-with-image">
+			<p>
+				Komentarze w JavaScript są używane do opisywania intencji kodu i ułatwiania jego zrozumienia
+				przez innych programistów lub przez samego siebie w przyszłości. Komentarze pozwalają także na wyjaśnienie
+				działania poszczególnych fragmentów kodu, co jest szczególnie przydatne w przypadku skomplikowanych algorytmów.
+			</p>
+			<div>
+				<img src="/img/vector3.png" alt="">
+			</div>
+		</div>
+		<p class="text-container purple-container no-margin-top article tooltip">
+			Komentarze w JavaScript to między innymi komentarz <code><a href="#" pro-tip="komentarz liniowy zaczyna się od dwóch ukośników (//) i jest używany do umieszczenia komentarza w jednej linii kodu. Komentarz ten nie jest interpretowany przez przeglądarkę lub środowisko wykonawcze JavaScript, a jedynie służy jako notatka dla programisty.">liniowy <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz <code><a href="#" pro-tip="komentarz wieloliniowy zaczyna się od ukośnika i gwiazdki (/*) i kończy się gwiazdką i ukośnikiem (*/), i może zawierać wiele linii tekstu. Komentarz ten jest również używany do umieszczania notatek lub opisów kodu dla programisty, ale różni się od komentarza liniowego tym, że może obejmować wiele linii kodu.">wieloliniowy <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="big-page-header"></div>
+		<code><img style="width: 50px; margin-bottom: -20px;" src="/img/icon_komentarzLiniowy.png" alt=""> Komentarz liniowy</code>
+		<div class="code-block">
+			<pre>
+				<code>
 // To jest komentarz liniowy
-        </code>
-      </pre>
-    </div>
-    <div class="page-header"></div>
-    <code><img class="icon-img-small" src="/img/icon_multiComment.png" alt=""> Komentarz wieloliniowy</code>
-    <div class="code-block">
-      <pre>
-        <code>
+				</code>
+			</pre>
+		</div>
+		<div class="page-header"></div>
+		<code><img class="icon-img-small" src="/img/icon_multiComment.png" alt=""> Komentarz wieloliniowy</code>
+		<div class="code-block">
+			<pre>
+				<code>
 /*
 To jest przykładowy
 komentarz
 wieloliniowy
 */
-        </code>
-      </pre>
-    </div>
-    <div class="alert-card">
-      <img style="width: 50px;" src="/img/note.png" alt="">
-      <b>Note</b>
-      <div class="line"></div>
-      <p>
-        Komentarze w języku JavaScript są bardzo ważne i powinny być dodawane tam, gdzie jest to konieczne,
-        aby ułatwić zrozumienie i zwiększyć czytelność kodu.
-      </p>
-    </div>
-    <div class="btn">
-      <a href="Data_types.html"><button>Dalej</button></a>
-    </div>
+				</code>
+			</pre>
+		</div>
+		<div class="alert-card">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Komentarze w języku JavaScript są bardzo ważne i powinny być dodawane tam, gdzie jest to konieczne,
+				aby ułatwić zrozumienie i zwiększyć czytelność kodu.
+			</p>
+		</div>
+		<div class="btn">
+			<a href="Data_types.html"><button>Dalej</button></a>
+		</div>
 
-  </div>
+	</div>
 </div>
 </body>
 </html>

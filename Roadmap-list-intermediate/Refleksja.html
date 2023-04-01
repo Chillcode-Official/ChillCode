@@ -1,121 +1,121 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Refleksja</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Refleksja</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Atrybuty.html">Atrybuty</a></li>
-            <li><a href="Refleksja.html">Refleksja</a></li>
-            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
-            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
-            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
-            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
-            <li><a href="Indeksery.html">Indeksery</a></li>
-            <li><a href="Delegaty.html">Delegaty</a></li>
-            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Atrybuty.html">Atrybuty</a></li>
+						<li><a href="Refleksja.html">Refleksja</a></li>
+						<li><a href="Zdarzenia.html">Zdarzenia</a></li>
+						<li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+						<li><a href="Unsafe-code.html">Unsafe-code</a></li>
+						<li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+						<li><a href="Indeksery.html">Indeksery</a></li>
+						<li><a href="Delegaty.html">Delegaty</a></li>
+						<li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+						<li><a href="Podsumowanie.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Refleksja W Języku C#</h1>
-                <p>
-                    Refleksja (ang. reflection) to mechanizm dostępny w języku C#, pozwalający na dynamiczne odczytywanie
-                    informacji o typach, ich składowych i wywoływanie metod. Umożliwia on programowi na "odpytywanie"
-                    obiektów o ich typy i właściwości w czasie wykonywania.
-                </p>
-            </div>
-            <img src="/img/vector86.png" alt="">
-        </div>
-        <p class="text-container lightPink-container no-margin-top">
-            Refleksja jest szczególnie przydatna przy tworzeniu uniwersalnych narzędzi, które muszą działać z
-            różnymi typami danych bez ich wcześniejszego znajomości.
-        </p>
-        <div class="big-page-header"></div>
-        <h2>Refleksja w języku C# umożliwia programiście m.in.:</h2>
-        <div class="text-container black-container white-list article">
-            <ul>
-                <li>Odczytywanie informacji o typach i ich składowych (np. pola, metody, konstruktory)</li>
-                <li>Tworzenie obiektów na podstawie informacji o typie</li>
-                <li>Dynamiczne wywoływanie metod i uzyskiwanie informacji o ich parametrach</li>
-                <li>Uzyskiwanie informacji o atrybutach (np. adnotacjach) znajdujących się na typach i ich składowych</li>
-                <li>Dynamiczne ustawianie wartości pól</li>
-                <li>Tworzenie dynamicznych proxy (np. do celów testowych)</li>
-                <li>Utworzenie narzędzi automatyzujących generowanie kodu, używających refleksji.</li>
-            </ul>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container lightPink-container">
-            Przykład użycia refleksji w języku C#, w którym tworzymy instancję obiektu klasy "Example"
-            za pomocą metody "Activator.CreateInstance()", a następnie uzyskujemy informacje o typie tej
-            klasy za pomocą klasy "Type":
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Refleksja W Języku C#</h1>
+								<p>
+										Refleksja (ang. reflection) to mechanizm dostępny w języku C#, pozwalający na dynamiczne odczytywanie
+										informacji o typach, ich składowych i wywoływanie metod. Umożliwia on programowi na "odpytywanie"
+										obiektów o ich typy i właściwości w czasie wykonywania.
+								</p>
+						</div>
+						<img src="/img/vector86.png" alt="">
+				</div>
+				<p class="text-container lightPink-container no-margin-top">
+						Refleksja jest szczególnie przydatna przy tworzeniu uniwersalnych narzędzi, które muszą działać z
+						różnymi typami danych bez ich wcześniejszego znajomości.
+				</p>
+				<div class="big-page-header"></div>
+				<h2>Refleksja w języku C# umożliwia programiście m.in.:</h2>
+				<div class="text-container black-container white-list article">
+						<ul>
+								<li>Odczytywanie informacji o typach i ich składowych (np. pola, metody, konstruktory)</li>
+								<li>Tworzenie obiektów na podstawie informacji o typie</li>
+								<li>Dynamiczne wywoływanie metod i uzyskiwanie informacji o ich parametrach</li>
+								<li>Uzyskiwanie informacji o atrybutach (np. adnotacjach) znajdujących się na typach i ich składowych</li>
+								<li>Dynamiczne ustawianie wartości pól</li>
+								<li>Tworzenie dynamicznych proxy (np. do celów testowych)</li>
+								<li>Utworzenie narzędzi automatyzujących generowanie kodu, używających refleksji.</li>
+						</ul>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container lightPink-container">
+						Przykład użycia refleksji w języku C#, w którym tworzymy instancję obiektu klasy "Example"
+						za pomocą metody "Activator.CreateInstance()", a następnie uzyskujemy informacje o typie tej
+						klasy za pomocą klasy "Type":
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.Reflection;
 
 class Example
 {
-    public int a;
-    public string b;
+		public int a;
+		public string b;
 
-    public Example(int a, string b)
-    {
-        this.a = a;
-        this.b = b;
-    }
+		public Example(int a, string b)
+		{
+				this.a = a;
+				this.b = b;
+		}
 }
 
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        // Tworzenie instancji obiektu klasy Example
-        var example = (Example)Activator.CreateInstance(typeof(Example), 5, "Hello");
+		static void Main(string[] args)
+		{
+				// Tworzenie instancji obiektu klasy Example
+				var example = (Example)Activator.CreateInstance(typeof(Example), 5, "Hello");
 
 
-        // Uzyskanie informacji o typie obiektu example
-        Type type = example.GetType();
+				// Uzyskanie informacji o typie obiektu example
+				Type type = example.GetType();
 
 
-        // Wypisanie nazwy typu
-        Console.WriteLine("Type name: " + type.Name);
+				// Wypisanie nazwy typu
+				Console.WriteLine("Type name: " + type.Name);
 
 
-        // Wypisanie liczby pol klasy
-        Console.WriteLine("Properties count: " + type.GetProperties().Length);
+				// Wypisanie liczby pol klasy
+				Console.WriteLine("Properties count: " + type.GetProperties().Length);
 
 
-        // Wypisanie liczby metod klasy
-        Console.WriteLine("Methods count: " + type.GetMethods().Length);
-    }
+				// Wypisanie liczby metod klasy
+				Console.WriteLine("Methods count: " + type.GetMethods().Length);
+		}
 }
 
 
@@ -124,204 +124,204 @@ class Program
 Type name: Example
 Properties count: 0
 Methods count: 4
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Wyświetlanie Metadanych</h1>
-        <div class="section-with-image">
-            <p>
-                Wyświetlanie metadanych to proces odczytywania informacji o typach, ich składowych
-                (np. polach, metodach, konstruktorach) i atrybutach (np. adnotacjach) znajdujących
-                się w programie w czasie jego wykonywania.
-            </p>
-            <img src="/img/vector76.png" alt="">
-        </div>
-        <p class="text-container lightGreen-container no-margin-top article tooltip">
-            Metoda <code><a href="#" pro-tip="pozwala na pobranie informacji o typie na podstawie jego nazwy">Type.GetType()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Wyświetlanie Metadanych</h1>
+				<div class="section-with-image">
+						<p>
+								Wyświetlanie metadanych to proces odczytywania informacji o typach, ich składowych
+								(np. polach, metodach, konstruktorach) i atrybutach (np. adnotacjach) znajdujących
+								się w programie w czasie jego wykonywania.
+						</p>
+						<img src="/img/vector76.png" alt="">
+				</div>
+				<p class="text-container lightGreen-container no-margin-top article tooltip">
+						Metoda <code><a href="#" pro-tip="pozwala na pobranie informacji o typie na podstawie jego nazwy">Type.GetType()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = Type.GetType("MyNamespace.MyClass");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="pozwala na pobranie informacji o typie bezpośrednio z jego nazwy">typeof()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="pozwala na pobranie informacji o typie bezpośrednio z jego nazwy">typeof()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip=" pozwala na pobranie informacji o typie obiektu">object.GetType() </a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip=" pozwala na pobranie informacji o typie obiektu">object.GetType() </a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 MyClass myObject = new MyClass();
 
 Type myType = myObject.GetType();
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca informacje o właściwościach typu">Type.GetProperties()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca informacje o właściwościach typu">Type.GetProperties()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
 
 foreach (PropertyInfo property in myType.GetProperties())
 {
-    Console.WriteLine("Nazwa właściwości: " + property.Name);
+		Console.WriteLine("Nazwa właściwości: " + property.Name);
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca informacje o metodach typu">Type.GetMethods()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca informacje o metodach typu">Type.GetMethods()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
 
 foreach (MethodInfo method in myType.GetMethods())
 {
-    Console.WriteLine("Nazwa metody: " + method.Name);
+		Console.WriteLine("Nazwa metody: " + method.Name);
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca informacje o polach typu">Type.GetFields()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca informacje o polach typu">Type.GetFields()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
 
 foreach (FieldInfo field in myType.GetFields())
 {
-    Console.WriteLine("Nazwa pola: " + field.Name);
+		Console.WriteLine("Nazwa pola: " + field.Name);
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca informacje o konstruktorach typu">Type.GetConstructors()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca informacje o konstruktorach typu">Type.GetConstructors()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
 
 foreach (ConstructorInfo constructor in myType.GetConstructors())
 {
-    Console.WriteLine("Nazwa konstruktora: " + constructor.Name);
+		Console.WriteLine("Nazwa konstruktora: " + constructor.Name);
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Metoda <code><a href="#" pro-tip="zwraca informacje o atrybutach typu">Type.GetAttributes() </a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Metoda <code><a href="#" pro-tip="zwraca informacje o atrybutach typu">Type.GetAttributes() </a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Type myType = typeof(MyClass);
 
 object[] attributes = myType.GetCustomAttributes(typeof(MyAttribute), false);
 
 foreach (MyAttribute attribute in attributes)
 {
-    Console.WriteLine("Nazwa atrybutu: " + attribute.Name);
+		Console.WriteLine("Nazwa atrybutu: " + attribute.Name);
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Oczywiście, te przykłady są najprostszymi i najogólniejszymi przykładami użycia tych metod,
-                istnieją również inne metody i opcje, które pozwalają na bardziej zaawansowane zastosowanie refleksji.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Instancja Klasy W Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                Instancja klasy to konkretny obiekt reprezentujący klasę, który jest tworzony na podstawie
-                tej klasy. Tworzenie instancji klasy polega na wykonaniu operacji "new", która tworzy nowy
-                obiekt w pamięci i przypisuje mu odpowiednie wartości początkowe.
-            </p>
-            <img src="/img/vector74.png" alt="">
-        </div>
-        <p class="text-container red-container">
-            W języku C#, możemy utworzyć instancję klasy za pomocą operatora "new" i wywołania konstruktora, np:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Oczywiście, te przykłady są najprostszymi i najogólniejszymi przykładami użycia tych metod,
+								istnieją również inne metody i opcje, które pozwalają na bardziej zaawansowane zastosowanie refleksji.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Instancja Klasy W Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								Instancja klasy to konkretny obiekt reprezentujący klasę, który jest tworzony na podstawie
+								tej klasy. Tworzenie instancji klasy polega na wykonaniu operacji "new", która tworzy nowy
+								obiekt w pamięci i przypisuje mu odpowiednie wartości początkowe.
+						</p>
+						<img src="/img/vector74.png" alt="">
+				</div>
+				<p class="text-container red-container">
+						W języku C#, możemy utworzyć instancję klasy za pomocą operatora "new" i wywołania konstruktora, np:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Example example = new Example(5, "Hello");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container red-container article tooltip">
-            Refleksja pozwala na tworzenie instancji klasy bez wiedzy o jej typie przed czasem kompilacji,
-            za pomocą metody <code><a href="#" pro-tip="">Activator.CreateInstance()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container red-container article tooltip">
+						Refleksja pozwala na tworzenie instancji klasy bez wiedzy o jej typie przed czasem kompilacji,
+						za pomocą metody <code><a href="#" pro-tip="">Activator.CreateInstance()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Example example = (Example)Activator.CreateInstance(typeof(Example), 5, "Hello");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container red-container">
-            przykład użycia instancji klasy w języku C#, w którym tworzymy kilka instancji klasy
-            "Person" i używamy ich do przechowywania informacji o osobach:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container red-container">
+						przykład użycia instancji klasy w języku C#, w którym tworzymy kilka instancji klasy
+						"Person" i używamy ich do przechowywania informacji o osobach:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class Person
 {
-    public string Name { get; set; }
-    public int Age { get; set; }
+		public string Name { get; set; }
+		public int Age { get; set; }
 
-    public Person(string name, int age)
-    {
-        Name = name;
-        Age = age;
-    }
+		public Person(string name, int age)
+		{
+				Name = name;
+				Age = age;
+		}
 }
 
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        // Tworzenie instancji obiektów klasy Person
-        Person person1 = new Person("darek", 22);
-        Person person2 = new Person("Sara", 15);
-        Person person3 = new Person("Janusz", 35);
+		static void Main(string[] args)
+		{
+				// Tworzenie instancji obiektów klasy Person
+				Person person1 = new Person("darek", 22);
+				Person person2 = new Person("Sara", 15);
+				Person person3 = new Person("Janusz", 35);
 
 
-        // Wypisanie informacji o osobach
-        Console.WriteLine("Name: " + person1.Name + ", Age: " + person1.Age);
-        Console.WriteLine("Name: " + person2.Name + ", Age: " + person2.Age);
-        Console.WriteLine("Name: " + person3.Name + ", Age: " + person3.Age);
-    }
+				// Wypisanie informacji o osobach
+				Console.WriteLine("Name: " + person1.Name + ", Age: " + person1.Age);
+				Console.WriteLine("Name: " + person2.Name + ", Age: " + person2.Age);
+				Console.WriteLine("Name: " + person3.Name + ", Age: " + person3.Age);
+		}
 }
 
 
@@ -330,14 +330,14 @@ class Program
 Name: darek, Age: 22
 Name: Sara, Age: 15
 Name: Janusz, Age: 35
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Zdarzenia.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Zdarzenia.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

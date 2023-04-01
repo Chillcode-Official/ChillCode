@@ -1,619 +1,619 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript {Tablice}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>JavaScript {Tablice}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Objects.html">Obiekty</a></li>
-            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-            <li><a href="Values.html">Wartości</a></li>
-            <li><a href="Reference.html">Referencje</a></li>
-            <li><a href="Methods.html">Metody</a></li>
-            <li><a href="Events.html">Eventy</a></li>
-            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Objects.html">Obiekty</a></li>
+						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+						<li><a href="Values.html">Wartości</a></li>
+						<li><a href="Reference.html">Referencje</a></li>
+						<li><a href="Methods.html">Metody</a></li>
+						<li><a href="Events.html">Eventy</a></li>
+						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Tablice</h1>
-                <p>
-                    Tablica w języku JavaScript to obiekt służący do przechowywania wielu wartości (elementów
-                    w jednej zmiennej. Każdy element może być różnego typu (np. liczba, ciąg znaków, obiekt, inna tablica, itd.).
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector112.png" alt="">
-            </div>
-        </div>
-        <p class="text-container lightGray-container article tooltip no-margin-top">
-            <code><a href="#" pro-tip="tablica jest jednym z podstawowych typów danych, który służy do przechowywania kolekcji wartości. Można ją traktować jak listę, gdzie każdy element tablicy ma swoją pozycję, zwana indeksem.">Tablica <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest tworzona za pomocą nawiasów kwadratowych, w których elementy są oddzielone przecinkami:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Tablice</h1>
+								<p>
+										Tablica w języku JavaScript to obiekt służący do przechowywania wielu wartości (elementów
+										w jednej zmiennej. Każdy element może być różnego typu (np. liczba, ciąg znaków, obiekt, inna tablica, itd.).
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector112.png" alt="">
+						</div>
+				</div>
+				<p class="text-container lightGray-container article tooltip no-margin-top">
+						<code><a href="#" pro-tip="tablica jest jednym z podstawowych typów danych, który służy do przechowywania kolekcji wartości. Można ją traktować jak listę, gdzie każdy element tablicy ma swoją pozycję, zwana indeksem.">Tablica <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest tworzona za pomocą nawiasów kwadratowych, w których elementy są oddzielone przecinkami:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 var fruits = ['banana', 'apple', 'orange'];
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightGray-container article tooltip no-margin-top">
-            Można dostać się do poszczególnych elementów tablicy za pomocą <code><a href="#" pro-tip="Indeks tablicy to liczba całkowita, która służy do identyfikacji pozycji elementu w tablicy. Indeksy tablicy zaczynają się zawsze od 0 dla pierwszego elementu i kolejno numerowane są wartościami 1, 2, 3, itd.">indeksu <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, który jest liczbą całkowitą
-            wskazującą pozycję elementu w tablicy (indeksowanie jest zero-based, czyli pierwszy element ma indeks 0,
-            drugi indeks 1, itd.).
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightGray-container article tooltip no-margin-top">
+						Można dostać się do poszczególnych elementów tablicy za pomocą <code><a href="#" pro-tip="Indeks tablicy to liczba całkowita, która służy do identyfikacji pozycji elementu w tablicy. Indeksy tablicy zaczynają się zawsze od 0 dla pierwszego elementu i kolejno numerowane są wartościami 1, 2, 3, itd.">indeksu <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, który jest liczbą całkowitą
+						wskazującą pozycję elementu w tablicy (indeksowanie jest zero-based, czyli pierwszy element ma indeks 0,
+						drugi indeks 1, itd.).
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 console.log(fruits[0]);
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    banana
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <p class="text-container gray-container article tooltip no-margin-top">
-            Można również zmienić wartość danego elementu w tablicy:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										banana
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container gray-container article tooltip no-margin-top">
+						Można również zmienić wartość danego elementu w tablicy:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 fruits[1] = 'pear';
 console.log(fruits[1]);
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    pear
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-no-margin-top">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Tablice są bardzo ważnym elementem języka JavaScript i są szeroko wykorzystywane do przechowywania
-                danych, przetwarzania ich i wykonywania różnych operacji na tych danych.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Inne funkcje Tablic</h1>
-                <p>
-                    Tablice w języku JavaScript są dynamiczne, co oznacza, że można zmieniać ich długość w trakcie
-                    działania programu. Można dodawać nowe elementy do tablicy lub usuwać już istniejące.
-                </p>
-            </div>
-            <img src="/img/vector58.png" alt="">
-        </div>
-        <p class="text-container white-container article tooltip">
-            Można również iterować przez elementy tablicy, np. za pomocą pętli
-            <code><a href="#" pro-tip="pętla for jest często używana do powtarzania pewnych czynności określoną ilość razy.">for <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
-            <code><a href="#" pro-tip="metoda foreach służy do iteracji po elementach w tablicy lub obiekcie i wykonania na nich określonych czynności.">foreach <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-        </p>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										pear
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-no-margin-top">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Tablice są bardzo ważnym elementem języka JavaScript i są szeroko wykorzystywane do przechowywania
+								danych, przetwarzania ich i wykonywania różnych operacji na tych danych.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Inne funkcje Tablic</h1>
+								<p>
+										Tablice w języku JavaScript są dynamiczne, co oznacza, że można zmieniać ich długość w trakcie
+										działania programu. Można dodawać nowe elementy do tablicy lub usuwać już istniejące.
+								</p>
+						</div>
+						<img src="/img/vector58.png" alt="">
+				</div>
+				<p class="text-container white-container article tooltip">
+						Można również iterować przez elementy tablicy, np. za pomocą pętli
+						<code><a href="#" pro-tip="pętla for jest często używana do powtarzania pewnych czynności określoną ilość razy.">for <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
+						<code><a href="#" pro-tip="metoda foreach służy do iteracji po elementach w tablicy lub obiekcie i wykonania na nich określonych czynności.">foreach <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				</p>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 for (var i = 0; i < fruits.length; i++) {
 
-  console.log(fruits[i]);
+	console.log(fruits[i]);
 }
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding output-list">
-                            <ul>
-                                <li>banana</li>
-                                <li>pear</li>
-                                <li>orange</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding output-list">
+														<ul>
+																<li>banana</li>
+																<li>pear</li>
+																<li>orange</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 fruits.forEach(function(fruit) {
 
-  console.log(fruit);
+	console.log(fruit);
 });
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding output-list">
-                            <ul>
-                                <li>banana</li>
-                                <li>pear</li>
-                                <li>orange</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container white-container article tooltip">
-            Tablica jest również <code><a href="#" pro-tip="obiekt jest złożonym typem danych w JavaScript, który może przechowywać różne wartości">obiektem <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, co oznacza, że można do niej
-            dodawać <code><a href="#" pro-tip="właściwości to wartości przechowywane w obiekcie. Mogą być one typu liczbowego, łańcuchowego, logicznego lub innego typu danych.">właściwości <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding output-list">
+														<ul>
+																<li>banana</li>
+																<li>pear</li>
+																<li>orange</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container white-container article tooltip">
+						Tablica jest również <code><a href="#" pro-tip="obiekt jest złożonym typem danych w JavaScript, który może przechowywać różne wartości">obiektem <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, co oznacza, że można do niej
+						dodawać <code><a href="#" pro-tip="właściwości to wartości przechowywane w obiekcie. Mogą być one typu liczbowego, łańcuchowego, logicznego lub innego typu danych.">właściwości <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 fruits.color = 'yellow';
 
 console.log(fruits.color); // Output: "yellow"
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    yellow
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-no-margin-top">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Ważne jest, aby pamiętać, że dodawanie właściwości do tablicy nie jest dobrym praktycznie rozwiązaniem i powinno się tego unikać.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Rodzaje Tablic</h1>
-        <div class="section-with-image">
-            <div class="text-content article tooltip">
-                <p>
-                    W języku JavaScript istnieją cztery rodzaje tablic, a mianowicie:
-                </p>
-                <ul>
-                    <li><code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w jednym wierszu. Każdy element tablicy jest indeksowany za pomocą liczby całkowitej, która reprezentuje pozycję w tablicy.">Tablice jednowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
-                    <li><code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w formie macierzy z więcej niż jednym wierszem i jedną kolumną. Każdy element tablicy jest indeksowany za pomocą kilku liczb całkowitych, które reprezentują pozycję w tablicy.">Tablice wielowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
-                    <li><code><a href="#" pro-tip="tablice, które przechowują tylko nieliczne elementy, które mają wartości różne od domyślnej wartości. Te tablice mogą być wykorzystywane w przypadkach, gdy trzeba oszczędzać pamięć.">Tablice rzadkie <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
-                    <li><code><a href="#" pro-tip="tablice, które umożliwiają przechowywanie wartości pod określonymi kluczami. W przeciwieństwie do tablic jednowymiarowych i wielowymiarowych, gdzie elementy są indeksowane za pomocą liczb całkowitych, w tablicach asocjacyjnych klucze mogą być dowolnego typu danych.">Tablice asocjacyjne <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
-                </ul>
-            </div>
-            <img src="/img/vector83.png" alt="">
-        </div>
-        <div class="page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_table.png" alt=""> Tablice jednowymiarowe</h2>
-        <p class="text-container lightGreen-container">
-            Tablice jednowymiarowe to najprostszy rodzaj tablicy, który składa
-            się z jednego wiersza wartości. W przypadku tablicy jednowymiarowej każdy element tablicy posiada
-            indeks liczbowy, zaczynając od zera.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										yellow
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-no-margin-top">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Ważne jest, aby pamiętać, że dodawanie właściwości do tablicy nie jest dobrym praktycznie rozwiązaniem i powinno się tego unikać.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Rodzaje Tablic</h1>
+				<div class="section-with-image">
+						<div class="text-content article tooltip">
+								<p>
+										W języku JavaScript istnieją cztery rodzaje tablic, a mianowicie:
+								</p>
+								<ul>
+										<li><code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w jednym wierszu. Każdy element tablicy jest indeksowany za pomocą liczby całkowitej, która reprezentuje pozycję w tablicy.">Tablice jednowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
+										<li><code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w formie macierzy z więcej niż jednym wierszem i jedną kolumną. Każdy element tablicy jest indeksowany za pomocą kilku liczb całkowitych, które reprezentują pozycję w tablicy.">Tablice wielowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
+										<li><code><a href="#" pro-tip="tablice, które przechowują tylko nieliczne elementy, które mają wartości różne od domyślnej wartości. Te tablice mogą być wykorzystywane w przypadkach, gdy trzeba oszczędzać pamięć.">Tablice rzadkie <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
+										<li><code><a href="#" pro-tip="tablice, które umożliwiają przechowywanie wartości pod określonymi kluczami. W przeciwieństwie do tablic jednowymiarowych i wielowymiarowych, gdzie elementy są indeksowane za pomocą liczb całkowitych, w tablicach asocjacyjnych klucze mogą być dowolnego typu danych.">Tablice asocjacyjne <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></li>
+								</ul>
+						</div>
+						<img src="/img/vector83.png" alt="">
+				</div>
+				<div class="page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_table.png" alt=""> Tablice jednowymiarowe</h2>
+				<p class="text-container lightGreen-container">
+						Tablice jednowymiarowe to najprostszy rodzaj tablicy, który składa
+						się z jednego wiersza wartości. W przypadku tablicy jednowymiarowej każdy element tablicy posiada
+						indeks liczbowy, zaczynając od zera.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let fruits = ['apple', 'banana', 'cherry'];
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_tables(1).png" alt=""> Tablice wielowymiarowe</h2>
-        <p class="text-container purple-container">
-            Tablice wielowymiarowe to tablice, które składają się z wielu wierszy wartości.
-            W przypadku tablicy wielowymiarowej, każdy wiersz posiada indeks liczbowy, podobnie jak w przypadku tablicy
-            jednowymiarowej. Tablica wielowymiarowa może mieć dowolną ilość wierszy i kolumn.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_tables(1).png" alt=""> Tablice wielowymiarowe</h2>
+				<p class="text-container purple-container">
+						Tablice wielowymiarowe to tablice, które składają się z wielu wierszy wartości.
+						W przypadku tablicy wielowymiarowej, każdy wiersz posiada indeks liczbowy, podobnie jak w przypadku tablicy
+						jednowymiarowej. Tablica wielowymiarowa może mieć dowolną ilość wierszy i kolumn.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9]
 ];
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_tables(2).png" alt=""> Tablice rzadkie</h2>
-        <p class="text-container lightOrange-container">
-            Tablice rzadkie to tablice, które zawierają brakujące wartości lub mają
-            wartości ustawione na null, lub undefined. W przypadku tablicy rzadkiej, indeksy liczbowe nie muszą
-            być ustawione kolejno i mogą być pominięte.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_tables(2).png" alt=""> Tablice rzadkie</h2>
+				<p class="text-container lightOrange-container">
+						Tablice rzadkie to tablice, które zawierają brakujące wartości lub mają
+						wartości ustawione na null, lub undefined. W przypadku tablicy rzadkiej, indeksy liczbowe nie muszą
+						być ustawione kolejno i mogą być pominięte.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let sparseArray = [];
 sparseArray[0] = 'apple';
 sparseArray[2] = 'banana';
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_tables(3).png" alt=""> Tablice asocjacyjne</h2>
-        <p class="text-container lightBrown-container">
-            Tablice asocjacyjne to tablice, w których elementy są indeksowane przez
-            ciągi znaków (nie tylko przez liczby całkowite, jak w przypadku standardowych tablic). Tablice asocjacyjne
-            w języku JavaScript są tworzone za pomocą obiektów.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_tables(3).png" alt=""> Tablice asocjacyjne</h2>
+				<p class="text-container lightBrown-container">
+						Tablice asocjacyjne to tablice, w których elementy są indeksowane przez
+						ciągi znaków (nie tylko przez liczby całkowite, jak w przypadku standardowych tablic). Tablice asocjacyjne
+						w języku JavaScript są tworzone za pomocą obiektów.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 let person = { name: 'John', age: 30, city: 'New York' };
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Właściwości I Metody Tablicy</h1>
-                <p>
-                    Tablice w języku JavaScript mają następujące właściwości i metody, które umożliwiają przetwarzanie
-                    i manipulowanie ich elementami. Oto kilka przykładów użycia metod i właściwości tablic w języku JavaScript:
-                </p>
-            </div>
-            <img src="/img/vector152.png" alt="">
-        </div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">length <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> właściwość, która zwraca liczbę elementów w tablicy.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">push() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która dodaje element na koniec tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Właściwości I Metody Tablicy</h1>
+								<p>
+										Tablice w języku JavaScript mają następujące właściwości i metody, które umożliwiają przetwarzanie
+										i manipulowanie ich elementami. Oto kilka przykładów użycia metod i właściwości tablic w języku JavaScript:
+								</p>
+						</div>
+						<img src="/img/vector152.png" alt="">
+				</div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">length <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> właściwość, która zwraca liczbę elementów w tablicy.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">push() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która dodaje element na koniec tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 
 console.log(fruits.length);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            3
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														3
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.push('orange');
 console.log(fruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'apple', 'banana', 'cherry', 'orange' ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">pop() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która usuwa ostatni element z tablicy.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">shift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która usuwa pierwszy element z tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'apple', 'banana', 'cherry', 'orange' ]
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">pop() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która usuwa ostatni element z tablicy.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">shift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która usuwa pierwszy element z tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 let lastFruit = fruits.pop();
 console.log(fruits);
 console.log(lastFruit);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'apple', 'banana' ] <br>
-                            cherry
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'apple', 'banana' ] <br>
+														cherry
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 let firstFruit = fruits.shift();
 console.log(fruits);
 console.log(firstFruit);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'banana', 'cherry' ] <br>
-                            apple
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">unshift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która dodaje element na początek tablicy.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">splice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która pozwala na dodawanie lub usuwanie elementów z określonego miejsca w tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'banana', 'cherry' ] <br>
+														apple
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">unshift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która dodaje element na początek tablicy.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">splice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która pozwala na dodawanie lub usuwanie elementów z określonego miejsca w tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.unshift('orange');
 console.log(fruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'orange', 'apple', 'banana', 'cherry' ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'orange', 'apple', 'banana', 'cherry' ]
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.splice(1, 1, 'orange');
 console.log(fruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'apple', 'orange', 'cherry' ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">slice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która tworzy nową tablicę składającą się z części oryginalnej tablicy.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">indexOf() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która zwraca indeks pierwszego wystąpienia określonego elementu w tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'apple', 'orange', 'cherry' ]
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">slice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która tworzy nową tablicę składającą się z części oryginalnej tablicy.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">indexOf() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która zwraca indeks pierwszego wystąpienia określonego elementu w tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 let newFruits = fruits.slice(1, 2);
 console.log(fruits);
 console.log(newFruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'apple', 'banana', 'cherry' ] <br>
-                            [ 'banana' ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'apple', 'banana', 'cherry' ] <br>
+														[ 'banana' ]
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 let index = fruits.indexOf('banana');
 console.log(index);
 
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            1
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">join() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która łączy wszystkie elementy tablicy w jeden łańcuch znaków.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">reverse() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która odwraca kolejność elementów w tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														1
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">join() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która łączy wszystkie elementy tablicy w jeden łańcuch znaków.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">reverse() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która odwraca kolejność elementów w tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 
 let joinedFruits = fruits.join(', ');
 
 console.log(joinedFruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            apple, banana, cherry
-                        </div>
-                    </div>
-                </div>
-            </div>
-           <div>
-               <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														apple, banana, cherry
+												</div>
+										</div>
+								</div>
+						</div>
+ 					<div>
+ 							<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 
 fruits.reverse();
 
 console.log(fruits);
-                    </code>
-                </pre>
-               </div>
-               <div class="dropdown minus-margin-top">
-                   <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                   <div class="dropdown-content">
-                       <div class="output output-content output-padding">
-                           [ 'cherry', 'banana', 'apple' ]
-                       </div>
-                   </div>
-               </div>
-           </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">sort() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która sortuje elementy tablicy.</p>
-            <p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">forEach() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która umożliwia wykonanie funkcji na każdym elemencie tablicy.</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+ 							</div>
+ 							<div class="dropdown minus-margin-top">
+ 									<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+ 									<div class="dropdown-content">
+ 											<div class="output output-content output-padding">
+ 													[ 'cherry', 'banana', 'apple' ]
+ 											</div>
+ 									</div>
+ 							</div>
+ 					</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="">sort() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która sortuje elementy tablicy.</p>
+						<p class="text-container light-container color-text-gray article tooltip"><code><a href="#" pro-tip="">forEach() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> metoda, która umożliwia wykonanie funkcji na każdym elemencie tablicy.</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.sort();
 
 console.log(fruits);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            [ 'apple', 'banana', 'cherry' ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														[ 'apple', 'banana', 'cherry' ]
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 let fruits = ['apple', 'banana', 'cherry'];
 fruits.forEach(function(fruit) {
 console.log(fruit);
 });
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding output-list">
-                            <ul>
-                                <li>apple</li>
-                                <li>banana</li>
-                                <li>cherry</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 tooltip">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Te przykłady pokazują tylko niektóre z dostępnych metod
-                i właściwości tablic w języku JavaScript.
-                Są one bardzo użyteczne w wielu różnych sytuacjach i pozwalają na wykonywanie różnych operacji na tablicach.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Objects.html"><button>Dalej</button></a>
-        </div>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding output-list">
+														<ul>
+																<li>apple</li>
+																<li>banana</li>
+																<li>cherry</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 tooltip">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Te przykłady pokazują tylko niektóre z dostępnych metod
+								i właściwości tablic w języku JavaScript.
+								Są one bardzo użyteczne w wielu różnych sytuacjach i pozwalają na wykonywanie różnych operacji na tablicach.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Objects.html"><button>Dalej</button></a>
+				</div>
 
-    </div>
+		</div>
 </div>
 </body>
 </html>

@@ -1,24 +1,24 @@
 /*blue button elements*/
 .btn{
-    margin-bottom: 60px;
-    float: right;
-    margin-right: 30px;
+		margin-bottom: 60px;
+		float: right;
+		margin-right: 30px;
 }
 .btn button{
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
-    padding: 8px;
-    background-color: #74b5e5;
-    border-radius: 5px;
-    font-size: 20px;
-    border-color: transparent;
+		height: 50px;
+		width: 100px;
+		cursor: pointer;
+		padding: 8px;
+		background-color: #74b5e5;
+		border-radius: 5px;
+		font-size: 20px;
+		border-color: transparent;
 }
 .btn button a{
-    text-decoration: none;
-    color: black;
+		text-decoration: none;
+		color: black;
 }
 .btn button:hover{
-    background-color: #538cb6;
-    cursor: pointer;
+		background-color: #538cb6;
+		cursor: pointer;
 }

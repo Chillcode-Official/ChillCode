@@ -1,145 +1,145 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET(Middleware-Żądania HTTP)</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET(Middleware-Żądania HTTP)</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Middleware I żądania HTTP</h1>
-                <p>
-                    Middleware w ASP.NET Core to oprogramowanie, które przetwarza żądania HTTP i generuje odpowiedzi. Każde żądanie HTTP w aplikacji ASP.NET Core przechodzi przez zestaw middleware'ów, które przetwarzają żądanie i/lub odpowiedź.Można utworzyć niestandardowe middleware'y w celu wykonywania określonych operacji, takich jak logowanie, uwierzytelnianie, weryfikacja uprawnień i wiele innych.
-                </p>
-            </div>
-            <img src="/img/vector54.png" alt="">
-        </div>
-        <p class="text-container lightBrown-container no-margin-top">
-            Aby utworzyć niestandardowe middleware w ASP.NET Core, należy utworzyć klasę, która implementuje interfejs IMiddleware, a następnie zarejestrować ją w kolekcji middleware'ów w metodzie Configure klasy Startup.
-        </p>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_http(3).png" alt=""> Utworzenie middleware do logowania żądań HTTP:</h2>
-        <div class="code-block">
-             <pre>
-                 <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Middleware I żądania HTTP</h1>
+								<p>
+										Middleware w ASP.NET Core to oprogramowanie, które przetwarza żądania HTTP i generuje odpowiedzi. Każde żądanie HTTP w aplikacji ASP.NET Core przechodzi przez zestaw middleware'ów, które przetwarzają żądanie i/lub odpowiedź.Można utworzyć niestandardowe middleware'y w celu wykonywania określonych operacji, takich jak logowanie, uwierzytelnianie, weryfikacja uprawnień i wiele innych.
+								</p>
+						</div>
+						<img src="/img/vector54.png" alt="">
+				</div>
+				<p class="text-container lightBrown-container no-margin-top">
+						Aby utworzyć niestandardowe middleware w ASP.NET Core, należy utworzyć klasę, która implementuje interfejs IMiddleware, a następnie zarejestrować ją w kolekcji middleware'ów w metodzie Configure klasy Startup.
+				</p>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_http(3).png" alt=""> Utworzenie middleware do logowania żądań HTTP:</h2>
+				<div class="code-block">
+ 						<pre>
+ 								<code>
 public class LoggingMiddleware : IMiddleware
 {
-    private readonly ILogger&ltLoggingMiddleware&gt _logger;
+		private readonly ILogger&ltLoggingMiddleware&gt _logger;
 
-    public LoggingMiddleware(ILogger&ltLoggingMiddleware&gt logger)
-    {
-        _logger = logger;
-    }
+		public LoggingMiddleware(ILogger&ltLoggingMiddleware&gt logger)
+		{
+				_logger = logger;
+		}
 
-    public async Task InvokeAsync(HttpContext context, RequestDelegate next)
-    {
-        _logger.LogInformation($"Handling HTTP request: {context.Request.Method} {context.Request.Path}");
-        await next(context);
-    }
+		public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+		{
+				_logger.LogInformation($"Handling HTTP request: {context.Request.Method} {context.Request.Path}");
+				await next(context);
+		}
 }
-                 </code>
-             </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przykładzie utworzono klasę LoggingMiddleware, która implementuje interfejs IMiddleware. Konstruktor klasy przyjmuje interfejs ILogger, który umożliwia zapisywanie logów. Metoda InvokeAsync zawiera kod, który loguje informacje o żądaniu HTTP, a następnie wywołuje kolejny middleware w łańcuchu.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_configure(1).png" alt=""> Rejestracja middleware'u w klasie Startup, w metodzie Configure:</h2>
-        <div class="code-block">
-            <pre>
-                <code>
+ 								</code>
+ 						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przykładzie utworzono klasę LoggingMiddleware, która implementuje interfejs IMiddleware. Konstruktor klasy przyjmuje interfejs ILogger, który umożliwia zapisywanie logów. Metoda InvokeAsync zawiera kod, który loguje informacje o żądaniu HTTP, a następnie wywołuje kolejny middleware w łańcuchu.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_configure(1).png" alt=""> Rejestracja middleware'u w klasie Startup, w metodzie Configure:</h2>
+				<div class="code-block">
+						<pre>
+								<code>
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    // ...
+		// ...
 
-    app.UseMiddleware&ltLoggingMiddleware&gt();
+		app.UseMiddleware&ltLoggingMiddleware&gt();
 
-    // ...
+		// ...
 }
-                </code>
-            </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przykładzie zarejestrowano middleware LoggingMiddleware za pomocą metody UseMiddleware na obiekcie IApplicationBuilder.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b>Ważne</b>
-            <div class="line"></div>
-            <p>
-                Kolejność rejestracji middleware'ów jest ważna, ponieważ każdy middleware w łańcuchu przetwarza żądanie HTTP w kolejności rejestracji.
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Można również wykorzystać wbudowane middleware'y w ASP.NET Core do przetwarzania żądań HTTP i odpowiedzi. Na przykład, middleware UseRouting służy do przetwarzania routingu żądań HTTP, a middleware UseEndpoints służy do przetwarzania żądań HTTP i generowania odpowiedzi.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Implementation_of_authentication.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przykładzie zarejestrowano middleware LoggingMiddleware za pomocą metody UseMiddleware na obiekcie IApplicationBuilder.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b>Ważne</b>
+						<div class="line"></div>
+						<p>
+								Kolejność rejestracji middleware'ów jest ważna, ponieważ każdy middleware w łańcuchu przetwarza żądanie HTTP w kolejności rejestracji.
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Można również wykorzystać wbudowane middleware'y w ASP.NET Core do przetwarzania żądań HTTP i odpowiedzi. Na przykład, middleware UseRouting służy do przetwarzania routingu żądań HTTP, a middleware UseEndpoints służy do przetwarzania żądań HTTP i generowania odpowiedzi.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Implementation_of_authentication.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

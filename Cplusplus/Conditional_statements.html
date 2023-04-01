@@ -1,316 +1,316 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Cpp {Instrukcje-Warunkowe}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Cpp {Instrukcje-Warunkowe}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Arguments.html">Argumenty</a></li>
-            <li><a href="Return_values.html">Wartości zwracane</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Indicators.html">Wskaźniki</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Arguments.html">Argumenty</a></li>
+						<li><a href="Return_values.html">Wartości zwracane</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Indicators.html">Wskaźniki</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (if)</h1>
-                <p>
-                    Instrukcja warunkowa if w języku C++ służy do wykonania pewnych działań tylko wtedy, gdy określony warunek jest spełniony. Jeśli warunek nie jest spełniony, kod wewnątrz bloku instrukcji if jest pomijany.
-                </p>
-            </div>
-            <img src="/img/vector185.png" alt="">
-        </div>
-        <p class="text-container azure-container no-margin-top article tooltip">
-            Składnia instrukcji <code><a href="#" pro-tip="Instrukcja if sprawdza warunek logiczny i wykonuje blok kodu, jeśli warunek jest prawdziwy. Blok kodu powinien być otoczony klamrami {} i może zawierać jedno lub więcej instrukcji.">if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (if)</h1>
+								<p>
+										Instrukcja warunkowa if w języku C++ służy do wykonania pewnych działań tylko wtedy, gdy określony warunek jest spełniony. Jeśli warunek nie jest spełniony, kod wewnątrz bloku instrukcji if jest pomijany.
+								</p>
+						</div>
+						<img src="/img/vector185.png" alt="">
+				</div>
+				<p class="text-container azure-container no-margin-top article tooltip">
+						Składnia instrukcji <code><a href="#" pro-tip="Instrukcja if sprawdza warunek logiczny i wykonuje blok kodu, jeśli warunek jest prawdziwy. Blok kodu powinien być otoczony klamrami {} i może zawierać jedno lub więcej instrukcji.">if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 if (warunek) {
-    // kod do wykonania, jeśli warunek jest spełniony
+		// kod do wykonania, jeśli warunek jest spełniony
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container azure-container">
-            Na przykład, poniższy kod wypisze na ekranie wiadomość "x jest większe od 5", Jeśli wartość zmiennej x byłaby mniejsza lub równa 5, kod w bloku instrukcji if zostanie pominięty i nic nie zostanie wyświetlone na ekranie.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<p class="text-container azure-container">
+						Na przykład, poniższy kod wypisze na ekranie wiadomość "x jest większe od 5", Jeśli wartość zmiennej x byłaby mniejsza lub równa 5, kod w bloku instrukcji if zostanie pominięty i nic nie zostanie wyświetlone na ekranie.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int x = 6;
 
 if (x > 5) {
-    std::cout << "x jest większe od 5\n";
+		std::cout << "x jest większe od 5\n";
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container azure-container">
-            Można też użyć operatora logicznego && (i) lub || (lub), aby sprawdzić wiele warunków w jednym wyrażeniu. Ten kod wypisze wiadomość tylko wtedy, gdy x jest większe niż 5 i y jest większe niż 2.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<p class="text-container azure-container">
+						Można też użyć operatora logicznego && (i) lub || (lub), aby sprawdzić wiele warunków w jednym wyrażeniu. Ten kod wypisze wiadomość tylko wtedy, gdy x jest większe niż 5 i y jest większe niż 2.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int x = 6;
 
 int y = 4;
 
 if (x > 5 && y > 2) {
-    std::cout << "x jest większe od 5 i y jest większe od 2\n";
+		std::cout << "x jest większe od 5 i y jest większe od 2\n";
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Warunek jest wyrażeniem logicznym, które jest ewaluowane do wartości true lub false. Jeśli warunek jest prawdziwy (true), kod w bloku instrukcji if zostanie wykonany. Jeśli warunek jest fałszywy (false), kod w bloku instrukcji if zostanie pominięty.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrukcja (else)</h1>
-                <p>
-                    Instrukcja warunkowa else w języku C++ umożliwia wykonanie kodu, gdy warunek w instrukcji if nie jest spełniony. Instrukcja else jest opcjonalna i może być użyta po instrukcji if.
-                </p>
-            </div>
-            <img src="/img/vector163.png" alt="">
-        </div>
-        <p class="text-container lightOrange-container no-margin-top article tooltip">
-            Składnia instrukcji <code><a href="#" pro-tip="Instrukcja else w języku C++ działa w parze z instrukcją if i jest wykorzystywana, kiedy warunek instrukcji if jest fałszywy. Blok kodu instrukcji else zostanie wykonany, jeśli warunek instrukcji if jest fałszywy.">else <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Warunek jest wyrażeniem logicznym, które jest ewaluowane do wartości true lub false. Jeśli warunek jest prawdziwy (true), kod w bloku instrukcji if zostanie wykonany. Jeśli warunek jest fałszywy (false), kod w bloku instrukcji if zostanie pominięty.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrukcja (else)</h1>
+								<p>
+										Instrukcja warunkowa else w języku C++ umożliwia wykonanie kodu, gdy warunek w instrukcji if nie jest spełniony. Instrukcja else jest opcjonalna i może być użyta po instrukcji if.
+								</p>
+						</div>
+						<img src="/img/vector163.png" alt="">
+				</div>
+				<p class="text-container lightOrange-container no-margin-top article tooltip">
+						Składnia instrukcji <code><a href="#" pro-tip="Instrukcja else w języku C++ działa w parze z instrukcją if i jest wykorzystywana, kiedy warunek instrukcji if jest fałszywy. Blok kodu instrukcji else zostanie wykonany, jeśli warunek instrukcji if jest fałszywy.">else <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 if (warunek) {
-    // kod do wykonania, jeśli warunek jest spełniony
+		// kod do wykonania, jeśli warunek jest spełniony
 }
 
 else {
-    // kod do wykonania, jeśli warunek nie jest spełniony
+		// kod do wykonania, jeśli warunek nie jest spełniony
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightOrange-container">
-            Na przykład, poniższy kod wypisze na ekranie wiadomość "x jest większe od 5", jeśli wartość zmiennej x jest większa od 5, a jeśli nie, to wypisze wiadomość "x jest mniejsze lub równe 5":
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightOrange-container">
+						Na przykład, poniższy kod wypisze na ekranie wiadomość "x jest większe od 5", jeśli wartość zmiennej x jest większa od 5, a jeśli nie, to wypisze wiadomość "x jest mniejsze lub równe 5":
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int x = 4;
 
 if (x > 5) {
-    std::cout << "x jest większe od 5\n";
+		std::cout << "x jest większe od 5\n";
 }
 
 else {
-    std::cout << "x jest mniejsze lub równe 5\n";
+		std::cout << "x jest mniejsze lub równe 5\n";
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Jeśli warunek w instrukcji if jest spełniony (wartość logiczna warunku to true), kod w bloku instrukcji if zostanie wykonany. Jeśli warunek nie jest spełniony (wartość logiczna warunku to false), kod w bloku instrukcji else zostanie wykonany.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>instrunkcja warunkowa (if-else)</h1>
-                <p>
-                    Instrukcja warunkowa else if w języku C++ pozwala na wykonywanie kodu w zależności od wartości warunków. W przypadku, gdy warunek pierwszej instrukcji warunkowej if nie jest spełniony, program przechodzi do kolejnej instrukcji warunkowej else if. Jeśli warunek w tej instrukcji jest spełniony, wykonuje się kod związany z tą instrukcją, a program przerywa dalsze przetwarzanie instrukcji warunkowych. Jeśli żaden z warunków nie jest spełniony, wykonuje się kod związany z blokiem else.
-                </p>
-            </div>
-            <img src="/img/vector159.png" alt="">
-        </div>
-        <p class="text-container red-container no-margin-top article tooltip">
-            Składnia instrukcji <code><a href="#" pro-tip="Instrukcja else-if wykonuje alternatywny blok kodu, jeśli warunek instrukcji if jest fałszywy, a warunek instrukcji else-if jest prawdziwy. Można użyć wielu instrukcji else-if, aby określić różne alternatywy.">else-if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Jeśli warunek w instrukcji if jest spełniony (wartość logiczna warunku to true), kod w bloku instrukcji if zostanie wykonany. Jeśli warunek nie jest spełniony (wartość logiczna warunku to false), kod w bloku instrukcji else zostanie wykonany.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>instrunkcja warunkowa (if-else)</h1>
+								<p>
+										Instrukcja warunkowa else if w języku C++ pozwala na wykonywanie kodu w zależności od wartości warunków. W przypadku, gdy warunek pierwszej instrukcji warunkowej if nie jest spełniony, program przechodzi do kolejnej instrukcji warunkowej else if. Jeśli warunek w tej instrukcji jest spełniony, wykonuje się kod związany z tą instrukcją, a program przerywa dalsze przetwarzanie instrukcji warunkowych. Jeśli żaden z warunków nie jest spełniony, wykonuje się kod związany z blokiem else.
+								</p>
+						</div>
+						<img src="/img/vector159.png" alt="">
+				</div>
+				<p class="text-container red-container no-margin-top article tooltip">
+						Składnia instrukcji <code><a href="#" pro-tip="Instrukcja else-if wykonuje alternatywny blok kodu, jeśli warunek instrukcji if jest fałszywy, a warunek instrukcji else-if jest prawdziwy. Można użyć wielu instrukcji else-if, aby określić różne alternatywy.">else-if <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 if (warunek1)
 {
-    // kod do wykonania, jeśli warunek1 jest spełniony
+		// kod do wykonania, jeśli warunek1 jest spełniony
 }
 
 else if (warunek2)
 {
-    // kod do wykonania, jeśli warunek1 nie jest spełniony, ale warunek2 jest spełniony
+		// kod do wykonania, jeśli warunek1 nie jest spełniony, ale warunek2 jest spełniony
 }
 
 else
 {
-    // kod do wykonania, jeśli żaden z warunków nie jest spełniony
+		// kod do wykonania, jeśli żaden z warunków nie jest spełniony
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container red-container">
-            Na przykład, poniższy kod sprawdza wartość zmiennej liczba i wyświetla na ekranie informacje, czy liczba jest mniejsza, większa lub równa zero:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<p class="text-container red-container">
+						Na przykład, poniższy kod sprawdza wartość zmiennej liczba i wyświetla na ekranie informacje, czy liczba jest mniejsza, większa lub równa zero:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int liczba = -5;
 
 if (liczba < 0) {
-    std::cout << "Liczba jest mniejsza od zera\n";
+		std::cout << "Liczba jest mniejsza od zera\n";
 }
 
 else if (liczba > 0) {
-    std::cout << "Liczba jest większa od zera\n";
+		std::cout << "Liczba jest większa od zera\n";
 }
 
 else {
-    std::cout << "Liczba jest równa zero\n";
+		std::cout << "Liczba jest równa zero\n";
 }
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Instrunkcja Warunkowa (switch)</h1>
-                <p>
-                    Instrukcja warunkowa switch służy do definiowania instrukcji warunkowej, która pozwala wybrać jedno spośród wielu bloków kodu do wykonania, w zależności od wartości określonej zmiennej lub wyrażenia.
-                </p>
-            </div>
-            <img src="/img/vector65.png" alt="">
-        </div>
-        <p class="text-container no-margin-top article tooltip">
-            Składnia instrukcji <code><a href="#" pro-tip="Instrukcja switch umożliwia wykonywanie różnych działań w zależności od wartości zmiennej. Instrukcja switch jest wykonywana dla wartości wyrażenia, a każdy przypadek case zawiera blok kodu, który jest wykonywany, jeśli wartość wyrażenia jest równa wartości case. Instrukcja default wykonuje się, gdy nie pasuje żaden przypadek case.">switch <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Instrunkcja Warunkowa (switch)</h1>
+								<p>
+										Instrukcja warunkowa switch służy do definiowania instrukcji warunkowej, która pozwala wybrać jedno spośród wielu bloków kodu do wykonania, w zależności od wartości określonej zmiennej lub wyrażenia.
+								</p>
+						</div>
+						<img src="/img/vector65.png" alt="">
+				</div>
+				<p class="text-container no-margin-top article tooltip">
+						Składnia instrukcji <code><a href="#" pro-tip="Instrukcja switch umożliwia wykonywanie różnych działań w zależności od wartości zmiennej. Instrukcja switch jest wykonywana dla wartości wyrażenia, a każdy przypadek case zawiera blok kodu, który jest wykonywany, jeśli wartość wyrażenia jest równa wartości case. Instrukcja default wykonuje się, gdy nie pasuje żaden przypadek case.">switch <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 switch(zmienna) {
 
-    case wartosc1:
-        // kod do wykonania, gdy zmienna == wartosc1
-        break;
-    case wartosc2:
-        // kod do wykonania, gdy zmienna == wartosc2
-        break;
-    // kolejne przypadki
-    default:
-        // kod do wykonania, gdy żaden z powyższych przypadków nie jest spełniony
-        break;
+		case wartosc1:
+				// kod do wykonania, gdy zmienna == wartosc1
+				break;
+		case wartosc2:
+				// kod do wykonania, gdy zmienna == wartosc2
+				break;
+		// kolejne przypadki
+		default:
+				// kod do wykonania, gdy żaden z powyższych przypadków nie jest spełniony
+				break;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym kodzie "zmienna" to wyrażenie, którego wartość zostanie porównana z wartościami podanymi w każdym przypadku (case). Jeśli wartość zmiennej zgadza się z jednym z przypadków, wykonywany jest kod znajdujący się po etykiecie "case" dla tego przypadku. Po wykonaniu kodu dla przypadku, który został dopasowany, wykonanie przenosi się do końca instrukcji switch.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_switch(1).png" alt=""> Użycie instrukcji switch w C++:</h2>
-        <div class="code-block">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym kodzie "zmienna" to wyrażenie, którego wartość zostanie porównana z wartościami podanymi w każdym przypadku (case). Jeśli wartość zmiennej zgadza się z jednym z przypadków, wykonywany jest kod znajdujący się po etykiecie "case" dla tego przypadku. Po wykonaniu kodu dla przypadku, który został dopasowany, wykonanie przenosi się do końca instrukcji switch.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_switch(1).png" alt=""> Użycie instrukcji switch w C++:</h2>
+				<div class="code-block">
+						<pre>
+								<code class="language-cpp">
 #include &ltiostream&gt
 
 using namespace std;
 
 int main()
 {
-    int x;
-    cout << "Podaj liczbę od 1 do 3: ";
-    cin >> x;
+		int x;
+		cout << "Podaj liczbę od 1 do 3: ";
+		cin >> x;
 
-    switch (x)
-    {
-        case 1:
-            cout << "Wybrano 1" << endl;
-            break;
-        case 2:
-            cout << "Wybrano 2" << endl;
-            break;
-        case 3:
-            cout << "Wybrano 3" << endl;
-            break;
-        default:
-            cout << "Niepoprawny wybór" << endl;
-            break;
-    }
+		switch (x)
+		{
+				case 1:
+						cout << "Wybrano 1" << endl;
+						break;
+				case 2:
+						cout << "Wybrano 2" << endl;
+						break;
+				case 3:
+						cout << "Wybrano 3" << endl;
+						break;
+				default:
+						cout << "Niepoprawny wybór" << endl;
+						break;
+		}
 
-    return 0;
+		return 0;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W powyższym przykładzie użytkownik zostaje poproszony o podanie liczby od 1 do 3. Następnie instrukcja switch wybiera odpowiedni blok kodu w zależności od podanej liczby. Jeśli użytkownik poda inną liczbę niż 1, 2 lub 3, zostanie wyświetlony komunikat "Niepoprawny wybór".
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Jeśli nie zostanie znaleziony żaden pasujący case, wykonywany jest blok kodu znajdujący się po słowie kluczowym default.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Loops.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W powyższym przykładzie użytkownik zostaje poproszony o podanie liczby od 1 do 3. Następnie instrukcja switch wybiera odpowiedni blok kodu w zależności od podanej liczby. Jeśli użytkownik poda inną liczbę niż 1, 2 lub 3, zostanie wyświetlony komunikat "Niepoprawny wybór".
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Jeśli nie zostanie znaleziony żaden pasujący case, wykonywany jest blok kodu znajdujący się po słowie kluczowym default.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Loops.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

@@ -1,9 +1,9 @@
 /*Line elements*/
 .line{
-    border: 1px solid #1c1c1c; /*#1c1c1c; or black*/
-    width: calc(100% + 20px * 2);
-    margin-left: -20px;
+		border: 1px solid #1c1c1c; /*#1c1c1c; or black*/
+		width: calc(100% + 20px * 2);
+		margin-left: -20px;
 }
 .line.line-white{
-    border: 1px solid #d3caca;
+		border: 1px solid #d3caca;
 }

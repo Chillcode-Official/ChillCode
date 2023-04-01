@@ -1,233 +1,233 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>jQuery {Manipulacja stylami CSS]</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>jQuery {Manipulacja stylami CSS]</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Selectors.html">Selektory</a></li>
-            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-            <li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
-            <li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
-            <li><a href="AJAX.html">AJAX</a></li>
-            <li><a href="Plugins.html">Wtyczki</a></li>
-            <li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
-            <li><a href="Debug_code.html">Debugowanie kodu</a></li>
-            <li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Selectors.html">Selektory</a></li>
+						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+						<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+						<li><a href="AJAX.html">AJAX</a></li>
+						<li><a href="Plugins.html">Wtyczki</a></li>
+						<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+						<li><a href="Debug_code.html">Debugowanie kodu</a></li>
+						<li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Manipulacja stylami CSS</h1>
-                <p>
-                    Manipulacja stylami CSS w jQuery jest ważnym narzędziem w tworzeniu interaktywnych i responsywnych
-                    stron internetowych, które dostosowują się do różnych rozmiarów ekranów i urządzeń. Pozwala to na
-                    dostosowanie wyglądu strony do preferencji użytkowników i ułatwienie nawigacji po stronie internetowej.
-                </p>
-            </div>
-            <img src="/img/vector47.png" alt="">
-        </div>
-        <p class="text-container light-container color-text-gray">
-            Na przykład, aby zmienić kolor tła elementu o id="myDiv" na czerwony, można użyć:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Manipulacja stylami CSS</h1>
+								<p>
+										Manipulacja stylami CSS w jQuery jest ważnym narzędziem w tworzeniu interaktywnych i responsywnych
+										stron internetowych, które dostosowują się do różnych rozmiarów ekranów i urządzeń. Pozwala to na
+										dostosowanie wyglądu strony do preferencji użytkowników i ułatwienie nawigacji po stronie internetowej.
+								</p>
+						</div>
+						<img src="/img/vector47.png" alt="">
+				</div>
+				<p class="text-container light-container color-text-gray">
+						Na przykład, aby zmienić kolor tła elementu o id="myDiv" na czerwony, można użyć:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").css("background-color", "red");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container light-container color-text-gray">
-            Aby zmienić kilka stylów CSS jednocześnie, można przekazać obiekt JavaScript do funkcji css(), jak w przykładzie poniżej:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container light-container color-text-gray">
+						Aby zmienić kilka stylów CSS jednocześnie, można przekazać obiekt JavaScript do funkcji css(), jak w przykładzie poniżej:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").css({
-  "background-color": "red",
-  "font-size": "20px",
-  "color": "white"
+	"background-color": "red",
+	"font-size": "20px",
+	"color": "white"
 });
-                </code>
-            </pre>
-        </div>
-        <p class="text-container light-container color-text-gray">
-            Na przykład, aby dodać klasę "highlight" do elementu o id="myDiv", można użyć:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container light-container color-text-gray">
+						Na przykład, aby dodać klasę "highlight" do elementu o id="myDiv", można użyć:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").addClass("highlight");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip lightPink-container">
-            Istnieją wiele innych funkcji jQuery które pozwalazją na zmianę różnych aspektów wyglądu elementów HTML przy użyciu manipulacji stylami CSS, na przykład:
-            <code><a href="#" pro-tip="metoda ta przełącza klasę CSS dla wybranego elementu. Jeśli element nie ma klasy, to zostanie dodana. Jeśli ma, to zostanie usunięta.">toggleClass() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-            <code><a href="#" pro-tip="metoda ta usuwa atrybut HTML wybranego elementu.">removeAttr() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-            <code><a href="#" pro-tip="metoda ta ustawia lub zwraca wysokość (w pikselach) wybranego elementu.">height() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-            <code><a href="#" pro-tip="metoda ta ustawia lub zwraca szerokość (w pikselach) wybranego elementu.">width() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i
-            <code><a href="#" pro-tip="metoda ta zwraca pozycję wybranego elementu względem dokumentu. Zwraca obiekt z atrybutami top i left.">offset() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-        </p>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Manipulacja stylami CSS jest niezbędna w tworzeniu responsywnych stron internetowych, które dostosowują się do różnych urządzeń i rozmiarów ekranów. jQuery ułatwia tę pracę dzięki swoim potężnym funkcjom manipulacji stylami CSS.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Przykłady manipulacji stylami CSS:</h1>
-        <div class="page-header"></div>
-        <div class="double-elements">
-            <p><img class="icon-img-small" src="/img/icon_colorBackground.png" alt=""> Zmiana koloru tła elementu po kliknięciu:</p>
-            <p><img class="icon-img-small" src="/img/icon_text-format.png" alt=""> Zmiana koloru tekstu po najechaniu kursorem:</p>
-        </div>
-        <div class="double-elements">
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip lightPink-container">
+						Istnieją wiele innych funkcji jQuery które pozwalazją na zmianę różnych aspektów wyglądu elementów HTML przy użyciu manipulacji stylami CSS, na przykład:
+						<code><a href="#" pro-tip="metoda ta przełącza klasę CSS dla wybranego elementu. Jeśli element nie ma klasy, to zostanie dodana. Jeśli ma, to zostanie usunięta.">toggleClass() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+						<code><a href="#" pro-tip="metoda ta usuwa atrybut HTML wybranego elementu.">removeAttr() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+						<code><a href="#" pro-tip="metoda ta ustawia lub zwraca wysokość (w pikselach) wybranego elementu.">height() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+						<code><a href="#" pro-tip="metoda ta ustawia lub zwraca szerokość (w pikselach) wybranego elementu.">width() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i
+						<code><a href="#" pro-tip="metoda ta zwraca pozycję wybranego elementu względem dokumentu. Zwraca obiekt z atrybutami top i left.">offset() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				</p>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Manipulacja stylami CSS jest niezbędna w tworzeniu responsywnych stron internetowych, które dostosowują się do różnych urządzeń i rozmiarów ekranów. jQuery ułatwia tę pracę dzięki swoim potężnym funkcjom manipulacji stylami CSS.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Przykłady manipulacji stylami CSS:</h1>
+				<div class="page-header"></div>
+				<div class="double-elements">
+						<p><img class="icon-img-small" src="/img/icon_colorBackground.png" alt=""> Zmiana koloru tła elementu po kliknięciu:</p>
+						<p><img class="icon-img-small" src="/img/icon_text-format.png" alt=""> Zmiana koloru tekstu po najechaniu kursorem:</p>
+				</div>
+				<div class="double-elements">
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").click(function() {
-  $(this).css("background-color", "red");
+	$(this).css("background-color", "red");
 });
-                </code>
-            </pre>
-            </div>
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 var colors = ["red", "blue", "green", "yellow", "orange"];
 
 $("#myDiv").css("background-color", colors[Math.floor(Math.random()*colors.length)]);
-                </code>
-            </pre>
-            </div>
-        </div>
-        <div class="double-elements">
-            <p><img class="icon-img-small" src="/img/icon_font.png" alt=""> Zmiana rozmiaru czcionki elementu po kliknięciu:</p>
-            <p><img class="icon-img-small" src="/img/icon_cursor.png" alt=""> Dodanie klasy CSS do elementu po kliknięciu:</p>
-        </div>
-        <div class="double-elements">
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+				</div>
+				<div class="double-elements">
+						<p><img class="icon-img-small" src="/img/icon_font.png" alt=""> Zmiana rozmiaru czcionki elementu po kliknięciu:</p>
+						<p><img class="icon-img-small" src="/img/icon_cursor.png" alt=""> Dodanie klasy CSS do elementu po kliknięciu:</p>
+				</div>
+				<div class="double-elements">
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").click(function() {
-  $(this).css("font-size", "24px");
+	$(this).css("font-size", "24px");
 });
-                </code>
-            </pre>
-            </div>
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").click(function() {
-  $(this).addClass("highlight");
+	$(this).addClass("highlight");
 });
-                </code>
-            </pre>
-            </div>
-        </div>
-        <div class="double-elements">
-            <p><img class="icon-img-small" src="/img/icon_click.png" alt=""> Animowanie zmiany wysokości elementu po kliknięciu:</p>
-            <p><img class="icon-img-small" src="/img/icon_hiddenNinja.png" alt=""> Ukrycie elementu po kliknięciu:</p>
-        </div>
-        <div class="double-elements">
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+				</div>
+				<div class="double-elements">
+						<p><img class="icon-img-small" src="/img/icon_click.png" alt=""> Animowanie zmiany wysokości elementu po kliknięciu:</p>
+						<p><img class="icon-img-small" src="/img/icon_hiddenNinja.png" alt=""> Ukrycie elementu po kliknięciu:</p>
+				</div>
+				<div class="double-elements">
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").click(function() {
-  $(this).animate({
-    height: "500px"
-  }, 1000);
+	$(this).animate({
+		height: "500px"
+	}, 1000);
 });
-                </code>
-            </pre>
-            </div>
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").click(function() {
 
-  $(this).hide();
+	$(this).hide();
 });
 
-                </code>
-            </pre>
-            </div>
-        </div>
-        <div class="double-elements">
-            <p><img class="icon-img-small" src="/img/icon_app.png" alt=""> Zmiana stylów CSS w zależności od rozmiaru okna:</p>
-            <p><img class="icon-img-small" src="/img/icon_background(1).png" alt=""> Zmiana tła na losową po każdym odświeżeniu strony:</p>
-        </div>
-        <div class="double-elements">
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+				</div>
+				<div class="double-elements">
+						<p><img class="icon-img-small" src="/img/icon_app.png" alt=""> Zmiana stylów CSS w zależności od rozmiaru okna:</p>
+						<p><img class="icon-img-small" src="/img/icon_background(1).png" alt=""> Zmiana tła na losową po każdym odświeżeniu strony:</p>
+				</div>
+				<div class="double-elements">
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $(window).resize(function() {
-  if ($(window).width() < 768) {
-    $("#myMenu").addClass("collapsed");
-  } else {
-    $("#myMenu").removeClass("collapsed");
-  }
+	if ($(window).width() < 768) {
+		$("#myMenu").addClass("collapsed");
+	} else {
+		$("#myMenu").removeClass("collapsed");
+	}
 });
-                </code>
-            </pre>
-            </div>
-            <div class="code-block code-block-medium code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+						</div>
+						<div class="code-block code-block-medium code-block-margin-top">
+						<pre>
+								<code>
 $("#myDiv").hover(function() {
-  $(this).css("color", "blue");
+	$(this).css("color", "blue");
 },
 
  function() {
-  $(this).css("color", "black");
+	$(this).css("color", "black");
 });
-                </code>
-            </pre>
-            </div>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Te przykłady pokazują tylko kilka sposobów wykorzystania manipulacji stylami CSS w jQuery. Istnieją oczywiście wiele innych możliwości, a jedynym ograniczeniem jest wyobraźnia i potrzeby projektu.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Event_handling.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+						</div>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Te przykłady pokazują tylko kilka sposobów wykorzystania manipulacji stylami CSS w jQuery. Istnieją oczywiście wiele innych możliwości, a jedynym ograniczeniem jest wyobraźnia i potrzeby projektu.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Event_handling.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

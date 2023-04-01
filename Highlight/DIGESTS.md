@@ -6,12 +6,12 @@ To do this you simply need to add the `integrity` attribute for each JavaScript 
 
 ```html
 <script
-  src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
-  integrity="sha384-d8KTBLFjg2IVNtohjj32TAh8+MOFPukj5WKbkfk83mLz1ctxujsIN0jnKaRw3rW7"></script>
+	src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+	integrity="sha384-d8KTBLFjg2IVNtohjj32TAh8+MOFPukj5WKbkfk83mLz1ctxujsIN0jnKaRw3rW7"></script>
 <!-- including any other grammars you might need to load -->
 <script
-  src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/go.min.js"
-  integrity="sha384-Psy4WYRdpX6eaL0Yrtp3XkDq0WsaYTXresPU7qP7BhNpFnprhtDs0er4Q+fpiT8m"></script>
+	src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/go.min.js"
+	integrity="sha384-Psy4WYRdpX6eaL0Yrtp3XkDq0WsaYTXresPU7qP7BhNpFnprhtDs0er4Q+fpiT8m"></script>
 ```
 
 The full list of digests for every file can be found below.

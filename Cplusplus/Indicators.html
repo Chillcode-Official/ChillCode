@@ -1,217 +1,217 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Cpp {Wskaźniki}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Cpp {Wskaźniki}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Arguments.html">Argumenty</a></li>
-            <li><a href="Return_values.html">Wartości zwracane</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Indicators.html">Wskaźniki</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Arguments.html">Argumenty</a></li>
+						<li><a href="Return_values.html">Wartości zwracane</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Indicators.html">Wskaźniki</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Wskaźniki</h1>
-        <div class="section-with-image">
-            <p>
-                W C++, wskaźniki są zmiennymi, które przechowują adresy pamięci innych zmiennych. Wskaźniki pozwalają programiście na bezpośredni dostęp do danych w pamięci, co jest szczególnie przydatne w sytuacjach, gdy program musi manipulować danymi w sposób dynamiczny, np. alokować i zwalniać pamięć w trakcie działania programu.
-            </p>
-            <img src="/img/vector191.png" alt="">
-        </div>
-        <p class="text-container white-container no-margin-top">
-            Aby zadeklarować wskaźnik w C++, należy użyć operatora gwiazdki (*) po nazwie typu zmiennej, np.:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+		<div class="content">
+				<h1>Wskaźniki</h1>
+				<div class="section-with-image">
+						<p>
+								W C++, wskaźniki są zmiennymi, które przechowują adresy pamięci innych zmiennych. Wskaźniki pozwalają programiście na bezpośredni dostęp do danych w pamięci, co jest szczególnie przydatne w sytuacjach, gdy program musi manipulować danymi w sposób dynamiczny, np. alokować i zwalniać pamięć w trakcie działania programu.
+						</p>
+						<img src="/img/vector191.png" alt="">
+				</div>
+				<p class="text-container white-container no-margin-top">
+						Aby zadeklarować wskaźnik w C++, należy użyć operatora gwiazdki (*) po nazwie typu zmiennej, np.:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int* wskaznik;
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
-            <div class="dropdown-content">
-                <div class="alert-card alert-card3 alert-card-gray">
-                    <p>
-                        Ta deklaracja oznacza, że wskaznik jest wskaźnikiem do zmiennej typu int. Należy zauważyć, że operator gwiazdki ma tutaj zupełnie inne znaczenie niż w przypadku zwykłych zmiennych - oznacza on w tym przypadku, że wskaznik jest wskaźnikiem, a nie zwykłą zmienną typu int.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container white-container">
-            Aby przypisać wartość do wskaźnika, należy użyć operatora adresu (&) po nazwie zmiennej, np.:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<div class="dropdown-content">
+								<div class="alert-card alert-card3 alert-card-gray">
+										<p>
+												Ta deklaracja oznacza, że wskaznik jest wskaźnikiem do zmiennej typu int. Należy zauważyć, że operator gwiazdki ma tutaj zupełnie inne znaczenie niż w przypadku zwykłych zmiennych - oznacza on w tym przypadku, że wskaznik jest wskaźnikiem, a nie zwykłą zmienną typu int.
+										</p>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container white-container">
+						Aby przypisać wartość do wskaźnika, należy użyć operatora adresu (&) po nazwie zmiennej, np.:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int x = 42;
 int* wskaznik = &amp;x;
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
-            <div class="dropdown-content">
-                <div class="alert-card alert-card3 alert-card-gray">
-                    <p>
-                        Ta deklaracja oznacza, że wskaznik wskazuje na zmienną x, a jej wartość to adres pamięci, gdzie ta zmienna jest przechowywana.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container white-container">
-            Aby uzyskać wartość zmiennej, na którą wskazuje wskaźnik, należy użyć operatora gwiazdki (*), np.:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<div class="dropdown-content">
+								<div class="alert-card alert-card3 alert-card-gray">
+										<p>
+												Ta deklaracja oznacza, że wskaznik wskazuje na zmienną x, a jej wartość to adres pamięci, gdzie ta zmienna jest przechowywana.
+										</p>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container white-container">
+						Aby uzyskać wartość zmiennej, na którą wskazuje wskaźnik, należy użyć operatora gwiazdki (*), np.:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int y = *wskaznik;
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
-            <div class="dropdown-content">
-                <div class="alert-card alert-card3 alert-card-gray">
-                    <p>
-                        Ta instrukcja oznacza, że wartość zmiennej y zostanie ustawiona na wartość zmiennej, na którą wskazuje wskaznik (czyli w tym przypadku 42).
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Wskaźniki to bardzo potężne narzędzie w języku C++, ale jednocześnie wymagają one dużego nakładu pracy i umiejętności, aby stosować je poprawnie i bezpiecznie
-            </p>
-        </div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b>Ważne</b>
-            <div class="line"></div>
-            <p>
-                Ważne jest, aby zawsze pamiętać o bezpieczeństwie i unikać błędów, takich jak nieprawidłowe dereferencje wskaźników czy wycieki pamięci.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Inne operacje na Wskaźnikach</h1>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_arithmetic(2).png" alt=""> Arytmetyka wskaźników</h2>
-        <div class="page-header"></div>
-        <p class="text-container azure-container">
-            Arytmetyka wskaźników - w C++ można dodawać i odejmować wartości całkowite od wskaźników. Wynik tych operacji jest nowym wskaźnikiem, którego adres jest równy adresowi pierwotnego wskaźnika z dodaną lub odjętą wartością. Na przykład:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<div class="dropdown-content">
+								<div class="alert-card alert-card3 alert-card-gray">
+										<p>
+												Ta instrukcja oznacza, że wartość zmiennej y zostanie ustawiona na wartość zmiennej, na którą wskazuje wskaznik (czyli w tym przypadku 42).
+										</p>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Wskaźniki to bardzo potężne narzędzie w języku C++, ale jednocześnie wymagają one dużego nakładu pracy i umiejętności, aby stosować je poprawnie i bezpiecznie
+						</p>
+				</div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b>Ważne</b>
+						<div class="line"></div>
+						<p>
+								Ważne jest, aby zawsze pamiętać o bezpieczeństwie i unikać błędów, takich jak nieprawidłowe dereferencje wskaźników czy wycieki pamięci.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Inne operacje na Wskaźnikach</h1>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_arithmetic(2).png" alt=""> Arytmetyka wskaźników</h2>
+				<div class="page-header"></div>
+				<p class="text-container azure-container">
+						Arytmetyka wskaźników - w C++ można dodawać i odejmować wartości całkowite od wskaźników. Wynik tych operacji jest nowym wskaźnikiem, którego adres jest równy adresowi pierwotnego wskaźnika z dodaną lub odjętą wartością. Na przykład:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int tablica[5] = {1, 2, 3, 4, 5};
 int* wskaznik = &tablica[2]; // wskaznik wskazuje na trzeci element tablicy
 int* wskaznik2 = wskaznik + 2; // wskaznik2 wskazuje na piąty element tablicy
 int* wskaznik3 = wskaznik - 1; // wskaznik3 wskazuje na drugi element tablicy
-                </code>
-            </pre>
-        </div>
-        <h2><img class="icon-img-big" src="/img/icon_tables(2).png" alt=""> Tablice i wskaźniki</h2>
-        <div class="page-header"></div>
-        <p class="text-container azure-container">
-            Tablice i wskaźniki - w C++ tablice są traktowane jak wskaźniki na ich pierwszy element. Można odwoływać się do elementów tablicy za pomocą indeksów, ale równie dobrze można odwoływać się do nich za pomocą wskaźników. Na przykład:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<h2><img class="icon-img-big" src="/img/icon_tables(2).png" alt=""> Tablice i wskaźniki</h2>
+				<div class="page-header"></div>
+				<p class="text-container azure-container">
+						Tablice i wskaźniki - w C++ tablice są traktowane jak wskaźniki na ich pierwszy element. Można odwoływać się do elementów tablicy za pomocą indeksów, ale równie dobrze można odwoływać się do nich za pomocą wskaźników. Na przykład:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 int tablica[5] = {1, 2, 3, 4, 5};
 int* wskaznik = tablica; // wskaznik wskazuje na pierwszy element tablicy
 int drugi_element = *(wskaznik + 1); // drugi_element ma wartość 2
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_logical-thinking.png" alt=""> Wskaźniki na funkcje</h2>
-        <div class="page-header"></div>
-        <p class="text-container azure-container">
-            Wskaźniki oraz funkcje - w C++ można tworzyć wskaźniki na funkcje, co pozwala na wywołanie tych funkcji za pomocą wskaźnika. Wskaźnik na funkcję przechowuje adres funkcji, a wywołanie tej funkcji za pomocą wskaźnika jest równoważne zwykłemu wywołaniu funkcji. Na przykład:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_logical-thinking.png" alt=""> Wskaźniki na funkcje</h2>
+				<div class="page-header"></div>
+				<p class="text-container azure-container">
+						Wskaźniki oraz funkcje - w C++ można tworzyć wskaźniki na funkcje, co pozwala na wywołanie tych funkcji za pomocą wskaźnika. Wskaźnik na funkcję przechowuje adres funkcji, a wywołanie tej funkcji za pomocą wskaźnika jest równoważne zwykłemu wywołaniu funkcji. Na przykład:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 #include &lt;iostream&gt;
 using namespace std;
 
 void foo() {
-    cout << "Hello, world!" << endl;
+		cout << "Hello, world!" << endl;
 }
 
 int main() {
-    void (*wskaznik)() = foo; // wskaznik wskazuje na funkcję foo
-    wskaznik(); // wywołanie funkcji foo za pomocą wskaźnika
-    return 0;
+		void (*wskaznik)() = foo; // wskaznik wskazuje na funkcję foo
+		wskaznik(); // wywołanie funkcji foo za pomocą wskaźnika
+		return 0;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    Hello, world!
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										Hello, world!
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
 
-            <p>
-                Wskaźniki w C++ mogą być bardzo użyteczne, ale wymagają one uważnego i ostrożnego podejścia. W przypadku nieprawidłowego użycia mogą prowadzić do błędów w programie, takich jak wycieki pamięci lub segfaulty. Ważne jest, aby zawsze ppamiętać o przypisywaniu wartości wskaźnikom tylko poprawnych adresów, a także odbieraniu wartości z poprawnych adresów. W przypadku wskaźników na tablice należy uważać, aby nie wyjść poza granice tablicy, co może prowadzić do nieprzewidywalnych skutków.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Summary.html"><button>Dalej</button></a>
-        </div>
-    </div>
+						<p>
+								Wskaźniki w C++ mogą być bardzo użyteczne, ale wymagają one uważnego i ostrożnego podejścia. W przypadku nieprawidłowego użycia mogą prowadzić do błędów w programie, takich jak wycieki pamięci lub segfaulty. Ważne jest, aby zawsze ppamiętać o przypisywaniu wartości wskaźnikom tylko poprawnych adresów, a także odbieraniu wartości z poprawnych adresów. W przypadku wskaźników na tablice należy uważać, aby nie wyjść poza granice tablicy, co może prowadzić do nieprzewidywalnych skutków.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Summary.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

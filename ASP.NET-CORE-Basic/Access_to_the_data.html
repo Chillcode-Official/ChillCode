@@ -1,190 +1,190 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET {Dostęp-do-danych)}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET {Dostęp-do-danych)}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Entity Framework Core i SQL Server</h1>
-        <div class="section-with-image">
-            <p>
-                Aby uzyskać dostęp do danych w aplikacji ASP.NET Core, można wykorzystać Entity Framework Core i bazę danych SQL Server. Entity Framework Core to narzędzie ORM (Object-Relational Mapping), które umożliwia łatwe mapowanie obiektów C# na rekordy w bazie danych. W połączeniu z bazą danych SQL Server można uzyskać łatwy i wydajny dostęp do danych z poziomu aplikacji.
-            </p>
-            <img src="/img/vector211.png" alt="">
-        </div>
-        <h2><img class="icon-img-big" src="/img/icon_cloudService.png" alt=""> Kroki do rozpoczęcia korzystania z Entity Framework Core:</h2>
-        <div class="text-container lightWhite-container black-list no-margin-top">
-            <div class="text-content">
-                <p><b>1.</b> Zainstaluj bibliotekę Entity Framework Core za pomocą menedżera pakietów NuGet:</p>
-                <div class="code-block code-block-margin-top">
-                    <pre>
-                        <code>
+		<div class="content">
+				<h1>Entity Framework Core i SQL Server</h1>
+				<div class="section-with-image">
+						<p>
+								Aby uzyskać dostęp do danych w aplikacji ASP.NET Core, można wykorzystać Entity Framework Core i bazę danych SQL Server. Entity Framework Core to narzędzie ORM (Object-Relational Mapping), które umożliwia łatwe mapowanie obiektów C# na rekordy w bazie danych. W połączeniu z bazą danych SQL Server można uzyskać łatwy i wydajny dostęp do danych z poziomu aplikacji.
+						</p>
+						<img src="/img/vector211.png" alt="">
+				</div>
+				<h2><img class="icon-img-big" src="/img/icon_cloudService.png" alt=""> Kroki do rozpoczęcia korzystania z Entity Framework Core:</h2>
+				<div class="text-container lightWhite-container black-list no-margin-top">
+						<div class="text-content">
+								<p><b>1.</b> Zainstaluj bibliotekę Entity Framework Core za pomocą menedżera pakietów NuGet:</p>
+								<div class="code-block code-block-margin-top">
+										<pre>
+												<code>
 Install-Package Microsoft.EntityFrameworkCore
-                        </code>
-                     </pre>
-                </div>
-            </div>
-            <div  class="minus-margin-top"></div>
-            <div class="text-content">
-                <p><b>2.</b> Zainstaluj bibliotekę dla bazy danych SQL Server za pomocą menedżera pakietów NuGet:</p>
-                <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+												</code>
+ 										</pre>
+								</div>
+						</div>
+						<div  class="minus-margin-top"></div>
+						<div class="text-content">
+								<p><b>2.</b> Zainstaluj bibliotekę dla bazy danych SQL Server za pomocą menedżera pakietów NuGet:</p>
+								<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
-                </code>
-            </pre>
-                </div>
-            </div>
-            
-            <div class="minus-margin-top"></div>
-            <div class="text-content">
-                <p><b>3.</b> Utwórz klasę dziedziczącą po klasie DbContext, która będzie reprezentować kontekst bazy danych. Kontekst bazy danych zawiera definicje tabel i relacji między nimi.</p>
-                <div class="code-block code-block-margin-top">
-                    <pre>
-                        <code>
+								</code>
+						</pre>
+								</div>
+						</div>
+
+						<div class="minus-margin-top"></div>
+						<div class="text-content">
+								<p><b>3.</b> Utwórz klasę dziedziczącą po klasie DbContext, która będzie reprezentować kontekst bazy danych. Kontekst bazy danych zawiera definicje tabel i relacji między nimi.</p>
+								<div class="code-block code-block-margin-top">
+										<pre>
+												<code>
 public class MyDbContext : DbContext
 {
-    public MyDbContext(DbContextOptions&ltMyDbContext&gt options) : base(options)
-    {
-        /..
-    }
+		public MyDbContext(DbContextOptions&ltMyDbContext&gt options) : base(options)
+		{
+				/..
+		}
 
-    public DbSet&ltProduct&gt Products { get; set; }
+		public DbSet&ltProduct&gt Products { get; set; }
 }
-                        </code>
-                     </pre>
-                </div>
-            </div>
-            
-            <div class="minus-margin-top"></div>
-            <div class="text-content">
-                <p><b>4.</b> Skonfiguruj połączenie z bazą danych w pliku appsettings.json:</p>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                     <code>
+												</code>
+ 										</pre>
+								</div>
+						</div>
+
+						<div class="minus-margin-top"></div>
+						<div class="text-content">
+								<p><b>4.</b> Skonfiguruj połączenie z bazą danych w pliku appsettings.json:</p>
+								<div class="code-block code-block-margin-top">
+								<pre>
+ 										<code>
 "ConnectionStrings": {
-    "MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;"
+		"MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;"
 }
-                     </code>
-                </pre>
-                </div>
-            </div>
-            
-            <div class="minus-margin-top"></div>
-            <div class="text-content">
-                <p><b>5.</b> Zarejestruj kontekst bazy danych w serwisach aplikacji w pliku Startup.cs:</p>
-                <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+ 										</code>
+								</pre>
+								</div>
+						</div>
+
+						<div class="minus-margin-top"></div>
+						<div class="text-content">
+								<p><b>5.</b> Zarejestruj kontekst bazy danych w serwisach aplikacji w pliku Startup.cs:</p>
+								<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddDbContext&ltMyDbContext&gt(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
+		services.AddDbContext&ltMyDbContext&gt(options =>
+				options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
 }
-                </code>
-            </pre>
-                </div>
-            </div>
-            
-            <div class="minus-margin-top"></div>
-            <div class="text-content">
-                <p><b>6.</b> Aby wykonywać zapytania do bazy danych, utwórz repozytorium, które będzie wykorzystywać kontekst bazy danych do wykonywania operacji CRUD (Create, Read, Update, Delete).</p>
-                <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+								</div>
+						</div>
+
+						<div class="minus-margin-top"></div>
+						<div class="text-content">
+								<p><b>6.</b> Aby wykonywać zapytania do bazy danych, utwórz repozytorium, które będzie wykorzystywać kontekst bazy danych do wykonywania operacji CRUD (Create, Read, Update, Delete).</p>
+								<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 public class ProductRepository
 {
-    private readonly MyDbContext _dbContext;
+		private readonly MyDbContext _dbContext;
 
-    public ProductRepository(MyDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
+		public ProductRepository(MyDbContext dbContext)
+		{
+				_dbContext = dbContext;
+		}
 
-    public async Task&ltList&ltProduct&gt&gt GetAll()
-    {
-        return await _dbContext.Products.ToListAsync();
-    }
+		public async Task&ltList&ltProduct&gt&gt GetAll()
+		{
+				return await _dbContext.Products.ToListAsync();
+		}
 
-    public async Task&ltProduct&gt GetById(int id)
-    {
-        return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
-    }
+		public async Task&ltProduct&gt GetById(int id)
+		{
+				return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+		}
 
-    public async Task Add(Product product)
-    {
-        await _dbContext.Products.AddAsync(product);
-        await _dbContext.SaveChangesAsync();
-    }
+		public async Task Add(Product product)
+		{
+				await _dbContext.Products.AddAsync(product);
+				await _dbContext.SaveChangesAsync();
+		}
 
-    public async Task Update(Product product)
-    {
-        _dbContext.Products.Update(product);
-        await _dbContext.SaveChangesAsync();
-    }
+		public async Task Update(Product product)
+		{
+				_dbContext.Products.Update(product);
+				await _dbContext.SaveChangesAsync();
+		}
 
-    public async Task Delete(int id)
-    {
-        var product = await GetById(id);
-        _dbContext.Products.Remove(product);
-        await _dbContext.SaveChangesAsync();
-    }
+		public async Task Delete(int id)
+		{
+				var product = await GetById(id);
+				_dbContext.Products.Remove(product);
+				await _dbContext.SaveChangesAsync();
+		}
 }
-                </code>
-            </pre>
-                </div>
-            </div>
-            <div class="minus-margin-top"></div>
-        </div>
-        <div class="big-page-header"></div>
-        <h3 class="color-text-white"><img class="icon-img-big" src="/img/icon_configure(2).png" alt=""> Kod do podstawowych operacji CRUD w Entity Framework Core z bazą danych SQL Server:</h3>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+								</div>
+						</div>
+						<div class="minus-margin-top"></div>
+				</div>
+				<div class="big-page-header"></div>
+				<h3 class="color-text-white"><img class="icon-img-big" src="/img/icon_configure(2).png" alt=""> Kod do podstawowych operacji CRUD w Entity Framework Core z bazą danych SQL Server:</h3>
+				<div class="code-block">
+						<pre>
+								<code>
 // utworzenie nowego obiektu DbContext
 using var context = new MyDbContext();
 
@@ -203,8 +203,8 @@ var entities = context.MyEntities.Where(e => e.Age > 25).ToList();
 var entityToUpdate = context.MyEntities.FirstOrDefault(e => e.Name == "John");
 if (entityToUpdate != null)
 {
-    entityToUpdate.Age = 31;
-    context.SaveChanges();
+		entityToUpdate.Age = 31;
+		context.SaveChanges();
 }
 
 
@@ -212,25 +212,25 @@ if (entityToUpdate != null)
 var entityToDelete = context.MyEntities.FirstOrDefault(e => e.Name == "John");
 if (entityToDelete != null)
 {
-    context.MyEntities.Remove(entityToDelete);
-    context.SaveChanges();
+		context.MyEntities.Remove(entityToDelete);
+		context.SaveChanges();
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W powyższym kodzie MyDbContext jest klasą dziedziczącą z DbContext, a MyEntity to klasa reprezentująca tabelę w bazie danych. Zapytania do bazy danych są wykonywane za pomocą LINQ, a metoda SaveChanges służy do zapisywania zmian w bazie danych.
-            </p>
-        </div>
-            <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Middleware.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W powyższym kodzie MyDbContext jest klasą dziedziczącą z DbContext, a MyEntity to klasa reprezentująca tabelę w bazie danych. Zapytania do bazy danych są wykonywane za pomocą LINQ, a metoda SaveChanges służy do zapisywania zmian w bazie danych.
+						</p>
+				</div>
+						<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Middleware.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

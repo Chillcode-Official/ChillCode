@@ -1,16 +1,16 @@
 /*  text-content elements */
 .text-content code{
-    background-color: #1e1e1e;
-    font-size: 16px;
-    color: #e4e4e4;
-    padding: 4px 7px 4px;
-    line-height: 160%;
-    margin: 3px;
-    border-radius: 5px;
+		background-color: #1e1e1e;
+		font-size: 16px;
+		color: #e4e4e4;
+		padding: 4px 7px 4px;
+		line-height: 160%;
+		margin: 3px;
+		border-radius: 5px;
 }
 .text-content p{
-    line-height: 2em;
+		line-height: 2em;
 }
 .paragraf-margin-left p{
-    margin-left: 20px;
+		margin-left: 20px;
 }

@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Serializacja/Deserializacja</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Serializacja/Deserializacja</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="LINQ.html">LINQ</a></li>
-            <li><a href="Praca-z-plikami.html">Praca z plikami</a></li>
-            <li><a href="Programowanie-obiektowe.html">Programowanie obiektowe</a> </li>
-            <li><a href="Serializacja-Deserializacja.html">Serializacja oraz Deserializacja</a></li>
-            <li><a href="Asynchronicznosc.html">Asychroniczność</a></li>
-            <li><a href="Szyfrowanie-danych.html">Szyfrowanie danych</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="LINQ.html">LINQ</a></li>
+						<li><a href="Praca-z-plikami.html">Praca z plikami</a></li>
+						<li><a href="Programowanie-obiektowe.html">Programowanie obiektowe</a> </li>
+						<li><a href="Serializacja-Deserializacja.html">Serializacja oraz Deserializacja</a></li>
+						<li><a href="Asynchronicznosc.html">Asychroniczność</a></li>
+						<li><a href="Szyfrowanie-danych.html">Szyfrowanie danych</a></li>
+						<li><a href="Podsumowanie.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Serializacja W Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                Serializacja w języku C# polega na przekształceniu obiektu w postać, która może być zapisana lub
-                przesłana przez sieć. C# udostępnia kilka metod serializacji, takich jak serializacja binarna,
-                XML i JSON. Serializacja jest procesem przekształcania obiektu programu w postać, która może być
-                zapisana lub przesłana przez sieć.
-            </p>
-            <img src="/img/vector87.png" alt="">
-        </div>
-        <p class="text-container cream-container article tooltip">
-            Najprostszą metodą jest serializacja binarna, która może być użyta za pomocą klas
-            <code><a href="#" pro-tip="">BinaryFormatter </a></code>i
-            <code><a href="#" pro-tip="">SoapFormatter</a></code>
-        </p>
-        <p class="text-container cream-container article tooltip">
-            Serializacja XML może być użyta za pomocą klas <code><a href="#" pro-tip="">XmlSerializer</a></code> i
-            <code><a href="#" pro-tip="">DataContractSerializer</a></code>.
-        </p>
-        <p class="text-container cream-container article tooltip">
-            Serializacja JSON może być użyta za pomocą biblioteki
-            <code><a href="#" pro-tip="">Newtonsoft.Json</a></code>
-            lub systemowej klasy <code><a href="#" pro-tip="">JavaScriptSerializer</a></code>.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<h1>Serializacja W Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								Serializacja w języku C# polega na przekształceniu obiektu w postać, która może być zapisana lub
+								przesłana przez sieć. C# udostępnia kilka metod serializacji, takich jak serializacja binarna,
+								XML i JSON. Serializacja jest procesem przekształcania obiektu programu w postać, która może być
+								zapisana lub przesłana przez sieć.
+						</p>
+						<img src="/img/vector87.png" alt="">
+				</div>
+				<p class="text-container cream-container article tooltip">
+						Najprostszą metodą jest serializacja binarna, która może być użyta za pomocą klas
+						<code><a href="#" pro-tip="">BinaryFormatter </a></code>i
+						<code><a href="#" pro-tip="">SoapFormatter</a></code>
+				</p>
+				<p class="text-container cream-container article tooltip">
+						Serializacja XML może być użyta za pomocą klas <code><a href="#" pro-tip="">XmlSerializer</a></code> i
+						<code><a href="#" pro-tip="">DataContractSerializer</a></code>.
+				</p>
+				<p class="text-container cream-container article tooltip">
+						Serializacja JSON może być użyta za pomocą biblioteki
+						<code><a href="#" pro-tip="">Newtonsoft.Json</a></code>
+						lub systemowej klasy <code><a href="#" pro-tip="">JavaScriptSerializer</a></code>.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -71,78 +71,78 @@ using System.Runtime.Serialization.Formatters.Binary;
 [Serializable]
 class Osoba
 {
-    public string Imie { get; set; }
-    public int Wiek { get; set; }
+		public string Imie { get; set; }
+		public int Wiek { get; set; }
 }
 
 
 class Program
 {
-    static void Main()
-    {
-        Osoba osoba = new Osoba { Imie = "Jan Kowalski", Wiek = 30 };
-        BinaryFormatter formatter = new BinaryFormatter();
+		static void Main()
+		{
+				Osoba osoba = new Osoba { Imie = "Jan Kowalski", Wiek = 30 };
+				BinaryFormatter formatter = new BinaryFormatter();
 
 
-        using (FileStream stream = new FileStream("osoba.bin", FileMode.Create))
-        {
-            formatter.Serialize(stream, osoba);
-        }
+				using (FileStream stream = new FileStream("osoba.bin", FileMode.Create))
+				{
+						formatter.Serialize(stream, osoba);
+				}
 
 
-        using (FileStream stream = new FileStream("osoba.bin", FileMode.Open))
-        {
-            Osoba deserializedOsoba = (Osoba)formatter.Deserialize(stream);
-            Console.WriteLine("Imie: {0}, Wiek: {1}", deserializedOsoba.Imie, deserializedOsoba.Wiek);
-        }
-    }
+				using (FileStream stream = new FileStream("osoba.bin", FileMode.Open))
+				{
+						Osoba deserializedOsoba = (Osoba)formatter.Deserialize(stream);
+						Console.WriteLine("Imie: {0}, Wiek: {1}", deserializedOsoba.Imie, deserializedOsoba.Wiek);
+				}
+		}
 }
 
 
 //output:  Imie: Jan Kowalski, Wiek: 30
-                </code>
-            </pre>
-        </div>
-        <div class="double-elements">
-            <div class="text-container gray-container">
-                <img src="/img/warning.png" alt="">
-                <b>Wyjasnienie</b>
-                <p>
-                    Ten przykład tworzy klasę "Osoba" z polami "Imie" i "Wiek", a następnie tworzy obiekt tej klasy
-                    i ustawia jego pola. Następnie tworzy obiekt BinaryFormatter, który jest używany do serializacji
-                    i deserializacji obiektu. W kodzie, tworzymy plik binarny "osoba.bin", w którym zapisujemy
-                    zserializowany obiekt, a następnie odczytujemy go z pliku i deserializujemy, wyświetlamy jego wartości.
-                </p>
-            </div>
-            <div class="text-container purple-container">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Aby zserializować obiekt, trzeba oznaczyć jego klasę lub jego składowe atrybutami, które
-                określają jakie pola lub właściwości powinny być serializowane. Następnie, używając odpowiedniej
-                klasy, jak BinaryFormatter, XmlSerializer lub Newtonsoft.Json, można przekształcić obiekt w
-                postać binarną, XML lub JSON.
-            </p>
-        </div>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Deserializacja W Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                Deserializacja jest procesem odwrotnym do serializacji, polegającym na przekształceniu postaci
-                zserializowanej w obiekt programu. W języku C#, aby deserializować obiekt, należy użyć odpowiedniej
-                klasy, takiej jak BinaryFormatter, XmlSerializer lub Newtonsoft.Json, która jest używana do
-                serializacji obiektu.
-            </p>
-            <img src="/img/vector94.png" alt="">
-        </div>
-        <p class="text-container lightGreen-container no-margin-top article tooltip">
-            Przykład deserializacji obiektu z pliku <code><a href="#" pro-tip="">XML</a></code>
-            przy użyciu klasy <code><a href="#" pro-tip="">XmlSerializer</a></code>:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="double-elements">
+						<div class="text-container gray-container">
+								<img src="/img/warning.png" alt="">
+								<b>Wyjasnienie</b>
+								<p>
+										Ten przykład tworzy klasę "Osoba" z polami "Imie" i "Wiek", a następnie tworzy obiekt tej klasy
+										i ustawia jego pola. Następnie tworzy obiekt BinaryFormatter, który jest używany do serializacji
+										i deserializacji obiektu. W kodzie, tworzymy plik binarny "osoba.bin", w którym zapisujemy
+										zserializowany obiekt, a następnie odczytujemy go z pliku i deserializujemy, wyświetlamy jego wartości.
+								</p>
+						</div>
+						<div class="text-container purple-container">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Aby zserializować obiekt, trzeba oznaczyć jego klasę lub jego składowe atrybutami, które
+								określają jakie pola lub właściwości powinny być serializowane. Następnie, używając odpowiedniej
+								klasy, jak BinaryFormatter, XmlSerializer lub Newtonsoft.Json, można przekształcić obiekt w
+								postać binarną, XML lub JSON.
+						</p>
+				</div>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Deserializacja W Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								Deserializacja jest procesem odwrotnym do serializacji, polegającym na przekształceniu postaci
+								zserializowanej w obiekt programu. W języku C#, aby deserializować obiekt, należy użyć odpowiedniej
+								klasy, takiej jak BinaryFormatter, XmlSerializer lub Newtonsoft.Json, która jest używana do
+								serializacji obiektu.
+						</p>
+						<img src="/img/vector94.png" alt="">
+				</div>
+				<p class="text-container lightGreen-container no-margin-top article tooltip">
+						Przykład deserializacji obiektu z pliku <code><a href="#" pro-tip="">XML</a></code>
+						przy użyciu klasy <code><a href="#" pro-tip="">XmlSerializer</a></code>:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.IO;
 using System.Xml.Serialization;
@@ -150,42 +150,42 @@ using System.Xml.Serialization;
 [Serializable]
 public class Student
 {
-    public string Imie { get; set; }
-    public string Nazwisko { get; set; }
-    public int Wiek { get; set; }
-    public string Adres { get; set; }
+		public string Imie { get; set; }
+		public string Nazwisko { get; set; }
+		public int Wiek { get; set; }
+		public string Adres { get; set; }
 }
 
 class Program
 {
-    static void Main()
-    {
-        Student student = new Student
-        {
-            Imie = "Anna",
-            Nazwisko = "Nowak",
-            Wiek = 22,
-            Adres = "ul. Nowa 11"
-        };
+		static void Main()
+		{
+				Student student = new Student
+				{
+						Imie = "Anna",
+						Nazwisko = "Nowak",
+						Wiek = 22,
+						Adres = "ul. Nowa 11"
+				};
 
 
-        XmlSerializer serializer = new XmlSerializer(typeof(Student));
+				XmlSerializer serializer = new XmlSerializer(typeof(Student));
 
-        using (FileStream stream = new FileStream("student.xml", FileMode.Create))
-        {
-            serializer.Serialize(stream, student);
-        }
+				using (FileStream stream = new FileStream("student.xml", FileMode.Create))
+				{
+						serializer.Serialize(stream, student);
+				}
 
 
-        using (FileStream stream = new FileStream("student.xml", FileMode.Open))
-        {
-            Student deserializedStudent = (Student)serializer.Deserialize(stream);
-            Console.WriteLine("Imie: {0} \nNazwisko: {1} \nWiek: {2} \nAdres: {3}",
+				using (FileStream stream = new FileStream("student.xml", FileMode.Open))
+				{
+						Student deserializedStudent = (Student)serializer.Deserialize(stream);
+						Console.WriteLine("Imie: {0} \nNazwisko: {1} \nWiek: {2} \nAdres: {3}",
 
-                deserializedStudent.Imie, deserializedStudent.Nazwisko, deserializedStudent.Wiek,
-                    deserializedStudent.Adres);
-        }
-    }
+								deserializedStudent.Imie, deserializedStudent.Nazwisko, deserializedStudent.Wiek,
+										deserializedStudent.Adres);
+				}
+		}
 }
 
 
@@ -195,19 +195,19 @@ Imie: Anna
 Nazwisko: Nowak
 Wiek: 22
 Adres: ul. Nowa 11
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h2>Serializacja i Deserializacja</h2>
-        <p class="text-container lightGreen-container article tooltip">
-            Przykład użycia serializacji i deserializacji obiektów przy użyciu klasy
-            <code><a href="#" pro-tip="">JsonSerializer</a></code>
-            z biblioteki <code><a href="#" pro-tip="">Newtonsoft.Json</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h2>Serializacja i Deserializacja</h2>
+				<p class="text-container lightGreen-container article tooltip">
+						Przykład użycia serializacji i deserializacji obiektów przy użyciu klasy
+						<code><a href="#" pro-tip="">JsonSerializer</a></code>
+						z biblioteki <code><a href="#" pro-tip="">Newtonsoft.Json</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 using System.IO;
 using Newtonsoft.Json;
@@ -215,44 +215,44 @@ using Newtonsoft.Json;
 [Serializable]
 class Produkt
 {
-    public string Nazwa { get; set; }
-    public decimal Cena { get; set; }
-    public int Ilosc { get; set; }
+		public string Nazwa { get; set; }
+		public decimal Cena { get; set; }
+		public int Ilosc { get; set; }
 }
 
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Produkt produkt = new Produkt
-        {
-            Nazwa = "Jablko",
-            Cena = 2.99m,
-            Ilosc = 20
-        };
+		static void Main(string[] args)
+		{
+				Produkt produkt = new Produkt
+				{
+						Nazwa = "Jablko",
+						Cena = 2.99m,
+						Ilosc = 20
+				};
 
 
-        // Serializacja obiektu do ciągu JSON
-        string json = JsonConvert.SerializeObject(produkt);
+				// Serializacja obiektu do ciągu JSON
+				string json = JsonConvert.SerializeObject(produkt);
 
 
-        // Zapis ciągu JSON do pliku
-        File.WriteAllText("produkt.json", json);
+				// Zapis ciągu JSON do pliku
+				File.WriteAllText("produkt.json", json);
 
 
-        // Odczytanie ciągu JSON z pliku
-        string jsonZPliku = File.ReadAllText("produkt.json");
+				// Odczytanie ciągu JSON z pliku
+				string jsonZPliku = File.ReadAllText("produkt.json");
 
 
-        // Deserializacja ciągu JSON z powrotem do obiektu Produkt
-        Produkt deserializowanyProdukt = JsonConvert.DeserializeObject<Produkt>(jsonZPliku);
+				// Deserializacja ciągu JSON z powrotem do obiektu Produkt
+				Produkt deserializowanyProdukt = JsonConvert.DeserializeObject<Produkt>(jsonZPliku);
 
 
-        Console.WriteLine("Nazwa: " + deserializowanyProdukt.Nazwa);
-        Console.WriteLine("Cena: " + deserializowanyProdukt.Cena);
-        Console.WriteLine("Ilosc: " + deserializowanyProdukt.Ilosc);
-    }
+				Console.WriteLine("Nazwa: " + deserializowanyProdukt.Nazwa);
+				Console.WriteLine("Cena: " + deserializowanyProdukt.Cena);
+				Console.WriteLine("Ilosc: " + deserializowanyProdukt.Ilosc);
+		}
 }
 
 
@@ -261,14 +261,14 @@ class Program
 Nazwa: Jablko
 Cena: 2,99
 Ilosc: 20
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Asynchronicznosc.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Asynchronicznosc.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

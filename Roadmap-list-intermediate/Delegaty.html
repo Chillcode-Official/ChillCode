@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Delegaty</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Delegaty</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Atrybuty.html">Atrybuty</a></li>
-            <li><a href="Refleksja.html">Refleksja</a></li>
-            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
-            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
-            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
-            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
-            <li><a href="Indeksery.html">Indeksery</a></li>
-            <li><a href="Delegaty.html">Delegaty</a></li>
-            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Atrybuty.html">Atrybuty</a></li>
+						<li><a href="Refleksja.html">Refleksja</a></li>
+						<li><a href="Zdarzenia.html">Zdarzenia</a></li>
+						<li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+						<li><a href="Unsafe-code.html">Unsafe-code</a></li>
+						<li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+						<li><a href="Indeksery.html">Indeksery</a></li>
+						<li><a href="Delegaty.html">Delegaty</a></li>
+						<li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+						<li><a href="Podsumowanie.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Delegaty w Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                Delegaty w języku C# to specjalne rodzaje obiektów, które pozwalają na przechowywanie odwołań do metod.
-                Służą one do tworzenia kodu, który jest bardziej elastyczny i łatwiejszy do utrzymania.
-                Delegaty pozwalają na dynamiczne przypisywanie metod do zmiennych, co oznacza, że można
-                przypisać różne metody do tej samej zmiennej w różnych momentach programu. Delegaty są często
-                używane do implementowania zdarzeń i obsługi wywołań zwrotnych w programie.
-            </p>
-            <img src="/img/vector101.png" alt="">
-        </div>
-        <p class="text-container lightGreen-container article tooltip no-margin-top">
-            Aby zadeklarować delegata w języku C#, należy użyć słowa kluczowego <code><a href="#" pro-tip="">delegate</a></code> sekwencyjnie z
-            zestawem modyfikatorów dostępności, typem zwracanym, nazwą delegata i parametrami wejściowymi.
-        </p>
-        <div class="code-block">
-             <pre>
-                 <code>
+		<div class="content">
+				<h1>Delegaty w Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								Delegaty w języku C# to specjalne rodzaje obiektów, które pozwalają na przechowywanie odwołań do metod.
+								Służą one do tworzenia kodu, który jest bardziej elastyczny i łatwiejszy do utrzymania.
+								Delegaty pozwalają na dynamiczne przypisywanie metod do zmiennych, co oznacza, że można
+								przypisać różne metody do tej samej zmiennej w różnych momentach programu. Delegaty są często
+								używane do implementowania zdarzeń i obsługi wywołań zwrotnych w programie.
+						</p>
+						<img src="/img/vector101.png" alt="">
+				</div>
+				<p class="text-container lightGreen-container article tooltip no-margin-top">
+						Aby zadeklarować delegata w języku C#, należy użyć słowa kluczowego <code><a href="#" pro-tip="">delegate</a></code> sekwencyjnie z
+						zestawem modyfikatorów dostępności, typem zwracanym, nazwą delegata i parametrami wejściowymi.
+				</p>
+				<div class="code-block">
+ 						<pre>
+ 								<code>
 delegate int MyDelegate(int a, int b);
-                 </code>
-             </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Delegat może być również zdefiniowany jako anonimowy typ za pomocą wyrażenia
-            <code><a href="#" pro-tip="">lambda</a></code>
-        </p>
-        <div class="code-block">
-             <pre>
-                 <code>
+ 								</code>
+ 						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Delegat może być również zdefiniowany jako anonimowy typ za pomocą wyrażenia
+						<code><a href="#" pro-tip="">lambda</a></code>
+				</p>
+				<div class="code-block">
+ 						<pre>
+ 								<code>
 Func&ltint, int, int&gt myDelegate = (a, b) => a + b;
-                 </code>
-             </pre>
-        </div>
-        <p class="text-container lightGreen-container article tooltip">
-            Delegaty są to obiekty, które reprezentują metody w języku C#. Można je używać do przekazywania metod
-            jako parametry do innych <code><a href="#" pro-tip="">metod</a></code> lub do tworzenia <code><a href="#" pro-tip="">zdarzeń</a></code>. Poniżej znajduje się przykład użycia delegatów:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+ 								</code>
+ 						</pre>
+				</div>
+				<p class="text-container lightGreen-container article tooltip">
+						Delegaty są to obiekty, które reprezentują metody w języku C#. Można je używać do przekazywania metod
+						jako parametry do innych <code><a href="#" pro-tip="">metod</a></code> lub do tworzenia <code><a href="#" pro-tip="">zdarzeń</a></code>. Poniżej znajduje się przykład użycia delegatów:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 // Definiujemy delegat, który reprezentuje metodę z jednym parametrem typu int i zwracającą void
@@ -88,149 +88,149 @@ delegate void MyDelegate(int value);
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        // Tworzymy instancję delegata i przypisujemy do niej metodę "MyMethod"
-        MyDelegate del = MyMethod;
+		static void Main(string[] args)
+		{
+				// Tworzymy instancję delegata i przypisujemy do niej metodę "MyMethod"
+				MyDelegate del = MyMethod;
 
 
-        // Wywołujemy metodę przez delegata
-        del(5); // wyświetli "Wartość: 5"
-    }
+				// Wywołujemy metodę przez delegata
+				del(5); // wyświetli "Wartość: 5"
+		}
 
 
-    static void MyMethod(int value)
-    {
-        Console.WriteLine("Wartość: " + value);
-    }
+		static void MyMethod(int value)
+		{
+				Console.WriteLine("Wartość: " + value);
+		}
 }
 
 
 //output: 5
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Instancja Delegata</h1>
-        <div class="section-with-image">
-            <p>
-                Instancja delegata to konkretna, utworzona w danym momencie, egzemplarz delegata. Jest to obiekt,
-                który zawiera odwołanie do metody (lub metod złożonego delegata) i może być przypisany do zmiennej.
-                Instancja delegata jest tworzona poprzez przypisanie odwołania do metody do zmiennej typu delegata.
-            </p>
-            <img src="/img/vector96.png" alt="">
-        </div>
-        <p class="text-container article tooltip">
-            Przypisanie nazwy <code><a href="#" pro-tip="">metody</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Instancja Delegata</h1>
+				<div class="section-with-image">
+						<p>
+								Instancja delegata to konkretna, utworzona w danym momencie, egzemplarz delegata. Jest to obiekt,
+								który zawiera odwołanie do metody (lub metod złożonego delegata) i może być przypisany do zmiennej.
+								Instancja delegata jest tworzona poprzez przypisanie odwołania do metody do zmiennej typu delegata.
+						</p>
+						<img src="/img/vector96.png" alt="">
+				</div>
+				<p class="text-container article tooltip">
+						Przypisanie nazwy <code><a href="#" pro-tip="">metody</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 MyDelegate myDelegate = MyMethod;
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Przypisanie wyrażenia <code><a href="#" pro-tip="">lambda</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Przypisanie wyrażenia <code><a href="#" pro-tip="">lambda</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 MyDelegate myDelegate = (a, b) => a + b;
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Użycie instrukcji <code><a href="#" pro-tip="">new</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Użycie instrukcji <code><a href="#" pro-tip="">new</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 MyDelegate myDelegate = new MyDelegate(MyMethod);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Aby <code><a href="#" pro-tip="">wywołać</a></code> metodę przypisaną do delegata, można
-            użyć operatora wywołania <code><a href="#" pro-tip="">()</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Aby <code><a href="#" pro-tip="">wywołać</a></code> metodę przypisaną do delegata, można
+						użyć operatora wywołania <code><a href="#" pro-tip="">()</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int result = myDelegate(5, 3);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container article tooltip">
-            Przykład użycia instancji <code><a href="#" pro-tip="">delegata</a></code>, w którym tworzymy klasę "Calculator" z metodami do wykonywania podstawowych
-            operacji matematycznych
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container article tooltip">
+						Przykład użycia instancji <code><a href="#" pro-tip="">delegata</a></code>, w którym tworzymy klasę "Calculator" z metodami do wykonywania podstawowych
+						operacji matematycznych
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class Calculator
 {
-    public int Add(int a, int b)
-    {
-        return a + b;
-    }
+		public int Add(int a, int b)
+		{
+				return a + b;
+		}
 
-    public int Subtract(int a, int b)
-    {
-        return a - b;
-    }
+		public int Subtract(int a, int b)
+		{
+				return a - b;
+		}
 
-    public int Multiply(int a, int b)
-    {
-        return a * b;
-    }
+		public int Multiply(int a, int b)
+		{
+				return a * b;
+		}
 
-    public int Divide(int a, int b)
-    {
-        return a / b;
-    }
+		public int Divide(int a, int b)
+		{
+				return a / b;
+		}
 }
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Calculator calculator = new Calculator();
-        Func&ltint, int, int&gt operation;
+		static void Main(string[] args)
+		{
+				Calculator calculator = new Calculator();
+				Func&ltint, int, int&gt operation;
 
-        Console.WriteLine("Choose an operation (1-Add, 2-Subtract, 3-Multiply, 4-Divide):");
-        int choice = int.Parse(Console.ReadLine());
+				Console.WriteLine("Choose an operation (1-Add, 2-Subtract, 3-Multiply, 4-Divide):");
+				int choice = int.Parse(Console.ReadLine());
 
-        switch (choice)
-        {
-            case 1:
-                operation = new Func&ltint, int, int&gt(calculator.Add);
-                break;
-            case 2:
-                operation = new Func&ltint, int, int&gt(calculator.Subtract);
-                break;
-            case 3:
-                operation = new Func&ltint, int, int&gt(calculator.Multiply);
-                break;
-            case 4:
-                operation = new Func&ltint, int, int&gt(calculator.Divide);
-                break;
-            default:
-                Console.WriteLine("Invalid choice.");
-                return;
-        }
+				switch (choice)
+				{
+						case 1:
+								operation = new Func&ltint, int, int&gt(calculator.Add);
+								break;
+						case 2:
+								operation = new Func&ltint, int, int&gt(calculator.Subtract);
+								break;
+						case 3:
+								operation = new Func&ltint, int, int&gt(calculator.Multiply);
+								break;
+						case 4:
+								operation = new Func&ltint, int, int&gt(calculator.Divide);
+								break;
+						default:
+								Console.WriteLine("Invalid choice.");
+								return;
+				}
 
-        Console.WriteLine("\nEnter two numbers:");
-        int num1 = int.Parse(Console.ReadLine());
-        int num2 = int.Parse(Console.ReadLine());
+				Console.WriteLine("\nEnter two numbers:");
+				int num1 = int.Parse(Console.ReadLine());
+				int num2 = int.Parse(Console.ReadLine());
 
-        int result = operation(num1, num2);
-        Console.WriteLine("\nResult: " + result);
+				int result = operation(num1, num2);
+				Console.WriteLine("\nResult: " + result);
 
-        Console.ReadKey();
-    }
+				Console.ReadKey();
+		}
 }
 
 
@@ -245,25 +245,25 @@ Enter two numbers:
 
 Result: 4
 
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Delegaty Złożone</h1>
-        <div class="section-with-image">
-            <p>
-                Delegaty złożone to delegaty, które mogą przechowywać odwołanie do wielu metod jednocześnie.
-                Służą one do łączenia kilku metod w jeden delegat, co pozwala na dynamiczne dodawanie i usuwanie
-                metod do wywołania.
-            </p>
-            <img src="/img/vector82.png" alt="">
-        </div>
-        <p class="text-container white-container no-margin-top">
-            Aby utworzyć delegata złożonego, można użyć operatorów + i -
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Delegaty Złożone</h1>
+				<div class="section-with-image">
+						<p>
+								Delegaty złożone to delegaty, które mogą przechowywać odwołanie do wielu metod jednocześnie.
+								Służą one do łączenia kilku metod w jeden delegat, co pozwala na dynamiczne dodawanie i usuwanie
+								metod do wywołania.
+						</p>
+						<img src="/img/vector82.png" alt="">
+				</div>
+				<p class="text-container white-container no-margin-top">
+						Aby utworzyć delegata złożonego, można użyć operatorów + i -
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 /*w tym przypadku d3 jest delegatem złożonym, który przechowuje odwołanie do metod MyMethod1 i MyMethod2.*/
 
 MyDelegate d1 = MyMethod1;
@@ -271,103 +271,103 @@ MyDelegate d1 = MyMethod1;
 MyDelegate d2 = MyMethod2;
 
 MyDelegate d3 = d1 + d2;
-                </code>
-            </pre>
-        </div>
-        <p class="text-container white-container no-margin-top">
-            Aby usunąć odwołanie do metody z delegata złożonego, można użyć operatora
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container white-container no-margin-top">
+						Aby usunąć odwołanie do metody z delegata złożonego, można użyć operatora
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 /*W tym przypadku d4 jest delegatem złożonym, który przechowuje tylko odwołanie do metody MyMethod2.*/
 
 MyDelegate d4 = d3 - MyMethod1;
-                </code>
-            </pre>
-        </div>
-        <p class="text-container white-container no-margin-top">
-            Aby wywołać metody przypisane do delegata złożonego, należy użyć operatora wywołania ()
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container white-container no-margin-top">
+						Aby wywołać metody przypisane do delegata złożonego, należy użyć operatora wywołania ()
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 //wywołanie obu metod MyMethod1 i MyMethod2 z parametrami 2 i 3.
 
 d3(2, 3);
-                </code>
-            </pre>
-        </div>
-        <p class="text-container white-container no-margin-top">
-            Przykład użycia delegatów złożonych, w którym tworzymy klasę "Logger" z kilkoma metodami
-            do wyświetlania błedów, a następnie tworzymy delegata złożonego, który przechowuje odwołanie do wielu metod
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container white-container no-margin-top">
+						Przykład użycia delegatów złożonych, w którym tworzymy klasę "Logger" z kilkoma metodami
+						do wyświetlania błedów, a następnie tworzymy delegata złożonego, który przechowuje odwołanie do wielu metod
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class Logger
 {
-    // metoda do logowania błędów
-    public void LogError(string message)
-    {
-        Console.WriteLine("Error: " + message);
-    }
+		// metoda do logowania błędów
+		public void LogError(string message)
+		{
+				Console.WriteLine("Error: " + message);
+		}
 
 
-    // metoda do logowania ostrzeżeń
-    public void LogWarning(string message)
-    {
-        Console.WriteLine("Warning: " + message);
-    }
+		// metoda do logowania ostrzeżeń
+		public void LogWarning(string message)
+		{
+				Console.WriteLine("Warning: " + message);
+		}
 
 
-    // metoda do logowania informacji
-    public void LogInfo(string message)
-    {
-        Console.WriteLine("Info: " + message);
-    }
+		// metoda do logowania informacji
+		public void LogInfo(string message)
+		{
+				Console.WriteLine("Info: " + message);
+		}
 }
 
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Logger logger = new Logger();
-        Action&ltstring&gt logDelegate = null; // początkowo pusty delegat
+		static void Main(string[] args)
+		{
+				Logger logger = new Logger();
+				Action&ltstring&gt logDelegate = null; // początkowo pusty delegat
 
 
-        Console.WriteLine("Wybierz typ logowania (1-Error, 2-Warning, 3-Info):");
-        int choice = int.Parse(Console.ReadLine());
+				Console.WriteLine("Wybierz typ logowania (1-Error, 2-Warning, 3-Info):");
+				int choice = int.Parse(Console.ReadLine());
 
 
-        switch (choice)
-        {
-            case 1:
-                logDelegate += logger.LogError; // dodaj logowanie błędów
-                break;
-            case 2:
-                logDelegate += logger.LogWarning; // dodaj logowanie ostrzeżeń
-                break;
-            case 3:
-                logDelegate += logger.LogInfo; // dodaj logowanie informacji
-                break;
-            default:
-                Console.WriteLine("Niepoprawny wybór.");
-                return;
-        }
+				switch (choice)
+				{
+						case 1:
+								logDelegate += logger.LogError; // dodaj logowanie błędów
+								break;
+						case 2:
+								logDelegate += logger.LogWarning; // dodaj logowanie ostrzeżeń
+								break;
+						case 3:
+								logDelegate += logger.LogInfo; // dodaj logowanie informacji
+								break;
+						default:
+								Console.WriteLine("Niepoprawny wybór.");
+								return;
+				}
 
 
-        Console.WriteLine("\nWprowadź wiadomość do zalogowania:");
-        string message = Console.ReadLine();
-        Console.WriteLine("");
+				Console.WriteLine("\nWprowadź wiadomość do zalogowania:");
+				string message = Console.ReadLine();
+				Console.WriteLine("");
 
-        logDelegate(message); // zaloguj wiadomość przy użyciu delegata
+				logDelegate(message); // zaloguj wiadomość przy użyciu delegata
 
-        Console.ReadKey();
-    }
+				Console.ReadKey();
+		}
 }
 
 
@@ -380,21 +380,21 @@ Wprowadź wiadomość d zalogowania:
 404
 
 Error: 404
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card ">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Delegaty złożone pozwalają na dynamiczne dodawanie i usuwanie metod do wywołania, co jest przydatne
-                w przypadku programowania zdarzeń i obsługi wywołań zwrotnych.
-            </p>
-        </div>
-        <div class="btn">
-            <a href="Wielowątkowość.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card ">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Delegaty złożone pozwalają na dynamiczne dodawanie i usuwanie metod do wywołania, co jest przydatne
+								w przypadku programowania zdarzeń i obsługi wywołań zwrotnych.
+						</p>
+				</div>
+				<div class="btn">
+						<a href="Wielowątkowość.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

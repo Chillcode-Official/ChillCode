@@ -1,131 +1,131 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Właściwości-Abstrakcyjne</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Właściwości-Abstrakcyjne</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Atrybuty.html">Atrybuty</a></li>
-            <li><a href="Refleksja.html">Refleksja</a></li>
-            <li><a href="Zdarzenia.html">Zdarzenia</a></li>
-            <li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
-            <li><a href="Unsafe-code.html">Unsafe-code</a></li>
-            <li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
-            <li><a href="Indeksery.html">Indeksery</a></li>
-            <li><a href="Delegaty.html">Delegaty</a></li>
-            <li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
-            <li><a href="Podsumowanie.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Atrybuty.html">Atrybuty</a></li>
+						<li><a href="Refleksja.html">Refleksja</a></li>
+						<li><a href="Zdarzenia.html">Zdarzenia</a></li>
+						<li><a href="Metody-anonimowe.html">Metody-anonimowe</a></li>
+						<li><a href="Unsafe-code.html">Unsafe-code</a></li>
+						<li><a href="Wlasciwosci-abstrakcyjne.html">Właściwości-abstrakcyjne</a> </li>
+						<li><a href="Indeksery.html">Indeksery</a></li>
+						<li><a href="Delegaty.html">Delegaty</a></li>
+						<li><a href="Wielowątkowość.html">Wielowątkowość</a></li>
+						<li><a href="Podsumowanie.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Właściwości Abstrakcyje W Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                Abstrakcja jest mechanizmem pozwalającym na oddzielenie logiki i implementacji od interfejsu.
-                W języku C#, abstrakcję możemy osiągnąć poprzez użycie klas abstrakcyjnych i interfejsów.
-                Klasy abstrakcyjne są klasami, które nie mogą być bezpośrednio tworzone, a jedynie dziedziczone.
-                Mogą zawierać metody i pola abstrakcyjne, które muszą zostać zaimplementowane przez klasy pochodne.
-                Interfejsy z kolei zawierają tylko deklaracje metod, które muszą zostać zaimplementowane przez klasy
-                lub struktury, które je implementują.
-            </p>
-            <img src="/img/vector90.png" alt="">
-        </div>
-        <p class="text-container orange-container">
-            Abstrakcja pozwala na skupienie się na interfejsie i logice klas, a nie na ich implementacji,
-            co ułatwia programowanie i utrzymanie kodu.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<h1>Właściwości Abstrakcyje W Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								Abstrakcja jest mechanizmem pozwalającym na oddzielenie logiki i implementacji od interfejsu.
+								W języku C#, abstrakcję możemy osiągnąć poprzez użycie klas abstrakcyjnych i interfejsów.
+								Klasy abstrakcyjne są klasami, które nie mogą być bezpośrednio tworzone, a jedynie dziedziczone.
+								Mogą zawierać metody i pola abstrakcyjne, które muszą zostać zaimplementowane przez klasy pochodne.
+								Interfejsy z kolei zawierają tylko deklaracje metod, które muszą zostać zaimplementowane przez klasy
+								lub struktury, które je implementują.
+						</p>
+						<img src="/img/vector90.png" alt="">
+				</div>
+				<p class="text-container orange-container">
+						Abstrakcja pozwala na skupienie się na interfejsie i logice klas, a nie na ich implementacji,
+						co ułatwia programowanie i utrzymanie kodu.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Figura kwadrat = new Kwadrat(5);
+		static void Main(string[] args)
+		{
+				Figura kwadrat = new Kwadrat(5);
 
-        Console.WriteLine("Pole kwadratu: " + kwadrat.ObliczPole());
-        Console.WriteLine("Obwód kwadratu: " + kwadrat.ObliczObwod() + "\n");
+				Console.WriteLine("Pole kwadratu: " + kwadrat.ObliczPole());
+				Console.WriteLine("Obwód kwadratu: " + kwadrat.ObliczObwod() + "\n");
 
 
-        Figura kolo = new Kolo(2);
+				Figura kolo = new Kolo(2);
 
-        Console.WriteLine("Pole koła: " + kolo.ObliczPole());
-        Console.WriteLine("Obwód koła: " + kolo.ObliczObwod());
-    }
+				Console.WriteLine("Pole koła: " + kolo.ObliczPole());
+				Console.WriteLine("Obwód koła: " + kolo.ObliczObwod());
+		}
 }
 
 
 public abstract class Figura
 {
-    public abstract double ObliczPole();
+		public abstract double ObliczPole();
 
-    public abstract double ObliczObwod();
+		public abstract double ObliczObwod();
 }
 
 
 public class Kwadrat : Figura
 {
-    private double bok;
+		private double bok;
 
-    public Kwadrat(double bok)
-    {
-        this.bok = bok;
-    }
+		public Kwadrat(double bok)
+		{
+				this.bok = bok;
+		}
 
-    public override double ObliczPole()
-    {
-        return bok * bok;
-    }
+		public override double ObliczPole()
+		{
+				return bok * bok;
+		}
 
-    public override double ObliczObwod()
-    {
-        return 4 * bok;
-    }
+		public override double ObliczObwod()
+		{
+				return 4 * bok;
+		}
 }
 
 
 public class Kolo : Figura
 {
-    private double promien;
+		private double promien;
 
-    public Kolo(double promien)
-    {
-        this.promien = promien;
-    }
+		public Kolo(double promien)
+		{
+				this.promien = promien;
+		}
 
-    public override double ObliczPole()
-    {
-        return Math.PI * promien * promien;
-    }
+		public override double ObliczPole()
+		{
+				return Math.PI * promien * promien;
+		}
 
-    public override double ObliczObwod()
-    {
-        return 2 * Math.PI * promien;
-    }
+		public override double ObliczObwod()
+		{
+				return 2 * Math.PI * promien;
+		}
 }
 
 
@@ -137,99 +137,99 @@ Obwód kwadratu: 20
 Pole koła: 12,5663706143592
 Obwód koła: 12,5663706143592
 
-                </code>
-            </pre>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Akcesory</h1>
-        <div class="section-with-image">
-            <p>
-                Akcesory w języku C# to specjalne metody, które pozwalają na dostęp do prywatnych pola klas.
-                Służą one do odczytu i zapisu wartości pola.
-            </p>
-            <img src="/img/vector45.png" alt="">
-        </div>
-        <p class="text-container lightPink-container article tooltip no-margin-top">
-            Akcesory są zdefiniowane przy użyciu słów kluczowych <code><a href="#" pro-tip="">get</a></code> oraz
-            <code><a href="#" pro-tip="">set</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Akcesory</h1>
+				<div class="section-with-image">
+						<p>
+								Akcesory w języku C# to specjalne metody, które pozwalają na dostęp do prywatnych pola klas.
+								Służą one do odczytu i zapisu wartości pola.
+						</p>
+						<img src="/img/vector45.png" alt="">
+				</div>
+				<p class="text-container lightPink-container article tooltip no-margin-top">
+						Akcesory są zdefiniowane przy użyciu słów kluczowych <code><a href="#" pro-tip="">get</a></code> oraz
+						<code><a href="#" pro-tip="">set</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 class Przyklad {
 
-    private int _pole;
+		private int _pole;
 
-    public int Pole
-    {
-        get { return _pole; }
-        set { _pole = value; }
-    }
+		public int Pole
+		{
+				get { return _pole; }
+				set { _pole = value; }
+		}
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightPink-container">
-            Przykład użycia akcesorów w programie wywołującym dane samochodu
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightPink-container">
+						Przykład użycia akcesorów w programie wywołującym dane samochodu
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Samochod samochod = new Samochod();
-        samochod.Marka = "Ford";
-        samochod.Model = "Mustang";
-        samochod.Przebieg = 1200;
+		static void Main(string[] args)
+		{
+				Samochod samochod = new Samochod();
+				samochod.Marka = "Ford";
+				samochod.Model = "Mustang";
+				samochod.Przebieg = 1200;
 
 
-        Console.WriteLine("Marka: " + samochod.Marka);
-        Console.WriteLine("Model: " + samochod.Model);
-        Console.WriteLine("Przebieg: " + samochod.Przebieg + " km");
+				Console.WriteLine("Marka: " + samochod.Marka);
+				Console.WriteLine("Model: " + samochod.Model);
+				Console.WriteLine("Przebieg: " + samochod.Przebieg + " km");
 
 
-        samochod.Jedz();
-        Console.WriteLine("Przebieg po jednej jedzie: " + samochod.Przebieg + " km");
-    }
+				samochod.Jedz();
+				Console.WriteLine("Przebieg po jednej jedzie: " + samochod.Przebieg + " km");
+		}
 }
 
 
 class Samochod
 {
-    private string _marka;
-    private string _model;
-    private int _przebieg;
+		private string _marka;
+		private string _model;
+		private int _przebieg;
 
 
-    public string Marka
-    {
-        get { return _marka; }
-        set { _marka = value; }
-    }
+		public string Marka
+		{
+				get { return _marka; }
+				set { _marka = value; }
+		}
 
 
-    public string Model
-    {
-        get { return _model; }
-        set { _model = value; }
-    }
+		public string Model
+		{
+				get { return _model; }
+				set { _model = value; }
+		}
 
 
-    public int Przebieg
-    {
-        get { return _przebieg; }
-        set { _przebieg = value; }
-    }
+		public int Przebieg
+		{
+				get { return _przebieg; }
+				set { _przebieg = value; }
+		}
 
 
-    public void Jedz()
-    {
-        _przebieg += 5;
-    }
+		public void Jedz()
+		{
+				_przebieg += 5;
+		}
 }
 
 
@@ -239,22 +239,22 @@ Marka: Ford
 Model: Mustang
 Przebieg: 1200 km
 Przebieg po jednej jedzie: 1205 km
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Akcesory pozwalają nam na zabezpieczenie prywatnych pól przed nieprawidłowym dostępem, a
-                także pozwalają na kontrolowanie i walidację wartości, które mogą być przypisane do pól.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Indeksery.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Akcesory pozwalają nam na zabezpieczenie prywatnych pól przed nieprawidłowym dostępem, a
+								także pozwalają na kontrolowanie i walidację wartości, które mogą być przypisane do pól.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Indeksery.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

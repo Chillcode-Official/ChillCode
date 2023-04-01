@@ -1,30 +1,30 @@
 /*FormatTed Text Elements*/
 .formatted-text {
-    font-size: 18px;
-    font-family: "Arial Black", sans-serif;
-    color: purple;
-    text-align: justify;
-    text-decoration: underline;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    word-spacing: 10px;
+		font-size: 18px;
+		font-family: "Arial Black", sans-serif;
+		color: purple;
+		text-align: justify;
+		text-decoration: underline;
+		line-height: 1.5;
+		letter-spacing: 2px;
+		word-spacing: 10px;
 }
 .font-table table{
-    border-collapse: collapse;
-    width: 100%;
-    margin: auto;
+		border-collapse: collapse;
+		width: 100%;
+		margin: auto;
 }
 .font-table th, td{
-    border: 1px solid black;
-    padding: 20px;
-    text-align: center;
+		border: 1px solid black;
+		padding: 20px;
+		text-align: center;
 }
 .font-table th{
-    background-color: #484242;
-    color: #a49999;
+		background-color: #484242;
+		color: #a49999;
 }
 .font-table td{
-    font-size: 18px;
-    color: black;
-    background-color: #ccc7c7;
+		font-size: 18px;
+		color: black;
+		background-color: #ccc7c7;
 }

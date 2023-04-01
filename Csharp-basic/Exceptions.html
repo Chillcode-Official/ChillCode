@@ -1,468 +1,468 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <title>Wyjątki C#</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Wyjątki C#</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a> </li>
-            <li><a href="Comments.html">Komentarze</a> </li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Fields.html">Pola</a></li>
-            <li><a href="Properties.html">Właściwości</a></li>
-            <li><a href="Constant.html">Stałe</a></li>
-            <li><a href="Methods.html">Metody</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Collections.html">Kolekcje</a></li>
-            <li><a href="Classes.html">Klasy</a></li>
-            <li><a href="Inheritance.html">Dziedziczenie</a></li>
-            <li><a href="Polymorphism.html">Polimorfizm</a></li>
-            <li><a href="Type_conversion.html">Konwersja typów</a></li>
-            <li><a href="String_types.html">Typy łańcuchowe</a></li>
-            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
-            <li><a href="Interfaces.html">Interfejsy</a></li>
-            <li><a href="Static_classes.html">Klasy statyczne</a></li>
-            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
-            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
-            <li><a href="Exceptions.html">Wyjątki</a></li>
-            <li><a href="Generic_types.html">Typy generyczne</a></li>
-            <li><a href="JSON.html">JSON</a></li>
-            <li><a href="XML.html">XML</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a> </li>
+						<li><a href="Comments.html">Komentarze</a> </li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Fields.html">Pola</a></li>
+						<li><a href="Properties.html">Właściwości</a></li>
+						<li><a href="Constant.html">Stałe</a></li>
+						<li><a href="Methods.html">Metody</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Collections.html">Kolekcje</a></li>
+						<li><a href="Classes.html">Klasy</a></li>
+						<li><a href="Inheritance.html">Dziedziczenie</a></li>
+						<li><a href="Polymorphism.html">Polimorfizm</a></li>
+						<li><a href="Type_conversion.html">Konwersja typów</a></li>
+						<li><a href="String_types.html">Typy łańcuchowe</a></li>
+						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+						<li><a href="Interfaces.html">Interfejsy</a></li>
+						<li><a href="Static_classes.html">Klasy statyczne</a></li>
+						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+						<li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+						<li><a href="Exceptions.html">Wyjątki</a></li>
+						<li><a href="Generic_types.html">Typy generyczne</a></li>
+						<li><a href="JSON.html">JSON</a></li>
+						<li><a href="XML.html">XML</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Wyjątki W Języku C#</h1>
-        <div class="section-with-image">
-            <p>
-                W języku C#, wyjątek (ang. exception) to obiekt reprezentujący błąd, który może wystąpić
-                podczas wykonywania kodu. Można je rzucić (ang. throw) i obsłużyć (ang. catch), aby zapobiec
-                zatrzymaniu programu i umożliwić jego dalsze działanie. Wbudowane klasy wyjątków w C#
-                obejmują m.in. ArgumentException, IndexOutOfRangeException i DivideByZeroException. Można
-                też tworzyć własne klasy wyjątków dziedziczące po Exception.
-            </p>
-            <img src="/img/vector54.png" alt="">
-        </div>
-        <p class="text-container gray-container article tooltip no-margin-top">
-            W C# wyjątki są obsługiwane za pomocą czterech słów kluczowych: <code><a href="#" pro-tip="oznacza blok kodu, w którym mogą wystąpić wyjątki. Jeśli wyjątek zostanie rzucony wewnątrz bloku try, to zostanie on przechwycony przez odpowiedni blok catch.">try</a></code>
-            <code><a href="#" pro-tip="oznacza blok kodu, który jest uruchamiany, gdy wyjątek zostanie rzucony wewnątrz bloku try. Można użyć kilku bloków catch do obsługi różnych typów wyjątków. W bloku catch można uzyskać dostęp do obiektu wyjątku, aby uzyskać więcej informacji o błędzie.">catch</a></code>
-            <code><a href="#" pro-tip="oznacza blok kodu, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie. Jest to przydatne do zwalniania zasobów lub do innych czynności, które zawsze powinny być wykonane, niezależnie od tego, czy wystąpił błąd czy nie.">finally</a></code>
-            <code><a href="#" pro-tip="oznacza słowo kluczowe, które jest używane do rzucenia wyjątku. Można rzucić wyjątek przez utworzenie nowego obiektu klasy wyjątku i podanie go jako argument do throw.">throw</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<h1>Wyjątki W Języku C#</h1>
+				<div class="section-with-image">
+						<p>
+								W języku C#, wyjątek (ang. exception) to obiekt reprezentujący błąd, który może wystąpić
+								podczas wykonywania kodu. Można je rzucić (ang. throw) i obsłużyć (ang. catch), aby zapobiec
+								zatrzymaniu programu i umożliwić jego dalsze działanie. Wbudowane klasy wyjątków w C#
+								obejmują m.in. ArgumentException, IndexOutOfRangeException i DivideByZeroException. Można
+								też tworzyć własne klasy wyjątków dziedziczące po Exception.
+						</p>
+						<img src="/img/vector54.png" alt="">
+				</div>
+				<p class="text-container gray-container article tooltip no-margin-top">
+						W C# wyjątki są obsługiwane za pomocą czterech słów kluczowych: <code><a href="#" pro-tip="oznacza blok kodu, w którym mogą wystąpić wyjątki. Jeśli wyjątek zostanie rzucony wewnątrz bloku try, to zostanie on przechwycony przez odpowiedni blok catch.">try</a></code>
+						<code><a href="#" pro-tip="oznacza blok kodu, który jest uruchamiany, gdy wyjątek zostanie rzucony wewnątrz bloku try. Można użyć kilku bloków catch do obsługi różnych typów wyjątków. W bloku catch można uzyskać dostęp do obiektu wyjątku, aby uzyskać więcej informacji o błędzie.">catch</a></code>
+						<code><a href="#" pro-tip="oznacza blok kodu, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie. Jest to przydatne do zwalniania zasobów lub do innych czynności, które zawsze powinny być wykonane, niezależnie od tego, czy wystąpił błąd czy nie.">finally</a></code>
+						<code><a href="#" pro-tip="oznacza słowo kluczowe, które jest używane do rzucenia wyjątku. Można rzucić wyjątek przez utworzenie nowego obiektu klasy wyjątku i podanie go jako argument do throw.">throw</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 try
 {
-    // Kod, w którym mogą wystąpić wyjątki
+		// Kod, w którym mogą wystąpić wyjątki
 }
 
 catch (TypWyjatku nazwaZmiennej)
 {
-    // Kod, który jest wykonywany, gdy wystąpi wyjątek typu TypWyjatku
+		// Kod, który jest wykonywany, gdy wystąpi wyjątek typu TypWyjatku
 }
 
 catch (InnyTypWyjatku nazwaZmiennej)
 {
-    // Kod, który jest wykonywany, gdy wystąpi wyjątek typu InnyTypWyjatku
+		// Kod, który jest wykonywany, gdy wystąpi wyjątek typu InnyTypWyjatku
 }
 
 finally
 {
-    // Kod, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie
+		// Kod, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container">
-            Można rzucić wyjątek za pomocą słowa kluczowego "throw".
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container">
+						Można rzucić wyjątek za pomocą słowa kluczowego "throw".
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 throw new Exception("Mój wyjątek");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container">
-            Jeśli chcesz rzucić wyjątek, który jest już zmienną, to można to zrobić przez po prostu użycie throw bez argumentów.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container">
+						Jeśli chcesz rzucić wyjątek, który jest już zmienną, to można to zrobić przez po prostu użycie throw bez argumentów.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Exception e = new Exception("Mój wyjątek");
 throw e;
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container">
-            Można też rzucić wyjątek jako odpowiedź na konkretny warunek.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container">
+						Można też rzucić wyjątek jako odpowiedź na konkretny warunek.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 if (age < 0)
 {
-    throw new ArgumentException("Wiek nie może być ujemny");
+		throw new ArgumentException("Wiek nie może być ujemny");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p class="article tooltip">
-                Oto kilka przykładów predefiniowanych wyjątków pochodzących z klasy <code><a href="#" pro-tip="">System.SystemException</a></code>
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy argument jest nieprawidłowy.">ArgumentException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p class="article tooltip">
+								Oto kilka przykładów predefiniowanych wyjątków pochodzących z klasy <code><a href="#" pro-tip="">System.SystemException</a></code>
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy argument jest nieprawidłowy.">ArgumentException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 string name = null;
 
 if (name == null)
 {
-    throw new ArgumentException("Nazwa nie może być null");
+		throw new ArgumentException("Nazwa nie może być null");
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy odwołanie do obiektu jest null.">NullReferenceException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy odwołanie do obiektu jest null.">NullReferenceException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 MyClass myObj = null;
 
 myObj.DoSomething(); // Wyświetli NullReferenceException
 
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy brakuje pamięci, aby utworzyć nowy obiekt.">OutOfMemoryException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy brakuje pamięci, aby utworzyć nowy obiekt.">OutOfMemoryException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 List&ltint&gt list = new List&ltint&gt();
 
 while (true)
 {
-    list.Add(1); // Wyświetli OutOfMemoryException po pewnym czasie
+		list.Add(1); // Wyświetli OutOfMemoryException po pewnym czasie
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy stos jest przepełniony, na przykład w przypadku rekursji bez końca.">StackOverflowException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy stos jest przepełniony, na przykład w przypadku rekursji bez końca.">StackOverflowException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 void RecursiveMethod()
 {
-    RecursiveMethod(); // Wyświetli StackOverflowException
+		RecursiveMethod(); // Wyświetli StackOverflowException
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy indeks jest poza zakresem tablicy lub kolekcji.">IndexOutOfRangeException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy indeks jest poza zakresem tablicy lub kolekcji.">IndexOutOfRangeException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int[] array = new int[5];
 
 array[10] = 1; // Wyświetli IndexOutOfRangeException
 
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy operacja jest nieprawidłowa w danej sytuacji.">InvalidOperationException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy operacja jest nieprawidłowa w danej sytuacji.">InvalidOperationException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 Queue&ltint&gt queue = new Queue&ltint&gt();
 
 queue.Dequeue(); // Wyświetli InvalidOperationException, ponieważ kolejka jest pusta
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy próbuje się przypisać element do tablicy innego typu.">ArrayTypeMismatchException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy próbuje się przypisać element do tablicy innego typu.">ArrayTypeMismatchException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 object[] array = new string[5];
 
 array[0] = 5; // Wyświetli ArrayTypeMismatchException, ponieważ przypisuje się liczbę do tablicy typu string
 
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi błąd arytmetyczny, taki jak dzielenie przez zero.">ArithmeticException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi błąd arytmetyczny, taki jak dzielenie przez zero.">ArithmeticException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int result = 5 / 0; // Wyświetli ArithmeticException
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi przepełnienie lub podpełnienie. ">OverflowException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi przepełnienie lub podpełnienie. ">OverflowException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int max = int.MaxValue;
 
 int result = max + 1; // Wyświetli OverflowException
-                </code>
-            </pre>
-        </div>
-        <p class="text-container gray-container article tooltip">
-            Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy format danych jest niepoprawny.">FormatException</a></code>
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container gray-container article tooltip">
+						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy format danych jest niepoprawny.">FormatException</a></code>
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 int.Parse("abc"); // Wyświetli FormatException
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Te przykłady pokazują, że istnieje wiele różnych wyjątków, które mogą być rzucane przez runtime
-                w różnych sytuacjach. Programiści powinni być świadomi tych wyjątków i być w stanie je obsłużyć,
-                aby uniknąć zatrzymania programu.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Obsługa Wyjątków</h1>
-        <div class="section-with-image">
-            <p>
-                Obsługa wyjątków jest ważnym aspektem programowania w języku C#, ponieważ pozwala na zapobieganie
-                zatrzymaniu programu i umożliwia jego dalsze działanie po wystąpieniu błędu. Istnieją dwa sposoby
-                obsługi wyjątków: przez ręczne rzucanie i przez obsługę automatyczną.
-            </p>
-            <img src="/img/vector55.png" alt="">
-        </div>
-        <p class="text-container purple-container article tooltip">
-            Ręczne rzucanie wyjątków polega na rzucaniu wyjątku za pomocą słowa kluczowego
-            <code><a href="" pro-tip="">throw</a></code> w momencie, gdy wykryty zostanie błąd. Na przykład:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Te przykłady pokazują, że istnieje wiele różnych wyjątków, które mogą być rzucane przez runtime
+								w różnych sytuacjach. Programiści powinni być świadomi tych wyjątków i być w stanie je obsłużyć,
+								aby uniknąć zatrzymania programu.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Obsługa Wyjątków</h1>
+				<div class="section-with-image">
+						<p>
+								Obsługa wyjątków jest ważnym aspektem programowania w języku C#, ponieważ pozwala na zapobieganie
+								zatrzymaniu programu i umożliwia jego dalsze działanie po wystąpieniu błędu. Istnieją dwa sposoby
+								obsługi wyjątków: przez ręczne rzucanie i przez obsługę automatyczną.
+						</p>
+						<img src="/img/vector55.png" alt="">
+				</div>
+				<p class="text-container purple-container article tooltip">
+						Ręczne rzucanie wyjątków polega na rzucaniu wyjątku za pomocą słowa kluczowego
+						<code><a href="" pro-tip="">throw</a></code> w momencie, gdy wykryty zostanie błąd. Na przykład:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 if (imie == null)
 {
-    throw new ArgumentException("Nazwa nie może być null");
+		throw new ArgumentException("Nazwa nie może być null");
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container purple-container">
-            Automatyczna obsługa wyjątków polega na stosowaniu instrukcji try-catch-finally do obsługi wyjątków.
-            Kod znajdujący się w bloku try jest wykonywany i jeśli wystąpi wyjątek, to jest on przechwytywany
-            przez odpowiedni blok catch. Kod znajdujący się w bloku finally jest zawsze wykonywany, niezależnie
-            od tego, czy wyjątek został rzucony czy nie.
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container purple-container">
+						Automatyczna obsługa wyjątków polega na stosowaniu instrukcji try-catch-finally do obsługi wyjątków.
+						Kod znajdujący się w bloku try jest wykonywany i jeśli wystąpi wyjątek, to jest on przechwytywany
+						przez odpowiedni blok catch. Kod znajdujący się w bloku finally jest zawsze wykonywany, niezależnie
+						od tego, czy wyjątek został rzucony czy nie.
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 try
 {
-    // Kod, w którym mogą wystąpić wyjątki
-    int result = Divide(10, 0);
+		// Kod, w którym mogą wystąpić wyjątki
+		int result = Divide(10, 0);
 }
 
 
 catch (MyException ex)
 {
-    // Obsługa wyjątku MyException
-    Console.WriteLine("Wystąpił błąd: " + ex.Message);
+		// Obsługa wyjątku MyException
+		Console.WriteLine("Wystąpił błąd: " + ex.Message);
 }
 
 
 catch (DivideByZeroException ex)
 {
-    // Obsługa wyjątku DivideByZeroException
-    Console.WriteLine("Nie można dzielić przez zero");
+		// Obsługa wyjątku DivideByZeroException
+		Console.WriteLine("Nie można dzielić przez zero");
 }
 
 
 catch (Exception ex)
 {
-    // Obsługa pozostałych wyjątków
-    Console.WriteLine("Wystąpił nieznany błąd");
+		// Obsługa pozostałych wyjątków
+		Console.WriteLine("Wystąpił nieznany błąd");
 }
 
 
 finally
 {
-    // Kod, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie
-    Console.WriteLine("Koniec programu");
+		// Kod, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie
+		Console.WriteLine("Koniec programu");
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Jak widzisz, obsługa wyjątków pozwala na kontrolowanie błędów i zapewnia, że
-                program jest w stanie kontynuować działanie po wystąpieniu błędu, zamiast zatrzymać się
-                całkowicie. Dzięki temu możemy zarządzać błędami w odpowiedni sposób i dostosowywać komunikaty
-                błędu do konkretnej sytuacji.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h1>Wyjątki definiowane przez użytkownika</h1>
-        <div class="section-with-image">
-            <p>
-                W języku C# można również definiować własne wyjątki, pochodzące z klasy Exception
-                lub jej podklasy. Definiowanie własnych wyjątków pozwala na dostosowanie komunikatów
-                błędu do konkretnej sytuacji i ułatwia obsługę błędów w kodzie.
-            </p>
-            <img src="/img/vector65.png" alt="">
-        </div>
-        <p class="text-container no-margin-top">
-            Aby utworzyć własny wyjątek, trzeba utworzyć nową klasę dziedziczącą po klasie Exception lub jednej z jej podklas. Na przykład:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Jak widzisz, obsługa wyjątków pozwala na kontrolowanie błędów i zapewnia, że
+								program jest w stanie kontynuować działanie po wystąpieniu błędu, zamiast zatrzymać się
+								całkowicie. Dzięki temu możemy zarządzać błędami w odpowiedni sposób i dostosowywać komunikaty
+								błędu do konkretnej sytuacji.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h1>Wyjątki definiowane przez użytkownika</h1>
+				<div class="section-with-image">
+						<p>
+								W języku C# można również definiować własne wyjątki, pochodzące z klasy Exception
+								lub jej podklasy. Definiowanie własnych wyjątków pozwala na dostosowanie komunikatów
+								błędu do konkretnej sytuacji i ułatwia obsługę błędów w kodzie.
+						</p>
+						<img src="/img/vector65.png" alt="">
+				</div>
+				<p class="text-container no-margin-top">
+						Aby utworzyć własny wyjątek, trzeba utworzyć nową klasę dziedziczącą po klasie Exception lub jednej z jej podklas. Na przykład:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 public class MyException : Exception
 {
-    public MyException(string message) : base(message)
-    {
-         throw new MyException("Mój wyjątek");
-    }
+		public MyException(string message) : base(message)
+		{
+ 				throw new MyException("Mój wyjątek");
+		}
 }
-                </code>
-            </pre>
-        </div>
-        <p class="text-container">
-            oto dłuższy przykład, który ilustruje Wyjątki definiowane przez użytkownika w języku C#:
-        </p>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container">
+						oto dłuższy przykład, który ilustruje Wyjątki definiowane przez użytkownika w języku C#:
+				</p>
+				<div class="code-block">
+						<pre>
+								<code>
 using System;
 
 class MojWyjatek : Exception
 {
-    public MojWyjatek(string komunikat) : base(komunikat)
-    {
+		public MojWyjatek(string komunikat) : base(komunikat)
+		{
 
-    }
+		}
 
-    public MojWyjatek(string komunikat, Exception innerException) : base(komunikat, innerException)
-    {
+		public MojWyjatek(string komunikat, Exception innerException) : base(komunikat, innerException)
+		{
 
-    }
+		}
 }
 
 class Program
 {
-    static int Dzielenie(int a, int b)
-    {
-        if (b == 0)
-        {
-            throw new MojWyjatek("Nie można dzielić przez zero");
-        }
+		static int Dzielenie(int a, int b)
+		{
+				if (b == 0)
+				{
+						throw new MojWyjatek("Nie można dzielić przez zero");
+				}
 
-        return a / b;
-    }
+				return a / b;
+		}
 
 
-    static void Main(string[] args)
-    {
-        try
-        {
-            int wynik = Dzielenie(10, 0);
-        }
+		static void Main(string[] args)
+		{
+				try
+				{
+						int wynik = Dzielenie(10, 0);
+				}
 
-        catch (MojWyjatek ex)
-        {
-            Console.WriteLine("Wystąpił błąd: " + ex.Message);
-        }
+				catch (MojWyjatek ex)
+				{
+						Console.WriteLine("Wystąpił błąd: " + ex.Message);
+				}
 
-        catch (Exception ex)
-        {
-            Console.WriteLine("Wystąpił nieznany błąd");
-        }
-    }
+				catch (Exception ex)
+				{
+						Console.WriteLine("Wystąpił nieznany błąd");
+				}
+		}
 }
 
 
 //output: Wystąpił błąd: Nie można dzielić przez zero
-                </code>
-            </pre>
-        </div>
-        <div class="text-container gray-container">
-            <img src="/img/warning.png" alt="">
-            <b>Wyjasnienie</b>
-            <p>
-                W tym przykładzie utworzyliśmy klasę MojWyjatek która dziedziczy po klasie Exception i
-                posiada dwa konstruktory: jeden przyjmuje tylko jeden argument komunikat, a drugi przyjmuje
-                komunikat oraz innerexception. Następnie w metodzie Dzielenie rzucamy wyjątek MojWyjatek
-                w momencie gdy b == 0, który jest obsługiwany w bloku catch. W przykładzie też mamy jeszcze
-                jeden blok catch, który obsługuje pozostałe wyjątki.
-            </p>
-        </div>
-        <div class="alert-card">
-            <img src="/img/warning.png" alt="">
-            <b>Uwaga</b>
-            <p>
-                Ważne jest, aby pamiętać, że własne wyjątki powinny być rzucane tylko w sytuacjach,
-                w których jest to naprawdę konieczne, a nie jako sposób na przechwytywanie błędów,
-                które mogłyby być obsłużone w inny sposób.
-            </p>
-        </div>
-        <div class="btn">
-            <a href="Generic_types.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="text-container gray-container">
+						<img src="/img/warning.png" alt="">
+						<b>Wyjasnienie</b>
+						<p>
+								W tym przykładzie utworzyliśmy klasę MojWyjatek która dziedziczy po klasie Exception i
+								posiada dwa konstruktory: jeden przyjmuje tylko jeden argument komunikat, a drugi przyjmuje
+								komunikat oraz innerexception. Następnie w metodzie Dzielenie rzucamy wyjątek MojWyjatek
+								w momencie gdy b == 0, który jest obsługiwany w bloku catch. W przykładzie też mamy jeszcze
+								jeden blok catch, który obsługuje pozostałe wyjątki.
+						</p>
+				</div>
+				<div class="alert-card">
+						<img src="/img/warning.png" alt="">
+						<b>Uwaga</b>
+						<p>
+								Ważne jest, aby pamiętać, że własne wyjątki powinny być rzucane tylko w sytuacjach,
+								w których jest to naprawdę konieczne, a nie jako sposób na przechwytywanie błędów,
+								które mogłyby być obsłużone w inny sposób.
+						</p>
+				</div>
+				<div class="btn">
+						<a href="Generic_types.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 
 

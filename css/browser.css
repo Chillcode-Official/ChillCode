@@ -1,100 +1,100 @@
 /* HTML browser elements*/
 
 .browser{
-    background-color: #d9cece;
-    box-sizing: border-box;
-    padding: 5px;
-    border: 4px solid black;
-    font-size: 17px;
-    width: 364px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+		background-color: #d9cece;
+		box-sizing: border-box;
+		padding: 5px;
+		border: 4px solid black;
+		font-size: 17px;
+		width: 364px;
+		margin-top: 20px;
+		margin-bottom: 10px;
 }
 .browser.browser-no-margin-top{
-    margin-top: -48px;
+		margin-top: -48px;
 }
 .browser.highlight h1{
-    background-color: yellow;
+		background-color: yellow;
 }.browser.red-text p{
-     color: #ad1515;
+ 		color: #ad1515;
  }
 .browser.intro h2{
-    font-size: 18px;
-    font-style: italic;
-    color: black;
+		font-size: 18px;
+		font-style: italic;
+		color: black;
 }
 .browser a{
-    color: blue;
+		color: blue;
 }
 .browser ul li{
-    color: black;
+		color: black;
 }
 .browser.long-browser{
-    width: 900px;
+		width: 900px;
 }
 .browser.medium-browser{
-    width: 430px;
+		width: 430px;
 }
 .browser.small-browser{
-    width: 100%;
-    margin-top: 27px;
-    margin-bottom: 41px;
+		width: 100%;
+		margin-top: 27px;
+		margin-bottom: 41px;
 }
 .browser.medium-browser h2{
-    text-align: center;
+		text-align: center;
 }
 .browser b{
-    color: black;
-    margin-left: 41px;
+		color: black;
+		margin-left: 41px;
 }
 .browser table th{
-    color: black;
+		color: black;
 }
 .browser table tr th td{
-    margin-left: 20px;
+		margin-left: 20px;
 }
 .browser h1{
-    color: #1e1c1c;
+		color: #1e1c1c;
 }.browser.gray-container h2{
-     color: gray;
+ 		color: gray;
  }.browser p{
-      color: #3f3e3e;
-  }
+			color: #3f3e3e;
+	}
 
 
 
 /*browser color elements*/
 
 .browser.pink-container{
-    background-color: pink;
+		background-color: pink;
 }
 .browser.indianred-container{
-    background-color: indianred;
+		background-color: indianred;
 }
 .browser.blueviolet-container{
-    background-color: blueviolet;
+		background-color: blueviolet;
 }
 .browser.darkslategray{
-    background-color: darkslategray;
+		background-color: darkslategray;
 }
 .browser.aquamarine-container{
-    background-color: mediumaquamarine;
+		background-color: mediumaquamarine;
 }
 .browser.slateblue-container{
-    background-color: slateblue;
+		background-color: slateblue;
 }
 .browser.coral-container{
-    background-color: coral;
+		background-color: coral;
 }
 .browser.sandybrown-container{
-    background-color: sandybrown;
+		background-color: sandybrown;
 }
 .browser.hotpink-container{
-    background-color: hotpink;
+		background-color: hotpink;
 }
 .browser.green-container{
-    background-color: green;
+		background-color: green;
 }
 .browser.hsl-color{
-    background-color: hsla(9, 100%, 64%, 0.6);
+		background-color: hsla(9, 100%, 64%, 0.6);
 }

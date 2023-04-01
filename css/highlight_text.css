@@ -2,63 +2,63 @@
 /*highlight-text Elements*/
 
 .highlight-text code {
-    border: 2px solid #000;
-    border-radius: 4px;
-    background-color: #ead8d8;
-    color: black;
-    padding: 4px;
-    font-size: 16px;
+		border: 2px solid #000;
+		border-radius: 4px;
+		background-color: #ead8d8;
+		color: black;
+		padding: 4px;
+		font-size: 16px;
 }
 .highlight-text i {
-    border: 3px solid #181818;
-    border-radius: 4px;
-    background-color: #fae8e8;
-    color: black;
-    padding: 4px;
-    font-size: 16px;
+		border: 3px solid #181818;
+		border-radius: 4px;
+		background-color: #fae8e8;
+		color: black;
+		padding: 4px;
+		font-size: 16px;
 }
 .highlight-text a{
-    text-decoration: none;
-    color: white;
+		text-decoration: none;
+		color: white;
 }
 
 .highlight-text.highlight-text-black i{
-    background-color: #1a1919;
-    color: white;
+		background-color: #1a1919;
+		color: white;
 }
 
 
 /*highlight-container Elements*/
 
 .highlight-container span{
-    border-radius: 4px;
-    background-color: #313135;
-    padding: 4px;
+		border-radius: 4px;
+		background-color: #313135;
+		padding: 4px;
 }
 .highlight-container-azure span{
-    background-color: #5c5e8f;
+		background-color: #5c5e8f;
 }
 .highlight-container-lightPink span{
-    background-color: #823951;
+		background-color: #823951;
 }
 .highlight-container-gray span{
-    background-color: #323c42;
+		background-color: #323c42;
 }
 .highlight-container-cream span{
-    background-color:  #4d4630;
+		background-color:  #4d4630;
 }
 .highlight-container-lightOrange span{
-    background-color:   #8a4d36;
+		background-color:   #8a4d36;
 }
 .highlight-container-lightRed span{
-    background-color: #b75959;
+		background-color: #b75959;
 }
 .highlight-container-yellow span{
-    background-color: #644c0e;
+		background-color: #644c0e;
 }
 .highlight-container-lightWhite span{
-    background-color: #a29393;
+		background-color: #a29393;
 }
 .highlight-container-light span{
-    background-color: #a68d8d;
+		background-color: #a68d8d;
 }

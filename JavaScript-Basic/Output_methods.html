@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript {Metody wyjścia}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>JavaScript {Metody wyjścia}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Objects.html">Obiekty</a></li>
-            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-            <li><a href="Values.html">Wartości</a></li>
-            <li><a href="Reference.html">Referencje</a></li>
-            <li><a href="Methods.html">Metody</a></li>
-            <li><a href="Events.html">Eventy</a></li>
-            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Objects.html">Obiekty</a></li>
+						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+						<li><a href="Values.html">Wartości</a></li>
+						<li><a href="Reference.html">Referencje</a></li>
+						<li><a href="Methods.html">Metody</a></li>
+						<li><a href="Events.html">Eventy</a></li>
+						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content highlight-container">
-                <h1>Metody wyjścia</h1>
-                <p>
-                    W języku JavaScript istnieją kilka sposobów wyświetlenia wyniku (outputu) na ekranie.
-                    Najczęściej używanym sposobem jest funkcja <span>console.log()</span>. Funkcja ta pozwala wyświetlić
-                    tekst lub wartość zmiennej na konsoli przeglądarki internetowej.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector151.png" alt="">
-            </div>
-        </div>
-        <p class="text-container lightOrange-container no-margin-top article tooltip">
-            Przykład użycia funkcji <code><a href="#" pro-tip="to metoda w języku JavaScript służąca do wypisywania informacji w konsoli. Może być używana do drukowania wartości zmiennych, obiektów, tablic i innych typów danych w konsoli, która jest wbudowanym narzędziem w większości przeglądarek internetowych, służącym do celów debugowania.">console.log() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-            która wyświetla tekst lub wartość zmiennej na stronie HTML
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content highlight-container">
+								<h1>Metody wyjścia</h1>
+								<p>
+										W języku JavaScript istnieją kilka sposobów wyświetlenia wyniku (outputu) na ekranie.
+										Najczęściej używanym sposobem jest funkcja <span>console.log()</span>. Funkcja ta pozwala wyświetlić
+										tekst lub wartość zmiennej na konsoli przeglądarki internetowej.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector151.png" alt="">
+						</div>
+				</div>
+				<p class="text-container lightOrange-container no-margin-top article tooltip">
+						Przykład użycia funkcji <code><a href="#" pro-tip="to metoda w języku JavaScript służąca do wypisywania informacji w konsoli. Może być używana do drukowania wartości zmiennych, obiektów, tablic i innych typów danych w konsoli, która jest wbudowanym narzędziem w większości przeglądarek internetowych, służącym do celów debugowania.">console.log() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						która wyświetla tekst lub wartość zmiennej na stronie HTML
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 console.log("Hello, World!");
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    Hello, World!
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container lightOrange-container article tooltip">
-            Użycie funkcji <code><a href="#" pro-tip="Jest funkcją JavaScript, która pozwala programiście wprowadzać treść bezpośrednio do strony internetowej, zastępując treść, która już tam jest.">document.write() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> która wyświetla tekst lub wartość zmiennej na stronie HTML.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										Hello, World!
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container lightOrange-container article tooltip">
+						Użycie funkcji <code><a href="#" pro-tip="Jest funkcją JavaScript, która pozwala programiście wprowadzać treść bezpośrednio do strony internetowej, zastępując treść, która już tam jest.">document.write() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> która wyświetla tekst lub wartość zmiennej na stronie HTML.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 document.write("Hello, World!");
-                </code>
-            </pre>
-        </div>
-        <p class="text-container lightOrange-container article tooltip">
-            Innym sposobem jest użycie metody <code><a href="#" pro-tip="Jest właściwością elementu HTML, która pozwala programiście na zmianę treści wewnętrznej elementu.">innerHTML <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-            elementu HTML, aby wyświetlić tekst lub wartość zmiennej w elemencie HTML.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<p class="text-container lightOrange-container article tooltip">
+						Innym sposobem jest użycie metody <code><a href="#" pro-tip="Jest właściwością elementu HTML, która pozwala programiście na zmianę treści wewnętrznej elementu.">innerHTML <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						elementu HTML, aby wyświetlić tekst lub wartość zmiennej w elemencie HTML.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 document.getElementById("output").innerHTML = "Hello, World!";
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Pamiętaj, że powyższe przykłady są tylko wstępem do tego, co można zrobić z wynikiem (outputem)
-                w języku JavaScript. Można zrobić wiele więcej, takich jak formatowanie tekstu, wyświetlanie
-                wartości zmiennych i inne. Wszystko zależy od potrzeb i wymagań projektu.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Comments.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Pamiętaj, że powyższe przykłady są tylko wstępem do tego, co można zrobić z wynikiem (outputem)
+								w języku JavaScript. Można zrobić wiele więcej, takich jak formatowanie tekstu, wyświetlanie
+								wartości zmiennych i inne. Wszystko zależy od potrzeb i wymagań projektu.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Comments.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

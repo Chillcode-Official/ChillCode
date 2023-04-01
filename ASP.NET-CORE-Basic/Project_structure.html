@@ -1,103 +1,103 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET(Struktura-Projektu)</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET(Struktura-Projektu)</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Struktura Projektu</h1>
-                <p>
-                    Struktura projektu w ASP.NET Core to organizacja plików i katalogów w aplikacji internetowej, która pozwala na łatwe zarządzanie kodem źródłowym, zasobami i konfiguracją. Domyślna struktura projektu ASP.NET Core jest zdefiniowana przez szablon projektu, który wybierasz podczas tworzenia nowej aplikacji.
-                </p>
-            </div>
-            <img src="/img/vector182.png" alt="">
-        </div>
-        <div class="text-container lightWhite-container black-list no-margin-top list-spacing">
-            <div class="text-content">
-                <h3>
-                    Struktura projektu w ASP.NET Core składa się z następujących elementów:
-                </h3>
-            </div>
-            <div class="line"></div>
-            <ol class="highlight-container highlight-container-lightWhite">
-                <li><span>Pliki źródłowe</span>- zawierają kod źródłowy aplikacji, w tym kontrolery, modele, widoki, pliki konfiguracyjne, itp.</li>
-                <li><span>Katalog "wwwroot"</span>- zawiera pliki, które mają być udostępniane publicznie przez serwer, takie jak pliki CSS, JavaScript, obrazy, pliki czcionek, itp.</li>
-                <li><span>Katalog "Controllers"</span>- zawiera kontrolery, które obsługują żądania HTTP, przetwarzają dane i zwracają wyniki.</li>
-                <li><span>Katalog "Models"</span>- zawiera modele, które reprezentują dane, z którymi działa aplikacja.</li>
-                <li><span>Katalog "Views"</span>- zawiera widoki, które wyświetlają dane użytkownikowi.</li>
-                <li><span>Plik "appsettings.json"</span>- zawiera konfigurację aplikacji, taką jak łączenie się z bazą danych, klucze API, itp.</li>
-                <li><span>Plik "Program.cs"</span>- zawiera kod, który uruchamia aplikację.</li>
-                <li><span>Plik "Startup.cs"</span>- zawiera kod, który konfiguruje aplikację i jej usługi, takie jak middleware, obsługa żądań HTTP, logowanie, itp.</li>
-            </ol>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Dodatkowo, w zależności od wybranej szablonu aplikacji, projekt może zawierać dodatkowe pliki i katalogi, takie jak "Migrations" dla migracji bazy danych, "Data" dla dostępu do danych, "Services" dla usług, itp.
-            </p>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b>Ważne</b>
-            <div class="line"></div>
-            <p>
-                Ważne jest, aby zrozumieć strukturę projektu w ASP.NET Core, ponieważ ułatwi to organizowanie kodu i rozwiązywanie problemów w aplikacji.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Create_controllers_and_actions.html"><button>Dalej</button></a>
-        </div>
-    </div>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Struktura Projektu</h1>
+								<p>
+										Struktura projektu w ASP.NET Core to organizacja plików i katalogów w aplikacji internetowej, która pozwala na łatwe zarządzanie kodem źródłowym, zasobami i konfiguracją. Domyślna struktura projektu ASP.NET Core jest zdefiniowana przez szablon projektu, który wybierasz podczas tworzenia nowej aplikacji.
+								</p>
+						</div>
+						<img src="/img/vector182.png" alt="">
+				</div>
+				<div class="text-container lightWhite-container black-list no-margin-top list-spacing">
+						<div class="text-content">
+								<h3>
+										Struktura projektu w ASP.NET Core składa się z następujących elementów:
+								</h3>
+						</div>
+						<div class="line"></div>
+						<ol class="highlight-container highlight-container-lightWhite">
+								<li><span>Pliki źródłowe</span>- zawierają kod źródłowy aplikacji, w tym kontrolery, modele, widoki, pliki konfiguracyjne, itp.</li>
+								<li><span>Katalog "wwwroot"</span>- zawiera pliki, które mają być udostępniane publicznie przez serwer, takie jak pliki CSS, JavaScript, obrazy, pliki czcionek, itp.</li>
+								<li><span>Katalog "Controllers"</span>- zawiera kontrolery, które obsługują żądania HTTP, przetwarzają dane i zwracają wyniki.</li>
+								<li><span>Katalog "Models"</span>- zawiera modele, które reprezentują dane, z którymi działa aplikacja.</li>
+								<li><span>Katalog "Views"</span>- zawiera widoki, które wyświetlają dane użytkownikowi.</li>
+								<li><span>Plik "appsettings.json"</span>- zawiera konfigurację aplikacji, taką jak łączenie się z bazą danych, klucze API, itp.</li>
+								<li><span>Plik "Program.cs"</span>- zawiera kod, który uruchamia aplikację.</li>
+								<li><span>Plik "Startup.cs"</span>- zawiera kod, który konfiguruje aplikację i jej usługi, takie jak middleware, obsługa żądań HTTP, logowanie, itp.</li>
+						</ol>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Dodatkowo, w zależności od wybranej szablonu aplikacji, projekt może zawierać dodatkowe pliki i katalogi, takie jak "Migrations" dla migracji bazy danych, "Data" dla dostępu do danych, "Services" dla usług, itp.
+						</p>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b>Ważne</b>
+						<div class="line"></div>
+						<p>
+								Ważne jest, aby zrozumieć strukturę projektu w ASP.NET Core, ponieważ ułatwi to organizowanie kodu i rozwiązywanie problemów w aplikacji.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Create_controllers_and_actions.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

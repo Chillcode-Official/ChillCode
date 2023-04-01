@@ -1,33 +1,33 @@
 /*Image Galery Elements*/
 .image {
-    display: inline-block;
-    width: 32.33%;
-    padding: 10px;
-    box-sizing: border-box;
+		display: inline-block;
+		width: 32.33%;
+		padding: 10px;
+		box-sizing: border-box;
 }
 
 .image img {
-    width: 100%;
-    height: auto;
-    border: 2px solid black;
+		width: 100%;
+		height: auto;
+		border: 2px solid black;
 }
 
 
 /* Icon images elements */
 
 .icon-img-big{
-    width: 70px;
-    margin-bottom: -20px;
+		width: 70px;
+		margin-bottom: -20px;
 }
 .icon-img-small{
-    width: 50px;
-    margin-bottom: -10px;
+		width: 50px;
+		margin-bottom: -10px;
 }
 .icon-img-little{
-    width: 30px;
-    margin-bottom: -10px;
+		width: 30px;
+		margin-bottom: -10px;
 }
 .icon-img-tiny{
-    width: 23px;
-    margin-bottom: -5px;
+		width: 23px;
+		margin-bottom: -5px;
 }

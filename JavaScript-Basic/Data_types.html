@@ -1,308 +1,308 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScirpt {Typy danych}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>JavaScirpt {Typy danych}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Output_methods.html">Metody wyjściowe</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Objects.html">Obiekty</a></li>
-            <li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-            <li><a href="Values.html">Wartości</a></li>
-            <li><a href="Reference.html">Referencje</a></li>
-            <li><a href="Methods.html">Metody</a></li>
-            <li><a href="Events.html">Eventy</a></li>
-            <li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-            <li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-            <li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Objects.html">Obiekty</a></li>
+						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+						<li><a href="Values.html">Wartości</a></li>
+						<li><a href="Reference.html">Referencje</a></li>
+						<li><a href="Methods.html">Metody</a></li>
+						<li><a href="Events.html">Eventy</a></li>
+						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Typy Prymitywne</h1>
-                <p>
-                    Typy prymitywne w języku JavaScript to typy danych, które są podstawowymi rodzajami
-                    danych w tym języku. Są one niezmiennymi wartościami, które nie są obiektami i nie
-                    posiadają żadnych metod ani właściwości.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector85.png" alt="">
-            </div>
-        </div>
-        <div class="double-elements">
-            <p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="String jest typem danych reprezentującym ciąg znaków. Można je tworzyć za pomocą pojedynczych lub podwójnych cudzysłowów.">String <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - ciąg znaków, np. "Hello World"</p>
-            <p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Number to typ danych, który reprezentuje liczby. Może to być liczba całkowita lub zmiennoprzecinkowa.">Number <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - liczby, np. 42 lub 3.14</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Typy Prymitywne</h1>
+								<p>
+										Typy prymitywne w języku JavaScript to typy danych, które są podstawowymi rodzajami
+										danych w tym języku. Są one niezmiennymi wartościami, które nie są obiektami i nie
+										posiadają żadnych metod ani właściwości.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector85.png" alt="">
+						</div>
+				</div>
+				<div class="double-elements">
+						<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="String jest typem danych reprezentującym ciąg znaków. Można je tworzyć za pomocą pojedynczych lub podwójnych cudzysłowów.">String <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - ciąg znaków, np. "Hello World"</p>
+						<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Number to typ danych, który reprezentuje liczby. Może to być liczba całkowita lub zmiennoprzecinkowa.">Number <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - liczby, np. 42 lub 3.14</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 var name = "John Doe";
 
 console.log(name.length);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-padding output-content">
-                            8
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-padding output-content">
+														8
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 var age = 30;
 
 console.log(age + 5);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            35
-                        </div>
-                    </div>
-                </div>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														35
+												</div>
+										</div>
+								</div>
 
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="double-elements">
-            <p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Boolean jest typem danych, który reprezentuje wartość logiczną true lub false.">Boolean <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość logiczna, true lub false</p>
-            <p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Undefined jest typem danych, który reprezentuje brak wartości. Każda zmienna, która nie została zainicjowana, jest typu Undefined.">Undefined <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość niezdefiniowana</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="double-elements">
+						<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Boolean jest typem danych, który reprezentuje wartość logiczną true lub false.">Boolean <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość logiczna, true lub false</p>
+						<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Undefined jest typem danych, który reprezentuje brak wartości. Każda zmienna, która nie została zainicjowana, jest typu Undefined.">Undefined <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość niezdefiniowana</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 var isValid = true;
 
 console.log(!isValid);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-padding output-content">
-                            false
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-padding output-content">
+														false
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-margin-top">
+								<pre>
+										<code>
 var x;
 
 console.log(typeof x);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-padding output-content">
-                            undefined
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container gray-container article tooltip">
-            <code><a href="#" pro-tip="Null jest typem danych, który reprezentuje brak wartości. Można go użyć, aby wyraźnie oznaczyć brak wartości.">Null <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość pusta
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-padding output-content">
+														undefined
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container gray-container article tooltip">
+						<code><a href="#" pro-tip="Null jest typem danych, który reprezentuje brak wartości. Można go użyć, aby wyraźnie oznaczyć brak wartości.">Null <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość pusta
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 var y = null;
 console.log(typeof y); // (null jest traktowany jako obiekt w JavaScript)
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-content output-padding">
-                    object
-                </div>
-            </div>
-        </div>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-content output-padding">
+										object
+								</div>
+						</div>
+				</div>
 
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Typy Odniesienia</h1>
-                <p>
-                    Typy odniesienia (ang. reference types) w języku JavaScript to typy danych, które
-                    są reprezentowane jako obiekty i których wartości są przechowywane w pamięci jako
-                    odniesienia do miejsca, gdzie znajdują się ich wartości. Wartość typów odniesienia
-                    może być zmieniona, a same typy posiadają właściwości i metody.
-                </p>
-            </div>
-            <div>
-                <img src="/img/vector163.png" alt="">
-            </div>
-        </div>
-        <div class="double-elements">
-            <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Object to typ danych, który reprezentuje grupę par klucz-wartość. Obiekty są tworzone za pomocą nawiasów klamrowych {}. ">Object <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - obiekty, np. {key1: value1, key2: value2}</p>
-            <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Function to typ danych, który reprezentuje funkcję. Funkcje są tworzone za pomocą słowa kluczowego function">Function <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - funkcje, np. function add(a, b) {return a + b;}</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-medium code-block-margin-top">
-                <pre>
-                    <code>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Typy Odniesienia</h1>
+								<p>
+										Typy odniesienia (ang. reference types) w języku JavaScript to typy danych, które
+										są reprezentowane jako obiekty i których wartości są przechowywane w pamięci jako
+										odniesienia do miejsca, gdzie znajdują się ich wartości. Wartość typów odniesienia
+										może być zmieniona, a same typy posiadają właściwości i metody.
+								</p>
+						</div>
+						<div>
+								<img src="/img/vector163.png" alt="">
+						</div>
+				</div>
+				<div class="double-elements">
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Object to typ danych, który reprezentuje grupę par klucz-wartość. Obiekty są tworzone za pomocą nawiasów klamrowych {}. ">Object <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - obiekty, np. {key1: value1, key2: value2}</p>
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Function to typ danych, który reprezentuje funkcję. Funkcje są tworzone za pomocą słowa kluczowego function">Function <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - funkcje, np. function add(a, b) {return a + b;}</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-medium code-block-margin-top">
+								<pre>
+										<code>
 var person = {firstName: "John", lastName: "Doe"};
 
 console.log(person.firstName);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            John
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-medium code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														John
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-medium code-block-margin-top">
+								<pre>
+										<code>
 function add(a, b) {return a + b;}
 
 console.log(add(2, 3));
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            5
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="double-elements">
-            <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Array to typ danych, który reprezentuje kolekcję wartości. Tablice są tworzone za pomocą nawiasów kwadratowych []">Array <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - tablice, np. [1, 2, 3, 4, 5]</p>
-            <p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Date to typ danych, który reprezentuje datę i czas. Obiekty daty i czasu są tworzone za pomocą konstruktora Date.">Date <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - obiekt daty i czasu, np. new Date()</p>
-        </div>
-        <div class="double-elements">
-            <div>
-                <div class="code-block code-block-medium code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														5
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="double-elements">
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Array to typ danych, który reprezentuje kolekcję wartości. Tablice są tworzone za pomocą nawiasów kwadratowych []">Array <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - tablice, np. [1, 2, 3, 4, 5]</p>
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="Date to typ danych, który reprezentuje datę i czas. Obiekty daty i czasu są tworzone za pomocą konstruktora Date.">Date <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - obiekt daty i czasu, np. new Date()</p>
+				</div>
+				<div class="double-elements">
+						<div>
+								<div class="code-block code-block-medium code-block-margin-top">
+								<pre>
+										<code>
 var numbers = [1, 2, 3, 4, 5];
 console.log(numbers[2]);
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-content output-padding">
-                            3
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="code-block code-block-medium code-block-margin-top">
-                <pre>
-                    <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-content output-padding">
+														3
+												</div>
+										</div>
+								</div>
+						</div>
+						<div>
+								<div class="code-block code-block-medium code-block-margin-top">
+								<pre>
+										<code>
 var now = new Date();
 console.log(now.getMonth()); // (aktualny miesiąc, 0-based)
-                    </code>
-                </pre>
-                </div>
-                <div class="dropdown minus-margin-top">
-                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-                    <div class="dropdown-content">
-                        <div class="output output-padding output-content">
-                            2
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <p class="text-container gray-container article tooltip">
-            <code><a href="#" pro-tip="RegExp (ang. Regular Expression) to typ odniesienia w języku JavaScript, który służy do definiowania i wyszukiwania ciągów tekstu na podstawie wzorca. ">RegExp <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wyrażenia regularne, np. /pattern/
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+										</code>
+								</pre>
+								</div>
+								<div class="dropdown minus-margin-top">
+										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+										<div class="dropdown-content">
+												<div class="output output-padding output-content">
+														2
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container gray-container article tooltip">
+						<code><a href="#" pro-tip="RegExp (ang. Regular Expression) to typ odniesienia w języku JavaScript, który służy do definiowania i wyszukiwania ciągów tekstu na podstawie wzorca. ">RegExp <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wyrażenia regularne, np. /pattern/
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 var pattern = /\d+/;
 console.log(pattern.test("I have 30 apples."));
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    true
-                </div>
-            </div>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Variables.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										true
+								</div>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Variables.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

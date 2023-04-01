@@ -1,214 +1,214 @@
 html,body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
-    overflow-x: hidden;
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
+		overflow-x: hidden;
 }
 
 p{
-    color: white;
+		color: white;
 }
 h1{
-    color: #bb9c9c;
+		color: #bb9c9c;
 }
 
 .text-right {
-    text-align: right;
+		text-align: right;
 }
 
 .page-content {
-    width: 1200px;
-    margin: 0 auto;
+		width: 1200px;
+		margin: 0 auto;
 }
 
 /* Navbar elements */
 .navbar ul li {
-    list-style: none;
-    text-align: left;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-    color: #a8a8aa;
-    font-size: 18px;
+		list-style: none;
+		text-align: left;
+		display: inline-block;
+		margin: 0 20px;
+		position: relative;
+		color: #a8a8aa;
+		font-size: 18px;
 }
 .navbar a{
-    text-decoration: none;
-    color: #a8a8aa;
+		text-decoration: none;
+		color: #a8a8aa;
 }
 .navbar a:hover{
-    color: white;
+		color: white;
 }
 .navbar button {
-    text-decoration: none;
-    background-color: transparent;
-    border-width: 0;
-    cursor: pointer;
+		text-decoration: none;
+		background-color: transparent;
+		border-width: 0;
+		cursor: pointer;
 }
 .navbar{
-    margin-top: 40px;
-    margin-right: 20px;
-    text-align: right;
+		margin-top: 40px;
+		margin-right: 20px;
+		text-align: right;
 }
 .row {
-    margin-top: 300px;
+		margin-top: 300px;
 }
 .row h1{
-    font-size: 40px;
+		font-size: 40px;
 }
 /* Card elements */
 .card{
-    width: 300px;
-    height: 200px;
-    display: inline-block;
-    vertical-align: top;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-    background-position: center;
-    text-align: center;
-    color: #fdfdfd;
-    transition: 0.5s;
+		width: 300px;
+		height: 200px;
+		display: inline-block;
+		vertical-align: top;
+		border-radius: 10px;
+		padding: 15px 25px;
+		box-sizing: border-box;
+		cursor: pointer;
+		margin: 10px 15px;
+		background-position: center;
+		text-align: center;
+		color: #fdfdfd;
+		transition: 0.5s;
 }
 .card.card1{
-    background-color: #990f8b;
-    position: relative;
-    bottom: 300px;
+		background-color: #990f8b;
+		position: relative;
+		bottom: 300px;
 }
 .card.card2{
-    background-color: #7d3ac4;
-    position: relative;
-    bottom: 300px;
+		background-color: #7d3ac4;
+		position: relative;
+		bottom: 300px;
 }
 .card.card3{
-    background-color: #585ba1;
-    position: relative;
-    bottom: 300px;
+		background-color: #585ba1;
+		position: relative;
+		bottom: 300px;
 }
 .card.card4{
-    background-color: #5b3425;
-    position: relative;
-    bottom: 300px;
+		background-color: #5b3425;
+		position: relative;
+		bottom: 300px;
 }
 .card.card5{
-    background-color: #ce95ce;
-    position: relative;
-    bottom: 300px;
+		background-color: #ce95ce;
+		position: relative;
+		bottom: 300px;
 }
 .card.card6{
-    background-color: #d48852;
-    position: relative;
-    bottom: 300px;
+		background-color: #d48852;
+		position: relative;
+		bottom: 300px;
 }
 .card.card7{
-    background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
-    position: relative;
-    bottom: 300px;
+		background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
+		position: relative;
+		bottom: 300px;
 }
 .card.card8{
-    background: linear-gradient(to bottom, #17406e 0%, #2f8080 100%);
-    position: relative;
-    bottom: 300px;
+		background: linear-gradient(to bottom, #17406e 0%, #2f8080 100%);
+		position: relative;
+		bottom: 300px;
 }
 .card.card9{
-    background: linear-gradient(to bottom, #b46969 0%, #602c2c 100%);
-    position: relative;
-    bottom: 300px;
+		background: linear-gradient(to bottom, #b46969 0%, #602c2c 100%);
+		position: relative;
+		bottom: 300px;
 }
 .card.card10{
-    background: linear-gradient(to bottom, #462569 0%, #4a2e79 100%);
-    position: relative;
-    bottom: 300px;
+		background: linear-gradient(to bottom, #462569 0%, #4a2e79 100%);
+		position: relative;
+		bottom: 300px;
 }
 
 .card:hover{
-    transform: translateY(-20px);
+		transform: translateY(-20px);
 }
 .card h5{
-    font-size: 20px;
+		font-size: 20px;
 }
 .card a{
-    color: whitesmoke;
-    text-decoration: none;
+		color: whitesmoke;
+		text-decoration: none;
 }
 .card button{
-    position: relative;
-    border-color: #000000;
-    border-width: 1px;
-    width: 100px;
-    padding: 5px 8px;
-    text-align: center;
-    border-radius: 20px;
-    background: transparent;
-    font-size: 15px;
-    outline: none;
-    text-decoration: none;
-    font-family: "Yu Gothic", sans-serif;
+		position: relative;
+		border-color: #000000;
+		border-width: 1px;
+		width: 100px;
+		padding: 5px 8px;
+		text-align: center;
+		border-radius: 20px;
+		background: transparent;
+		font-size: 15px;
+		outline: none;
+		text-decoration: none;
+		font-family: "Yu Gothic", sans-serif;
 }
 .card button:hover{
-    background-color: hsla(0,0%,100%,.3);
+		background-color: hsla(0,0%,100%,.3);
 }
 /*Purple block*/
 .purple-block{
-    position: relative;
-    transform: translate(0,-130%);
-    height: 600px;
-    width: 100%;
-    display: block;
-    background: radial-gradient(26.76% 85.52% at 86.73% -12.86%,#c241ff 6.65%, #6c51fd 100%);
+		position: relative;
+		transform: translate(0,-130%);
+		height: 600px;
+		width: 100%;
+		display: block;
+		background: radial-gradient(26.76% 85.52% at 86.73% -12.86%,#c241ff 6.65%, #6c51fd 100%);
 }
 .purple-block h1{
-    font-size: 45px;
-    padding-left: 10%;
-    padding-top: 50px;
-    color: #fdfdfd;
+		font-size: 45px;
+		padding-left: 10%;
+		padding-top: 50px;
+		color: #fdfdfd;
 }
 .purple-block img{
-    margin-left: 200px;
+		margin-left: 200px;
 }
 
 /*Help card elements*/
 .help-card{
-    position: relative;
-    display: inline-block;
-    bottom: 50px;
-    width: 400px;
-    height: 400px;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-    background-color: #fdfdfd;
-    transition: 0.5s;
+		position: relative;
+		display: inline-block;
+		bottom: 50px;
+		width: 400px;
+		height: 400px;
+		border-radius: 10px;
+		padding: 15px 25px;
+		box-sizing: border-box;
+		cursor: pointer;
+		margin: 10px 15px;
+		background-color: #fdfdfd;
+		transition: 0.5s;
 }
 .help-card:hover{
-    transform: translateY(-20px);
+		transform: translateY(-20px);
 }
 .help-card h3{
-    color: #202731;
-    letter-spacing: normal;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-    border: 0;
+		color: #202731;
+		letter-spacing: normal;
+		font-size: 22px;
+		margin: 0;
+		padding: 0;
+		border: 0;
 }
 .help-card p{
-    color: #494646;
+		color: #494646;
 }
 .help-card p b{
-    color: #19191c;
+		color: #19191c;
 }
 .help-card h6{
-    color: #494646;
+		color: #494646;
 }
 .help-card1{
-    margin-left: 200px;
+		margin-left: 200px;
 }
 .help-card2{
-    margin-left: 100px;
+		margin-left: 100px;
 }
 
 

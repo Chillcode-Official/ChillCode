@@ -1,142 +1,142 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET(Modelowanie danych)</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET(Modelowanie danych)</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Modelowanie Danych</h1>
-                <p>
-                    Modelowanie danych w ASP.NET Core to proces tworzenia klas, które reprezentują modele danych używane w aplikacji. Modele danych to obiekty, które reprezentują rzeczywiste lub abstrakcyjne encje, takie jak użytkownicy, produkty, zamówienia itp.
-                </p>
-            </div>
-            <img src="/img/vector176.png" alt="">
-        </div>
-        <p class="text-container lightPink-container no-margin-top">
-            Modele danych w ASP.NET Core mogą być tworzone z użyciem klas POCO (Plain Old CLR Objects), które zawierają właściwości (properties) i metody, ale nie mają żadnej logiki biznesowej. Modele danych mogą również zawierać atrybuty, takie jak atrybuty [Required] i [StringLength], które określają wymagane właściwości i długość ciągów. Przykładowa klasa modelu danych w ASP.NET Core:
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code>
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Modelowanie Danych</h1>
+								<p>
+										Modelowanie danych w ASP.NET Core to proces tworzenia klas, które reprezentują modele danych używane w aplikacji. Modele danych to obiekty, które reprezentują rzeczywiste lub abstrakcyjne encje, takie jak użytkownicy, produkty, zamówienia itp.
+								</p>
+						</div>
+						<img src="/img/vector176.png" alt="">
+				</div>
+				<p class="text-container lightPink-container no-margin-top">
+						Modele danych w ASP.NET Core mogą być tworzone z użyciem klas POCO (Plain Old CLR Objects), które zawierają właściwości (properties) i metody, ale nie mają żadnej logiki biznesowej. Modele danych mogą również zawierać atrybuty, takie jak atrybuty [Required] i [StringLength], które określają wymagane właściwości i długość ciągów. Przykładowa klasa modelu danych w ASP.NET Core:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
 public class Product
 {
-    public int Id { get; set; }
+		public int Id { get; set; }
 
-    [Required]
-    [StringLength(50)]
-    public string Name { get; set; }
+		[Required]
+		[StringLength(50)]
+		public string Name { get; set; }
 
-    [Range(0, 10000)]
-    public decimal Price { get; set; }
+		[Range(0, 10000)]
+		public decimal Price { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+		public DateTime CreatedAt { get; set; } = DateTime.Now;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przykładzie klasa Product reprezentuje model danych produktu, który ma właściwości Id, Name, Price i CreatedAt. Właściwości te są oznaczone atrybutami, takimi jak [Required] i [StringLength], które określają wymagane właściwości i długość ciągów. Atrybut [Range] określa wartości numeryczne właściwości.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Entity Framework Core</h1>
-                <p>
-                    Modele danych w ASP.NET Core mogą być używane wraz z Entity Framework Core, który jest frameworkiem ORM (Object-Relational Mapping) służącym do mapowania modeli danych na bazy danych. Entity Framework Core umożliwia tworzenie schematu bazy danych na podstawie modeli danych, a także tworzenie, odczytywanie, aktualizowanie i usuwanie rekordów z bazy danych.
-                </p>
-            </div>
-            <img src="/img/vector123.png" alt="">
-        </div>
-        <div class="big-page-header"></div>
-        <h3 class="color-text-white"><img class="icon-img-big" src="/img/icon_dataModel.png" alt=""> Mapowanie modelu danych na schemat bazy danych w Entity Framework Core:</h3>
-        <div class="code-block">
-            <pre>
-                <code>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przykładzie klasa Product reprezentuje model danych produktu, który ma właściwości Id, Name, Price i CreatedAt. Właściwości te są oznaczone atrybutami, takimi jak [Required] i [StringLength], które określają wymagane właściwości i długość ciągów. Atrybut [Range] określa wartości numeryczne właściwości.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Entity Framework Core</h1>
+								<p>
+										Modele danych w ASP.NET Core mogą być używane wraz z Entity Framework Core, który jest frameworkiem ORM (Object-Relational Mapping) służącym do mapowania modeli danych na bazy danych. Entity Framework Core umożliwia tworzenie schematu bazy danych na podstawie modeli danych, a także tworzenie, odczytywanie, aktualizowanie i usuwanie rekordów z bazy danych.
+								</p>
+						</div>
+						<img src="/img/vector123.png" alt="">
+				</div>
+				<div class="big-page-header"></div>
+				<h3 class="color-text-white"><img class="icon-img-big" src="/img/icon_dataModel.png" alt=""> Mapowanie modelu danych na schemat bazy danych w Entity Framework Core:</h3>
+				<div class="code-block">
+						<pre>
+								<code>
 public class ApplicationDbContext : DbContext
 {
-    public DbSet&ltProduct&gt Products { get; set; }
+		public DbSet&ltProduct&gt Products { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity&ltProduct&gt()
-            .HasKey(p => p.Id);
-    }
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+				modelBuilder.Entity&ltProduct&gt()
+						.HasKey(p => p.Id);
+		}
 }
-                </code>
-            </pre>
-        </div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przykładzie klasa ApplicationDbContext dziedziczy po klasie DbContext i reprezentuje kontekst bazy danych. Właściwość DbSet&ltProduct&gt reprezentuje tabelę "Products" w bazie danych, a metoda OnModelCreating() konfiguruje mapowanie klasy Product na schemat bazy danych. W tym przypadku klucz główny tabeli jest ustawiany na właściwość Id klasy Product.
-            </p>
-        </div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Podsumowując, modelowanie danych jest kluczowym aspektem aplikacji ASP.NET Core, ponieważ umożliwia reprezentowanie danych w aplikacji i interakcję z bazą danych. Modele danych są tworzone za pomocą klas POCO, które mogą zawierać atrybuty i logikę biznesową, a Entity Framework Core umożliwia mapowanie tych modeli na schemat bazy danych.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="RazorViewEngine_and_TagHelpers_views.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przykładzie klasa ApplicationDbContext dziedziczy po klasie DbContext i reprezentuje kontekst bazy danych. Właściwość DbSet&ltProduct&gt reprezentuje tabelę "Products" w bazie danych, a metoda OnModelCreating() konfiguruje mapowanie klasy Product na schemat bazy danych. W tym przypadku klucz główny tabeli jest ustawiany na właściwość Id klasy Product.
+						</p>
+				</div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Podsumowując, modelowanie danych jest kluczowym aspektem aplikacji ASP.NET Core, ponieważ umożliwia reprezentowanie danych w aplikacji i interakcję z bazą danych. Modele danych są tworzone za pomocą klas POCO, które mogą zawierać atrybuty i logikę biznesową, a Entity Framework Core umożliwia mapowanie tych modeli na schemat bazy danych.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="RazorViewEngine_and_TagHelpers_views.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

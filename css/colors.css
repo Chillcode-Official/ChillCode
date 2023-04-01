@@ -1,44 +1,44 @@
 /* Rainbow color for other text*/
 
 .color-text-lightRed{
-    color: #c21c29;
+		color: #c21c29;
 }
 .color-text-red{
-    color: #de6b74;
+		color: #de6b74;
 }
 .color-text-gray{
-    color: #27282c;
+		color: #27282c;
 }
 .color-text-black{
-    color: black;
+		color: black;
 }
 .color-text-white{
-    color: #d5c9c9; /*#e1d7d7;*/
+		color: #d5c9c9; /*#e1d7d7;*/
 }
 .color-text-orange{
-    color: #b6885d;
+		color: #b6885d;
 }
 .color-text-yellow{
-    color: #e4be7a;
+		color: #e4be7a;
 }
 .color-text-green{
-    color: #18dc53;
+		color: #18dc53;
 }
 .color-text-blue{
-    color: #3b84ec;
+		color: #3b84ec;
 }
 .color-text-indygo{
-    color: #af65e5;
+		color: #af65e5;
 }
 .color-text-purple{
-    color: #c477db;
+		color: #c477db;
 }
 
 .small-gray-text span{
-    font-size: 15px !important;
-    color: #c4bdbd;
+		font-size: 15px !important;
+		color: #c4bdbd;
 }
 .small-black-text span{
-    font-size: 15px !important;
-    color: #282727;
+		font-size: 15px !important;
+		color: #282727;
 }

@@ -1,26 +1,26 @@
 /* Main change */
 h1{
-    color: white;
-    margin: 0;
+		color: white;
+		margin: 0;
 }
 p{
-    color: #d5d0d0;
-    line-height: 2em;
+		color: #d5d0d0;
+		line-height: 2em;
 }
 h2{
-    color: #ece9e9;
+		color: #ece9e9;
 }
 
 strong{
-    color: #894bcb;
+		color: #894bcb;
 }
 ul li{
-    color: #ab7ddf;
-    padding-bottom: 9px;
-    list-style-type: disc;
+		color: #ab7ddf;
+		padding-bottom: 9px;
+		list-style-type: disc;
 }
 code{
-    color: white;
-    font-size: 20px;
-    white-space: pre; /*--- możliwość popsucia*/
+		color: white;
+		font-size: 20px;
+		white-space: pre; /*--- możliwość popsucia*/
 }

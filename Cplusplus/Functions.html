@@ -1,166 +1,166 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Cpp {Funkcje}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>Cpp {Funkcje}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    <script src="/EduBear.js"></script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="First_program.html">Pierwszy program</a></li>
-            <li><a href="Comments.html">Komentarze</a></li>
-            <li><a href="Variables.html">Zmienne</a></li>
-            <li><a href="Data_types.html">Typy danych</a></li>
-            <li><a href="Operators.html">Operatory</a></li>
-            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-            <li><a href="Loops.html">Pętle</a></li>
-            <li><a href="Functions.html">Funkcje</a></li>
-            <li><a href="Arguments.html">Argumenty</a></li>
-            <li><a href="Return_values.html">Wartości zwracane</a></li>
-            <li><a href="Tables.html">Tablice</a></li>
-            <li><a href="Indicators.html">Wskaźniki</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+						<li><a href="Loops.html">Pętle</a></li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li><a href="Arguments.html">Argumenty</a></li>
+						<li><a href="Return_values.html">Wartości zwracane</a></li>
+						<li><a href="Tables.html">Tablice</a></li>
+						<li><a href="Indicators.html">Wskaźniki</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Funkcje</h1>
-                <p>
-                    W języku C++, funkcje to bloki kodu, które wykonują określone zadania, i mogą być wywoływane z innego miejsca w programie. Funkcje w C++ mogą przyjmować argumenty i zwracać wartości.
-                </p>
-            </div>
-            <img src="/img/vector95.png" alt="">
-        </div>
-        <p class="text-container gray-container no-margin-top">
-            Oto przykład prostego programu C++ z jedną funkcją, W poniższym przykładzie funkcja printMessage() jest deklarowana poza funkcją main(). Następnie, w funkcji main(), funkcja printMessage() jest wywoływana.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Funkcje</h1>
+								<p>
+										W języku C++, funkcje to bloki kodu, które wykonują określone zadania, i mogą być wywoływane z innego miejsca w programie. Funkcje w C++ mogą przyjmować argumenty i zwracać wartości.
+								</p>
+						</div>
+						<img src="/img/vector95.png" alt="">
+				</div>
+				<p class="text-container gray-container no-margin-top">
+						Oto przykład prostego programu C++ z jedną funkcją, W poniższym przykładzie funkcja printMessage() jest deklarowana poza funkcją main(). Następnie, w funkcji main(), funkcja printMessage() jest wywoływana.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 #include &lt;iostream&gt;
 using namespace std;
 
 // deklaracja funkcji
 void printMessage() {
-    cout << "Hello World!" << endl;
+		cout << "Hello World!" << endl;
 }
 
 int main() {
-    // wywołanie funkcji
-    printMessage();
-    return 0;
+		// wywołanie funkcji
+		printMessage();
+		return 0;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    Hello World!
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <p class="text-container gray-container">
-            Funkcje mogą przyjmować argumenty, takie jak w tym przykładzie, W poniższym przykładzie funkcja printName() przyjmuje argument name typu std::string, który jest wykorzystywany w funkcji.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										Hello World!
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container gray-container">
+						Funkcje mogą przyjmować argumenty, takie jak w tym przykładzie, W poniższym przykładzie funkcja printName() przyjmuje argument name typu std::string, który jest wykorzystywany w funkcji.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 #include &lt;iostream&gt;
 using namespace std;
 
 // deklaracja funkcji
 void printName(std::string name) {
-    std::cout << "Hello, " << name << "!" << std::endl;
+		std::cout << "Hello, " << name << "!" << std::endl;
 }
 
 int main() {
-    // wywołanie funkcji z argumentem
-    printName("John");
-    return 0;
+		// wywołanie funkcji z argumentem
+		printName("John");
+		return 0;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    Hello, John!
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <p class="text-container gray-container">
-            Funkcje mogą również zwracać wartości, takie jak w tym przykładzie, W powyższym przykładzie funkcja multiply() zwraca wartość typu int, która jest wykorzystywana w funkcji main() przez funkcję std::cout.
-        </p>
-        <div class="code-block code-block-margin-top">
-            <pre>
-                <code class="language-cpp">
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										Hello, John!
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container gray-container">
+						Funkcje mogą również zwracać wartości, takie jak w tym przykładzie, W powyższym przykładzie funkcja multiply() zwraca wartość typu int, która jest wykorzystywana w funkcji main() przez funkcję std::cout.
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
 #include &lt;iostream&gt;
 using namespace std;
 
 // deklaracja funkcji zwracającej wartość
 int multiply(int x, int y) {
-    return x * y;
+		return x * y;
 }
 
 int main() {
-    // wywołanie funkcji z zwróconą wartością
-    std::cout << multiply(3, 4) << std::endl;
-    return 0;
+		// wywołanie funkcji z zwróconą wartością
+		std::cout << multiply(3, 4) << std::endl;
+		return 0;
 }
-                </code>
-            </pre>
-        </div>
-        <div class="dropdown minus-margin-top">
-            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-            <div class="dropdown-content">
-                <div class="output output-padding output-content">
-                    12
-                </div>
-            </div>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b>Ważne</b>
-            <div class="line"></div>
-            <p>
-                Funkcja może zwracać wartość danego typu lub nic (jeśli jest typu void). Wartość zwracana przez funkcję może być przypisana do zmiennej lub użyta bezpośrednio w innych działaniach.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Arguments.html"><button>Dalej</button></a>
-        </div>
-    </div>
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+								<div class="output output-padding output-content">
+										12
+								</div>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b>Ważne</b>
+						<div class="line"></div>
+						<p>
+								Funkcja może zwracać wartość danego typu lub nic (jeśli jest typu void). Wartość zwracana przez funkcję może być przypisana do zmiennej lub użyta bezpośrednio w innych działaniach.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Arguments.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

@@ -1,156 +1,156 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET {Obsługa-błędów}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET {Obsługa-błędów}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <div class="section-with-image">
-            <div class="text-content">
-                <h1>Obsługa Błędów</h1>
-                <p>
-                    Obsługa błędów jest ważnym elementem każdej aplikacji internetowej. W ASP.NET Core istnieje wiele sposobów na obsługę błędów, a jednym z najprostszych i najskuteczniejszych sposobów jest skorzystanie z middleware'ów UseExceptionHandler i UseStatusCodePages.
-                </p>
-            </div>
-            <img class="minus-margin-top" src="/img/vector79.png" alt="">
-        </div>
-        <h2><img class="icon-img-big" src="/img/icon_error.png" alt=""> Przykład konfiguracji obsługi błędów w ASP.NET Core:</h2>
-        <div class="code-block">
-                <pre>
-                    <code class="language-csharp">
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Obsługa Błędów</h1>
+								<p>
+										Obsługa błędów jest ważnym elementem każdej aplikacji internetowej. W ASP.NET Core istnieje wiele sposobów na obsługę błędów, a jednym z najprostszych i najskuteczniejszych sposobów jest skorzystanie z middleware'ów UseExceptionHandler i UseStatusCodePages.
+								</p>
+						</div>
+						<img class="minus-margin-top" src="/img/vector79.png" alt="">
+				</div>
+				<h2><img class="icon-img-big" src="/img/icon_error.png" alt=""> Przykład konfiguracji obsługi błędów w ASP.NET Core:</h2>
+				<div class="code-block">
+								<pre>
+										<code class="language-csharp">
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    if (env.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-    }
-    else
-    {
-        app.UseExceptionHandler("/Error");
-        app.UseHsts();
-    }
+		if (env.IsDevelopment())
+		{
+				app.UseDeveloperExceptionPage();
+		}
+		else
+		{
+				app.UseExceptionHandler("/Error");
+				app.UseHsts();
+		}
 
-    app.UseStatusCodePagesWithReExecute("/Error/{0}");
+		app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
-    // pozostałe middlewares
+		// pozostałe middlewares
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
-    app.UseRouting();
-    app.UseAuthentication();
-    app.UseAuthorization();
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
-    });
+		app.UseHttpsRedirection();
+		app.UseStaticFiles();
+		app.UseRouting();
+		app.UseAuthentication();
+		app.UseAuthorization();
+		app.UseEndpoints(endpoints =>
+		{
+				endpoints.MapControllerRoute(
+						name: "default",
+						pattern: "{controller=Home}/{action=Index}/{id?}");
+		});
 }
-                    </code>
-                </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W powyższym przykładzie, w zależności od trybu uruchomienia aplikacji (tryb deweloperski lub produkcyjny), używany jest odpowiedni middleware: UseDeveloperExceptionPage w trybie deweloperskim lub UseExceptionHandler i UseHsts w trybie produkcyjnym. Middleware UseStatusCodePagesWithReExecute umożliwia wyświetlanie komunikatów błędów w przypadku niepowodzenia żądania HTTP.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_error(2).png" alt=""> Akcja Index obsługująca wyjątki i wyświetlająca komunikaty błędów:</h2>
-        <div class="code-block">
-                <pre>
-                    <code class="language-csharp">
+										</code>
+								</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W powyższym przykładzie, w zależności od trybu uruchomienia aplikacji (tryb deweloperski lub produkcyjny), używany jest odpowiedni middleware: UseDeveloperExceptionPage w trybie deweloperskim lub UseExceptionHandler i UseHsts w trybie produkcyjnym. Middleware UseStatusCodePagesWithReExecute umożliwia wyświetlanie komunikatów błędów w przypadku niepowodzenia żądania HTTP.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_error(2).png" alt=""> Akcja Index obsługująca wyjątki i wyświetlająca komunikaty błędów:</h2>
+				<div class="code-block">
+								<pre>
+										<code class="language-csharp">
 public class ErrorController : Controller
 {
-    [Route("Error/{statusCode}")]
-    public IActionResult Index(int statusCode)
-    {
-        switch (statusCode)
-        {
-            case 404:
-                ViewBag.ErrorMessage = "Nie znaleziono strony.";
-                break;
-            default:
-                ViewBag.ErrorMessage = "Wystąpił błąd.";
-                break;
-        }
+		[Route("Error/{statusCode}")]
+		public IActionResult Index(int statusCode)
+		{
+				switch (statusCode)
+				{
+						case 404:
+								ViewBag.ErrorMessage = "Nie znaleziono strony.";
+								break;
+						default:
+								ViewBag.ErrorMessage = "Wystąpił błąd.";
+								break;
+				}
 
-        return View();
-    }
+				return View();
+		}
 }
-                    </code>
-                </pre>
-        </div>
-        <div class="minus-margin-top"></div>
-        <div class="alert-card alert-card3 alert-card-gray">
-            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-            <b>Wyjaśnienie</b>
-            <div class="line"></div>
-            <p>
-                W tym przypadku, akcja Index obsługuje błędy HTTP, takie jak 404 lub 500, i wyświetla odpowiednie komunikaty błędów na widoku Error.cshtml.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b>Ważne</b>
-            <div class="line"></div>
-            <p>
-                Obsługa błędów jest bardzo ważna dla poprawnej pracy aplikacji internetowej, a dzięki wbudowanym middleware'om w ASP.NET Core oraz zaimplementowaniu odpowiedniego kontrolera i widoków, można zapewnić użytkownikom wysoki poziom dostępności i wygodne korzystanie z aplikacji.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="Application_styling.html"><button>Dalej</button></a>
-        </div>
-    </div>
+										</code>
+								</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+						<b>Wyjaśnienie</b>
+						<div class="line"></div>
+						<p>
+								W tym przypadku, akcja Index obsługuje błędy HTTP, takie jak 404 lub 500, i wyświetla odpowiednie komunikaty błędów na widoku Error.cshtml.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b>Ważne</b>
+						<div class="line"></div>
+						<p>
+								Obsługa błędów jest bardzo ważna dla poprawnej pracy aplikacji internetowej, a dzięki wbudowanym middleware'om w ASP.NET Core oraz zaimplementowaniu odpowiedniego kontrolera i widoków, można zapewnić użytkownikom wysoki poziom dostępności i wygodne korzystanie z aplikacji.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="Application_styling.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

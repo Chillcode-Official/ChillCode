@@ -1,193 +1,193 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>ASP.NET {Implementacja serwisów RESTful}</title>
-    <link rel="stylesheet" href="../Basic.css"/>
+		<meta charset="UTF-8">
+		<title>ASP.NET {Implementacja serwisów RESTful}</title>
+		<link rel="stylesheet" href="../Basic.css"/>
 
-    <!-- Highlight JS init: -->
-    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-    <script src="/Highlight/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 </head>
 <body>
 
 <div class="page-content">
-    <div class="navbar">
-        <section>
-            <ul>
-                <button><li><a href="../EduBear.html">Home</a></li></button>
-                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-                <button><li><a href="/About/About.html">About me</a></li></button>
-            </ul>
-        </section>
-    </div>
+		<div class="navbar">
+				<section>
+						<ul>
+								<button><li><a href="../EduBear.html">Home</a></li></button>
+								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+								<button><li><a href="/About/About.html">About me</a></li></button>
+						</ul>
+				</section>
+		</div>
 
-    <div class="roadmap-list">
-        <ol>
-            <li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
-            <li><a href="Quick_start.html">Szybki start</a></li>
-            <li><a href="Project_structure.html">Struktura projektu</a></li>
-            <li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
-            <li><a href="Routing.html">Routing</a></li>
-            <li><a href="Data_modeling.html">Modelowanie danych</a></li>
-            <li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
-            <li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
-            <li><a href="Middleware.html">Middleware</a></li>
-            <li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
-            <li><a href="Error_handling.html">Obsługa błędów</a></li>
-            <li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
-            <li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-            <li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
-            <li><a href="Application_testing.html">Testowanie aplikacji</a></li>
-            <li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
-            <li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
-            <li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
-            <li><a href="Summary.html">Podsumowanie</a></li>
-        </ol>
-    </div>
+		<div class="roadmap-list">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
+						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
 
-    <div class="content">
-        <h1>Implementacja Serwisów RESTful</h1>
-        <div class="section-with-image">
-            <p>
-                ASP.NET Core jest frameworkiem służącym do tworzenia aplikacji internetowych i serwerów sieciowych. Umożliwia on również implementację serwisów RESTful. Serwisy RESTful to architektura tworzenia aplikacji sieciowych, w której używa się protokołu HTTP do przesyłania danych w formacie JSON lub XML. Zasoby są identyfikowane za pomocą URI, a dostęp do nich jest kontrolowany przez metody HTTP, takie jak GET, POST, PUT i DELETE.
-            </p>
-            <img src="/img/vector153.png" alt="">
-        </div>
-        <div class="text-container light-container black-list no-margin-top list-spacing">
-            <div class="text-content">
-                <h3>Kroki do zaimplementowania serwisów RESTful w ASP.NET Core:</h3>
-            </div>
-            <div class="line"></div>
-            <div class="page-header"></div>
-            <ol>
-                <li>Utwórz nowy projekt ASP.NET Core w Visual Studio lub innym środowisku programistycznym.</li>
-                <li>Dodaj pakiet Microsoft.AspNetCore.Mvc do projektu. Pakiet ten zawiera klasy, które umożliwiają tworzenie serwisów RESTful.</li>
-                <li>Utwórz klasę kontrolera, która będzie zawierać metody HTTP dla poszczególnych zasobów. Każda metoda powinna zwracać odpowiedź w formacie JSON lub XML. </li>
-            </ol>
-        </div>
-        <div class="big-page-header"></div>
-        <h2><img class="icon-img-big" src="/img/icon_configure(3).png" alt=""> Przykładowa klasa kontrolera</h2>
-        <div class="code-block">
-            <pre>
-                <code>
+		<div class="content">
+				<h1>Implementacja Serwisów RESTful</h1>
+				<div class="section-with-image">
+						<p>
+								ASP.NET Core jest frameworkiem służącym do tworzenia aplikacji internetowych i serwerów sieciowych. Umożliwia on również implementację serwisów RESTful. Serwisy RESTful to architektura tworzenia aplikacji sieciowych, w której używa się protokołu HTTP do przesyłania danych w formacie JSON lub XML. Zasoby są identyfikowane za pomocą URI, a dostęp do nich jest kontrolowany przez metody HTTP, takie jak GET, POST, PUT i DELETE.
+						</p>
+						<img src="/img/vector153.png" alt="">
+				</div>
+				<div class="text-container light-container black-list no-margin-top list-spacing">
+						<div class="text-content">
+								<h3>Kroki do zaimplementowania serwisów RESTful w ASP.NET Core:</h3>
+						</div>
+						<div class="line"></div>
+						<div class="page-header"></div>
+						<ol>
+								<li>Utwórz nowy projekt ASP.NET Core w Visual Studio lub innym środowisku programistycznym.</li>
+								<li>Dodaj pakiet Microsoft.AspNetCore.Mvc do projektu. Pakiet ten zawiera klasy, które umożliwiają tworzenie serwisów RESTful.</li>
+								<li>Utwórz klasę kontrolera, która będzie zawierać metody HTTP dla poszczególnych zasobów. Każda metoda powinna zwracać odpowiedź w formacie JSON lub XML. </li>
+						</ol>
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-big" src="/img/icon_configure(3).png" alt=""> Przykładowa klasa kontrolera</h2>
+				<div class="code-block">
+						<pre>
+								<code>
 [Route("api/[controller]")]
 [ApiController]
 public class ProductsController : ControllerBase
 {
-    private readonly IProductRepository _repository;
+		private readonly IProductRepository _repository;
 
-    public ProductsController(IProductRepository repository)
-    {
-        _repository = repository;
-    }
+		public ProductsController(IProductRepository repository)
+		{
+				_repository = repository;
+		}
 
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        var products = _repository.GetAll();
-        return Ok(products);
-    }
+		[HttpGet]
+		public IActionResult GetAll()
+		{
+				var products = _repository.GetAll();
+				return Ok(products);
+		}
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
-    {
-        var product = _repository.GetById(id);
-        if (product == null)
-        {
-            return NotFound();
-        }
-        return Ok(product);
-    }
+		[HttpGet("{id}")]
+		public IActionResult GetById(int id)
+		{
+				var product = _repository.GetById(id);
+				if (product == null)
+				{
+						return NotFound();
+				}
+				return Ok(product);
+		}
 
-    [HttpPost]
-    public IActionResult Create(Product product)
-    {
-        _repository.Add(product);
-        return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
-    }
+		[HttpPost]
+		public IActionResult Create(Product product)
+		{
+				_repository.Add(product);
+				return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+		}
 
-    [HttpPut("{id}")]
-    public IActionResult Update(int id, Product product)
-    {
-        if (id != product.Id)
-        {
-            return BadRequest();
-        }
+		[HttpPut("{id}")]
+		public IActionResult Update(int id, Product product)
+		{
+				if (id != product.Id)
+				{
+						return BadRequest();
+				}
 
-        _repository.Update(product);
-        return NoContent();
-    }
+				_repository.Update(product);
+				return NoContent();
+		}
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
-    {
-        var product = _repository.GetById(id);
-        if (product == null)
-        {
-            return NotFound();
-        }
+		[HttpDelete("{id}")]
+		public IActionResult Delete(int id)
+		{
+				var product = _repository.GetById(id);
+				if (product == null)
+				{
+						return NotFound();
+				}
 
-        _repository.Delete(product);
-        return NoContent();
-    }
+				_repository.Delete(product);
+				return NoContent();
+		}
 }
-                </code>
-            </pre>
-        </div>
-        <div class="page-header"></div>
-        <div class="text-container lightWhite-container black-list">
-            <div class="text-content minus-margin-top">
-                <h3><img class="icon-img-big" src="/img/icon_configure(4).png" alt=""> Skonfiguruj routing</h3>
-            </div>
-            <div class="line"></div>
-            <p>
-                Aby klasa kontrolera była dostępna z poziomu przeglądarki internetowej. Routing pozwala na mapowanie URI na odpowiednie akcje kontrolera. Aby skonfigurować routing, dodaj poniższy kod w metodzie ConfigureServices w pliku Startup.cs:
-            </p>
-            <div class="code-block">
-                <pre>
-                    <code class="language-csharp">
+								</code>
+						</pre>
+				</div>
+				<div class="page-header"></div>
+				<div class="text-container lightWhite-container black-list">
+						<div class="text-content minus-margin-top">
+								<h3><img class="icon-img-big" src="/img/icon_configure(4).png" alt=""> Skonfiguruj routing</h3>
+						</div>
+						<div class="line"></div>
+						<p>
+								Aby klasa kontrolera była dostępna z poziomu przeglądarki internetowej. Routing pozwala na mapowanie URI na odpowiednie akcje kontrolera. Aby skonfigurować routing, dodaj poniższy kod w metodzie ConfigureServices w pliku Startup.cs:
+						</p>
+						<div class="code-block">
+								<pre>
+										<code class="language-csharp">
 services.AddControllers();
 services.AddRouting(options =>
 {
-    options.LowercaseUrls = true;
-    options.LowercaseQueryStrings = true;
+		options.LowercaseUrls = true;
+		options.LowercaseQueryStrings = true;
 });
-                    </code>
-                </pre>
-            </div>
-            <p class="minus-margin-top">
-                Uruchom aplikację i przetestuj działanie serwisów RESTful w przeglądarce internetowej lub narzędziu do testowania API, takim jak Postman.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="alert-card alert-card3">
-            <img style="width: 50px;" src="/img/note.png" alt="">
-            <b>Note</b>
-            <div class="line"></div>
-            <p>
-                Zaimplementowanie serwisów RESTful w ASP.NET Core wymaga dodatkowych kroków, takich jak konfiguracja autoryzacji i uwierzytelniania oraz obsługa błędów. Jednak powyższe kroki powinny wystarczyć do podstawowej implementacji serwisów RESTful.
-            </p>
-            <p>
-                Implementacja serwisów RESTful w ASP.NET Core jest stosunkowo prosta i umożliwia szybkie tworzenie aplikacji sieciowych. Wymaga to jednak pewnej wiedzy z zakresu architektury serwisów sieciowych i programowania w C#.
-            </p>
-        </div>
-        <div class="page-header"></div>
-        <div class="alert-card alert-card3 alert-card-blue">
-            <img style="width: 50px;" src="/img/emergency.png" alt="">
-            <b> Ważne</b>
-            <div class="line"></div>
-            <p>
-                Pamiętaj, że ASP.NET Core umożliwia korzystanie z różnych formatów danych, takich jak JSON, XML, MessagePack i inne. Aby skonfigurować obsługę innego formatu, należy dodać odpowiedni pakiet i skonfigurować format w metodzie ConfigureServices w pliku Startup.cs.
-            </p>
-        </div>
-        <div class="big-page-header"></div>
-        <div class="btn">
-            <a href="WebSockets_implementation.html"><button>Dalej</button></a>
-        </div>
-    </div>
+										</code>
+								</pre>
+						</div>
+						<p class="minus-margin-top">
+								Uruchom aplikację i przetestuj działanie serwisów RESTful w przeglądarce internetowej lub narzędziu do testowania API, takim jak Postman.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="alert-card alert-card3">
+						<img style="width: 50px;" src="/img/note.png" alt="">
+						<b>Note</b>
+						<div class="line"></div>
+						<p>
+								Zaimplementowanie serwisów RESTful w ASP.NET Core wymaga dodatkowych kroków, takich jak konfiguracja autoryzacji i uwierzytelniania oraz obsługa błędów. Jednak powyższe kroki powinny wystarczyć do podstawowej implementacji serwisów RESTful.
+						</p>
+						<p>
+								Implementacja serwisów RESTful w ASP.NET Core jest stosunkowo prosta i umożliwia szybkie tworzenie aplikacji sieciowych. Wymaga to jednak pewnej wiedzy z zakresu architektury serwisów sieciowych i programowania w C#.
+						</p>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3 alert-card-blue">
+						<img style="width: 50px;" src="/img/emergency.png" alt="">
+						<b> Ważne</b>
+						<div class="line"></div>
+						<p>
+								Pamiętaj, że ASP.NET Core umożliwia korzystanie z różnych formatów danych, takich jak JSON, XML, MessagePack i inne. Aby skonfigurować obsługę innego formatu, należy dodać odpowiedni pakiet i skonfigurować format w metodzie ConfigureServices w pliku Startup.cs.
+						</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="WebSockets_implementation.html"><button>Dalej</button></a>
+				</div>
+		</div>
 </div>
 </body>
 </html>

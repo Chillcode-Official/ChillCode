@@ -1,14 +1,14 @@
 /* Road map - list */
 .roadmap-list{
-    grid-area: left-menu;
+		grid-area: left-menu;
 }
 .roadmap-list ol li a{
-    color: #c9c5ce;
-    text-decoration: none;
+		color: #c9c5ce;
+		text-decoration: none;
 }
 .roadmap-list ol li{
-    color: white;
-    margin: 0;
-    padding-top: 10px;
-    list-style-type: disc;
+		color: white;
+		margin: 0;
+		padding-top: 10px;
+		list-style-type: disc;
 }

@@ -1,80 +1,80 @@
 /*text-container*/
 .text-container{
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    background-position: center;
-    text-align: left;
-    letter-spacing: 1px;
-    font-size: 16px;
-    line-height: 25px;
-    background-color: #6f5103;
-    border: 3px solid black ;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+		padding: 15px 25px;
+		box-sizing: border-box;
+		background-position: center;
+		text-align: left;
+		letter-spacing: 1px;
+		font-size: 16px;
+		line-height: 25px;
+		background-color: #6f5103;
+		border: 3px solid black ;
+		box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
 }
 .text-container.fit-content{
-    height: fit-content;
+		height: fit-content;
 }
 .text-container-medium{
-    width: 430px;
+		width: 430px;
 }
 .text-container.blue-container{
-    background-color: #254388;
+		background-color: #254388;
 }
 .text-container.green-container{
-    background-color: #024113;
+		background-color: #024113;
 }
 .text-container.red-container{
-    background-color: #733232;
+		background-color: #733232;
 }
 .text-container.brown-container{
-    background-color: #4a2309;
+		background-color: #4a2309;
 }
 .text-container.cream-container{
-    background-color: #342921;
+		background-color: #342921;
 }
 .text-container.gray-container{
-    background-color: #29343a;
+		background-color: #29343a;
 }
 .text-container.lightGray-container{
-    background-color: #35464f;
+		background-color: #35464f;
 }
 .text-container.black-container{
-    background-color: #161818;
+		background-color: #161818;
 }
 .text-container.pink-container{
-    background-color: #601f35;
+		background-color: #601f35;
 }
 .text-container.purple-container{
-    background-color: #4a2e79;
+		background-color: #4a2e79;
 }
 .text-container.orange-container{
-    background-color: #622c17;
+		background-color: #622c17;
 }
 .text-container.lightGreen-container{
-    background-color: #175d2c;
+		background-color: #175d2c;
 }
 .text-container.azure-container{
-    background-color: #4c4e81;
+		background-color: #4c4e81;
 }
 .text-container.lightBrown-container{
-    background-color: #523224;
+		background-color: #523224;
 }
 .text-container.white-container{
-    background-color: #574f34;
+		background-color: #574f34;
 }
 .text-container.lightPink-container{
-    background-color: #73374c;
+		background-color: #73374c;
 }
 .text-container.lightWhite-container{
-    background-color: #bdacac;
+		background-color: #bdacac;
 }
 .text-container.lightOrange-container{
-    background-color: #73422f;
+		background-color: #73422f;
 }
 .text-container.light-container{
-    background-color: #bb9c9c
+		background-color: #bb9c9c
 }
 .text-container.line-height-plus{
-    line-height: 40px;
+		line-height: 40px;
 }
