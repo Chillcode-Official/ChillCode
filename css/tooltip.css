@@ -28,4 +28,6 @@
 }
 .tooltip a:hover:before, .tooltip a:hover:after {
     display: block;
+    z-index: 1;
+    white-space: break-spaces; /* --możliwość popsucia*/
 }

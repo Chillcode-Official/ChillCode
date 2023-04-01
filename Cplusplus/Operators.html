@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cplusplus {Operatory}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Arguments.html">Argumenty</a></li>
+            <li><a href="Return_values.html">Wartości zwracane</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Indicators.html">Wskaźniki</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Operatory</h1>
+                <p>
+                    Operator w języku C++ to symbol, który umożliwia manipulowanie danymi i wykonywanie operacji na zmiennych. W C++ jest wiele rodzajów operatorów. C++ umożliwia przeciążanie operatorów, co oznacza, że można ponownie zdefiniować zachowanie operatora dla niestandardowego typu danych.
+                </p>
+            </div>
+            <img src="/img/vector182.png" alt="">
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_book(4).png" alt=""> Operatory przypisania</h2>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            W C++ operatory przypisania umożliwiają przypisanie wartości do zmiennej lub obiektu przy użyciu jednego z operatorów przypisania. Dostępne operatory przypisania to:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int a = 5;
+
+a += 3;     // a = a + 3   Przypisanie z dodaniem (+=)
+
+a -= 2;     // a = a - 2   Przypisanie z odejmowaniem  (-=)
+
+a *= 4;     // a = a * 4   Przypisanie z mnożeniem (*=)
+
+a /= 2;     // a = a / 2   Przypisanie z dzieleniem (/=)
+
+a %= 3;     // a = a % 3   Przypisanie z modulo (%=)
+
+a <<= 2;    // a = a << 2  (przesunięcie bitowe w lewo o 2 miejsca)
+
+a >>= 1;    // a = a >> 1  (przesunięcie bitowe w prawo o 1 miejsce)
+
+a |= 1;     // a = a | 1   (bitowe "lub" z wartością 1)
+
+a &= 3;     // a = a & 3   (bitowe "i" z wartością 3)
+
+a ^= 5;     // a = a ^ 5   (bitowe "xor" z wartością 5)
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_arithmetic(2).png" alt=""> Operatory arytmetyczne</h2>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            Operatory arytmetyczne w C++ umożliwiają wykonywanie operacji matematycznych na zmiennych. W C++ dostępne są następujące operatory arytmetyczne:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int a = 5, b = 3;
+
+int c = a + b;    // dodawanie
+
+int d = a - b;    // odejmowanie
+
+int e = a * b;    // mnożenie
+
+int f = a / b;    // dzielenie całkowitoliczbowe
+
+int g = a % b;    // modulo (reszta z dzielenia)
+
+a++;              // inkrementacja (zwiększenie o 1)
+
+b--;              // dekrementacja (zmniejszenie o 1)
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_porownanie.png" alt=""> Operatory porównania</h2>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            W C++ operatory porównania umożliwiają porównywanie dwóch wartości i zwracanie wyniku w postaci wartości logicznej true/false. Operator porównania zwraca wartość true, jeśli warunek jest spełniony, a false w przeciwnym przypadku. Dostępne operatory porównania to:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int a = 5;
+int b = 3;
+
+bool result = (a == b);     // false, ponieważ a nie jest równe b
+
+result = (a != b);          // true, ponieważ a nie jest równe b
+
+result = (a > b);           // true, ponieważ a jest większe od b
+
+result = (a < b);           // false, ponieważ a jest mniejsze od b
+
+result = (a >= b);          // true, ponieważ a jest większe bądź równe b
+
+result = (a <= b);          // false, ponieważ a jest mniejsze bądź równe b
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_logic.png" alt=""> Operatory logiczne</h2>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            Operatory logiczne w języku C++ służą do porównywania wartości logicznych (typu bool) i zwracają wartości logiczne. Są one używane do tworzenia warunków logicznych, które umożliwiają wykonywanie różnych działań w zależności od spełnienia lub niespełnienia warunków.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+   bool a = true;
+   bool b = false;
+   bool c = true;
+
+   // Operator && (AND logiczny)
+   if (a && c) {
+      cout << "Oba warunki sa spelnione" << endl;
+   } else {
+      cout << "Chociaz jeden z warunkow nie jest spelniony" << endl;
+   }
+
+   // Operator || (OR logiczny)
+   if (a || b) {
+      cout << "Przynajmniej jeden warunek jest spelniony" << endl;
+   } else {
+      cout << "Zaden z warunkow nie jest spelniony" << endl;
+   }
+
+   // Operator ! (NOT logiczny)
+   if (!b) {
+      cout << "Zmienna b ma wartosc false" << endl;
+   } else {
+      cout << "Zmienna b ma wartosc true" << endl;
+   }
+
+   return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    <p>Oba warunki sa spelnione</p>
+                    <p>Przynajmniej jeden warunek jest spelniony</p>
+                    <p>Zmienna b ma wartosc false</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 alert-card-blue">
+            <img style="width: 50px;" src="/img/emergency.png" alt="">
+            <b>Ważne</b>
+            <div class="line"></div>
+            <p>
+                Operatorzy w języku C++ są bardzo ważne, ponieważ pozwalają na wykonywanie różnych działań na danych i ułatwiają pisanie skutecznych i wydajnych programów. Zrozumienie, jak działają różne operatory, jest kluczowe dla pisania poprawnego i efektywnego kodu w języku C++.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Conditional_statements.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

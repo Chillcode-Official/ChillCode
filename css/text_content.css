@@ -11,3 +11,6 @@
 .text-content p{
     line-height: 2em;
 }
+.paragraf-margin-left p{
+    margin-left: 20px;
+}

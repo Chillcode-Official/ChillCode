@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Polimorfizm C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a> </li>
+            <li><a href="Comments.html">Komentarze</a> </li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Fields.html">Pola</a></li>
+            <li><a href="Properties.html">Właściwości</a></li>
+            <li><a href="Constant.html">Stałe</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Collections.html">Kolekcje</a></li>
+            <li><a href="Classes.html">Klasy</a></li>
+            <li><a href="Inheritance.html">Dziedziczenie</a></li>
+            <li><a href="Polymorphism.html">Polimorfizm</a></li>
+            <li><a href="Type_conversion.html">Konwersja typów</a></li>
+            <li><a href="String_types.html">Typy łańcuchowe</a></li>
+            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfaces.html">Interfejsy</a></li>
+            <li><a href="Static_classes.html">Klasy statyczne</a></li>
+            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+            <li><a href="Exceptions.html">Wyjątki</a></li>
+            <li><a href="Generic_types.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Polimorfizm Statyczny</h1>
+        <div class="section-with-image">
+            <p>
+                Polimorfizm statyczny, inaczej zwany "compile-time polymorphism" lub "overloading"
+                polega na możliwości istnienia kilku metod o tej samej nazwie ale różniących się liczbą
+                lub typem argumentów. Czyli, metoda przyjmuje różne argumenty i wykonuje różne operacje w
+                zależności od tego, jaki zestaw argumentów został przekazany.
+            </p>
+            <img src="/img/vector52.png" alt="">
+        </div>
+        <p class="text-container white-container">
+            Polimorfizm jest realizowany za pomocą metod wirtualnych i przesłaniania metod. Metoda
+            wirtualna pozwala na redefiniowanie jej w klasie pochodnej, natomiast przesłanianie metod
+            pozwala na nadpisanie implementacji metody w klasie pochodnej.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int wynik = Calculator.Dodaj(1, 2); // 1 + 2 = 3
+
+        double wynik1 = Calculator.Dodaj(1.0, 4.5);  // 1 + 4.5 = 5.5
+
+        Console.WriteLine(wynik + wynik1);  // 5.5 + 3 = 8.5
+    }
+
+
+    class Kalkulator
+    {
+        public static int Dodaj(int a, int b)
+        {
+            return a + b;
+        }
+
+         public static double Dodaj(double a, double b)
+        {
+            return a + b;
+        }
+    }
+}
+
+//output: 8,5
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Przeciążenie Metod</h2>
+        <p class="text-content-500width">
+            Przeciążanie metod to specyficzna forma polimorfizmu statycznego, która polega na możliwości
+            stworzenia kilku metod o tej samej nazwie ale różniących się liczbą, typem lub kolejnością argumentów.
+            Dzięki temu możliwe jest wywołanie odpowiedniej implementacji metody na podstawie argumentów,
+            które zostaną przekazane.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Matematyka
+{
+    public int Dodaj(int a, int b)
+    {
+        return a + b;
+    }
+
+    public double Dodaj(double a, double b)
+    {
+        return a + b;
+    }
+
+    public decimal Dodaj(decimal a, decimal b)
+    {
+        return a + b;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="gray-container text-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie mamy trzy metody o nazwie Dodaj, które przyjmują różne typy
+                argumentów (int, double, decimal) i zwracają różne typy wyników. Dzięki temu,
+                program może wybrać odpowiednią metodę Dodaj na podstawie argumentów przekazanych do metody.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Przeciążenie Operatorów</h2>
+        <p class="text-content-500width">
+            Przeciążanie operatorów polega na możliwości nadania nowego znaczenia standardowym operatorom,
+            takim jak +, -, * itp. dla konkretnej klasy lub struktury. Dzięki temu, operator może wykonywać
+            inną operację niż jego standardowe znaczenie dla danego typu danych.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+class Vektor
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+
+
+    public Vektor(double x, double y)
+    {
+        X = x;
+
+        Y = y;
+    }
+
+    public static Vektor operator +(Vektor a, Vektor b)
+    {
+        return new Vektor(a.X + b.X, a.Y + b.Y);
+    }
+
+
+    public static Vektor operator -(Vektor a, Vektor b)
+    {
+        return new Vektor(a.X - b.X, a.Y - b.Y);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="gray-container text-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, klasa Vektor posiada dwa właściwości X i Y oraz przeciążone operatory + i -,
+                które pozwalają na dodawanie oraz odejmowanie dwóch obiektów klasy Vektor jakby były to wektory
+                w przestrzeni.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Operatory Przeciążalne i Nieprzeciążalne</h2>
+        <div class="section-with-image">
+            <p>
+                W języku C# istnieją operatory, które mogą być przeciążane (overloaded) oraz operatory,
+                które nie mogą być przeciążane. Operatory przeciążalne to takie, które mogą być przypisane
+                do konkretnej klasy lub struktury, aby działały inaczej niż ich standardowe znaczenie.
+                Natomiast operatory nieprzeciążalne to te, które mają swoje znaczenie dla wszystkich typów
+                danych i nie można ich przeciążyć.
+            </p>
+            <img src="/img/vector33.png" alt="">
+        </div>
+        <p class="text-container orange-container no-margin-top">
+            W tym przykładzie, operator + jest operatorem nieprzeciążalnym i działa standardowo jako operator dodawania dla typów liczbowych.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+int a = 5;
+
+int b = 2;
+
+int c = a + b;
+
+Console.WriteLine(c);
+
+//output: 7
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <div class="Table">
+            <table>
+                <tr>
+                    <th>operatory przeciążalne</th>
+                    <th>operatory nie przeciążalne</th>
+                </tr>
+                <tr>
+                    <td><pre>+,  -,  !,  ~,  ++,  --</pre></td>
+                    <td><pre>&&,  ||</pre></td>
+                </tr>
+                <tr>
+                    <td><pre>==,  !=,  <, >,  <=,  >=</pre></td>
+                    <td><pre>+=,  -=,  *=,  /=,  %=</pre></td>
+                </tr>
+                <tr>
+                    <td><pre>+,  -,  *,  /,  %</pre></td>
+                    <td><pre>=,  .,  ?:,  ->,  new,  is,  sizeof,  typeof</pre></td>
+                </tr>
+            </table>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="code-block">
+            <pre>
+                <code>
+class Vektor2D
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+
+
+    public Vektor2D(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+
+
+    public static Vektor2D operator +(Vektor2D a, Vektor2D b)
+    {
+        return new Vektor2D(a.X + b.X, a.Y + b.Y);
+    }
+
+
+    public static Vektor2D operator /(Vektor2D a, double b)
+    {
+        if(b == 0) throw new DivideByZeroException();
+        return new Vektor2D(a.X / b, a.Y / b);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, klasa Vektor2D posiada przeciążone operatory +, -, * i /, które pozwalają na
+                operowanie na obiektach tej klasy jak na wektorach w przestrzeni.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Polimorfizm Dynamiczny</h1>
+        <div class="section-with-image">
+            <p>
+                Polimorfizm dynamiczny, inaczej zwany "runtime polymorphism" lub "overriding", polega na tym,
+                że metoda o tej samej nazwie i sygnaturze (liczba i typ argumentów) może zachowywać się inaczej
+                w zależności od typu obiektu, na którym jest wywoływana.
+            </p>
+            <img src="/img/vector49.png" alt="">
+        </div>
+        <p class="text-container azure-container article tooltip">
+            Jeżeli masz zdefiniowaną metodę w klasie bazowej, ale chcesz, żeby została zaimplementowana w
+            klasach pochodnych możesz do tego celu zastosować <code><a href="#" pro-tip="hej">metody virtulane</a></code>.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Zwierzeta[] listaZwierzat = { new Pies(), new Kot() };
+
+        foreach (Zwierzeta ssaki in listaZwierzat)
+        {
+            ssaki.DajGlos();
+        }
+    }
+
+
+    class Zwierzeta
+    {
+        public virtual void DajGlos()
+        {
+            Console.WriteLine("zwierzę wydaje dźwięk");
+        }
+    }
+
+
+    class Kot : Zwierzeta
+    {
+        public override void DajGlos()
+        }
+            Console.WriteLine("Miauu!");
+        }
+    }
+}
+
+//output: Miauu!
+                </code>
+            </pre>
+        </div>
+        <div class="gray-container text-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, klasa Zwierzta posiada metodę DajGlos() oznaczoną jako wirtualną,
+                co pozwala na jej przesłanianie w klasie dziedzicznej Kot. W metodzie
+                Main program tworzy tablicę z obiektem klasy dziedzicznej Zwierzeta i wywołuje
+                na nich DajGlos(). W wyniku tego, każdy obiekt wykona swoją własną implementację metody
+                DajGlos() i wyświetli odpowiedni dźwięk.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Type_conversion.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

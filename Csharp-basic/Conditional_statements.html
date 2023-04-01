@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>C# {Instrukcje warunkowe}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a> </li>
+            <li><a href="Comments.html">Komentarze</a> </li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Fields.html">Pola</a></li>
+            <li><a href="Properties.html">Właściwości</a></li>
+            <li><a href="Constant.html">Stałe</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Collections.html">Kolekcje</a></li>
+            <li><a href="Classes.html">Klasy</a></li>
+            <li><a href="Inheritance.html">Dziedziczenie</a></li>
+            <li><a href="Polymorphism.html">Polimorfizm</a></li>
+            <li><a href="Type_conversion.html">Konwersja typów</a></li>
+            <li><a href="String_types.html">Typy łańcuchowe</a></li>
+            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfaces.html">Interfejsy</a></li>
+            <li><a href="Static_classes.html">Klasy statyczne</a></li>
+            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+            <li><a href="Exceptions.html">Wyjątki</a></li>
+            <li><a href="Generic_types.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Instrukcja (if)</h1>
+                <p>
+                    Instrukcja warunkowa if jest używana do sprawdzenia warunku i wykonania określonych
+                    akcji w zależności od tego, czy warunek jest spełniony, czy nie. Składnia instrukcji
+                    if wygląda następująco
+                </p>
+            </div>
+            <img src="/img/vector38.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            Instrukcja warunkowa <code><a href="#" pro-tip="">if</a></code> służy do wykonania określonego bloku kodu tylko wtedy, gdy podany warunek jest prawdziwy. Oto ogólny wzór instrukcji warunkowej if:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+if (warunek)
+{
+    // kod do wykonania, jeśli warunek jest spełniony
+}
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_learn(6).png" alt=""> Użycie Instrukcji if</h2>
+        <div class="code-block">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int liczba = 5;
+
+        if (liczba > 0)
+        {
+            Console.WriteLine("Liczba jest dodatnia.");
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Liczba jest dodatnia.
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Instrukcja Warunkowa else</h1>
+        <div class="section-with-image">
+            <p>
+                Instrukcja else jest używana w połączeniu z instrukcją warunkową if do wykonania
+                określonych akcji, jeśli warunek sprawdzony przy użyciu instrukcji if nie jest
+                spełniony, program wykonuje instrukcje else.
+            </p>
+            <img src="/img/vector40.png" alt="">
+        </div>
+        <p class="text-container blue-container article tooltip no-margin-top">
+            Instrukcja <code><a href="#" pro-tip="">else</a></code> jest opcjonalna i może być pominięta, jeśli nie chcesz wykonywać żadnych akcji,
+            jeśli warunek nie jest spełniony. Oto ogólny wzór instrukcji warunkowej else:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+if (warunek)
+{
+    // blok kodu do wykonania, jeśli warunek jest prawdziwy
+}
+else
+{
+    // blok kodu do wykonania, jeśli warunek jest fałszywy
+}
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_learn(6).png" alt=""> Użycie Instrukcji else</h2>
+        <div class="code-block">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int wiek = 16;
+
+        if (wiek >= 18)  //instrukcja if sprawdza czy zmienna wiek jest większa lub równa 18
+        {
+            Console.WriteLine("Jesteś pełnoletni");
+        }
+
+        else  //w tym przypadku nasza zmienna wiek była ponieżej 18 dlatego program wywoła instrukcje else
+        {
+            Console.WriteLine("Nie jesteś pełnoletni");
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Nie jesteś pełnoletni
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h1>Instrukcja Warunkowa else if</h1>
+        <div class="section-with-image">
+            <p>
+                Instrukcja else jest używana w połączeniu z instrukcją warunkową if do wykonania
+                określonych akcji, jeśli warunek sprawdzony przy użyciu instrukcji if nie jest
+                spełniony, program wykonuje instrukcje else.
+            </p>
+            <img src="/img/vector172.png" alt="">
+        </div>
+        <p class="text-container red-container article tooltip no-margin-top">
+            instrukcja warunkowa <code><a href="#" pro-tip="">else if</a></code> służy do przetestowania kolejnego warunku, jeśli poprzedni warunek w instrukcji if nie został spełniony. Oto ogólny wzór instrukcji warunkowej if-else if:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+if (warunek1)
+{
+    // kod do wykonania, jeśli warunek1 jest spełniony
+}
+else if (warunek2)
+{
+    // kod do wykonania, jeśli warunek1 nie jest spełniony, ale warunek2 jest spełniony
+}
+else
+{
+    // kod do wykonania, jeśli żaden z warunków nie jest spełniony
+}
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_learn(6).png" alt=""> Użycie Instrukcji else</h2>
+        <div class="code-block">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int x = 8;
+
+        if (x > 8)
+        {
+            Console.WriteLine("x jest większe od 8");
+        }
+
+        else if (x == 8)
+        {
+            Console.WriteLine("x jest równe 8");
+        }
+
+        else
+        {
+            Console.WriteLine("x jest mniejsze od 8");
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    x jest równe 8
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Jeśli wyrażenie else if zostanie spełnione program nie wejdzie do żadnego innego warunku else if lub else
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Zagnieżdżona Instrukcja if</h1>
+                <p>
+                    Instrukcja warunkowa if może być zagnieżdżona w innej instrukcji if, co pozwala
+                    na sprawdzenie wielu warunków w ramach jednej instrukcji.
+                </p>
+            </div>
+            <img src="/img/vector148.png" alt="">
+        </div>
+        <p class="text-container lightPink-container no-margin-top article tooltip">
+            instrukcja <code><a href="#" pro-tip="">if</a></code> może być zagnieżdżona w innym bloku kodu, na przykład w innym bloku if lub pętli. Oto przykładowy kod z zagnieżdżoną instrukcją if:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int wiek = 20;
+        string imie = "Jan";
+
+        if (wiek >= 18)
+        {
+            Console.WriteLine("Jesteś pełnoletni.");
+            if (imie == "Jan")
+            {
+                Console.WriteLine("Jesteś Janem.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Jesteś niepełnoletni.");
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    <p>Jesteś pełnoletni.</p>
+                    <p>Jesteś Janem.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W tym przykładzie, jeśli wartość zmiennej "wiek" jest większa lub równa 18, wyświetli się napis "Jesteś pełnoletni." na konsoli. Następnie sprawdzany jest warunek, czy zmienna "imie" ma wartość "Jan". Jeśli tak, wyświetli się napis "Jesteś Janem.". Jeśli warunek wewnętrznej instrukcji if nie zostanie spełniony, to nic się nie wyświetli.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Instrukcja Wyboru Switch</h1>
+                <p>
+                    Instrukcja wyboru switch jest używana do sprawdzania różnych wartości jednej zmiennej
+                    i wykonania określonych akcji w zależności od tej wartości.
+                </p>
+            </div>
+            <img src="/img/vector103.png" alt="">
+        </div>
+        <p class="text-container azure-container article tooltip no-margin-top">
+            Instrukcja wyboru <code><a href="#" pro-tip="">switch</a></code> służy do testowania wartości zmiennej lub wyrażenia i podejmowania odpowiednich działań w zależności od wartości. Oto ogólny wzór instrukcji switch:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+switch (zmienna)
+{
+    case wartosc1:
+        // kod do wykonania, jeśli zmienna jest równa wartosc1
+        break;
+
+
+    case wartosc2:
+        // kod do wykonania, jeśli zmienna jest równa wartosc2
+        break;
+
+
+    default:
+        // kod do wykonania, jeśli żadna z powyższych wartości nie jest spełniona
+        break;
+}
+                </code>
+            </pre>
+        </div>
+        <h2><img class="icon-img-big" src="/img/icon_learn(6).png" alt=""> Użycie Instrukcji else</h2>
+        <div class="code-block">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int ocena = 5;
+
+        switch (ocena)
+        {
+            case 6:
+                Console.WriteLine("Ocena celująca");
+                break;
+
+            case 5:
+                Console.WriteLine("Ocena bardzo dobra");
+                break;
+
+            case 4:
+                Console.WriteLine("Ocena dobra");
+                break;
+
+            case 3:
+                Console.WriteLine("Ocena dostateczna");
+                break;
+
+            case 2:
+                Console.WriteLine("Ocena Niedopuszczalna");
+                break;
+
+            case 1:
+                Console.WriteLine("Ocena niedostateczna");
+                break;
+
+            default:
+                Console.WriteLine("Nieznana ocena");
+                break;
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Ocena bardzo dobra
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="double-elements">
+            <div class="alert-card alert-card3 alert-card-medium">
+                <img style="width: 50px;" src="/img/note.png" alt="">
+                <b>Note</b>
+                <div class="line"></div>
+                <p>
+                    Słowo kluczowe break jest używane do przerwania dalszego sprawdzania i przejścia do kodu po instrukcji switch.
+                </p>
+            </div>
+            <div class="alert-card alert-card3 alert-card-medium">
+                <img style="width: 50px;" src="/img/note.png" alt="">
+                <b>Note</b>
+                <div class="line"></div>
+                <p>
+                    Opcja default jest opcjonalna i jest wykonywana, jeśli żadna inna opcja nie zostanie spełniona.
+                </p>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Zagnieżdżona Instrukcja switch</h1>
+                <p>
+                    instrukcja wyboru switch może być również zagnieżdżona w innej instrukcji switch lub instrukcji warunkowej if.
+                </p>
+            </div>
+            <div class="images4">
+            <img src="/img/vector44.png" alt="">
+            </div>
+        </div>
+        <p class="text-container lightGray-container no-margin-top article tooltip">
+            Instrukcję <code><a href="#" pro-tip="">switch</a></code> można również zagnieżdżać, czyli umieszczać ją wewnątrz innej instrukcji switch lub w innym bloku kodu. Oto przykład zagnieżdżonej instrukcji switch:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int liczba1 = 2;
+        int liczba2 = 3;
+        char operacja = '+';
+
+        switch (operacja)
+        {
+            case '+':
+                switch (liczba1)
+                {
+                    case 1:
+                        Console.WriteLine("Wynik: " + (liczba1 + liczba2));
+                        break;
+                    case 2:
+                        Console.WriteLine("Wynik: " + (liczba1 + liczba2 + 1));
+                        break;
+                    // ... kolejne przypadki ...
+                    default:
+                        Console.WriteLine("Nieznany przypadek");
+                        break;
+                }
+                break;
+            case '-':
+                // ... kolejna instrukcja switch dla przypadku '-'
+                break;
+            // ... kolejne przypadki ...
+            default:
+                Console.WriteLine("Nieznany przypadek");
+                break;
+        }
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Wynik: 6
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Loops.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cpp {Argumenty}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Arguments.html">Argumenty</a></li>
+            <li><a href="Return_values.html">Wartości zwracane</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Indicators.html">Wskaźniki</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Argumenty</h1>
+                <p>
+                    W języku C++, argumenty to wartości przekazywane do funkcji podczas jej wywołania. Funkcja może przyjmować jeden lub więcej argumentów, które określają informacje, na podstawie których funkcja będzie działać.
+                </p>
+            </div>
+            <img src="/img/vector74.png" alt="">
+        </div>
+        <p class="text-container red-container no-margin-top article tooltip">
+            Przykładowo, to jest <code><a href="Functions.html" pro-tip="">funkcja <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> dodawania dwóch liczb:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int dodaj(int a, int b) {
+    return a + b;
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Funkcja ta przyjmuje dwa <code><a href="#" pro-tip="">argumenty <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> typu int o nazwach a i b. Gdy funkcja jest wywoływana, wartości przekazywane jako argumenty zostaną przypisane do zmiennych a i b. Na przykład, jeśli wywołujemy tę funkcję w ten sposób:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int wynik = dodaj(3, 5);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container">
+            Zmienna wynik będzie miała wartość 8, ponieważ funkcja dodaj zostanie wywołana z argumentami 3 i 5, a następnie zwróci ich sumę.
+        </p>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Argumenty mogą mieć różne typy, w zależności od potrzeb funkcji. Funkcja może również przyjmować argumenty opcjonalne, które nie muszą być przekazywane podczas wywoływania funkcji.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Przykłady użycia Argumentów</h1>
+                <p>
+                    Możliwe jest przekazywanie argumentów przez wartość lub przez referencję. Gdy argument jest przekazywany przez wartość, funkcja tworzy kopię wartości argumentu. Gdy argument jest przekazywany przez referencję, funkcja otrzymuje bezpośredni dostęp do zmiennej argumentu i może ją zmodyfikować. Aby przekazać argument przez referencję, należy użyć operatora &. Na przykład:
+                </p>
+            </div>
+            <img src="/img/vector104.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top">
+            Aby przekazać argument przez referencję, należy użyć operatora &. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltiostream&gt
+
+using namespace std;
+
+void zwieksz(int& x) {
+    x++;
+}
+
+int main() {
+    int a = 5;
+    zwieksz(a);
+    cout << a << endl; // wypisze "6"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    6
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            Można przekazywać tablice jako argumenty funkcji. W języku C++ tablice są przekazywane przez referencję, więc funkcja otrzymuje bezpośredni dostęp do elementów tablicy. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltiostream&gt
+
+using namespace std;
+
+void wypisz(int tab[], int rozmiar) {
+    for (int i = 0; i < rozmiar; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int tablica[] = {1, 2, 3, 4, 5};
+    wypisz(tablica, 5); // wypisze "1 2 3 4 5"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    1 2 3 4 5
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container purple-container">
+            Funkcje mogą mieć wiele argumentów. Przykładowo, funkcja sqrt z biblioteki matematycznej przyjmuje jeden argument typu double i zwraca pierwiastek kwadratowy tej wartości. Funkcja pow przyjmuje dwa argumenty typu double i zwraca pierwszy argument podniesiony do potęgi drugiego argumentu. Oto przykład użycia tych funkcji:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltcmath&gt
+#include &ltiostream&gt
+
+using namespace std;
+
+int main() {
+
+    double x = 16.0;
+    double y = 2.0;
+    double pierwiastek = sqrt(x);
+    double potega = pow(x, y);
+    cout << "Pierwiastek kwadratowy z " << x << " to " << pierwiastek << endl;
+    cout << x << " do potęgi " << y << " to " << potega << endl;
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    <p>Pierwiastek kwadratowy z 16 to 4</p>
+                    <p>16 do potęgi 2 to 256</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            Argumenty można domyślnie inicjować, co pozwala na wywołanie funkcji bez podawania wartości tych argumentów. Argumenty domyślne muszą być zdefiniowane w prototypie funkcji. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+
+void wypisz_wiadomosc(string imie = "świecie") {
+    cout << "Witaj, " << imie << "!" << endl;
+}
+
+int main() {
+    wypisz_wiadomosc(); // wypisze "Witaj, świecie!"
+    wypisz_wiadomosc("Jan"); // wypisze "Witaj, Jan!"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    <p>Witaj, świecie!</p>
+                    <p>Witaj, Jan!</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header purple-container"></div>
+        <p class="text-container purple-container">
+            Argumenty można również przekazywać jako wartości domyślne. W takim przypadku funkcja korzysta z wartości domyślnych, jeśli argumenty nie zostały przekazane podczas wywoływania funkcji. Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltiostream&gt
+using namespace std;
+
+void podziel(int x = 10, int y = 2) {
+    cout << x / y << endl;
+}
+
+int main() {
+    podziel(); // wypisze "5"
+    podziel(20); // wypisze "10"
+    podziel(20, 4); // wypisze "5"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    5 <br>
+                    10 <br>
+                    5
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container light-container color-text-gray">
+            Możliwe jest przekazywanie argumentów z użyciem operatora .... W ten sposób można przekazać dowolną liczbę argumentów o różnych typach. Funkcja musi mieć określoną liczbę argumentów wymaganych, ale może również przyjąć argumenty opcjonalne. Mechanizm ten jest nazywany "argumentami zmiennych". Na przykład:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltiostream&gt
+#include &ltcstdarg&gt
+
+using namespace std;
+
+int suma(int liczba_argumentow, ...) {
+
+    int suma = 0;
+    va_list argumenty;
+    va_start(argumenty, liczba_argumentow);
+
+    for (int i = 0; i < liczba_argumentow; i++) {
+
+        suma += va_arg(argumenty, int);
+    }
+
+    va_end(argumenty);
+
+    return suma;
+}
+
+int main() {
+
+    int wynik = suma(4, 1, 2, 3, 4);
+    cout << wynik << endl; // wypisze "10"
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    10
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                To tylko kilka przykładów na temat argumentów w języku C++. W C++ istnieje wiele sposobów przekazywania argumentów do funkcji, co pozwala na bardziej elastyczne i efektywne programowanie.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Return_values.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

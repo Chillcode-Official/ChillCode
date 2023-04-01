@@ -27,9 +27,9 @@ function toggleDropdown(button) {
 W tej zmodyfikowanej wersji funkcji toggleDropdown, po kliknięciu w przycisk, dodajemy nasłuchiwanie kliknięć na elementach strony poprzez addEventListener na elemencie document.body. Następnie definiujemy funkcję closeDropdown, która jest wywoływana, gdy użytkownik kliknie gdziekolwiek na stronie. W funkcji closeDropdown sprawdzamy, czy kliknięty element jest elementem przycisku menu rozwijanego lub elementem wewnątrz menu rozwijanego. Jeśli tak, to nic nie robimy. W przeciwnym razie, zamykamy menu rozwijane i usuwamy nasłuchiwanie kliknięć z elementu document.body poprzez removeEventListener. W ten sposób użytkownik będzie mógł zwinąć menu rozwijane tylko poprzez ponowne kliknięcie w przycisk.
 */
 
-document.getElementById("myBtn").addEventListener("click", function(){
+/*document.getElementById("myBtn").addEventListener("click", function(){
     alert("Button was clicked");
-});
+});*/
 
 
 /*Bootstrap 5 components*/

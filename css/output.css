@@ -2,7 +2,8 @@
     background-color: #d9cece; /*#eae5e5;*/
     box-sizing: border-box;
     padding: 5px;
-    border: 2px solid black;
+    border: 3px solid black;
+    border-radius: 8px;
     font-size: 17px;
     width: 300px;
     height: max-content;
@@ -11,13 +12,13 @@
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
 .output.output-padding{
-    padding: 15px;
+    padding: 10px; /*15px*/
 }
 .output.output-long{
     width: 900px;
 }
 .output.output-black{
-    background-color: #1c2130;
+    background-color: #303030; /*#1c2130;*/
     color: #ececec;
     padding: 15px;
     letter-spacing: 1px;

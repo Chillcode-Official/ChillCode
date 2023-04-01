@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cplusplus(Zmienne)</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Arguments.html">Argumenty</a></li>
+            <li><a href="Return_values.html">Wartości zwracane</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Indicators.html">Wskaźniki</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Zmienne</h1>
+                <p>
+                    W C++, zmienne są deklarowane, aby przechowywać dane. Każda zmienna ma swój typ, który określa, jakiego rodzaju dane będą przechowywane, np. liczby całkowite, liczby zmiennoprzecinkowe, znaki, itp.
+                </p>
+            </div>
+            <img src="/img/vector136.png" alt="">
+        </div>
+        <p class="text-container red-container no-margin-top article tooltip">
+            Zmienne w C++ są definiowane przez podanie nazwy zmiennej oraz typu danych, który jest przechowywany w zmiennej. Na przykład, aby zdefiniować zmienną całkowitą o nazwie "x", możemy napisać:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+int x;   // zmienna typu int przechowująca liczby całkowite
+                </code>
+            </pre>
+        </div>
+        <p class="text-container red-container article tooltip">
+            Możemy również zainicjować <code><a href="#" pro-tip="W C++ zmienne są używane do przechowywania danych i manipulowania nimi. Każda zmienna musi mieć zdefiniowany typ, który określa rodzaj danych, jakie może przechowywać, na przykład liczby całkowite, liczby zmiennoprzecinkowe, znaki lub ciągi znaków.">zmienną <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> podczas jej definiowania
+        </p>
+        <div class="code-block code-block-margin-top">
+             <pre>
+                 <code class="language-cpp">
+int y = 10;   // zmienna typu int zainicjowana wartością 10
+                 </code>
+             </pre>
+        </div>
+        <p class="text-container red-container">
+            Możemy również użyć wartości innej zmiennej, aby przypisać wartość do innej zmiennej
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int a = 10;
+
+    int b = 5;
+
+    int suma = a + b;   // zmienna "suma" przechowuje sumę wartości zmiennych "a" i "b"
+
+    cout << "Suma: " << suma << endl;  // wyświetla wynik na ekranie
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Suma: 15
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <p class="text-container gray-container article tooltip">
+            W C++ można również definiować stałe przy użyciu słowa kluczowego <code><a href="#" pro-tip="słowo kluczowe const definiuje stałą. Stała jest to wartość, która nie może być modyfikowana po jej zdefiniowaniu.
+
+            Stała const może być stosowana z różnymi typami danych, takimi jak int, float, double, char, bool itp. Stałe są bardziej bezpieczne, ponieważ zapobiegają przypadkowym modyfikacjom wartości zmiennej i ułatwiają zrozumienie programu.">const <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Stałe nie mogą być zmieniane po zdefiniowaniu.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+const int PI = 3.14;
+                </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Zmienne w C++ są deklarowane, aby przechowywać dane. Każda zmienna ma swój typ i można ją zainicjować wartością podczas deklaracji. Zmienne są również wykorzystywane do przetwarzania danych w programach.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Data_types.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

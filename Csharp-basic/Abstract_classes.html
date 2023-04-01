@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Klasy Abstrakcyjne C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a> </li>
+            <li><a href="Comments.html">Komentarze</a> </li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Fields.html">Pola</a></li>
+            <li><a href="Properties.html">Właściwości</a></li>
+            <li><a href="Constant.html">Stałe</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Collections.html">Kolekcje</a></li>
+            <li><a href="Classes.html">Klasy</a></li>
+            <li><a href="Inheritance.html">Dziedziczenie</a></li>
+            <li><a href="Polymorphism.html">Polimorfizm</a></li>
+            <li><a href="Type_conversion.html">Konwersja typów</a></li>
+            <li><a href="String_types.html">Typy łańcuchowe</a></li>
+            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfaces.html">Interfejsy</a></li>
+            <li><a href="Static_classes.html">Klasy statyczne</a></li>
+            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+            <li><a href="Exceptions.html">Wyjątki</a></li>
+            <li><a href="Generic_types.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h1>Klasy Abstrakcyjne</h1>
+        <div class="section-with-image">
+            <p>
+                Klasa abstrakcyjna w języku C# to klasa, która nie może być bezpośrednio utworzona jako obiekt.
+                Zamiast tego, musi być rozszerzona przez inny klasę, która implementuje jego abstrakcyjne metody
+                i właściwości. Abstrakcyjne klasy mogą zawierać implementacje metod, ale muszą zawierać co najmniej
+                jedną abstrakcyjną metodę, którą klasy pochodne muszą implementować. Klasy abstrakcyjne służą
+                do tworzenia hierarchii klas, a także jako wzorzec projektowy.
+            </p>
+            <img src="/img/vector59.png" alt="">
+        </div>
+        <p class="text-container cream-container">
+            Metoda abstrakcyjna jest metodą, która nie ma implementacji w klasie bazowej i musi być zaimplementowana przez klasę pochodną.
+        </p>
+        <div class="code-block">
+            <pre>
+                <code>
+abstract class Ksztalt //klasa abstrakcyjna
+{
+    public abstract double Pole(); //metoda abstrakcyjna
+    public abstract double Obwod(); //metoda abstrakcyjna
+}
+
+
+class Prostokat : Ksztalt //klasa Prostokat rozszerza klasę Ksztalt
+{
+    private double szerokosc;
+    private double wysokosc;
+
+
+    public Prostokat(double s, double w)
+    {
+        szerokosc = s;
+        wysokosc = w;
+    }
+
+
+    public override double Pole()
+    {
+        return szerokosc * wysokosc;
+    }
+
+
+    public override double Obwod()
+    {
+        return 2 * (szerokosc + wysokosc);
+    }
+}
+
+
+class Kolo : Ksztalt //klasa Kolo rozszerza klasę Ksztalt
+{
+    private double promien;
+
+
+    public Kolo(double r)
+    {
+        promien = r;
+    }
+
+
+    public override double Pole()
+    {
+        return Math.PI * promien * promien;
+    }
+
+
+    public override double Obwod()
+    {
+        return 2 * Math.PI * promien;
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="text-container gray-container">
+            <img src="/img/warning.png" alt="">
+            <b>Wyjasnienie</b>
+            <p>
+                W tym przykładzie, klasa "Ksztalt" jest klasą abstrakcyjną i zawiera dwie metody abstrakcyjne
+                "Pole()" i "Obwod()". Klasy "Prostokat" i "Kolo" rozszerzają klasę "Ksztalt" i implementują
+                metody abstrakcyjne. W ten sposób klasy pochodne mogą dziedziczyć wspólne cechy od klasy bazowej
+                i rozszerzać je o swoje specyficzne funkcjonalności.
+            </p>
+        </div>
+        <div class="alert-card">
+            <img src="/img/warning.png" alt="">
+            <b>Uwaga</b>
+            <p>
+                Metoda abstrakcyjna jest oznaczona słowem kluczowym "abstract" i nie ma ciała metody.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Namespaces.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cpp {Pętle}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Arguments.html">Argumenty</a></li>
+            <li><a href="Return_values.html">Wartości zwracane</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Indicators.html">Wskaźniki</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pętla for</h1>
+                <p>
+                    Pętla for w C++ jest jednym z najczęściej używanych typów pętli i pozwala na powtarzanie bloków kodu przez określoną liczbę razy.
+                </p>
+            </div>
+            <img src="/img/vector49.png" alt="">
+        </div>
+        <p class="text-container lightGray-container article tooltip no-margin-top">
+            Pętla <code><a href="#" pro-tip="">for <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest często używana do iteracji przez kolekcje elementów lub do powtarzania bloku kodu określoną liczbę razy. Składnia pętli for jest następująca:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+for (inicjalizacja; warunek; zwiększenie)
+{
+  // blok kodu, który zostanie wykonany w każdej iteracji
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightGray-container">
+            Przykład użycia pętli for, Ten kod wyświetli liczby od 0 do 7 w konsoli.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+
+    for (int i = 0; i < 8; i++)
+    {
+
+      cout << i << std::endl;
+    }
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br> 7
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container light-container black-list">
+            <div class="text-content">
+                <h3>Składnia pętli:</h3>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content highlight-container highlight-container-light">
+                <ul>
+                    <li><span>inicjalizacja</span>- sekcja ta inicjuje zmienne używane w pętli, zazwyczaj deklaruje się tu licznik pętli, czyli zmienną, która będzie używana do śledzenia ilości iteracji.</li>
+                    <br>
+                    <li><span>warunek</span>- warunek, który musi być spełniony, aby pętla kontynuowała działanie. Gdy warunek jest fałszywy, pętla kończy swoje działanie.</li>
+                    <br>
+                    <li><span>zwiększenie</span>- sekcja ta definiuje, jak wartość zmiennej zliczającej pętle jest zwiększana w każdej iteracji.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pętla While</h1>
+                <p>
+                    Pętla while w języku C++ to konstrukcja pozwalająca na powtarzanie bloku kodu, dopóki określony warunek jest spełniony. Ogólna składnia pętli while wygląda następująco:
+                </p>
+            </div>
+            <img src="/img/vector89.png" alt="">
+        </div>
+        <p class="text-container blue-container article tooltip no-margin-top">
+            Pętla <code><a href="#" pro-tip="">while <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest używana, kiedy nie wiemy dokładnie, ile razy pętla będzie musiała się wykonać. Składnia pętli while jest następująca:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+while (warunek)
+{
+  // blok kodu, który zostanie wykonany dopóki warunek jest spełniony
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container blue-container">
+            Przykład pętli do while iterującej przez liczby od 1 do 5, Wynik działania powyższego kodu to wyświetlenie na ekranie liczb od 1 do 5.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &ltiostream&gt
+
+using namespace std;
+
+int main()
+{
+    int i = 1;
+
+    while (i <= 5) {
+
+      cout << i << endl;
+      i++;
+    }
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                   1 <br> 2 <br> 3 <br> 4 <br> 5
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container light-container black-list">
+            <div class="text-content">
+                <h3>Składnia pętli:</h3>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content highlight-container highlight-container-light">
+                <ul>
+                    <li><span>warunek</span>- warunek, który musi być spełniony, aby pętla kontynuowała działanie. Gdy warunek jest fałszywy, pętla kończy swoje działanie.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pętla Do..While</h1>
+                <p>
+                    Pętla do while w języku C++ to podobna do pętli while konstrukcja, która również pozwala na powtarzanie bloku kodu dopóki określony warunek jest spełniony. Jednak w odróżnieniu od pętli while, blok kodu jest wykonywany przynajmniej raz, niezależnie od tego, czy warunek jest spełniony czy nie.
+                </p>
+            </div>
+            <img src="/img/vector82.png" alt="">
+        </div>
+        <p class="text-container lightBrown-container article tooltip no-margin-top">
+            Pętla <code><a href="#" pro-tip="">do-while <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest podobna do pętli while, z tą różnicą, że blok kodu jest wykonywany przynajmniej raz, przed sprawdzeniem warunku pętli. Składnia pętli do-while jest następująca:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+do {
+  // blok kodu, który zostanie wykonany przynajmniej raz
+} while (warunek);
+                </code>
+            </pre>
+        </div>
+        <p class="text-container lightBrown-container">
+            Przykład pętli do while iterującej przez liczby od 1 do 5, Wynik działania powyższego kodu to wyświetlenie na ekranie liczb od 1 do 5.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+   int i = 1;
+
+   do {
+    cout << i << endl;
+    i++;
+} while (i <= 5);
+
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    1 <br> 2 <br> 3 <br> 4 <br> 5
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container light-container black-list">
+            <div class="text-content">
+                <h3>Składnia pętli:</h3>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content highlight-container highlight-container-light">
+                <ul>
+                    <li><span>warunek</span>- warunek, który musi być spełniony, aby pętla kontynuowała działanie. Gdy warunek jest fałszywy, pętla kończy swoje działanie.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pętla forEach</h1>
+                <p>
+                    Pętla forEach, zwana również pętlą for-each lub pętlą zakresową, to konstrukcja, która pozwala na iterowanie przez elementy kolekcji, np. tablicy, listy czy wektora w języku C++. Pętla ta jest dostępna od wersji języka C++11 i opiera się na użyciu tzw. iteracji po zakresie (range-based loop).
+                </p>
+            </div>
+            <img src="/img/vector58.png" alt="">
+        </div>
+        <p class="text-container white-container article tooltip">
+            Pętla <code><a href="#" pro-tip="">foreach <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala iterować przez elementy w kontenerach, takich jak wektory, tablice, listy, itp. Składnia pętli foreach jest następująca:
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+for (typ_zmiennej zmienna : kolekcja) {
+  // blok kodu, który zostanie wykonany dla każdego elementu kolekcji
+}
+                </code>
+            </pre>
+        </div>
+        <p class="text-container white-container">
+            Przykład pętli forEach iterującej przez elementy tablicy, W powyższym przykładzie pętla forEach iteruje przez elementy tablicy tablica i wyświetla każdy z nich na ekranie.
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    int tablica[] = {1, 2, 3, 4, 5};
+
+
+    for (int liczba : tablica) {
+
+        cout << liczba << endl;
+    }
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-content">
+                    1 <br> 2 <br> 3 <br> 4 <br> 5
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-container  light-container black-list">
+            <div class="text-content">
+                <h3>Składnia pętli:</h3>
+            </div>
+            <div class="text-content highlight-container highlight-container-light">
+                <ul>
+                    <li><span>typ zmiennej</span>- typ zmiennej, która będzie przechowywać kolejne elementy kolekcji,</li>
+                    <li><span>zmienna</span>- nazwa zmiennej, która będzie przechowywać kolejne elementy kolekcji,</li>
+                    <li><span>kolekcja</span>- kolekcja, po której iterujemy.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Tables.html"><button>Dalej</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

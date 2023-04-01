@@ -22,4 +22,5 @@ ul li{
 code{
     color: white;
     font-size: 20px;
+    white-space: pre; /*--- możliwość popsucia*/
 }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cpp {Typy danych}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a></li>
+            <li><a href="Comments.html">Komentarze</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Operators.html">Operatory</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Functions.html">Funkcje</a></li>
+            <li><a href="Arguments.html">Argumenty</a></li>
+            <li><a href="Return_values.html">Wartości zwracane</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Indicators.html">Wskaźniki</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy danych</h1>
+                <p>
+                    W C++ typy danych określają rodzaj danych, które mogą być przechowywane w zmiennych. Typ danych określa zakres wartości, jakie mogą być przechowywane w zmiennej, jakie operacje można wykonywać na zmiennej i jak wiele pamięci jest potrzebne do przechowywania wartości zmiennej.
+                </p>
+            </div>
+            <img src="/img/vector28.png" alt="">
+        </div>
+        <div class="text-container light-container black-list no-margin-top article tooltip">
+            <div class="text-content">
+                <h3>Dostępne typy danych w c++ to między innymi:</h3>
+            </div>
+            <div class="line"></div>
+            <div class="page-header"></div>
+            <div class="text-content">
+                <code><a href="#" pro-tip="Przechowują wartości całkowite, takie jak -3, 0, 100 itp. W C++ są dostępne różne typy całkowite, w tym: int, short, long, long long.">Całkowite <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+                <code><a href="#" pro-tip="Przechowują liczby zmiennoprzecinkowe, takie jak 3,14 lub 2,71828. W C++ dostępne są dwa typy zmiennoprzecinkowe: float (32 bity) i double (64 bity).">Zmiennoprzecinkowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+                <code><a href="#" pro-tip="Przechowuje pojedynczy znak, takie jak 'a' lub '7'. Typ char przechowuje wartości całkowite z zakresu -128 do 127 lub 0 do 255, w zależności od tego, czy jest to typ char ze znakiem, czy bez znaku.">Znakowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+                <code><a href="#" pro-tip="Przechowuje wartości logiczne true (prawda) lub false (fałsz). Typ bool jest często używany w instrukcjach warunkowych i pętlach.">Logiczne <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+                <code><a href="#" pro-tip="Przechowuje wartości zdefiniowane przez programistę. Typ wyliczeniowy jest przydatny w przypadku, gdy chcemy użyć nazwy zamiast liczby.">Wyliczeniowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+            </div>
+        </div>
+        <div class="code-block">
+            <pre>
+                <code>
+#include &ltiostream&gt
+
+int main() {
+
+    short n = 5;      //liczba całkowita o małej pojemności
+
+    int n = 10;       //liczba całkowita o średniej pojemności
+
+    long n = 100;     //liczba całkowita o wysokiej pojemności
+
+    long long n = 100;     //liczba całkowita o największej pojemności
+
+    float = 2,13;      //liczba zmiennoprzecinkowa z pojedynczą precyzją,
+
+    double = 2,71828;    //liczba zmiennoprzecinkowa z podwójną precyzją.
+
+    char znak = 'Z';   //służy do przechowywania pojedynczych znaków
+
+    bool prawda = true;   //typ logiczny prawda lub fałsz
+
+
+return 0;
+
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <h2>Przykłady użycia różnych typów danych</h2>
+        <div class="double-elements">
+            <div>
+                <h2><img class="icon-img-small" src="/img/icon_number(1).png" alt="">Całkowite</h2>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code class="language-cpp">
+int liczba = 10;
+int wynik = liczba + 5;
+cout << "Wynik: " << wynik << endl;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            Wynik: 15
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2><img class="icon-img-small" src="/img/icon_number(2).png" alt="">Zmiennoprzecinkowe</h2>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code class="language-cpp">
+float n = 3.14;
+double m = 2.71828;
+double wynik = n * m;
+cout << "Wynik: " << wynik << endl;
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            8.5354
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="double-elements">
+            <div>
+                <h2><img class="icon-img-small" src="/img/icon_calculator(2).png" alt="">Wyliczeniowe</h2>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code class="language-cpp">
+enum Kierunki {GORA, DOL, LEWO, PRAWO};
+
+Kierunki kierunek = GORA;
+
+if (kierunek == GORA){
+
+    cout << "Kierunek: Góra" << endl;
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            Kierunek: Góra
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2><img class="icon-img-small" src="/img/icon_logic.png" alt="">Logiczne</h2>
+                <div class="code-block code-block-margin-top">
+                    <pre>
+                        <code class="language-cpp">
+bool prawda = true;
+
+if (prawda) {
+    cout << "Prawda!" << endl;
+}
+else {
+    cout << "Fałsz!" << endl;
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="dropdown minus-margin-top">
+                    <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+                    <div class="dropdown-content">
+                        <div class="output output-content">
+                            Prawda!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card3">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Oprócz tego, istnieją również biblioteki standardowe C++, takie jak string, array, vector, itp., które zawierają wiele innych typów danych i struktur danych. Każdy typ danych ma swoje ograniczenia i należy
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Operators.html"><button>Dalej</button></a>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

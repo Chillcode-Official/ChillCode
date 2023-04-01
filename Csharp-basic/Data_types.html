@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Typy-Danych C#</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/EduBear.js"></script>
+</head>
+<body>
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a> </li>
+            <li><a href="Comments.html">Komentarze</a> </li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Fields.html">Pola</a></li>
+            <li><a href="Properties.html">Właściwości</a></li>
+            <li><a href="Constant.html">Stałe</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Collections.html">Kolekcje</a></li>
+            <li><a href="Classes.html">Klasy</a></li>
+            <li><a href="Inheritance.html">Dziedziczenie</a></li>
+            <li><a href="Polymorphism.html">Polimorfizm</a></li>
+            <li><a href="Type_conversion.html">Konwersja typów</a></li>
+            <li><a href="String_types.html">Typy łańcuchowe</a></li>
+            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfaces.html">Interfejsy</a></li>
+            <li><a href="Static_classes.html">Klasy statyczne</a></li>
+            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+            <li><a href="Exceptions.html">Wyjątki</a></li>
+            <li><a href="Generic_types.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy Wartościowe</h1>
+                <p>
+                    Zmienna jest deklarowana przy użyciu podstawowych
+                    lub wbudowanych typów danych również struktury
+                    zdefiniowanej przez użytkownika typy wartościowe
+                    przechowuje swoją zawartość w pamięci
+                    przydzielonej na stos.
+                </p>
+            </div>
+            <img src="/img/vector7.png" alt="">
+        </div>
+        <p class="text-container red-container article tooltip no-margin-top line-height-plus">
+            W języku C# istnieje wiele typów wartościowych, między innymi:
+            <code><a href="#" pro-tip="Typy całkowitoliczbowe są to typy, które reprezentują liczby całkowite i mogą być dodatnie lub ujemne. Słowa kluczowe dla typów całkowitoliczbowych to: sbyte, byte, short, ushort, int, uint, long, ulong.">Typy całkowitoliczbowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+            <code><a href="#" pro-tip="Typy zmiennoprzecinkowe są to typy, które reprezentują liczby zmiennoprzecinkowe. Słowa kluczowe dla typów zmiennoprzecinkowych to: float, double, decimal.">Typy zmiennoprzecinkowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+            <code><a href="#" pro-tip="Typy logiczne reprezentują wartości logiczne true lub false. Słowo kluczowe dla typów logicznych to bool.">Typy logiczne <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+            <code><a href="#" pro-tip="Typy znakowe reprezentują pojedyncze znaki. Słowo kluczowe dla typów znakowych to char.">Typy znakowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        byte n = 1;       //liczba całkowita o najmniejszej pojemności
+
+        short n = 5;      //liczba całkowita o małej pojemności
+
+        int n = 10;       //liczba całkowita o większej pojemności
+
+        long n = 100;     //liczba całkowita o największej pojemności
+
+
+        float m = 16.5;     //liczba zmiennoprzecinkowa podwójnej precyzji
+
+        double m = 40.2;    //liczba zmiennoprzecinkowa podwójnej precyzji
+
+        decimal m = 99.9;   //liczba zmiennoprzecinkowa o najwyższej dokładności
+
+
+        char znak = 'Z';   //bitowy znak z tablicy Unicode
+
+        bool coś = true;   //typ logiczny prawda lub fałsz
+    }
+}
+                 </code>
+            </pre>
+        </div>
+        <div class="page-header"></div>
+        <div class="text-content page-header">
+            <h2><img class="icon-img-big" src="/img/icon_configure(6).png" alt=""> Rozmiary i wartości typów</h2>
+        </div>
+        <div class="Table">
+            <table>
+                <tr>
+                    <th>Typy</th>
+                    <th>Rozmiar</th>
+                    <th>Wartość</th>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>1bit</td>
+                    <td><pre>true or false</pre></td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>8bit</td>
+                    <td><pre>-127 do 128</pre></td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>8bit</td>
+                    <td><pre>0 do 256</pre></td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>16bit</td>
+                    <td><pre>-32,768 do 32,767</pre></td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>16bit</td>
+                    <td><pre>0 do 65,535</pre></td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>16bit</td>
+                    <td><pre>0 do 65,535</pre></td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>32bit</td>
+                    <td><pre>-2,147,483,648 do 2,147,483,647</pre></td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>32bit</td>
+                    <td><pre>0 do 4,294,967,295</pre></td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>64bit</td>
+                    <td><pre>-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807</pre></td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>64bit</td>
+                    <td><pre>0 do 18,446,744,073,709,551,615</pre></td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>32bit</td>
+                    <td><pre>-3.402823e38 do 3.402823e38</pre></td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>64bit</td>
+                    <td><pre>-1.79769313486232e308 do 1.79769313486232e308</pre></td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>64bit</td>
+                    <td><pre>(-7.9 x 1028 do 7.9 x 1028) / 100 do 28</pre></td>
+                </tr>
+            </table>
+        </div>
+        <div class="alert-card alert-card3 tooltip">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>
+                Wartości typów wartościowych są przechowywane w stosie, co oznacza, że są bardziej efektywne od typów referencyjnych (reference types) i mają mniejsze zużycie pamięci.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Typy Referencyjne</h1>
+                <p>
+                    Typy referencyjne nie przechowują rzeczywistych wartości w zmiennej,
+                    przechowują referencje do zmiennych. Innymi słowy, odnoszą się do
+                    konkretnej lokalizacji w pamięci. Przykładami wbudowanych typów
+                    referencyjnych są: obiekty (objects), typy dynamiczne (dynamics)
+                    oraz string (typ tekstowy).
+                </p>
+            </div>
+            <img src="/img/vector5.png" alt="">
+        </div>
+        <p class="text-container purple-container no-margin-top article tooltip">Typ łańcuchowy <code><a href="#" pro-tip="Obiekt którego wartością jest tekst. Wewnętrznie tekst jest przechowywany jako sekwencyjna kolekcja Char obiektów tylko do odczytu. Na końcu ciągu C# nie ma znaku kończącego wartość null; w związku z tym ciąg C# może zawierać dowolną liczbę osadzonych znaków null ('\0').">String Type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala przypisać dowolną wartość tekstową do naszej zmiennej.</p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args){
+
+    string imie = "Leo";
+    string tekst = $"Hej jestem {imie}";
+
+    Console.WriteLine(tekst);  // Hej jestem Leo
+}
+
+}
+                </code>
+            </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    Hej jestem Leo
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container purple-container no-margin-top article tooltip">Typ obiektowy <code><a href="#" pro-tip="Zdefiniowany przez użytkownika złożony typ danych, który hermetyzuje strukturę danych wraz z funkcjami i procedurami potrzebnymi do manipulowania danymi. Zmienne tworzące strukturę danych nazywane są atrybutami.">Object Type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest klasą bazową dla wszystkich typów danych w CTS (Common Type System)
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    int l = 6;
+    object k = l;
+
+    int liczba = (int)k;
+
+    Console.WriteLine(liczba); // 6
+    }
+}
+                </code>
+            </pre>
+       </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    6
+                </div>
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <p class="text-container purple-container no-margin-top article tooltip">W zmiennej dynamicznej <code><a href="#" pro-tip="Typ dynamiczny nie ma predefiniowanego typu i może być używany do przechowywania dowolnego typu danych. Możemy zdefiniować ten typ danych za pomocą słowa kluczowego „dynamic” w naszym kodzie">Dynamic Type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> możemy przechowywać dowolny typ danych. Sprawdzanie typów zmiennych odbywa się w momencie wykonywania programu.</p>
+         <div class="code-block code-block-margin-top">
+            <pre>
+                <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    dynamic nazwa_zmiennej = value;
+
+    }
+}
+                </code>
+            </pre>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content tooltip">
+                <h1 id="typy-wskaznikowe">Typy Wskaźnikowe Języka C#</h1>
+                <p>
+                    Zmienne typu wskaźnikowego <code><a href="#" pro-tip="Specjalny rodzaj zmiennej, w której zapisany jest adres w pamięci komputera.Oznacza to, że wskaźnik wskazuje miejsce, gdzie zapisana jestjakaś informacja (np. zmienna typu liczbowego czy struktura.">Indicator Type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> przechowują
+                    w pamięci adres do danego typu. Wskaźniki w C# to zmienna,
+                    która przechowuje ten adres. W języku C# wskaźnik może
+                    trzymać adres jedynie dla typów wartościowych i tablic.
+                </p>
+            </div>
+            <div>
+                <img src="/img/vector8.png" alt="">
+            </div>
+        </div>
+        <div class="big-page-header"></div>
+        <h2><img class="icon-img-big" src="/img/icon_logic(4).png" alt=""> Użycie typów wskaźnikowych</h2>
+        <div class="code-block">
+           <pre>
+               <code class="language-Csharp">
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        unsafe
+        {
+            int x = 100;
+            int* ptr = &amp;x;
+
+            Console.WriteLine("Adres zmiennej x to: {0}", (int)ptr);
+
+            Console.WriteLine("Wartość zmiennej x to: {0}", *ptr);
+        }
+    }
+}
+               </code>
+           </pre>
+        </div>
+        <div class="dropdown minus-margin-top">
+            <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+            <div class="dropdown-content">
+                <div class="output output-padding output-content">
+                    <p>Adres zmiennej x to: 3992720</p>
+                    <p>Wartość zmiennej x to: 100</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="alert-card alert-card1 tooltip">
+            <img style="width: 50px;" src="/img/note.png" alt="">
+            <b>Note</b>
+            <div class="line"></div>
+            <p>Używanie wskaźników wymaga użycia <code><a href="#" pro-tip="Niebezpieczny kontekst, w którym kod może używać wskaźńików, przydzielać i zwalniać bloki pamięci oraz wywoływać metody przy użyciu wskaźników funkcji. Nie znaczy to że jest niebezpieczny, to tylko kod którgo bezpieczeństa nie da się zweryfikować.">Unsafe context <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></p>
+        </div>
+    <div class="btn">
+        <a href="Variables.html"><button>Dalej</button></a>
+    </div>
+    </div>
+</div>
+</body>
+</html>

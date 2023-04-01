@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>C# {Pola}</title>
+    <link rel="stylesheet" href="../Basic.css"/>
+
+    <!-- Highlight JS init: -->
+    <link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
+    <script src="/Highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="page-content">
+    <div class="navbar">
+        <section>
+            <ul>
+                <button><li><a href="../EduBear.html">Home</a></li></button>
+                <button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+                <button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+                <button><li><a href="/About/About.html">About me</a></li></button>
+            </ul>
+        </section>
+    </div>
+
+    <div class="roadmap-list">
+        <ol>
+            <li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+            <li><a href="Quick_start.html">Szybki start</a></li>
+            <li><a href="First_program.html">Pierwszy program</a> </li>
+            <li><a href="Comments.html">Komentarze</a> </li>
+            <li><a href="Data_types.html">Typy danych</a></li>
+            <li><a href="Variables.html">Zmienne</a></li>
+            <li><a href="Fields.html">Pola</a></li>
+            <li><a href="Properties.html">Właściwości</a></li>
+            <li><a href="Constant.html">Stałe</a></li>
+            <li><a href="Methods.html">Metody</a></li>
+            <li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+            <li><a href="Loops.html">Pętle</a></li>
+            <li><a href="Tables.html">Tablice</a></li>
+            <li><a href="Collections.html">Kolekcje</a></li>
+            <li><a href="Classes.html">Klasy</a></li>
+            <li><a href="Inheritance.html">Dziedziczenie</a></li>
+            <li><a href="Polymorphism.html">Polimorfizm</a></li>
+            <li><a href="Type_conversion.html">Konwersja typów</a></li>
+            <li><a href="String_types.html">Typy łańcuchowe</a></li>
+            <li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+            <li><a href="Interfaces.html">Interfejsy</a></li>
+            <li><a href="Static_classes.html">Klasy statyczne</a></li>
+            <li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+            <li><a href="Namespaces.html">Przestrzenie nazw</a></li>
+            <li><a href="Exceptions.html">Wyjątki</a></li>
+            <li><a href="Generic_types.html">Typy generyczne</a></li>
+            <li><a href="JSON.html">JSON</a></li>
+            <li><a href="XML.html">XML</a></li>
+            <li><a href="Summary.html">Podsumowanie</a></li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Pola w Języku C#</h1>
+                <p>
+                    Pola w języku C# to elementy składowe klasy lub struktury,
+                    które przechowują dane. Są one podobne do zmiennych,
+                    ale są one częścią klasy lub struktury i są dostępne dla
+                    wszystkich metod w klasie lub strukturze.
+                </p>
+            </div>
+            <img src="/img/vector51.png" alt="">
+        </div>
+        <p class="text-container cream-container no-margin-top article tooltip">
+            Oto przykład deklaracji pola w języku C# przy użyciu modyfikatora <code><a href="#" pro-tip="Modyfikator public oznacza, że pole jest dostępne dla wszystkich elementów kodu, zarówno wewnątrz klasy, jak i poza nią. Często używany do przechowywania danych, do których trzeba mieć dostęp z różnych miejsc w kodzie">public <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+using System;
+
+public class MojaKlasa
+
+{
+    public int _mojePole;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="minus-margin-top"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W tym przykładzie deklarowane jest pole _mojePole
+                typu int w klasie MojaKlasa<. Pole to jest
+                publiczne, co oznacza, że jest dostępne dla wszystkich
+                metod w klasie MojaKlasa oraz dla innych klas.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Prywatne Pola</h1>
+                <p>
+                    Pola mogą być również deklarowane jako prywatne,
+                    co oznacza, że są dostępne tylko dla metod w klasie
+                    lub strukturze, w której zostały zdefiniowane.
+                </p>
+            </div>
+            <img src="/img/vector11.png" alt="">
+        </div>
+        <p class="text-container brown-container no-margin-top article tooltip">
+            Oto przykład deklaracji pola w języku C# przy użyciu modyfikatora <code><a href="#" pro-tip="Modyfikator private oznacza, że pole jest dostępne tylko wewnątrz klasy, w której zostało zdefiniowane. Często używane do przechowywania danych, które są wewnętrznymi detalami implementacyjnymi klasy i nie powinny być dostępne z zewnątrz.">private <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+using System;
+
+public class MojaKlasa
+
+{
+    private int _mojePrywatnePole;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="minus-margin-top"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W tym przykładzie deklarowane jest pole _mojePrywatnePole
+                typu int w klasie MojaKlasa. Pole to jest prywatne,
+                co oznacza, że jest dostępne tylko dla metod w klasie MojaKlasa,
+                inne klasy nie mają dostępu do tego pola.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="section-with-image">
+            <div class="text-content">
+                <h1>Chronione Pola</h1>
+                <p>
+                    Pola mogą być również deklarowane jako chronione
+                    co oznacza, że są dostępne tylko dla
+                    metod w klasie lub strukturze, w której zostały
+                    zdefiniowane, oraz dla klas pochodnych.
+                </p>
+            </div>
+            <img src="/img/vector12.png" alt="">
+        </div>
+        <p class="text-container lightBrown-container no-margin-top article tooltip">
+            Oto przykład deklaracji pola w języku C# przy użyciu modyfikatora <code><a href="#" pro-tip="Modyfikator protected oznacza, że pole jest dostępne wewnątrz klasy oraz w klasach dziedziczących po niej. Często używane do przechowywania danych, które są wewnętrznymi detalami implementacyjnymi klasy i są udostępniane klasom dziedziczącym.">protected <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+        </p>
+        <div class="code-block code-block-margin-top">
+            <pre>
+                <code>
+using System;
+
+public class MojaKlasa
+
+{
+    protected int _mojeChronionePole;
+}
+                </code>
+            </pre>
+        </div>
+        <div class="minus-margin-top"></div>
+        <div class="alert-card alert-card3 alert-card-gray">
+            <img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+            <b>Wyjaśnienie</b>
+            <div class="line"></div>
+            <p>
+                W tym przykładzie deklarowane jest pole _mojeChronionePole
+                typu int w klasie MojaKlasa. Pole to jest chronione,
+                co oznacza, że jest dostępne tylko dla metod w klasie MojaKlasa.
+            </p>
+        </div>
+        <div class="big-page-header"></div>
+        <div class="btn">
+            <a href="Properties.html"><button>Dalej</button></a>
+        </div>
+    </div>
+</div>
