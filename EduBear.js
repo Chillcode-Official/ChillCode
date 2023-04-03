@@ -58,3 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				});
 		});
 });
+
+
+const button = document.getElementById("myButton");
+const menu = document.getElementById("myMenu");
+
+button.addEventListener("click", function() {
+	menu.style.display = menu.style.display === "block" ? "none" : "block";
+});

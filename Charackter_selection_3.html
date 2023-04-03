@@ -5,6 +5,7 @@
 	<title>ChillCode</title>
 	<link rel="stylesheet" href="Charackter_selection.css"/>
 	<link rel="stylesheet" href="ChillCode.css"/>
+	<script src="/EduBear.js"></script>
 
 </head>
 <body>
@@ -17,12 +18,78 @@
 		<nav class="navbar">
 			<div class="navbar-container">
 				<a href="#" class="navbar-logo"><img src="/img/ChillCode-logo-dark.png" alt=""></a>
-				<ul class="navbar-menu">
-					<li class="navbar-item"><a href="#" class="navbar-link">Getting Started</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link">Resources</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link">Help</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link">Blog</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link">Developers</a></li>
+				<div class="navbar-menu">
+					<div class="dropdown">
+						<button class="navbar-link output-menu-button" onclick="toggleDropdown(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>Tutorials</button>
+						<div class="dropdown-content">
+							<div class="output">
+								<article>
+									<div class="hej6">
+										<img class="hej7" src="/img/icon_education.png" alt="">
+										<div class="hej8">All Tutorials</div>
+									</div>
+								</article>
+								<div class="hej9">
+									<div class="hej10">
+										<div class="hej11">
+											<a class="hej12" href="Csharp-basic/Introduction_to_Csharp.html">
+												<img class="hej13" src="/img/c-sharp.png" alt="">
+												<div class="hej14">
+													C#
+												</div>
+											</a>
+											<a class="hej12" href="HTML-Basic/Introduction_to_HTML.html">
+												<img class="hej13" src="/img/html-5.png" alt="">
+												<div class="hej14">
+													HTML
+												</div>
+											</a>
+											<a class="hej12" href="JavaScript-Basic/Introduction_to_JavaScript.html">
+												<img class="hej13" src="/img/javaScript-icon.png" alt="">
+												<div class="hej14">
+													JavaScript
+												</div>
+											</a>
+											<a class="hej12" href="CSS-Basic/Introduction_to_CSS.html">
+												<img class="hej13" src="/img/css.png" alt="">
+												<div class="hej14">
+													CSS
+												</div>
+											</a>
+											<a class="hej12" href="jQuery-Basic/Introduction_to_jQuery.html">
+												<img class="hej13" src="/img/jquery(1).png" alt="">
+												<div class="hej14">
+													jQuery
+												</div>
+											</a>
+											<a class="hej12" href="Bootstrap-Basic/Introduction_to_Bootstrap.html">
+												<img class="hej13" src="/img/bootstrap-icon.png" alt="">
+												<div class="hej14">
+													Bootstrap
+												</div>
+											</a>
+											<a class="hej12" href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">
+												<img class="hej13" src="/img/NET_Core_Logo.png" alt="">
+												<div class="hej14">
+													ASP.NET Core
+												</div>
+											</a>
+											<a class="hej12" href="Cplusplus/Introduction_to_Cpp.html">
+												<img class="hej13" src="/img/cplusplus-logo.png" alt="">
+												<div class="hej14">
+													C++
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<li class="navbar-item"><a href="Blog.html" class="navbar-link">Blog</a></li>
+					<li class="navbar-item"><a href="About.html" class="navbar-link">About</a></li>
+					<li class="navbar-item"><a href="Help.html" class="navbar-link">Help</a></li>
+					<li class="navbar-item"><a href="Support.html" class="navbar-link">Support us</a></li>
 					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #4545d9" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
 						<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 					</svg></a></li>
@@ -32,11 +99,7 @@
 					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
 						<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
 					</svg></a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link">Donate</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: lightcoral" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-piggy-bank-fill" viewBox="0 0 16 16">
-						<path d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595Zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199Zm-8.999-.65a.5.5 0 1 1-.276-.96A7.613 7.613 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.602 6.602 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
-					</svg></a></li>
-				</ul>
+				</div>
 				<div class="navbar-toggle">
 					<span></span>
 					<span></span>
@@ -48,7 +111,7 @@
 			<h1>To może ci się spodobać <img class="icon-img-ditto" src="/img/icon_ditto(3).png" alt=""></h1>
 			<div class="card-grid columnGap-zero">
 				<div>
-					<a href="HTML-Basic/Introduction.html">
+					<a href="HTML-Basic/Introduction_to_HTML.html">
 						<article class="card">
 							<div class="card-header">
 								<div>
@@ -62,7 +125,7 @@
 								<p>Język znaczników wykorzystywany do tworzenia stron internetowych. Zawiera elementy takie jak nagłówki, paragrafy, linki i obrazy.</p>
 							</div>
 							<div class="card-footer">
-								<a href="HTML-Basic/Introduction.html">Zobacz więcej</a>
+								<a href="HTML-Basic/Introduction_to_HTML.html">Zobacz więcej</a>
 							</div>
 						</article>
 					</a>
