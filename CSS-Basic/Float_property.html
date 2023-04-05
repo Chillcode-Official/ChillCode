@@ -9,56 +9,126 @@
 		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 		<script src="/Highlight/highlight.min.js"></script>
 		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Background.html">Tło</a></li>
-						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
-						<li><a href="Position.html">Pozycja</a></li>
-						<li><a href="Overflow.html">Przepełnienie</a></li>
-						<li><a href="Margins.html">Marginesy</a></li>
-						<li><a href="Padding.html">Dopełnienie</a></li>
-						<li><a href="Border.html">Obramowanie</a></li>
-						<li><a href="Outline.html">Zarys</a></li>
-						<li><a href="Text.html">Tekst</a></li>
-						<li><a href="fonts.html">Czcionki</a></li>
-						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
-						<li><a href="Pictures.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="list.html">Listy</a></li>
-						<li><a href="Z-index.html">Z-index</a></li>
-						<li><a href="Float_property.html">Właściwość float</a></li>
-						<li><a href="Combinators.html">Kombinatory</a></li>
-						<li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
-						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
-						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
-						<li><a href="Transparency.html">Przezroczystość</a></li>
-						<li><a href="Forms.html">Formularze</a></li>
-						<li><a href="Counters.html">Liczniki</a></li>
-						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
-						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
@@ -86,8 +156,8 @@
 								<code>
 img {
 
-	float: left;
-	margin-right: 10px;
+  float: left;
+  margin-right: 10px;
 }
 								</code>
 						</pre>
@@ -116,67 +186,35 @@ img {
 						<pre>
 								<code>
 .col1 {
-	float: left;
-	width: 33.33%;
+  float: left;
+  width: 33.33%;
 }
 
 .col2 {
-	float: left;
-	width: 33.33%;
+  float: left;
+  width: 33.33%;
 }
 
 .col3 {
-	float: left;
-	width: 33.33%;
+  float: left;
+  width: 33.33%;
 }
 								</code>
 						</pre>
 				</div>
-				<div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
+				<div>
+					<div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
 						<p>Kolumna 1</p>
-				</div>
-				<div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
+					</div>
+					<div style="float:left; width: 30.33%; border: lime solid 2px; margin-right: 20px; text-align: center">
 						<p>Kolumna 2</p>
-				</div>
-				<div style="float:left; width: 30.33%; border: lime solid 2px; text-align: center">
+					</div>
+					<div style="float:left; width: 30.33%; border: lime solid 2px; text-align: center;">
 						<p>Kolumna 3</p>
+					</div>
 				</div>
-				<h1 style="margin-top: 150px"><img class="icon-img-big" src="/img/icon_clear.png" alt=""> Właściwość Clear CSS</h1>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container lightOrange-container text-container-medium article tooltip highlight-container highlight-container-lightOrange">
-								W języku CSS, właściwość "<span>clear</span>" jest używana do określenia, jak element powinien wyglądać
-								względem elementów flotujących wokół niego. Możliwe wartości:
-								<code><a href="#" pro-tip="element zostanie umieszczony poniżej wszystkich elementów, które zostały osadzone z lewej strony.">left <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="element zostanie umieszczony poniżej wszystkich elementów, które zostały osadzone z prawej strony.">right <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="element zostanie umieszczony poniżej wszystkich elementów, które zostały osadzone zarówno z lewej, jak i prawej strony.">both <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="element nie zostanie odseparowany od żadnych innych elementów. To jest domyślna wartość dla właściwości clear.">none <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						</p>
-						<div class="code-block">
-								<pre>
-										<code>
-.element {
-	clear: both;
-}
-										</code>
-								</pre>
-						</div>
-				</div>
-				<div class="alert-card alert-card3 tooltip">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Ważne jest, aby pamiętać, że elementy ustawione jako
-								<code><a href="#" pro-tip="Właściwość float w CSS jest używana do ustawienia elementu w lewo lub w prawo względem innych elementów znajdujących się na stronie. Kiedy zastosujesz właściwość float na elemencie, ten element będzie odpływał od swojego pierwotnego położenia, przepływając obok innych elementów.">float <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								nie mają wpływu na rozmiar rodzica, więc jeśli chcesz, aby rodzic automatycznie
-								dostosowywał swój rozmiar do elementów "float", należy użyć właściwości
-								<code><a href="#" pro-tip="Właściwość clear w CSS jest używana do kontrolowania zachowania elementów blokowych w stosunku do innych elementów znajdujących się na stronie. Właściwość ta jest zwykle stosowana w przypadku elementów, które są osadzone w innym elemencie i wymagają odseparowania od innych elementów, takich jak obrazy lub elementy float.">clear <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Combinators.html"><button>Dalej</button></a>
+				<div style="padding-top: 60px;" class="btn">
+						<a href="Clear_property.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

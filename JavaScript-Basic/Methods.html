@@ -14,18 +14,21 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
+
+	<div class="roadmap-list">
 				<ol>
 						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -44,8 +47,19 @@
 						<li><a href="Values.html">Wartości</a></li>
 						<li><a href="Reference.html">Referencje</a></li>
 						<li><a href="Methods.html">Metody</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Methods_tables.html">Metody tablicowe</a></li>
+									<li><a class="navbar-drop-text" href="Methods_string.html">Metody stringów</a></li>
+									<li><a class="navbar-drop-text" href="Methods_object.html">Metody obiektów</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
@@ -68,492 +82,46 @@
 						</div>
 				</div>
 				<p class="text-container azure-container article tooltip no-margin-top">
-						Metody są bardzo pomocne, ponieważ pozwalają na skracanie kodu i wykonywanie złożonych operacji w sposób bardziej zwięzły i czytelny.
-				</p>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Metody Tablicowe</h1>
-								<p>
-										Metody tablicowe w języku JavaScript to funkcje wbudowane w obiekt tablicy, które służą do
-										manipulowania i przetwarzania danych w tablicach. Dostępne są one dla każdego obiektu tablicy
-										w języku JavaScript i mogą być wywoływane za pomocą kropki po nazwie tablicy, na przykład
-										myArray.methodName(). Metody te zwracają nową tablicę lub modyfikują istniejącą tablicę, na której zostały wywołane.
-								</p>
-						</div>
-						<img src="/img/vector37.png" alt="">
-				</div>
-				<div class="text-container light-container black-list no-margin-top article tooltip">
-						<div class="text-content">
-								<h4>Przykład użycia metod tablicowych, między innymi:</h4>
-						</div>
-						<div class="line"></div>
-						<div class="text-content">
-								<p>
-										<code><a href="#" pro-tip="Dodaje jeden lub więcej elementów na koniec tablicy i zwraca nową długość tablicy.">push() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Usuwa ostatni element z tablicy i zwraca go.">pop() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Usuwa pierwszy element z tablicy i zwraca go.">shift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Dodaje jeden lub więcej elementów na początek tablicy i zwraca nową długość tablicy.">unshift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca fragment tablicy jako nową tablicę.">slice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Modyfikuje tablicę, usuwając lub zamieniając elementy oraz dodając nowe elementy.">splice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								</p>
-						</div>
-				</div>
-				<div class="code-block">
-						<pre>
-								<code class="language-javascript">
-const numbers = [1, 2, 3, 4, 5];
-
-
-// dodanie liczby 6 na koniec tablicy
-numbers.push(6);
-console.log(numbers); // [1, 2, 3, 4, 5, 6]
-
-
-// usunięcie ostatniego elementu z tablicy
-const last = numbers.pop();
-console.log(numbers); // [1, 2, 3, 4, 5]
-console.log(last); // 6
-
-
-// usunięcie pierwszego elementu z tablicy
-const first = numbers.shift();
-console.log(numbers); // [2, 3, 4, 5]
-console.log(first); // 1
-
-
-// dodanie liczby 0 na początek tablicy
-numbers.unshift(0);
-console.log(numbers); // [0, 2, 3, 4, 5]
-
-
-// wybranie fragmentu tablicy od indeksu 1 do 3
-const subArray = numbers.slice(1, 3);
-console.log(subArray); // [2, 3]
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										[ 1, 2, 3, 4, 5, 6 ]<br>
-										[ 1, 2, 3, 4, 5 ]<br>
-										6<br>
-										[ 2, 3, 4, 5 ]<br>
-										1<br>
-										[ 0, 2, 3, 4, 5 ]<br>
-										[ 2, 3 ]
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<h2 class="page-header"><img class="icon-img-big" src="/img/icon_tablesMethod.png" alt=""> Inne metody tablicowe</h2>
-				<p class="text-container gray-container article tooltip">
-						<code><a href="#" pro-tip="Tworzy nową tablicę z wszystkimi elementami, które spełniają warunek przekazany w funkcji.">filter() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- filtruje elementy tablicy na podstawie określonego warunku.
+						<code><a href="#" pro-tip="Metody w języku JavaScript to funkcje, które są zdefiniowane wewnątrz obiektów i służą do manipulacji danymi zawartymi w tych obiektach. Mogą być one wywoływane na rzecz danego obiektu, co pozwala na zmianę jego stanu lub wykonanie pewnych operacji na jego danych.">Metody</a></code> są bardzo pomocne, ponieważ pozwalają na skracanie kodu i wykonywanie złożonych operacji w sposób bardziej zwięzły i czytelny. Oto przykład prostej metody:
 				</p>
 				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const numbers = [1, 2, 3, 4, 5];
-const filteredNumbers = numbers.filter(num => num > 3);
+					<pre>
+						<code>
+// Definicja obiektu
+let person = {
 
-console.log(filteredNumbers);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										[4, 5]
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container article tooltip">
-						<code><a href="#" pro-tip="Przetwarza elementy tablicy, zwracając jedną wartość.">reduce() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- redukuje tablicę do pojedynczej wartości poprzez zastosowanie funkcji reducer do każdego elementu.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce((accumulator, current) => accumulator + current);
-
-console.log(sum);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										15
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container gray-container article tooltip">
-						<code><a href="#" pro-tip="Tworzy nową tablicę z wynikami wywołania danej funkcji dla każdego elementu tablicy.">map() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca nową tablicę z wynikami wywołania funkcji na każdym elemencie tablicy.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(num => num * 2);
-
-console.log(doubledNumbers);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										[2, 4, 6, 8, 10]
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Metody Stringów</h1>
-				<div class="section-with-image">
-						<p>
-								Metody stringów w języku JavaScript to funkcje wbudowane w obiekt string, które służą do manipulowania
-								i przetwarzania łańcuchów tekstowych. Dostępne są one dla każdego obiektu string w języku JavaScript
-								i mogą być wywoływane za pomocą kropki po wartości tekstowej, na przykład myString.methodName().
-								Metody te zwracają nowy łańcuch tekstowy lub modyfikują istniejący łańcuch tekstowy, na którym zostały wywołane.
-						</p>
-						<img src="/img/vector126.png" alt="">
-				</div>
-				<div class="text-container blue-container article tooltip no-margin-top color-text-white">
-						<div class="text-content">
-								<h4>Przykład użycia metod stringów, między innymi:</h4>
-						</div>
-						<div class="line"></div>
-						<div class="text-content">
-								<p>
-										<code><a href="#" pro-tip="Zwraca długość łańcucha znaków.">length() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca nowy łańcuch tekstowy z przekształconymi literami na wielkie litery.">toUpperCase() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca nowy łańcuch tekstowy z przekształconymi literami na małe litery.">toLowerCase() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca indeks pierwszego wystąpienia podanego fragmentu tekstu w łańcuchu tekstowym. Zwraca -1, jeśli tekst nie zostanie odnaleziony.">indexOf() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca fragment łańcucha tekstowego jako nowy łańcuch tekstowy.">slice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								</p>
-						</div>
-				</div>
-				<div class="code-block">
-						<pre>
-								<code class="language-javascript">
-const name = "John Doe";
-
-
-// pobranie długości stringa
-const length = name.length;
-console.log(length); // 8
-
-
-// zamiana na wielkie litery
-const upper = name.toUpperCase();
-console.log(upper); // JOHN DOE
-
-
-// zamiana na małe litery
-const lower = name.toLowerCase();
-console.log(lower); // john doe
-
-
-// sprawdzenie indeksu pierwszego wystąpienia "o"
-const index = name.indexOf("o");
-console.log(index); // 4
-
-
-// wybranie fragmentu stringa od indeksu 1 do 3
-const subString = name.slice(1, 3);
-console.log(subString); // oh
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										8 <br>
-										JOHN DOE<br>
-										john doe<br>
-										1<br>
-										oh
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<h2 class="page-header"><img class="icon-img-big" src="/img/icon_string.png" alt=""> Inne metody stringów</h2>
-				<p class="text-container blue-container article tooltip">
-						<code><a href="#" pro-tip="Sprawdza, czy łańcuch tekstowy zaczyna się od określonego fragmentu tekstu.">startsWith() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- sprawdza, czy dany tekst zaczyna się od określonej frazy.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const str = 'Hello, world!';
-const startsWithHello = str.startsWith('Hello');
-
-console.log(startsWithHello);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										true
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container blue-container article tooltip">
-						<code><a href="#" pro-tip="Zwraca tablicę łańcuchów tekstowych, uzyskaną poprzez podział łańcucha tekstu">split() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- dzieli dany tekst na tablicę podzieloną określonym separatorem.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const str = 'apple, banana, orange';
-const fruits = str.split(', ');
-
-console.log(fruits);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										['apple', 'banana', 'orange']
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container blue-container article tooltip">
-						<code><a href="#" pro-tip="Zastępuje część ciągu znaków innym ciągiem znaków.">replace() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zastępuje określone wystąpienie frazy inną frazą.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const str = 'Hello, world!';
-const replacedStr = str.replace('world', 'JavaScript');
-
-console.log(replacedStr);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										Hello, JavaScript!
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Metody Obiektów</h1>
-				<div class="section-with-image">
-						<p>
-								Metody obiektów w języku JavaScript to funkcje wbudowane w obiekt, które służą do manipulowania i przetwarzania danych w obiektach.
-								Dostępne są one dla każdego obiektu w języku JavaScript i mogą być wywoływane za pomocą kropki po nazwie obiektu, na przykład myObject.methodName().
-								Metody te zwracają nowe wartości lub modyfikują istniejące wartości w obiekcie, na którym zostały wywołane.
-						</p>
-						<img src="/img/vector142.png" alt="">
-				</div>
-				<div class="text-container lightPink-container article tooltip no-margin-top color-text-white">
-						<div class="text-content">
- 								<h4>Przykład użycia metod obiektów, między innymi:</h4>
-						</div>
-						<div class="line"></div>
-						<div class="text-content">
-								<p>
-										<code><a href="#" pro-tip="Zwraca wartość logiczną wskazującą, czy obiekt zawiera określoną właściwość.">hasOwnProperty() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca ciąg znaków reprezentujący dany obiekt.">toString() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Zwraca wartość pierwotną obiektu.">valueOf() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										<code><a href="#" pro-tip="Sprawdza, czy właściwość obiektu jest wyliczalna (czyli czy zostanie zwrócona przez pętlę for...in).">propertyIsEnumerable() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								</p>
-						</div>
-				</div>
-				<div class="code-block">
-						<pre>
-								<code class="language-javascript">
-const person = {
-
-	name: "John Doe",
-	age: 30,
-
-	sayHello: function() {
-
-		console.log(`Hello, my name is ${this.name}.`);
-	},
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
 };
 
 
-// sprawdzenie, czy obiekt posiada właściwość "name"
-const hasName = person.hasOwnProperty("name");
-console.log(hasName); // true
+// Wywołanie metody fullName() na obiekcie person i zapisanie wyniku do zmiennej name
+let name = person.fullName();
 
 
-// pobranie reprezentacji stringowej obiektu
-const string = person.toString();
-console.log(string); // [object Object]
-
-
-// pobranie wartości właściwości "name"
-const value = person.name;
-console.log(value); // John Doe
-
-
-// wywołanie funkcji "sayHello"
-person.sayHello(); // Hello, my name is John Doe.
-								</code>
-						</pre>
+// Wyświetlenie wyniku
+console.log(name);
+						</code>
+					</pre>
 				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										true <br>
-										[object Object]<br>
-										John Doe<br>
-										Hello, my name is John Doe.
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<h2 class="page-header"><img class="icon-img-big" src="/img/icon_object(1).png" alt=""> Inne metody obiektów</h2>
-				<p class="text-container lightPink-container article tooltip">
-						<code><a href="#" pro-tip="Zwraca tablicę zawierającą nazwy wszystkich właściwości obiektu, które są wyliczalne.">keys() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca tablicę kluczy obiektu.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const obj = { name: 'John', age: 30 };
-const objKeys = Object.keys(obj);
-
-console.log(objKeys);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										['name', 'age']
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container lightPink-container article tooltip">
-						<code><a href="#" pro-tip="Zwraca tablicę zawierającą wartości wszystkich właściwości obiektu, które są wyliczalne.">values() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca tablicę wartości obiektu.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const obj = { name: 'John', age: 30 };
-const objValues = Object.values(obj);
-
-console.log(objValues);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										['John', 30]
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container lightPink-container article tooltip">
-						<code><a href="#" pro-tip="Kopiuje wartości wszystkich wyliczalnych właściwości jednego lub więcej obiektów do obiektu docelowego.">assign() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- kopiuje wartości właściwości jednego lub wielu obiektów do innego obiektu.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code class="language-javascript">
-const obj1 = { name: 'John', age: 30 };
-const obj2 = { job: 'Developer' };
-const mergedObj = Object.assign(obj1, obj2);
-
-console.log(mergedObj);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										{ name: 'John', age: 30, job: 'Developer' }
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								To tylko kilka przykładów użycia metod w języku JavaScript. W rzeczywistości jest ich dużo więcej
-								i można je stosować w wielu różnych sytuacjach. Dzięki metodom można w łatwy sposób manipulować danymi
-								i wyciągać z nich potrzebne informacje.
-						</p>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card alert-card3 alert-card-gray">
+					<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W tym przykładzie użyliśmy metody fullName(), która zwraca pełne imię i nazwisko osoby przechowywanej w obiekcie person. Metoda ta jest wywoływana na obiekcie person i zwraca wynik, który jest zapisywany do zmiennej name. Następnie wynik jest wyświetlany w konsoli za pomocą metody console.log().
+					</p>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Events.html"><button>Dalej</button></a>
+						<a href="Methods_tables.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS {Colors}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Nazwy Kolorów</h1>
+		<p>
+			W HTML kolor można określić za pomocą nazwy koloru. więcej kolorów znajdziesz tu
+			<button><a href="https://www.w3schools.com/colors/colors_names.asp">W3 schools kolorki</a></button>
+		</p>
+		<div class="double-elements">
+			<div class="browser medium-browser indianred-container">
+				<h2 class="color-text-black">Indian Red</h2>
+			</div>
+			<div class="browser medium-browser blueviolet-container">
+				<h2 class="color-text-black">Blue Violet</h2>
+			</div>
+		</div>
+		<div class="double-elements">
+			<div class="browser darkslategray medium-browser">
+				<h2 class="color-text-black">Dark Slate Gray</h2>
+			</div>
+			<div class="browser medium-browser aquamarine-container">
+				<h2 class="color-text-black">Medium Aquamarine</h2>
+			</div>
+		</div>
+		<div class="double-elements">
+			<div class="browser medium-browser slateblue-container">
+				<h2 class="color-text-black">Slate Blue</h2>
+			</div>
+			<div class="browser medium-browser coral-container">
+				<h2 class="color-text-black">Coral</h2>
+			</div>
+		</div>
+		<div class="double-elements">
+			<div class="browser medium-browser sandybrown-container">
+				<h2 class="color-text-black">Sandy Brown</h2>
+			</div>
+			<div class="browser medium-browser hotpink-container">
+				<h2 class="color-text-black">Hot Pink</h2>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Background.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

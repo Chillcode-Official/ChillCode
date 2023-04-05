@@ -75,6 +75,8 @@
 .text-container.light-container{
 		background-color: #bb9c9c
 }
+
+/*line height elements*/
 .text-container.line-height-plus{
 		line-height: 40px;
 }

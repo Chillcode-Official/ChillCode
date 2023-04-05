@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Tablice}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Tablice</a></li>
+						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Rodzaje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości i Metody tablic</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>funkcje Tablic</h1>
+				<p>
+					Tablice w języku JavaScript są dynamiczne, co oznacza, że można zmieniać ich długość w trakcie
+					działania programu. Można dodawać nowe elementy do tablicy lub usuwać już istniejące.
+				</p>
+			</div>
+			<img src="/img/vector58.png" alt="">
+		</div>
+		<p class="text-container white-container article tooltip">
+			Można również iterować przez elementy tablicy, np. za pomocą pętli
+			<code><a href="#" pro-tip="pętla for jest często używana do powtarzania pewnych czynności określoną ilość razy.">for <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
+			<code><a href="#" pro-tip="metoda foreach służy do iteracji po elementach w tablicy lub obiekcie i wykonania na nich określonych czynności.">foreach <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+for (var i = 0; i < fruits.length; i++) {
+
+  console.log(fruits[i]);
+}
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding output-list">
+							<p>banana</p>
+							<p>pear</p>
+							<p>orange</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+fruits.forEach(function(fruit) {
+
+  console.log(fruit);
+});
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding output-list">
+							<p>banana</p>
+							<p>pear</p>
+							<p>orange</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<p class="text-container white-container article tooltip">
+			Tablica jest również <code><a href="#" pro-tip="obiekt jest złożonym typem danych w JavaScript, który może przechowywać różne wartości">obiektem <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, co oznacza, że można do niej
+			dodawać <code><a href="#" pro-tip="właściwości to wartości przechowywane w obiekcie. Mogą być one typu liczbowego, łańcuchowego, logicznego lub innego typu danych.">właściwości <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>:
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+fruits.color = 'yellow';
+
+console.log(fruits.color);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					yellow
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3 alert-card-no-margin-top">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Ważne jest, aby pamiętać, że dodawanie właściwości do tablicy nie jest dobrym praktycznie rozwiązaniem i powinno się tego unikać.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Tables_type.html"><button>Dalej</button></a>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

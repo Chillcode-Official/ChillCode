@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML {Lista definicyjna}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Lista Definicyjna</h1>
+				<p>
+					Lista definicyjna w HTML jest używana do tworzenia list, w których każdy element
+					składa się z pojęcia i jego definicji. Listy definicyjne są często używane do tworzenia
+					słowników, list pojęć i innych typów list, w których istnieje pojęcie i jego definicja.
+				</p>
+			</div>
+			<img src="/img/vector115.png" alt="">
+		</div>
+		<p class="text-container purple-container no-margin-top article tooltip">
+			Elementy listy definicyjnej składają się z trzech głównych tagów:
+			<code><a href="#" pro-tip="Służy do zdefiniowania listy definicyjnej. Element ten musi znajdować się na początku i na końcu listy definicyjnej">&ltdl&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="Służy do zdefiniowania pojedynczej definicji, czyli pojęcia lub terminu, który ma być zdefiniowany w liście. Ten tag musi być umieszczony przed tagiem <dd>">&ltdt&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="Służy do zdefiniowania definicji danego pojęcia lub terminu, który został zdefiniowany w tagu <dt>. Ten tag musi znajdować się po tagu <dt>">&ltdd&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="code-block">
+						<pre>
+								<code class="language-xml">
+&lt;dl&gt;
+ &lt;dt&gt;HTML`&lt;/dt&gt;
+ &lt;dd&gt;J&eogon;zyk opisu stron internetowych&lt;/dd&gt;&lt;br&gt;
+
+ &lt;dt&gt;ChillCode&lt;/dt&gt;
+ &lt;dd&gt;Serwis kt&oacute;ry nauczy ci&eogon; programowania&lt;/dd&gt;
+&lt;/dl&gt;
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content">
+					<dl>
+						<dt><b class="color-text-black">HTML'</b></dt>
+						<dd>Język opisu stron internetowych</dd>
+						<br>
+						<dt><b class="color-text-black">ChillCode</b></dt>
+						<dd>Serwis który nauczy cię programowania</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Warto zauważyć, że tagi &ltdt&gt i &ltdd&gt muszą być używane w parze i znajdować się wewnątrz tagu &ltddl&gt W przeciwnym razie lista definicyjna nie będzie poprawnie działać.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Lists_nesting.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Funkcje-JavaScript</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Funkcje</a></li>
+						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcja anonimowa</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości funkcji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Najważniejsze właściwości Funkcji</h1>
+		<div class="section-with-image">
+			<p>
+				W języku JavaScript funkcja jest obiektem, więc posiada kilka właściwości i metod. Oto kilka najważniejszych właściwości funkcji:
+			</p>
+			<img src="/img/vector45.png" alt="">
+		</div>
+		<p class="text-container lightPink-container article tooltip no-margin-top">
+			<code><a href="#" pro-tip="Właściwość ta zawiera obiekt prototypu funkcji, który jest używany do ustawienia łańcucha prototypów dla obiektów tworzonych z użyciem konstruktora funkcji. Można do niego dodawać metody i właściwości, które będą dostępne dla wszystkich obiektów stworzonych z użyciem tego konstruktora.">prototype <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest wbudowanym obiektem, który jest dostępny
+			dla wszystkich funkcji. Służy do tworzenia dziedziczenia między obiektami.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+function Person(imię, nazwisko) {
+  this.imię = imię;
+  this.nazwisko = nazwisko;
+}
+
+Person.prototype.przedstawSię = function() {
+  console.log("Cześć, jestem " + this.imię + " " + this.nazwisko);
+};
+
+var jan = new Person("Jan", "Kowalski");
+jan.przedstawSię();
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					Cześć, jestem Jan Kowalski
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="double-elements">
+			<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Właściwość ta zwraca liczbę parametrów formalnych (nie biorąc pod uwagę parametrów domyślnych) funkcji.">length <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zwraca liczbę argumentów, jakie funkcja oczekuje na wejściu.</p>
+			<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Właściwość ta zwraca nazwę funkcji.">name <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zwraca nazwę funkcji.</p>
+		</div>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.length);
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							2
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.name);
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							sum
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="double-elements">
+			<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Właściwość ta zawiera obiekt reprezentujący argumenty przekazane do funkcji. Nie jest to tablica, ale podobny obiekt z właściwościami numerycznymi dla każdego argumentu i właściwością length.">arguments <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest obiektem zawierającym argumenty, które zostały przekazane do funkcji.</p>
+			<p class="text-container lightPink-container article tooltip"><code><a href="#" pro-tip="Metoda ta wywołuje funkcję z określonym obiektem jako wartością this i przekazuje argumenty jako osobne argumenty do funkcji.">call() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala wywołać funkcję i przekazać do niej listę argumentów.</p>
+		</div>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+function sum() {
+  var result = 0;
+
+  for (var i = 0; i < arguments.length; i++) {
+	result += arguments[i];
+  }
+  return result;
+}
+
+console.log(sum(1, 2, 3, 4));
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							10
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+function przywitajSię(imię) {
+
+  console.log("Witaj, " + imię);
+}
+
+  var imiona = ["Jan", "Anna", "Piotr"];
+
+  for (var i = 0; i < imiona.length; i++) {
+	przywitajSię.call(null, imiona[i]);
+}
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							<p>Witaj, Jan</p>
+							<p>Witaj, Anna</p>
+							<p>Witaj, Piotr</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<p class="text-container lightPink-container article tooltip">
+			<code><a href="#" pro-tip="Metoda ta wywołuje funkcję z określonym obiektem jako wartością this i przekazuje argumenty jako tablicę.">apply() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala wywołać funkcję i przekazać do niej tablicę argumentów.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+function sum() {
+  var result = 0;
+  for (var i = 0; i < arguments.length; i++) {
+	result += arguments[i];
+  }
+  return result;
+}
+
+  var liczby = [1, 2, 3, 4];
+  console.log(sum.apply(null, liczby));
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					10
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<p class="text-container lightPink-container article tooltip">
+			<code><a href="#" pro-tip="Metoda ta zwraca nową funkcję, która ma określoną wartość this i określone argumenty przekazane do funkcji jako argumenty wiązania. Funkcja zwrócona przez bind() może być wywołana później z tą samą wartością this i argumentami przekazanymi do bind().">bind() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> tworzy nową funkcję, która jest połączona z bieżącą funkcją i
+			przypisana do określonego kontekstu.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+var przywitajSię = function(imię) {
+  console.log("Witaj, " + imię + ", jestem " + this.nazwa);
+}.bind({nazwa: "ChatGPT"});
+
+przywitajSię("Jan");
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					Witaj, Jan, jestem Ignacy
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Te właściwości pozwalają na bardziej zaawansowane wykorzystywanie funkcji w języku JavaScript.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Tables.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

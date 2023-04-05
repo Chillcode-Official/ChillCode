@@ -9,56 +9,126 @@
 		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 		<script src="/Highlight/highlight.min.js"></script>
 		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Background.html">Tło</a></li>
-						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
-						<li><a href="Position.html">Pozycja</a></li>
-						<li><a href="Overflow.html">Przepełnienie</a></li>
-						<li><a href="Margins.html">Marginesy</a></li>
-						<li><a href="Padding.html">Dopełnienie</a></li>
-						<li><a href="Border.html">Obramowanie</a></li>
-						<li><a href="Outline.html">Zarys</a></li>
-						<li><a href="Text.html">Tekst</a></li>
-						<li><a href="fonts.html">Czcionki</a></li>
-						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
-						<li><a href="Pictures.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="list.html">Listy</a></li>
-						<li><a href="Z-index.html">Z-index</a></li>
-						<li><a href="Float_property.html">Właściwość float</a></li>
-						<li><a href="Combinators.html">Kombinatory</a></li>
-						<li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
-						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
-						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
-						<li><a href="Transparency.html">Przezroczystość</a></li>
-						<li><a href="Forms.html">Formularze</a></li>
-						<li><a href="Counters.html">Liczniki</a></li>
-						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
-						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
@@ -79,186 +149,26 @@
 						<code><a href="#" pro-tip="określa grubość obramowania. Możliwe wartości to jednostki długości, takie jak piksele, em czy procenty, a także słowa kluczowe, takie jak thin, medium i thick. Domyślnie ustawiona jest na medium.">outline-width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
 				</p>
 				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
+						<div class="code-block code-block-medium hidden-overflow">
 								<pre>
 										<code>
 element {
-		outline: hotpink solid 12px;
-		width: 350px;
-		border: 4px solid green;
-		padding: 20px;
-		margin: 60px;
+  outline: hotpink solid 12px;
+  width: 350px;
+  border: 4px solid green;
+  padding: 20px;
+  margin: 60px;
 }
 										</code>
 								</pre>
 						</div>
-						<div style="width: 350px;border:4px solid green;outline:hotpink solid 12px;padding:20px;margin:60px; color: white;">
+						<div style="border:4px solid green;outline:hotpink solid 12px;padding:20px;margin:60px; color: white;">
 								Ten element ma zieloną obwódkę i różowy kontur o szerokości 12px.
 						</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_outline.png" alt=""> Niektóre Style zarysu W CSS</h2>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys składa się z kropek">dotted <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Obrys złożony z kropek.</p>
-						<p class="text-container gray-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys składa się z kresek">dashed <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Obrys złożony z kresek.</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: dotted;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: dashed;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-				</div>
-				<div class="double-elements minus-margin-top">
-						<div>
-								<p style="border-color: #ccc3c3; border-style: dotted;padding:2px 7px;">Dotted</p>
-						</div>
-						<div>
-								<p style="border-color: #ccc3c3; border-style: dashed;padding:2px 7px;">Dashed</p>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys składa się z ciągłej linii">Solid <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Obrys w pełni wypełniony kolorem.</p>
-						<p class="text-container gray-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys składa się z dwóch ciągłych linii ustawionych obok siebie">double <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Podwójny obrys z paskiem</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: solid;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: double;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-				</div>
-				<div class="double-elements minus-margin-top">
-						<div>
-								<p style="border-color: #ccc3c3; border-style: solid;padding:2px 7px;">Solid</p>
-						</div>
-						<div>
-								<p style="border-color: #ccc3c3; border-style: double;padding:2px 7px;">Double</p>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys wygląda jak rowek wycięty w elemencie">groove <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Obrys w stylu "rowka".</p>
-						<p class="text-container gray-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys wygląda jak grzbiet wycięty z elementu">ridge <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Obrys w stylu "grzbietu".</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: groove;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: ridge;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-				</div>
-				<div class="double-elements minus-margin-top">
-						<div>
-								<p style="border-color: #ccc3c3; border-style: groove;padding:2px 7px;">Groove</p>
-						</div>
-						<div>
-								<p style="border-color: #ccc3c3; border-style: ridge;padding:2px 7px;">Ridge</p>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container blue-container  article tooltip"><code><a href="#" pro-tip="Zarys wygląda jak wcięcie w elemencie">inset <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wnętrze obrysu jest wcięte.</p>
-						<p class="text-container gray-container blue-container article tooltip"><code><a href="#" pro-tip="Zarys wygląda jak wypukłość na elemencie">outset <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wnętrze obrysu jest wypukłe.</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: inset;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-						<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-element {
-	outline-width: 2px;
-	outline-style: outset;
-	outline-color: blue;
-}
-										</code>
-								</pre>
-						</div>
-				</div>
-				<div class="double-elements minus-margin-top">
-						<div>
-								<p style="border-color: #ccc3c3; border-style: inset;padding:2px 7px;">Inset</p>
-						</div>
-						<div>
-								<p style="border-color: #ccc3c3; border-style: outset;padding:2px 7px;">Outset</p>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Obrys jest inny niż ramka (border) - Obrys nie zajmuje miejsca na stronie i nie wpływa na rozmiar elementu,
-								podczas gdy ramka jest widoczna i zajmuje miejsce na stronie.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Text.html"><button>Dalej</button></a>
+						<a href="Outline_styles.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

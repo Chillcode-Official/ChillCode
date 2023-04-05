@@ -14,52 +14,121 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Background.html">Tło</a></li>
-						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
-						<li><a href="Position.html">Pozycja</a></li>
-						<li><a href="Overflow.html">Przepełnienie</a></li>
-						<li><a href="Margins.html">Marginesy</a></li>
-						<li><a href="Padding.html">Dopełnienie</a></li>
-						<li><a href="Border.html">Obramowanie</a></li>
-						<li><a href="Outline.html">Zarys</a></li>
-						<li><a href="Text.html">Tekst</a></li>
-						<li><a href="fonts.html">Czcionki</a></li>
-						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
-						<li><a href="Pictures.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="list.html">Listy</a></li>
-						<li><a href="Z-index.html">Z-index</a></li>
-						<li><a href="Float_property.html">Właściwość float</a></li>
-						<li><a href="Combinators.html">Kombinatory</a></li>
-						<li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
-						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
-						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
-						<li><a href="Transparency.html">Przezroczystość</a></li>
-						<li><a href="Forms.html">Formularze</a></li>
-						<li><a href="Counters.html">Liczniki</a></li>
-						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
-						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="is-selected"><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
@@ -85,27 +154,27 @@
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 .cta {
-		display: inline-block;
-		padding: 10px 20px;
-		background-color: #9d4d4d;
-		color: white;
-		text-align: center;
-		position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9d4d4d;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 .cta::after {
-		content: "";
-		position: absolute;
-		bottom: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		border-width: 20px 20px 0;
-		border-style: solid;
-		border-color: #f39696 transparent;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #f39696 transparent;
 }
 										</code>
 								</pre>
@@ -122,25 +191,25 @@
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 .highlighted-text {
 
-	background-color: yellow;
-	padding: 5px 10px;
-	display: inline-block;
-	position: relative;
+  background-color: yellow;
+  padding: 5px 10px;
+  display: inline-block;
+  position: relative;
 }
 
 .highlighted-text::before {
-	content: "";
-	position: absolute;
-	top: -10px;
-	left: 0;
-	right: 0;
-	height: 10px;
-	background-color: yellow;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: yellow;
 }
 
 
@@ -173,15 +242,15 @@
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 p::first-letter {
-	font-size: 32px;
-	font-weight: bold;
-	color: blue;
-	float: left;
-	margin-right: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: blue;
+  float: left;
+  margin-right: 10px;
 }
 
 										</code>
@@ -197,16 +266,16 @@ p::first-letter {
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 .highlighted-text {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .highlighted-text::first-line {
-	color: red;
+  color: red;
 }
 										</code>
 								</pre>
@@ -237,23 +306,23 @@ p::first-letter {
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top code-block-medium">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
 								<pre>
 										<code>
 ol {
-	list-style-type: none;
-	padding: 0;
-	color: #7e7c7c;
+  list-style-type: none;
+  padding: 0;
+  color: #7e7c7c;
 }
 
 li::marker {
-	display: inline-block;
-	width: 30px;
-	text-align: center;
-	color: white;
-	background-color: blue;
-	margin-right: 10px;
-	padding: 5px 0;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  margin-right: 10px;
+  padding: 5px 0;
 }
 										</code>
 								</pre>
@@ -272,12 +341,12 @@ li::marker {
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top code-block-medium">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
 								<pre>
 										<code>
 p::selection {
-background-color: #d48852;
-color: white;
+  background-color: #d48852;
+  color: white;
 }
 										</code>
 								</pre>

@@ -14,41 +14,108 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
-						<li><a href="Paragraph.html">Paragraf</a></li>
-						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Attributes.html">Atrybuty</a></li>
-						<li><a href="List.html">Lista</a></li>
-						<li><a href="Links.html">Linki</a></li>
-						<li><a href="Images.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="Symbols.html">Symbole</a></li>
-						<li><a href="Quotations.html">Cytaty</a></li>
-						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
-						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
-						<li><a href="Class_Id.html">Klasy oraz Id</a></li>
-						<li><a href="Layout_HTML.html">Układ strony</a></li>
-						<li><a href="Responsiveness.html">Responsywność</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
@@ -82,164 +149,12 @@
 						</div>
 				</div>
 				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Szerokość I Wysokość</h1>
-								<p>
-										Szerokość i wysokość obrazu w HTML mogą być ustawione za pomocą atrybutów "<span>width</span>" i "<span>height</span>"
-										w tagu <span>&ltimg&gt</span>. Szerokość i wysokość mogą być określone w pikselach lub procentach.
-								</p>
-						</div>
-						<img src="/img/vector15.png" alt="">
-				</div>
-				<p class="text-container no-margin-top">
-						Poniższy przykład ustawia szerokość obrazu na 300 pikseli i wysokość na 200 pikseli.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt;img src=&quot;winter.jpg&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-clear">
-										<img src="/img/winter.jpg" alt="Opis obrazu" width="300" height="200">
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container gray-container">
-						Poniższy przykład skaluje obraz do 50% oryginalnego rozmiaru.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt;img src=&quot;winter.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-clear">
-										<img src="/img/winter.jpg" alt="Opis obrazu" width="50%" height="50%">
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Jeśli określisz szerokość i wysokość w pikselach, obraz będzie miał dokładnie takie wymiary,
-								niezależnie od rozmiaru oryginalnego obrazu. Natomiast jeśli określisz szerokość i wysokość w procentach, obraz będzie skalowany proporcjonalnie.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Tytuł I Podpis</h1>
-				<div class="section-with-image">
-						<p>
-								Tytuł obrazu jest opcjonalnym atrybutem, który pojawia się jako podpowiedź po najechaniu na
-								obraz za pomocą kursora myszy. Natomiast podpis zdjęcia używany jest do grupowania elementów graficznych,
-								takich jak obrazy, wraz z ich opisami i podpisami.
-						</p>
-						<img src="/img/vector16.png" alt="">
-				</div>
-				<p class="text-container lightGreen-container article tooltip">
-						Tytuł obrazu w można ustawić za pomocą atrybutu
-						<code><a href="#" pro-tip="Dodaje opis do danego elementu, który pojawia się po najechaniu na niego kursorem myszy">title <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> w tagu
-						<code><a href="#" pro-tip="Element HTML, który służy do wyświetlania obrazów na stronie internetowej">&ltimg&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt;img src=&quot;television.png&quot; title=&quot;Tytu&lstrok; obrazu&quot;&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<img style="width: 50px;" src="/img/icon_television.png" alt="Opis obrazu" title="Tytuł obrazu">
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container lightGreen-container article tooltip">
-						Tag <code><a href="#" pro-tip="Służy do opisywania zawartości obiektu, umieszcza tekst bezpośrednio pod elementem">&ltfigcaption&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest używany do umieszczenia tekstu podpisu bezpośrednio pod obrazem.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt;figure&gt;
-		&lt;img src=&quot;television.png&quot;&gt;
-		&lt;figcaption&gt;Podpis zdj&eogon;cia&lt;/figcaption&gt;
-&lt;/figure&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<figure>
-												<img style="width: 50px;" src="/img/icon_television.png" alt="Opis obrazu">
-												<figcaption>Podpis zdjęcia</figcaption>
-										</figure>
-								</div>
-						</div>
-				</div>
-
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Tabels.html"><button>Dalej</button></a>
+						<a href="Images_width_and_height.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

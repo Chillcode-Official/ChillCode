@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Instrukcje warunkowe}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja if</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja else</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja else..if</a></li>
+						<li><a class="navbar-drop-text" href="Operators_logical.html">Instrukcja switch</a></li>
+
+					</ul>
+				</div>
+			</li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Instrukcja (switch)</h1>
+				<p>
+					Instrukcja switch jest alternatywą dla instrukcji if i else if, pozwala na sprawdzenie wartości
+					zmiennych względem kilku możliwych wartości (przypadków) i wykonywanie odpowiedniego bloku kodu dla każdej z tych wartości.
+				</p>
+			</div>
+			<div>
+				<img src="/img/vector34.png" alt="">
+			</div>
+		</div>
+		<p class="text-container purple-container article tooltip no-margin-top">
+			Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="Instrukcja switch służy do testowania różnych wartości i wykonania różnych fragmentów kodu, w zależności od wartości testowanej zmiennej. W instrukcji switch każdy case definiuje wartość, która ma zostać porównana z wartością zmiennej. Jeśli wartość zmiennej pasuje do wartości w danym case, zostanie wykonany odpowiadający mu blok kodu.">switch <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
+switch (wartość) {
+
+	case wartość 1:
+		// kod do wykonania, gdy wartość jest równa wartości1
+		break;
+
+
+	case wartość 2:
+		// kod do wykonania, gdy wartość jest równa wartości2
+		break;
+
+	...
+	default:
+		// kod do wykonania, gdy wartość nie jest równa żadnej z powyższych wartości
+}
+								</code>
+						</pre>
+		</div>
+		<div class="code-block">
+						<pre>
+								<code>
+let x = "czarny";
+
+switch (x) {
+
+	case "czerwony":
+		console.log("x jest czerwony");
+		break;
+
+	case "zielony":
+		console.log("x jest zielony");
+		break;
+
+	case "niebieski":
+		console.log("x jest niebieski");
+		break;
+
+	default:
+		console.log("x nie jest żadnym z powyższych kolorów");
+}
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					x nie jest żadnym z powyższych kolorów
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3 alert-card-gray">
+			<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+			<b>Wyjaśnienie</b>
+			<div class="line"></div>
+			<p>
+				W poniższym przykładzie, wartość zmiennej x jest porównywana z każdym z możliwych przypadków
+				(w naszym przypadku: "czerwony", "zielony", "niebieski"). Jeśli wartość jest równa jednej z tych
+				wartości, odpowiadający mu kod jest wykonywany i instrukcja break jest używana, aby zatrzymać dalsze
+				wykonywanie programu. W przeciwnym razie, program przechodzi do następnego przypadku. Jeśli żadne z
+				przypadków nie jest prawdziwe, kod z bloku default jest wykonywany.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Loops.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -41,19 +41,30 @@
 
 /*Table Example Elements*/
 .tableExample {
-		width: 75%;
-		margin: 0 auto;
-		border-collapse: collapse;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.tableExample th, td {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+	background-color: gray;
+}
+
+.tableExample thead {
+	background-color: #eee;
+}
+
+.tableExample tr:nth-child(even) {
+	background-color: #f2f2f2;
 }
 
 .tableExample th {
-		border: 2px solid #d6aeff;
-		padding: 8px;
-		background-color: #8c8686;
-		font-weight: bold;
-}
-.tableExample td{
-		background-color: #696666;
+	background-color: #894bcb;
+	color: white;
 }
 .simple-Table-with-only-td td{
 		border: 3px solid black;

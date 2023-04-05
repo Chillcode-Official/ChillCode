@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Eventy}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Eventy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Events.html">Eventy</a></li>
+						<li><a class="navbar-drop-text" href="Event_handling.html">Obsługa zdarzeń</a></li>
+						<li><a class="navbar-drop-text" href="Event_properties.html">Właściwości eventów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Właściwości Eventów</h1>
+				<p>
+					W języku JavaScript każde zdarzenie jest reprezentowane przez obiekt Event i posiada szereg
+					właściwości opisujących jego stan i szczegóły. Poniżej wymieniono niektóre z nich:
+				</p>
+			</div>
+			<img src="/img/vector39.png" alt="">
+		</div>
+		<div class="double-elements">
+			<p class="text-container red-container article tooltip">
+				<code><a href="#" pro-tip="właściwość obiektu Event, która zwraca nazwę zdarzenia, które zostało wywołane. Na przykład, click, mouseover, keydown, itp.">type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca nazwę zdarzenia.
+			</p>
+			<p class="text-container red-container article tooltip">
+				<code><a href="#" pro-tip="właściwość obiektu Event, która zwraca element DOM, który był celem zdarzenia. Na przykład, jeśli kliknięto przycisk, właściwość target zwróci ten przycisk.">target <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca element, który wywołał zdarzenie.
+			</p>
+		</div>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top  code-block-medium">
+						<pre>
+								<code>
+document.addEventListener("click", function(event) {
+  console.log(event.type);
+});
+								</code>
+						</pre>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top  code-block-medium">
+						<pre>
+								<code>
+document.addEventListener("click", function(event) {
+  console.log(event.target);
+});
+								</code>
+						</pre>
+				</div>
+			</div>
+		</div>
+		<div class="double-elements">
+			<p class="text-container red-container article tooltip">
+				<code><a href="#" pro-tip="właściwości obiektu Event, która zwraca pozycję kursora myszy względem lewego górnego rogu okna przeglądarki. clientX zwraca położenie kursora względem osi X">clientX <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz
+				<code><a href="#" pro-tip="właściwości obiektu Event, która zwraca pozycję kursora myszy względem lewego górnego rogu okna przeglądarki. clientY zwraca położenie kursora względem osi Y">clientY <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwracają pozycję kursora myszy w oknie przeglądarki.
+			</p>
+			<p class="text-container red-container article tooltip">
+				<code><a href="#" pro-tip="właściwość obiektu Event, która zwraca wartość numeryczną klawisza, który został wciśnięty. Ta właściwość jest często używana w przypadku zdarzeń związanych z klawiaturą, takich jak keydown i keyup">keyCode <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca kod klawisza, który został naciśnięty.
+			</p>
+		</div>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top  code-block-medium">
+						<pre>
+								<code>
+document.addEventListener("mousemove", function(event) {
+  console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
+});
+								</code>
+						</pre>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top  code-block-medium">
+						<pre>
+								<code>
+document.addEventListener("keyup", function(event){
+  console.log(event.keyCode);
+});
+								</code>
+						</pre>
+				</div>
+			</div>
+		</div>
+		<p class="text-container azure-container article tooltip">
+			<code><a href="#" pro-tip="Metoda ta zapobiega domyślnej akcji, która ma zostać wykonana podczas obsługi zdarzenia. Na przykład, gdy użytkownik kliknie na link, domyślną akcją jest przekierowanie do strony, którą link wskazuje. Wywołanie metody preventDefault() podczas obsługi zdarzenia kliknięcia na linku uniemożliwi to przekierowanie.">preventDefault() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zapobiega domyślnej akcji przeglądarki dla danego zdarzenia.
+		</p>
+		<div class="code-block code-block-margin-top ">
+						<pre>
+								<code>
+document.querySelector("a").addEventListener("click", function(event) {
+  event.preventDefault();
+  console.log("Link was clicked, default action was prevented");
+});
+								</code>
+						</pre>
+		</div>
+		<p class="text-container azure-container article tooltip">
+			<code><a href="#" pro-tip="Metoda ta zapobiega dalszej propagacji zdarzenia wzdłuż drzewa DOM (Document Object Model), co oznacza, że ​​zdarzenie nie będzie przekazywane do kolejnych elementów. Na przykład, gdy użytkownik kliknie na element, który znajduje się wewnątrz innego elementu, takiego jak przycisk wewnątrz diva, zdarzenie kliknięcia zostanie przekazane do obu elementów - przycisku i diva. Jeśli chcesz zatrzymać dalszą propagację">stopPropagation() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zatrzymuje propagowanie zdarzenia do innych elementów w hierarchii dokumentu.
+		</p>
+		<div class="code-block code-block-margin-top ">
+						<pre>
+								<code>
+document.addEventListener("click", function(event) {
+  console.log("Document was clicked");
+  event.stopPropagation();
+});
+
+document.querySelector("button").addEventListener("click", function(event) {
+  console.log("Button was clicked");
+});
+								</code>
+						</pre>
+		</div>
+		<div class="alert-card alert-card3 alert-card-no-margin-top">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Oto tylko kilka przykładów, jak można używać właściwości obiektu Event w języku JavaScript.
+				W zależności od potrzeb i typu zdarzenia mogą być dostępne różne właściwości i metody.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="DOM_what_is.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Manipulacja Dom-em}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja DOM-em</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="DOM_what_is.html">Czym jest DOM</a></li>
+						<li><a class="navbar-drop-text" href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a class="navbar-drop-text" href="DOM_methods.html">Metody DOM-u</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Metody DOMU</h1>
+				<p>
+					Te przykłady pokazują jak używać niektórych z najważniejszych metod DOM w języku JavaScript.
+					Są one tylko wstępem i powinny dać Ci wyobrażenie o tym, jak można z nich korzystać w swoich
+					projektach. W rzeczywistości te metody są bardziej złożone i pozwalają na wiele innych ciekawych
+					rzeczy. Zaleca się zapoznanie się z dokumentacją języka JavaScript, aby uzyskać pełne rozeznanie
+					w dostępnych metodach i ich możliwościach.
+				</p>
+			</div>
+			<img src="/img/vector155.png" alt="">
+		</div>
+		<div class="double-elements">
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="metoda zwraca pierwszy element w dokumencie, który pasuje do określonego selektora lub grupy selektorów. Można jej użyć do znajdowania elementów według nazwy tagu, klasy lub ID.">document.querySelector() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca pierwszy element zgodny z podanym selektorem </p>
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="właściwość pobiera lub ustawia zawartość HTML elementu. Pozwala na dodawanie, usuwanie lub modyfikowanie znaczników HTML wewnątrz elementu.">element.innerHTML <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca lub ustawia HTML wewnątrz elementu</p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const header = document.querySelector('header');
+header.style.backgroundColor = 'red';
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const list = document.querySelector(&apos;ul&apos;);
+list.innerHTML = &apos;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;li&gt;Item 3&lt;/li&gt;&apos;;
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="double-elements">
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="właściwość zwraca atrybut klasy elementu jako obiekt DOMTokenList, który jest kolekcją indywidualnych klas. Pozwala na dodawanie, usuwanie lub przełączanie klas na elemencie.">element.classList <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca listę klas dla elementu i pozwala na dodawanie, usuwanie lub sprawdzanie obecności klas</p>
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="metoda tworzy nowy element o określonej nazwie tagu. Pozwala na utworzenie nowego elementu w drzewie DOM, który może być dołączony do istniejącego elementu lub dodany do dokumentu.">document.createElement() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy nowy element DOM</p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const button = document.querySelector('button');
+button.classList.add('active');
+button.classList.remove('active');
+console.log(button.classList.contains('active'));
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const newListItem = document.createElement('li');
+newListItem.innerText = 'Item 4';
+const list = document.querySelector('ul');
+list.appendChild(newListItem);
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="double-elements">
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="metoda ustawia wartość atrybutu na elemencie. Pozwala na ustawienie dowolnego atrybutu na elemencie HTML, takiego jak src dla obrazów lub href dla łączy.">element.setAttribute() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- ustawia wartość atrybutu dla elementu</p>
+			<p class="text-container white-container article tooltip"><code><a href="#" pro-tip="Metoda dołącza detektor zdarzeń do elementu. Pozwala nasłuchiwać działań użytkownika na elemencie, takich jak kliknięcia lub ruchy myszy, i w odpowiedzi wykonać funkcję.">element.addEventListener() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- dodaje zdarzenie do elementu</p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const image = document.querySelector('img');
+
+image.setAttribute('alt', 'A beautiful sunset');
+
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium">
+								<pre>
+										<code>
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+	console.log('Button was clicked');
+});
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="CSS_style_manipulation.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

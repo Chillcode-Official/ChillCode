@@ -14,42 +14,108 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
-						<li><a href="Paragraph.html">Paragraf</a></li>
-						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Attributes.html">Atrybuty</a></li>
-						<li><a href="List.html">Lista</a></li>
-						<li><a href="Links.html">Linki</a></li>
-						<li><a href="Images.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="Symbols.html">Symbole</a></li>
-						<li><a href="Quotations.html">Cytaty</a></li>
-						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
-						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
-						<li><a href="Class_Id.html">Klasy oraz Id</a></li>
-						<li><a href="Layout_HTML.html">Układ strony</a></li>
-						<li><a href="Responsiveness.html">Responsywność</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
-
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 		<div class="content">
 				<div class="section-with-image">
 						<div class="text-content">
@@ -127,280 +193,8 @@
 						</p>
 				</div>
 				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Zasięg Tabeli</h1>
-								<p>
-										Tabela ma zasięg, który definiuje zakres komórek, których dotyczy nagłówek lub stopka tabeli.
-										Zasięg nagłówka tabeli określa, które komórki są opisane przez nagłówek, a zasięg stopki tabeli
-										określa, które komórki są opisane przez stopkę.
-								</p>
-						</div>
-						<img src="/img/vector182.png" alt="">
-				</div>
-				<p class="text-container article tooltip no-margin-top">
-						Istnieją trzy rodzaje zasięgu tabeli:
-						<code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w kolumnie">col <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						<code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w wierszu">row <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						<code><a href="#" pro-tip="nagłówek lub stopka dotyczy wszystkich komórek w grupie wierszy">rowgroup <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&#x3C;table&#x3E;
-	&#x3C;tr&#x3E;
-		&#x3C;th scope=&#x22;col&#x22;&#x3E;Nazwa produktu&#x3C;/th&#x3E;
-		&#x3C;th scope=&#x22;col&#x22;&#x3E;Cena&#x3C;/th&#x3E;
-		&#x3C;th scope=&#x22;col&#x22;&#x3E;Ilo&#x15B;&#x107;&#x3C;/th&#x3E;
-	&#x3C;/tr&#x3E;
-	&#x3C;tr&#x3E;
-		&#x3C;th scope=&#x22;row&#x22;&#x3E;Mleko&#x3C;/th&#x3E;
-		&#x3C;td&#x3E;3,50 z&#x142;&#x3C;/td&#x3E;
-		&#x3C;td&#x3E;10&#x3C;/td&#x3E;
-	&#x3C;/tr&#x3E;
-	&#x3C;tr&#x3E;
-		&#x3C;th scope=&#x22;row&#x22;&#x3E;Chleb&#x3C;/th&#x3E;
-		&#x3C;td&#x3E;2,50 z&#x142;&#x3C;/td&#x3E;
-		&#x3C;td&#x3E;20&#x3C;/td&#x3E;
-	&#x3C;/tr&#x3E;
-	&#x3C;tr&#x3E;
-		&#x3C;th scope=&#x22;row&#x22;&#x3E;Jajka&#x3C;/th&#x3E;
-		&#x3C;td&#x3E;5,00 z&#x142;&#x3C;/td&#x3E;
-		&#x3C;td&#x3E;15&#x3C;/td&#x3E;
-	&#x3C;/tr&#x3E;
-&#x3C;/table&#x3E;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<table>
-												<tr>
-														<th class="color-text-black" scope="col">Nazwa produktu</th>
-														<th class="color-text-black" scope="col">Cena</th>
-														<th class="color-text-black" scope="col">Ilość</th>
-												</tr>
-												<tr>
-														<th class="color-text-gray" scope="row">Mleko</th>
-														<td>3,50 zł</td>
-														<td>10</td>
-												</tr>
-												<tr>
-														<th class="color-text-gray" scope="row">Chleb</th>
-														<td>2,50 zł</td>
-														<td>20</td>
-												</tr>
-												<tr>
-														<th class="color-text-gray" scope="row">Jajka</th>
-														<td>5,00 zł</td>
-														<td>15</td>
-												</tr>
-										</table>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 article tooltip">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Aby określić zasięg nagłówka lub stopki tabeli, należy użyć atrybutu
-								<code><a href="#" pro-tip="Pozwala określić, czy dany nagłówek lub stopka tabeli odnosi się tylko do jednej kolumny lub jednego wiersza, czy może obejmuje większy obszar">scope <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> znacznika
-								<code><a href="#" pro-tip="Określa nagłówek tabeli">th <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
-								<code><a href="#" pro-tip="Określa stopkę tabeli">tf <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Sekcje Tabeli</h1>
-				<div class="section-with-image">
-						<p>
-								Sekcje tabeli służą do grupowania komórek tabeli w logiczne grupy, ułatwiając organizację i stylizację danych.
-								co wpływa na lepszą czytelność tabeli.
-						</p>
-						<img src="/img/vector84.png" alt="">
-				</div>
-				<p class="text-container gray-container article tooltip no-margin-top">
-						Główne sekcje tabeli to między innymi:
-						<code><a href="#" pro-tip="zawiera nagłówki tabeli, które są wyświetlane na górze tabeli. Zwykle służy do wyświetlania nazw kolumn tabeli.">&ltthead&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						<code><a href="#" pro-tip="zawiera główne dane tabeli. Zwykle służy do wyświetlania danych tabeli.">&lttbody&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						<code><a href="#" pro-tip="zawiera podsumowanie danych tabeli, które jest wyświetlane na dole tabeli. Zwykle służy do wyświetlania sumy, średniej, itp.">&lttfoot&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt;table&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;ID&lt;/th&gt;
-			&lt;th&gt;Produkt&lt;/th&gt;
-			&lt;th&gt;Cena&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;td&gt;1&lt;/td&gt;
-			&lt;td&gt;Komputer&lt;/td&gt;
-			&lt;td&gt;3000$&lt;/td&gt;
-			&l
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;2&lt;/td&gt;
-			&lt;td&gt;Monitor&lt;/td&gt;
-			&lt;td&gt;500$&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-	&lt;tfoot&gt;
-		&lt;tr&gt;
-			&lt;td colspan=&quot;3&quot;&gt;Suma&lt;/td&gt;
-			&lt;td&gt;15000$&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tfoot&gt;
-&lt;/table&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<table>
-												<thead>
-												<tr>
-														<th class="color-text-gray">Drużyna</th>
-														<th class="color-text-gray">Zwycięstwa</th>
-														<th class="color-text-gray">Porażki</th>
-														<th class="color-text-gray">Procent wygranych</th>
-												</tr>
-												</thead>
-												<tbody>
-												<tr>
-														<td>SK Telecom T1</td>
-														<td>23</td>
-														<td>7</td>
-														<td>76.7%</td>
-												</tr>
-												<tr>
-														<td>Fnatic</td>
-														<td>19</td>
-														<td>11</td>
-														<td>63.3%</td>
-												</tr>
-												</tbody>
-										</table>
-
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Atrybuty Tabeli</h1>
-								<p>
-										Atrybuty tabeli to opcjonalne parametry, które można dodać do elementu <span>&lttable&gt</span> lub do
-										innych elementów wewnątrz tabeli, aby zmienić wygląd lub zachowanie tabeli, aby była ona czytelna i
-										przejrzysta dla użytkownika.
-								</p>
-						</div>
-						<img src="/img/vector62.png" alt="">
-				</div>
-				<div class="text-container light-container black-list article tooltip">
-						<div class="text-content">
-								<h3>Najważniejsze atrybuty tabeli w HTML to:</h3>
-						</div>
-						<div class="line"></div>
-						<p>
-								<code><a href="#" pro-tip="określa grubość ramki wokół tabeli.">border <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa odstęp między krawędzią komórki a jej zawartością.">cellpadding <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa odstęp między komórkami tabeli.">cellspacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa szerokość tabeli.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa wysokość tabeli.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa kolor tła tabeli">bgcolor <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa krótki opis tabeli (dostępny dla czytników ekranów)">summary <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="okre&sacute;la pozycj&eogon; tabeli na stronie (mo&zdot;liwe warto&sacute;ci: &quot;left&quot;, &quot;center&quot;, &quot;right&quot;)">align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa położenie zawartości komórek tabeli na osi pionowej (top, middle, bottom).">valign <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa liczbę kolumn, które ma zajmować dana komórka.">colspan <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa liczbę wierszy, które ma zajmować dana komórka.">rowspan <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a href="#" pro-tip="określa nagłówek tabeli (wymagany element nagłówka dla tabel)">caption <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						</p>
-				</div>
-				<div class="code-block">
-						<pre>
-								<code>
-&lt;table border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; bgcolor=&quot;#f2f2f2&quot; align=&quot;center&quot;
-valign=&quot;middle&quot; summary=&quot;Wyniki mecz&oacute;w&quot;&gt;
-
-	&lt;caption&gt;Wyniki mecz&oacute;w&lt;/caption&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Data&lt;/th&gt;
-		&lt;th&gt;Gospodarz&lt;/th&gt;
-		&lt;th&gt;Go&sacute;&cacute;&lt;/th&gt;
-		&lt;th&gt;Wynik&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;02.03.2023&lt;/td&gt;
-		&lt;td&gt;Real Madryt&lt;/td&gt;
-		&lt;td&gt;Barcelona&lt;/td&gt;
-		&lt;td&gt;3:1&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;04.03.2023&lt;/td&gt;
-		&lt;td&gt;Liverpool&lt;/td&gt;
-		&lt;td&gt;Manchester United&lt;/td&gt;
-		&lt;td&gt;2:0&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;05.03.2023&lt;/td&gt;
-		&lt;td&gt;Paris Saint-Germain&lt;/td&gt;
-		&lt;td&gt;Marseille&lt;/td&gt;
-		&lt;td&gt;2:2&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;
-
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<table border="1" cellpadding="5" cellspacing="0" width="600" bgcolor="#f2f2f2" align="center" valign="middle" summary="Wyniki meczów">
-												<caption>Wyniki meczów</caption>
-												<tr>
-														<th class="color-text-gray">Data</th>
-														<th class="color-text-gray">Gospodarz</th>
-														<th class="color-text-gray">Gość</th>
-														<th class="color-text-gray">Wynik</th>
-												</tr>
-												<tr>
-														<td>02.03.2023</td>
-														<td>Real Madryt</td>
-														<td>Barcelona</td>
-														<td>3:1</td>
-												</tr>
-												<tr>
-														<td>04.03.2023</td>
-														<td>Liverpool</td>
-														<td>Manchester United</td>
-														<td>2:0</td>
-												</tr>
-												<tr>
-														<td>05.03.2023</td>
-														<td>Paris Saint-Germain</td>
-														<td>Marseille</td>
-														<td>2:2</td>
-												</tr>
-										</table>
-
-
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Symbols.html"><button>Dalej</button></a>
+						<a href="Table_scope.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

@@ -14,17 +14,21 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
-		<div class="roadmap-list">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
 				<ol>
 						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -33,7 +37,18 @@
 						<li><a href="Comments.html">Komentarze</a></li>
 						<li><a href="Data_types.html">Typy danych</a></li>
 						<li><a href="Variables.html">Zmienne</a></li>
-						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Operatory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Operators.html">Operatory arytmetyczne</a></li>
+									<li><a class="navbar-drop-text" href="Operators_comparison.html">Operatory porównania</a></li>
+									<li><a class="navbar-drop-text" href="Operators_logical.html">Operatory logiczne</a></li>
+									<li><a class="navbar-drop-text" href="Operators_Assignment.html">Operatory przypisania</a></li>
+									<li><a class="navbar-drop-text" href="Operators_others.html">Inne operatory</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
 						<li><a href="Loops.html">Pętle</a></li>
 						<li><a href="Functions.html">Funkcje</a></li>
@@ -44,14 +59,14 @@
 						<li><a href="Reference.html">Referencje</a></li>
 						<li><a href="Methods.html">Metody</a></li>
 						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
 		</div>
 		<div class="content">
-				<h1>Operatory Arytmetyczne JavaScript</h1>
+				<h1>Operatory Arytmetyczne</h1>
 				<div class="section-with-image">
 						<p>
 								W języku JavaScript istnieją operatory arytmetyczne, które pozwalają na wykonywanie podstawowych
@@ -63,12 +78,12 @@
 						</div>
 				</div>
 				<div class="double-elements">
-						<p class="text-container lightBrown-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Dodaje dwie wartości liczbowe lub łączy dwa łańcuchy tekstowe.">+ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> dodaje dwie wartości.</p>
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Odejmuje jedną wartość liczbową od drugiej.">- <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odejmuje jedną wartość od drugiej.</p>
+						<p class="text-container lightBrown-container article tooltip"><code><a href="#" pro-tip="Dodaje dwie wartości liczbowe lub łączy dwa łańcuchy tekstowe.">+ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> dodaje dwie wartości.</p>
+						<p class="text-container gray-container  article tooltip"><code><a href="#" pro-tip="Odejmuje jedną wartość liczbową od drugiej.">- <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odejmuje jedną wartość od drugiej.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5 + 10;
@@ -85,7 +100,7 @@ let x = 5 + 10;
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5 - 10;
@@ -104,12 +119,12 @@ let x = 5 - 10;
 				</div>
 				<div class="page-header"></div>
 				<div class="double-elements">
-						<p class="text-container lightBrown-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Mnoży dwie wartości liczbowe.">* <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> mnoży dwie wartości.</p>
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Dzieli jedną wartość liczbową przez drugą.">/ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> dzieli jedną wartość przez drugą.</p>
+						<p class="text-container lightBrown-container  article tooltip"><code><a href="#" pro-tip="Mnoży dwie wartości liczbowe.">* <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> mnoży dwie wartości.</p>
+						<p class="text-container gray-container  article tooltip"><code><a href="#" pro-tip="Dzieli jedną wartość liczbową przez drugą.">/ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> dzieli jedną wartość przez drugą.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5 * 10;
@@ -126,7 +141,7 @@ let x = 5 * 10;
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 50 / 10;
@@ -145,12 +160,12 @@ let x = 50 / 10;
 				</div>
 				<div class="page-header"></div>
 				<div class="double-elements">
-						<p class="text-container lightBrown-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zwraca resztę z dzielenia jednej wartości liczbowej przez drugą.">% <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  reszta z dzielenia dwóch wartości.</p>
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Podnosi wartość jednej liczby do potęgi drugiej.">** <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Potęguje wartość zmiennej.</p>
+						<p class="text-container lightBrown-container  article tooltip"><code><a href="#" pro-tip="Zwraca resztę z dzielenia jednej wartości liczbowej przez drugą.">% <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  reszta z dzielenia dwóch wartości.</p>
+						<p class="text-container gray-container  article tooltip"><code><a href="#" pro-tip="Podnosi wartość jednej liczby do potęgi drugiej.">** <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Potęguje wartość zmiennej.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5 % 2;
@@ -167,7 +182,7 @@ let x = 5 % 2;
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 2 ** 3;
@@ -186,12 +201,12 @@ let x = 2 ** 3;
 				</div>
 				<div class="page-header"></div>
 				<div class="double-elements">
-						<p class="text-container lightBrown-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zwiększa wartość zmiennej o 1.">++ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zwiększa wartość zmiennej o jeden.</p>
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zmniejsza wartość zmiennej o 1.">-- <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zmniejsza wartość zmiennej o jeden.</p>
+						<p class="text-container lightBrown-container  article tooltip"><code><a href="#" pro-tip="Zwiększa wartość zmiennej o 1.">++ <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zwiększa wartość zmiennej o jeden.</p>
+						<p class="text-container gray-container  article tooltip"><code><a href="#" pro-tip="Zmniejsza wartość zmiennej o 1.">-- <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zmniejsza wartość zmiennej o jeden.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5;
@@ -209,7 +224,7 @@ x++;
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let x = 5;
@@ -228,555 +243,8 @@ x--;
 						</div>
 				</div>
 				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Operatory Porównania</h1>
-								<p>
-										Operatory porównania w języku JavaScript pozwalają na porównywanie dwóch wartości i zwracanie
-										wartości logicznej true lub false. Oto kilka przykładów operatorów porównania:
-								</p>
-						</div>
-						<div>
-								<img src="/img/vector61.png" alt="">
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements no-margin-bottom">
-						<p class="text-container gray-container  minus-margin-top article tooltip"><code><a href="#" pro-tip=" Porównuje dwie wartości, zwracając true jeśli są one równe, a false w przeciwnym przypadku.">== <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli wartości są równe.</p>
-						<p class="text-container minus-margin-top article tooltip"><code><a href="#" pro-tip="Porównuje dwie wartości, uwzględniając ich typy danych. Zwraca true jeśli są one równe i tego samego typu, a false w przeciwnym przypadku.">=== <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> true gdy wartości i typy są równe.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x == y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														false
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x === y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														false
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Porównuje dwie wartości, zwracając true jeśli są one różne, a false jeśli są równe.">!= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli wartości nie są równe.</p>
-						<p class="text-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Porównuje dwie wartości, uwzględniając ich typy danych. Zwraca true jeśli są one różne lub nie tego samego typu, a false jeśli są równe i tego samego typu.">!== <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli wartości lub typy nie są równe.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x != y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														true
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x !== y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														true
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements no-margin-bottom">
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="">> <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli pierwsza wartość jest większa od drugiej.</p>
-						<p class="text-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="">< <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli pierwsza wartość jest mniejsza od drugiej.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x > y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														false
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x < y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														true
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container gray-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="">>= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli pierwsza wartość jest większa lub równa drugiej.</p>
-						<p class="text-container no-margin-bottom article tooltip"><code><a href="#" pro-tip=""><= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zwraca true, jeśli pierwsza wartość jest mniejsza lub równa drugiej.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 5;
-let y = 8;
-
-console.log(x >= y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														false
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-llet x = 5;
-let y = 8;
-
-console.log(x <= y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														true
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container gray-container article tooltip">
-						Operator trójargumentowy
-						<code><a href="#" pro-tip="Umożliwia tworzenie skróconych instrukcji warunkowych, zwracając jedną z dwóch wartości w zależności od spełnienia warunku.">? : <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						sprawdza, czy x jest większe od 5. Jeśli tak, wynikiem jest
-						"x jest większe od 5", a jeśli nie, wynikiem jest "x jest mniejsze lub równe 5"
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-let x = 10;
-let result = (x > 5) ? "x jest większe od 5" : "x jest mniejsze lub równe 5";
-console.log(result);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										x jest większe od 5
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Operatory Logiczne</h1>
-								<p>
-										Operatory logiczne w języku JavaScript pozwalają na kombinowanie wartości logicznych i zwracanie
-										wartości logicznej true lub false. Oto kilka przykładów operatorów logicznych:
-								</p>
-						</div>
-						<div>
-								<img src="/img/vector98.png" alt="">
-						</div>
-				</div>
-				<div class="double-elements no-margin-bottom">
-						<p class="text-container red-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zwraca true jeśli oba warunki są prawdziwe, a false w przeciwnym przypadku.">&& <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Jeśli oba operandy są równe true, wynik jest równy true. W przeciwnym razie wynik jest równy false.</p>
-						<p class="text-container red-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zwraca true jeśli co najmniej jeden z warunków jest prawdziwy, a false jeśli oba są fałszywe.">|| <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Jeśli co najmniej jeden z operandów jest równy true, wynik jest równy true. W przeciwnym razie wynik jest równy false.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = true;
-let y = false;
-
-console.log(x && y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														false
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = true;
-let y = false;
-
-console.log(x || y);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														true
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container red-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Zwraca wartość odwrotną do wyrażenia logicznego, czyli true jeśli wyrażenie było fałszywe i false jeśli było prawdziwe.">! <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zmienia wartość logiczną operanda. true staje się false, a false staje się true.</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-let x = true;
-
-console.log(!x); // false
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										false
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Operatory logiczne są często używane w warunkach, instrukcjach if i switch, a także w pętlach, aby kontrolować, kiedy wykonywać konkretne czynności.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Operatory Przypisania</h1>
-								<p>
-										Operatory przypisania w języku JavaScript pozwalają na przypisanie wartości do zmiennych. W języku JavaScript istnieją również inne operatory przypisania, takie jak <<=, >>=, >>>=, &=, ^= i |=, ale są
-										one mniej często używane. O to kilka przykładów operatorów przypisania:
-								</p>
-						</div>
-						<div>
-								<img src="/img/vector132.png" alt="">
-						</div>
-				</div>
-				<div class="double-elements no-margin-bottom">
-						<p class="text-container lightOrange-container no-margin-top article tooltip"><code><a href="#" pro-tip="Przypisuje wartość z prawej strony do zmiennej po lewej stronie.">= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Przypisuje wartość do zmiennej.</p>
-						<p class="text-container lightOrange-container no-margin-top article tooltip"><code><a href="#" pro-tip="Dodaje wartość z prawej strony do wartości zmiennej po lewej stronie i przypisuje wynik do tej samej zmiennej.">+= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Dodaje wartość do zmiennej i zapisuje wynik z powrotem do zmiennej.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 10;
-x += 5;
-console.log(x);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														15
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-
-let x = 10;
-
-										</code>
-								</pre>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container lightOrange-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Odejmuje wartość z prawej strony od wartości zmiennej po lewej stronie i przypisuje wynik do tej samej zmiennej.">-= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Odejmuje wartość od zmiennej i zapisuje wynik z powrotem do zmiennej.</p>
-						<p class="text-container lightOrange-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Mnoży wartość z prawej strony przez wartość zmiennej po lewej stronie i przypisuje wynik do tej samej zmiennej.">*= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Mnoży wartość zmiennej i zapisuje wynik z powrotem do zmiennej.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 10;
-x -= 5;
-console.log(x);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														5
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 10;
-x *= 5;
-console.log(x);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														50
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements no-margin-bottom">
-						<p class="text-container lightOrange-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Dzieli wartość zmiennej po lewej stronie przez wartość z prawej strony i przypisuje wynik do tej samej zmiennej.">/= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Dzieli wartość zmiennej i zapisuje wynik z powrotem do zmiennej.</p>
-						<p class="text-container lightOrange-container no-margin-bottom article tooltip"><code><a href="#" pro-tip="Oblicza resztę z dzielenia zmiennej po lewej stronie przez">%= <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Oblicza resztę z dzielenia wartości zmiennej i zapisuje wynik z powrotem do zmiennej.</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 10;
-x /= 5;
-console.log(x);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														2
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-								<pre>
-										<code>
-let x = 10;
-x %= 3;
-console.log(x);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														1
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Inne Operatory JavaScript</h1>
-								<p>
-										typeof i instanceof to operatory, które służą do określania typu obiektu lub zmiennej w języku JavaScript.
-								</p>
-						</div>
-
-						<div>
-								<img src="/img/vector103.png" alt="">
-						</div>
-				</div>
-				<div class="double-elements">
-						<div>
-								<p class="text-container azure-container article tooltip">
-										<code><a href="#" pro-tip="zwraca informację o typie wartości jako łańcuch znaków.">typeof <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										Oto kilka przykładów użycia:
-								</p>
-								<div class="code-block code-block-margin-top">
-										<pre>
-												<code>
-console.log(typeof "hello"); // string
-console.log(typeof 123); // number
-console.log(typeof true); // boolean
-console.log(typeof {}); // object
-console.log(typeof []); // object
-console.log(typeof null); // object
-console.log(typeof undefined); // undefined
-console.log(typeof function() {}); // function
-												</code>
-										</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding output-list">
-														<ul>
-																<li>string</li>
-																<li>number</li>
-																<li>boolean</li>
-																<li>object</li>
-																<li>object</li>
-																<li>object</li>
-																<li>undefined</li>
-																<li>function</li>
-														</ul>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<p class="text-container azure-container article tooltip">
-										<code><a href="#" pro-tip="pozwala sprawdzić, czy obiekt jest instancją klasy.">instanceof <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										Oto przykład użycia:
-								</p>
-								<div class="code-block code-block-margin-top">
-										<pre>
-												<code>
-let array = [];
-console.log(array instanceof Array); // true
-console.log(array instanceof Object); // true
-
-
-let str = "hello";
-console.log(str instanceof String); // false
-console.log(str instanceof Object); // false
-												</code>
-										</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding output-list">
-														<ul>
-																<li>true</li>
-																<li>true</li>
-																<li>false</li>
-																<li>false</li>
-														</ul>
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								W powyższym przykładzie, operator instanceof sprawdza, czy obiekt array jest instancją klasy Array
-								lub Object. Analogicznie dla ciągu tekstowego str. Wartość false jest zwracana, ponieważ ciągi
-								tekstowe w języku JavaScript są typem prostszym i nie są instancjami klas String lub Object.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Conditional_statements.html"><button>Dalej</button></a>
+						<a href="Operators_comparison.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

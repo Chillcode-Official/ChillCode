@@ -17,6 +17,8 @@
 		<div class="navbar">
 				<section>
 						<ul>
+								<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+								<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
 								<button><li><a href="../EduBear.html">Home</a></li></button>
 								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
 								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
@@ -25,41 +27,108 @@
 				</section>
 		</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Background.html">Tło</a></li>
-						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
-						<li><a href="Position.html">Pozycja</a></li>
-						<li><a href="Overflow.html">Przepełnienie</a></li>
-						<li><a href="Margins.html">Marginesy</a></li>
-						<li><a href="Padding.html">Dopełnienie</a></li>
-						<li><a href="Border.html">Obramowanie</a></li>
-						<li><a href="Outline.html">Zarys</a></li>
-						<li><a href="Text.html">Tekst</a></li>
-						<li><a href="fonts.html">Czcionki</a></li>
-						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
-						<li><a href="Pictures.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="list.html">Listy</a></li>
-						<li><a href="Z-index.html">Z-index</a></li>
-						<li><a href="Float_property.html">Właściwość float</a></li>
-						<li><a href="Combinators.html">Kombinatory</a></li>
-						<li><a href="Pseudo_Class.html">Pseudo Klasy</a></li>
-						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
-						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
-						<li><a href="Transparency.html">Przezroczystość</a></li>
-						<li><a href="Forms.html">Formularze</a></li>
-						<li><a href="Counters.html">Liczniki</a></li>
-						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
-						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li class="is-selected"><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<h1>Szybki start z CSS</h1>
@@ -69,58 +138,62 @@
 						</p>
 						<img src="/img/vector100.png" alt="">
 				</div>
-				<div class="text-container lightWhite-container black-list no-margin-bottom">
+				<div class="text-container lightWhite-container black-list highlight-container highlight-container-lightWhite">
 						<div class="text-content">
 								<h3>Oto krótki przewodnik, jak zacząć pisać w CSS:</h3>
 						</div>
 						<div class="line"></div>
-						<div class="text-content list-spacing tooltip">
-								<ol>
-										<li>Utwórz plik HTML, aby użyć CSS, musisz najpierw utworzyć stronę HTML. Można to zrobić przy użyciu edytora tekstu, takiego jak Notepad lub bardziej zaawansowanego edytora takiego jak, Visual Studio Code.</li>
-										<li>Następnie musisz utworzyć plik CSS. Można to zrobić w osobnym pliku lub wewnątrz pliku HTML przy użyciu tagu style .</li>
-										<li>Wybierz elementy HTML, na które chcesz zastosować styl, możesz wybrać dowolny element HTML, takie jak nagłówki, paragrafy, linki, obrazy itp.</li>
-										<li>W pliku CSS możesz zdefiniować styl dla wybranych elementów HTML, takie jak kolor, czcionkę, marginesy, obramowanie itp.</li>
-										<li>Aby zastosować style z pliku CSS na stronie HTML, musisz połączyć plik CSS z plikiem HTML. Można to zrobić przy użyciu tagu <link> w sekcji nagłówka strony HTML.</li>
-										<li>Po zdefiniowaniu stylów i połączeniu plików, sprawdź, jak wygląda strona. Możesz wprowadzać zmiany w pliku CSS i obserwować, jak wpływają one na stronę.</li>
-								</ol>
+						<div class="text-content paragraf-margin-left simple-link">
+							<p><b>1. </b>Aby użyć CSS, musisz najpierw utworzyć plik HTML. Można to zrobić przy użyciu edytora tekstu, takiego jak Notepad lub bardziej zaawansowanego, np
+								<a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+							<p><b>2. </b>Następnie musisz utworzyć plik CSS. Można to zrobić w osobnym pliku lub wewnątrz pliku HTML przy użyciu tagu <span>&lt;style&gt;</span>.</p>
+							<p><b>3. </b>Wybierz elementy HTML, na które chcesz zastosować styl, możesz wybrać dowolny element HTML, takie jak nagłówki, paragrafy, linki, obrazy itp.</p>
+							<p><b>4. </b>W pliku CSS możesz zdefiniować styl dla wybranych elementów HTML, takie jak kolor, czcionkę, marginesy, obramowanie itp.</p>
+							<p><b>5. </b>Aby zastosować style z pliku CSS na stronie HTML, musisz połączyć plik CSS z plikiem HTML. Można to zrobić przy użyciu tagu <span>&lt;link&gt;</span> w sekcji nagłówka strony HTML.</p>
+							<p><b>6. </b>Po zdefiniowaniu stylów i połączeniu plików, sprawdź, jak wygląda strona. Możesz wprowadzać zmiany w pliku CSS i obserwować, jak wpływają one na stronę.</p>
 						</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h2>Przykład zastosowania CSS</h2>
-				<div class="page-header"></div>
-				<code class="margin-top"><img class="icon-img-small" src="/img/icon_css.png" alt="">Css</code>
+				<h2><img class="icon-img-big" src="/img/icon_style-sheet.png" alt=""> Przykład zastosowania CSS</h2>
 				<div class="code-block">
 						<pre>
-								<code>/*Zmiana koloru tekstu na niebieski*/
-p {
+								<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
 
-	color: blue;
+&lt;title&gt;Zmiana koloru tekstu i t&lstrok;a&lt;/title&gt;
+
+&lt;style&gt;
+
+  /* Zmiana koloru tekstu na niebieski */
+  p {
+   color: blue;
 }
 
-/*Zmiana koloru tła na średni fioletowy*/
-body {
+  /* Zmiana koloru t&lstrok;a na &sacute;redni fioletowy */
+  body {
+   background-color: mediumpurple;
+}
 
-	background-color: mediumpurple;
-}</code>
-						</pre>
-				</div>
-				<code class="margin-top"><img class="icon-img-small" src="/img/icon_html.png" alt="">Html</code>
-				<div class="code-block ">
-						<pre>
-								<code>
-&lt;p&gt;Jestem niebieskim tekstem&lt;/p&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;Jestem niebieskim tekstem&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 								</code>
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-clear">
-										<div style="background-color: mediumpurple;">
-												<p style="color: blue; padding: 15px;">Jestem niebieskim tekstem</p>
-										</div>
-								</div>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-clear">
+							<div style="background-color: mediumpurple; border: 2px solid black; border-radius: 6px">
+								<p style="color: blue; padding: 15px;">Jestem niebieskim tekstem</p>
+							</div>
 						</div>
+					</div>
 				</div>
 				<div class="page-header"></div>
 				<div class="alert-card alert-card3 alert-card-red">

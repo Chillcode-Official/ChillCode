@@ -17,10 +17,13 @@
 	<div class="navbar">
 		<section>
 			<ul>
-				<button><li><a href="../EduBear.html">Home</a></li></button>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
 			</ul>
 		</section>
 	</div>
@@ -28,19 +31,83 @@
 	<div class="roadmap-list">
 		<ol>
 			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
-			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li class="is-selected"><a href="Quick_start.html">Szybki start</a></li>
 			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
-			<li><a href="Paragraph.html">Paragraf</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
 			<li><a href="Comments.html">Komentarze</a></li>
-			<li><a href="Colors.html">Kolory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="Attributes.html">Atrybuty</a></li>
-			<li><a href="List.html">Lista</a></li>
-			<li><a href="Links.html">Linki</a></li>
-			<li><a href="Images.html">Obrazy</a></li>
-			<li><a href="Tabels.html">Tabele</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="Symbols.html">Symbole</a></li>
-			<li><a href="Quotations.html">Cytaty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
 			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
 			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
@@ -58,24 +125,22 @@
 			</p>
 			<img src="/img/vector44.png" alt="">
 		</div>
-		<div class="text-container lightWhite-container black-list no-margin-top tooltip">
+		<div class="text-container lightWhite-container black-list no-margin-top highlight-container highlight-container-lightWhite">
 			<div class="text-content">
 				<h3>
 					Oto krótki przewodnik, jak zacząć pisać w HTML:
 				</h3>
 			</div>
 			<div class="line"></div>
-			<div class="text-content list-spacing">
-				<ol>
-					<li>Otwórz edytor tekstu. Możesz użyć prostego edytora tekstu, takiego jak Notatnik lub bardziej zaawansowanego, takiego jak <code><a href="#" pro-tip="Visual Studio Code to popularny edytor kodu źródłowego rozwijany przez firmę Microsoft. Jest to bezpłatne i open-source'owe narzędzie, które można używać do edycji, debugowania i tworzenia aplikacji programistycznych. Obsługuje różne języki programowania, takie jak C++, Python, JavaScript i wiele innych.">Visual Studio Code</a></code>.</li>
-					<li>Utwórz nowy plik i zapisz go z rozszerzeniem <span class="highlight-text"><code>.html</code></span>.</li>
-					<li>Rozpocznij pisanie kodu HTML od tagu &lt;html&gt;, który otwiera i zamyka wszystkie elementy HTML.</li>
-					<li>Po zakończeniu pisania kodu HTML, zapisz plik i otwórz go w przeglądarce internetowej, aby zobaczyć, jak wygląda Twoja strona.</li>
-				</ol>
+			<div class="text-content paragraf-margin-left simple-link">
+				<p><b>1. </b>Otwórz edytor tekstu. Możesz użyć prostego edytora tekstu, takiego jak Notatnik lub bardziej zaawansowanego, takiego jak <a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+				<p><b>2. </b>Utwórz nowy plik i zapisz go z rozszerzeniem <span>.html</span>.</p>
+				<p><b>3. </b>Rozpocznij pisanie kodu HTML od tagu <span>&lt;html&gt;</span> który otwiera i zamyka wszystkie elementy HTML.</p>
+				<p><b>4. </b>Po zakończeniu pisania kodu HTML, zapisz plik i otwórz go w przeglądarce internetowej, aby zobaczyć, jak wygląda Twoja strona.</p>
 			</div>
 		</div>
-		<div class="page-header"></div>
-		<code><img class="icon-img-big" src="/img/icon_htmlSite.png" alt=""> Przykładowy kod HTML dla prostej strony internetowej:</code>
+		<div class="big-page-header"></div>
+		<code><img class="icon-img-small" src="/img/icon_htmlSite.png" alt=""> Przykładowy kod HTML dla prostej strony internetowej:</code>
 		<div class="code-block">
 			<pre>
 				<code>
@@ -120,7 +185,7 @@
 		<div class="dropdown minus-margin-top">
 			<button class="output-button" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/icon_syntax.png" alt=""> Run code</button>
 			<div class="dropdown-content">
-				<div class="output output-content">
+				<div class="output output-content black-list">
 					<h1>Moja pierwsza strona internetowa</h1>
 					<nav>
 						<ul>

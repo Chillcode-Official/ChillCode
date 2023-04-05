@@ -185,3 +185,34 @@
 		left: 0;
 		top: 0;
 }
+
+.Example-table {
+	display: table;
+	border-collapse: collapse;
+	width: 600px;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+	border: 1px solid black;
+	border-spacing: 0;
+}
+.Example-caption {
+	font-size: 24px;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+}
+.Example-row {
+	display: table-row;
+}
+.Example-cell {
+	display: table-cell;
+	border: 1px solid black;
+	padding: 5px;
+}
+.Example-header {
+	font-weight: bold;
+	background-color: #ccc;
+}
+.Example-color-text-gray {
+	color: gray;
+}

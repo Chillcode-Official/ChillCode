@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Eventy}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Eventy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Events.html">Eventy</a></li>
+						<li><a class="navbar-drop-text" href="Event_handling.html">Obsługa zdarzeń</a></li>
+						<li><a class="navbar-drop-text" href="Event_properties.html">Właściwości eventów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Obsługa Zdarzeń</h1>
+		<div class="section-with-image">
+			<p>
+				Obsługa zdarzeń jest bardzo prosta i polega na dodaniu do elementu HTML funkcji, która będzie
+				wykonywana w momencie zaistnienia określonego zdarzenia. W celu dodania funkcji obsługującej
+				zdarzenie można skorzystać z wyżej wspomnianych trzech sposobów.
+			</p>
+			<img src="/img/vector65.png" alt="">
+		</div>
+		<div class="text-container gray-container article tooltip white-list">
+			<h3 class="color-text-white">
+				Niektóre ze zdarzeń, które można obsłużyć w języku JavaScript.
+			</h3>
+			<div class="line"></div>
+			<ul>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik kliknie na element.">click <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Kliknięcie przycisku</li>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy wartość elementu formularza zostanie zmieniona (np. gdy użytkownik wybierze inny element w menu rozwijanym).">change <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Zmiana wartości pola tekstowego</li>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik wciśnie klawisz na klawiaturze (nie jest wywoływane, gdy klawisz jest przytrzymywany).">keypress <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Naciśnięcie klawisza na klawiaturze</li>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik porusza myszą nad elementem.">mousemove <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Przesuwanie kursora myszki</li>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy element lub cała strona została w pełni załadowana.">load <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Załadowanie strony</li>
+				<li><code><a href="#" pro-tip="Zdarzenie wywoływane, gdy użytkownik zmienia rozmiar okna przeglądarki.">resize <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - Zmiana rozmiaru okna przeglądarki </li>
+			</ul>
+		</div>
+		<div class="big-page-header"></div>
+		<h2><img class="icon-img-big" src="/img/icon_resize.png" alt=""> Zmiana rozmiaru okna</h2>
+		<div class="code-block">
+						<pre>
+								<code>
+&lt;div id=&quot;myDiv&quot;&gt;Zmie&nacute; rozmiar okna przegl&aogon;darki&lt;/div&gt;
+
+&lt;script&gt;
+
+  const div = document.querySelector(&apos;#myDiv&apos;);
+
+  window.addEventListener(&apos;resize&apos;, () =&gt; {
+    div.textContent = &grave;Nowy rozmiar okna: ${window.innerWidth} x ${window.innerHeight}&grave;;
+
+
+&lt;/script&gt;
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					<div id="myDiv">Zmień rozmiar okna przeglądarki</div>
+
+					<script>
+						const div = document.querySelector('#myDiv');
+
+						window.addEventListener('resize', () => {
+							div.textContent = `Nowy rozmiar okna: ${window.innerWidth} x ${window.innerHeight}`;
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Pamiętaj, że obsługa zdarzeń jest jednym z najważniejszych aspektów tworzenia interaktywnych
+				stron internetowych i jest bardzo pomocna w codziennym życiu programisty. Dlatego warto poświęcić
+				czas na zgłębienie tego tematu.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Event_properties.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

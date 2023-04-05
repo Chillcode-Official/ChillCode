@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Funkcje-JavaScript</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Funkcje</a></li>
+						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcja anonimowa</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości funkcji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Funkcja Anonimowa</h1>
+		<div class="section-with-image">
+			<p>
+				Funkcja anonimowa to funkcja, która nie posiada nazwy. Są one często używane w języku JavaScript
+				jako argumenty przekazywane do innych funkcji lub jako funkcje zwrotne. Funkcje anonimowe są
+				również często używane do tworzenia funkcji, które są tylko raz używane w aplikacji.
+			</p>
+			<img src="/img/vector21.png" alt="">
+		</div>
+		<p class="text-container purple-container no-margin-top article tooltip">
+			Oto przykład <code><a href="#" pro-tip="Jest to funkcja, która jest przypisana do zmiennej lub argumentu funkcji, a następnie wywoływana poprzez tę zmienną lub argument. Funkcje anonimowe są powszechne w języku JavaScript i są często używane do definiowania funkcji zwrotnych (callback) lub do tworzenia funkcji wyrażeń.">funkcji anonimowej <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> w języku JavaScript:
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+// Funkcja anonimowa jako argument przekazywany do funkcji setTimeout
+setTimeout(function() {
+
+  console.log("Czas minął!");
+
+}, 1000);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					Czas minął!
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<p class="text-container purple-container article tooltip">
+			Można również przypisać funkcję anonimową do zmiennej i użyć jej jako <code><a href="#" pro-tip="to funkcja, która jest przekazywana jako argument do innej funkcji i jest wywoływana w momencie, gdy ta funkcja wykona swoje zadanie. Funkcje zwrotne są bardzo powszechne w języku JavaScript, ponieważ wiele funkcji w języku JavaScript jest asynchronicznych, co oznacza, że ich wykonanie może zająć pewien czas, a funkcje zwrotne pozwalają na obsługę wyniku wykonania funkcji asynchronicznej.">funkcji zwrotnej <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>:
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let przywitajSię = function(imię) {
+
+  console.log("Witaj, " + imię);
+};
+
+przywitajSię("Jan");
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					Witaj, Jan
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Funkcje anonimowe są często używane w języku JavaScript do tworzenia funkcji, które są używane
+				tylko raz, a następnie są usuwane. Jest to przydatne, ponieważ pozwala uniknąć zanieczyszczenia
+				globalnego zasięgu zmiennych.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Functions_property.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

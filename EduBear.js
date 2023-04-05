@@ -60,9 +60,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-const button = document.getElementById("myButton");
-const menu = document.getElementById("myMenu");
+function rotateTriangle(element) {
+	const li = element.closest('li');
+	const triangle = li.querySelector('.triangle');
+	triangle.classList.toggle('active');
+}
 
-button.addEventListener("click", function() {
-	menu.style.display = menu.style.display === "block" ? "none" : "block";
-});
+

@@ -38,3 +38,7 @@
 .article li{
 		line-height: 40px;
 }
+
+.code-block.hidden-overflow code{
+	overflow-x: hidden;
+}

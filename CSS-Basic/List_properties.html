@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Listy-CSS</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1><img class="icon-img-big" src="/img/icon_todolist.png" alt=""> Właściwości List</h1>
+		<div class="page-header"></div>
+		<div class="double-elements">
+			<p class="text-container red-container article tooltip "><code><a href="#" pro-tip="właściwość CSS, która określa typ znaczników używanych do wyświetlania elementów listy. Przykłady typów listy to: circle, square, disc, decimal, lower-alpha, upper-roman.">list-style-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa typ punktora dla elementów listy.</p>
+			<p class="text-container azure-container article tooltip"><code><a href="#" pro-tip="list-style-image to właściwość CSS, która pozwala na ustawienie obrazka jako punkt w liście zamiast standardowego znaku. Obrazek musi być zdefiniowany jako adres URL.">list-style-image <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa obrazek jako punktor dla elementów listy.</p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	list-style-type: square;
+}
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	list-style-image: url('bullet.png');
+}
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="double-elements">
+			<p class="text-container red-container article tooltip"><code><a href="#" pro-tip="Ta właściwość ustawia pozycję znacznika względem zawartości elementu listy. Możliwe wartości to: inside (znacznik znajduje się wewnątrz obszaru zawartości), outside (znacznik znajduje się na zewnątrz obszaru zawartości) i inherit (wartość jest dziedziczona po elemencie nadrzędnym).">list-style-position <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa położenie punktora względem tekstu elementu listy.</p>
+			<p class="text-container azure-container article tooltip"><code><a href="#" pro-tip="to właściwość skrócona, która umożliwia ustawienie wszystkich powyższych właściwości związanych z listą w jednym deklaracji. Na przykład: list-style: square inside url('image.png');">list-style <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> skrócona właściwość, która określa wszystkie jednocześnie. </p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	list-style-position: inside;
+}
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	list-style: square inside;
+}
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="double-elements">
+			<p class="text-container red-container article tooltip"><code><a href="#" pro-tip="Ta właściwość ustawia wcięcie (odstęp) z lewej strony elementu. Na przykład: padding-left: 20px;">padding-left <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa odstęp z lewej strony dla elementów listy.</p>
+			<p class="text-container azure-container article tooltip"><code><a href="#" pro-tip="Ta właściwość ustawia margines (odstęp) elementu. Można ustawić różne wartości dla marginesów górnego, prawego, dolnego i lewego, używając właściwości skróconej. Na przykład: margin: 10px 20px 30px 40px; ustawia margines górny na 10px, prawy na 20px, dolny na 30px i lewy na 40px. Jeśli podana jest tylko jedna wartość, ustawia margines dla wszystkich czterech stron równomiernie. Na przykład: margin: 20px; ustawia margines na 20px dla wszystkich czterech stron.">margin <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa marginesy dla elementów listy.</p>
+		</div>
+		<div class="double-elements">
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	padding-left: 20px;
+}
+										</code>
+								</pre>
+			</div>
+			<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+ul {
+	margin: 20px 0;
+}
+										</code>
+								</pre>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Z-index.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+

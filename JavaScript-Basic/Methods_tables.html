@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Metody}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Reference.html">Metody</a></li>
+						<li><a class="navbar-drop-text" href="Methods_tables.html">Metody tablicowe</a></li>
+						<li><a class="navbar-drop-text" href="Methods_string.html">Metody stringów</a></li>
+						<li><a class="navbar-drop-text" href="Methods_object.html">Metody obiektów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Metody Tablicowe</h1>
+				<p>
+					Metody tablicowe w języku JavaScript to funkcje wbudowane w obiekt tablicy, które służą do
+					manipulowania i przetwarzania danych w tablicach. Dostępne są one dla każdego obiektu tablicy
+					w języku JavaScript i mogą być wywoływane za pomocą kropki po nazwie tablicy, na przykład
+					myArray.methodName(). Metody te zwracają nową tablicę lub modyfikują istniejącą tablicę, na której zostały wywołane.
+				</p>
+			</div>
+			<img src="/img/vector37.png" alt="">
+		</div>
+		<div class="text-container light-container black-list no-margin-top article tooltip">
+			<div class="text-content">
+				<h4>Najczęściej używane metody tablicowe to, między innymi:</h4>
+			</div>
+			<div class="line"></div>
+			<div class="text-content">
+				<p>
+					<code><a href="#" pro-tip="Dodaje jeden lub więcej elementów na koniec tablicy i zwraca nową długość tablicy.">push() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a href="#" pro-tip="Usuwa ostatni element z tablicy i zwraca go.">pop() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a href="#" pro-tip="Usuwa pierwszy element z tablicy i zwraca go.">shift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a href="#" pro-tip="Dodaje jeden lub więcej elementów na początek tablicy i zwraca nową długość tablicy.">unshift() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a href="#" pro-tip="Zwraca fragment tablicy jako nową tablicę.">slice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a href="#" pro-tip="Modyfikuje tablicę, usuwając lub zamieniając elementy oraz dodając nowe elementy.">splice() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				</p>
+			</div>
+		</div>
+		<div class="code-block">
+						<pre>
+								<code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+
+
+// dodanie liczby 6 na koniec tablicy
+numbers.push(6);
+console.log(numbers); // [1, 2, 3, 4, 5, 6]
+
+
+// usunięcie ostatniego elementu z tablicy
+const last = numbers.pop();
+console.log(numbers); // [1, 2, 3, 4, 5]
+console.log(last); // 6
+
+
+// usunięcie pierwszego elementu z tablicy
+const first = numbers.shift();
+console.log(numbers); // [2, 3, 4, 5]
+console.log(first); // 1
+
+
+// dodanie liczby 0 na początek tablicy
+numbers.unshift(0);
+console.log(numbers); // [0, 2, 3, 4, 5]
+
+
+// wybranie fragmentu tablicy od indeksu 1 do 3
+const subArray = numbers.slice(1, 3);
+console.log(subArray); // [2, 3]
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					[ 1, 2, 3, 4, 5, 6 ]<br>
+					[ 1, 2, 3, 4, 5 ]<br>
+					6<br>
+					[ 2, 3, 4, 5 ]<br>
+					1<br>
+					[ 0, 2, 3, 4, 5 ]<br>
+					[ 2, 3 ]
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<h2 class="page-header"><img class="icon-img-big" src="/img/icon_tablesMethod.png" alt=""> Inne metody tablicowe</h2>
+		<p class="text-container gray-container article tooltip">
+			<code><a href="#" pro-tip="Tworzy nową tablicę z wszystkimi elementami, które spełniają warunek przekazany w funkcji.">filter() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- filtruje elementy tablicy na podstawie określonego warunku.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.filter(num => num > 3);
+
+console.log(filteredNumbers);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					[4, 5]
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<p class="text-container article tooltip">
+			<code><a href="#" pro-tip="Przetwarza elementy tablicy, zwracając jedną wartość.">reduce() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- redukuje tablicę do pojedynczej wartości poprzez zastosowanie funkcji reducer do każdego elementu.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, current) => accumulator + current);
+
+console.log(sum);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					15
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<p class="text-container gray-container article tooltip">
+			<code><a href="#" pro-tip="Tworzy nową tablicę z wynikami wywołania danej funkcji dla każdego elementu tablicy.">map() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- zwraca nową tablicę z wynikami wywołania funkcji na każdym elemencie tablicy.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+
+console.log(doubledNumbers);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					[2, 4, 6, 8, 10]
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Methods_string.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

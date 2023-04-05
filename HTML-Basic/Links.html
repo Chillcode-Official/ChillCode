@@ -14,46 +14,113 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
-						<li><a href="Paragraph.html">Paragraf</a></li>
-						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Colors.html">Kolory</a></li>
-						<li><a href="Attributes.html">Atrybuty</a></li>
-						<li><a href="List.html">Lista</a></li>
-						<li><a href="Links.html">Linki</a></li>
-						<li><a href="Images.html">Obrazy</a></li>
-						<li><a href="Tabels.html">Tabele</a></li>
-						<li><a href="Symbols.html">Symbole</a></li>
-						<li><a href="Quotations.html">Cytaty</a></li>
-						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
-						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
-						<li><a href="Class_Id.html">Klasy oraz Id</a></li>
-						<li><a href="Layout_HTML.html">Układ strony</a></li>
-						<li><a href="Responsiveness.html">Responsywność</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
 						<div class="text-content highlight-container">
-								<h1>Linki W Języku HTML</h1>
+								<h1>Linki</h1>
 								<p>
 										Link HTML, zwany również hiperłączem, to element, który pozwala na przenoszenie użytkownika
 										między stronami internetowymi lub na inne części tej samej strony. Linki są tworzone za pomocą
@@ -118,177 +185,8 @@
 						</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h1>Linki Do Sekcji</h1>
-				<div class="section-with-image highlight-container">
-						<p>
-								Linki do sekcji to linki, które przenoszą użytkownika na określoną sekcję na tej samej stronie,
-								zamiast przenosić go na inną stronę lub adres URL. Aby stworzyć link do sekcji, należy użyć atrybutu
-								href w tagu <span>&lta&gt</span> i podać identyfikator sekcji jako wartość.
-						</p>
-						<img src="/img/vector84.png" alt="">
-				</div>
-				<p class="text-container gray-container article tooltip no-margin-top">
-						<code><a href="#" pro-tip="Atrybut ten służy do nadawania unikalnego identyfikatora dla danej sekcji lub elementu na stronie internetowej. W HTML identyfikator sekcji jest definiowany przy użyciu atrybutu id">Identyfikator sekcji <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest atrybutem, który jest używany do oznaczenia elementu na stronie.
-						Aby stworzyć sekcję z identyfikatorem, należy dodać atrybut <code><a href="#" pro-tip="Służy do przypisania unikalnego identyfikatora danemu elementowi. Identyfikator jest używany do identyfikowania konkretnego elementu w skrypcie JavaScript lub arkuszu stylów CSS">id <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> do tagu sekcji.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt!-- Kliknięcie na link "O nas" przeniesie użytkownika na sekcję o id "about" na tej samej stronie. --&gt
-
-&lt;a href=&quot;#about&quot;&gt;O nas&lt;/a&gt;
-...
-&lt;section id=&quot;about&quot;&gt;
-	&lt;h1&gt;O nas&lt;/h1&gt;
-	&lt;p&gt;Informacje o naszej firmie&lt;/p&gt;
-&lt;/section&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output">
-										<a href="#about">O nas</a>
-										<div></div>
-										<section id="about">
-												<h1>O nas</h1>
-												<p>Informacje o naszej firmie</p>
-										</section>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container lightGray-container article tooltip">
-						Można również używać linków do przeskakiwania na inne miejsca na stronie, np. do nagłówka,
-						stopki itd. wystarczy użyć <code><a href="#" pro-tip="Służy do przypisania unikalnego identyfikatora danemu elementowi. Identyfikator jest używany do identyfikowania konkretnego elementu w skrypcie JavaScript lub arkuszu stylów CSS">id <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> tego elementu jako wartości
-						<code><a href="#" pro-tip="Określa adres URL, do którego link prowadzi. Może to być adres strony internetowej, pliku wideo lub innej strony wewnętrznej lub zewnętrznej">href <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt!-- Kliknięcie na link "do stopki" przeniesie użytkownika na sekcję o id "footer" na dół strony. --&gt
-
-&lt;a href=&quot;#footer&quot;&gt;Do stopki&lt;/a&gt;
-...
-&lt;footer id=&quot;footer&quot;&gt;
-	&lt;p&gt;Copyright &copy;2022&lt;/p&gt;
-&lt;/footer&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output">
-										<a href="#footer">Do stopki</a>
-										<footer id="footer">
-												<p>Copyright ©2022</p>
-										</footer>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Jest to bardzo przydatne w przypadku stron z długą zawartością, pozwala na szybkie przeskakiwanie do
-								ważnych sekcji strony bez konieczności przewijania całej strony.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Linki Do Podstron</h1>
-								<p>
-										Linki do podstron to linki, które przenoszą użytkownika na inną podstronę na tej samej domenie.
-										Można to zrobić za pomocą atrybutu href w tagu <span>&lta&gt</span>, podając adres URL lub ścieżkę do podstrony jako
-										wartość.
-								</p>
-						</div>
-						<img src="/img/vector96.png" alt="">
-				</div>
-				<p class="text-container gray-container no-margin-top article tooltip">
-						Jeśli adres <code><a href="#" pro-tip="To adres strony lub pliku, do którego odwołuje się odnośnik">URL <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest absolutny, to link przeniesie użytkownika na inną stronę na tej samej domenie
-						lub na innej domenie. Jeśli adres URL jest względny, to link przeniesie użytkownika na inną podstronę
-						na tej samej domenie.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt!-- Kliknięcie na link przeniesie użytkownika na podstronę "https://www.minecraft.net" --&gt
-
-&lt;a href=&quot;https://www.minecraft.net&quot;&gt;Minecraft download&lt;/a&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<a href="https://www.minecraft.net">Minecraft download</a>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<p class="text-container article tooltip">
-						Można również używać linków do innych plików, takich jak pliki <code><a href="#" pro-tip="Format plików stworzony przez firmę Adobe Systems w celu umożliwienia łatwej wymiany dokumentów między różnymi systemami i platformami. Skrót PDF oznacza Portable Document Format.">PDF <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, obrazy lub filmy. W takim
-						przypadku, należy podać pełną ścieżkę do pliku jako wartość atrybutu <code><a href="#" pro-tip="Określa adres URL, do którego link prowadzi. Może to być adres strony internetowej, pliku wideo lub innej strony wewnętrznej lub zewnętrznej">href <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-&lt!--Kliknięcie na link "Coffee" przeniesie użytkownika na plik "coffee.png" na tej samej domenie--&gt
-
-&lt;a href=&quot;coffee.png&quot;&gt;Kawka&lt;/a&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<a href="/img/icon_coffee.png">Coffee</a>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Linki do podstron są bardzo przydatne, ponieważ pozwalają na łatwe przemieszczanie się po
-								stronie i udostępnianie innych podstron lub plików użytkownikom, co pozwala na lepsze zarządzanie
-								i dostępność zawartości strony.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_http.png" alt=""> Linki Zewnętrzne</h2>
-				<p class="text-content-500width">
-						W powyższym przykładzie, tekst "<span class="color-text-red">Wyszukaj na Google</span>" jest widoczny dla użytkownika jako link,
-						a po kliknięciu na niego, przeniesie on użytkownika na stronę google.com.
-				</p>
-				<div class="code-block">
-						<pre>
-								<code>
-&lt;a href=&quot;https://www.google.com&quot;&gt;Wyszukaj na Google&lt;/a&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<a href="https://www.google.com" target="_blank">Wyszukaj na Google</a>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Images.html"><button>Dalej</button></a>
+						<a href="Link_section.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

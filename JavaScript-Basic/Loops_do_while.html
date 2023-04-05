@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Pętle-JavaScript</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla for</a></li>
+						<li><a class="navbar-drop-text" href="Loops_while.html">Pętla while</a></li>
+						<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla do..while</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Pętla (do..while)</h1>
+				<p>
+					Pętla while jest używana do powtarzania określonego kodu, dopóki warunek jest spełniony. Składa się tylko z dwóch części: warunku i kodu.
+				</p>
+			</div>
+			<div>
+				<img src="/img/vector136.png" alt="">
+			</div>
+		</div>
+		<div class="double-elements">
+			<div>
+				<p class="text-container red-container article tooltip">
+					Składnia pętli <code><a href="#" pro-tip="Pętla do-while jest podobna do pętli while, z tą różnicą, że blok kodu jest wykonywany co najmniej raz przed sprawdzeniem warunku. ">do..while <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+				</p>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+						<pre>
+								<code>
+do {
+
+  // kod, który będzie wykonywany w pętli
+
+} while (warunek);
+								</code>
+						</pre>
+				</div>
+			</div>
+			<div class="alert-card alert-card-medium alert-margin-bottom">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Warunek jest sprawdzany po każdym wykonaniu kodu w pętli. Jeśli jest prawdziwy, kod w pętli
+					jest wykonywany ponownie, w przeciwnym razie pętla jest zakończona.
+				</p>
+			</div>
+		</div>
+		<p class="text-container gray-container highlight-text">
+			Oto przykład pętli do...while w języku JavaScript, która wypisuje liczby od 1 do 10. W tym przykładzie,
+			zmienna i jest zainicjalizowana jako 1, a kod w pętli jest wykonywany co najmniej raz. Warunek sprawdzania
+			i <= 10 jest wykonywany po każdym wykonaniu kodu w pętli i, jeśli jest prawdziwy, kod jest
+			wykonywany ponownie. Zmienna i jest aktualizowana o 1 po każdym wykonaniu kodu w pętli.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let i = 1;
+
+do {
+
+  console.log(i);
+  i++;
+
+} while (i <= 8);
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+					<p>4</p>
+					<p>5</p>
+					<p>6</p>
+					<p>7</p>
+					<p>8</p>
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Functions.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

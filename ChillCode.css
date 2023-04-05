@@ -1,8 +1,9 @@
 /* Main Elements html && body - Ustawienie koloru tła */
 html, body {
-		margin: 0;
-		background-color: #27282c;
-		font-family: "Be Vietnam Pro", sans-serif;
+	margin: 0;
+	background-color: #27282c;
+	font-size: 16px;
+	font-family: "Be Vietnam Pro", sans-serif;
 }
 /* Page content and Grid - Zawartość strony i siatka Grid */
 .page-content{
@@ -91,7 +92,7 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 }
 
 /* Responsywność pasku nawigacyjnego */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
 		.navbar-menu {
 				display: none;
 				position: absolute;
@@ -153,50 +154,163 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 
 /* Double Elements with Grid - Podwójny element z siatką Grid*/
 .double-elements {
+	display: grid;
+	grid-template-areas:
+			"firstElement"
+			"secondElement";
+	grid-template-columns: 1fr;
+	grid-gap: 50px 0;
+}
+
+.double-elements.margin-mega-top {
+	margin-top: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+	.double-elements {
 		display: grid;
-		grid-template-areas: "firstElement" "secondElement";
+		grid-template-areas: "firstElement secondElement";
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 0 20px;
 		margin: 0 auto;
 		max-width: 1400px;
 		padding: 0 20px;
-}
-.double-elements.margin-mega-top{
-		margin-top: 80px;
+	}
 }
 
-@media only screen and (max-width: 768px) {
-	.double-elements {
-		grid-template-areas:
+@media only screen and (min-width: 768px) {
+	.double-elements.section-comfort-zone {
+		grid-template-columns: 350px 1fr;
+		align-items: center;
+	}
+}
+
+.double-elements.section-main-header {
+	align-items: center;
+}
+
+.double-elements.section-open-source {
+	padding-top: 30px;
+
+	grid-template-areas:
 			"firstElement"
 			"secondElement";
-		grid-template-columns: 1fr;
-		grid-gap: 50px 0;
+	grid-template-columns: 1fr;
+	grid-gap: 30px 0;
+	justify-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+	.double-elements.section-open-source {
+		grid-template-areas:
+			"firstElement secondElement";
+		grid-template-columns: 1fr 453px;
+		align-items: center;
+	}
+}
+
+.section-open-source.double-elements > img {
+	max-width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+	.double-elements.section-open-source {
+		grid-template-columns: 1fr 453px;
+		align-items: center;
+	}
+}
+
+
+.section-pick-language {
+	padding-top: 50px;
+}
+
+.section-pick-language .double-elements {
+	grid-template-columns: 1fr;
+	grid-gap: 20px 0;
+	align-items: end;
+	justify-items: center;
+}
+
+.section-pick-language .double-elements > *:nth-child(1) {
+	grid-area: secondElement;
+}
+.section-pick-language .double-elements > *:nth-child(2) {
+	grid-area: firstElement;
+}
+
+@media only screen and (min-width: 576px) {
+	.section-pick-language .double-elements {
+		grid-template-areas: "firstElement secondElement";
+	}
+
+	.section-pick-language .double-elements > *:nth-child(1) {
+		grid-area: firstElement;
+	}
+	.section-pick-language .double-elements > *:nth-child(2) {
+		grid-area: secondElement;
+	}
+
+	.section-pick-language .double-elements {
+		grid-template-columns: 180px 1fr;
+		grid-gap: 0 20px;
+		align-items: end;
+	}
+}
+
+.section-pick-language .double-elements > div:first-child {
+	width: 50%;
+	line-height: 0;
+}
+
+@media only screen and (min-width: 576px) {
+	.section-pick-language .double-elements > div:first-child {
+		width:100%;
+	}
+}
+
+.section-pick-language .double-elements > div:first-child img {
+	width: 100%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	.section-pick-language .double-elements {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.section-pick-language .double-elements > div:first-child img {
+		width: auto;
 	}
 }
 
 
 /*Triple Elements*/
-@media only screen and (max-width: 768px) {
-		.triple-elements {
-				grid-template-columns: 1fr;
-				grid-template-areas:
-			"firstElement"
-			"secondElement"
-			"thirdElement";
-				gap: 50px 20px;
-		}
+.triple-elements {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 50px 20px;
 }
 
-.triple-elements {
-		display: grid;
+@media only screen and (min-width: 992px) {
+	.triple-elements {
 		grid-template-columns: 350px 1fr 350px;
+	}
+}
+
+.video {
+	border-radius: 10px;
+	width: 100%;
+	align-self: center;
+	justify-self: center;
+	max-width: 500px;
 }
 
 /* Personalized fonts - Spersonalizowane czcionki*/
 .magicText h1 {
-		margin-top: 50px;
-		font: normal clamp(28px, 7vmax, min(5vw, 48px))/1.4 "Operator Mono", monospace;
+	font: normal clamp(28px, 7vmax, min(5vw, 48px))/1.4 "Operator Mono", monospace;
+	text-align: center;
 }
 .magicText.magicText-black h1, p{
 		color: black;
@@ -204,7 +318,7 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 .magicText p {
 		max-width: 600px;
 		line-height: 2em;
-		margin-top: 20px;
+		margin: 20px auto 0;
 		font-size: 20px;
 		font-family: Inter, sans-serif;
 }
@@ -216,13 +330,6 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 }
 .magicText a{
 		text-decoration: none;
-}
-/*Video Elements*/
-.video {
-	border-radius: 10px;
-	width: 100%;
-	align-self: center;
-	margin-top: 100px;
 }
 
 .normalText h1{
@@ -250,8 +357,7 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 		position: relative;
 		box-sizing: border-box;
 		width: 100%;
-		min-height: 500px;
-		padding-bottom: 50px;
+		padding: 50px 0;
 		background: linear-gradient(to bottom, #c4c8d2 0%, #d7d1d1 100%);
 }
 .bodyContainer.bodyContainer-footer{
@@ -266,15 +372,14 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 
 .containerBlock{
 		position: relative;
-		height: 450px;
 		width: 100%;
 		display: block;
 }
-.containerBlock-Small{
-		position: relative;
-		height: 300px;
-		width: 100%;
-		display: block;
+.containerBlock-Small {
+	position: relative;
+	width: 100%;
+	display: block;
+	padding: 30px 0;
 }
 
 .containerBlock-Yellow{
@@ -291,11 +396,9 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 }
 .containerBlock-Cream{
 		background-color: #dcaeae;
-		height: 200px;
 }
 .containerBlock-Dark{
 		background-color: #1c1c1c;
-		height: 100px;
 }
 
 .containerBlock-Azure h1{
@@ -349,12 +452,19 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 		border: 3px solid #000000;
 }
 
-.wrapper{
-		margin: 0 auto;
-		max-width: 1400px;
-		color: white;
-		font-size: 30px;
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	color: white;
+	font-size: 1.5rem;
 }
+
+@media only screen and (min-width: 1400px) {
+	.wrapper {
+		font-size: 1.875rem;
+	}
+}
+
 .main-content{
 		margin: 0 auto;
 		max-width: 1400px;
@@ -370,10 +480,35 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 /*Card Elements*/
 
 .card-grid {
-		display: grid;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	column-gap: 20px;
+	row-gap: 20px;
+
+}
+@media only screen and (min-width: 576px) {
+	.card-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 30px;
+		row-gap: 30px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.card-grid {
 		grid-template-columns: repeat(4, 1fr);
 		column-gap: 70px;
+		row-gap: 50px;
+	}
 }
+
 .card-grid.columnGap-zero {
 		column-gap: 0;
 		display: flex;
@@ -450,7 +585,7 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 /* footer Elements */
 
 .footer{
-		margin-top: 120px;
+	margin-top: 120px;
 }
 
 .btn3 {
@@ -505,7 +640,7 @@ footer {
 		background-color: #1c1c1c;
 		color: #a0a0a0;
 		font-size: 14px;
-		padding: 50px 0;
+		padding: 150px 0 50px;
 }
 
 .footer-logo {
@@ -563,6 +698,7 @@ footer {
 	color: #181717;
 }
 .section-information{
+		padding-top: 30px;
 		display: block;
 		flex: none;
 }
@@ -851,12 +987,31 @@ footer {
 }
 
 
+.lg-display {
+	display: none;
+}
+
+.xlg-display {
+	display: none;
+}
 
 
+@media only screen and (min-width: 992px) {
+	.lg-display {
+		display: block;
+	}
 
+	.lg-hide {
+		display: none;
+	}
+}
 
+@media only screen and (min-width: 1200px) {
+	.xlg-display {
+		display: block;
+	}
 
-
-
-
-
+	.xlg-hide {
+		display: none;
+	}
+}

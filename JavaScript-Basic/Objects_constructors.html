@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Obiekty}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obiekty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Objects.html">Obiekty</a></li>
+						<li><a class="navbar-drop-text" href="Objects_constructors.html">Konstruktory</a></li>
+						<li><a class="navbar-drop-text" href="Objects_method_object_create.html">Metoda object.create</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Konstruktory</h1>
+		<div class="section-with-image">
+			<p>
+				Konstruktory to funkcje w języku JavaScript, które służą do tworzenia nowych obiektów z określonymi
+				właściwościami i metodami. Konstruktory są bardzo przydatne w tworzeniu wielu instancji obiektów o
+				podobnych właściwościach i metodach.
+			</p>
+			<img src="/img/vector40.png" alt="">
+		</div>
+		<p class="text-container blue-container article tooltip no-margin-top">
+			W <code><a href="#" pro-tip="Konstruktory to funkcje, które służą do tworzenia nowych obiektów. Konwencja jest taka, że nazwy konstruktorów zaczynają się z dużej litery. Konstruktory tworzą nowe obiekty za pomocą słowa kluczowego new.">konstruktorze <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zazwyczaj używa się słowa kluczowego <code><a href="#" pro-tip="Słowo kluczowe this odnosi się do bieżącego kontekstu, czyli do obiektu, w którym jest wykorzystywane. W kontekście konstruktora, this odnosi się do nowego obiektu, który jest tworzony za pomocą konstruktora.">this <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, aby odwołać się do właściwości i metod, które należą do tworzonego obiektu. Właściwości
+			i metody te są zazwyczaj przekazywane jako parametry konstruktora.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+function Person(name, age) {
+
+  this.name = name;
+  this.age = age;
+
+  this.introduce = function() {
+
+    console.log("My name is " + this.name + " and I am " + this.age + " years old.");
+};
+}
+
+var john = new Person("John", 30);
+var jane = new Person("Jane", 25);
+
+john.introduce();
+jane.introduce();
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					<p>My name is John and I am 30 years old.</p>
+					<p>My name is Jane and I am 25 years old.</p>
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3 alert-card-gray tooltip">
+			<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+			<b>Wyjaśnienie</b>
+			<div class="line"></div>
+			<p>
+				W powyższym przykładzie funkcja Person służy jako konstruktor do tworzenia obiektów john i jane,
+				które mają właściwości name i age, oraz metodę introduce. Aby utworzyć nowy obiekt przy pomocy konstruktora, użyj słowa kluczowego <code><a
+					href="#" pro-tip="Słowo kluczowe new jest używane do tworzenia nowego obiektu za pomocą konstruktora.">new <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> przed nazwą konstruktora. W powyższym przykładzie john i jane to nowe obiekty, które zostały utworzone za pomocą konstruktora Person.
+			</p>
+		</div>
+		<div class="alert-card alert-card3">
+			<img style="width: 50px;" src="/img/note.png" alt="">
+			<b>Note</b>
+			<div class="line"></div>
+			<p>
+				Korzystanie z konstruktorów pozwala na tworzenie wielu instancji obiektów o podobnych właściwościach
+				i metodach, co ułatwia tworzenie i zarządzanie aplikacją.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Objects_method_object_create.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

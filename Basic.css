@@ -26,6 +26,7 @@
 @import url('css/text_container.css');
 @import url('css/text_content.css');
 @import url('css/tooltip.css');
+@import url('css/links.css');
 
 html,body{
 		margin: 0;
@@ -35,7 +36,6 @@ html,body{
 		/*background-color: #1f2223;*/
 		overflow-x: hidden;
 }
-
 
 
 

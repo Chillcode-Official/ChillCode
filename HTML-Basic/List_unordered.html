@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML {Lista nieuporządkowana}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="http://localhost:63342/EduBearSite/ChillCode.html" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Lista Nieuporządkowana</h1>
+				<p>
+					HTML Lista Nieuporządkowana to lista, która składa się z elementów nieuporządkowanych, czyli bez określonej kolejności. Elementy te zazwyczaj wyświetlane są w postaci wypunktowania.
+				</p>
+			</div>
+			<img src="/img/vector176.png" alt="">
+		</div>
+		<p class="text-container lightPink-container no-margin-top article tooltip">
+			Do utworzenia listy nieuporządkowanej w HTML używa się znacznika <code><a href="#" pro-tip="Służy do tworzenia listy wypunktowanej (czyli z kropkami, kwadratami lub kołami jako punktami)">&ltul&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz dla każdego elementu listy, znacznika <code><a href="#" pro-tip="Znacznik służący do tworzenia pojedynczego punktu na liście, zarówno w przypadku listy numerowanej, jak i wypunktowanej">&ltli&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-xml">
+&lt;ul&gt;
+
+  &lt;li&gt;Pierwszy element&lt;/li&gt;
+  &lt;li&gt;Drugi element&lt;/li&gt;
+  &lt;li&gt;Trzeci element&lt;/li&gt;
+
+&lt;/ul&gt;
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-list">
+					<ul>
+						<li>Pierwszy element</li>
+						<li>Drugi element</li>
+						<li>Trzeci element</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-header"></div>
+		<p class="text-container lightPink-container article tooltip">
+			<code><a href="#" pro-tip="Właściwość CSS, która określa rodzaj punktów w liście. Można jej użyć do zmiany wyglądu punktów, które są domyślnie ustawione przez przeglądarkę.">list-style-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala na określenie rodzaju punktu
+			przed każdym elementem nieuporządkowanej listy HTML. Wyróżniamy
+			<code><a href="#" pro-tip="standardowy rodzaj punktu (domyślnie ustawiony)">disc <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="rodzaj punktu w postaci kółka">circle <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="rodzaj punktu w postaci kwadratu">square <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="ukrycie punktu">none <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+&#x3C;ul style=&#x22;list-style-type:disc;&#x22;&#x3E;
+	&#x3C;li&#x3E;mleko &lt;img src=&quot;milk.png&quot;&gt;&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;miód &lt;img src=&quot;honey.png&quot;&gt;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:circle;&#x22;&#x3E;
+	&#x3C;li&#x3E;kawa &lt;img src=&quot;coffee.png&quot;&gt;&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;herbata &lt;img src=&quot;tea.png&quot;&gt;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:square;&#x22;&#x3E;
+	&#x3C;li&#x3E;Lays &lt;img src=&quot;chips.png&quot;&gt;&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;piwo &lt;img src=&quot;beer.png&quot;&gt;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+
+&#x3C;ul style=&#x22;list-style-type:none;&#x22;&#x3E;
+	&#x3C;li&#x3E;wódka &lt;img src=&quot;vodka.png&quot;&gt;&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;pepsi &lt;img src=&quot;pepsi.png&quot;&gt;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-list">
+					<div class="list-disc">
+						<ul>
+							<li>mleko <img style="width: 30px;" src="/img/icon_milk.png" alt=""></li>
+							<li>miód <img style="width: 30px;" src="/img/icon_honey.png" alt=""></li>
+						</ul>
+					</div>
+					<div class="list-circle">
+						<ul>
+							<li>kawa <img style="width: 30px;" src="/img/icon_coffee-cup.png" alt=""></li>
+							<li>herbata <img style="width: 30px;" src="/img/icon_tea.png" alt=""></li>
+						</ul>
+					</div>
+					<div class="list-square">
+						<ul>
+							<li>Lays <img style="width: 30px;" src="/img/icon_lays.png" alt=""></li>
+							<li>piwo <img style="width: 30px;" src="/img/icon_beer.png" alt=""></li>
+						</ul>
+					</div>
+					<div class="list-none">
+						<ul>
+							<li>pepsi <img style="width: 30px;" src="/img/icon_pepsi.png" alt=""></li>
+							<li>Whisky <img style="width: 30px;" src="/img/icon_whisky.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="List_definition.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

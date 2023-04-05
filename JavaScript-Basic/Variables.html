@@ -14,18 +14,21 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
+
+	<div class="roadmap-list">
 				<ol>
 						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -33,7 +36,17 @@
 						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
 						<li><a href="Comments.html">Komentarze</a></li>
 						<li><a href="Data_types.html">Typy danych</a></li>
-						<li><a href="Variables.html">Zmienne</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Variables_let.html">Let</a></li>
+									<li><a class="navbar-drop-text" href="Variables_const.html">Const</a></li>
+									<li><a class="navbar-drop-text" href="Variables_var.html">Var</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Operators.html">Operatory</a></li>
 						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
 						<li><a href="Loops.html">Pętle</a></li>
@@ -45,7 +58,7 @@
 						<li><a href="Reference.html">Referencje</a></li>
 						<li><a href="Methods.html">Metody</a></li>
 						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
@@ -53,186 +66,62 @@
 		</div>
 
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Zmienna Let</h1>
-								<p>
-										<span>let</span> jest słowem kluczowym w języku JavaScript, które służy do tworzenia zmiennych. let jest
-										używane do przypisywania wartości do zmiennej, która ma zasięg blokowy. To znaczy, że zmienna
-										utworzona przy użyciu let jest widoczna tylko wewnątrz bloku, w którym została utworzona.
-								</p>
-						</div>
-						<img src="/img/vector188.png" alt="">
-				</div>
-				<p class="text-container red-container no-margin-top article tooltip">
-						Przykład deklaracji i użycia zmiennej za pomocą słowa kluczowego <code><a href="#" pro-tip="let to słowo kluczowe w języku programowania JavaScript, które pozwala deweloperom deklarować zmienne o zasięgu zmiennych blokowych. Zmienne blokowe są zmiennymi, które są dostępne tylko w bloku kodu, w którym są zdefiniowane.">let <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<h1>Zmienne</h1>
+			<div class="section-with-image">
+				<p>
+					Zmienna w języku JavaScript to nazwane miejsce w pamięci komputera, które służy do przechowywania
+					danych. Zmienne są używane do przechowywania informacji, takich jak liczby, teksty, obiekty i inne typy danych.
 				</p>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium">
-								<pre>
-										<code>
-let mojaZmienna = "Witaj świecie";
+				<div>
+					<img src="/img/vector103.png" alt="">
+				</div>
+			</div>
+			<p class="text-container azure-container no-margin-top article tooltip line-height-plus">
+				Aby utworzyć zmienną w języku JavaScript, należy użyć słowa kluczowego
+				<code><a href="#" pro-tip="">var <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+				<code><a href="#" pro-tip="">let <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
+				<code><a href="#" pro-tip="">const <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				sekwencji (równa się) i wartości, którą chcemy przypisać do zmiennej.
+			</p>
+			<div class="code-block">
+				<pre>
+					<code>
+var x = 10;
+let y = 20;
+const z = 30;
 
-console.log(mojaZmienna);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														Witaj świecie
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium">
-								<pre>
-										<code>
-mojaZmienna = "Witaj JavaScript";
+if (true) {
+  var x = 100; // ponowne przypisanie wartości dla zmiennej var x
+  let y = 200; // zmienna y jest zmienną blokową i nie będzie wpływać na wartość zmiennej y poza blokiem if
+  const z = 300; // zmienna z jest zmienną blokową i nie będzie wpływać na wartość zmiennej z poza blokiem if
+  console.log(x, y, z); // wyświetli 100, 200, 300
+}
 
-console.log(mojaZmienna);
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														Witaj JavaScript
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Zmienna Const</h1>
-								<p>
-										<span>const</span> jest słowem kluczowym w języku JavaScript, które służy do tworzenia stałych zmiennych.
-										Stała zmienna jest zmienną, której wartość nie może być zmieniona po jej utworzeniu.
-								</p>
-						</div>
-						<img src="/img/vector17.png" alt="">
-				</div>
-				<div class="double-elements">
-						<p class="text-container gray-container no-margin-top article tooltip">
-								Używamy słowa kluczowego <code><a href="#" pro-tip="Zmienne zadeklarowane za pomocą const są zmiennymi blokowymi, co oznacza, że są dostępne tylko w bloku kodu, w którym zostały zdefiniowane. Ponadto, zmienne zadeklarowane za pomocą const nie mogą być przypisane do nowej wartości po zainicjowaniu.">const <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, aby utworzyć zmienną o nazwie "Pi"
-						</p>
-						<p class="text-container gray-container no-margin-top">
-								Próba zmiany wartości stałej zmiennej powoduje błąd.
-						</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top">
-										<pre>
-												<code>
-const Pi = 3.14;
+console.log(x, y, z); // wyświetli 100, 20, 30
 
-console.log(Pi);
-												</code>
-										</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														3.14
-												</div>
-										</div>
-								</div>
-						</div>
-						<div>
-								<div class="code-block code-block-margin-top">
-										<pre>
-												<code>
-Pi = 5;
+x = 1000;
+y = 2000;
+// z = 3000; - wywoła błąd, ponieważ zmienna const z nie może być ponownie przypisana
 
-console.log(Pi);
-												</code>
- 										</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-padding">
-														Uncaught TypeError: Assignment to constant variable.
-												</div>
-										</div>
-								</div>
-						</div>
+console.log(x, y, z); // wyświetli 1000, 2000, 30
+					</code>
+				</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-padding">
+						<p>100 200 300</p>
+						<p>100 20 30</p>
+						<p>1000 2000 30</p>
+					</div>
 				</div>
-				<div class="big-page-header"></div>
-				<h1>Zmienna Var</h1>
-				<div class="section-with-image">
-						<div class="highlight-container">
-								<p>
-										<span>var</span> jest słowem kluczowym w języku JavaScript, które służy do tworzenia zmiennych. var jest
-										używane do przypisywania wartości do zmiennej i ma zasięg funkcyjny. To znaczy, że zmienna
-										utworzona przy użyciu var jest widoczna wewnątrz funkcji, w której została utworzona, oraz poza nią.
-								</p>
-						</div>
-						<img src="/img/vector8.png" alt="">
-				</div>
-				<p class="text-container lightBrown-container no-margin-top article tooltip">
-						Używamy słowa kluczowego <code><a href="#" pro-tip="Zmienne zadeklarowane za pomocą const są zmiennymi blokowymi, co oznacza, że są dostępne tylko w bloku kodu, w którym zostały zdefiniowane. Ponadto, zmienne zadeklarowane za pomocą const nie mogą być przypisane do nowej wartości po zainicjowaniu.">const <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, aby utworzyć zmienną o nazwie "name"
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-var name = "John Doe";
-
-name = "Kai Doe";
-
-console.log(name);
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										Kai Doe
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Z uwagi na swój zasięg funkcyjny, var często jest uważane za przestarzałe i zastąpione przez
-								let i const, które oferują bardziej zaawansowane i precyzyjne zasięgi zmiennych.
-						</p>
-				</div>
-				<div class="big-page-header">
-
-				</div>
-				<div class="btn">
-						<a href="Operators.html"><button>Dalej</button></a>
-				</div>
-				<!-- <h1>Zmienne</h1>
-				<div class="section-with-image">
-						<p>
-								Zmienna w języku JavaScript to nazwane miejsce w pamięci komputera, które służy do przechowywania
-								danych. Zmienne są używane do przechowywania informacji, takich jak liczby, teksty, obiekty i inne typy danych.
-						</p>
-						<div>
-								<img src="/img/vector103.png" alt="">
-						</div>
-				</div>
-				<p class="text-container azure-container no-margin-top article tooltip">
-						Aby utworzyć zmienną w języku JavaScript, należy użyć słowa kluczowego
-						<code><a href="#" pro-tip="">var <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-						<code><a href="#" pro-tip="">let <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
-						<code><a href="#" pro-tip="">const <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						sekwencji (równa się) i wartości, którą chcemy przypisać do zmiennej.
-				</p> -->
+			</div>
+			<div class="big-page-header">
+			</div>
+			<div class="btn">
+					<a href="Variables_let.html"><button>Dalej</button></a>
+			</div>
 		</div>
 </div>
 </body>

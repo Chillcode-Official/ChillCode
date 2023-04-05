@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Instrukcje warunkowe}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja if</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja else</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja else..if</a></li>
+						<li><a class="navbar-drop-text" href="Operators_logical.html">Instrukcja switch</a></li>
+
+					</ul>
+				</div>
+			</li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Instrukcja (else)</h1>
+				<p>
+					Instrukcja else jest używana w połączeniu z instrukcją if i pozwala na wykonywanie innego kodu,
+					jeśli warunek w instrukcji if jest fałszywy.
+				</p>
+			</div>
+			<div>
+				<img src="/img/vector4.png" alt="">
+			</div>
+		</div>
+		<p class="text-container lightGreen-container article tooltip no-margin-top">
+			Przykład użycia instrukcji warunkowej <code><a href="#" pro-tip="nstrukcja else może być użyta po instrukcji if i służy do wykonania pewnej części kodu, gdy warunek z instrukcji if nie został spełniony.">else <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> wygląda następująco:
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+if (warunek) {
+	// kod do wykonania, gdy warunek jest prawdziwy
+}
+
+else {
+	// kod do wykonania, gdy warunek jest fałszywy
+}
+								</code>
+						</pre>
+		</div>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let x = 10;
+let y = 20;
+
+if (x > y) {
+	console.log("x jest większe od y");
+}
+
+else {
+	console.log("x nie jest większe od y");
+}
+								</code>
+						</pre>
+		</div>
+		<div class="dropdown minus-margin-top">
+			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+			<div class="dropdown-content">
+				<div class="output output-content output-padding">
+					x nie jest większe od y
+				</div>
+			</div>
+		</div>
+		<div class="page-header"></div>
+		<div class="alert-card alert-card3 alert-card-gray highlight-container highlight-container-gray">
+			<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+			<b>Wyjaśnienie</b>
+			<div class="line"></div>
+			<p>
+				W poniższym przykładzie, warunek <span>x > y</span> jest sprawdzany w instrukcji if. Jeśli jest to prawda, komunikat
+				"<span>x jest większe od y</span>" jest wyświetlany w konsoli. W przeciwnym razie kod w bloku else jest wykonywany
+				i komunikat "<span>x nie jest większe od y</span>" jest wyświetlany w konsoli.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Conditional_statements_else_if.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

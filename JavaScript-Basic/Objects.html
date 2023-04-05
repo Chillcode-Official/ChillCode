@@ -14,18 +14,21 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
+
+	<div class="roadmap-list">
 				<ol>
 						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -39,13 +42,22 @@
 						<li><a href="Loops.html">Pętle</a></li>
 						<li><a href="Functions.html">Funkcje</a></li>
 						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Objects.html">Obiekty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obiekty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Objects.html">Obiekty</a></li>
+									<li><a class="navbar-drop-text" href="Objects_constructors.html">Konstruktory</a></li>
+									<li><a class="navbar-drop-text" href="Objects_method_object_create.html">Metoda object.create</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
 						<li><a href="Values.html">Wartości</a></li>
 						<li><a href="Reference.html">Referencje</a></li>
 						<li><a href="Methods.html">Metody</a></li>
 						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
@@ -72,13 +84,15 @@
 						<pre>
 								<code>
 let person = {
-	firstName: "Jan",
-	lastName: "Kowalski",
-	age: 30,
 
-	sayHello: function() {
-		console.log("Cześć, jestem " + this.firstName + " " + this.lastName);
-	}
+  firstName: "Jan",
+  lastName: "Kowalski",
+  age: 30,
+
+  sayHello: function() {
+
+    console.log("Cześć, jestem " + this.firstName + " " + this.lastName);
+}
 };
 
 console.log(person.firstName); // "Jan"
@@ -90,10 +104,10 @@ person.sayHello(); // "Cześć, jestem Jan Kowalski"
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"> <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Uruchom kod</button>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
 						<div class="dropdown-content">
 								<div class="output output-content output-padding">
-										Jan <br> Kowalski <br> Cześć, jestem Jan Kowalski
+									jan <br> Kowalski <br> Cześć, jestem Jan Kowalski
 								</div>
 						</div>
 				</div>
@@ -110,143 +124,8 @@ person.sayHello(); // "Cześć, jestem Jan Kowalski"
 						</p>
 				</div>
 				<div class="big-page-header"></div>
-				<h1>Konstruktory</h1>
-				<div class="section-with-image">
- 						<p>
- 								Konstruktory to funkcje w języku JavaScript, które służą do tworzenia nowych obiektów z określonymi
- 								właściwościami i metodami. Konstruktory są bardzo przydatne w tworzeniu wielu instancji obiektów o
- 								podobnych właściwościach i metodach.
- 						</p>
-						<img src="/img/vector40.png" alt="">
-				</div>
-				<p class="text-container blue-container article tooltip no-margin-top">
-						W <code><a href="#" pro-tip="Konstruktory to funkcje, które służą do tworzenia nowych obiektów. Konwencja jest taka, że nazwy konstruktorów zaczynają się z dużej litery. Konstruktory tworzą nowe obiekty za pomocą słowa kluczowego new.">konstruktorze <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zazwyczaj używa się słowa kluczowego <code><a href="#" pro-tip="Słowo kluczowe this odnosi się do bieżącego kontekstu, czyli do obiektu, w którym jest wykorzystywane. W kontekście konstruktora, this odnosi się do nowego obiektu, który jest tworzony za pomocą konstruktora.">this <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, aby odwołać się do właściwości i metod, które należą do tworzonego obiektu. Właściwości
-						i metody te są zazwyczaj przekazywane jako parametry konstruktora.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-function Person(name, age) {
-
-	this.name = name;
-	this.age = age;
-
-	this.introduce = function() {
-
-		console.log("My name is " + this.name + " and I am " + this.age + " years old.");
-	};
-}
-
-var john = new Person("John", 30);
-var jane = new Person("Jane", 25);
-
-john.introduce();
-jane.introduce();
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"> <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										My name is John and I am 30 years old. <br>
-										My name is Jane and I am 25 years old.
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-gray tooltip">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								W powyższym przykładzie funkcja Person służy jako konstruktor do tworzenia obiektów john i jane,
-								które mają właściwości name i age, oraz metodę introduce. Aby utworzyć nowy obiekt przy pomocy konstruktora, użyj słowa kluczowego <code><a
-										href="#" pro-tip="Słowo kluczowe new jest używane do tworzenia nowego obiektu za pomocą konstruktora.">new <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> przed nazwą konstruktora. W powyższym przykładzie john i jane to nowe obiekty, które zostały utworzone za pomocą konstruktora Person.
-						</p>
-				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Korzystanie z konstruktorów pozwala na tworzenie wielu instancji obiektów o podobnych właściwościach
-								i metodach, co ułatwia tworzenie i zarządzanie aplikacją.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Object.create</h1>
-								<p>
-										Metoda Object.create() to jedna z metod w języku JavaScript, która służy do tworzenia nowych obiektów z określonymi właściwościami i prototypami.
-										W przeciwieństwie do konstruktora, metoda Object.create() tworzy nowy obiekt bez wywoływania żadnej funkcji konstruktora. Zamiast tego, jako argumenty metody przekazuje się obiekt prototypu i opcjonalny obiekt z właściwościami.
-								</p>
-						</div>
-						<img src="/img/vector94.png" alt="">
-				</div>
-				<p class="text-container lightGreen-container article tooltip no-margin-top">
-						Oto przykład użycia metody <code><a href="#" pro-tip="Metoda Object.create() to wbudowana metoda języka JavaScript, która umożliwia utworzenie nowego obiektu z określonym obiektem prototypowym. Obiekt prototypowy służy do dodawania właściwości i metod, które odziedziczy nowy obiekt.">Object.create() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> do utworzenia nowego obiektu:
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-let personPrototype = {
-
-	introduce: function() {
-		console.log("My name is " + this.name + " and I am " + this.age + " years old.");
-	}
-};
-
-
-let john = Object.create(personPrototype, {
-	name: {
-		value: "John"
-	},
-
-	age:{
-		value: 30
-	}
-});
-
-john.introduce();
-								</code>
-						</pre>
-				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"> <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										My name is John and I am 30 years old.
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								W powyższym przykładzie utworzono prototyp personPrototype, który zawiera metodę introduce.
-								Następnie, utworzono nowy obiekt john za pomocą metody Object.create(), w której jako pierwszy
-								argument przekazano prototyp personPrototype, a jako drugi argument obiekt z właściwościami name i age.
-								Metoda Object.create() tworzy nowy obiekt john z właściwościami name i age, które zostały przekazane
-								jako drugi argument. Obiekt john dziedziczy również metodę introduce z prototypu personPrototype.
-						</p>
-				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Korzystanie z metody Object.create() pozwala na tworzenie nowych obiektów z określonymi prototypami
-								i właściwościami bez konieczności tworzenia funkcji konstruktora. Jest to szczególnie przydatne, gdy
-								potrzebujemy utworzyć wiele instancji obiektów o podobnych właściwościach i prototypach.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Mathematical_functions.html"><button>Dalej</button></a>
+						<a href="Objects_constructors.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

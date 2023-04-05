@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Zmienne}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Let</a></li>
+						<li><a class="navbar-drop-text" href="Variables_const.html">Const</a></li>
+						<li><a class="navbar-drop-text" href="Variables_var.html">Var</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li><a href="Tables.html">Tablice</a></li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content highlight-container">
+				<h1>Let</h1>
+				<p>
+					<span>let</span> jest słowem kluczowym w języku JavaScript, które służy do tworzenia zmiennych. let jest
+					używane do przypisywania wartości do zmiennej, która ma zasięg blokowy. To znaczy, że zmienna
+					utworzona przy użyciu let jest widoczna tylko wewnątrz bloku, w którym została utworzona.
+				</p>
+			</div>
+			<img src="/img/vector188.png" alt="">
+		</div>
+		<p class="text-container red-container no-margin-top article tooltip">
+			Przykład deklaracji i użycia zmiennej za pomocą słowa kluczowego <code><a href="#" pro-tip="let to słowo kluczowe w języku programowania JavaScript, które pozwala deweloperom deklarować zmienne o zasięgu zmiennych blokowych. Zmienne blokowe są zmiennymi, które są dostępne tylko w bloku kodu, w którym są zdefiniowane.">let <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="double-elements">
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
+								<pre>
+										<code>
+let mojaZmienna = "Witaj świecie";
+
+console.log(mojaZmienna);
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							Witaj świecie
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
+								<pre>
+										<code>
+mojaZmienna = "Witaj JavaScript";
+
+console.log(mojaZmienna);
+										</code>
+								</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content output-padding">
+							Witaj JavaScript
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Variables_const.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

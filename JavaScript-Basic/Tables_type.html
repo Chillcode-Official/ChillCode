@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript {Tablice}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li><a href="Data_types.html">Typy danych</a></li>
+			<li><a href="Variables.html">Zmienne</a></li>
+			<li><a href="Operators.html">Operatory</a></li>
+			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
+			<li><a href="Loops.html">Pętle</a></li>
+			<li><a href="Functions.html">Funkcje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Tablice</a></li>
+						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Rodzaje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości i Metody tablic</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Objects.html">Obiekty</a></li>
+			<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li><a href="Reference.html">Referencje</a></li>
+			<li><a href="Methods.html">Metody</a></li>
+			<li><a href="Events.html">Eventy</a></li>
+			<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Rodzaje Tablic</h1>
+				<p>
+					Tablice służą do przechowywania i organizowania danych w sposób strukturalny. Pozwalają na łatwe i szybkie przeszukiwanie, dodawanie, usuwanie i modyfikowanie elementów. Dzięki temu, że są uporządkowane, możemy łatwo odwoływać się do elementów po indeksie.
+				</p>
+			</div>
+			<img src="/img/vector185.png" alt="">
+		</div>
+		<p class="text-container no-margin-top azure-container article tooltip line-height-plus">
+			W języku JavaScript istnieją cztery rodzaje tablic, a mianowicie:
+			<code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w jednym wierszu. Każdy element tablicy jest indeksowany za pomocą liczby całkowitej, która reprezentuje pozycję w tablicy.">Tablice jednowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="tablice, które przechowują elementy jednego typu danych w formie macierzy z więcej niż jednym wierszem i jedną kolumną. Każdy element tablicy jest indeksowany za pomocą kilku liczb całkowitych, które reprezentują pozycję w tablicy.">Tablice wielowymiarowe <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="tablice, które przechowują tylko nieliczne elementy, które mają wartości różne od domyślnej wartości. Te tablice mogą być wykorzystywane w przypadkach, gdy trzeba oszczędzać pamięć.">Tablice rzadkie <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+			<code><a href="#" pro-tip="tablice, które umożliwiają przechowywanie wartości pod określonymi kluczami. W przeciwieństwie do tablic jednowymiarowych i wielowymiarowych, gdzie elementy są indeksowane za pomocą liczb całkowitych, w tablicach asocjacyjnych klucze mogą być dowolnego typu danych.">Tablice asocjacyjne <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+		</p>
+		<div class="big-page-header"></div>
+		<h2><img class="icon-img-small" src="/img/icon_table.png" alt=""> Tablice jednowymiarowe</h2>
+		<p class="text-container azure-container">
+			Tablice jednowymiarowe to najprostszy rodzaj tablicy, który składa
+			się z jednego wiersza wartości. W przypadku tablicy jednowymiarowej każdy element tablicy posiada
+			indeks liczbowy, zaczynając od zera.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let fruits = ['apple', 'banana', 'cherry'];
+								</code>
+						</pre>
+		</div>
+		<div class="page-header"></div>
+		<h2><img class="icon-img-small" src="/img/icon_tables(1).png" alt=""> Tablice wielowymiarowe</h2>
+		<p class="text-container gray-container">
+			Tablice wielowymiarowe to tablice, które składają się z wielu wierszy wartości.
+			W przypadku tablicy wielowymiarowej, każdy wiersz posiada indeks liczbowy, podobnie jak w przypadku tablicy
+			jednowymiarowej. Tablica wielowymiarowa może mieć dowolną ilość wierszy i kolumn.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let matrix = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9]
+];
+								</code>
+						</pre>
+		</div>
+		<div class="page-header"></div>
+		<h2><img class="icon-img-small" src="/img/icon_tables(2).png" alt=""> Tablice rzadkie</h2>
+		<p class="text-container azure-container">
+			Tablice rzadkie to tablice, które zawierają brakujące wartości lub mają
+			wartości ustawione na null, lub undefined. W przypadku tablicy rzadkiej, indeksy liczbowe nie muszą
+			być ustawione kolejno i mogą być pominięte.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let sparseArray = [];
+sparseArray[0] = 'apple';
+sparseArray[2] = 'banana';
+								</code>
+						</pre>
+		</div>
+		<div class="page-header"></div>
+		<h2><img class="icon-img-small" src="/img/icon_tables(3).png" alt=""> Tablice asocjacyjne</h2>
+		<p class="text-container gray-container">
+			Tablice asocjacyjne to tablice, w których elementy są indeksowane przez
+			ciągi znaków (nie tylko przez liczby całkowite, jak w przypadku standardowych tablic). Tablice asocjacyjne
+			w języku JavaScript są tworzone za pomocą obiektów.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+let person = { name: 'John', age: 30, city: 'New York' };
+								</code>
+						</pre>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Tables_property_and_methods.html"><button>Dalej</button></a>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

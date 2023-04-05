@@ -14,18 +14,21 @@
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
+
+	<div class="roadmap-list">
 				<ol>
 						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -45,7 +48,7 @@
 						<li><a href="Reference.html">Referencje</a></li>
 						<li><a href="Methods.html">Metody</a></li>
 						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
@@ -85,11 +88,11 @@
 				<p>Oto kilka przykładów użycia różnych typów wartości:</p>
 				<div class="double-elements">
 						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="reprezentują wartości numeryczne, np. 5, -3.14, 1/3. W JavaScript liczby są przechowywane w formacie 64-bitowej liczby zmiennoprzecinkowej.">Liczby <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Można je reprezentować jako liczby całkowite lub zmiennoprzecinkowe. Na przykład: 42 lub 3.14.</p>
-						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="reprezentują łańcuchy znaków, np. Hello, world!, JavaScript, 123. Ciągi znaków muszą być zapisane w cudzysłowach lub apostrofach.">Ciągi znaków <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Reprezentują tekst i są zawsze zawarte w apostrofach lub cudzysłowach. Na przykład: "Hello, world!"</p>
+						<p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="reprezentują łańcuchy znaków, np. Hello, world!, JavaScript, 123. Ciągi znaków muszą być zapisane w cudzysłowach lub apostrofach.">Ciągi znaków <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Reprezentują tekst i są zawsze zawarte w apostrofach lub cudzysłowach. Na przykład: "Hello, world!"</p>
 				</div>
 				<div class="double-elements">
  						<div>
- 								<div class="code-block code-block-margin-top">
+ 								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
  								<pre>
 										<code>
 let x = 42;
@@ -108,7 +111,7 @@ console.log(x + y);
  								</div>
  						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let name = "John Doe";
@@ -129,21 +132,22 @@ console.log("Hello, " + name + "!");
  				</div>
 				<div class="page-header"></div>
 				<div class="double-elements">
-						<p class="text-container red-container article tooltip"><code><a href="#" pro-tip="reprezentują wartości logiczne prawda/fałsz, czyli true lub false. Są one często używane do sterowania wykonywaniem instrukcji warunkowych.">Boolean <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Mają tylko dwa możliwe wartości: true lub false. Są one często używane do określania stanu wartości logicznej.</p>
-						<p class="text-container lightGreen-container article tooltip"><code><a href="#" pro-tip="reprezentują złożone struktury danych, składające się z właściwości i metod. Obiekty są podstawowym sposobem reprezentacji danych w JavaScript.">Obiekty <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to kolekcje par klucz-wartość, które służą do przechowywania danych.</p>
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="reprezentują wartości logiczne prawda/fałsz, czyli true lub false. Są one często używane do sterowania wykonywaniem instrukcji warunkowych.">Boolean <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Mają tylko dwa możliwe wartości: true lub false. Są one często używane do określania stanu wartości logicznej.</p>
+						<p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="reprezentują złożone struktury danych, składające się z właściwości i metod. Obiekty są podstawowym sposobem reprezentacji danych w JavaScript.">Obiekty <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to kolekcje par klucz-wartość, które służą do przechowywania danych.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let isAdmin = true;
 
 if (isAdmin) {
-	console.log("Welcome, admin!");
+  console.log("Welcome, admin!");
 }
+
 else {
-	console.log("Access denied.");
+  console.log("Access denied.");
 }
 
 console.log(isAdmin);
@@ -161,14 +165,14 @@ console.log(isAdmin);
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let user = {
 
-	name: "John Doe",
-	age: 30,
-	isAdmin: true
+  name: "John Doe",
+  age: 30,
+  isAdmin: true
 };
 
 console.log(user.name);
@@ -190,11 +194,11 @@ console.log(user.name);
 				<div class="page-header"></div>
 				<div class="double-elements">
 						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="null oznacza celowe przypisanie braku wartości">Null <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Oznacza brak wartości.</p>
-						<p class="text-container blue-container article tooltip"><code><a href="#" pro-tip="undefined oznacza niezainicjowany obiekt lub zmienną.">Undefined <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Oznacza, że wartość nie została jeszcze zdefiniowana lub nie została podana.</p>
+						<p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="undefined oznacza niezainicjowany obiekt lub zmienną.">Undefined <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Oznacza, że wartość nie została jeszcze zdefiniowana lub nie została podana.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 										<pre>
 												<code>
 let user = null;
@@ -212,7 +216,7 @@ console.log(user);
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 								<pre>
 										<code>
 let user;
@@ -232,12 +236,12 @@ console.log(user);
 				</div>
 						<div class="page-header"></div>
 				<div class="double-elements">
-						<p class="text-container red-container article tooltip"><code><a href="#" pro-tip="tablice są jednym z podstawowych typów danych. Tablica to uporządkowany zbiór wartości, gdzie każda wartość jest przypisana do określonego indeksu. Indeksy tablic zaczynają się od zera.">Tablice <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to specjalne rodzaje obiektów, które pozwalają na przechowywanie wielu wartości w jednej zmiennej.</p>
-						<p class="text-container lightGreen-container article tooltip"><code><a href="#" pro-tip="reprezentują fragmenty kodu, które można wywołać w celu wykonania określonego zadania.">Funkcje <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to bloki kodu, które można wywoływać wielokrotnie, aby wykonać określone działanie.</p>
+						<p class="text-container lightOrange-container article tooltip"><code><a href="#" pro-tip="tablice są jednym z podstawowych typów danych. Tablica to uporządkowany zbiór wartości, gdzie każda wartość jest przypisana do określonego indeksu. Indeksy tablic zaczynają się od zera.">Tablice <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to specjalne rodzaje obiektów, które pozwalają na przechowywanie wielu wartości w jednej zmiennej.</p>
+						<p class="text-container gray-container article tooltip"><code><a href="#" pro-tip="reprezentują fragmenty kodu, które można wywołać w celu wykonania określonego zadania.">Funkcje <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- Są to bloki kodu, które można wywoływać wielokrotnie, aby wykonać określone działanie.</p>
 				</div>
 				<div class="double-elements">
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 						<pre>
 								<code>
 let fruits = ["apple", "banana", "cherry"];
@@ -257,12 +261,13 @@ console.log(fruits[1]);
 								</div>
 						</div>
 						<div>
-								<div class="code-block code-block-margin-top">
+								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
 						<pre>
 								<code>
 function greet(name) {
-	console.log("Hello, " + name + "!");
+  console.log("Hello, " + name + "!");
 }
+
 greet("John Doe");
 								</code>
 						</pre>

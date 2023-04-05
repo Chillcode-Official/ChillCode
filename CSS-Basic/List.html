@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<title>Listy-CSS</title>
+		<link rel="stylesheet" href="../Basic.css"/>
+
+		<!-- Highlight JS init: -->
+		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+		<script src="/Highlight/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
+				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
+				<button><li><a href="/About/About.html">About me</a></li></button>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+		<div class="content">
+				<div class="section-with-image">
+						<div class="text-content">
+								<h1>Listy CSS</h1>
+								<p>
+										Listy w CSS to elementy HTML, które pozwalają na prezentację informacji w postaci uporządkowanej
+										lub nieuporządkowanej listy punktów. W CSS można zastosować wiele właściwości, takich jak typ
+										punktora, położenie punktora, odstępy i marginesy, aby dostosować wygląd i prezentację list.
+								</p>
+						</div>
+						<img src="/img/vector158.png" alt="">
+				</div>
+				<p class="text-container lightPink-container article tooltip no-margin-top">
+						<code><a href="#" pro-tip="to lista elementów, w której kolejność nie ma znaczenia i elementy są wyświetlane z domyślnym punktem zamiast numeracją. W CSS nieuporządkowana lista jest reprezentowana przez znacznik <ul> i style CSS mogą być zastosowane do tego znacznika oraz jego elementów potomnych <li>, aby dostosować wygląd i styl listy.">Nieuporządkowana lista <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						Użyj tagu Użyj tagu <code><a href="#" pro-tip="Tag &lt;ul&gt; oznacza list&eogon; nieuporz&aogon;dkowan&aogon; (unordered list), czyli list&eogon;, w kt&oacute;rej pozycje nie maj&aogon; okre&sacute;lonego porz&aogon;dku. Ka&zdot;da pozycja listy jest oznaczona tagiem &lt;li&gt;">ul <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						do utworzenia nieuporządkowanej listy
+				</p>
+				<div class="double-elements">
+						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+&lt;ul style=&quot;list-style-type: square;&quot;&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+										</code>
+								</pre>
+						</div>
+						<div class="output list-square output-list">
+								<ul style="list-style-type: square;">
+										<li>Element 1</li>
+										<li>Element 2</li>
+										<li>Element 3</li>
+								</ul>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container gray-container article tooltip">
+						<code><a href="#" pro-tip="to lista elementów, w której elementy są ponumerowane i wyświetlane w określonej kolejności. W CSS uporządkowana lista jest reprezentowana przez znacznik <ol> i style CSS mogą być zastosowane do tego znacznika oraz jego elementów potomnych <li>, aby dostosować wygląd i styl listy.">Uporządkowana lista <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						Użyj tagu <code><a href="#" pro-tip="Tag &lt;ol&gt; oznacza list&eogon; uporz&aogon;dkowan&aogon; (ordered list), czyli list&eogon;, w kt&oacute;rej pozycje maj&aogon; okre&sacute;lony porz&aogon;dek. Ka&zdot;da pozycja listy jest r&oacute;wnie&zdot; oznaczona tagiem &lt;li&gt;. Porz&aogon;dek element&oacute;w okre&sacute;la si&eogon; za pomoc&aogon; atrybutu type, kt&oacute;ry mo&zdot;e przyjmowa&cacute; warto&sacute;ci 1 (domy&sacute;lnie) lub A, a, I, i dla r&oacute;&zdot;nych rodzaj&oacute;w numeracji lub literacji.">ol <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						do utworzenia uporządkowanej listy
+				</p>
+				<div class="double-elements">
+						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+&lt;ol style=&quot;list-style-type: upper-roman;&quot;&gt;
+  &lt;li&gt;Element 1&lt;/li&gt;
+  &lt;li&gt;Element 2&lt;/li&gt;
+  &lt;li&gt;Element 3&lt;/li&gt;
+&lt;/ol&gt;
+										</code>
+								</pre>
+						</div>
+						<div class="output output-list">
+								<ol style="list-style-type: upper-roman;">
+										<li>Element 1</li>
+										<li>Element 2</li>
+										<li>Element 3</li>
+								</ol>
+						</div>
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container lightPink-container article tooltip">
+						<code><a href="#" pro-tip="to lista, która zawiera listę wewnątrz elementu listy. W CSS zagnieżdżona lista jest reprezentowana przez zagnieżdżenie znaczników <ul> lub <ol> wewnątrz znacznika <li>. Stosując style CSS do tych znaczników, można dostosować wygląd i styl zagnieżdżonej listy.">Zagnieżdżona lista <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						Aby utworzyć zagnieżdżoną listę użyj tagu
+						<code><a href="#" pro-tip="Tag &lt;ul&gt; oznacza list&eogon; nieuporz&aogon;dkowan&aogon; (unordered list), czyli list&eogon;, w kt&oacute;rej pozycje nie maj&aogon; okre&sacute;lonego porz&aogon;dku. Ka&zdot;da pozycja listy jest oznaczona tagiem &lt;li&gt;">ul <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> lub
+						<code><a href="#" pro-tip="Tag &lt;ol&gt; oznacza list&eogon; uporz&aogon;dkowan&aogon; (ordered list), czyli list&eogon;, w kt&oacute;rej pozycje maj&aogon; okre&sacute;lony porz&aogon;dek. Ka&zdot;da pozycja listy jest r&oacute;wnie&zdot; oznaczona tagiem &lt;li&gt;. Porz&aogon;dek element&oacute;w okre&sacute;la si&eogon; za pomoc&aogon; atrybutu type, kt&oacute;ry mo&zdot;e przyjmowa&cacute; warto&sacute;ci 1 (domy&sacute;lnie) lub A, a, I, i dla r&oacute;&zdot;nych rodzaj&oacute;w numeracji lub literacji.">ol <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						wewnątrz elementu listy.
+				</p>
+				<div class="double-elements">
+						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+								<pre>
+										<code>
+&lt;ul&gt;
+  &lt;li&gt;Element 1
+	&lt;ul&gt;
+	  &lt;li&gt;podElement 1&lt;/li&gt;
+	  &lt;li&gt;podElement 2&lt;/li&gt;
+	&lt;/ul&gt;
+  &lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+										</code>
+								</pre>
+						</div>
+						<div class="output output-list">
+								<ul>
+										<li>Item 1
+												<ul>
+														<li>podElement 1</li>
+														<li>podElement 2</li>
+												</ul>
+										</li>
+										<li>Element 2</li>
+										<li>Element 3</li>
+								</ul>
+						</div>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+						<a href="List_properties.html"><button>Dalej</button></a>
+				</div>
+		</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

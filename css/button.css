@@ -9,10 +9,11 @@
 		width: 100px;
 		cursor: pointer;
 		padding: 8px;
-		background-color: #74b5e5;
+		background-color: #74b5e5; /*#262626*/
 		border-radius: 5px;
 		font-size: 20px;
 		border-color: transparent;
+		color: #262626;
 }
 .btn button a{
 		text-decoration: none;
