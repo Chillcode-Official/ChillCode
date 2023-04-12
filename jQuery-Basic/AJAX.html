@@ -9,38 +9,86 @@
 		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 		<script src="/Highlight/highlight.min.js"></script>
 		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-						<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
-						<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
-						<li><a href="AJAX.html">AJAX</a></li>
-						<li><a href="Plugins.html">Wtyczki</a></li>
-						<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
-						<li><a href="Debug_code.html">Debugowanie kodu</a></li>
-						<li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+			<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+			<li><a href="Debug_code.html">Debugowanie kodu</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<h1>AJAX jQuery</h1>
@@ -56,45 +104,49 @@
 						<code><a href="#" pro-tip="$.ajax() jest funkcją biblioteki jQuery, która umożliwia wykonywanie zapytań HTTP do serwera i pobieranie lub przesyłanie danych. Można ją użyć do realizacji różnych rodzajów zapytań, takich jak pobieranie danych w formacie HTML, JSON, XML itp., wysyłanie danych za pomocą metod POST lub PUT oraz przesyłanie plików.">$.ajax() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, która pozwala na wysyłanie żądań HTTP do serwera.
 						Metoda ta przyjmuje kilka parametrów, w tym:
 				</p>
-				<div class="text-container lightWhite-container black-list highlight-text">
+				<div class="text-container lightWhite-container black-list highlight-container highlight-container-lightWhite">
 						<ul>
-								<li><code>url</code>: adres URL, pod którym znajduje się plik obsługujący żądanie</li>
-								<li><code>type</code>: typ żądania (np. GET lub POST)</li>
-								<li><code>data</code>: dane wysyłane w żądaniu</li>
-								<li><code>dataType</code>: typ danych oczekiwanych w odpowiedzi (np. json lub html)</li>
-								<li><code>success</code>: funkcja wywoływana po pomyślnym zakończeniu żądania</li>
-								<li><code>error</code>: funkcja wywoływana w przypadku wystąpienia błędu</li>
+								<li><span>url</span> - adres URL, pod którym znajduje się plik obsługujący żądanie</li>
+								<li><span>type</span> - typ żądania (np. GET lub POST)</li>
+								<li><span>data</span> - dane wysyłane w żądaniu</li>
+								<li><span>dataType</span> - typ danych oczekiwanych w odpowiedzi (np. json lub html)</li>
+								<li><span>success</span> - funkcja wywoływana po pomyślnym zakończeniu żądania</li>
+								<li><span>error</span> - funkcja wywoływana w przypadku wystąpienia błędu</li>
 						</ul>
 				</div>
 				<div class="page-header"></div>
-				<code><img class="icon-img-small" src="/img/icon_ajax.png" alt=""> Przykładowy kod AJAX z użyciem jQuery wykorzystujący format JSON</code>
-				<div class="code-block">
+				<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_ajax.png" alt=""> Przykładowy kod AJAX z użyciem jQuery wykorzystujący format JSON</h3>
+				<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 $.ajax({
-	url: 'dane.json', // adres serwera
-	dataType: 'json', // format danych
-	success: function(data) {
-		// kod wykonywany po pomyślnym odebraniu danych
-		console.log(data); // wyświetlenie danych w konsoli
-	},
-	error: function(xhr, status, error) {
-		// kod wykonywany po nieudanej próbie odebrania danych
-		console.log(error); // wyświetlenie błędu w konsoli
-	}
+
+  url: 'dane.json', // adres serwera
+  dataType: 'json', // format danych
+  success: function(data) {
+    // kod wykonywany po pomyślnym odebraniu danych
+    console.log(data); // wyświetlenie danych w konsoli
+},
+
+  error: function(xhr, status, error) {
+    // kod wykonywany po nieudanej próbie odebrania danych
+    console.log(error); // wyświetlenie błędu w konsoli
+}
 });
 								</code>
 						</pre>
 				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+					<div class="dropdown-content">
+						<div class="alert-card alert-card3 alert-card-gray">
+							<p>
 								W powyższym kodzie wysyłamy zapytanie do serwera pod adresem 'dane.json' i oczekujemy na dane w formacie JSON. Po pomyślnym odebraniu danych wyświetlamy je w konsoli, a w przypadku błędu wyświetlamy komunikat z błędem.
-						</p>
+							</p>
+						</div>
+					</div>
 				</div>
+				<div class="page-header"></div>
 				<div class="alert-card alert-card3">
 						<img style="width: 50px;" src="/img/note.png" alt="">
 						<b>Note</b>
@@ -104,181 +156,8 @@ $.ajax({
 						</p>
 				</div>
 				<div class="big-page-header"></div>
-				<h1>Metoda .load()</h1>
-				<div class="section-with-image">
-						<p>
-								Metoda .load() jest jedną z najprostszych metod do ładowania zawartości dynamicznie na stronie. Umożliwia pobranie zawartości z innej strony i wstawienie jej do wybranej sekcji na stronie. Może być również używana do wysyłania danych do serwera i pobrania odpowiedzi w celu aktualizacji zawartości na stronie.
-						</p>
-						<img src="/img/vector96.png" alt="">
-				</div>
-				<p class="text-container no-margin-top">
-						W tym przykładzie pobieramy zawartość strony 'http://example.com/data.html' i wstawiamy ją do elementu o id 'myDiv'.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-$('#myDiv').load('http://example.com/data.html');
-								</code>
-						</pre>
-				</div>
-				<div class="page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Metoda .get()</h1>
-								<p>
-										Metoda .get() jest używana do pobierania danych z serwera za pomocą metody GET. Można ją wykorzystać do pobierania danych w formacie HTML, JSON lub tekstowym. Metoda .get() umożliwia również przekazanie parametrów zapytania, które mogą być używane na serwerze do generowania odpowiedzi.
-								</p>
-						</div>
-						<img src="/img/vector97.png" alt="">
-				</div>
-				<p class="text-container purple-container no-margin-top">
-						W tym przykładzie wysyłamy zapytanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane na stronie w elemencie o id 'myDiv'.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-$.get('http://example.com/data.json', function(data) {
-	// wyświetlenie danych na stronie
-	$('#myDiv').html(data.text);
-});
-								</code>
-						</pre>
-				</div>
-				<div class="page-header"></div>
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Metoda .post()</h1>
-								<p>
-										Metoda .post() jest używana do wysyłania danych na serwer za pomocą metody POST. Może być wykorzystana do wysyłania formularzy lub innych danych z elementów strony. Metoda .post() umożliwia również przekazanie parametrów zapytania, które mogą być używane na serwerze do generowania odpowiedzi.
-								</p>
-						</div>
-						<img src="/img/vector77.png" alt="">
-				</div>
-				<p class="text-container blue-container no-margin-top">
-						W tym przykładzie pobieramy zawartość strony 'http://example.com/data.html' i wstawiamy ją do elementu o id 'myDiv'.
-				</p>
-				<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-var formData = {
-	name: 'John',
-	email: 'john@example.com'
-};
-
-$.post('http://example.com/submit.php', formData, function(data) {
-	// wyświetlenie potwierdzenia na stronie
-	$('#myDiv').html(data.message);
-});
-								</code>
-						</pre>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Praktyczne użycie AJAX w jQuery</h1>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<div>
-								<code><img class="icon-img-small" src="/img/icon_cloud.png" alt=""> Pobieranie danych z serwera</code>
-								<p class="text-container light-container color-text-gray">
-										W poniższym przykładzie wysyłamy żądanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane w elemencie strony o id 'myDiv'.
-								</p>
-								<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-$.ajax({
-	url: 'http://example.com/data.json',
-	dataType: 'json',
-
-	success: function(data) {
-
-		// wyświetlenie danych na stronie
-		$('#myDiv').html(data.text);
-	}
-});
-
-
-
-
-								</code>
-						</pre>
-								</div>
-						</div>
-						<div>
-								<code><img class="icon-img-small" src="/img/icon_upload.png" alt=""> Wysyłanie danych na serwer</code>
-								<p class="text-container light-container color-text-gray">
-										W poniższym przykładzie wysyłamy dane z formularza na adres 'http://example.com/submit.php' za pomocą metody POST. Kiedy serwer zwróci odpowiedź, wyświetlamy potwierdzenie na stronie.
-								</p>
-								<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-$('#myForm').submit(function(e) {
-	e.preventDefault();
-	var formData = $(this).serialize();
-
-	$.ajax({
-		url: 'http://example.com/submit.php',
-		type: 'POST',
-		data: formData,
-		success: function(data) {
-			// wyświetlenie potwierdzenia na stronie
-			$('#myDiv').html(data.message);
-		}
-	});
-});
-								</code>
-						</pre>
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<code><img class="icon-img-small" src="/img/icon_loading(1).png" alt=""> Ładowanie danych dynamicznie</code>
-						<code><img class="icon-img-small" src="/img/icon_refresh.png" alt=""> Aktualizacja zawartości co czas</code>
-				</div>
-				<div class="double-elements">
-						<p class="text-container light-container color-text-gray">
-								W poniższym przykładzie ładowanie danych rozpoczyna się po kliknięciu przycisku o id 'myButton'. Wysyłamy żądanie GET pod adres 'http://example.com/data.html' i oczekujemy odpowiedzi w formacie HTML. Kiedy serwer zwróci odpowiedź, wstawiamy dane na stronie w elemencie o id 'myDiv'.
-						</p>
-						<p class="text-container light-container color-text-gray">
-								W poniższym przykładzie co 5 sekund wysyłamy żądanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane na stronie w elemencie o id 'myDiv'.
-						</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-$('#myButton').click(function() {
-	$.ajax({
-		url: 'http://example.com/data.html',
-		dataType: 'html',
-		success: function(data) {
-			// wstawienie danych na stronie
-			$('#myDiv').html(data);
-		}
-	});
-});
-								</code>
-						</pre>
-						</div>
-						<div class="code-block code-block-margin-top">
-						<pre>
-								<code>
-setInterval(function() {
-	$.ajax({
-		url: 'http://example.com/data.json',
-		dataType: 'json',
-		success: function(data) {
-			// wyświetlenie danych na stronie
-			$('#myDiv').html(data.text);
-		}
-	});
-}, 5000);
-								</code>
-						</pre>
-						</div>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Plugins.html"><button>Dalej</button></a>
+						<a href="AJAX_load()_method.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

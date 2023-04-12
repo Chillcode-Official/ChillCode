@@ -9,38 +9,86 @@
 		<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 		<script src="/Highlight/highlight.min.js"></script>
 		<script>hljs.highlightAll();</script>
+		<script src="/EduBear.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
 
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Selectors.html">Selektory</a></li>
-						<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
-						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-						<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
-						<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
-						<li><a href="AJAX.html">AJAX</a></li>
-						<li><a href="Plugins.html">Wtyczki</a></li>
-						<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
-						<li><a href="Debug_code.html">Debugowanie kodu</a></li>
-						<li><a href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+			<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+			<li><a href="Debug_code.html">Debugowanie kodu</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<div class="section-with-image">
@@ -88,7 +136,7 @@ $("#myDiv").addClass("highlight");
 								</code>
 						</pre>
 				</div>
-				<p class="text-container article tooltip lightPink-container">
+				<p class="text-container article tooltip lightPink-container line-height-plus">
 						Istnieją wiele innych funkcji jQuery które pozwalazją na zmianę różnych aspektów wyglądu elementów HTML przy użyciu manipulacji stylami CSS, na przykład:
 						<code><a href="#" pro-tip="metoda ta przełącza klasę CSS dla wybranego elementu. Jeśli element nie ma klasy, to zostanie dodana. Jeśli ma, to zostanie usunięta.">toggleClass() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
 						<code><a href="#" pro-tip="metoda ta usuwa atrybut HTML wybranego elementu.">removeAttr() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
@@ -105,127 +153,8 @@ $("#myDiv").addClass("highlight");
 						</p>
 				</div>
 				<div class="big-page-header"></div>
-				<h1>Przykłady manipulacji stylami CSS:</h1>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p><img class="icon-img-small" src="/img/icon_colorBackground.png" alt=""> Zmiana koloru tła elementu po kliknięciu:</p>
-						<p><img class="icon-img-small" src="/img/icon_text-format.png" alt=""> Zmiana koloru tekstu po najechaniu kursorem:</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").click(function() {
-	$(this).css("background-color", "red");
-});
-								</code>
-						</pre>
-						</div>
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-var colors = ["red", "blue", "green", "yellow", "orange"];
-
-$("#myDiv").css("background-color", colors[Math.floor(Math.random()*colors.length)]);
-								</code>
-						</pre>
-						</div>
-				</div>
-				<div class="double-elements">
-						<p><img class="icon-img-small" src="/img/icon_font.png" alt=""> Zmiana rozmiaru czcionki elementu po kliknięciu:</p>
-						<p><img class="icon-img-small" src="/img/icon_cursor.png" alt=""> Dodanie klasy CSS do elementu po kliknięciu:</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").click(function() {
-	$(this).css("font-size", "24px");
-});
-								</code>
-						</pre>
-						</div>
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").click(function() {
-	$(this).addClass("highlight");
-});
-								</code>
-						</pre>
-						</div>
-				</div>
-				<div class="double-elements">
-						<p><img class="icon-img-small" src="/img/icon_click.png" alt=""> Animowanie zmiany wysokości elementu po kliknięciu:</p>
-						<p><img class="icon-img-small" src="/img/icon_hiddenNinja.png" alt=""> Ukrycie elementu po kliknięciu:</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").click(function() {
-	$(this).animate({
-		height: "500px"
-	}, 1000);
-});
-								</code>
-						</pre>
-						</div>
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").click(function() {
-
-	$(this).hide();
-});
-
-								</code>
-						</pre>
-						</div>
-				</div>
-				<div class="double-elements">
-						<p><img class="icon-img-small" src="/img/icon_app.png" alt=""> Zmiana stylów CSS w zależności od rozmiaru okna:</p>
-						<p><img class="icon-img-small" src="/img/icon_background(1).png" alt=""> Zmiana tła na losową po każdym odświeżeniu strony:</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$(window).resize(function() {
-	if ($(window).width() < 768) {
-		$("#myMenu").addClass("collapsed");
-	} else {
-		$("#myMenu").removeClass("collapsed");
-	}
-});
-								</code>
-						</pre>
-						</div>
-						<div class="code-block code-block-medium code-block-margin-top">
-						<pre>
-								<code>
-$("#myDiv").hover(function() {
-	$(this).css("color", "blue");
-},
-
- function() {
-	$(this).css("color", "black");
-});
-								</code>
-						</pre>
-						</div>
-				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Te przykłady pokazują tylko kilka sposobów wykorzystania manipulacji stylami CSS w jQuery. Istnieją oczywiście wiele innych możliwości, a jedynym ograniczeniem jest wyobraźnia i potrzeby projektu.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Event_handling.html"><button>Dalej</button></a>
+						<a href="CSS_style_manipulation_examples.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

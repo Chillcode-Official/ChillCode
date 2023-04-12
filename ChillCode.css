@@ -93,37 +93,14 @@ color = cr |  "b=blue" "w=white" "gn=green" "gy=gray" "or=orange"  */
 
 /* Responsywność pasku nawigacyjnego */
 @media only screen and (max-width: 991px) {
-		.navbar-menu {
-				display: none;
-				position: absolute;
-				top: 60px;
-				left: 0;
-				right: 0;
-				background-color: #fff;
-				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-				padding: 15px 0;
-		}
+
 
 		.navbar-toggle {
 				display: block;
 				cursor: pointer;
 		}
 
-		.navbar-container {
-				position: relative;
-		}
 
-		.navbar-item {
-				margin: 10px 0;
-		}
-
-		.navbar-link {
-				display: block;
-				padding: 10px;
-				color: #4a4a4a;
-				text-decoration: none;
-				transition: color 0.2s ease-in-out;
-		}
 
 		.navbar-toggle span {
 				display: block;

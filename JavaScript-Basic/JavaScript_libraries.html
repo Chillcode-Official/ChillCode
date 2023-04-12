@@ -19,7 +19,7 @@
 			<ul>
 				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
 				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
 				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
 				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
 				<button><li><a href="/About/About.html">About me</a></li></button>
@@ -29,31 +29,168 @@
 
 
 	<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="First_program.html">Pierwszy program</a></li>
-						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
-						<li><a href="Comments.html">Komentarze</a></li>
-						<li><a href="Data_types.html">Typy danych</a></li>
-						<li><a href="Variables.html">Zmienne</a></li>
-						<li><a href="Operators.html">Operatory</a></li>
-						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-						<li><a href="Loops.html">Pętle</a></li>
-						<li><a href="Functions.html">Funkcje</a></li>
-						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Objects.html">Obiekty</a></li>
-						<li><a href="Mathematical_functions.html">Funkcje matematyczne</a></li>
-						<li><a href="Values.html">Wartości</a></li>
-						<li><a href="Reference.html">Referencje</a></li>
-						<li><a href="Methods.html">Metody</a></li>
-						<li><a href="Events.html">Eventy</a></li>
-						<li><a href="DOM_what_is.html">Manipulacja DOM-em</a></li>
-						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-						<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
-		</div>
+		<ol>
+			<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="First_program.html">Pierwszy program</a></li>
+			<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_types.html">Typy prymitywne</a></li>
+						<li><a class="navbar-drop-text" href="Reference_types.html">Typy odniesienia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+						<li><a class="navbar-drop-text" href="Variables_let.html">Let</a></li>
+						<li><a class="navbar-drop-text" href="Variables_const.html">Const</a></li>
+						<li><a class="navbar-drop-text" href="Variables_var.html">Var</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Operatory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Operators.html">Operatory arytmetyczne</a></li>
+						<li><a class="navbar-drop-text" href="Operators_comparison.html">Operatory porównania</a></li>
+						<li><a class="navbar-drop-text" href="Operators_logical.html">Operatory logiczne</a></li>
+						<li><a class="navbar-drop-text" href="Operators_Assignment.html">Operatory przypisania</a></li>
+						<li><a class="navbar-drop-text" href="Operators_others.html">Inne operatory</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja if</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja else</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja else..if</a></li>
+						<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja switch</a></li>
+
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla for</a></li>
+						<li><a class="navbar-drop-text" href="Loops_while.html">Pętla while</a></li>
+						<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla do..while</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Funkcje</a></li>
+						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcja anonimowa</a></li>
+						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości funkcji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+						<li><a class="navbar-drop-text" href="Tables_function.html">Funkcje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Tables_type.html">Rodzaje tablic</a></li>
+						<li><a class="navbar-drop-text" href="Tables_property_and_methods.html">Właściwości i Metody tablic</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obiekty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Objects.html">Obiekty</a></li>
+						<li><a class="navbar-drop-text" href="Objects_constructors.html">Konstruktory</a></li>
+						<li><a class="navbar-drop-text" href="Objects_method_object_create.html">Metoda object.create</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje matematyczne</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+						<li><a class="navbar-drop-text" href="Mathematical_functions_Important.html">Najważniejsze funkcję matematyczne</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Values.html">Wartości</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Referencje</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Reference.html">Referencje</a></li>
+						<li><a class="navbar-drop-text" href="Reference_use.html">Użycie referencji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+						<li><a class="navbar-drop-text" href="Methods_tables.html">Metody tablicowe</a></li>
+						<li><a class="navbar-drop-text" href="Methods_string.html">Metody stringów</a></li>
+						<li><a class="navbar-drop-text" href="Methods_object.html">Metody obiektów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Eventy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Events.html">Eventy</a></li>
+						<li><a class="navbar-drop-text" href="Event_handling.html">Obsługa zdarzeń</a></li>
+						<li><a class="navbar-drop-text" href="Event_properties.html">Właściwości eventów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja DOM-em</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="DOM_what_is.html">Czym jest DOM</a></li>
+						<li><a class="navbar-drop-text" href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+						<li><a class="navbar-drop-text" href="DOM_methods.html">Metody DOM-u</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_Methods_and_property.html">Metody i Właściwości styli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Biblioteki JavaScript</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="Javascript_libraries_creating_and_using.html">Tworzenie i używanie Bibliotek</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
 
 		<div class="content">
 				<h1>Biblioteki JavaScript</h1>
@@ -91,131 +228,9 @@
 								aplikacji webowych, takich jak strony internetowe, aplikacje e-commerce i aplikacje mobilne.
 						</p>
 				</div>
-				<div class="big-page-header"></div>
-				<h1>Tworzenie I Używanie Bibliotek</h1>
-				<div class="section-with-image">
-						<p>
-								Tworzenie biblioteki JavaScript może być dobrym sposobem na udostępnianie swoich funkcji i
-								narzędzi innym programistom i zaoszczędzenie czasu przy tworzeniu kolejnych projektów. Aby
-								stworzyć bibliotekę JavaScript, należy najpierw określić, jakie funkcje i narzędzia będą zawarte
-								w bibliotece. Następnie trzeba napisać kod, który implementuje te funkcje i narzędzia, i upewnić
-								się, że kod jest czysty i dobrze napisany.
-						</p>
-						<img src="/img/vector75.png" alt="">
-				</div>
-				<p class="text-container lightPink-container no-margin-top">
-						Biblioteki JavaScript są również często udostępniane jako otwarte źródła, co oznacza, że są one dostępne
-						dla każdego i można je bezpłatnie wykorzystywać w projektach. Ponadto, ponieważ wiele bibliotek jest
-						rozwijanych przez wielu programistów, ich jakość jest wysoka i często są one ulepszane i uaktualniane,
-						aby być jak najbardziej przydatne dla programistów.
-				</p>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Jednym z najważniejszych zalet korzystania z bibliotek JavaScript jest to, że zapewniają one
-								gotowe rozwiązania dla wielu różnych problemów, takich jak obsługa animacji, manipulowanie elementami
-								HTML i CSS, komunikacja z serwerem i wiele innych. Dzięki bibliotekom programiści mogą szybciej
-								i łatwiej tworzyć dynamiczne i interaktywne aplikacje webowe, które są łatwe w użyciu i oferują
-								lepszą jakość użytkowania dla użytkowników.
-						</p>
-				</div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								Aby użyć biblioteki JavaScript w swoim projekcie, należy ją zaimportować do pliku HTML lub JavaScript.
-								Można to zrobić poprzez dodanie odpowiedniego tagu script do pliku HTML, lub przez użycie polecenia
-								import w pliku JavaScript. Po zaimportowaniu biblioteka jest gotowa do użycia w projekcie.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_bookAndTime.png" alt=""> Użycie małej biblioteki do obsługi Czasu</h2>
-				<div class="code-block">
-						<pre>
-								<code class="language-javascript">
-//Strona biblioteki - &quot;https://momentjs.com/&quot;
-
-// Pobierz bibliotek&eogon; moment.js
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js&quot;&gt;&lt;/script&gt;
-
-
-// Skrypt do manipulowania dat&aogon; i czasem
-&lt;script&gt;
-	const now = moment();
-	console.log(now.format(&apos;YYYY-MM-DD&apos;)); // wy&sacute;wietla bie&zdot;&aogon;c&aogon; dat&eogon; w formacie YYYY-MM-DD
-
-
-	const future = moment().add(7, &apos;days&apos;);
-	console.log(future.fromNow()); // wy&sacute;wietla tekst informuj&aogon;cy, &zdot;e to, co wydarzy si&eogon; za 7 dni
-
-
-	const past = moment(&apos;2021-01-01&apos;);
-	console.log(past.diff(now, &apos;days&apos;)); // oblicza liczb&eogon; dni mi&eogon;dzy 1 stycznia 2021 a dzisiaj
-&lt;/script&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								W powyższym przykładzie korzystamy z biblioteki moment.js, która oferuje wiele funkcji i narzędzi do
-								manipulacji datami i czasem. W naszym skrypcie tworzymy kilka dat i czasów, a następnie używamy
-								różnych funkcji, takich jak format(), add(), fromNow() i diff() do manipulacji tymi danymi. Dzięki
-								temu możemy łatwo wykonywać operacje na dacie i czasie w JavaScript.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_http(1).png" alt=""> Użycie małej biblioteki do wykonywania żądań HTTP</h2>
-				<div class="code-block">
-						<pre>
-								<code>
-Strona biblioteki - &quot;https://axios-http.com/&quot;
-
-// Pobierz bibliotek&eogon; Axios
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
-
-// Skrypt JavaScript do wykonywania &zdot;&aogon;da&nacute; HTTP
-&lt;script&gt;
-	axios.get(&apos;https://jsonplaceholder.typicode.com/users&apos;)
-		.then(response =&gt; {
-			console.log(response.data);
-		})
-		.catch(error =&gt; {
-			console.error(error);
-		});
-&lt;/script&gt;
-								</code>
-						</pre>
-				</div>
-				<div class="alert-card alert-card3 alert-card-gray">
-						<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
-						<b>Wyjaśnienie</b>
-						<div class="line"></div>
-						<p>
-								W powyższym przykładzie korzystamy z biblioteki Axios, która oferuje wiele funkcji i narzędzi do
-								wykonywania żądań HTTP w JavaScript. W naszym skrypcie używamy funkcji axios.get() do pobrania
-								danych ze wskazanego adresu URL. Następnie używamy funkcji then() do obsługi odpowiedzi serwera
-								i funkcji catch() do obsługi błędów.
-						</p>
-				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Dzięki bibliotece Axios możemy łatwo wykonywać żądania HTTP w JavaScript i integrować się z
-								różnymi serwisami sieciowymi, takimi jak API REST, serwery plików lub serwisy chmurowe.
-						</p>
-				</div>
  				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Summary.html"><button>Dalej</button></a>
+						<a href="Javascript_libraries_creating_and_using.html"><button>Dalej</button></a>
 				</div>
 		</div>
 </div>

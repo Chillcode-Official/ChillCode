@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery {AJAX]</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+			<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+			<li><a href="Debug_code.html">Debugowanie kodu</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<div class="section-with-image">
+			<div class="text-content">
+				<h1>Metoda .get()</h1>
+				<p>
+					Metoda .get() jest używana do pobierania danych z serwera za pomocą metody GET. Można ją wykorzystać do pobierania danych w formacie HTML, JSON lub tekstowym. Metoda .get() umożliwia również przekazanie parametrów zapytania, które mogą być używane na serwerze do generowania odpowiedzi.
+				</p>
+			</div>
+			<img src="/img/vector97.png" alt="">
+		</div>
+		<p class="text-container purple-container no-margin-top">
+			W tym przykładzie wysyłamy zapytanie GET pod adres 'http://example.com/data.json' i oczekujemy odpowiedzi w formacie JSON. Kiedy serwer zwróci odpowiedź, wyświetlamy dane na stronie w elemencie o id 'myDiv'.
+		</p>
+		<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+$.get('http://example.com/data.json', function(data) {
+  // wyświetlenie danych na stronie
+  $('#myDiv').html(data.text);
+});
+								</code>
+						</pre>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="AJAX_post()_method.html"><button>Dalej</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

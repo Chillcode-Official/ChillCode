@@ -19,7 +19,7 @@
 			<ul>
 				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
 				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<button><li><a href="../EduBear.html">Home</a></li></button>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
 				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
 				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
 				<button><li><a href="/About/About.html">About me</a></li></button>
@@ -36,7 +36,7 @@
 			<li><a href="Comments.html">Komentarze</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
-				<div class="dropdown-content">
+				<div class="dropdown-content show">
 					<ul class="navbar-list-none">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_types.html">Typy prymitywne</a></li>
 						<li><a class="navbar-drop-text" href="Reference_types.html">Typy odniesienia</a></li>
@@ -169,8 +169,24 @@
 					</ul>
 				</div>
 			</li>
-			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-			<li><a href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_Methods_and_property.html">Metody i Właściwości styli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Biblioteki JavaScript</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="Javascript_libraries_creating_and_using.html">Tworzenie i używanie Bibliotek</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="Summary.html">Podsumowanie</a></li>
 		</ol>
 	</div>
@@ -283,7 +299,7 @@ console.log(typeof x);
 				<p class="text-container gray-container article tooltip">
 						<code><a href="#" pro-tip="Null jest typem danych, który reprezentuje brak wartości. Można go użyć, aby wyraźnie oznaczyć brak wartości.">Null <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - wartość pusta
 				</p>
-				<div class="code-block code-block-margin-top code-block-medium">
+				<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 var y = null;

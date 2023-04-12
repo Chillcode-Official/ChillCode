@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery {Wtyczki}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/EduBear.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<section>
+			<ul>
+				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> Learn</a></span></li>
+				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
+				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
+				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
+				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
+				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
+				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="roadmap-list">
+		<ol>
+			<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Event_handling.html">Obsługa zdarzeń</a></li>
+			<li><a href="Effects_and_animations.html">Efekty I Animacje</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none">
+						<li><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
+			<li><a href="Debug_code.html">Debugowanie kodu</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a href="#" class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="content">
+		<h1>Wtyczki do efektów animacji</h1>
+		<div class="section-with-image">
+			<p>
+				Wtyczki jQuery do efektów animacji umożliwiają tworzenie efektów wizualnych na stronie internetowej, takich jak przesuwające się elementy, rozwijane menu, podświetlanie elementów po najechaniu kursorem myszy i wiele innych. Dzięki nim można zwiększyć atrakcyjność strony i zrobić wrażenie na użytkownikach.
+			</p>
+			<img src="/img/vector8.png" alt="">
+		</div>
+		<div class="text-container light-container black-list article tooltip no-margin-top">
+			<div class="text-content">
+				<h3>
+					Poniżej przedstawiam kilka popularnych wtyczek jQuery do efektów animacji:
+				</h3>
+			</div>
+			<div class="line"></div>
+			<ul>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia animowanie elementów na stronie internetowej. Można animować różne właściwości elementów, takie jak np. kolor, rozmiar, pozycję czy przezroczystość. Umożliwia to tworzenie dynamicznych efektów, które przyciągają uwagę użytkowników.">jQuery Animate <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- pozwala na animowanie różnych właściwości CSS</li>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia tworzenie prezentacji zdjęć i slajdów na stronie internetowej. Umożliwia dostosowanie przejść między slajdami, czasu trwania prezentacji, dodanie napisów, miniatur i wiele innych.">jQuery Cycle2 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie efektów przejścia slajdów</li>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektów przejść między animowanymi elementami. Umożliwia dostosowanie szybkości animacji, łagodzenie przejść i wiele innych.">jQuery Easing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia dodanie animacji, które łagodnie zmieniają prędkość lub tempo</li>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektów najechania myszą na elementy na stronie internetowej. Umożliwia dostosowanie wyglądu elementów, animacji i wiele innych.">jQuery Hover <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia dodanie animacji do elementów, które są wywoływane</li>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia dodanie efektu paralaksy na stronie internetowej. Umożliwia tworzenie efektów 3D, gdzie elementy na stronie internetowej poruszają się z różnymi prędkościami, co daje wrażenie głębi.">jQuery Parallax <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie efektów paralaksy</li>
+				<li><code><a href="#" pro-tip="to wtyczka, która umożliwia tworzenie wykresów na stronie internetowej. Umożliwia dostosowanie typu wykresu, kolorów, stylu i wiele innych. Wykresy te są bardzo przydatne w wizualizacji danych na stronie internetowej.">jQuery Sparklines <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie małych wykresów lub grafik</li>
+			</ul>
+		</div>
+		<div class="big-page-header"></div>
+		<h2><img class="icon-img-big" src="/img/icon_animate.png" alt=""> Wtyczka Animate, przesuwająca element w prawo:</h2>
+		<div class="code-block">
+						<pre>
+								<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;Przyk&lstrok;ad u&zdot;ycia wtyczki jQuery Animate&lt;/title&gt;
+	&lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+	&lt;style&gt;
+		#box {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			left: 0;
+			top: 0;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+	&lt;script&gt;
+		$(function() {
+			$(&quot;#box&quot;).click(function() {
+				$(this).animate({ left: &quot;+=200px&quot; }, 1000);
+			});
+		});
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+								</code>
+						</pre>
+		</div>
+		<div class="alert-card alert-card3 alert-card-gray">
+			<img style="width: 50px;" src="/img/robotic-hand.png" alt="">
+			<b>Wyjaśnienie</b>
+			<div class="line"></div>
+			<p>
+				W powyższym przykładzie po kliknięciu na element o id "box", używamy funkcji animate() do przesunięcia elementu w prawo o 200 pikseli. Animacja trwa 1000 milisekund (czyli 1 sekundę). Dzięki temu użytkownik może łatwo interaktywnie przesuwać elementy na stronie internetowej.
+			</p>
+		</div>
+		<div class="big-page-header"></div>
+		<div class="btn">
+			<a href="Creating_web_applications.html"><button>Dalej</button></a>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
