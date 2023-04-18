@@ -3,79 +3,82 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ChillCode</title>
+	<link rel="icon" href="/img/logo_chill.ico">
 	<link rel="stylesheet" href="ChillCode.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 	<script src="/EduBear.js"></script>
 </head>
 <body>
 <div class="page-content">
 	<div class="content">
-		<div class="darkBlock">
-			<div class="darkBlock-items">
-			</div>
-		</div>
 		<nav class="navbar">
-			<div class="navbar-container">
-				<a href="https://chillcode.org/" class="navbar-logo"><img src="/img/ChillCode-logo-dark.png" alt=""></a>
+			<div class="navbar-container link-unDecoration">
+				<a href="https://chillcode.org/" class="navbar-logo text-lg text-nowrap">
+					<img class="logo-img" src="/img/dark_buckels.png" alt=""><span class="text-logo-first">Chill<span class="text-logo-second">Code</span></span>
+				</a>
 				<div class="navbar-menu">
 					<div class="dropdown">
 						<button class="navbar-link output-menu-button" onclick="toggleDropdown(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>Tutorials</button>
 						<div class="dropdown-content">
 							<div class="output">
 								<article>
-									<div class="hej6">
-										<img class="hej7" src="/img/icon_education.png" alt="">
-										<div class="hej8">All Tutorials</div>
+									<div class="drop-tuto1">
+										<img class="drop-tuto2" src="/img/icon_education.png" alt="">
+										<div class="drop-tuto3">All Tutorials</div>
 									</div>
 								</article>
-								<div class="hej9">
-									<div class="hej10">
-										<div class="hej11">
-											<a class="hej12" href="Csharp-basic/Introduction_to_Csharp.html">
-												<img class="hej13" src="/img/c-sharp.png" alt="">
-												<div class="hej14">
+								<div class="drop-tuto4">
+									<div class="drop-tuto5">
+										<div class="drop-tuto6">
+											<a class="drop-tuto7" href="Csharp-basic/Introduction_to_Csharp.html">
+												<img class="drop-tuto8" src="/img/c-sharp.png" alt="">
+												<div class="drop-tuto9">
 													C#
 												</div>
 											</a>
-											<a class="hej12" href="HTML-Basic/Introduction_to_HTML.html">
-												<img class="hej13" src="/img/html-5.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="HTML-Basic/Introduction_to_HTML.html">
+												<img class="drop-tuto8" src="/img/html-5.png" alt="">
+												<div class="drop-tuto9">
 													HTML
 												</div>
 											</a>
-											<a class="hej12" href="JavaScript-Basic/Introduction_to_JavaScript.html">
-												<img class="hej13" src="/img/javaScript-icon.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="JavaScript-Basic/Introduction_to_JavaScript.html">
+												<img class="drop-tuto8" src="/img/javaScript-icon.png" alt="">
+												<div class="drop-tuto9">
 													JavaScript
 												</div>
 											</a>
-											<a class="hej12" href="CSS-Basic/Introduction_to_CSS.html">
-												<img class="hej13" src="/img/css.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="CSS-Basic/Introduction_to_CSS.html">
+												<img class="drop-tuto8" src="/img/css.png" alt="">
+												<div class="drop-tuto9">
 													CSS
 												</div>
 											</a>
-											<a class="hej12" href="jQuery-Basic/Introduction_to_jQuery.html">
-												<img class="hej13" src="/img/jquery(1).png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="jQuery-Basic/Introduction_to_jQuery.html">
+												<img class="drop-tuto8" src="/img/jquery(1).png" alt="">
+												<div class="drop-tuto9">
 													jQuery
 												</div>
 											</a>
-											<a class="hej12" href="Bootstrap-Basic/Introduction_to_Bootstrap.html">
-												<img class="hej13" src="/img/bootstrap-icon.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="Bootstrap-Basic/Introduction_to_Bootstrap.html">
+												<img class="drop-tuto8" src="/img/bootstrap-icon.png" alt="">
+												<div class="drop-tuto9">
 													Bootstrap
 												</div>
 											</a>
-											<a class="hej12" href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">
-												<img class="hej13" src="/img/NET_Core_Logo.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">
+												<img class="drop-tuto8" src="/img/NET_Core_Logo.png" alt="">
+												<div class="drop-tuto9">
 													ASP.NET Core
 												</div>
 											</a>
-											<a class="hej12" href="Cplusplus/Introduction_to_Cpp.html">
-												<img class="hej13" src="/img/cplusplus-logo.png" alt="">
-												<div class="hej14">
+											<a class="drop-tuto7" href="Cplusplus/Introduction_to_Cpp.html">
+												<img class="drop-tuto8" src="/img/cplusplus-logo.png" alt="">
+												<div class="drop-tuto9">
 													C++
 												</div>
 											</a>
@@ -85,19 +88,36 @@
 							</div>
 						</div>
 					</div>
-					<li class="navbar-item"><a href="Blog.html" class="navbar-link">Blog</a></li>
-					<li class="navbar-item"><a href="About.html" class="navbar-link">About</a></li>
-					<li class="navbar-item"><a href="Help.html" class="navbar-link">Help</a></li>
-					<li class="navbar-item"><a href="Support.html" class="navbar-link">Support us</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #4545d9" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+					<div class="navbar-item"><a href="Blog.html" class="navbar-link">Blog</a></div>
+					<div class="navbar-item"><a href="About.html" class="navbar-link">About</a></div>
+					<div class="navbar-item"><a href="Help.html" class="navbar-link">Help</a></div>
+					<div class="navbar-item"><a href="Support.html" class="navbar-link">Support us</a></div>
+					<!--<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #4545d9" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
 						<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 					</svg></a></li>
-				<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #d05959" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-					<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-				</svg></a></li>
-				<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-					<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-				</svg></a></li>
+					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #d05959" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+						<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+					</svg></a></li>
+					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+						<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+					</svg></a></li>-->
+					<div class="navbar-item socials">
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_github.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_facebook.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_instagram.png" alt="">
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="navbar-toggle">
 					<span></span>
@@ -107,33 +127,26 @@
 			</div>
 		</nav>
 			<div class="bodyContainer">
-				<div class="lg-hide">
-					<div class="magicText">
-						<h1>Learn programming for Free()</h1>
+				<div class="double-elements section-main-header">
+					<div class="magicText text-gray magicPadding">
+						<div class="lg-hide">
+							<h1>Learn programming for Free()</h1>
+						</div>
+						<div class="lg-display">
+							<h1>Learn coding</h1>
+							<h1>for Free()</h1>
+						</div>
 						<p>
-							Naucz się programować dzięki naszym samouczkom i przykładom przyjaznym dla początkujących. Czytaj
+							<span>ChillCode</span> to darmowa platforma learningowa, która posiada obfitą bazę samouczków i przykładów przyjaznych dla początkujących. Czytaj
 							samouczki, wypróbuj przykłady, pisz kod i ucz się programować.
 						</p>
-						<div class="text-centered">
-							<button class="btn3 colorGradient animation">Zacznij już teraz</button>
-						</div>
 						<!-- <button>Start</button> -->
 					</div>
-				</div>
-				<div class="lg-display">
-					<div class="double-elements section-main-header">
-						<div class="magicText">
-							<h1>Learn programming for Free()</h1>
-							<p>
-								Naucz się programować dzięki naszym samouczkom i przykładom przyjaznym dla początkujących. Czytaj
-								samouczki, wypróbuj przykłady, pisz kod i ucz się programować.
-							</p>
-							<button class="btn3 colorGradient animation">Zacznij już teraz</button>
-							<!-- <button>Start</button> -->
-						</div>
-						<video class="video" autoplay loop muted playsinline>
-							<source src="/video/CodingVideo1mini.mp4" type="video/mp4">
-						</video>
+					<video class="video margin-top-responsive" autoplay loop muted playsinline>
+						<source src="/video/CodingVideo1(1).mp4" type="video/mp4">
+					</video>
+					<div class="display-center margin-top-minus-responsive">
+						<button class="btn3 colorGradient animation">Zacznij już teraz</button>
 					</div>
 				</div>
 			</div>
@@ -141,14 +154,20 @@
 			<div class="wrapper">
 				<div class="header">
 					<h4>Wybór zależy od ciebie</h4><br>
-					<h1>Discover all Tutorials <span><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16">
+					<div class="lg-display">
+						<h2>Popular Tutorials <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16">
 		<path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708z"/></svg></span>
-					</h1>
+						</h2>
+					</div>
+					<div class="lg-hide">
+						<h1>Popular Tutorials <span><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16">
+		<path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708z"/></svg></span>
+						</h1>
+					</div>
 				</div>
 			</div>
-			<div class="margin-top"></div>
 			<div class="main-content">
-				<div class="card-grid">
+				<div class="card-grid display-center">
 					<article class="card">
 						<a href="HTML-Basic/Introduction_to_HTML.html">
 							<div class="card-header">
@@ -160,7 +179,12 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<p>Język znaczników wykorzystywany do tworzenia stron internetowych. Zawiera elementy takie jak nagłówki, paragrafy, linki i obrazy.</p>
+								<div class="lg-hide">
+									<p>Język znaczników wykorzystywany do tworzenia stron internetowych. Zawiera elementy takie jak nagłówki, paragrafy, linki i obrazy.</p>
+								</div>
+								<div class="lg-display">
+									<p>Język znaczników wykorzystywany do tworzenia stron.</p>
+								</div>
 							</div>
 							<div class="card-footer">
 								<a href="HTML-Basic/Introduction_to_HTML.html">Zobacz więcej</a>
@@ -178,7 +202,12 @@
 							</div>
 						</div>
 						<div class="card-body">
-							<p>Język arkuszy stylów, który pozwala na nadawanie wyglądu i układu dla stron internetowych.</p>
+							<div class="lg-hide">
+								<p>Język arkuszy stylów, który pozwala na nadawanie wyglądu i układu dla stron internetowych.</p>
+							</div>
+							<div class="lg-display">
+								<p>Język arkuszy stylów, który nadaje wygląd stronie.</p>
+							</div>
 						</div>
 						<div class="card-footer">
 							<a href="CSS-Basic/Introduction_to_CSS.html">Zobacz więcej</a>
@@ -196,7 +225,12 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<p>Skryptowy język programowania, który jest często wykorzystywany do dodawania interaktywności do stron internetowych. </p>
+								<div class="lg-hide">
+									<p>Skryptowy język programowania, który jest często wykorzystywany do dodawania interaktywności do stron internetowych. </p>
+								</div>
+								<div class="lg-display">
+									<p>Skryptowy język do tworzenia interaktywnych stron.</p>
+								</div>
 							</div>
 							<div class="card-footer">
 								<a href="JavaScript-Basic/Introduction_to_JavaScript.html">Zobacz więcej</a>
@@ -214,88 +248,96 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<p>Biblioteka JavaScript, która ułatwia manipulowanie elementami HTML, obsługę zdarzeń i komunikację z serwerem.</p>
+								<div class="lg-hide">
+									<p>Biblioteka JavaScript, która ułatwia manipulowanie elementami HTML, obsługę zdarzeń i komunikację z serwerem.</p>
+								</div>
+								<div class="lg-display">
+									<p>Biblioteka JS do manipulowania elementami HTML.</p>
+								</div>
 							</div>
 							<div class="card-footer">
 								<a href="jQuery-Basic/Introduction_to_jQuery.html">Zobacz więcej</a>
 							</div>
 						</a>
 					</article>
-					<article class="card">
-						<a href="Bootstrap-Basic/Introduction_to_Bootstrap.html">
-							<div class="card-header">
-								<div>
-							<span>
-								<img src="/img/bootstrap-icon.png" alt="">
-							</span>
-									<h3 class="color-text-dark">Bootstrap</h3>
-								</div>
-							</div>
-							<div class="card-body">
-								<p>Framework CSS, który ułatwia projektowanie responsywnych stron internetowych.</p>
-							</div>
-							<div class="card-footer">
-								<a href="Bootstrap-Basic/Introduction_to_Bootstrap.html">Zobacz więcej</a>
-							</div>
-						</a>
-					</article>
-					<article class="card">
-						<a href="Cplusplus/Introduction_to_Cpp.html">
-							<div class="card-header"><div>
-							<span>
-								<img src="/img/c++(2).png" alt="">
-							</span>
-								<h3 class="color-text-dark">C++</h3>
-							</div>
-							</div>
-							<div class="card-body">
-								<p>Wysokopoziomowy język programowania, umożliwiający tworzenie zaawansowanych aplikacji, gier oraz systemów.</p>
-							</div>
-							<div class="card-footer">
-								<a href="Cplusplus/Introduction_to_Cpp.html">Zobacz więcej</a>
-							</div>
-						</a>
-					</article>
-					<article class="card">
-						<a href="Csharp-basic/Introduction_to_Csharp.html">
-							<div class="card-header">
-								<div>
-								<span>
-									<img src="/img/c-sharp(1).png" alt="">
-								</span>
-									<h3 class="color-text-dark">C#</h3>
-								</div>
-							</div>
-							<div class="card-body">
-								<p>Obiektowy język programowania, który jest często wykorzystywany do tworzenia aplikacji Windows, gier i innych narzędzi programistycznych.</p>
-							</div>
-							<div class="card-footer footer-text">
-								<a href="Csharp-basic/Introduction_to_Csharp.html">Zobacz więcej</a>
-							</div>
-						</a>
-					</article>
-					<article class="card">
-						<a href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">
-							<div class="card-header">
-								<div>
-							<span>
-								<img src="/img/asp-icon.png" alt="">
-							</span>
-									<h3 class="color-text-dark">ASP.NET Core</h3>
-								</div>
-							</div>
-							<div class="card-body">
-								<p>Framework do tworzenia aplikacji internetowych w języku C#. Umożliwia obsługę żądań HTTP, obsługę baz danych i wiele więcej</p>
-							</div>
-							<div class="card-footer">
-								<a href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Zobacz więcej</a>
-							</div>
-						</a>
-					</article>
+<!--					<article class="card">-->
+<!--						<a href="Bootstrap-Basic/Introduction_to_Bootstrap.html">-->
+<!--							<div class="card-header">-->
+<!--								<div>-->
+<!--							<span>-->
+<!--								<img src="/img/bootstrap-icon.png" alt="">-->
+<!--							</span>-->
+<!--									<h3 class="color-text-dark">Bootstrap</h3>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="card-body">-->
+<!--								<p>Framework CSS, który ułatwia projektowanie responsywnych stron internetowych.</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer">-->
+<!--								<a href="Bootstrap-Basic/Introduction_to_Bootstrap.html">Zobacz więcej</a>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</article>-->
+<!--					<article class="card">-->
+<!--						<a href="Cplusplus/Introduction_to_Cpp.html">-->
+<!--							<div class="card-header"><div>-->
+<!--							<span>-->
+<!--								<img src="/img/c++(2).png" alt="">-->
+<!--							</span>-->
+<!--								<h3 class="color-text-dark">C++</h3>-->
+<!--							</div>-->
+<!--							</div>-->
+<!--							<div class="card-body">-->
+<!--								<p>Wysokopoziomowy język programowania, umożliwiający tworzenie zaawansowanych aplikacji, gier oraz systemów.</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer">-->
+<!--								<a href="Cplusplus/Introduction_to_Cpp.html">Zobacz więcej</a>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</article>-->
+<!--					<article class="card">-->
+<!--						<a href="Csharp-basic/Introduction_to_Csharp.html">-->
+<!--							<div class="card-header">-->
+<!--								<div>-->
+<!--								<span>-->
+<!--									<img src="/img/c-sharp(1).png" alt="">-->
+<!--								</span>-->
+<!--									<h3 class="color-text-dark">C#</h3>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="card-body">-->
+<!--								<p>Obiektowy język programowania, który jest często wykorzystywany do tworzenia aplikacji Windows, gier i innych narzędzi programistycznych.</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer footer-text">-->
+<!--								<a href="Csharp-basic/Introduction_to_Csharp.html">Zobacz więcej</a>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</article>-->
+<!--					<article class="card">-->
+<!--						<a href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">-->
+<!--							<div class="card-header">-->
+<!--								<div>-->
+<!--							<span>-->
+<!--								<img src="/img/asp-icon.png" alt="">-->
+<!--							</span>-->
+<!--									<h3 class="color-text-dark">ASP.NET Core</h3>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="card-body">-->
+<!--								<p>Framework do tworzenia aplikacji internetowych w języku C#. Umożliwia obsługę żądań HTTP, obsługę baz danych i wiele więcej</p>-->
+<!--							</div>-->
+<!--							<div class="card-footer">-->
+<!--								<a href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Zobacz więcej</a>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</article>-->
 				</div>
 			</div>
-			<div class="margin-top"></div>
-			<!-- <div class="line"></div> -->
+			<div class="display-center">
+				<button class="btn2"><img class="logo-img" src="/img/icon_tutorials(1).png" alt="">Zobacz wszystkie kursy</button>
+			</div>
+			<!--<div class="margin-top"></div>
+			&lt;!&ndash; <div class="line"></div> &ndash;&gt;
 			<div class="section-pick-language containerBlock containerBlock-Yellow">
 				<div class="wrapper">
 					<div class="double-elements">
@@ -316,8 +358,8 @@
 								<p>wystarczy kliknąć przycisk</p>
 							</div>
 							<a href="Character_selection.html">
-								<button class="btn3">
-									<img style="width: 50px; margin-bottom: -13px;" src="/img/adventurer.png" alt="">
+								<button class="btn2">
+									<img class="logo-img" src="/img/adventurer.png" alt="">
 									Wybierz swój charakter
 								</button>
 							</a>
@@ -325,16 +367,14 @@
  					</div>
 				</div>
 			</div>
-		</div>
-		<div class="line"></div>
+		</div>-->
 		<div class="margin-top"></div>
-		<div class="wrapper">
+		<!--<div class="wrapper">
 			<div class="header">
 				<h1>Dlaczego akurat ChillCode <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
 					<path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
 				</svg>
 				</h1><br>
-				<h4>Wybór należy do ciebie</h4><br>
 				<div class="triple-elements">
 					<div class="heroText heroWhite">
 						<p>
@@ -372,29 +412,112 @@
 					</div>
 				</div>
 			</div>
+		</div>-->
+		<div class="bodyContainer">
+			<div class="magicText color-black magicPadding">
+				<h2>Dlaczego ChillCode?</h2>
+				<p>Zapoznaj się z poniższymi informacjami, aby przekonać się, dlaczego akurat ChillCode, może ci pomóc w twojej drodze do zostania programistą</p>
+			</div>
+			<div class="main-content">
+				<div class="card-why-grid">
+					<div class="card-why-padding">
+						<div class="card-why">
+							<h3>Uruchamianie kodu</h3>
+							<p class="card-text-padding">
+								Wystarczy kliknąć przycisk "Uruchom kod" i zobaczyć wynik działania programu
+							</p>
+							<div class="code-block">
+								<pre>
+									<code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+  int a = 6;
+  int b = 5;
+
+  int suma = a + b;
+
+  cout << "Wynik to: " << suma;
+
+  return 0;
+}</code>
+								</pre>
+							</div>
+							<div class="dropdown minus-margin-top">
+								<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+								<div class="dropdown-content">
+									<div class="output output-content output-padding">
+										Wynik to: 11
+									</div>
+								</div>
+							</div>
+							<div style="margin-bottom: 40px;"></div>
+						</div>
+					</div>
+					<div class="card-why-padding">
+						<div class="card-why">
+							<h3>Podpowiedzi</h3>
+							<p class="card-text-padding">
+								Najedź na podświetlone słowo kluczowe, które cię interesuje i zobacz prostą definicje
+							</p>
+							<div class="card-element-padding">
+								<p style="background-color: #e6dbdb; color: #3c3636; box-shadow: 6px 6px 0 3px rgb(1, 1, 1, 1);" class="text-container lightWhite-container line-height-medium article tooltip">
+									Ten program w języku C++ dodaje dwie liczby pry użyciu <code class="text-nowrap miniTooltip"><a href="#" pro-tip="int służy do określenia typu zmiennej całkowitej (integer), czyli liczby całkowitej bez ułamków.">int <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i wyświetla ich sumę na ekranie konsoli. Wykorzystuje preprocesor <code class="text-nowrap"><a href="#" pro-tip="#include <iostream> to dyrektywa preprocesora w języku C++, która mówi kompilatorowi, aby dołączył zawartość biblioteki standardowej iostream. Biblioteka ta zapewnia funkcjonalność do operacji wejścia/wyjścia, takich jak wczytywanie danych z klawiatury lub plików, wyświetlanie tekstu na ekranie, itp.">#include &lt;iostream&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, który umożliwia korzystanie ze strumieni wejścia i wyjścia oraz definiuje zmienne a i b, dodaje je i przypisuje wynik do zmiennej suma. Wynik dodawania jest wyświetlany na ekranie konsoli za pomocą funkcji <code class="text-nowrap miniTooltip"><a href="#" pro-tip="cout to obiekt strumienia wyjścia, który umożliwia wypisywanie tekstu na ekranie konsoli. Jest często używany do wyświetlania wartości zmiennych lub komunikatów dla użytkownika.">cout <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>. Program kończy się zwracając wartość 0, oznaczając, że wykonanie programu zakończyło się poprawnie.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-why-padding">
+						<div class="card-why card-why-images">
+							<h3>(Nie) czarno na białym</h3>
+							<p class="card-text-padding">
+								Nasze tutoriale wzbogacone są o setki zdjęć, które pomagają w nauce oraz cieszą oko
+							</p>
+							<br>
+							<div class="display-center">
+								<img style="width: 100%" src="/img/vector217.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="card-why-padding">
+						<div class="card-why card-why-images">
+							<h3>Bogata baza tutoriali</h3>
+							<p class="card-text-padding">
+								Mnóstwo kursów, języków programowania, zagadnień, nauki, kodu i wiele więcej
+							</p>
+							<br>
+							<div class="display-center">
+								<img src="/img/icon_tutorials(2).png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="line"></div>
 		<div class="containerBlock containerBlock-White">
 			<div class="wrapper">
 				<div class="double-elements section-open-source">
-					<div class="magicText magicText-black">
+					<div class="magicText magicText-black color-black magicPadding">
 							<h1>
 								Open Source
 								<img src="/img/open-source-icon.svg"  alt="" />
 							</h1>
 							<p>
 								Nasza aplikacja jest projektem Open Source! Cieszymy się, że możemy podzielić się kodem źródłowym z innymi programistami i zapraszamy wszystkich zainteresowanych do pomocy w jego rozwoju.
-								<a href="https://github.com/iunosan/EduBearSite">
-									<img src="/img/github_icon.svg" alt="">
-									Github
-								</a>
 							</p>
+							<span class="flex-link">
+								<a class="white-space-pre" href="https://github.com/iunosan/EduBearSite"><img class="logo-img" src="/img/icon_github.png" alt="">Github</a>
+								<a class="white-space-pre" href="mailto:chillcode@gmail.com"><img class="logo-img" src="/img/icon_gmail.png" alt="">chillcode@gmail.com</a>
+							</span>
 					</div>
-					<img src="/img/vector181-azure.png" alt="">
+					<img class="magicImg" src="/img/vector181-azure.png" alt="">
 				</div>
 			</div>
 		</div>
-		<div class="containerBlock containerBlock-Azure">
+		<!--<div class="containerBlock containerBlock-Azure">
 			<div class="wrapper">
 				<div class="header">
 					<h1>In The Future</h1>
@@ -412,10 +535,10 @@
 								<div class="card-body">
 									<p>Python to popularny, prosty w nauce i dynamiczny język programowania, często wykorzystywany do tworzenia aplikacji internetowych, analizy danych, uczenia maszynowego i automatyzacji zadań.</p>
 								</div>
-								<!--
+								&lt;!&ndash;
 								<div class="card-footer">
 									<a href="">Learn More</a>
-								</div>-->
+								</div>&ndash;&gt;
 							</article>
 							<article class="card heroCard">
 								<div class="card-header">
@@ -429,10 +552,10 @@
 								<div class="card-body">
 									<p>Centrum pomocy: które zawiera odpowiedzi na często zadawane pytania dotyczące korzystania z serwisu lub produktu. </p>
 								</div>
-								<!--
+								&lt;!&ndash;
 								<div class="card-footer">
 									<a href="">Learn More</a>
-								</div>-->
+								</div>&ndash;&gt;
 							</article>
 							<article class="card heroCard">
 								<div class="card-header">
@@ -446,10 +569,10 @@
 								<div class="card-body">
 									<p>Zakładka bloga: umożliwiająca użytkownikom szybkie przejście do konkretnych kategorii lub tematów poruszanych na blogu.</p>
 								</div>
-								<!--
+								&lt;!&ndash;
 								<div class="card-footer">
 									<a href="">Learn More</a>
-								</div>-->
+								</div>&ndash;&gt;
 							</article>
 							<article class="card heroCard">
 								<div class="card-header">
@@ -463,20 +586,20 @@
 								<div class="card-body">
 									<p>Komentarze na stronie: Funkcjonalność na stronie internetowej, która umożliwia użytkownikom wyrażenie swojej opinii na temat treści.</p>
 								</div>
-								<!--
+								&lt;!&ndash;
 								<div class="card-footer">
 									<a href="">Learn More</a>
-								</div>-->
+								</div>&ndash;&gt;
 							</article>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="line"></div>
 		<footer>
 			<div class="footer-logo">
-				<h2><img style="margin-bottom: -10px;" src="/img/spellbook.png" alt="">ChillCode</h2>
+				<h2><img src="/img/white_buckles.png" alt="">ChillCode</h2>
 			</div>
 			<div class="footer-links">
 				<ul>

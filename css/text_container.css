@@ -79,5 +79,13 @@
 
 /*line height elements*/
 .text-container.line-height-plus{
-		line-height: 40px;
+	line-height: 40px;
+}
+.text-container.line-height-medium{
+	line-height: 30px;
+}
+@media only screen and (max-width: 568px) {
+	.text-container{
+		letter-spacing: 0;
+	}
 }

@@ -34,8 +34,11 @@ html,body{
 		font-family: sans-serif;
 		background-color: #27282c;
 		/*background-color: #1f2223;*/
-		overflow-x: hidden;
 }
+
+/* to może być do zmiany w body overflow-x: hidden; */
+
+
 
 
 

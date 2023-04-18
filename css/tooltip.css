@@ -31,3 +31,12 @@
 		z-index: 1;
 		white-space: break-spaces; /* --możliwość popsucia*/
 }
+/*.miniTooltip a:after{
+	width: auto;
+}*/
+
+@media only screen and (max-width: 576px) {
+	.miniTooltip a:after {
+		width: 170px;
+	}
+}

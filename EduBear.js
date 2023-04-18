@@ -57,6 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
 						dropdown.setAttribute("aria-expanded", "false");
 				});
 		});
+
+
+	const toggleButton = document.querySelector('.navbar-toggle');
+	const menu = document.querySelector(".navbar-menu");
+
+	toggleButton.addEventListener('click', () => {
+		toggleButton.classList.toggle('active');
+		menu.classList.toggle('active');
+	});
 });
 
 
@@ -65,5 +74,3 @@ function rotateTriangle(element) {
 	const triangle = li.querySelector('.triangle');
 	triangle.classList.toggle('active');
 }
-
-

@@ -2,28 +2,93 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/img/logo_chill.ico">
 	<title>ChillCode</title>
-	<link rel="stylesheet" href="Charackter_selection.css"/>
 	<link rel="stylesheet" href="ChillCode.css"/>
-
+	<script src="/EduBear.js"></script>
 </head>
 <body>
 <div class="page-content">
 	<div class="content">
-		<div class="darkBlock">
-			<div class="darkBlock-items darkBlock-megaMargin-top">
-			</div>
-		</div>
 		<nav class="navbar">
-			<div class="navbar-container">
-				<a href="https://chillcode.org/" class="navbar-logo"><img src="/img/ChillCode-logo-dark.png" alt=""></a>
-				<ul class="navbar-menu">
-					<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-					<li class="navbar-item"><a href="Blog.html" class="navbar-link">Blog</a></li>
-					<li class="navbar-item"><a href="About.html" class="navbar-link">About</a></li>
-					<li class="navbar-item"><a href="Help.html" class="navbar-link">Help</a></li>
-					<li class="navbar-item"><a href="Support.html" class="navbar-link">Support us</a></li>
-					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #4545d9" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+			<div class="navbar-container link-unDecoration">
+				<a href="https://chillcode.org/" class="navbar-logo text-lg text-nowrap">
+					<img class="logo-img" src="/img/dark_buckels.png" alt=""><span class="text-logo-first">Chill<span class="text-logo-second">Code</span></span>
+				</a>
+				<div class="navbar-menu">
+					<div class="dropdown">
+						<button class="navbar-link output-menu-button" onclick="toggleDropdown(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>Tutorials</button>
+						<div class="dropdown-content">
+							<div class="output">
+								<article>
+									<div class="drop-tuto1">
+										<img class="drop-tuto2" src="/img/icon_education.png" alt="">
+										<div class="drop-tuto3">All Tutorials</div>
+									</div>
+								</article>
+								<div class="drop-tuto4">
+									<div class="drop-tuto5">
+										<div class="drop-tuto6">
+											<a class="drop-tuto7" href="Csharp-basic/Introduction_to_Csharp.html">
+												<img class="drop-tuto8" src="/img/c-sharp.png" alt="">
+												<div class="drop-tuto9">
+													C#
+												</div>
+											</a>
+											<a class="drop-tuto7" href="HTML-Basic/Introduction_to_HTML.html">
+												<img class="drop-tuto8" src="/img/html-5.png" alt="">
+												<div class="drop-tuto9">
+													HTML
+												</div>
+											</a>
+											<a class="drop-tuto7" href="JavaScript-Basic/Introduction_to_JavaScript.html">
+												<img class="drop-tuto8" src="/img/javaScript-icon.png" alt="">
+												<div class="drop-tuto9">
+													JavaScript
+												</div>
+											</a>
+											<a class="drop-tuto7" href="CSS-Basic/Introduction_to_CSS.html">
+												<img class="drop-tuto8" src="/img/css.png" alt="">
+												<div class="drop-tuto9">
+													CSS
+												</div>
+											</a>
+											<a class="drop-tuto7" href="jQuery-Basic/Introduction_to_jQuery.html">
+												<img class="drop-tuto8" src="/img/jquery(1).png" alt="">
+												<div class="drop-tuto9">
+													jQuery
+												</div>
+											</a>
+											<a class="drop-tuto7" href="Bootstrap-Basic/Introduction_to_Bootstrap.html">
+												<img class="drop-tuto8" src="/img/bootstrap-icon.png" alt="">
+												<div class="drop-tuto9">
+													Bootstrap
+												</div>
+											</a>
+											<a class="drop-tuto7" href="ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">
+												<img class="drop-tuto8" src="/img/NET_Core_Logo.png" alt="">
+												<div class="drop-tuto9">
+													ASP.NET Core
+												</div>
+											</a>
+											<a class="drop-tuto7" href="Cplusplus/Introduction_to_Cpp.html">
+												<img class="drop-tuto8" src="/img/cplusplus-logo.png" alt="">
+												<div class="drop-tuto9">
+													C++
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navbar-item"><a href="Blog.html" class="navbar-link">Blog</a></div>
+					<div class="navbar-item"><a href="About.html" class="navbar-link">About</a></div>
+					<div class="navbar-item"><a href="Help.html" class="navbar-link">Help</a></div>
+					<div class="navbar-item"><a href="Support.html" class="navbar-link">Support us</a></div>
+					<!--<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #4545d9" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
 						<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 					</svg></a></li>
 					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: #d05959" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -31,8 +96,25 @@
 					</svg></a></li>
 					<li class="navbar-item"><a href="#" class="navbar-link"><svg style="color: black" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
 						<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-					</svg></a></li>
-				</ul>
+					</svg></a></li>-->
+					<div class="navbar-item socials">
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_github.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_facebook.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img class="navbar-logo-img" src="/img/icon_instagram.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
 				<div class="navbar-toggle">
 					<span></span>
 					<span></span>
@@ -40,24 +122,42 @@
 				</div>
 			</div>
 		</nav>
-		<div class="hero-section height-zero">
-			<div class="double-elements margin-mega-top">
-				<div class="section-information">
-					<h2>Ułatwiamy naukę programowania</h2>
+		<div class="bodyContainer">
+			<div class="double-elements section-main-header">
+				<div class="magicText text-gray magicPadding">
+					<h1>Ułatwiamy naukę programowania</h1>
 					<p>
 						Jesteśmy małym zespołem programistów z pasją, którzy stale pracują nad tworzeniem zasobów programistycznych, które są dokładne i łatwiejsze do zrozumienia.
 
 						Rozumiemy, że tworzenie treści tekstowych do nauki programowania to za mało.
 
-						Aby poprawić doświadczenie edukacyjne naszych użytkowników, pracujemy nad kompilatorem kodu. <img style="width: 30px; margin-bottom: -7px;" src="/img/code.png" alt="">
+						Aby poprawić doświadczenie edukacyjne naszych użytkowników, pracujemy nad kompilatorem kodu.
 					</p>
-						<div>
-							<a href="Csharp-basic/Introduction_to_Csharp.html"></a>
-						</div>
+					<!-- <button>Start</button> -->
 				</div>
-				<img style="width: 400px; margin-left: 80px;" src="/img/icon_about.png" alt="">
+				<div class="display-center">
+					<img class="crazy-img" src="/img/icon_about.png" alt="">
+				</div>
 			</div>
 		</div>
+		<div class="line"></div>
+		<footer>
+			<div class="footer-logo">
+				<h2><img src="/img/white_buckles.png" alt="">ChillCode</h2>
+			</div>
+			<div class="footer-links">
+				<ul>
+					<li><a href="About.html">About</a></li>
+					<li><a href="Help.html">Help</a></li>
+					<li><a href="Support.html">Support us</a></li>
+					<li><a href="Blog.html">Blog</a></li>
+					<li><a href="Resources.html">Resources</a></li>
+				</ul>
+			</div>
+			<div class="footer-copyright">
+				<p class="color-text-white">&copy; 2023 ChillCode. All rights reserved.</p>
+			</div>
+		</footer>
 	</div>
 </div>
 </body>
