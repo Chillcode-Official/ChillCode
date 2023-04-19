@@ -1,0 +1,18 @@
+.link-unDecoration a{
+    text-decoration: none;
+}
+
+
+.flex-link{
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    column-gap: 20px;
+    font-size: 20px;
+}
+.flex-link a{
+    color: #0a58ca;
+}
+.flex-link a:hover{
+    color: #2323b2;
+}

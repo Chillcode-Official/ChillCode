@@ -1,0 +1,22 @@
+.text-lg{
+    font-size: 1.425rem;
+}
+
+.text-logo-first{
+    color: rgb(30 41 59);
+    font-weight: 700;
+}
+.text-logo-second{
+    color: rgb(82, 94, 111);
+}
+.text-nowrap{
+    white-space: nowrap;
+}
+.white-space-pre{
+    white-space: pre;
+}
+
+.text-gray span{
+    font-weight: 600;
+    color: #4f4a4a;
+}

@@ -1,7 +1,7 @@
 
 /*Code-Block elements*/
 .code-block{
-	width: 450px;
+	max-width: 100%;
 }
 
 .code-block pre code {
@@ -25,7 +25,7 @@
 		margin: 0;
 }
 .code-block.code-block-medium{
-		width: 430px;
+		max-width: 430px;
 }
 .code-block.code-block-margin-top{
 		margin-top: -20px;

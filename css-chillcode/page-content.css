@@ -1,0 +1,42 @@
+/* Page content and Grid - Zawartość strony i siatka Grid */
+.page-content{
+    margin: 0 auto;
+    width: 100%
+    /*width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;*/
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-content{
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+}
+
+.header{
+    padding: 30px 30px;
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1400px) {
+    .wrapper {
+        font-size: 1.875rem;
+    }
+}

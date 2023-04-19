@@ -1,0 +1,23 @@
+.lg-display {
+    display: none;
+}
+
+.xlg-display {
+    display: none;
+}
+
+
+@media only screen and (max-width: 568px) {
+    .lg-display {
+        display: block;
+    }
+
+    .lg-hide {
+        display: none;
+    }
+}
+
+.display-center{
+    display: grid;
+    justify-items: center;
+}

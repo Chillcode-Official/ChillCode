@@ -1,0 +1,7 @@
+.video {
+    border-radius: 10px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    max-width: 500px;
+}

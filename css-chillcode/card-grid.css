@@ -1,0 +1,118 @@
+/*Card Elements*/
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 50px;
+    padding: 30px 0 50px 0;
+
+}
+@media only screen and (min-width: 576px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        padding: 40px 100px 50px 100px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 50px;
+        padding: 40px 100px 50px 100px;
+    }
+}
+
+.card-grid.columnGap-zero {
+    column-gap: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.card-grid .card {
+    background-color: #eae2e2;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 90%;
+}
+.card-grid .card.heroCard{
+    color: black;
+}
+.card-grid .card:hover{
+    transform: translateY(-20px);
+}
+.card-grid .card.heroCard:hover{
+    transform: translate3d(10px, -10px, 0px);
+}
+.card-grid .card img{
+    width: 30px;
+    height: 30px;
+}
+.card-grid .card a {
+    text-decoration: none;
+    color: #7c214d;
+}
+
+.card-grid .card .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+}
+.card-grid .card .card-header div {
+    display: flex;
+    align-items: center;
+}
+.card-grid .card .card-header div span {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-grid .card .card-header div h3 {
+    font-weight: 500;
+}
+.card-grid .card .card-body p{
+    padding: 0 1.25rem 0.2rem;
+    font-size: 0.875rem;
+}
+.card-grid .card .card-footer {
+    margin-top: auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid gray;
+}
+.card-grid .card .card h3{
+    color: black;
+}
+@media only screen and (min-width: 568px) {
+    .card-grid .card img{
+        width: 50px;
+        height: 50px;
+    }
+    .card-grid .card .card-header div h3 {
+        margin-left: 0.75rem;
+    }
+    .card-grid .card .card-body p{
+        padding: 1rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}

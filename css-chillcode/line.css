@@ -1,0 +1,7 @@
+.line{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    width: 100%;
+    border: 3px solid #000000;
+}
