@@ -69,15 +69,15 @@
 						<img src="/img/vector37.png" alt="">
 				</div>
 				<p class="text-container article tooltip no-margin-top">
-						W języku C# istnieje kilka rodzajów kolekcji, takich jak: <code><a href="#" pro-tip="hej">Listy</a></code>
-						<code><a href="#" pro-tip="hej">Słowniki</a></code><code><a href="#" pro-tip="hej">Kolejki</a></code>
-						<code><a href="#" pro-tip="hej">Stosy</a></code>
+						W języku C# istnieje kilka rodzajów kolekcji, takich jak: <code><a pro-tip="hej">Listy</a></code>
+						<code><a pro-tip="hej">Słowniki</a></code><code><a pro-tip="hej">Kolejki</a></code>
+						<code><a pro-tip="hej">Stosy</a></code>
 				</p>
 				<div class="alert-card article tooltip no-margin-top">
 						<img src="/img/warning.png" alt="">
 						<b>Uwaga</b>
 						<p>
-								W języku C# istnieje również interfejs <code><a href="#" pro-tip="Pozwala na iterowanie przez elementy kolekcji za pomocą pętli foreach. Wiele klas kolekcji implementuje ten interfejs, dzięki czemu można je łatwo przeglądać i manipulować ich elementami.">IEnumerable</a></code>.
+								W języku C# istnieje również interfejs <code><a pro-tip="Pozwala na iterowanie przez elementy kolekcji za pomocą pętli foreach. Wiele klas kolekcji implementuje ten interfejs, dzięki czemu można je łatwo przeglądać i manipulować ich elementami.">IEnumerable</a></code>.
 						</p>
 				</div>
 				<div class="big-page-header"></div>
@@ -85,7 +85,7 @@
 				<div class="section-with-image">
 						<p class="article tooltip">
 								Listy w języku C# są to dynamiczne tablicę, które pozwalają na dodawanie i usuwanie
-								elementów w dowolnym miejscu. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">List&ltT&gt</a></code>, gdzie <b>T</b>
+								elementów w dowolnym miejscu. Można je utworzyć za pomocą klasy <code><a pro-tip="hej">List&ltT&gt</a></code>, gdzie <b>T</b>
 								jest typem elementów przechowywanych w liście.
 						</p>
 						<img src="/img/vector18.png" alt="">
@@ -101,7 +101,7 @@ List&ltint&gt numbers = new List&ltint&gt();
 						</pre>
 				</div>
 				<p class="text-container green-container article tooltip">
-						Lista z parametrami typu <code><a href="#" pro-tip="hej">string</a></code>
+						Lista z parametrami typu <code><a pro-tip="hej">string</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -111,7 +111,7 @@ List&ltstring&gt names = new List&ltstring&gt { "Ala", "Bartek", "Cezary" };
 						</pre>
 				</div>
 				<p class="text-container green-container article tooltip">
-						Aby dodać element do listy, można użyć metody <code><a href="#" pro-tip="hej">Add</a></code>
+						Aby dodać element do listy, można użyć metody <code><a pro-tip="hej">Add</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -121,8 +121,8 @@ names.Add("Dawid");
 						</pre>
 				</div>
 				<p class="text-container green-container article tooltip">
-						Aby usunąć element z listy, można użyć metody <code><a href="#" pro-tip="hej">Remove</a></code>
-						lub <code><a href="#" pro-tip="hej">RemoveAt</a></code>, która usuwa element na określonym indeksie
+						Aby usunąć element z listy, można użyć metody <code><a pro-tip="hej">Remove</a></code>
+						lub <code><a pro-tip="hej">RemoveAt</a></code>, która usuwa element na określonym indeksie
 				</p>
 				<div class="code-block">
 						<pre>
@@ -134,7 +134,7 @@ names.RemoveAt(0); // usuwa element na indeksie 0
 						</pre>
 				</div>
 				<p class="text-container green-container article tooltip">
-						Można również sprawdzić, czy lista zawiera określony element za pomocą metody <code><a href="#" pro-tip="hej">Contains</a></code>
+						Można również sprawdzić, czy lista zawiera określony element za pomocą metody <code><a pro-tip="hej">Contains</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -147,7 +147,7 @@ if (names.Contains("Bartek"))
 						</pre>
 				</div>
 				<p class="text-container green-container article tooltip">
-						Aby przeiterować przez elementy listy, można użyć pętli <code><a href="#" pro-tip="hej">foreach</a></code>
+						Aby przeiterować przez elementy listy, można użyć pętli <code><a pro-tip="hej">foreach</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -174,7 +174,7 @@ foreach (string name in names)
 						<p class="article tooltip">
 								Słowniki w języku C# to kolekcje przechowujące pary klucz-wartość, gdzie klucz
 								jest używany do szybkiego wyszukiwania wartości. Można je utworzyć za pomocą
-								klasy <code><a href="#" pro-tip="hej">Dictionary&ltTKey</a></code> <code><a href="#" pro-tip="hej">TValue&gt</a></code>
+								klasy <code><a pro-tip="hej">Dictionary&ltTKey</a></code> <code><a pro-tip="hej">TValue&gt</a></code>
 						</p>
 						<img src="/img/vector17.png" alt="">
 				</div>
@@ -189,7 +189,7 @@ Dictionary&ltstring, int> scores = new Dictionary&ltstring, int>();
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Aby dodać parę klucz-wartość do słownika, można użyć indeksatora lub metody <code><a href="#" pro-tip="hej">Add</a></code>
+						Aby dodać parę klucz-wartość do słownika, można użyć indeksatora lub metody <code><a pro-tip="hej">Add</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -201,7 +201,7 @@ scores.Add("Bartek", 20);
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Aby uzyskać wartość dla określonego klucza, można również użyć <code><a href="#" pro-tip="hej">indeksatora</a></code>
+						Aby uzyskać wartość dla określonego klucza, można również użyć <code><a pro-tip="hej">indeksatora</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -211,7 +211,7 @@ int score = scores["Alice"];
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Aby sprawdzić, czy słownik zawiera określony klucz, można użyć metody <code><a href="#" pro-tip="hej">ContainsKey</a></code>
+						Aby sprawdzić, czy słownik zawiera określony klucz, można użyć metody <code><a pro-tip="hej">ContainsKey</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -224,7 +224,7 @@ if (scores.ContainsKey("Charlie"))
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Aby usunąć parę klucz-wartość ze słownika, można użyć metody <code><a href="#" pro-tip="hej">Remove</a></code>
+						Aby usunąć parę klucz-wartość ze słownika, można użyć metody <code><a pro-tip="hej">Remove</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -235,7 +235,7 @@ scores.Remove("Ala");
 				</div>
 				<p class="text-container gray-container article tooltip">
 						Aby przeiterować przez pary klucz-wartość w słowniku, można użyć pętli foreach i właściwości <code><a
-								href="#" pro-tip="hej">Keys</a></code> lub <code><a href="#" pro-tip="hej">Value</a></code>
+								pro-tip="hej">Keys</a></code> lub <code><a pro-tip="hej">Value</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -268,7 +268,7 @@ foreach (int value in scores.Values)
 						<p class="article tooltip">
 								Kolejki w języku C# są to uporządkowane kolekcje, w których elementy są dodawane na
 								jednym końcu i usuwane z drugiego. Są one używane do przechowywania elementów w kolejności,
-								w jakiej zostały dodane. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">Queue&ltT&gt</a></code>, gdzie <b>T</b> jest typem
+								w jakiej zostały dodane. Można je utworzyć za pomocą klasy <code><a pro-tip="hej">Queue&ltT&gt</a></code>, gdzie <b>T</b> jest typem
 								elementów przechowywanych w kolejce.
 						</p>
 						<div class="image-bottom">
@@ -287,7 +287,7 @@ Queue&ltint&gt numbers = new Queue&ltint&gt();
 				</div>
 				<p class="text-container red-container article tooltip">
 						Można również utworzyć kolejkę zawierającą początkowe elementy, przekazując je jako parametry do <code><a
-								href="#" pro-tip="hej">konstruktora</a></code>
+								pro-tip="hej">konstruktora</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -297,7 +297,7 @@ Queue&ltstring&gt names = new Queue&ltstring&gt { "Ala", "Bartek", "Cezary" };
 						</pre>
 				</div>
 				<p class="text-container red-container article tooltip">
-						Aby dodać element do kolejki, można użyć metody <code><a href="#" pro-tip="hej">Enqueue</a></code>
+						Aby dodać element do kolejki, można użyć metody <code><a pro-tip="hej">Enqueue</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -307,7 +307,7 @@ names.Enqueue("Dawid");
 						</pre>
 				</div>
 				<p class="text-container red-container article tooltip">
-						Aby usunąć element z kolejki, można użyć metody <code><a href="#" pro-tip="hej">Dequeue</a></code>
+						Aby usunąć element z kolejki, można użyć metody <code><a pro-tip="hej">Dequeue</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -318,7 +318,7 @@ string name = names.Dequeue();
 				</div>
 				<p class="text-container red-container article tooltip">
 						Jeśli chcesz sprawdzić, jaki jest element na początku kolejki bez jego usuwania, użyj właściwości <code><a
-								href="#" pro-tip="hej">Peek</a></code>
+								pro-tip="hej">Peek</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -328,7 +328,7 @@ string first = names.Peek();
 						</pre>
 				</div>
 				<p class="text-container red-container article tooltip">
-						Aby przeiterować przez elementy kolejki, można użyć pętli <code><a href="#" pro-tip="">foreach</a></code>
+						Aby przeiterować przez elementy kolejki, można użyć pętli <code><a pro-tip="">foreach</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -353,9 +353,9 @@ foreach (string name in names)
 				<h1>Stosy C#</h1>
 				<div class="section-with-image">
 						<p class="article tooltip">
-								Stosy w języku C# są to uporządkowane kolekcje, które używają zasady <code><a href="#" pro-tip="hej">LIFO</a></code>
+								Stosy w języku C# są to uporządkowane kolekcje, które używają zasady <code><a pro-tip="hej">LIFO</a></code>
 								<strong>(Last In, First Out)</strong>, oznaczającej, że ostatni element dodany jest
-								pierwszym usuwanym. Można je utworzyć za pomocą klasy <code><a href="#" pro-tip="hej">Stack&ltT&gt</a></code>, gdzie
+								pierwszym usuwanym. Można je utworzyć za pomocą klasy <code><a pro-tip="hej">Stack&ltT&gt</a></code>, gdzie
 								<b>T</b> jest typem elementów przechowywanych na stosie.
 						</p>
 						<img src="/img/vector31.png" alt="">
@@ -372,7 +372,7 @@ Stack&ltint&gt numbers = new Stack&ltint&gt();
 				</div>
 				<p class="text-container blue-container article tooltip">
 						Można również utworzyć stos zawierającą początkowe elementy, przekazując je jako parametry do <code><a
-								href="#" pro-tip="hej">konstruktora</a></code>
+								pro-tip="hej">konstruktora</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -382,7 +382,7 @@ Stack&ltstring&gt names = new Stack&ltstring&gt { "Ala", "Bartek", "Cezary" };
 						</pre>
 				</div>
 				<p class="text-container blue-container article tooltip">
-						Aby dodać element do stosu, można użyć metody <code><a href="#" pro-tip="hej">Push</a></code>
+						Aby dodać element do stosu, można użyć metody <code><a pro-tip="hej">Push</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -392,7 +392,7 @@ names.Push("Dawid");
 						</pre>
 				</div>
 				<p class="text-container blue-container article tooltip">
-						Aby usunąć element ze stosu, można użyć metody <code><a href="#" pro-tip="hej">Pop</a></code>
+						Aby usunąć element ze stosu, można użyć metody <code><a pro-tip="hej">Pop</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -403,7 +403,7 @@ string name = names.Pop();
 				</div>
 				<p class="text-container blue-container article tooltip">
 						Można również sprawdzić, jaki jest element na początku kolejki bez jego usuwania, użyj właściwości <code><a
-								href="#" pro-tip="hej">Peek</a></code>
+								pro-tip="hej">Peek</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -413,7 +413,7 @@ string top = names.Peek();
 						</pre>
 				</div>
 				<p class="text-container blue-container article tooltip">
-						Aby przeiterować przez elementy stosu, można użyć pętli <code><a href="#" pro-tip="">foreach</a></code>,
+						Aby przeiterować przez elementy stosu, można użyć pętli <code><a pro-tip="">foreach</a></code>,
 						ale należy pamiętać, że elementy będą zwracane w odwrotnej kolejności niż są przechowywane na stosie.
 				</p>
 				<div class="code-block">

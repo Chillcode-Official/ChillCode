@@ -69,10 +69,10 @@
 						<img src="/img/vector54.png" alt="">
 				</div>
 				<p class="text-container gray-container article tooltip no-margin-top">
-						W C# wyjątki są obsługiwane za pomocą czterech słów kluczowych: <code><a href="#" pro-tip="oznacza blok kodu, w którym mogą wystąpić wyjątki. Jeśli wyjątek zostanie rzucony wewnątrz bloku try, to zostanie on przechwycony przez odpowiedni blok catch.">try</a></code>
-						<code><a href="#" pro-tip="oznacza blok kodu, który jest uruchamiany, gdy wyjątek zostanie rzucony wewnątrz bloku try. Można użyć kilku bloków catch do obsługi różnych typów wyjątków. W bloku catch można uzyskać dostęp do obiektu wyjątku, aby uzyskać więcej informacji o błędzie.">catch</a></code>
-						<code><a href="#" pro-tip="oznacza blok kodu, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie. Jest to przydatne do zwalniania zasobów lub do innych czynności, które zawsze powinny być wykonane, niezależnie od tego, czy wystąpił błąd czy nie.">finally</a></code>
-						<code><a href="#" pro-tip="oznacza słowo kluczowe, które jest używane do rzucenia wyjątku. Można rzucić wyjątek przez utworzenie nowego obiektu klasy wyjątku i podanie go jako argument do throw.">throw</a></code>
+						W C# wyjątki są obsługiwane za pomocą czterech słów kluczowych: <code><a pro-tip="oznacza blok kodu, w którym mogą wystąpić wyjątki. Jeśli wyjątek zostanie rzucony wewnątrz bloku try, to zostanie on przechwycony przez odpowiedni blok catch.">try</a></code>
+						<code><a pro-tip="oznacza blok kodu, który jest uruchamiany, gdy wyjątek zostanie rzucony wewnątrz bloku try. Można użyć kilku bloków catch do obsługi różnych typów wyjątków. W bloku catch można uzyskać dostęp do obiektu wyjątku, aby uzyskać więcej informacji o błędzie.">catch</a></code>
+						<code><a pro-tip="oznacza blok kodu, który zawsze jest wykonywany, niezależnie od tego, czy wyjątek został rzucony czy nie. Jest to przydatne do zwalniania zasobów lub do innych czynności, które zawsze powinny być wykonane, niezależnie od tego, czy wystąpił błąd czy nie.">finally</a></code>
+						<code><a pro-tip="oznacza słowo kluczowe, które jest używane do rzucenia wyjątku. Można rzucić wyjątek przez utworzenie nowego obiektu klasy wyjątku i podanie go jako argument do throw.">throw</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -137,12 +137,12 @@ if (age < 0)
 						<img src="/img/warning.png" alt="">
 						<b>Uwaga</b>
 						<p class="article tooltip">
-								Oto kilka przykładów predefiniowanych wyjątków pochodzących z klasy <code><a href="#" pro-tip="">System.SystemException</a></code>
+								Oto kilka przykładów predefiniowanych wyjątków pochodzących z klasy <code><a pro-tip="">System.SystemException</a></code>
 						</p>
 				</div>
 				<div class="big-page-header"></div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy argument jest nieprawidłowy.">ArgumentException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy argument jest nieprawidłowy.">ArgumentException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -157,7 +157,7 @@ if (name == null)
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy odwołanie do obiektu jest null.">NullReferenceException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy odwołanie do obiektu jest null.">NullReferenceException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -170,7 +170,7 @@ myObj.DoSomething(); // Wyświetli NullReferenceException
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy brakuje pamięci, aby utworzyć nowy obiekt.">OutOfMemoryException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy brakuje pamięci, aby utworzyć nowy obiekt.">OutOfMemoryException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -185,7 +185,7 @@ while (true)
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy stos jest przepełniony, na przykład w przypadku rekursji bez końca.">StackOverflowException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy stos jest przepełniony, na przykład w przypadku rekursji bez końca.">StackOverflowException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -198,7 +198,7 @@ void RecursiveMethod()
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy indeks jest poza zakresem tablicy lub kolekcji.">IndexOutOfRangeException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy indeks jest poza zakresem tablicy lub kolekcji.">IndexOutOfRangeException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -211,7 +211,7 @@ array[10] = 1; // Wyświetli IndexOutOfRangeException
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy operacja jest nieprawidłowa w danej sytuacji.">InvalidOperationException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy operacja jest nieprawidłowa w danej sytuacji.">InvalidOperationException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -223,7 +223,7 @@ queue.Dequeue(); // Wyświetli InvalidOperationException, ponieważ kolejka jest
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy próbuje się przypisać element do tablicy innego typu.">ArrayTypeMismatchException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy próbuje się przypisać element do tablicy innego typu.">ArrayTypeMismatchException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -236,7 +236,7 @@ array[0] = 5; // Wyświetli ArrayTypeMismatchException, ponieważ przypisuje si�
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi błąd arytmetyczny, taki jak dzielenie przez zero.">ArithmeticException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy wystąpi błąd arytmetyczny, taki jak dzielenie przez zero.">ArithmeticException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -246,7 +246,7 @@ int result = 5 / 0; // Wyświetli ArithmeticException
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy wystąpi przepełnienie lub podpełnienie. ">OverflowException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy wystąpi przepełnienie lub podpełnienie. ">OverflowException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -258,7 +258,7 @@ int result = max + 1; // Wyświetli OverflowException
 						</pre>
 				</div>
 				<p class="text-container gray-container article tooltip">
-						Klasa wyjątku <code><a href="#" pro-tip="Rzucany, gdy format danych jest niepoprawny.">FormatException</a></code>
+						Klasa wyjątku <code><a pro-tip="Rzucany, gdy format danych jest niepoprawny.">FormatException</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
