@@ -14,13 +14,35 @@
 		line-height: 2em;
 }
 .paragraf-margin-left p{
-		margin-left: 20px;
+		margin-left: 0;
+}
+
+.line-height-text p{
+	line-height: 2em;
+}
+
+.text-centered{
+	text-align: center;
+}
+
+.text-left{
+	text-align: left !important;
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
 	.text-content{
 		padding: 20px;
 		text-align: center;
 	}
+
+	.text-centered{
+		text-align: inherit;
+	}
+
+	.paragraf-margin-left p{
+		margin-left: 20px;
+	}
 }
+
+

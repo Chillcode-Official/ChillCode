@@ -36,37 +36,63 @@ W tej zmodyfikowanej wersji funkcji toggleDropdown, po kliknięciu w przycisk, d
 
 /*Dropdown*/
 document.addEventListener("DOMContentLoaded", function() {
-		const dropdownToggle = document.querySelectorAll(".dropdown-toggle");
+	const dropdownToggle = document.querySelectorAll(".dropdown-toggle");
 
-		dropdownToggle.forEach(function(dropdown) {
-				dropdown.addEventListener("click", function() {
-						const dropdownMenu = dropdown.nextElementSibling;
+	dropdownToggle.forEach(function (dropdown) {
+		dropdown.addEventListener("click", function () {
+			const dropdownMenu = dropdown.nextElementSibling;
 
-						if (dropdownMenu.style.display === "block") {
-								dropdownMenu.style.display = "none";
-								dropdown.setAttribute("aria-expanded", "false");
-						} else {
-								dropdownMenu.style.display = "block";
-								dropdown.setAttribute("aria-expanded", "true");
-						}
-				});
-
-				dropdown.addEventListener("blur", function() {
-						const dropdownMenu = dropdown.nextElementSibling;
-						dropdownMenu.style.display = "none";
-						dropdown.setAttribute("aria-expanded", "false");
-				});
+			if (dropdownMenu.style.display === "block") {
+				dropdownMenu.style.display = "none";
+				dropdown.setAttribute("aria-expanded", "false");
+			} else {
+				dropdownMenu.style.display = "block";
+				dropdown.setAttribute("aria-expanded", "true");
+			}
 		});
+
+		dropdown.addEventListener("blur", function () {
+			const dropdownMenu = dropdown.nextElementSibling;
+			dropdownMenu.style.display = "none";
+			dropdown.setAttribute("aria-expanded", "false");
+		});
+	});
 
 
 	const toggleButton = document.querySelector('.navbar-toggle');
 	const menu = document.querySelector(".navbar-menu");
+	const elementsToHide = document.querySelectorAll(".hide-e");
+	const elementsToShow = document.querySelectorAll(".show-e");
+	const content = document.querySelector(".content");
+	const opacity = document.querySelector(".opacity-function")
+	const html = document.querySelector("html")
 
 	toggleButton.addEventListener('click', () => {
 		toggleButton.classList.toggle('active');
 		menu.classList.toggle('active');
+
+		if (menu.classList.contains("active")) {
+			content.style.opacity = "0.5";
+			toggleButton.style.position = "fixed";
+			opacity.style.opacity = "0.5";
+			html.style.position = "fixed";
+
+			// elementsToHide.forEach(el => el.style.display = 'inline-block');
+			// elementsToShow.forEach(el => el.style.display = 'none');
+		} else {
+			content.style.opacity = "1";
+			toggleButton.style.position = "absolute";
+			opacity.style.opacity = "1";
+			html.style.position = "";
+
+			// elementsToHide.forEach(el => el.style.display = 'none');
+			// elementsToShow.forEach(el => el.style.display = 'inline-block');
+		}
 	});
 });
+
+
+
 
 
 function rotateTriangle(element) {
@@ -74,3 +100,4 @@ function rotateTriangle(element) {
 	const triangle = li.querySelector('.triangle');
 	triangle.classList.toggle('active');
 }
+

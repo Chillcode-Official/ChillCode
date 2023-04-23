@@ -1,5 +1,6 @@
 /* Page content and Grid - Zawartość strony i siatka Grid */
 .page-content{
+    overflow-X: hidden;
     margin: 0 auto;
     width: 100%
     /*width: 100%;

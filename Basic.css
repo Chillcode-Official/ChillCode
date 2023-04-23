@@ -27,21 +27,29 @@
 @import url('css/text_content.css');
 @import url('css/tooltip.css');
 @import url('css/links.css');
+@import url('css/padding.css');
+
+@import url('css-chillcode/text-formated.css');
+
 
 html,body{
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif;
-		background-color: #27282c;
-		/*background-color: #1f2223;*/
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #27282c;
+	/*background-color: #1f2223;*/
 }
 
 /* to może być do zmiany w body overflow-x: hidden; */
 
-
-
-
-
+@media only screen and (min-width: 1200px) {
+	html{
+		position: relative !important;
+	}
+}
 
 
 

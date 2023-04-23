@@ -1,0 +1,35 @@
+
+/*padding elements*/
+
+.padding-content{
+    padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.text-padding{
+    padding: 0 1.5rem;
+}
+
+.text-padding-mini{
+    padding: 0 1rem;
+}
+
+@media only screen and (min-width: 576px) {
+    .padding-content {
+        padding: 4rem 4.5rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .text-padding{
+        padding: 0;
+    }
+    .padding-content {
+        padding: 4rem 5rem 4rem 5rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .padding-content {
+        padding: 2rem 2rem 4rem 0;
+    }
+}
+

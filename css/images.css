@@ -32,6 +32,26 @@
 		margin-bottom: -5px;
 }
 .icon-img-navbar{
-	width: 30px;
+	width: 25px;
 	margin-bottom: -5px;
+}
+.icon-img-navbar-toggle{
+	width: 25px;
+	margin-right: 5px;
+}
+.right-arrow-icon{
+	width: 20px;
+	margin-right: 25px;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+@media only screen and (max-width: 568px) {
+	.icon-img-big{
+		display: none;
+	}
+	/*.icon-img-small{
+		display: none;
+	}*/
 }

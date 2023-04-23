@@ -1,8 +1,9 @@
 /* Road map - list */
 .roadmap-list {
 	grid-area: left-menu;
-	padding: 20px;
-	border-radius: 5px;
+	padding: 10px;
+	text-align: left;
+	margin-left: 10px;
 }
 .roadmap-list ol {
 	list-style-type: none;

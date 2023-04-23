@@ -1,6 +1,5 @@
 /*blue button elements*/
 .btn{
-		margin-bottom: 60px;
 		float: right;
 		margin-right: 30px;
 }
@@ -22,4 +21,13 @@
 .btn button:hover{
 		background-color: #538cb6;
 		cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+	.btn{
+		margin-bottom: 60px;
+		text-align: center !important;
+		margin-right: 0;
+		float: none;
+	}
 }

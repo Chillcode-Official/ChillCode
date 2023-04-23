@@ -30,3 +30,40 @@
 .hidden{
 		visibility: hidden;
 }
+
+.display-flex{
+	display: flex;
+}
+.display-inline-grid{
+	display: inline-grid;
+}
+
+
+.lg-display {
+	display: none;
+}
+
+.xlg-display {
+	display: none;
+}
+
+
+.hide-e {
+	display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+	.hide-e {
+		display: none !important;
+	}
+}
+
+.opacity-function{
+	opacity: 1;
+}
+
+@media only screen and (min-width: 1200px) {
+	.opacity-function{
+		opacity: 1 !important;
+	}
+}
