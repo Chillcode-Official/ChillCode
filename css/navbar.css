@@ -141,6 +141,13 @@
 	}
 
 }
+
+@media only screen and (max-width: 576px) {
+	.navbar-menu {
+		width: 280px !important;
+	}
+
+}
 /*@media only screen and (max-height: 1076px) {
 	.navbar-menu {
 		height: 97vh !important;

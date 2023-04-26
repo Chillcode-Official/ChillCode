@@ -2,6 +2,7 @@
 /*Code-Block elements*/
 .code-block{
 	max-width: 100%;
+	overflow-x: hidden;
 }
 
 .code-block pre code {

@@ -16,6 +16,9 @@
 	color: #444;
 	font-size: 16px;
 }
+/*.roadmap-list ol li:hover{
+	background-color: #25262b;
+}*/
 .roadmap-list ol li a {
 	color: #c9c5ce;
 	text-decoration: none;

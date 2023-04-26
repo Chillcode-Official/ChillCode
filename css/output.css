@@ -15,7 +15,7 @@
 		padding: 10px; /*15px*/
 }
 .output.output-long{
-		width: 900px;
+	width: 100%;
 }
 .output.output-black{
 		background-color: #303030; /*#1c2130;*/
@@ -31,6 +31,19 @@
 .output.output-content{
 		width: fit-content;
 }
+
+.output.output-auto{
+	overflow-x: auto;
+	width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.output.output-auto{
+		width: fit-content;
+	}
+}
+
+
 .output.output-clear{
 		background-color: transparent;
 		border: none;

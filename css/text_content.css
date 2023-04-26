@@ -17,7 +17,7 @@
 		margin-left: 0;
 }
 
-.line-height-text p{
+.line-height-text p, h3, h4{
 	line-height: 2em;
 }
 
@@ -42,6 +42,15 @@
 
 	.paragraf-margin-left p{
 		margin-left: 20px;
+	}
+}
+
+.text-content-500width{
+	max-width: 100%;
+}
+@media only screen and (min-width: 992px) {
+	.text-content-500width{
+		max-width: 500px;
 	}
 }
 

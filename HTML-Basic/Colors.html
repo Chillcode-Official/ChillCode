@@ -17,17 +17,116 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<li class="navbar-item"><a href="../Blog.html" class="navbar-link">Blog</a></li>
-				<li class="navbar-item"><a href="../About.html" class="navbar-link">About</a></li>
-				<li class="navbar-item"><a href="../Help.html" class="navbar-link">Help</a></li>
-				<li class="navbar-item"><a href="../Support.html" class="navbar-link">Support us</a></li>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> HTML</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/html-5.png" alt="">HTML</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Kolory</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Attributes.html">Atrybuty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+									<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Symbols.html">Symbole</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+						<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+						<li><a href="Layout_HTML.html">Układ strony</a></li>
+						<li><a href="Responsiveness.html">Responsywność</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -48,7 +147,7 @@
 			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
 			<li><a href="Comments.html">Komentarze</a></li>
 			<li onclick="rotateTriangle(this)">
-				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Kolory</a>
 				<div class="dropdown-content show">
 					<ul class="navbar-list-none">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
@@ -119,23 +218,24 @@
 		</ol>
 	</div>
 
-		<div class="content">
-			<div class="section-with-image">
-					<div class="text-content color-text-red">
-							<h1>Kolory</h1>
-							<p>
-									W języku HTML, kolory mogą być określane za pomocą kodów szesnastkowych (np. <span class="color-text-red">#FF0000</span> dla czerwonego)
-									lub nazw (np. "<span class="color-text-red">red</span>" dla czerwonego). Można je używać w atrybutach HTML, takich jak "style" lub
-									"bgcolor" do określenia kolorów tekstu, tła itp.
-							</p>
+		<div class="opacity-function padding-content">
+			<div class="content">
+				<div class="section-with-image">
+					<div class="text-centered text-padding">
+						<h1>Kolory</h1>
+						<p>
+							W języku HTML, kolory mogą być określane za pomocą kodów szesnastkowych (np. <span class="color-text-red">#FF0000</span> dla czerwonego)
+							lub nazw (np. "<span class="color-text-red">red</span>" dla czerwonego). Można je używać w atrybutach HTML, takich jak "style" lub
+							"bgcolor" do określenia kolorów tekstu, tła itp.
+						</p>
 					</div>
 					<img src="/img/vector141.png" alt="">
-			</div>
-			<p class="text-container purple-container no-margin-top article tooltip">
+				</div>
+				<p class="text-container purple-container no-margin-top article tooltip">
 					Aby ustawić kolor tła elementu HTML, można użyć atrybutu <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie stylu danego elementu na stronie. Atrybut ten jest często używany do zmiany koloru tekstu, tła, czcionki, marginesów, wyrównania, wielkości elementu i innych właściwości. Styl można zdefiniować bezpośrednio w atrybucie style lub w oddzielnym arkuszu stylów CSS.">style <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
 					lub <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie koloru tła danego elementu na stronie. Atrybut ten jest stosowany wewnątrz elementów, takich jak <body>, <table>, <td> i innych, aby ustawić kolor tła dla całej strony lub jej fragmentów. Wartość atrybutu bgcolor jest zwykle podawana jako nazwa koloru lub kod koloru w formacie szesnastkowym.">bgcolor <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-			</p>
-			<div class="code-block code-block-margin-top">
+				</p>
+				<div class="code-block code-block-margin-top">
 					<pre>
 							<code>
 &lth1&gtSnorlax &lt;img src=&quot;snorlax.png&quot;&gt; &lth1&gt
@@ -145,21 +245,20 @@
 &lt;body bgcolor=&quot;pink&quot;&gt;
 							</code>
 					</pre>
-			</div>
-			<div class="dropdown minus-margin-top">
+				</div>
+				<div class="dropdown minus-margin-top">
 					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
 					<div class="dropdown-content">
-							<div style="background-color: pink;" class="output">
-									<h1>Snorlax <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_snorlax.png" alt=""></h1>
-							</div>
+						<div style="background-color: pink;" class="output">
+							<h1>Snorlax <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_snorlax.png" alt=""></h1>
+						</div>
 					</div>
-			</div>
-			<div class="page-header"></div>
-			<p class="text-container purple-container no-margin-topa article tooltip">
-					Aby ustawić kolor tekstu, można użyć atrybutu <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie stylu danego elementu na stronie. Atrybut ten jest często używany do zmiany koloru tekstu, tła, czcionki, marginesów, wyrównania, wielkości elementu i innych właściwości. Styl można zdefiniować bezpośrednio w atrybucie style lub w oddzielnym arkuszu stylów CSS.">style <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					lub <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie koloru tła danego elementu na stronie. Atrybut ten jest stosowany wewnątrz elementów, takich jak <body>, <table>, <td> i innych, aby ustawić kolor tła dla całej strony lub jej fragmentów. Wartość atrybutu bgcolor jest zwykle podawana jako nazwa koloru lub kod koloru w formacie szesnastkowym.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-			</p>
-			<div class="code-block code-block-margin-top">
+				</div>
+				<div class="page-header"></div>
+				<p class="text-container purple-container no-margin-topa article tooltip">
+					Aby ustawić kolor tekstu, można użyć atrybutu <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie koloru tła danego elementu na stronie. Atrybut ten jest stosowany wewnątrz elementów, takich jak <body>, <table>, <td> i innych, aby ustawić kolor tła dla całej strony lub jej fragmentów. Wartość atrybutu bgcolor jest zwykle podawana jako nazwa koloru lub kod koloru w formacie szesnastkowym.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				</p>
+				<div class="code-block code-block-margin-top">
 					<pre>
 							<code>
 &lt;p style=&quot;color: blue;&quot;&gt;Niebieski rekin &lt;img src=&quot;shark.png&quot;&gt; &lt;/p&gt;
@@ -167,51 +266,52 @@
 &lt;font color=&quot;green&quot;&gt;Jestem porannym ptaszkiem &lt;img src=&quot;goblin.png&quot;&gt; &lt;/font&gt;
 							</code>
 					</pre>
-			</div>
-			<div class="dropdown minus-margin-top">
+				</div>
+				<div class="dropdown minus-margin-top">
 					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
 					<div class="dropdown-content">
-							<div class="output">
-									<p style="color: blue;">Niebieski rekin <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_shark.png" alt=""></p>
-									<font color="green">Jestem porannym ptaszkiem <img style="width: 40px; margin-top: -10px;;" src="/img/icon_goblin.png" alt=""></font>
-							</div>
+						<div class="output">
+							<p style="color: blue;">Niebieski rekin <img style="width: 40px; margin-bottom: -10px;;" src="/img/icon_shark.png" alt=""></p>
+							<p  style=" color: green;">Jestem porannym ptaszkiem <img style="width: 40px; margin-top: -10px;;" src="/img/icon_goblin.png" alt=""></p>
+						</div>
 					</div>
-			</div>
-			<div class="big-page-header"></div>
-			<h2><img class="icon-img-small" src="/img/icon_outline.png" alt=""> Kolor Ramki</h2>
-			<p class="text-container blue-container article tooltip">
+				</div>
+				<div class="big-page-header"></div>
+				<h2><img class="icon-img-small" src="/img/icon_outline.png" alt=""> Kolor Ramki</h2>
+				<p class="text-container blue-container article tooltip">
 					Ustawienie koloru ramki przy użyciu atrybutu <code><a pro-tip="Atrybut języka HTML, który pozwala na określenie stylu danego elementu na stronie. Atrybut ten jest często używany do zmiany koloru tekstu, tła, czcionki, marginesów, wyrównania, wielkości elementu i innych właściwości. Styl można zdefiniować bezpośrednio w atrybucie style lub w oddzielnym arkuszu stylów CSS.">style <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-			</p>
-			<div class="code-block code-block-margin-top">
+				</p>
+				<div class="code-block code-block-margin-top">
 					<pre>
 							<code>
 &lt;h2 style=&quot;border:2px solid Violet;&quot;&gt;Hello World&lt;/h1&gt;
 							</code>
 					</pre>
-			</div>
-			<div class="dropdown minus-margin-top">
+				</div>
+				<div class="dropdown minus-margin-top">
 					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
 					<div class="dropdown-content">
-							<div class="output output-long output-clear">
-									<h2 style="border:2px solid Violet;">Hello World</h2>
-							</div>
+						<div class="output output-long output-clear">
+							<h2 style="border:2px solid Violet;">Hello World</h2>
+						</div>
 					</div>
-			</div>
-			<div class="page-header"></div>
-			<div class="alert-card alert-card3">
-				<img style="width: 50px;" src="/img/note.png" alt="">
-				<b>Note</b>
-				<div class="line"></div>
-				<p>
-					Jest tez mnóstwo bibliotek i narzędzi do generowania kolorów, takich jak "paleta kolorów" czy
-					"picker kolorów" które mogą być pomocne przy tworzeniu stron internetowych.
-				</p>
-			</div>
-			<div class="big-page-header"></div>
-			<div class="btn">
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card3">
+					<img style="width: 50px;" src="/img/note.png" alt="">
+					<b>Note</b>
+					<div class="line"></div>
+					<p>
+						Jest tez mnóstwo bibliotek i narzędzi do generowania kolorów, takich jak "paleta kolorów" czy
+						"picker kolorów" które mogą być pomocne przy tworzeniu stron internetowych.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
 					<a href="Color_values.html"><button>Dalej</button></a>
+				</div>
 			</div>
-	</div>
+		</div>
 </div>
 </body>
 </html>

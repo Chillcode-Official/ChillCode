@@ -16,9 +16,16 @@
 		width: 100%;
 }
 .Table td,th{
+		padding: 13px 10px;
+		text-align: center;
+		color: white;
+}
+@media only screen and (min-width: 568px) {
+	.Table td,th{
 		padding: 13px 20px;
 		text-align: center;
 		color: white;
+	}
 }
 .Table th{
 		background-color: #c33f3f;
@@ -51,7 +58,7 @@
 	padding: 5px;
 	text-align: center;
 	border: 1px solid black;
-	background-color: gray;
+	/*background-color: gray;*/
 }
 
 .tableExample thead {
