@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li class="is-selected"><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,93 +246,96 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Przezroczystość</h1>
-								<p>
-										Przezroczystość w języku CSS to stopień widoczności elementu na stronie internetowej. Właściwość
-										przezroczystości jest określana w skali od 0 do 1, gdzie 0 oznacza pełną nieprzezroczystość
-										(czyli brak widoczności), a 1 pełną przezroczystość (czyli pełna widoczność). Wartość pomiędzy
-										0 a 1 określa stopień przezroczystości elementu, co oznacza, że zawartość pod spodem jest widoczna, ale nieco zamglona.
-								</p>
-						</div>
-						<img src="/img/vector157.png" alt="">
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Przezroczystość</h1>
+					<p>
+						Przezroczystość w języku CSS to stopień widoczności elementu na stronie internetowej. Właściwość
+						przezroczystości jest określana w skali od 0 do 1, gdzie 0 oznacza pełną nieprzezroczystość
+						(czyli brak widoczności), a 1 pełną przezroczystość (czyli pełna widoczność). Wartość pomiędzy
+						0 a 1 określa stopień przezroczystości elementu, co oznacza, że zawartość pod spodem jest widoczna, ale nieco zamglona.
+					</p>
 				</div>
-				<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-azure line-height-plus">
-						Przezroczystość jest ustawiana za pomocą właściwości CSS
-						<code><a pro-tip="opacity to właściwość, która kontroluje przezroczystość elementu HTML. Można ją ustawić na wartość od 0 (całkowicie przezroczysty) do 1 (całkowicie nieprzezroczysty). ">opacity <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						lub "<span>rgba()</span>". Właściwość "<span>opacity</span>"
-						określa stopień przezroczystości dla całego elementu, w tym tekstu i granic, podczas gdy
-						<code><a pro-tip="rgba() to funkcja, która pozwala na określenie koloru w formacie RGBA, który zawiera wartości dla czerwonego, zielonego, niebieskiego oraz przezroczystości (w skali od 0 do 1).">rgba() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						pozwala na ustawienie przezroczystości tylko dla koloru tła elementu.
-				</p>
-				<div class="page-header"></div>
-				<div class="triple-elements">
-						<div>
-								<img src="/img/sunrise.jpg" alt="" style="opacity: 0.3">
-								<p style="text-align: center; font-weight: bold">
-										opacity 0.3
-								</p>
-						</div>
-						<div>
-								<img src="/img/sunrise.jpg" alt="" style="opacity: 0.6">
-								<p style="text-align: center; font-weight: bold">
-										opacity 0.6
-								</p>
-						</div>
-						<div>
-								<img src="/img/sunrise.jpg" alt="" style="opacity: 1">
-								<p style="text-align: center; font-weight: bold;">
-										opacity 1
-								</p>
-						</div>
+				<img src="/img/vector157.png" alt="">
+			</div>
+			<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-azure line-height-plus">
+				Przezroczystość jest ustawiana za pomocą właściwości CSS
+				<code><a pro-tip="opacity to właściwość, która kontroluje przezroczystość elementu HTML. Można ją ustawić na wartość od 0 (całkowicie przezroczysty) do 1 (całkowicie nieprzezroczysty). ">opacity <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				lub "<span>rgba()</span>". Właściwość "<span>opacity</span>"
+				określa stopień przezroczystości dla całego elementu, w tym tekstu i granic, podczas gdy
+				<code><a pro-tip="rgba() to funkcja, która pozwala na określenie koloru w formacie RGBA, który zawiera wartości dla czerwonego, zielonego, niebieskiego oraz przezroczystości (w skali od 0 do 1).">rgba() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				pozwala na ustawienie przezroczystości tylko dla koloru tła elementu.
+			</p>
+			<div class="page-header"></div>
+			<div class="display-flex mini-gap cont">
+				<div style="width: 33%;">
+					<img src="/img/sunrise.jpg" alt="" style="opacity: 0.3; width: 100%; border: 2px solid black;">
+					<p style=" font-weight: bold; margin: 0; text-align: center;">
+						opacity 0.3
+					</p>
 				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-medium hidden-overflow">
-								<pre>
-										<code>
+				<div style="width: 33%;">
+					<img src="/img/sunrise.jpg" alt="" style="opacity: 0.6; width: 100%;  border: 2px solid black;">
+					<p style=" font-weight: bold; margin: 0; text-align: center;">
+						opacity 0.6
+					</p>
+				</div>
+				<div style="width: 33%;">
+					<img src="/img/sunrise.jpg" alt="" style="opacity: 1; width: 100%; border: 2px solid black;">
+					<p style=" font-weight: bold; margin: 0; text-align: center;">
+						opacity 1
+					</p>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements">
+				<div class="display-grid">
+					<div class="code-block hidden-overflow">
+							<pre>
+									<code>
 element {
-  opacity: 0.5;
+opacity: 0.5;
 }
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-clear">
-														<img style="opacity: 0.5;" src="/img/winter.jpg" alt="">
-												</div>
-										</div>
-								</div>
+									</code>
+							</pre>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-clear">
+								<img style="opacity: 0.5;" src="/img/winter.jpg" alt="">
+							</div>
 						</div>
-						<div>
-								<div class="code-block code-block-medium hidden-overflow">
-								<pre>
-										<code>
+					</div>
+				</div>
+				<div class="display-grid">
+					<div class="code-block hidden-overflow">
+							<pre>
+									<code>
 element {
-  background-color: rgba(0, 0, 255, 0.5);
+background-color: rgba(0, 0, 255, 0.5);
 }
-										</code>
-								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-clear">
-														<img style="background-color: rgba(0, 0, 255, 0.5);" src="/img/winter.jpg" alt="">
-												</div>
-										</div>
-								</div>
+									</code>
+							</pre>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-clear">
+								<img style="background-color: rgba(0, 0, 255, 0.5);" src="/img/winter.jpg" alt="">
+							</div>
 						</div>
+					</div>
 				</div>
-				<div class="page-header"></div>
-				<div class="btn">
-						<a href="Forms.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="btn">
+				<a href="Forms.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>

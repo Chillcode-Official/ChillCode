@@ -53,10 +53,23 @@
 		word-wrap: break-word;
 		line-height: 50px;
 }
+.article.line-height-normal p{
+	line-height: 25px;
+}
 .article li{
 		line-height: 40px;
 }
 
 .code-block.hidden-overflow code{
 	overflow-x: hidden;
+}
+
+
+@media only screen and (max-width: 568px) {
+	.article li{
+		line-height: 35px;
+	}
+	.article ul{
+		padding: 0;
+	}
 }

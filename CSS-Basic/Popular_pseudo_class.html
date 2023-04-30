@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Pseudo Klasy</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li class="is-selected"><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -113,9 +227,9 @@
 			</li>
 			<li><a href="Combinators.html">Kombinatory</a></li>
 			<li onclick="rotateTriangle(this)">
-				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Pseudo Klasy</a>
 				<div class="dropdown-content show">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li class="is-selected"><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,62 +246,68 @@
 		</ol>
 	</div>
 
-	<div class="content">
-		<h1><img class="icon-img-big" src="/img/icon_book.png" alt=""> Popularne pseudo klasy</h1>
-		<div class="page-header"></div>
-		<div class="text-container azure-container article tooltip white-list highlight-container highlight-container-azure">
-			<h3 class="color-text-white">
-				Oto wszystkie pseudo klasy w języku CSS:
-			</h3>
-			<div class="line"></div>
-			<ul>
-				<li><code><a pro-tip="odnosi się do elementu, nad którym znajduje się kursor myszy.">:hover <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy użytkownik najedzie na niego kursorem myszy.</li>
-				<li><code><a pro-tip="odnosi się do elementu, który jest aktualnie kliknięty.">:active <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy jest on aktywny (np. gdy jest wciśnięty przycisk).</li>
-				<li><code><a pro-tip="odnosi się do elementu, który ma fokus, czyli jest aktualnie wybrany np. za pomocą klawiatury.">:focus <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy jest on sfokusowany (np. gdy użytkownik kliknął na tekst).</li>
-				<li><code><a pro-tip="odnosi się do odwiedzonych linków. Elementy, które zostały już odwiedzone przez użytkownika, mogą mieć inną kolorystykę niż linki, które jeszcze nie zostały odwiedzone. Dzięki temu użytkownik może łatwiej odróżnić linki, które już odwiedził od tych, które jeszcze nie zostały sprawdzone. Należy jednak pamiętać, że z powodów bezpieczeństwa niektóre przeglądarki ograniczają możliwość stylizacji odwiedzonych linków, aby nie dawać możliwości przekierowywania użytkownika na niebezpieczne strony.">:visited <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, który został już odwiedzony przez użytkownika (np. link).</li>
-				<li><code><a pro-tip="odnosi się do elementów typu radio lub checkbox, które są zaznaczone.">:checked <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje zaznaczone elementy formularza, takich jak pola wyboru i przełączniki.</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które są ustawione jako domyślne.">:default <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu zdominowanego przez wartość domyślną.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są nieaktywne lub wyłączone.">:disabled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy formularza, który jest wyłączony i nie może być aktywowany.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które nie zawierają żadnych dzieci.">:empty <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu, który nie zawiera żadnych dzieci.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są aktywne lub włączone.">:enabled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy formularza, który jest włączony i może być aktywowany.</li>
-				<li><code><a pro-tip="odnosi się do pierwszego dziecka elementu rodzica.">:first-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje pierwszy element w liście elementów.</li>
-				<li><code><a pro-tip="odnosi się do pierwszego elementu danego typu, który jest dzieckiem swojego rodzica.">:first-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje pierwszy element tego samego typu w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które nie mają określonej wartości.">:indeterminate <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje nieokreślony element formularza typu checkbox</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które znajdują się w określonym zakresie wartości.">:in-range <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza z wartością w określonym zakresie</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które mają nieprawidłową wartość.">:invalid <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, kiedy jego wartość jest nieprawidłowa.</li>
-				<li><code><a pro-tip="odnosi się do ostatniego dziecka elementu rodzica.">:last-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania ostatniego dziecka w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="odnosi się do ostatniego elementu danego typu, który jest dzieckiem swojego rodzica.">:last-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania ostatniego elementu tego samego typu w elementu.</li>
-				<li><code><a pro-tip="odnosi się do nieodwiedzonych linków.">:link <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  służy do stylizowania elementu typu link, który jeszcze nie został odwiedzony.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są określonym dzieckiem swojego ">:nth-child(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy, który jest n-tym dzieckiem w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="działa podobnie jak :nth-child(), ale zaczyna liczenie od końca listy dzieci.">:nth-last-child(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-te od końca dziecko w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="działa podobnie jak :nth-of-type(), ale zaczyna liczenie od końca listy elementów danego typu.">:nth-last-of-type(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-ty od końca element tego samego typu.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są określonego typu i są określonym dzieckiem swojego rodzica na podstawie ich numeru porządkowego.">:nth-of-type(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-ty element tego samego typu w elemencie nadrzędnym .</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są jedynym dzieckiem swojego rodzica.">:only-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, który jest jedynym dzieckiem w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="odnosi się do elementów, które są jedynym elementem danego typu, będącym dzieckiem swojego rodzica.">:only-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje jedyny element tego samego typu w elemencie nadrzędnym.</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które nie są wymagane.">:optional <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, który nie jest wymagany.</li>
-				<li><code><a pro-tip="odnosi się do elementów formularza, które znajdują się poza określonym zakresem lub granicą. To może dotyczyć różnych elementów, takich jak liczby, daty, wartości procentowe itp.">:out-of-range <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza, kiedy wartość jest poza zakresem "min" i "max</li>
-				<li><code><a pro-tip="stosuje się do elementów formularza, które są tylko do odczytu i nie mogą być edytowane przez użytkownika.">:read-only <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza, który jest tylko do odczytu.</li>
-				<li><code><a pro-tip="stosuje się do elementów formularza, które są edytowalne przez użytkownika i mogą być modyfikowane.">:read-write <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza z możliwością zapisu i odczytu.</li>
-				<li><code><a pro-tip="stosuje się do elementów formularza, które muszą zostać wypełnione przez użytkownika przed przesłaniem formularza.">:required <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, który jest wymagany.</li>
-				<li><code><a pro-tip="stosuje się do elementu HTML, który jest korzeniem dokumentu.">:root <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  stylizuje element będący głównym elementem dokumentu.</li>
-				<li><code><a pro-tip="stosuje się do elementów, które są bezpośrednimi dziećmi elementu, na którym jest użyta ta pseudo klasa.">:scope <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa zakres w selektorze CSS, stylizuje elementy zależnie od kontekstu.</li>
-				<li><code><a pro-tip="stosuje się do elementów, które są docelowymi elementami wewnętrznymi dla hiperłączy.">:target <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element odpowiadający ID lub fragmentowi URL w adresie strony.</li>
-				<li><code><a pro-tip="stosuje się do elementów formularza, które są wypełnione poprawnie i spełniają wymagania określone w atrybutach formularza.">:valid <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje prawidłowy element formularza.</li>
-			</ul>
-		</div>
-		<div class="page-header"></div>
-		<div class="alert-card alert-card3">
-			<img style="width: 50px;" src="/img/note.png" alt="">
-			<b>Note</b>
-			<div class="line"></div>
-			<p>
-				Pseudo-klasy są często używane do tworzenia efektów interaktywnych i zmiany wyglądu elementów na
-				stronie bez konieczności dodawania i usuwania klas JavaScriptem.
-			</p>
-		</div>
-		<div class="big-page-header"></div>
-		<div class="btn">
-			<a href="Pseudo_Elements.html"><button>Dalej</button></a>
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="text-centered">
+				<h1><img class="icon-img-small" src="/img/icon_book.png" alt=""> Popularne pseudo klasy</h1>
+			</div>
+			<div class="page-header"></div>
+			<div class="text-container azure-container article tooltip white-list highlight-container highlight-container-azure">
+				<div class="text-centered">
+					<h3 class="color-text-white">
+						Oto lista najważniejszych pseudo klas:
+					</h3>
+				</div>
+				<div class="line"></div>
+				<ul>
+					<li><code><a pro-tip="odnosi się do elementu, nad którym znajduje się kursor myszy.">:hover <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy użytkownik najedzie na niego kursorem myszy.</li>
+					<li><code><a pro-tip="odnosi się do elementu, który jest aktualnie kliknięty.">:active <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy jest on aktywny (np. gdy jest wciśnięty przycisk).</li>
+					<li><code><a pro-tip="odnosi się do elementu, który ma fokus, czyli jest aktualnie wybrany np. za pomocą klawiatury.">:focus <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, gdy jest on sfokusowany (np. gdy użytkownik kliknął na tekst).</li>
+					<li><code><a pro-tip="odnosi się do odwiedzonych linków. Elementy, które zostały już odwiedzone przez użytkownika, mogą mieć inną kolorystykę niż linki, które jeszcze nie zostały odwiedzone. Dzięki temu użytkownik może łatwiej odróżnić linki, które już odwiedził od tych, które jeszcze nie zostały sprawdzone. Należy jednak pamiętać, że z powodów bezpieczeństwa niektóre przeglądarki ograniczają możliwość stylizacji odwiedzonych linków, aby nie dawać możliwości przekierowywania użytkownika na niebezpieczne strony.">:visited <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, który został już odwiedzony przez użytkownika (np. link).</li>
+					<li><code><a pro-tip="odnosi się do elementów typu radio lub checkbox, które są zaznaczone.">:checked <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje zaznaczone elementy formularza, takich jak pola wyboru i przełączniki.</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które są ustawione jako domyślne.">:default <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu zdominowanego przez wartość domyślną.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są nieaktywne lub wyłączone.">:disabled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy formularza, który jest wyłączony i nie może być aktywowany.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które nie zawierają żadnych dzieci.">:empty <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu, który nie zawiera żadnych dzieci.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są aktywne lub włączone.">:enabled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy formularza, który jest włączony i może być aktywowany.</li>
+					<li><code><a pro-tip="odnosi się do pierwszego dziecka elementu rodzica.">:first-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje pierwszy element w liście elementów.</li>
+					<li><code><a pro-tip="odnosi się do pierwszego elementu danego typu, który jest dzieckiem swojego rodzica.">:first-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje pierwszy element tego samego typu w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które nie mają określonej wartości.">:indeterminate <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje nieokreślony element formularza typu checkbox</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które znajdują się w określonym zakresie wartości.">:in-range <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza z wartością w określonym zakresie</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które mają nieprawidłową wartość.">:invalid <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, kiedy jego wartość jest nieprawidłowa.</li>
+					<li><code><a pro-tip="odnosi się do ostatniego dziecka elementu rodzica.">:last-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania ostatniego dziecka w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="odnosi się do ostatniego elementu danego typu, który jest dzieckiem swojego rodzica.">:last-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania ostatniego elementu tego samego typu w elementu.</li>
+					<li><code><a pro-tip="odnosi się do nieodwiedzonych linków.">:link <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  służy do stylizowania elementu typu link, który jeszcze nie został odwiedzony.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są określonym dzieckiem swojego ">:nth-child(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje elementy, który jest n-tym dzieckiem w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="działa podobnie jak :nth-child(), ale zaczyna liczenie od końca listy dzieci.">:nth-last-child(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-te od końca dziecko w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="działa podobnie jak :nth-of-type(), ale zaczyna liczenie od końca listy elementów danego typu.">:nth-last-of-type(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-ty od końca element tego samego typu.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są określonego typu i są określonym dzieckiem swojego rodzica na podstawie ich numeru porządkowego.">:nth-of-type(n) <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje n-ty element tego samego typu w elemencie nadrzędnym .</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są jedynym dzieckiem swojego rodzica.">:only-child <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element, który jest jedynym dzieckiem w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="odnosi się do elementów, które są jedynym elementem danego typu, będącym dzieckiem swojego rodzica.">:only-of-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje jedyny element tego samego typu w elemencie nadrzędnym.</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które nie są wymagane.">:optional <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, który nie jest wymagany.</li>
+					<li><code><a pro-tip="odnosi się do elementów formularza, które znajdują się poza określonym zakresem lub granicą. To może dotyczyć różnych elementów, takich jak liczby, daty, wartości procentowe itp.">:out-of-range <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza, kiedy wartość jest poza zakresem "min" i "max</li>
+					<li><code><a pro-tip="stosuje się do elementów formularza, które są tylko do odczytu i nie mogą być edytowane przez użytkownika.">:read-only <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza, który jest tylko do odczytu.</li>
+					<li><code><a pro-tip="stosuje się do elementów formularza, które są edytowalne przez użytkownika i mogą być modyfikowane.">:read-write <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element formularza z możliwością zapisu i odczytu.</li>
+					<li><code><a pro-tip="stosuje się do elementów formularza, które muszą zostać wypełnione przez użytkownika przed przesłaniem formularza.">:required <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> służy do stylizowania elementu formularza, który jest wymagany.</li>
+					<li><code><a pro-tip="stosuje się do elementu HTML, który jest korzeniem dokumentu.">:root <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>  stylizuje element będący głównym elementem dokumentu.</li>
+					<li><code><a pro-tip="stosuje się do elementów, które są bezpośrednimi dziećmi elementu, na którym jest użyta ta pseudo klasa.">:scope <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> określa zakres w selektorze CSS, stylizuje elementy zależnie od kontekstu.</li>
+					<li><code><a pro-tip="stosuje się do elementów, które są docelowymi elementami wewnętrznymi dla hiperłączy.">:target <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje element odpowiadający ID lub fragmentowi URL w adresie strony.</li>
+					<li><code><a pro-tip="stosuje się do elementów formularza, które są wypełnione poprawnie i spełniają wymagania określone w atrybutach formularza.">:valid <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> stylizuje prawidłowy element formularza.</li>
+				</ul>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card ">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Pseudo-klasy są często używane do tworzenia efektów interaktywnych i zmiany wyglądu elementów na
+					stronie bez konieczności dodawania i usuwania klas JavaScriptem.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Pseudo_Elements.html"><button>Dalej</button></a>
+			</div>
 		</div>
 	</div>
 </div>

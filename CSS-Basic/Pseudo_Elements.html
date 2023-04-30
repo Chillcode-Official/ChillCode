@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="is-selected"><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,31 +246,27 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Pseudo elementy CSS</h1>
-								<p>
-										CSS <span>pseudo-elements</span> to są specjalne selektory, które pozwalają na dostęp do składników virtualnych
-										elementów HTML, takich jak pierwszy wiersz lub pierwsze litery danego elementu. Są one używane do
-										dodawania stylów do części elementu, które nie są bezpośrednio dostępne jako elementy <span>DOM</span>.
-								</p>
-						</div>
-						<img src="/img/vector142.png" alt="">
+			<div class="section-with-image">
+				<div class="text-centered text-padding highlight-container">
+					<h1>Pseudo elementy CSS</h1>
+					<p>
+						CSS <span>pseudo-elements</span> to są specjalne selektory, które pozwalają na dostęp do składników virtualnych
+						elementów HTML, takich jak pierwszy wiersz lub pierwsze litery danego elementu. Są one używane do
+						dodawania stylów do części elementu, które nie są bezpośrednio dostępne jako elementy <span>DOM</span>.
+					</p>
 				</div>
-				<div class="double-elements">
+				<img src="/img/vector142.png" alt="">
+			</div>
+			<div class="double-elements">
+				<div>
+					<div class="display-grid">
 						<p class="text-container lightPink-container article tooltip">
-								<code><a pro-tip="służy do dodawania zawartości po zawartości elementu. Na przykład, możesz użyć go do dodania dekoracyjnego elementu lub ikony po odnośniku.">::after <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								dodaje dodatkowy element na końcu elementu HTML, np. strzałkę lub ikonkę.
+							<code><a pro-tip="służy do dodawania zawartości po zawartości elementu. Na przykład, możesz użyć go do dodania dekoracyjnego elementu lub ikony po odnośniku.">::after <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							dodaje dodatkowy element na końcu elementu HTML, np. strzałkę lub ikonkę.
 						</p>
-						<p class="text-container lightPink-container article tooltip">
-								<code><a pro-tip="służy do dodawania zawartości przed zawartością elementu. Na przykład, możesz użyć go do dodania cudzysłowu lub punktu przed akapitem.">::before <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								dodaje dodatkowy element na początku elementu HTML, np. ikonkę.
-						</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .cta {
@@ -180,20 +290,26 @@
 }
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-clear">
-														<button style="font-size: 20px; height: 50px;" class="cta-example">
-																Kliknij mnie
-														</button>
-												</div>
-										</div>
-								</div>
 						</div>
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-clear">
+								<button style="font-size: 20px; height: 50px;" class="cta-example">
+									Kliknij mnie
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="display-grid">
+						<p class="text-container lightPink-container article tooltip">
+							<code><a pro-tip="służy do dodawania zawartości przed zawartością elementu. Na przykład, możesz użyć go do dodania cudzysłowu lub punktu przed akapitem.">::before <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							dodaje dodatkowy element na początku elementu HTML, np. ikonkę.
+						</p>
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .highlighted-text {
@@ -217,34 +333,29 @@
 
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-clear">
+						</div>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-clear">
 														<span style="height: 50px; margin-top: 10px;" class="highlighted-text-example">
 																		Ten tekst jest wyróżniony
  														</span>
-												</div>
-										</div>
-								</div>
+							</div>
 						</div>
+					</div>
 				</div>
-				<div class="big-page-header"></div>
-				<!--  -->
-				<div class="double-elements">
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements">
+				<div>
+					<div class="display-grid">
 						<p class="text-container lightPink-container no-margin-top article tooltip">
-								<code><a pro-tip="służy do stylizowania pierwszej litery pierwszego wiersza tekstu w elemencie. Na przykład, możesz użyć go do zwiększenia rozmiaru lub zmiany koloru pierwszej litery akapitu.">::first-letter <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								stylizuje pierwszą literę w elemencie HTML, np. zmiana koloru lub rozmiaru.
+							<code><a pro-tip="służy do stylizowania pierwszej litery pierwszego wiersza tekstu w elemencie. Na przykład, możesz użyć go do zwiększenia rozmiaru lub zmiany koloru pierwszej litery akapitu.">::first-letter <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							stylizuje pierwszą literę w elemencie HTML, np. zmiana koloru lub rozmiaru.
 						</p>
-						<p class="text-container lightPink-container no-margin-top article tooltip">
-								<code><a pro-tip="służy do stylizowania pierwszego wiersza tekstu w elemencie. Na przykład, możesz użyć go do zmiany czcionki lub koloru pierwszego wiersza akapitu.">::first-line <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								stylizuje pierwszą linię w elemencie HTML, np. zmiana koloru lub czcionki.
-						</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 p::first-letter {
@@ -257,18 +368,24 @@ p::first-letter {
 
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content">
-														<p class="p-example margin-top">To jest paragraf z pierwszą literą formatowaną.</p>
-												</div>
-										</div>
-								</div>
 						</div>
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-content">
+								<p class="p-example margin-top">To jest paragraf z pierwszą literą formatowaną.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="display-grid">
+						<p class="text-container lightPink-container no-margin-top article tooltip">
+							<code><a pro-tip="służy do stylizowania pierwszego wiersza tekstu w elemencie. Na przykład, możesz użyć go do zmiany czcionki lub koloru pierwszego wiersza akapitu.">::first-line <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							stylizuje pierwszą linię w elemencie HTML, np. zmiana koloru lub czcionki.
+						</p>
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .highlighted-text {
@@ -281,34 +398,29 @@ p::first-letter {
 }
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-clear output-content">
-														<div style="height: 50px; margin-top: 10px;" class="highlighted-text-example">
-																Ten tekst jest wyróżniony, a jego pierwszy wiersz jest czerwony.
-														</div>
-												</div>
-										</div>
-								</div>
 						</div>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-clear output-content">
+								<div style="height: 50px; margin-top: 10px;" class="highlighted-text-example">
+									Ten tekst jest wyróżniony, a jego pierwszy wiersz jest czerwony.
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!--  -->
-				<div class="big-page-header"></div>
-				<div class="double-elements">
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements">
+				<div>
+					<div class="display-grid">
 						<p class="text-container lightPink-container article tooltip">
-								<code><a pro-tip="służy do stylizowania znacznika listy w elemencie listy. Na przykład, możesz użyć go do zmiany koloru lub rozmiaru kropki lub numeru, który pojawia się przed każdym elementem listy.">::marker <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								stylizuje punktor w liście numerowanej, np. zmiana koloru i tła.
+							<code><a pro-tip="służy do stylizowania znacznika listy w elemencie listy. Na przykład, możesz użyć go do zmiany koloru lub rozmiaru kropki lub numeru, który pojawia się przed każdym elementem listy.">::marker <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							stylizuje punktor w liście numerowanej, np. zmiana koloru i tła.
 						</p>
-						<p class="text-container lightPink-container article tooltip">
-								<code><a pro-tip="służy do stylizowania fragmentu tekstu, który jest aktualnie zaznaczony przez użytkownika. Na przykład, możesz użyć go do zmiany koloru tła lub koloru tekstu zaznaczonego tekstu.">::selection <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								stylizuje tekst zaznaczony przez użytkownika, np. zmiana koloru i tła.
-						</p>
-				</div>
-				<div class="double-elements">
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 ol {
@@ -328,22 +440,28 @@ li::marker {
 }
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content output-clear">
-														<ol style="font-size: 20px;" class="ol-example li-example">
-																<li>Pierwszy element listy</li>
-																<li>Drugi element listy</li>
-																<li>Trzeci element listy</li>
-														</ol>
-												</div>
-										</div>
-								</div>
 						</div>
-						<div>
-								<div class="code-block code-block-margin-top code-block-medium hidden-overflow code-block-medium">
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-content output-clear">
+								<ol style="font-size: 20px;" class="ol-example li-example">
+									<li>Pierwszy element listy</li>
+									<li>Drugi element listy</li>
+									<li>Trzeci element listy</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="display-grid">
+						<p class="text-container lightPink-container article tooltip">
+							<code><a pro-tip="służy do stylizowania fragmentu tekstu, który jest aktualnie zaznaczony przez użytkownika. Na przykład, możesz użyć go do zmiany koloru tła lub koloru tekstu zaznaczonego tekstu.">::selection <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							stylizuje tekst zaznaczony przez użytkownika, np. zmiana koloru i tła.
+						</p>
+						<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 p::selection {
@@ -352,38 +470,40 @@ p::selection {
 }
 										</code>
 								</pre>
-								</div>
-								<div class="dropdown minus-margin-top">
-										<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-										<div class="dropdown-content">
-												<div class="output output-content">
-														<div class="selection-p">
-																<p>
-																		gdy zaznaczysz ten tekst, tło będzie pomarańczowe, a kolor tekstu biały
-																</p>
-														</div>
-												</div>
-										</div>
-								</div>
 						</div>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-content">
+								<div class="selection-p">
+									<p>
+										gdy zaznaczysz ten tekst, tło będzie pomarańczowe, a kolor tekstu biały
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Te przykłady pokazują tylko niektóre z możliwości, jakie dają pseudo-elementy CSS. Mogą być one
-								użyte do dodawania różnego rodzaju elementów dekoracyjnych, takich jak ikony, symboli, tła i inne.
-								Zawsze należy pamiętać o dostępności i kompatybilności z przeglądarkami, ale poza tym pseudo-elementy
-								są bardzo przydatne w tworzeniu bardziej skomplikowanych stylów.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Navigation_Bar.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card ">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Te przykłady pokazują tylko niektóre z możliwości, jakie dają pseudo-elementy CSS. Mogą być one
+					użyte do dodawania różnego rodzaju elementów dekoracyjnych, takich jak ikony, symboli, tła i inne.
+					Zawsze należy pamiętać o dostępności i kompatybilności z przeglądarkami, ale poza tym pseudo-elementy
+					są bardzo przydatne w tworzeniu bardziej skomplikowanych stylów.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Navigation_Bar.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>

@@ -17,16 +17,191 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_JavaScript.html"><img class="icon-img-navbar" src="/img/javaScript-icon.png" alt=""> JavaScript</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/javaScript-icon.png" alt="">JavaScript</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_JavaScript.html">Wprowadzenie do JavaScript</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Output_methods.html">Metody wyjściowe</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_types.html">Typy prymitywne</a></li>
+									<li><a class="navbar-drop-text" href="Reference_types.html">Typy odniesienia</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Variables_let.html">Let</a></li>
+									<li><a class="navbar-drop-text" href="Variables_const.html">Const</a></li>
+									<li><a class="navbar-drop-text" href="Variables_var.html">Var</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Operatory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Operators.html">Operatory arytmetyczne</a></li>
+									<li><a class="navbar-drop-text" href="Operators_comparison.html">Operatory porównania</a></li>
+									<li><a class="navbar-drop-text" href="Operators_logical.html">Operatory logiczne</a></li>
+									<li><a class="navbar-drop-text" href="Operators_Assignment.html">Operatory przypisania</a></li>
+									<li><a class="navbar-drop-text" href="Operators_others.html">Inne operatory</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja if</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja else</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja else..if</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja switch</a></li>
+
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla for</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla while</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla do..while</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Funkcje</a></li>
+									<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcja anonimowa</a></li>
+									<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości funkcji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Tablice</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Tables_function.html">Funkcje tablic</a></li>
+									<li><a class="navbar-drop-text" href="Tables_type.html">Rodzaje tablic</a></li>
+									<li><a class="navbar-drop-text" href="Tables_property_and_methods.html">Właściwości i Metody tablic</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obiekty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Objects.html">Obiekty</a></li>
+									<li><a class="navbar-drop-text" href="Objects_constructors.html">Konstruktory</a></li>
+									<li><a class="navbar-drop-text" href="Objects_method_object_create.html">Metoda object.create</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje matematyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Mathematical_functions.html">Funkcje matematyczne</a></li>
+									<li><a class="navbar-drop-text" href="Mathematical_functions_Important.html">Najważniejsze funkcję matematyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Values.html">Wartości</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Referencje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Reference.html">Referencje</a></li>
+									<li><a class="navbar-drop-text" href="Reference_use.html">Użycie referencji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Methods_tables.html">Metody tablicowe</a></li>
+									<li><a class="navbar-drop-text" href="Methods_string.html">Metody stringów</a></li>
+									<li><a class="navbar-drop-text" href="Methods_object.html">Metody obiektów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Eventy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Events.html">Eventy</a></li>
+									<li><a class="navbar-drop-text" href="Event_handling.html">Obsługa zdarzeń</a></li>
+									<li><a class="navbar-drop-text" href="Event_properties.html">Właściwości eventów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja DOM-em</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="DOM_what_is.html">Czym jest DOM</a></li>
+									<li><a class="navbar-drop-text" href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
+									<li><a class="navbar-drop-text" href="DOM_methods.html">Metody DOM-u</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li><a class="navbar-drop-text" href="CSS_style_Methods_and_property.html">Metody i Właściwości styli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Biblioteki JavaScript</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
+									<li><a class="navbar-drop-text" href="Javascript_libraries_creating_and_using.html">Tworzenie i używanie Bibliotek</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 
@@ -40,7 +215,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_types.html">Typy prymitywne</a></li>
 						<li><a class="navbar-drop-text" href="Reference_types.html">Typy odniesienia</a></li>
 					</ul>
@@ -49,7 +224,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
 						<li><a class="navbar-drop-text" href="Variables_let.html">Let</a></li>
 						<li><a class="navbar-drop-text" href="Variables_const.html">Const</a></li>
@@ -60,7 +235,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Operatory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Operators.html">Operatory arytmetyczne</a></li>
 						<li><a class="navbar-drop-text" href="Operators_comparison.html">Operatory porównania</a></li>
 						<li><a class="navbar-drop-text" href="Operators_logical.html">Operatory logiczne</a></li>
@@ -72,7 +247,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja if</a></li>
 						<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja else</a></li>
 						<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja else..if</a></li>
@@ -84,7 +259,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla for</a></li>
 						<li><a class="navbar-drop-text" href="Loops_while.html">Pętla while</a></li>
 						<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla do..while</a></li>
@@ -94,7 +269,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Functions.html">Funkcje</a></li>
 						<li><a class="navbar-drop-text" href="Function_anonymous.html">Funkcja anonimowa</a></li>
 						<li><a class="navbar-drop-text" href="Functions_property.html">Właściwości funkcji</a></li>
@@ -102,9 +277,9 @@
 				</div>
 			</li>
 			<li onclick="rotateTriangle(this)">
-				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Tablice</a>
 				<div class="dropdown-content show">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
 						<li><a class="navbar-drop-text" href="Tables_function.html">Funkcje tablic</a></li>
 						<li><a class="navbar-drop-text" href="Tables_type.html">Rodzaje tablic</a></li>
@@ -115,7 +290,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obiekty</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Objects.html">Obiekty</a></li>
 						<li><a class="navbar-drop-text" href="Objects_constructors.html">Konstruktory</a></li>
 						<li><a class="navbar-drop-text" href="Objects_method_object_create.html">Metoda object.create</a></li>
@@ -125,7 +300,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Funkcje matematyczne</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Mathematical_functions.html">Funkcje matematyczne</a></li>
 						<li><a class="navbar-drop-text" href="Mathematical_functions_Important.html">Najważniejsze funkcję matematyczne</a></li>
 					</ul>
@@ -135,7 +310,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Referencje</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Reference.html">Referencje</a></li>
 						<li><a class="navbar-drop-text" href="Reference_use.html">Użycie referencji</a></li>
 					</ul>
@@ -144,7 +319,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
 						<li><a class="navbar-drop-text" href="Methods_tables.html">Metody tablicowe</a></li>
 						<li><a class="navbar-drop-text" href="Methods_string.html">Metody stringów</a></li>
@@ -155,7 +330,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Eventy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Events.html">Eventy</a></li>
 						<li><a class="navbar-drop-text" href="Event_handling.html">Obsługa zdarzeń</a></li>
 						<li><a class="navbar-drop-text" href="Event_properties.html">Właściwości eventów</a></li>
@@ -165,7 +340,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja DOM-em</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="DOM_what_is.html">Czym jest DOM</a></li>
 						<li><a class="navbar-drop-text" href="DOM_manipulation.html">Manipulacja DOM-em</a></li>
 						<li><a class="navbar-drop-text" href="DOM_methods.html">Metody DOM-u</a></li>
@@ -175,7 +350,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a class="navbar-drop-text" href="CSS_style_Methods_and_property.html">Metody i Właściwości styli</a></li>
 					</ul>
@@ -184,7 +359,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Biblioteki JavaScript</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="JavaScript_libraries.html">Biblioteki JavaScript</a></li>
 						<li><a class="navbar-drop-text" href="Javascript_libraries_creating_and_using.html">Tworzenie i używanie Bibliotek</a></li>
 					</ul>
@@ -194,85 +369,87 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Tablice</h1>
-								<p>
-										Tablica w języku JavaScript to obiekt służący do przechowywania wielu wartości (elementów
-										w jednej zmiennej. Każdy element może być różnego typu (np. liczba, ciąg znaków, obiekt, inna tablica, itd.).
-								</p>
-						</div>
-						<div>
-								<img src="/img/vector112.png" alt="">
-						</div>
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Tablice</h1>
+					<p>
+						Tablica w języku JavaScript to obiekt służący do przechowywania wielu wartości (elementów
+						w jednej zmiennej. Każdy element może być różnego typu (np. liczba, ciąg znaków, obiekt, inna tablica, itd.).
+					</p>
 				</div>
-				<p class="text-container lightGray-container article tooltip no-margin-top">
-						<code><a pro-tip="tablica jest jednym z podstawowych typów danych, który służy do przechowywania kolekcji wartości. Można ją traktować jak listę, gdzie każdy element tablicy ma swoją pozycję, zwana indeksem.">Tablica <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest tworzona za pomocą nawiasów kwadratowych, w których elementy są oddzielone przecinkami:
-				</p>
-				<div class="code-block code-block-margin-top">
+				<div>
+					<img src="/img/vector112.png" alt="">
+				</div>
+			</div>
+			<p class="text-container lightGray-container article tooltip no-margin-top">
+				<code><a pro-tip="tablica jest jednym z podstawowych typów danych, który służy do przechowywania kolekcji wartości. Można ją traktować jak listę, gdzie każdy element tablicy ma swoją pozycję, zwana indeksem.">Tablica <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> jest tworzona za pomocą nawiasów kwadratowych, w których elementy są oddzielone przecinkami:
+			</p>
+			<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 var fruits = ['banana', 'apple', 'orange'];
 								</code>
 						</pre>
-				</div>
-				<p class="text-container lightGray-container article tooltip no-margin-top">
-						Można dostać się do poszczególnych elementów tablicy za pomocą <code><a pro-tip="Indeks tablicy to liczba całkowita, która służy do identyfikacji pozycji elementu w tablicy. Indeksy tablicy zaczynają się zawsze od 0 dla pierwszego elementu i kolejno numerowane są wartościami 1, 2, 3, itd.">indeksu <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, który jest liczbą całkowitą
-						wskazującą pozycję elementu w tablicy (indeksowanie jest zero-based, czyli pierwszy element ma indeks 0,
-						drugi indeks 1, itd.).
-				</p>
-				<div class="code-block code-block-margin-top">
+			</div>
+			<p class="text-container lightGray-container article tooltip no-margin-top">
+				Można dostać się do poszczególnych elementów tablicy za pomocą <code><a pro-tip="Indeks tablicy to liczba całkowita, która służy do identyfikacji pozycji elementu w tablicy. Indeksy tablicy zaczynają się zawsze od 0 dla pierwszego elementu i kolejno numerowane są wartościami 1, 2, 3, itd.">indeksu <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>, który jest liczbą całkowitą
+				wskazującą pozycję elementu w tablicy (indeksowanie jest zero-based, czyli pierwszy element ma indeks 0,
+				drugi indeks 1, itd.).
+			</p>
+			<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 console.log(fruits[0]);
 								</code>
 						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-padding">
+						banana
+					</div>
 				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										banana
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<p class="text-container gray-container article tooltip no-margin-top">
-						Można również zmienić wartość danego elementu w tablicy:
-				</p>
-				<div class="code-block code-block-margin-top">
+			</div>
+			<div class="page-header"></div>
+			<p class="text-container gray-container article tooltip no-margin-top">
+				Można również zmienić wartość danego elementu w tablicy:
+			</p>
+			<div class="code-block code-block-margin-top hidden-overflow">
 						<pre>
 								<code>
 fruits[1] = 'pear';
 console.log(fruits[1]);
 								</code>
 						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-padding">
+						pear
+					</div>
 				</div>
-				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content output-padding">
-										pear
-								</div>
-						</div>
-				</div>
-				<div class="page-header"></div>
-				<div class="alert-card alert-card3 alert-card-no-margin-top">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Tablice są bardzo ważnym elementem języka JavaScript i są szeroko wykorzystywane do przechowywania
-								danych, przetwarzania ich i wykonywania różnych operacji na tych danych.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Tables_function.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card  alert-card-no-margin-top">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Tablice są bardzo ważnym elementem języka JavaScript i są szeroko wykorzystywane do przechowywania
+					danych, przetwarzania ich i wykonywania różnych operacji na tych danych.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Tables_function.html"><button>Dalej</button></a>
+			</div>
 
 		</div>
+	</div>
 </div>
 </body>
 </html>

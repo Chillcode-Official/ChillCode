@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li class="is-selected"><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,23 +246,24 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
+			<div class="text-centered text-padding">
 				<h1>Marginesy</h1>
 				<div class="section-with-image highlight-container">
-						<p>
-								Marginesy to przestrzenie wokół elementów na stronie internetowej, które oddzielają je od innych
-								elementów i pozwalają na lepsze formatowanie strony. Można je ustawić za pomocą CSS, używając
-								właściwości <span>margin-top</span>, <span>margin-bottom</span>, <span>margin-left</span> i <span>margin-right</span>. Wartość marginesów
-								może być ustawiona w jednostkach pikseli, procentach, punktach, milimetrach itp.
-						</p>
-						<img src="/img/vector34.png" alt="">
+					<p>
+						Marginesy to przestrzenie wokół elementów na stronie internetowej, które oddzielają je od innych
+						elementów i pozwalają na lepsze formatowanie strony. Można je ustawić za pomocą CSS, używając
+						właściwości <span>margin-top</span>, <span>margin-bottom</span>, <span>margin-left</span> i <span>margin-right</span>. Wartość marginesów
+						może być ustawiona w jednostkach pikseli, procentach, punktach, milimetrach itp.
+					</p>
+					<img src="/img/vector34.png" alt="">
 				</div>
-				<div class="double-elements">
-						<p class="text-container purple-container article tooltip"><code><a pro-tip="określa odległość elementu od górnej krawędzi innego elementu.">Margin-top <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od górnej krawędzi</p>
-						<p class="text-container purple-container article tooltip"><code><a pro-tip="określa odległość elementu od lewej krawędzi innego elementu.">Margin-left <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od lewej krawędzi</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid">
+					<p class="text-container purple-container article tooltip"><code><a pro-tip="określa odległość elementu od górnej krawędzi innego elementu.">Margin-top <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od górnej krawędzi</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -156,8 +271,11 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+				</div>
+				<div class="display-grid">
+					<p class="text-container purple-container article tooltip"><code><a pro-tip="określa odległość elementu od lewej krawędzi innego elementu.">Margin-left <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od lewej krawędzi</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -165,18 +283,17 @@
 }
 										</code>
 								</pre>
-						</div>
+					</div>
 				</div>
-				<div style="border-width:1px;border-style:solid;border-color:#ff00ff;margin-top:20px;padding:5px;color: #d3cec0">
-						Ten element ma margines top 30px.
-				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container lightWhite-container color-text-black article tooltip"><code><a pro-tip="określa odległość elementu od dolnej krawędzi innego elementu.">Margin-bottom <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od dolnej</p>
-						<p class="text-container lightWhite-container color-text-black article tooltip"><code><a pro-tip="określa odległość elementu od prawej krawędzi innego elementu. ">Margin-right <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od prawej</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div style="border-width:1px;border-style:solid;border-color:#ff00ff; padding:5px;color: #d3cec0">
+				Ten element ma margines top 30px.
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid">
+					<p class="text-container lightWhite-container color-text-black article tooltip"><code><a pro-tip="określa odległość elementu od dolnej krawędzi innego elementu.">Margin-bottom <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od dolnej</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -184,8 +301,11 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+				</div>
+				<div class="display-grid">
+					<p class="text-container lightWhite-container color-text-black article tooltip"><code><a pro-tip="określa odległość elementu od prawej krawędzi innego elementu. ">Margin-right <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> odległość od prawej</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -193,24 +313,25 @@
 }
 										</code>
 								</pre>
-						</div>
+					</div>
 				</div>
-				<div style="border-width:1px;border-style:solid;border-color:#d48852;margin-left:80px;padding:5px;color: #d3cec0">
-						Ten element ma margines left 80px.
+			</div>
+			<div style="border-width:1px;border-style:solid;border-color:#d48852;margin-left:80px;padding:5px;color: #d3cec0">
+				Ten element ma margines left 80px.
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements">
+				<div class="text-content">
+					<p class="text-container purple-container no-margin-top article tooltip">
+						<code><a pro-tip="Właściwość, która pozwala na ustawienie marginesów elementu. Marginesy to odstępy pomiędzy elementem a innymi elementami na stronie. Właściwość margin może być stosowana do wszystkich elementów HTML.">Margin <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						jest to skrócona wersja wszystkich właściwości marginesów.
+					</p>
+					<p class="text-container purple-container">
+						Można też ustawić jedną wartość dla wszystkich marginesów wtedy
+						wszystkie marginesy będą miały tę samą wartość
+					</p>
 				</div>
-				<div class="big-page-header"></div>
-				<div class="double-elements">
-						<div class="text-content">
-								<p class="text-container purple-container no-margin-top article tooltip">
-										<code><a pro-tip="Właściwość, która pozwala na ustawienie marginesów elementu. Marginesy to odstępy pomiędzy elementem a innymi elementami na stronie. Właściwość margin może być stosowana do wszystkich elementów HTML.">Margin <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										jest to skrócona wersja wszystkich właściwości marginesów.
-								</p>
-								<p class="text-container purple-container">
-										Można też ustawić jedną wartość dla wszystkich marginesów wtedy
-										wszystkie marginesy będą miały tę samą wartość
-								</p>
-						</div>
-						<div class="code-block code-block-medium hidden-overflow">
+				<div class="code-block code-block-margin-top hidden-overflow">
 						<pre>
 								<code>
 .element {
@@ -225,22 +346,23 @@
 
 								</code>
 						</pre>
-						</div>
 				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Marginesy w CSS są jednym z najważniejszych elementów projektowania stron internetowych.
-								Dają one projektantom kontrolę nad tym, jak elementy na stronie będą wyglądać i jak będą ze sobą współdziałać.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Padding.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="alert-card ">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Marginesy w CSS są jednym z najważniejszych elementów projektowania stron internetowych.
+					Dają one projektantom kontrolę nad tym, jak elementy na stronie będą wyglądać i jak będą ze sobą współdziałać.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Padding.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>

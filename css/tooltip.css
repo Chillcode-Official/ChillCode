@@ -50,10 +50,10 @@
 	.tooltip a:after {
 		font-size: 13px;
 		padding: 10px;
-		left: -100%;
+		left: -20%;
 		right: 0;
 		max-width: 260px;
-		width: 20vw;
+		width: 27vw;
 	}
 
 }
@@ -80,6 +80,7 @@
 
 }
 
+/*
 .tooltip a:after.left-auto{
 	left: auto;
-}
+}*/

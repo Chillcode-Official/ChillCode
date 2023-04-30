@@ -10,9 +10,7 @@
 		margin-top: 20px;
 		margin-bottom: 10px;
 }
-.browser.browser-no-margin-top{
-		margin-top: -48px;
-}
+
 .browser.highlight h1{
 		background-color: yellow;
 }.browser.red-text p{

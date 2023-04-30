@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="is-selected"><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,18 +246,21 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
+			<div class="text-centered text-padding">
 				<h1>Kombinatory CSS</h1>
 				<div class="section-with-image">
-						<p>
-								Kombinator w CSS to symbol używany do określenia relacji między dwoma elementami w dokumencie HTML i do zastosowania odpowiednich stylów do tych elementów. Dzięki kombinatorom można precyzyjnie określić, które elementy powinny być objęte stylami, co pozwala na bardziej złożone projektowanie stron internetowych.
-						</p>
-						<img src="/img/vector131.png" alt="">
+					<p>
+						Kombinator w CSS to symbol używany do określenia relacji między dwoma elementami w dokumencie HTML i do zastosowania odpowiednich stylów do tych elementów. Dzięki kombinatorom można precyzyjnie określić, które elementy powinny być objęte stylami, co pozwala na bardziej złożone projektowanie stron internetowych.
+					</p>
+					<img src="/img/vector131.png" alt="">
 				</div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_potomka.png" alt=""> Selektor Potomka</h2>
-				<div class="double-elements">
-						<div class="code-block code-block-medium hidden-overflow">
+			</div>
+			<div class="big-page-header"></div>
+			<h2><img class="icon-img-small" src="/img/icon_potomka.png" alt=""> Selektor Potomka</h2>
+			<div class="double-elements gap-zero">
+				<div class="code-block hidden-overflow">
 								<pre>
 										<code>
 .container p {
@@ -151,25 +268,25 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="output">
-								<div>
-										<p style="color: darkgreen;">To jest paragraf.</p>
-										<div>
-												<p style="color: darkgreen;">To jest inny paragraf.</p>
-										</div>
-								</div>
-						</div>
 				</div>
-				<p class="text-container gray-container article tooltip highlight-container highlight-container-gray no-margin-top">
-						<code><a pro-tip="Selektor ten łączy dwa lub więcej selektorów, wybierając elementy potomne jednego elementu nadrzędnego. Składnia tego selektora to: A B, gdzie A jest elementem nadrzędnym, a B elementem potomnym.">Selektor potomka <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> (spacja): Celuje w element, który jest potomkiem innego elementu. Przykład:
-						<span>.container p</span> będzie działać na wszystkie paragrafy wewnątrz elementu o klasie "<span>container</span>".
-				</p>
-				<div class="line"></div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_dziecko.png" alt=""> Selektor Dziecka</h2>
-				<div class="double-elements">
-						<div class="code-block code-block-medium hidden-overflow">
+				<div class="output">
+					<div>
+						<p style="color: darkgreen;">To jest paragraf.</p>
+						<div>
+							<p style="color: darkgreen;">To jest inny paragraf.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="text-container gray-container article tooltip highlight-container highlight-container-gray no-margin-top">
+				<code><a pro-tip="Selektor ten łączy dwa lub więcej selektorów, wybierając elementy potomne jednego elementu nadrzędnego. Składnia tego selektora to: A B, gdzie A jest elementem nadrzędnym, a B elementem potomnym.">Selektor potomka <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> (spacja): Celuje w element, który jest potomkiem innego elementu. Przykład:
+				<span>.container p</span> będzie działać na wszystkie paragrafy wewnątrz elementu o klasie "<span>container</span>".
+			</p>
+			<div class="line"></div>
+			<div class="big-page-header"></div>
+			<h2><img class="icon-img-small" src="/img/icon_dziecko.png" alt=""> Selektor Dziecka</h2>
+			<div class="double-elements gap-zero">
+				<div class="code-block hidden-overflow">
 								<pre>
 										<code>
  .container > p {
@@ -177,26 +294,26 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="output">
-								<div>
-										<p style="color: darkgreen; font-weight: bold">To jest paragraf.</p>
-										<div>
-												<p style="color: darkgreen;">To jest inny paragraf.</p>
-										</div>
-								</div>
-						</div>
 				</div>
-				<p class="text-container lightOrange-container article tooltip no-margin-top highlight-container highlight-container-lightOrange">
-						<code><a pro-tip="Ten selektor wybiera elementy, które są bezpośrednimi dziećmi elementu nadrzędnego. Składnia tego selektora to: A > B, gdzie A jest elementem nadrzędnym, a B jest bezpośrednim dzieckiem A.">Selektor dziecka <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> (">"): Celuje w element, który jest bezpośrednim
-						potomkiem innego elementu. Przykład: .container > p będzie działać tylko na paragrafy, które są
-						bezpośrednimi potomkami elementu o klasie "<span>container</span>".
-				</p>
-				<div class="line"></div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_sąsiedniegoRodzeństwa.png" alt=""> Selektor Sąsiedniego Rodzeństwa</h2>
-				<div class="double-elements">
-						<div class="code-block code-block-medium hidden-overflow">
+				<div class="output">
+					<div>
+						<p style="color: darkgreen; font-weight: bold">To jest paragraf.</p>
+						<div>
+							<p style="color: darkgreen;">To jest inny paragraf.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="text-container lightOrange-container article tooltip no-margin-top highlight-container highlight-container-lightOrange">
+				<code><a pro-tip="Ten selektor wybiera elementy, które są bezpośrednimi dziećmi elementu nadrzędnego. Składnia tego selektora to: A > B, gdzie A jest elementem nadrzędnym, a B jest bezpośrednim dzieckiem A.">Selektor dziecka <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> (">"): Celuje w element, który jest bezpośrednim
+				potomkiem innego elementu. Przykład: .container > p będzie działać tylko na paragrafy, które są
+				bezpośrednimi potomkami elementu o klasie "<span>container</span>".
+			</p>
+			<div class="line"></div>
+			<div class="big-page-header"></div>
+			<h2><img class="icon-img-small" src="/img/icon_sąsiedniegoRodzeństwa.png" alt=""> Selektor Sąsiedniego Rodzeństwa</h2>
+			<div class="double-elements gap-zero">
+				<div class="code-block hidden-overflow">
 								<pre>
 										<code>
 h2 + p {
@@ -204,21 +321,21 @@ h2 + p {
 }
 										</code>
 								</pre>
-						</div>
-						<div class="output">
-								<h2 style="color: #252323; font-style: italic;">To jest nagłówek</h2>
-								<p style="font-style: italic">To jest paragraf.</p>
-						</div>
 				</div>
-				<p class="text-container gray-container article tooltip no-margin-top highlight-container highlight-container-gray">
-						<code><a pro-tip="Ten selektor wybiera elementy, które są bezpośrednimi sąsiadami elementu nadrzędnego i mają ten sam element nadrzędny. Składnia tego selektora to: A + B, gdzie A i B są elementami rodzeństwa i B jest bezpośrednim sąsiadem A.">Selektor sąsiedniego rodzeństwa <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> ("+"): Celuje w element, który
-						jest następnym bratem innego elementu. Przykład: <span>h2 + p</span> będzie działać tylko na pierwszy paragraf zaraz po nagłówku <span>h2</span>.
-				</p>
-				<div class="line"></div>
-				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big" src="/img/icon_ogólnyRodzeństwa.png" alt=""> Selektor Ogólny Rodzeństwa</h2>
-				<div class="double-elements">
-						<div class="code-block code-block-medium hidden-overflow">
+				<div class="output">
+					<h2 style="color: #252323; font-style: italic;">To jest nagłówek</h2>
+					<p style="font-style: italic">To jest paragraf.</p>
+				</div>
+			</div>
+			<p class="text-container gray-container article tooltip no-margin-top highlight-container highlight-container-gray">
+				<code><a pro-tip="Ten selektor wybiera elementy, które są bezpośrednimi sąsiadami elementu nadrzędnego i mają ten sam element nadrzędny. Składnia tego selektora to: A + B, gdzie A i B są elementami rodzeństwa i B jest bezpośrednim sąsiadem A.">Selektor sąsiedniego rodzeństwa <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> ("+"): Celuje w element, który
+				jest następnym bratem innego elementu. Przykład: <span>h2 + p</span> będzie działać tylko na pierwszy paragraf zaraz po nagłówku <span>h2</span>.
+			</p>
+			<div class="line"></div>
+			<div class="big-page-header"></div>
+			<h2><img class="icon-img-small" src="/img/icon_ogólnyRodzeństwa.png" alt=""> Selektor Ogólny Rodzeństwa</h2>
+			<div class="double-elements gap-zero">
+				<div class="code-block hidden-overflow">
 								<pre>
 										<code>
 h2 ~ p {
@@ -226,26 +343,27 @@ h2 ~ p {
 }
 										</code>
 								</pre>
-						</div>
-						<div class="output">
-								<h2 style="color: #252323;">To jest nagłówek</h2>
-								<p style="background-color: #f3b6b6;">To jest paragraf.</p>
-								<div>
-										<p>To jest jeszcze inny paragraf.</p>
-								</div>
-						</div>
 				</div>
-				<p class="text-container lightOrange-container article tooltip no-margin-top highlight-container highlight-container-lightOrange">
-						<code><a pro-tip="Selektor ten wybiera elementy, które mają ten sam element nadrzędny, ale niekoniecznie są bezpośrednimi sąsiadami. Składnia tego selektora to: A ~ B, gdzie A i B są elementami rodzeństwa i B znajduje się gdzieś po A.">Selektor ogólny rodzeństwa <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> ("~"): Celuje w element, który jest
-						bratem innego elementu, niezależnie od tego, ile innych elementów jest między nimi. Przykład: <span>h2 ~ p</span>
-						będzie działać na wszystkie paragrafy, które są bratami nagłówka <span>h2</span>.
-				</p>
-				<div class="line"></div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Pseudo_Class.html"><button>Dalej</button></a>
+				<div class="output">
+					<h2 style="color: #252323;">To jest nagłówek</h2>
+					<p style="background-color: #f3b6b6;">To jest paragraf.</p>
+					<div>
+						<p>To jest jeszcze inny paragraf.</p>
+					</div>
 				</div>
+			</div>
+			<p class="text-container lightOrange-container article tooltip no-margin-top highlight-container highlight-container-lightOrange">
+				<code><a pro-tip="Selektor ten wybiera elementy, które mają ten sam element nadrzędny, ale niekoniecznie są bezpośrednimi sąsiadami. Składnia tego selektora to: A ~ B, gdzie A i B są elementami rodzeństwa i B znajduje się gdzieś po A.">Selektor ogólny rodzeństwa <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> ("~"): Celuje w element, który jest
+				bratem innego elementu, niezależnie od tego, ile innych elementów jest między nimi. Przykład: <span>h2 ~ p</span>
+				będzie działać na wszystkie paragrafy, które są bratami nagłówka <span>h2</span>.
+			</p>
+			<div class="line"></div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Pseudo_Class.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>

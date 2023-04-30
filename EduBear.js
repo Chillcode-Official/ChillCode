@@ -92,26 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-/*dodanie klasy is-selected do roadmaplist*/
-
-/*// Pobierz wszystkie elementy <li> w menu
-const menuItems = document.querySelectorAll('nav ul li');
-
-// Przejdź przez każdy element i dodaj klasę "is-selected" do elementu <li>,
-// który odpowiada bieżącej stronie
-for (let i = 0; i < menuItems.length; i++) {
-	const menuItem = menuItems[i];
-	const link = menuItem.querySelector('a');
-
-	// Sprawdź, czy link odpowiada bieżącej stronie
-	if (link && link.href === window.location.href) {
-		menuItem.classList.add('is-selected');
-	}
-}*/
-
-
-
-
 
 function rotateTriangle(element) {
 	const li = element.closest('li');

@@ -60,6 +60,9 @@
 	border: 1px solid black;
 	/*background-color: gray;*/
 }
+.tableExample.background-gray td{
+	background-color: gray;
+}
 
 .tableExample thead {
 	background-color: #eee;

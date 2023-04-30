@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="is-selected"><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="is-selected"><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,39 +246,40 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Formatowanie Tekstu W CSS</h1>
-								<p>
-										Formatowanie tekstu w CSS to zbiór właściwości, które pozwalają na kontrolowanie wyglądu tekstu na stronie internetowej. Aby sformatować tekst w CSS, należy użyć odpowiednich właściwości, takich jak:
-								</p>
-						</div>
-						<img src="/img/vector55.png" alt="">
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Formatowanie Tekstu W CSS</h1>
+					<p>
+						Formatowanie tekstu w CSS to zbiór właściwości, które pozwalają na kontrolowanie wyglądu tekstu na stronie internetowej. Aby sformatować tekst w CSS, należy użyć odpowiednich właściwości, takich jak:
+					</p>
 				</div>
-				<div class="text-container purple-container no-margin-top">
-						<div class="text-content">
-								<h3 class="color-text-white">
-										Aby sformatować tekst, należy użyć właściwości, takich jak:
-								</h3>
-						</div>
-						<div class="line"></div>
-						<div class="text-content article tooltip white-list">
-								<ul>
-										<li><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa rozmiar czcionki</li>
-										<li><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa rodzinę czcionek</li>
-										<li><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa kolor tekstu</li>
-										<li><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wyrównanie tekstu (left, right, center, justify)</li>
-										<li><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa dekorację tekstu (underline, overline, line-through)</li>
-										<li><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - pozwala na zmianę wielkości liter w tekście</li>
-										<li><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wysokość linii tekstu</li>
-										<li><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa odstęp między literami</li>
-										<li><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa odstęp między słowami</li>
-								</ul>
-						</div>
+				<img src="/img/vector55.png" alt="">
+			</div>
+			<div class="text-container purple-container no-margin-top">
+				<div class="text-centered">
+					<h3 class="color-text-white">
+						Aby sformatować tekst, należy użyć właściwości, takich jak:
+					</h3>
 				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-medium hidden-overflow">
+				<div class="line"></div>
+				<div class="article tooltip white-list">
+					<ul>
+						<li><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa rozmiar czcionki</li>
+						<li><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa rodzinę czcionek</li>
+						<li><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa kolor tekstu</li>
+						<li><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wyrównanie tekstu (left, right, center, justify)</li>
+						<li><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa dekorację tekstu (underline, overline, line-through)</li>
+						<li><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - pozwala na zmianę wielkości liter w tekście</li>
+						<li><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wysokość linii tekstu</li>
+						<li><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa odstęp między literami</li>
+						<li><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa odstęp między słowami</li>
+					</ul>
+				</div>
+			</div>
+			<div class="double-elements gap-zero">
+				<div class="code-block hidden-overflow">
 						<pre>
 								<code>
 .formatted-text {
@@ -181,23 +296,25 @@
 }
 								</code>
 						</pre>
-						</div>
-						<div>
-								<p style=" margin-top: 20px; background-color: #1c1d20;" class="output output-content output-height formatted-text ">
-										Te właściwości pozwalają na kontrolowanie takich cech tekstu jak rodzaj i
-										rozmiar czcionki, styl i grubość, kolor, wyrównanie, wysokość linii, odstęp między literami.
-								</p>
-						</div>
 				</div>
-				<div class="page-header"></div>
+				<div>
+					<p style=" background-color: #1c1d20;" class="output output-content output-height formatted-text ">
+						Te właściwości pozwalają na kontrolowanie takich cech tekstu jak rodzaj i
+						rozmiar czcionki, styl i grubość, kolor, wyrównanie, wysokość linii, odstęp między literami.
+					</p>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered text-padding">
 				<h2>Font-Size</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container pink-container no-margin-bottom"><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie rozmiaru w pikselach:</p>
-								<p class="line"></p>
-								<p class="text-container pink-container no-margin-bottom"><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie rozmiaru w procentach:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container pink-container no-margin-bottom"><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie rozmiaru w pikselach:</p>
+					<p class="line"></p>
+					<p class="text-container pink-container no-margin-bottom"><code><a pro-tip="Określa rozmiar czcionki. Można go zdefiniować w pikselach, emach lub procentach.">font-size <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie rozmiaru w procentach:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .font-size-px {
@@ -210,16 +327,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Font-Family</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container lightPink-container no-margin-bottom"><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Użycie jednej czcionki:</p>
-								<p class="line"></p>
-								<p class="text-container lightPink-container no-margin-bottom"><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Użycie kilku czcionek:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container lightPink-container no-margin-bottom"><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Użycie jednej czcionki:</p>
+					<p class="line"></p>
+					<p class="text-container lightPink-container no-margin-bottom"><code><a pro-tip="Określa rodzinę czcionek, które mają być użyte do wyświetlania tekstu. Można podać wiele nazw czcionek, aby wskazać preferowaną kolejność.">font-family <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Użycie kilku czcionek:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .one-font {
@@ -232,16 +351,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Color</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container red-container no-margin-bottom"><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie koloru nazwanego:</p>
-								<p class="line"></p>
-								<p class="text-container red-container no-margin-bottom"><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie koloru w formacie szesnastkowym:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container red-container no-margin-bottom"><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie koloru nazwanego:</p>
+					<p class="line"></p>
+					<p class="text-container red-container no-margin-bottom"><code><a pro-tip="Określa kolor tekstu. Można go zdefiniować za pomocą nazwy koloru, wartości RGB, wartości szesnastkowej lub wartości HSL.">color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie koloru w formacie szesnastkowym:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .color-name {
@@ -254,16 +375,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Text-Align</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container no-margin-bottom"><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wyrównanie tekstu do lewej:</p>
-								<p class="line"></p>
-								<p class="text-container no-margin-bottom"><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wycentrowanie tekstu:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container no-margin-bottom"><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wyrównanie tekstu do lewej:</p>
+					<p class="line"></p>
+					<p class="text-container no-margin-bottom"><code><a pro-tip="Określa wyrównanie tekstu w elemencie. Możliwe wartości to left, right, center i justify.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Wycentrowanie tekstu:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .left {
@@ -276,16 +399,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Text-Decoration</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container lightOrange-container no-margin-bottom"><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie podkreślenia tekstu:</p>
-								<p class="line"></p>
-								<p class="text-container lightOrange-container no-margin-bottom"><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie przekreślenia tekstu:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container lightOrange-container no-margin-bottom"><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie podkreślenia tekstu:</p>
+					<p class="line"></p>
+					<p class="text-container lightOrange-container no-margin-bottom"><code><a pro-tip="Określa dekoracje tekstu, takie jak podkreślenie lub przekreślenie. Możliwe wartości to underline, overline, line-through i none.">text-decoration <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie przekreślenia tekstu:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .text-decoration-underline {
@@ -298,16 +423,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Text-Transform</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container orange-container no-margin-bottom"><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zmiana wszystkich liter na duże:</p>
-								<p class="line"></p>
-								<p class="text-container orange-container no-margin-bottom"><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Kapitalizacja pierwszej litery każdego słowa:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container orange-container no-margin-bottom"><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Zmiana wszystkich liter na duże:</p>
+					<p class="line"></p>
+					<p class="text-container orange-container no-margin-bottom"><code><a pro-tip="Określa transformacje tekstu, takie jak zamiana na wielkie litery, małe litery lub pierwsze litery każdego słowa na wielkie litery. Możliwe wartości to uppercase, lowercase, capitalize i none.">text-transform <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Kapitalizacja pierwszej litery każdego słowa:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .uppercase {
@@ -320,16 +447,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Line-Height</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container cream-container no-margin-bottom"><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie wysokości linii na 1.5:</p>
-								<p class="line"></p>
-								<p class="text-container cream-container no-margin-bottom"><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie wysokości linii na 20 pikseli:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container cream-container no-margin-bottom"><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie wysokości linii na 1.5:</p>
+					<p class="line"></p>
+					<p class="text-container cream-container no-margin-bottom"><code><a pro-tip="Określa wysokość wiersza w elemencie. Może być zdefiniowany jako wartość liczbową lub wartość wielokrotności.">line-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie wysokości linii na 20 pikseli:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .line-height-1-5 {
@@ -342,16 +471,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Letter-Spacing</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container lightBrown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między literami na 0.1 em:</p>
-								<p class="line"></p>
-								<p class="text-container lightBrown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między literami na 2 piksele:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container lightBrown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między literami na 0.1 em:</p>
+					<p class="line"></p>
+					<p class="text-container lightBrown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między literami w tekście. Można go zdefiniować w pikselach lub emach.">letter-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między literami na 2 piksele:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .letter-spacing-0-1em {
@@ -364,16 +495,18 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
+			</div>
+			<div class="text-centered text-padding">
 				<h2>Word-Spacing</h2>
-				<div class="double-elements no-margin-bottom article tooltip">
-						<div class="text-content">
-								<p class="text-container brown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między słowami na 20 pikseli:</p>
-								<p class="line"></p>
-								<p class="text-container brown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między słowami na 0.5 em:</p>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements no-margin-bottom article tooltip">
+				<div class="article line-height-normal">
+					<p class="text-container brown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między słowami na 20 pikseli:</p>
+					<p class="line"></p>
+					<p class="text-container brown-container no-margin-bottom"><code><a pro-tip="Określa odstęp między słowami w tekście. Można go zdefiniować w pikselach lub emach.">word-spacing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> Ustawienie odstępu między słowami na 0.5 em:</p>
+				</div>
+				<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
 .word-spacing-20px {
@@ -386,21 +519,22 @@
 }
 										</code>
 								</pre>
-						</div>
 				</div>
-				<div class="alert-card alert-card3">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Pamiętaj, że CSS oferuje wiele innych właściwości do formatowania tekstu, ale powyższe są podstawowymi, które powinieneś znać i stosować w swoich stylach CSS.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="fonts.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="alert-card ">
+				<img style="width: 50px;" src="/img/note.png" alt="">
+				<b>Note</b>
+				<div class="line"></div>
+				<p>
+					Pamiętaj, że CSS oferuje wiele innych właściwości do formatowania tekstu, ale powyższe są podstawowymi, które powinieneś znać i stosować w swoich stylach CSS.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Fonts.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>

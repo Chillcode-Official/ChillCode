@@ -79,7 +79,7 @@
 
 /*line height elements*/
 .text-container.line-height-plus{
-	line-height: 40px;
+	line-height: 35px; /*40px*/
 }
 .text-container.line-height-medium{
 	line-height: 30px;

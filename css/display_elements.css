@@ -38,8 +38,16 @@
 .display-flex{
 	display: flex;
 }
+.display-grid{
+	display: grid;
+}
 .display-inline-grid{
 	display: inline-grid;
+}
+
+.item-centered{
+	display: grid;
+	justify-content: center;
 }
 
 

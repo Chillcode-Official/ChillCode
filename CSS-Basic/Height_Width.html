@@ -17,16 +17,130 @@
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<li class="navbar-item"><span class="learn-navbar-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> Learn</a></span></li>
-				<li><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></li>
-				<li class="navbar-item"><a href="https://chillcode.org/" class="navbar-link">Home</a></li>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li class="is-selected"><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
@@ -36,7 +150,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
@@ -49,7 +163,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -64,7 +178,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
 						<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 					</ul>
@@ -73,20 +187,20 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
 						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Text.html">Tekst</a></li>
-			<li><a href="fonts.html">Czcionki</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
 			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
 			<li><a href="Pictures.html">Obrazy</a></li>
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
 						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 					</ul>
@@ -95,7 +209,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
 						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
 					</ul>
@@ -105,7 +219,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
@@ -115,7 +229,7 @@
 			<li onclick="rotateTriangle(this)">
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
-					<ul class="navbar-list-none">
+					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
@@ -132,49 +246,48 @@
 		</ol>
 	</div>
 
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content highlight-container">
-								<h1>Wysokość I Szerokość CSS</h1>
-								<p>
-										W CSS, szerokość i wysokość elementu można ustawić za pomocą właściwości "<span>width</span>" i "<span>height</span>". Te
-										właściwości określają odpowiednio szerokość i wysokość elementu w pikselach lub jednostkach
-										procentowych w stosunku do rodzica.
-								</p>
-						</div>
-						<img src="/img/vector65.png" alt="">
+			<div class="section-with-image">
+				<div class="text-centered text-padding highlight-container">
+					<h1>Wysokość i Szerokość CSS</h1>
+					<p>
+						W CSS, szerokość i wysokość elementu można ustawić za pomocą właściwości "<span>width</span>" i "<span>height</span>". Te
+						właściwości określają odpowiednio szerokość i wysokość elementu w pikselach lub jednostkach
+						procentowych w stosunku do rodzica.
+					</p>
 				</div>
-				<div class="text-container gray-container no-margin-top article tooltip white-list">
-						<div class="text-content">
-								<p>
-										Wartości <code><a pro-tip="określa szerokość elementu. Można ją ustawić na konkretną wartość (np. 100px, 50%) lub pozostawić automatycznie dopasowującą się do zawartości.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i
-										<code><a pro-tip="określa wysokość elementu. Podobnie jak width, można ją ustawić na konkretną wartość lub pozostawić automatycznie dopasowującą się do zawartości.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-										można określić w różnych jednostkach, takich:
-								</p>
-						</div>
-						<div class="line"></div>
-						<div class="text-content">
-								<ul>
-										<li><code><a pro-tip="Piksele są najmniejszą jednostką miary w CSS. Jeden piksel odpowiada jednemu punktowi na ekranie, a rozmiar piksela zależy od rozdzielczości wyświetlacza. Piksele są najczęściej używane do określania wielkości czcionek, odstępów między wierszami i szerokości obramowania.">px <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa liczbę pikseli, czyli jednostek na ekranie, jakie będą zajmowane przez element</li>
-										<li><code><a pro-tip="Procenty określają wielkość w stosunku do rozmiaru elementu nadrzędnego. Na przykład, jeśli ustawisz szerokość elementu na 50%, oznacza to, że szerokość elementu wynosi połowę szerokości jego elementu nadrzędnego.">% <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określają szerokość i wysokość elementu jako procent dostępnej przestrzeni.</li>
-										<li><code><a pro-tip="Centymetry to fizyczna jednostka miary, która jest równoważna około 0,3937 cala. Centymetry są przydatne, gdy trzeba określić rozmiar obiektu w drukowanym dokumencie lub gdy chcesz zapewnić, że rozmiar obiektu jest spójny na różnych urządzeniach z różnymi rozdzielczościami ekranu.">cm <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - centymetry są jednostką długości, która mierzy rzeczywistą długość na ekranie.</li>
-										<li><code><a pro-tip="Cale to kolejna fizyczna jednostka miary, która jest powszechnie używana w drukowanych dokumentach. Jeden cal odpowiada 2,54 centymetrom. W CSS cale można użyć do określenia rozmiaru obiektu w drukowanym dokumencie lub gdy chcesz zapewnić, że rozmiar obiektu jest spójny na różnych urządzeniach z różnymi rozdzielczościami ekranu.">in <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - cale są jednostką długości, która mierzy rzeczywistą długość na ekranie.</li>
-										<li><code><a pro-tip="em to jednostka względna, która jest równa bieżącej wielkości czcionki elementu. Dla przykładu, jeśli wielkość czcionki elementu nadrzędnego wynosi 16 pikseli, a określisz margines wewnętrzny dla elementu z wartością 1.5em, oznacza to, że margines będzie równy 24 pikselom (czyli 1.5 razy 16 pikseli).">em <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - jednostka względna, która odnosi się do rozmiaru czcionki elementu nadrzędnego.</li>
-								</ul>
-						</div>
+				<img src="/img/vector65.png" alt="">
+			</div>
+			<div class="text-container gray-container no-margin-top article tooltip white-list">
+				<div class="text-centered text-padding">
+					<p>
+						Wartości <code><a pro-tip="określa szerokość elementu. Można ją ustawić na konkretną wartość (np. 100px, 50%) lub pozostawić automatycznie dopasowującą się do zawartości.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i
+						<code><a pro-tip="określa wysokość elementu. Podobnie jak width, można ją ustawić na konkretną wartość lub pozostawić automatycznie dopasowującą się do zawartości.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						można określić w różnych jednostkach, takich jak:
+					</p>
 				</div>
-				<div class="browser indianred-container long-browser highlight-container highlight-container-lightRed">
-						<p>
-								&nbsp;  Ten element ma <span>100%</span> szerokości oraz <span>86px</span> wysokości
-						</p>
+				<div class="line"></div>
+				<div>
+					<ul>
+						<li><code><a pro-tip="Piksele są najmniejszą jednostką miary w CSS. Jeden piksel odpowiada jednemu punktowi na ekranie, a rozmiar piksela zależy od rozdzielczości wyświetlacza. Piksele są najczęściej używane do określania wielkości czcionek, odstępów między wierszami i szerokości obramowania.">px <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa liczbę pikseli, czyli jednostek na ekranie, jakie będą zajmowane przez element</li>
+						<li><code><a pro-tip="Procenty określają wielkość w stosunku do rozmiaru elementu nadrzędnego. Na przykład, jeśli ustawisz szerokość elementu na 50%, oznacza to, że szerokość elementu wynosi połowę szerokości jego elementu nadrzędnego.">% <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określają szerokość i wysokość elementu jako procent dostępnej przestrzeni.</li>
+						<li><code><a pro-tip="Centymetry to fizyczna jednostka miary, która jest równoważna około 0,3937 cala. Centymetry są przydatne, gdy trzeba określić rozmiar obiektu w drukowanym dokumencie lub gdy chcesz zapewnić, że rozmiar obiektu jest spójny na różnych urządzeniach z różnymi rozdzielczościami ekranu.">cm <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - centymetry są jednostką długości, która mierzy rzeczywistą długość na ekranie.</li>
+						<li><code><a pro-tip="Cale to kolejna fizyczna jednostka miary, która jest powszechnie używana w drukowanych dokumentach. Jeden cal odpowiada 2,54 centymetrom. W CSS cale można użyć do określenia rozmiaru obiektu w drukowanym dokumencie lub gdy chcesz zapewnić, że rozmiar obiektu jest spójny na różnych urządzeniach z różnymi rozdzielczościami ekranu.">in <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - cale są jednostką długości, która mierzy rzeczywistą długość na ekranie.</li>
+						<li><code><a pro-tip="em to jednostka względna, która jest równa bieżącej wielkości czcionki elementu. Dla przykładu, jeśli wielkość czcionki elementu nadrzędnego wynosi 16 pikseli, a określisz margines wewnętrzny dla elementu z wartością 1.5em, oznacza to, że margines będzie równy 24 pikselom (czyli 1.5 razy 16 pikseli).">em <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - jednostka względna, która odnosi się do rozmiaru czcionki elementu nadrzędnego.</li>
+					</ul>
 				</div>
-				<div class="page-header"></div>
-				<div class="double-elements">
-						<p class="text-container article tooltip"><code><a pro-tip="określa szerokość elementu. Można ją ustawić na konkretną wartość (np. 100px, 50%) lub pozostawić automatycznie dopasowującą się do zawartości.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa szerokość elementu.</p>
-						<p class="text-container red-container article tooltip"><code><a pro-tip="określa wysokość elementu. Podobnie jak width, można ją ustawić na konkretną wartość lub pozostawić automatycznie dopasowującą się do zawartości.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa wysokość elementu.</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="browser indianred-container long-browser highlight-container highlight-container-lightRed">
+				<p>
+					&nbsp;  Ten element ma <span>100%</span> szerokości oraz <span>120px</span> wysokości
+				</p>
+			</div>
+			<div class="page-header"></div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid">
+					<p class="text-container azure-container article tooltip"><code><a pro-tip="określa szerokość elementu. Można ją ustawić na konkretną wartość (np. 100px, 50%) lub pozostawić automatycznie dopasowującą się do zawartości.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa szerokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -184,8 +297,11 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+				</div>
+				<div class="display-grid">
+					<p class="text-container red-container article tooltip"><code><a pro-tip="określa wysokość elementu. Podobnie jak width, można ją ustawić na konkretną wartość lub pozostawić automatycznie dopasowującą się do zawartości.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa wysokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -195,14 +311,13 @@
 }
 										</code>
 								</pre>
-						</div>
+					</div>
 				</div>
-				<div class="double-elements">
-						<p class="text-container article tooltip"><code><a pro-tip="określa minimalną szerokość elementu. Element nie będzie mógł się zwężać poniżej tej wartości, nawet jeśli zawartość będzie mniejsza. Można ją ustawić na wartość konkretną, procentową lub wyrażenie auto, które oznacza automatyczną dopasowanie.">min-width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa minimalną szerokość elementu.</p>
-						<p class="text-container red-container article tooltip"><code><a pro-tip="określa maksymalną szerokość elementu. Element nie będzie mógł się rozszerzać powyżej tej wartości, nawet jeśli zawartość będzie większa. Można ją ustawić na wartość konkretną, procentową lub none, co oznacza brak ograniczenia.">max-width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa maksymalną szerokość elementu.</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid">
+					<p class="text-container azure-container article tooltip"><code><a pro-tip="określa minimalną szerokość elementu. Element nie będzie mógł się zwężać poniżej tej wartości, nawet jeśli zawartość będzie mniejsza. Można ją ustawić na wartość konkretną, procentową lub wyrażenie auto, które oznacza automatyczną dopasowanie.">min-width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa minimalną szerokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -212,8 +327,11 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+				</div>
+				<div class="display-grid">
+					<p class="text-container red-container article tooltip"><code><a pro-tip="określa maksymalną szerokość elementu. Element nie będzie mógł się rozszerzać powyżej tej wartości, nawet jeśli zawartość będzie większa. Można ją ustawić na wartość konkretną, procentową lub none, co oznacza brak ograniczenia.">max-width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa maksymalną szerokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -223,14 +341,13 @@
 }
 										</code>
 								</pre>
-						</div>
+					</div>
 				</div>
-				<div class="double-elements">
-						<p class="text-container article tooltip"><code><a pro-tip="określa minimalną wysokość elementu. Element nie będzie mógł się skurczyć poniżej tej wartości, nawet jeśli zawartość będzie mniejsza. Można ją ustawić na wartość konkretną, procentową lub auto.">min-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa minimalną wysokość elementu.</p>
-						<p class="text-container red-container article tooltip"><code><a pro-tip="określa maksymalną wysokość elementu. Element nie będzie mógł się rozszerzać powyżej tej wartości, nawet jeśli zawartość będzie większa. Można ją ustawić na wartość konkretną, procentową lub none.">max-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa maksymalną wysokość elementu.</p>
-				</div>
-				<div class="double-elements">
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+			</div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid">
+					<p class="text-container azure-container article tooltip"><code><a pro-tip="określa minimalną wysokość elementu. Element nie będzie mógł się skurczyć poniżej tej wartości, nawet jeśli zawartość będzie mniejsza. Można ją ustawić na wartość konkretną, procentową lub auto.">min-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa minimalną wysokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -240,8 +357,11 @@
 }
 										</code>
 								</pre>
-						</div>
-						<div class="code-block code-block-margin-top code-block-medium hidden-overflow">
+					</div>
+				</div>
+				<div class="display-grid">
+					<p class="text-container red-container article tooltip"><code><a pro-tip="określa maksymalną wysokość elementu. Element nie będzie mógł się rozszerzać powyżej tej wartości, nawet jeśli zawartość będzie większa. Można ją ustawić na wartość konkretną, procentową lub none.">max-height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>Określa maksymalną wysokość elementu.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 .element {
@@ -251,13 +371,15 @@
 }
 										</code>
 								</pre>
-						</div>
+					</div>
 				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Position.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Position.html"><button>Dalej</button></a>
+			</div>
 		</div>
+	</div>
 </div>
 </body>
 </html>
