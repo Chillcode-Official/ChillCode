@@ -36,7 +36,7 @@
 /* Main Elements html && body - Ustawienie koloru tła */
 html, body {
 	margin: 0;
-	background-color: #27282c;
+	background-color: #1c1c1c;  /*#27282c;*/
 	font-size: 16px;
 	font-family: "Be Vietnam Pro", sans-serif;
 }
