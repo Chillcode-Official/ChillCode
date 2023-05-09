@@ -28,6 +28,7 @@
 }
 .alert-card img{
 		margin-top: 14px;
+		width: 50px;
 }
 .alert-card code{
 		background-color: #1e1e1e;

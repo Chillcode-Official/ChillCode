@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Cpp {Tablice}</title>
+	<link rel="stylesheet" href="../Basic.css"/>
+	<link rel="icon" href="/img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Cpp.html"><img class="icon-img-navbar" src="/img/cplusplus-logo.png" alt=""> C++</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/cplusplus-logo.png" alt="">C++</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Tablice</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li class="is-selected"><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+				<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Tablice</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li class="is-selected"><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Tablice wielowymiarowe</h1>
+					<p>
+						Tablice wielowymiarowe to struktury danych, które pozwalają na przechowywanie elementów o różnych typach w więcej niż jednym wymiarze. W C++ tablice wielowymiarowe mogą mieć dowolną liczbę wymiarów, ale najczęściej stosowane są tablice dwuwymiarowe (macierze) lub trójwymiarowe (np. do reprezentowania trójwymiarowych struktur w przestrzeni).
+					</p>
+				</div>
+				<img src="/img/vector188.png" alt="">
+			</div>
+			<p class="text-container red-container no-margin-top article tooltip">
+				<code><a pro-tip="">Tablica dwuwymiarowa <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> to tablica, która posiada dwie współrzędne indeksowe (np. wiersz i kolumna). Aby zadeklarować taką tablicę, należy użyć deklaracji:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
+typ_danych nazwa_tablicy[liczba_wierszy][liczba_kolumn];
+								</code>
+						</pre>
+			</div>
+			<p class="text-container red-container">
+				aby utworzyć tablicę dwuwymiarową przechowującą liczby całkowite o 3 wierszach i 4 kolumnach, należy użyć następującej deklaracji:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
+int tablica_dwuwymiarowa[3][4];
+								</code>
+						</pre>
+			</div>
+			<p class="text-container red-container">
+				Możemy także zainicjować tablicę dwuwymiarową podczas deklaracji, podając początkowe wartości elementów w nawiasach klamrowych. Na przykład:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
+int tablica_dwuwymiarowa[3][4] = {
+	{1, 2, 3, 4},
+	{5, 6, 7, 8},
+	{9, 10, 11, 12}
+};
+								</code>
+						</pre>
+			</div>
+			<p class="text-container red-container">
+				Aby uzyskać dostęp do elementów tablicy dwuwymiarowej, musimy podać dwa indeksy - pierwszy indeks odnosi się do wiersza, a drugi do kolumny. Na przykład, aby przypisać wartość 10 do elementu znajdującego się w drugim wierszu i trzeciej kolumnie, możemy użyć poniższego kodu:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
+tablica_dwuwymiarowa[1][2] = 10;
+								</code>
+						</pre>
+			</div>
+			<p class="text-container red-container">
+				Możemy również iterować po elementach tablicy dwuwymiarowej za pomocą pętli zagnieżdżonych. Przykładowy kod, który wyświetla wszystkie elementy tablicy, wygląda następująco:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+		int tablica[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}; // deklaracja i inicjalizacja tablicy dwuwymiarowej
+
+		cout << "Wartość elementu (2,1): " << tablica[1][0] << endl; // wyświetla wartość elementu o indeksach (1,0)
+
+		return 0;
+}
+								</code>
+						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-padding output-content">
+						Wartość elementu (2,1): 4
+					</div>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Arrays_dynamic.html"><button>Dalej</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -11,79 +11,126 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
+	<div class="navbar">
+	<div class="navbar-container link-unDecoration">
+		<div class="display-flex opacity-function mini-gap">
+			<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+			<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+			<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Bootstrap.html"><img class="icon-img-navbar" src="/img/bootstrap-icon.png" alt=""> Bootstrap</a></span></div>
 		</div>
-
-		<div class="roadmap-list">
+		<div class="navbar-menu">
+			<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/bootstrap-icon.png" alt="">Bootstrap</button></div>
+			<div class="line line-gray hide-e"></div>
+			<div class="roadmap-list hide-e">
 				<ol>
-						<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
-						<li><a href="Quick_start.html">Szybki start</a></li>
-						<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
-						<li><a href="Class.html">Klasa</a></li>
-						<li><a href="Text_styles.html">Style tekstowe</a></li>
-						<li><a href="Components.html">Komponenty</a></li>
-						<li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
-						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
-						<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
-						<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
-						<li><a href="Summary.html">Podsumowanie</a></li>
+					<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+					<li class="is-selected"><a href="Quick_start.html">Szybki start</a></li>
+					<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+					<li><a href="Class.html">Klasa</a></li>
+					<li><a href="Text_styles.html">Style tekstowe</a></li>
+					<li><a href="Components.html">Komponenty</a></li>
+					<li onclick="rotateTriangle(this)">
+						<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+						<div class="dropdown-content">
+							<ul class="navbar-list-none display-inline-grid">
+								<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+								<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+					<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+					<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+					<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
+			</div>
+			<div class="line line-gray hide-e"></div>
+			<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
 		</div>
+		<div class="navbar-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</div>
 
+	<div class="roadmap-list hide-roadmaplist">
+			<ol>
+		<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+		<li class="is-selected"><a href="Quick_start.html">Szybki start</a></li>
+		<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+		<li><a href="Class.html">Klasa</a></li>
+		<li><a href="Text_styles.html">Style tekstowe</a></li>
+		<li><a href="Components.html">Komponenty</a></li>
+		<li onclick="rotateTriangle(this)">
+			<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+			<div class="dropdown-content">
+				<ul class="navbar-list-none display-inline-grid">
+					<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+					<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+		<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+		<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+		<li><a href="Summary.html">Podsumowanie</a></li>
+	</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
 		<div class="content">
-				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Szybki start z Bootstrap</h1>
-								<p>
-										Bootstrap to popularny framework CSS stworzony przez Twitter. Umożliwia on tworzenie responsywnych, mobilnych stron internetowych z wykorzystaniem gotowych komponentów i stylów.
-								</p>
-						</div>
-						<img src="/img/vector171.png" alt="">
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Szybki start z Bootstrap</h1>
+					<p>
+						Bootstrap to popularny framework CSS stworzony przez Twitter. Umożliwia on tworzenie responsywnych, mobilnych stron internetowych z wykorzystaniem gotowych komponentów i stylów.
+					</p>
 				</div>
-				<div class="text-container lightWhite-container black-list no-margin-top highlight-container highlight-container-lightWhite list-spacing">
-						<div class="text-content">
-								<h3>
-										Aby rozpocząć pracę z Bootstrapem, należy wykonać następujące kroki:
-								</h3>
-						</div>
-						<div class="line"></div>
-						<ol>
-								<li><span>Pobierz Bootstrap</span>: Bootstrap można pobrać z oficjalnej strony internetowej <a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a>, a następnie dodać do projektu lub zaimportować do pliku CSS.</li>
-								<li><span>Utwórz plik HTML</span>: który będzie stanowił szablon strony internetowej. Możesz skorzystać z gotowych szablonów dostępnych na stronie internetowej Bootstrap lub stworzyć własny.</li>
-								<li><span>Dodaj klasy Bootstrapa</span>: W pliku HTML można dodać klasy Bootstrapa do elementów HTML, takich jak nagłówki, przyciski, formularze itp. Bootstrap oferuje wiele gotowych klas, które można wykorzystać, aby szybko stylizować elementy.</li>
-								<li><span>Dostosuj styl Bootstrapa</span>: Jeśli chcesz dostosować styl Bootstrapa do swoich potrzeb, możesz skorzystać z pliku Sass lub Less. Bootstrap zawiera wiele zmiennych, które można zmienić, aby dostosować styl.</li>
-								<li><span>Dodaj skrypty JavaScript</span>: Bootstrap zawiera wiele skryptów JavaScript, które dodają interakcję do elementów HTML, takich jak przyciski, menu nawigacyjne itp. Możesz dodać skrypty do pliku HTML lub zaimportować je do oddzielnego pliku JavaScript.</li>
-								<li><span>Testuj stronę internetową</span>: Przetestuj stronę internetową, aby upewnić się, że działa poprawnie i jest responsywna na różnych urządzeniach.</li>
-						</ol>
+				<img src="/img/vector171.png" alt="">
+			</div>
+			<div class="text-container light-container black-list no-margin-top highlight-container highlight-container-light list-spacing">
+				<div class="text-centered text-padding">
+					<h3>
+						Aby rozpocząć pracę z Bootstrapem, należy wykonać następujące kroki:
+					</h3>
 				</div>
-				<div class="page-header"></div>
-				<div class="alert-card  alert-card-red">
-						<img style="width: 50px;" src="/img/Congratulations3.png" alt="">
-						<b>Gratulacje</b>
-						<div class="line"></div>
-						<p>
-								To tylko podstawowe kroki, aby rozpocząć pracę z Bootstrapem. Framework ten oferuje wiele więcej funkcjonalności i komponentów, które można wykorzystać do tworzenia profesjonalnych i funkcjonalnych stron internetowych.. Powodzenia!
-						</p>
+				<div class="line"></div>
+				<div class="paragraf-margin-left">
+					<p><b>1. </b><span>Pobierz Bootstrap</span>: Bootstrap można pobrać z oficjalnej strony internetowej <a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a>, a następnie dodać do projektu lub zaimportować do pliku CSS.</p>
+					<p><b>2. </b><span>Utwórz plik HTML</span>: który będzie stanowił szablon strony internetowej. Możesz skorzystać z gotowych szablonów dostępnych na stronie internetowej Bootstrap lub stworzyć własny.</p>
+					<p><b>3. </b><span>Dodaj klasy Bootstrapa</span>: W pliku HTML można dodać klasy Bootstrapa do elementów HTML, takich jak nagłówki, przyciski, formularze itp. Bootstrap oferuje wiele gotowych klas, które można wykorzystać, aby szybko stylizować elementy.</p>
+					<p><b>4. </b><span>Dostosuj styl Bootstrapa</span>: Jeśli chcesz dostosować styl Bootstrapa do swoich potrzeb, możesz skorzystać z pliku Sass lub Less. Bootstrap zawiera wiele zmiennych, które można zmienić, aby dostosować styl.</p>
+					<p><b>5. </b><span>Dodaj skrypty JavaScript</span>: Bootstrap zawiera wiele skryptów JavaScript, które dodają interakcję do elementów HTML, takich jak przyciski, menu nawigacyjne itp. Możesz dodać skrypty do pliku HTML lub zaimportować je do oddzielnego pliku JavaScript.</p>
+					<p><b>6. </b><span>Testuj stronę internetową</span>: Przetestuj stronę internetową, aby upewnić się, że działa poprawnie i jest responsywna na różnych urządzeniach.</p>
 				</div>
-				<div class="big-page-header"></div>
-				<div class="btn">
-						<a href="Grid_layout.html"><button>Dalej</button></a>
-				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card  alert-card-red">
+				<img style="width: 50px;" src="/img/Congratulations3.png" alt="">
+				<b>Gratulacje</b>
+				<div class="line"></div>
+				<p>
+					To tylko podstawowe kroki, aby rozpocząć pracę z Bootstrapem. Framework ten oferuje wiele więcej funkcjonalności i komponentów, które można wykorzystać do tworzenia profesjonalnych i funkcjonalnych stron internetowych.. Powodzenia!
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Grid_layout.html"><button>Dalej</button></a>
+			</div>
 
 		</div>
+	</div>
 </div>
 </body>
 </html>

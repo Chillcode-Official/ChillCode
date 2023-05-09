@@ -11,31 +11,76 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<button><li><a href="../EduBear.html">Home</a></li></button>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Bootstrap.html"><img class="icon-img-navbar" src="/img/bootstrap-icon.png" alt=""> Bootstrap</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/bootstrap-icon.png" alt="">Bootstrap</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li class="is-selected"><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+						<li><a href="Class.html">Klasa</a></li>
+						<li><a href="Text_styles.html">Style tekstowe</a></li>
+						<li><a href="Components.html">Komponenty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+									<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+						<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
 		<ol>
-			<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+			<li class="is-selected"><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
 			<li><a href="Quick_start.html">Szybki start</a></li>
 			<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
 			<li><a href="Class.html">Klasa</a></li>
 			<li><a href="Text_styles.html">Style tekstowe</a></li>
 			<li><a href="Components.html">Komponenty</a></li>
-			<li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+						<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+					</ul>
+				</div>
+			</li>
 			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 			<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
 			<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
@@ -43,36 +88,45 @@
 		</ol>
 	</div>
 
-	<div class="content">
-		<h1>Czym Jest Bootstrap</h1>
-		<div class="section-with-image">
-			<p>
-				Bootstrap to popularny framework do tworzenia responsywnych stron internetowych i aplikacji webowych. Został stworzony przez Twittera i oparty jest na językach HTML,
-				CSS i JavaScript. Bootstrap dostarcza gotowych komponentów, takich jak nawigacja, przyciski, formularze czy tabele, które można łatwo i szybko dostosować do indywidualnych potrzeb projektu.
-			</p>
-			<div>
-				<img style="width: 260px; float: right;" src="/img/bootstrap-icon.png" alt="">
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="text-centered text-padding">
+				<div class="section-with-image">
+					<div>
+						<h1>Czym jest Bootstrap</h1>
+						<p>
+							Bootstrap to popularny framework do tworzenia responsywnych stron internetowych i aplikacji webowych. Został stworzony przez Twittera i oparty jest na językach HTML,
+							CSS i JavaScript. Bootstrap dostarcza gotowych komponentów, takich jak nawigacja, przyciski, formularze czy tabele, które można łatwo i szybko dostosować do indywidualnych potrzeb projektu.
+						</p>
+					</div>
+					<div>
+						<img style="width: 260px; float: right;" src="/img/bootstrap-icon.png" alt="">
+					</div>
+				</div>
 			</div>
-		</div>
-		<h1>Dlaczego Warto Nauczyć się Bootstrap</h1>
-		<p class="text-content-500width">
-			jQuery to popularna biblioteka JavaScript, która umożliwia manipulowanie elementami HTML
-			i obsługę zdarzeń na stronach internetowych; warto się jej nauczyć ze względu na łatwość nauki,
-			obsługę zdarzeń i animacji, krótszy kod, kompatybilność z przeglądarkami, wiele pluginów oraz rozwój zawodowy.
-		</p>
-		<div class="big-page-header"></div>
-		<h1>Kluczowe Cechy Bootstrap</h1>
-		<div class="page-header"></div>
-		<ul>
-			<li>Responsywność - Bootstrap pozwala tworzyć strony dostosowane do różnych rozmiarów ekranów</li>
-			<li>Łatwość użycia-Bootstrap oferuje gotowe komponenty</li>
-			<li>Szybkość - Dzięki gotowym komponentom i stylom</li>
-			<li>Zgodność z wieloma przeglądarkami - Bootstrap jest kompatybilny z większością przeglądarek internetowych</li>
-			<li>Popularność - Bootstrap jest jednym z najpopularniejszych frameworków </li>
-		</ul>
-		<div class="big-page-header"></div>
-		<div class="btn">
-			<a href="Quick_start.html"><button>Dalej</button></a>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h1>Dlaczego warto nauczyć się Bootstrap</h1>
+				<p class="text-content-500width">
+					Bootstrap to popularny framework CSS, który zapewnia wiele gotowych komponentów i stylów, które pomagają w tworzeniu responsywnych i estetycznie atrakcyjnych interfejsów użytkownika dla stron internetowych i aplikacji internetowych.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-padding">
+				<h1 class="text-centered">Kluczowe Cechy Bootstrap</h1>
+				<div class="page-header"></div>
+				<ul>
+					<li>Responsywność - Bootstrap pozwala tworzyć strony dostosowane do różnych rozmiarów ekranów</li>
+					<li>Łatwość użycia-Bootstrap oferuje gotowe komponenty</li>
+					<li>Szybkość - Dzięki gotowym komponentom i stylom</li>
+					<li>Zgodność z wieloma przeglądarkami - Bootstrap jest kompatybilny z większością przeglądarek internetowych</li>
+					<li>Popularność - Bootstrap jest jednym z najpopularniejszych frameworków </li>
+				</ul>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Quick_start.html"><button>Dalej</button></a>
+			</div>
 		</div>
 	</div>
 </div>

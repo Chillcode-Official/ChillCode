@@ -11,34 +11,103 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
-
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET Core</a></li>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_ASP.NET-Core.html"><img class="icon-img-navbar" src="/img/NET_Core_Logo.png" alt=""> ASP.NET</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/NET_Core_Logo.png" alt="">ASP.NET</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Project_structure.html">Struktura projektu</a></li>
 						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
 						<li><a href="Routing.html">Routing</a></li>
-						<li><a href="Data_modeling.html">Modelowanie danych</a></li>
-						<li><a href="RazorViewEngine_and_TagHelpers_views.html">Widoki RazorViewEngine i TagHelpers</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
 						<li><a href="Middleware.html">Middleware</a></li>
-						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li class="is-selected"><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="roadmap-list hide-roadmaplist">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li><a href="Middleware.html">Middleware</a></li>
+						<li class="is-selected"><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
 						<li><a href="Error_handling.html">Obsługa błędów</a></li>
 						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
 						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
@@ -51,36 +120,37 @@
 				</ol>
 		</div>
 
-		<div class="content">
+		<div class="opacity-function padding-content">
+			<div class="content">
 				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Implementacja Uwierzytelnienia</h1>
-								<p>
-										Uwierzytelnienie to proces weryfikacji tożsamości użytkownika. Polega na sprawdzeniu, czy użytkownik jest tym, za kogo się podaje, poprzez weryfikację podanych danych uwierzytelniających, takich jak login i hasło, certyfikat czy token.
-								</p>
-						</div>
-						<img src="/img/vector213.png" alt="">
+					<div class="text-centered text-padding">
+						<h1>Implementacja Uwierzytelnienia</h1>
+						<p>
+							Uwierzytelnienie to proces weryfikacji tożsamości użytkownika. Polega na sprawdzeniu, czy użytkownik jest tym, za kogo się podaje, poprzez weryfikację podanych danych uwierzytelniających, takich jak login i hasło, certyfikat czy token.
+						</p>
+					</div>
+					<img src="/img/vector213.png" alt="">
 				</div>
- 			<div class="text-container lightWhite-container black-list no-margin-top">
- 					<div class="text-content">
- 							<h3>Podstawowe kroki do zaimplementowania uwierzytelnienia opartego na formularzach:</h3>
- 					</div>
- 					<div class="line"></div>
- 					<div class="page-header"></div>
- 					<div class="text-content">
- 							<h4>Krok 1: Dodanie pakietów NuGet</h4>
- 							<p>
- 									Aby zaimplementować uwierzytelnienie oparte na formularzach, należy dodać pakiet NuGet Microsoft.AspNetCore.Authentication oraz pakiet zawierający moduł uwierzytelniający dla konkretnego dostawcy, np. Microsoft.AspNetCore.Authentication.Cookies, jeśli chcemy użyć uwierzytelnienia opartego na plikach cookie.
- 							</p>
- 					</div>
- 					<div class="line"></div>
- 					<div class="page-header"></div>
- 					<div class="text-content">
-								<h4>Krok 2: Konfiguracja usługi uwierzytelniania</h4>
- 							<p>
- 									W pliku Startup.cs należy dodać konfigurację usługi uwierzytelniania w metodzie ConfigureServices. Można to zrobić, używając metody AddAuthentication i określając metodę uwierzytelnienia, jaką chcemy użyć. W przypadku uwierzytelnienia opartego na formularzach, można skorzystać z metody AddCookie.
- 							</p>
- 							<div class="code-block code-block-margin-top">
+				<div class="text-container lightWhite-container black-list no-margin-top">
+					<div class="text-centered">
+						<h3>Podstawowe kroki do zaimplementowania uwierzytelnienia opartego na formularzach:</h3>
+					</div>
+					<div class="line"></div>
+					<div class="page-header"></div>
+					<div>
+						<h4>Krok 1: Dodanie pakietów NuGet</h4>
+						<p>
+							Aby zaimplementować uwierzytelnienie oparte na formularzach, należy dodać pakiet NuGet Microsoft.AspNetCore.Authentication oraz pakiet zawierający moduł uwierzytelniający dla konkretnego dostawcy, np. Microsoft.AspNetCore.Authentication.Cookies, jeśli chcemy użyć uwierzytelnienia opartego na plikach cookie.
+						</p>
+					</div>
+					<div class="line"></div>
+					<div class="page-header"></div>
+					<div>
+						<h4>Krok 2: Konfiguracja usługi uwierzytelniania</h4>
+						<p>
+							W pliku Startup.cs należy dodać konfigurację usługi uwierzytelniania w metodzie ConfigureServices. Można to zrobić, używając metody AddAuthentication i określając metodę uwierzytelnienia, jaką chcemy użyć. W przypadku uwierzytelnienia opartego na formularzach, można skorzystać z metody AddCookie.
+						</p>
+						<div class="code-block code-block-margin-top">
 										<pre>
 												<code>
 services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -90,30 +160,30 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 		});
 												</code>
 										</pre>
- 							</div>
- 							<div class="line minus-margin-top"></div>
- 							<div class="page-header"></div>
-								<div class="text-content">
-										<h4>Krok 3: Konfiguracja uwierzytelniania w środowisku</h4>
-										<p>
-												Następnie należy skonfigurować uwierzytelnienie w środowisku. W pliku Startup.cs należy dodać wywołanie metody UseAuthentication w metodzie Configure.
-										</p>
-										<div class="code-block code-block-margin-top">
+						</div>
+						<div class="line minus-margin-top"></div>
+						<div class="page-header"></div>
+						<div>
+							<h4>Krok 3: Konfiguracja uwierzytelniania w środowisku</h4>
+							<p>
+								Następnie należy skonfigurować uwierzytelnienie w środowisku. W pliku Startup.cs należy dodać wywołanie metody UseAuthentication w metodzie Configure.
+							</p>
+							<div class="code-block code-block-margin-top">
 												<pre>
 														<code>
 app.UseAuthentication();
 														</code>
 												</pre>
-										</div>
-								</div>
- 							<div class="line minus-margin-top"></div>
- 							<div class="page-header"></div>
- 							<div class="text-content">
- 									<h4>Krok 4: Dodanie formularza logowania</h4>
- 									<p>
- 											Aby umożliwić użytkownikowi logowanie, należy dodać formularz logowania w widoku. W formularzu należy przesłać nazwę użytkownika i hasło do kontrolera, który przeprowadzi proces uwierzytelnienia.
- 									</p>
- 									<div class="code-block code-block-margin-top">
+							</div>
+						</div>
+						<div class="line minus-margin-top"></div>
+						<div class="page-header"></div>
+						<div>
+							<h4>Krok 4: Dodanie formularza logowania</h4>
+							<p>
+								Aby umożliwić użytkownikowi logowanie, należy dodać formularz logowania w widoku. W formularzu należy przesłać nazwę użytkownika i hasło do kontrolera, który przeprowadzi proces uwierzytelnienia.
+							</p>
+							<div class="code-block code-block-margin-top">
  											<pre>
  													<code>
 &lt;form method=&quot;post&quot; asp-controller=&quot;Account&quot; asp-action=&quot;Login&quot;&gt;
@@ -123,16 +193,16 @@ app.UseAuthentication();
 &lt;/form&gt;
  													</code>
  											</pre>
- 									</div>
- 							</div>
- 							<div class="line minus-margin-top"></div>
- 							<div class="page-header"></div>
- 							<div class="text-content">
- 									<h4>Krok 5: Konfiguracja autoryzacji</h4>
- 									<p>
- 											Aby skonfigurować autoryzację, należy dodać atrybut [Authorize] do kontrolerów lub akcji, które wymagają uwierzytelnienia. W przypadku uwierzytelnienia opartego na formularzach, można również użyć atrybutu [AllowAnonymous], aby umożliwić dostęp do niektórych akcji bez konieczności logowania.
- 									</p>
- 									<div class="code-block code-block-margin-top">
+							</div>
+						</div>
+						<div class="line minus-margin-top"></div>
+						<div class="page-header"></div>
+						<div>
+							<h4>Krok 5: Konfiguracja autoryzacji</h4>
+							<p>
+								Aby skonfigurować autoryzację, należy dodać atrybut [Authorize] do kontrolerów lub akcji, które wymagają uwierzytelnienia. W przypadku uwierzytelnienia opartego na formularzach, można również użyć atrybutu [AllowAnonymous], aby umożliwić dostęp do niektórych akcji bez konieczności logowania.
+							</p>
+							<div class="code-block code-block-margin-top">
  											<pre>
  													<code>
 [Authorize]
@@ -148,24 +218,25 @@ public class PublicController : Controller
 }
  													</code>
  											</pre>
- 									</div>
- 							</div>
- 					</div>
- 					<div class="minus-margin-top"></div>
- 			</div>
+							</div>
+						</div>
+					</div>
+					<div class="minus-margin-top"></div>
+				</div>
 				<div class="page-header"></div>
 				<div class="alert-card ">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								To tylko przykładowa implementacja uwierzytelnienia w ASP.NET Core. W zależności od wymagań aplikacji, można skorzystać z innych metod uwierzytelnienia, takich jak uwierzytelnianie tokenów JWT lub uwierzytelnianie przez platformę społecznościową (Facebook, Google, itp.). Implementacja tych metod również wymaga zainstalowania odpowiednich pakietów NuGet i skonfigurowania aplikacji.
-						</p>
+					<img src="/img/note.png" alt="">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						To tylko przykładowa implementacja uwierzytelnienia w ASP.NET Core. W zależności od wymagań aplikacji, można skorzystać z innych metod uwierzytelnienia, takich jak uwierzytelnianie tokenów JWT lub uwierzytelnianie przez platformę społecznościową (Facebook, Google, itp.). Implementacja tych metod również wymaga zainstalowania odpowiednich pakietów NuGet i skonfigurowania aplikacji.
+					</p>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Error_handling.html"><button>Dalej</button></a>
+					<a href="Error_handling.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
 </div>
 </body>

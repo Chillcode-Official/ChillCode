@@ -11,74 +11,129 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
-
-		<div class="roadmap-list">
-				<ol>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Bootstrap.html"><img class="icon-img-navbar" src="/img/bootstrap-icon.png" alt=""> Bootstrap</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/bootstrap-icon.png" alt="">Bootstrap</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
 						<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
 						<li><a href="Class.html">Klasa</a></li>
-						<li><a href="Text_styles.html">Style tekstowe</a></li>
+						<li class="is-selected"><a href="Text_styles.html">Style tekstowe</a></li>
 						<li><a href="Components.html">Komponenty</a></li>
-						<li><a href="Responsive_design_principles.html">Zasady responsywnego projektowania</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+									<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
 						<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
-				</ol>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="roadmap-list hide-roadmaplist">
+				<ol>
+			<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+			<li><a href="Class.html">Klasa</a></li>
+			<li class="is-selected"><a href="Text_styles.html">Style tekstowe</a></li>
+			<li><a href="Components.html">Komponenty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+						<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+			<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
 		</div>
 
-		<div class="content">
+		<div class="opacity-function padding-content">
+			<div class="content">
 				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Style Tekstowe</h1>
-								<p>
-										Style tekstowe w Bootstrap to zbiór klas CSS, które umożliwiają formatowanie tekstu na stronie internetowej. Bootstrap oferuje wiele klas, które umożliwiają dodanie stylów do elementów tekstowych, takich jak nagłówki, akapity, cytaty i wiele innych. Można zastosować różne style tekstu, takie jak rozmiar, waga, kolor, tło, obramowanie, wyrównanie, zaokrąglenie i wiele innych.
-								</p>
-						</div>
-						<img src="/img/vector166.png" alt="">
+					<div class="text-centered text-padding">
+						<h1>Style Tekstowe</h1>
+						<p>
+							Style tekstowe w Bootstrap to zbiór klas CSS, które umożliwiają formatowanie tekstu na stronie internetowej. Bootstrap oferuje wiele klas, które umożliwiają dodanie stylów do elementów tekstowych, takich jak nagłówki, akapity, cytaty i wiele innych. Można zastosować różne style tekstu, takie jak rozmiar, waga, kolor, tło, obramowanie, wyrównanie, zaokrąglenie i wiele innych.
+						</p>
+					</div>
+					<img src="/img/vector166.png" alt="">
 				</div>
 				<p class="text-container gray-container no-margin-top article tooltip highlight-container highlight-container-gray">
-						Stylowanie tekstu w Bootstrap odbywa się poprzez dodanie odpowiedniej klasy CSS do elementu tekstowego, na przykład
-						<span>&lth1&gt</span>,
-						<span>&ltp&gt</span>,
-						<span>&ltblockquot&gt</span> itp. Klasa CSS może być dodana bezpośrednio do elementu HTML lub do arkusza stylów CSS.
-						Bootstrap oferuje szereg stylów tekstowych, które można zastosować do różnych elementów na stronie internetowej. Oto kilka przykładów:
+					Stylowanie tekstu w Bootstrap odbywa się poprzez dodanie odpowiedniej klasy CSS do elementu tekstowego, na przykład
+					<span>&lth1&gt</span>,
+					<span>&ltp&gt</span>,
+					<span>&ltblockquot&gt</span> itp. Klasa CSS może być dodana bezpośrednio do elementu HTML lub do arkusza stylów CSS.
+					Bootstrap oferuje szereg stylów tekstowych, które można zastosować do różnych elementów na stronie internetowej. Oto kilka przykładów:
 				</p>
 				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big"  src="/img/icon_headline.png" alt=""> Nagłówki</h2>
-				<div class="double-elements">
-				<div class="text-container lightPink-container article tooltip fit-content">
-						<div class="text-content">
-								<p class="color-text-white">Bootstrap oferuje 6 poziomów nagłówków, które można stylizować przy użyciu klas</p>
-						</div>
-						<div class="line"></div>
-						<p>
-								<code><a pro-tip="Nagłówek pierwszego poziomu. Służy do oznaczenia najważniejszego tytułu lub sekcji na stronie.">h1 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nagłówek drugiego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek pierwszego poziomu, ale ważniejsza niż nagłówek trzeciego poziomu.">h2 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nagłówek trzeciego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek drugiego poziomu, ale ważniejsza niż nagłówek czwartego poziomu.">h3 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nagłówek czwartego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek trzeciego poziomu, ale ważniejsza niż nagłówek piątego poziomu.">h4 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nagłówek piątego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek czwartego poziomu, ale ważniejsza niż nagłówek szóstego poziomu.">h5 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nagłówek szóstego poziomu. Służy do oznaczenia najmniej ważnego tytułu lub sekcji na stronie.">h6 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						</p>
+				<div class="text-centered">
+					<h2><img class="icon-img-small"  src="/img/icon_headline.png" alt=""> Nagłówki</h2>
 				</div>
-				<div>
- 							<div class="code-block code-block-margin-top">
+				<div class="double-elements">
+					<div>
+						<div class="display-grid">
+							<div class="text-container lightPink-container">
+								<div class="text-centered">
+									<p class="color-text-white">Bootstrap oferuje 6 poziomów nagłówków, które można stylizować przy użyciu klas</p>
+								</div>
+								<div class="line"></div>
+								<div class="article tooltip">
+									<p>
+										<code><a pro-tip="Nagłówek pierwszego poziomu. Służy do oznaczenia najważniejszego tytułu lub sekcji na stronie.">h1 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+										<code><a pro-tip="Nagłówek drugiego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek pierwszego poziomu, ale ważniejsza niż nagłówek trzeciego poziomu.">h2 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+										<code><a pro-tip="Nagłówek trzeciego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek drugiego poziomu, ale ważniejsza niż nagłówek czwartego poziomu.">h3 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+										<code><a pro-tip="Nagłówek czwartego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek trzeciego poziomu, ale ważniejsza niż nagłówek piątego poziomu.">h4 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+										<code><a pro-tip="Nagłówek piątego poziomu. Służy do oznaczenia tytułu lub sekcji, która jest mniej ważna niż nagłówek czwartego poziomu, ale ważniejsza niż nagłówek szóstego poziomu.">h5 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+										<code><a pro-tip="Nagłówek szóstego poziomu. Służy do oznaczenia najmniej ważnego tytułu lub sekcji na stronie.">h6 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="display-grid">
+							<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 &lt;h1 class=&quot;h1&quot;&gt;Nag&lstrok;&oacute;wek pierwszego poziomu&lt;/h1&gt;
@@ -94,48 +149,51 @@
 &lt;h6 class=&quot;h6&quot;&gt;Nag&lstrok;&oacute;wek sz&oacute;stego poziomu&lt;/h6&gt;
 								</code>
 						</pre>
- 							</div>
- 							<div class="dropdown minus-margin-top">
- 									<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
- 									<div class="dropdown-content">
- 											<div class="output output-content">
- 													<h1 class="color-text-gray">Nagłówek h1</h1>
+							</div>
+						</div>
+						<div class="dropdown minus-margin-top">
+							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<div class="dropdown-content">
+								<div class="output output-content">
+									<h1 class="color-text-gray">Nagłówek h1</h1>
 
- 													<h2 class="color-text-gray">Nagłówek h2</h2>
+									<h2 class="color-text-gray">Nagłówek h2</h2>
 
- 													<h3 class="color-text-gray">Nagłówek h3</h3>
+									<h3 class="color-text-gray">Nagłówek h3</h3>
 
- 													<h4 class="color-text-gray">Nagłówek h4</h4>
+									<h4 class="color-text-gray">Nagłówek h4</h4>
 
- 													<h5 class="color-text-gray">Nagłówek h5</h5>
+									<h5 class="color-text-gray">Nagłówek h5</h5>
 
- 													<h6 class="color-text-gray">Nagłówek h6</h6>
- 											</div>
- 									</div>
- 							</div>
-				</div>
+									<h6 class="color-text-gray">Nagłówek h6</h6>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big"  src="/img/icon_styleText.png" alt=""> Style tekstu</h2>
+				<div class="text-centered">
+					<h2><img class="icon-img-small"  src="/img/icon_styleText.png" alt=""> Style tekstu</h2>
+				</div>
 				<div class="text-container azure-container article tooltip">
-						<div class="text-content">
-								<p>Bootstrap oferuje wiele klas, które można zastosować do tekstu, takich jak:</p>
-						</div>
-						<div class="line"></div>
-						<p>
-								<code><a pro-tip="Dodaje większy rozmiar czcionki i zwiększa interlinię dla lepszej czytelności, co sprawia, że tekst wygląda bardziej płynnie i przyjemniej dla oka.">lead <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Dodaje bardzo duży rozmiar czcionki i wyróżnia tekst, sprawiając, że jest on głównym elementem na stronie.">display-1 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Dodaje pogrubienie do tekstu, co może pomóc w jego wyróżnieniu i podkreśleniu ważnych informacji.">font-weight-bold <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Zmniejsza kontrast tekstu, co sprawia, że wygląda on mniej wyraźnie i jest bardziej subtelny. Często używany do wyróżnienia tekstu drugoplanowego.">text-muted <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor niebieski dla tekstu, który jest ustawiony jako podstawowy kolor w projekcie Bootstrap.">text-primary <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor szary dla tekstu, który jest używany jako kolor drugoplanowy.">text-secondary <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor zielony dla tekstu, który może oznaczać sukces, powodzenie lub dobry wynik.">text-success <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor czerwony dla tekstu, który może oznaczać niebezpieczeństwo, błąd lub niepowodzenie.">text-danger <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor żółty dla tekstu, który może oznaczać ostrzeżenie, niepewność lub ryzyko.">text-warning <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje kolor niebieski dla tekstu, który może oznaczać informację, wiedzę lub wskazówkę.">text-info <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje ciemniejszy kolor dla tekstu, co sprawia, że wygląda on bardziej elegancko i formalnie.">text-dark <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-								<code><a pro-tip="Nadaje biały kolor dla tekstu, który może być używany na ciemnym tle lub jako kontrast do kolorowego tła.">text-white <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-						</p>
+					<div class="text-centered">
+						<p>Bootstrap oferuje wiele klas, które można zastosować do tekstu, takich jak:</p>
+					</div>
+					<div class="line"></div>
+					<p>
+						<code><a pro-tip="Dodaje większy rozmiar czcionki i zwiększa interlinię dla lepszej czytelności, co sprawia, że tekst wygląda bardziej płynnie i przyjemniej dla oka.">lead <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Dodaje bardzo duży rozmiar czcionki i wyróżnia tekst, sprawiając, że jest on głównym elementem na stronie.">display-1 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Dodaje pogrubienie do tekstu, co może pomóc w jego wyróżnieniu i podkreśleniu ważnych informacji.">font-weight-bold <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Zmniejsza kontrast tekstu, co sprawia, że wygląda on mniej wyraźnie i jest bardziej subtelny. Często używany do wyróżnienia tekstu drugoplanowego.">text-muted <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor niebieski dla tekstu, który jest ustawiony jako podstawowy kolor w projekcie Bootstrap.">text-primary <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor szary dla tekstu, który jest używany jako kolor drugoplanowy.">text-secondary <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor zielony dla tekstu, który może oznaczać sukces, powodzenie lub dobry wynik.">text-success <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor czerwony dla tekstu, który może oznaczać niebezpieczeństwo, błąd lub niepowodzenie.">text-danger <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor żółty dla tekstu, który może oznaczać ostrzeżenie, niepewność lub ryzyko.">text-warning <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje kolor niebieski dla tekstu, który może oznaczać informację, wiedzę lub wskazówkę.">text-info <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje ciemniejszy kolor dla tekstu, co sprawia, że wygląda on bardziej elegancko i formalnie.">text-dark <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a pro-tip="Nadaje biały kolor dla tekstu, który może być używany na ciemnym tle lub jako kontrast do kolorowego tła.">text-white <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					</p>
 				</div>
 				<div class="code-block">
 						<pre>
@@ -155,32 +213,34 @@
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<p style="font-size: 1.25rem; font-weight: 300;">To jest wiodący tekst.</p>
-										<h1 style="font-size: 3rem; font-weight: 300; line-height: 1.2; color: #4b4848;">To jest tekst z dużą czcionką.</h1>
-										<p style="font-weight: bold;">To jest pogrubiony tekst.</p>
-										<p style="color: #6c757d;">To jest tekst w kolorze szarym.</p>
-										<p style="color: #007bff;">To jest tekst w kolorze głównym (domyślnie niebieskim).</p>
-										<p style="color: #28a745;">To jest tekst w kolorze zielonym.</p>
-										<p style="color: #dc3545;">To jest tekst w kolorze czerwonym.</p>
-										<p style="color: #d5a40f;">To jest tekst w kolorze żółtym.</p>
-										<p style="color: #17a2b8;">To jest tekst w kolorze niebieskim (odpowiadającym kolorowi informacji).</p>
-										<p style="color: #343a40;">To jest tekst w ciemnym kolorze.</p>
-										<p style="color: #fff; background-color: #343a40;">To jest tekst w białym kolorze na ciemnym tle.</p>
-								</div>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content">
+							<p style="font-size: 1.25rem; font-weight: 300;">To jest wiodący tekst.</p>
+							<h1 style="font-size: 3rem; font-weight: 300; line-height: 1.2; color: #4b4848;">To jest tekst z dużą czcionką.</h1>
+							<p style="font-weight: bold;">To jest pogrubiony tekst.</p>
+							<p style="color: #6c757d;">To jest tekst w kolorze szarym.</p>
+							<p style="color: #007bff;">To jest tekst w kolorze głównym (domyślnie niebieskim).</p>
+							<p style="color: #28a745;">To jest tekst w kolorze zielonym.</p>
+							<p style="color: #dc3545;">To jest tekst w kolorze czerwonym.</p>
+							<p style="color: #d5a40f;">To jest tekst w kolorze żółtym.</p>
+							<p style="color: #17a2b8;">To jest tekst w kolorze niebieskim (odpowiadającym kolorowi informacji).</p>
+							<p style="color: #343a40;">To jest tekst w ciemnym kolorze.</p>
+							<p style="color: #fff; background-color: #343a40;">To jest tekst w białym kolorze na ciemnym tle.</p>
 						</div>
+					</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big"  src="/img/icon_list(1).png" alt=""> Listy</h2>
-				<p class="text-container lightPink-container article tooltip">
-						<i class="highlight-text">Lista punktowana</i> oraz
-						<i class="highlight-text">Lista numerowana</i> Bootstrap oferuje klasę <code><a pro-tip="Ta klasa usuwa domyślne stylowanie listy i pozbywa się kropek przed elementami listy. Można ją zastosować, jeśli chcemy utworzyć niestylizowaną listę, która ma po prostu zawierać tekst lub elementy.">list-unstyled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-						która usuwa domyślne style CSS z listy punktowanej lub numerowanej. Można również użyć klas
-						list-inline i list-inline-item do tworzenia list poziomych.
-						<code><a pro-tip="Ta klasa zmienia układ elementów listy na liniowy, tzn. że elementy są ustawione w jednej linii. Może być używana do tworzenia menu lub zestawu przycisków, które mają być ustawione obok siebie.">list-inline <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz
-						<code><a pro-tip="Ta klasa jest używana w połączeniu z list-inline i służy do stylizowania elementów listy w układzie liniowym. Każdy element listy musi mieć tę klasę, aby został wyświetlony obok innych elementów listy w jednej linii.">list-inline-item <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<div class="text-centered">
+					<h2><img class="icon-img-small"  src="/img/icon_list(1).png" alt=""> Listy</h2>
+				</div>
+				<p class="text-container lightPink-container article tooltip line-height-plus">
+					<i class="highlight-text">Lista punktowana</i> oraz
+					<i class="highlight-text">Lista numerowana</i> Bootstrap oferuje klasę <code><a pro-tip="Ta klasa usuwa domyślne stylowanie listy i pozbywa się kropek przed elementami listy. Można ją zastosować, jeśli chcemy utworzyć niestylizowaną listę, która ma po prostu zawierać tekst lub elementy.">list-unstyled <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+					która usuwa domyślne style CSS z listy punktowanej lub numerowanej. Można również użyć klas
+					list-inline i list-inline-item do tworzenia list poziomych.
+					<code><a pro-tip="Ta klasa zmienia układ elementów listy na liniowy, tzn. że elementy są ustawione w jednej linii. Może być używana do tworzenia menu lub zestawu przycisków, które mają być ustawione obok siebie.">list-inline <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz
+					<code><a pro-tip="Ta klasa jest używana w połączeniu z list-inline i służy do stylizowania elementów listy w układzie liniowym. Każdy element listy musi mieć tę klasę, aby został wyświetlony obok innych elementów listy w jednej linii.">list-inline-item <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -206,34 +266,36 @@
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output black-list output-list-black">
-										<ul>
-												<li>Punkt 1</li>
-												<li>Punkt 2</li>
-												<li>Punkt 3</li>
-										</ul>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output black-list output-list-black">
+							<ul>
+								<li>Punkt 1</li>
+								<li>Punkt 2</li>
+								<li>Punkt 3</li>
+							</ul>
 
-										<ol>
-												<li>Numer 1</li>
-												<li>Numer 2</li>
-												<li>Numer 3</li>
-										</ol>
+							<ol>
+								<li>Numer 1</li>
+								<li>Numer 2</li>
+								<li>Numer 3</li>
+							</ol>
 
-										<ul>
-												<li>Element 1</li>
-												<li>Element 2</li>
-												<li>Element 3</li>
-										</ul>
-								</div>
+							<ul>
+								<li>Element 1</li>
+								<li>Element 2</li>
+								<li>Element 3</li>
+							</ul>
 						</div>
+					</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h2><img class="icon-img-big"  src="/img/icon_quotes(1).png" alt=""> Cytaty</h2>
-				<p class="text-container azure-container article tooltip">
-						Bootstrap oferuje klasę <code><a pro-tip="Ta klasa jest używana do utworzenia bloku cytatu. Blok cytatu może zawierać tekst lub inne elementy, które chcemy wyróżnić jako cytat. Domyślnie blok cytatu jest wyrównany z lewej strony, ma wcięcie i ramkę, która podkreśla cytowany tekst.">blockquote <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
-						która umożliwia tworzenie bloków z cytatem. Można również dodać autorstwo cytatu przy użyciu klasy takiej jak <code><a pro-tip="Ta klasa jest używana do dodawania stopki do bloku cytatu. W stopce można umieścić informacje o autorze cytatu lub źródle cytatu. Domyślnie stopka cytatu jest wyświetlana po prawej stronie bloku cytatu.">blockquote-footer <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
+				<div class="text-centered">
+					<h2><img class="icon-img-small"  src="/img/icon_quotes(1).png" alt=""> Cytaty</h2>
+				</div>
+				<p class="text-container azure-container article tooltip line-height-plus">
+					Bootstrap oferuje klasę <code><a pro-tip="Ta klasa jest używana do utworzenia bloku cytatu. Blok cytatu może zawierać tekst lub inne elementy, które chcemy wyróżnić jako cytat. Domyślnie blok cytatu jest wyrównany z lewej strony, ma wcięcie i ramkę, która podkreśla cytowany tekst.">blockquote <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>,
+					która umożliwia tworzenie bloków z cytatem. Można również dodać autorstwo cytatu przy użyciu klasy takiej jak <code><a pro-tip="Ta klasa jest używana do dodawania stopki do bloku cytatu. W stopce można umieścić informacje o autorze cytatu lub źródle cytatu. Domyślnie stopka cytatu jest wyświetlana po prawej stronie bloku cytatu.">blockquote-footer <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -250,44 +312,45 @@
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-content">
-										<blockquote class="blockquote">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</blockquote>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-content">
+							<blockquote class="blockquote">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</blockquote>
 
-										<blockquote class="blockquote">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <br>
-												<footer class="blockquote-footer">Autor cytatu</footer>
-										</blockquote>
-								</div>
+							<blockquote class="blockquote">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <br>
+								<footer class="blockquote-footer">Autor cytatu</footer>
+							</blockquote>
 						</div>
+					</div>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="alert-card ">
-						<img style="width: 50px;" src="/img/note.png" alt="">
-						<b>Note</b>
-						<div class="line"></div>
-						<p>
-								Dzięki stylom tekstowym w Bootstrap 5 można szybko i łatwo zmienić wygląd tekstu na stronie internetowej, bez konieczności pisania dużo kodu CSS.
-						</p>
+					<img src="/img/note.png" alt="">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						Dzięki stylom tekstowym w Bootstrap 5 można szybko i łatwo zmienić wygląd tekstu na stronie internetowej, bez konieczności pisania dużo kodu CSS.
+					</p>
 				</div>
 				<div class="alert-card  alert-card-blue">
-						<img style="width: 50px;" src="/img/emergency.png" alt="">
-						<b>Ważne</b>
-						<div class="line"></div>
-						<p>
-								To tylko kilka przykładów stylów tekstowych oferowanych przez Bootstrap. Można również zastosować wiele innych, aby uzyskać różne style tekstu na stronie internetowej.
-						</p>
-						<p style="float: left">
-								Więcej znajdziesz tutaj: <a style="color: #7a7fff;" target="_blank" href="https://getbootstrap.com/docs/5.3/components/alerts/">Bootstrap Docs</a>
-						</p>
+					<img style="width: 50px;" src="/img/emergency.png" alt="">
+					<b>Ważne</b>
+					<div class="line"></div>
+					<p>
+						To tylko kilka przykładów stylów tekstowych oferowanych przez Bootstrap. Można również zastosować wiele innych, aby uzyskać różne style tekstu na stronie internetowej.
+					</p>
+					<p style="float: left">
+						Więcej znajdziesz tutaj: <a style="color: #7a7fff;" target="_blank" href="https://getbootstrap.com/docs/5.3/components/alerts/">Bootstrap Docs</a>
+					</p>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Components.html"><button>Dalej</button></a>
+					<a href="Components.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
 </div>
 </body>

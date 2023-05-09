@@ -4,81 +4,468 @@
 		<meta charset="UTF-8">
 		<title>Konstruktory C#</title>
 		<link rel="stylesheet" href="../Basic.css"/>
+	<link rel="icon" href="/img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Highlight JS init: -->
-		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-		<script src="/Highlight/highlight.min.js"></script>
-		<script>hljs.highlightAll();</script>
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Csharp.html"><img class="icon-img-navbar" src="/img/c-sharp.png" alt=""> C#</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/c-sharp.png" alt="">C#</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a> </li>
+						<li><a href="Comments.html">Komentarze</a> </li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
+						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+						<li><a href="Interfaces.html">Interfejsy</a></li>
+						<li><a href="Static_classes.html">Klasy statyczne</a></li>
+						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Przestrzenie nazw</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="JSON.html">JSON</a></li>
+						<li><a href="XML.html">XML</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
+	</div>
 
-		<div class="roadmap-list">
+		<div class="roadmap-list hide-roadmaplist">
 				<ol>
 						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="First_program.html">Pierwszy program</a> </li>
 						<li><a href="Comments.html">Komentarze</a> </li>
-						<li><a href="Data_types.html">Typy danych</a></li>
-						<li><a href="Variables.html">Zmienne</a></li>
-						<li><a href="Fields.html">Pola</a></li>
-						<li><a href="Properties.html">Właściwości</a></li>
-						<li><a href="Constant.html">Stałe</a></li>
-						<li><a href="Methods.html">Metody</a></li>
-						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-						<li><a href="Loops.html">Pętle</a></li>
-						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Collections.html">Kolekcje</a></li>
-						<li><a href="Classes.html">Klasy</a></li>
-						<li><a href="Inheritance.html">Dziedziczenie</a></li>
-						<li><a href="Polymorphism.html">Polimorfizm</a></li>
-						<li><a href="Type_conversion.html">Konwersja typów</a></li>
-						<li><a href="String_types.html">Typy łańcuchowe</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
 						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
 						<li><a href="Interfaces.html">Interfejsy</a></li>
 						<li><a href="Static_classes.html">Klasy statyczne</a></li>
 						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
-						<li><a href="Namespaces.html">Przestrzenie nazw</a></li>
-						<li><a href="Exceptions.html">Wyjątki</a></li>
-						<li><a href="Generic_types.html">Typy generyczne</a></li>
+					<li onclick="rotateTriangle(this)">
+						<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Przestrzenie nazw</a>
+						<div class="dropdown-content show">
+							<ul class="navbar-list-none display-inline-grid">
+								<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
+								<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+								<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+							</ul>
+						</div>
+					</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="JSON.html">JSON</a></li>
 						<li><a href="XML.html">XML</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
 		</div>
 
-		<div class="content">
+		<div class="opacity-function padding-content">
+			<div class="content">
 				<div class="section-with-image">
-						<div class="text-content">
-						<h1>Przestrzenie Nazw W Języku C#</h1>
+					<div class="text-centered">
+						<h1>Przestrzenie Nazw</h1>
 						<p>
-								Przestrzenie nazw w języku C# służą do organizowania typów i składowych w programie.
-								Dzięki przestrzeniom nazw można uniknąć konfliktów nazw między różnymi elementami
-								programu i ułatwić jego rozwijanie. Przestrzenie nazw są tworzone za pomocą słowa kluczowego
-								namespace i mogą zawierać typy, składowe i inne przestrzenie nazw. Typy i składowe są importowane
-								do programu za pomocą instrukcji using.
+							Przestrzenie nazw w języku C# służą do organizowania typów i składowych w programie.
+							Dzięki przestrzeniom nazw można uniknąć konfliktów nazw między różnymi elementami
+							programu i ułatwić jego rozwijanie. Przestrzenie nazw są tworzone za pomocą słowa kluczowego
+							namespace i mogą zawierać typy, składowe i inne przestrzenie nazw. Typy i składowe są importowane
+							do programu za pomocą instrukcji using.
 						</p>
-						</div>
-						<img src="/img/vector68.png" alt="">
+					</div>
+					<img src="/img/vector68.png" alt="">
 				</div>
-				<p class="text-container azure-container">
-						Deklarowanie przestrzeni nazw polega na określeniu nazwy przestrzeni i zawartości, która ma być
-						z nią powiązana. Przykład deklaracji przestrzeni nazw:
+				<p class="text-container azure-container no-margin-top">
+					Deklarowanie przestrzeni nazw polega na określeniu nazwy przestrzeni i zawartości, która ma być
+					z nią powiązana. Przykład deklaracji przestrzeni nazw:
 				</p>
-				<div class="code-block">
+				<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 namespace przykladowa_nazwa
 {
 		class MojaKlasa
@@ -90,11 +477,11 @@ namespace przykladowa_nazwa
 						</pre>
 				</div>
 				<p class="text-container azure-container">
-						Dzięki przestrzeniom nazw możemy uniknąć konfliktów nazw między różnymi elementami programu, a także łatwiej organizować i rozwijać kod.
+					Dzięki przestrzeniom nazw możemy uniknąć konfliktów nazw między różnymi elementami programu, a także łatwiej organizować i rozwijać kod.
 				</p>
-				<div class="code-block">
+				<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 using System;
 using Biblioteka1;
 using Biblioteka2;
@@ -137,230 +524,22 @@ namespace Biblioteka2
 				}
 		}
 }
-
-
-//output:
-
-To jest metoda w przestrzeni nazw Biblioteka1
-
-To jest metoda w przestrzeni nazw Biblioteka2
 								</code>
 						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>To jest metoda w przestrzeni nazw Biblioteka1</p>
+							<p>To jest metoda w przestrzeni nazw Biblioteka2</p>
+						</div>
+					</div>
 				</div>
 				<div class="big-page-header"></div>
-				<h1>Słowo Kluczowe using</h1>
-				<div class="section-with-image">
-						<p>
-								Słowo kluczowe using służy do importowania elementów z przestrzeni nazw do programu, takich
-								jak typy i składowe. Dzięki using możemy skorzystać z typów z innych przestrzeni nazw bez
-								konieczności podawania pełnej nazwy przestrzeni nazw przed każdym użyciem typu.
-						</p>
-						<img src="/img/vector69.png" alt="">
-				</div>
-				<p class="text-container orange-container article tooltip">
-						Za każdym razem, jeśli chcemy dodać przestrzeń nazw, używamy deraktywy <code><a pro-tip="hej">using</a></code>
-				</p>
-				<div class="code-block">
-						<pre>
-								<code>
-using System; //importujemy elementy z przestrzeni nazw System
-
-namespace MyApp
-{
-		class Program
-		{
-				static void Main(string[] args)
-				{
-						Console.WriteLine("Hello World!");  //nie musimy pisać System.Console.WriteLine
-				}
-		}
-}
-								</code>
-						</pre>
-				</div>
-				<p class="text-container orange-container">
-						Jeśli chcemy skorzystać z typów z różnych przestrzeni nazw, które mają takie same nazwy, możemy
-						użyć pełnej nazwy z przestrzenią nazw, aby uniknąć konfliktów.
-				</p>
-				<div class="code-block">
-						<pre>
-								<code>
-using MojaBiblioteka1;
-using MojaBiblioteka2;
-
-namespace MojaAplikacja
-{
-		class Program
-		{
-				static void Main(string[] args)
-				{
-						MojaBiblioteka1.MojaKlasa obiekt1 = new MojaBiblioteka1.MojaKlasa();
-
-						MojaBiblioteka2.MojaKlasa obiekt2 = new MojaBiblioteka2.MojaKlasa();
-				}
-		}
-}
-								</code>
-						</pre>
-				</div>
-				<div class="alert-card">
-						<img src="/img/warning.png" alt="">
-						<b>Uwaga</b>
-						<p class="article tooltip">
-								Możemy również używać using do importowanie typów <code><a pro-tip="">anonimowych</a></code>
-								oraz <code><a pro-tip="">Extension method</a></code>.
-						</p>
-				</div>
-				<div class="big-page-header"></div>
-				<h1>Zagnieżdzone przestrzenie nazw</h1>
-				<div class="section-with-image">
-						<p>
-								Zagnieżdzone przestrzenie nazw to przestrzenie nazw, które znajdują się wewnątrz innych przestrzeni
-								nazw. Tworzą one hierarchię przestrzeni nazw, co pozwala na lepsze organizowanie i rozwijanie kodu.
-						</p>
-						<img src="/img/vector47.png" alt="">
-				</div>
-				<p class="text-container lightPink-container no-margin-top">
-						Aby stworzyć zagnieżdżoną przestrzeń nazw, umieszczamy jedną przestrzeń nazw wewnątrz innej przestrzeni nazw.
-				</p>
-				<div class="code-block">
-						<pre>
-								<code>
-namespace MojaBiblioteka
-{
-		class MojaKlasa1
-		{
-				/* Jakiś kod do wykonania */
-		}
-
-
-		namespace BibliotekaPodrzędna
-		{
-				class MojaKlasa2
-				{
-						/* Jakiś kod do wykonania */
-				}
-		}
-}                </code>
-						</pre>
-				</div>
-				<p class="text-container lightPink-container">
-						Oto przykład programu w języku C#, w którym korzystamy z zagnieżdżonych przestrzeni nazw:
-				</p>
-				<div class="code-block">
-						<pre>
-								<code>
-using System;
-using MojaBiblioteka.Narzedzia;
-
-namespace MojaAplikacja
-{
-		class Program
-		{
-				static void Main(string[] args)
-				{
-						Console.WriteLine("Witaj świecie!");
-
-						MojaBiblioteka.DostepDoDanych.MojKlasa myObject1 = new MojaBiblioteka.DostepDoDanych.MojKlasa();
-						myObject1.MojMetoda();
-						myObject1.MojMetoda2();
-
-
-						MojaBiblioteka.LogikaBiznesowa.MojKlasa myObject2 = new MojaBiblioteka.LogikaBiznesowa.MojKlasa();
-						myObject2.MojMetoda();
-						myObject2.MojMetoda2();
-
-						PomocnikStringow.OdwrocString("Witaj świecie!");
-				}
-		}
-}
-
-namespace MojaBiblioteka
-{
-		namespace DostepDoDanych
-		{
-				class MojKlasa
-				{
-						public void MojMetoda()
-						{
-								Console.WriteLine("To jest MojMetoda z przestrzeni nazw DostepDoDanych.");
-						}
-
-						public void MojMetoda2()
-						{
-								Console.WriteLine("To jest MojMetoda2 z przestrzeni nazw DostepDoDanych.");
-						}
-				}
-		}
-
-		namespace LogikaBiznesowa
-		{
-				class MojKlasa
-				{
-						public void MojMetoda()
-						{
-								Console.WriteLine("To jest MojMetoda z przestrzeni nazw LogikaBiznesowa.");
-						}
-
-						public void MojMetoda2()
-						{
-								Console.WriteLine("To jest MojMetoda2 z przestrzeni nazw LogikaBiznesowa.");
-						}
-				}
-		}
-
-		namespace Narzedzia
-		{
-				public static class PomocnikStringow
-				{
-						public static void OdwrocString(string s)
-						{
-								char[] charArray = s.ToCharArray();
-								Array.Reverse(charArray);
-								Console.WriteLine(new string(charArray));
-						}
-				}
-		}
-}
-
-
-//output:
-
-To jest MojMetoda z przestrzeni nazw DostepDoDanych.
-
-To jest MojMetoda2 z przestrzeni nazw DostepDoDanych.
-
-To jest MojMetoda z przestrzeni nazw LogikaBiznesowa.
-
-To jest MojMetoda2 z przestrzeni nazw LogikaBiznesowa.
-
-!eiceiwś jatiW
-
-								</code>
-						</pre>
-				</div>
-				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
-						<b>Wyjasnienie</b>
-						<p>
-								W tym przykładzie mamy trzy zagnieżdżone przestrzenie nazw: MojaBiblioteka.DostepDoDanych,
-								MojaBiblioteka.LogikaBiznesowa oraz MojaBiblioteka.Narzedzia. W każdej z nich znajdują się
-								odpowiednie klasy i metody, które odpowiadają za różne funkcjonalności programu. W metodzie
-								Main korzystamy z tych klas i metod za pomocą pełnej nazwy z przestrzeni nazw.
-								Dzięki zagnieżdżonym przestrzeniom nazw, kod jest lepiej zorganizowany i łatwiejszy w utrzymaniu.
-						</p>
-				</div>
-				<div class="alert-card">
-						<img src="/img/warning.png" alt="">
-						<b>Uwaga</b>
-						<p>
-								Zagnieżdzone przestrzenie nazw pozwalają na lepsze rozdzielenie kodu w aplikacji, co ułatwia
-								jego utrzymanie i rozwijanie. Możemy np. oddzielić elementy dotyczące bazy danych od elementów
-								dotyczących interfejsu użytkownika.
-						</p>
-				</div>
 				<div class="btn">
-						<a href="Exceptions.html"><button>Dalej</button></a>
+					<a href="The_using_keyword.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
-</div>>
+</div>

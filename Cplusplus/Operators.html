@@ -11,23 +11,113 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Cpp.html"><img class="icon-img-navbar" src="/img/cplusplus-logo.png" alt=""> C++</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/cplusplus-logo.png" alt="">C++</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li class="is-selected"><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
+	</div>
 
-		<div class="roadmap-list">
+		<div class="roadmap-list hide-roadmaplist">
 				<ol>
 						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
@@ -35,32 +125,92 @@
 						<li><a href="Comments.html">Komentarze</a></li>
 						<li><a href="Variables.html">Zmienne</a></li>
 						<li><a href="Data_types.html">Typy danych</a></li>
-						<li><a href="Operators.html">Operatory</a></li>
-						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-						<li><a href="Loops.html">Pętle</a></li>
+						<li class="is-selected"><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Functions.html">Funkcje</a></li>
-						<li><a href="Arguments.html">Argumenty</a></li>
-						<li><a href="Return_values.html">Wartości zwracane</a></li>
-						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Indicators.html">Wskaźniki</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
 		</div>
 
-		<div class="content">
+		<div class="opacity-function padding-content">
+			<div class="content">
 				<div class="section-with-image">
-						<div class="text-content">
-								<h1>Operatory</h1>
-								<p>
-										Operator w języku C++ to symbol, który umożliwia manipulowanie danymi i wykonywanie operacji na zmiennych. W C++ jest wiele rodzajów operatorów. C++ umożliwia przeciążanie operatorów, co oznacza, że można ponownie zdefiniować zachowanie operatora dla niestandardowego typu danych.
-								</p>
-						</div>
-						<img src="/img/vector182.png" alt="">
+					<div class="text-centered text-padding">
+						<h1>Operatory</h1>
+						<p>
+							Operator w języku C++ to symbol, który umożliwia manipulowanie danymi i wykonywanie operacji na zmiennych. W C++ jest wiele rodzajów operatorów. C++ umożliwia przeciążanie operatorów, co oznacza, że można ponownie zdefiniować zachowanie operatora dla niestandardowego typu danych.
+						</p>
+					</div>
+					<img src="/img/vector182.png" alt="">
 				</div>
-				<h2><img class="icon-img-big" src="/img/icon_book(4).png" alt=""> Operatory przypisania</h2>
-				<div class="page-header"></div>
+				<div class="big-page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_book(4).png" alt=""> Operatory przypisania</h3>
+				</div>
 				<p class="text-container light-container color-text-gray">
-						W C++ operatory przypisania umożliwiają przypisanie wartości do zmiennej lub obiektu przy użyciu jednego z operatorów przypisania. Dostępne operatory przypisania to:
+					W C++ operatory przypisania umożliwiają przypisanie wartości do zmiennej lub obiektu przy użyciu jednego z operatorów przypisania. Dostępne operatory przypisania to:
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -89,10 +239,11 @@ a ^= 5;     // a = a ^ 5   (bitowe "xor" z wartością 5)
 								</code>
 						</pre>
 				</div>
-				<h2><img class="icon-img-big" src="/img/icon_arithmetic(2).png" alt=""> Operatory arytmetyczne</h2>
-				<div class="page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_arithmetic(2).png" alt=""> Operatory arytmetyczne</h3>
+				</div>
 				<p class="text-container light-container color-text-gray">
-						Operatory arytmetyczne w C++ umożliwiają wykonywanie operacji matematycznych na zmiennych. W C++ dostępne są następujące operatory arytmetyczne:
+					Operatory arytmetyczne w C++ umożliwiają wykonywanie operacji matematycznych na zmiennych. W C++ dostępne są następujące operatory arytmetyczne:
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -115,10 +266,11 @@ b--;              // dekrementacja (zmniejszenie o 1)
 								</code>
 						</pre>
 				</div>
-				<h2><img class="icon-img-big" src="/img/icon_porownanie.png" alt=""> Operatory porównania</h2>
-				<div class="page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_porownanie.png" alt=""> Operatory porównania</h3>
+				</div>
 				<p class="text-container light-container color-text-gray">
-						W C++ operatory porównania umożliwiają porównywanie dwóch wartości i zwracanie wyniku w postaci wartości logicznej true/false. Operator porównania zwraca wartość true, jeśli warunek jest spełniony, a false w przeciwnym przypadku. Dostępne operatory porównania to:
+					W C++ operatory porównania umożliwiają porównywanie dwóch wartości i zwracanie wyniku w postaci wartości logicznej true/false. Operator porównania zwraca wartość true, jeśli warunek jest spełniony, a false w przeciwnym przypadku. Dostępne operatory porównania to:
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -140,10 +292,11 @@ result = (a <= b);          // false, ponieważ a jest mniejsze bądź równe b
 								</code>
 						</pre>
 				</div>
-				<h2><img class="icon-img-big" src="/img/icon_logic.png" alt=""> Operatory logiczne</h2>
-				<div class="page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_logic.png" alt=""> Operatory logiczne</h3>
+				</div>
 				<p class="text-container light-container color-text-gray">
-						Operatory logiczne w języku C++ służą do porównywania wartości logicznych (typu bool) i zwracają wartości logiczne. Są one używane do tworzenia warunków logicznych, które umożliwiają wykonywanie różnych działań w zależności od spełnienia lub niespełnienia warunków.
+					Operatory logiczne w języku C++ służą do porównywania wartości logicznych (typu bool) i zwracają wartości logiczne. Są one używane do tworzenia warunków logicznych, które umożliwiają wykonywanie różnych działań w zależności od spełnienia lub niespełnienia warunków.
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -184,28 +337,29 @@ int main() {
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-						<div class="dropdown-content">
-								<div class="output output-padding output-content">
-										<p>Oba warunki sa spelnione</p>
-										<p>Przynajmniej jeden warunek jest spelniony</p>
-										<p>Zmienna b ma wartosc false</p>
-								</div>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>Oba warunki sa spelnione</p>
+							<p>Przynajmniej jeden warunek jest spelniony</p>
+							<p>Zmienna b ma wartosc false</p>
 						</div>
+					</div>
 				</div>
 				<div class="page-header"></div>
 				<div class="alert-card  alert-card-blue">
-						<img style="width: 50px;" src="/img/emergency.png" alt="">
-						<b>Ważne</b>
-						<div class="line"></div>
-						<p>
-								Operatorzy w języku C++ są bardzo ważne, ponieważ pozwalają na wykonywanie różnych działań na danych i ułatwiają pisanie skutecznych i wydajnych programów. Zrozumienie, jak działają różne operatory, jest kluczowe dla pisania poprawnego i efektywnego kodu w języku C++.
-						</p>
+					<img style="width: 50px;" src="/img/emergency.png" alt="">
+					<b>Ważne</b>
+					<div class="line"></div>
+					<p>
+						Operatorzy w języku C++ są bardzo ważne, ponieważ pozwalają na wykonywanie różnych działań na danych i ułatwiają pisanie skutecznych i wydajnych programów. Zrozumienie, jak działają różne operatory, jest kluczowe dla pisania poprawnego i efektywnego kodu w języku C++.
+					</p>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Conditional_statements.html"><button>Dalej</button></a>
+					<a href="Conditional_statements.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
 </div>
 </body>

@@ -11,96 +11,255 @@
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 	<div class="navbar">
-		<section>
-			<ul>
-				<button><li><a href="../EduBear.html">Home</a></li></button>
-				<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-				<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-				<button><li><a href="/About/About.html">About me</a></li></button>
-			</ul>
-		</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Cpp.html"><img class="icon-img-navbar" src="/img/cplusplus-logo.png" alt=""> C++</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/cplusplus-logo.png" alt="">C++</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li class="is-selected"><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 
 	<div class="roadmap-list hide-roadmaplist">
-		<ol>
-			<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
-			<li><a href="Quick_start.html">Szybki start</a></li>
-			<li><a href="First_program.html">Pierwszy program</a></li>
-			<li><a href="Comments.html">Komentarze</a></li>
-			<li><a href="Variables.html">Zmienne</a></li>
-			<li><a href="Data_types.html">Typy danych</a></li>
-			<li><a href="Operators.html">Operatory</a></li>
-			<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-			<li><a href="Loops.html">Pętle</a></li>
-			<li><a href="Functions.html">Funkcje</a></li>
-			<li><a href="Arguments.html">Argumenty</a></li>
-			<li><a href="Return_values.html">Wartości zwracane</a></li>
-			<li><a href="Tables.html">Tablice</a></li>
-			<li><a href="Indicators.html">Wskaźniki</a></li>
-			<li><a href="Summary.html">Podsumowanie</a></li>
-		</ol>
-	</div>
-
-	<div class="content">
-		<h1>Pierwszy Program C++</h1>
-		<div class="section-with-image">
-			<p>
-				Program "Hello, World" jest podstawowym
-				programem od którego zaczyna każdy
-				początkujący programista.
-				Oto przykładowy program w języku C++, który wyświetla na ekranie napis "Hello, World!" i kończy swoje działanie:
-			</p>
-			<img src="/img/vector172.png" alt="">
+				<ol>
+						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li class="is-selected"><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
 		</div>
-		<div class="big-page-header"></div>
-		<h2><img class="icon-img-big" src="/img/icon_cpp(1).png" alt=""> Twój pierwszy "Hello World!"</h2>
-		<div class="double-elements">
-			<div class="code-block">
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="text-centered">
+				<h1>Pierwszy Program C++</h1>
+				<div class="section-with-image">
+					<p>
+						Program "Hello, World" jest podstawowym
+						programem od którego zaczyna każdy
+						początkujący programista.
+						Oto przykładowy program w języku C++, który wyświetla na ekranie napis "Hello, World!" i kończy swoje działanie:
+					</p>
+					<img src="/img/vector172.png" alt="">
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_cpp(1).png" alt=""> Twój pierwszy "Hello World!"</h3>
+			</div>
+			<div class="double-elements gap-zero">
+				<div>
+					<div class="display-grid">
+						<div class="code-block code-block-margin-top">
 			<pre>
 				<code>
 #include &ltiostream&gt
 
 int main() {
 
-		std::cout << "Hello, World!\n";
+std::cout << "Hello, World!\n";
 
-		return 0;
+return 0;
 }
 				</code>
 			</pre>
-			</div>
-			<div class="text-content">
-				<p>
-					Po uruchomieniu tego programu na konsoli pojawi się napis "Hello, World!".
+						</div>
+					</div>
+					<div class="dropdown minus-margin-top">
+						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<div class="dropdown-content">
+							<div class="output output-padding output-content">
+								Hello, World!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="display-grid">
+					<div class="text-centered">
+						<p>
+							Po uruchomieniu tego programu na konsoli pojawi się napis "Hello, World!".
 
-					Obiekt cout jest zdefiniowany w nagłówku iostream i służy do wyprowadzania danych na konsolę.
+							Obiekt cout jest zdefiniowany w nagłówku iostream i służy do wyprowadzania danych na konsolę.
 
-					Funkcja main() jest punktem wejścia do programu
+							Funkcja main() jest punktem wejścia do programu
 
-					instrukcja return 0; służy do wskazania, że program zakończył się pomyślnie.
-				</p>
-			</div>
-		</div>
-		<div class="dropdown minus-margin-top">
-			<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
-			<div class="dropdown-content">
-				<div class="output output-padding output-content">
-					Hello, World!
+							instrukcja return 0; służy do wskazania, że program zakończył się pomyślnie.
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="big-page-header"></div>
-		<div class="btn">
-			<a href="Variables.html"><button>Dalej</button></a>
-		</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Comments.html"><button>Dalej</button></a>
+			</div>
 
+		</div>
 	</div>
 </div>
 </body>

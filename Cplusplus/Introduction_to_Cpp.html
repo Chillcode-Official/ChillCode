@@ -9,72 +9,229 @@
 
 	<!-- Highlight JS init: -->
 	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
-	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
-	<script src="/EduBear.js"></script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
-		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
-		</div>
-
-		<div class="roadmap-list">
-				<ol>
-						<li><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Cpp.html"><img class="icon-img-navbar" src="/img/cplusplus-logo.png" alt=""> C++</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/cplusplus-logo.png" alt="">C++</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li class="is-selected"><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="First_program.html">Pierwszy program</a></li>
 						<li><a href="Comments.html">Komentarze</a></li>
 						<li><a href="Variables.html">Zmienne</a></li>
 						<li><a href="Data_types.html">Typy danych</a></li>
 						<li><a href="Operators.html">Operatory</a></li>
-						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-						<li><a href="Loops.html">Pętle</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Functions.html">Funkcje</a></li>
-						<li><a href="Arguments.html">Argumenty</a></li>
-						<li><a href="Return_values.html">Wartości zwracane</a></li>
-						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Indicators.html">Wskaźniki</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="roadmap-list hide-roadmaplist">
+				<ol>
+						<li class="is-selected"><a href="Introduction_to_Cpp.html">Wprowadzenie do C++</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li><a href="Variables.html">Zmienne</a></li>
+						<li><a href="Data_types.html">Typy danych</a></li>
+						<li><a href="Operators.html">Operatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
+									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Functions.html">Funkcje</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
+									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
+									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
+								</ul>
+							</div>
+						</li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
 		</div>
 
-		<div class="content">
-				<h1>Czym Jest C++</h1>
-				<div class="section-with-image">
-						<p>
-								C++ jest językiem programowania wysokiego poziomu, który umożliwia programistom pisanie złożonych programów komputerowych, w tym systemów operacyjnych, aplikacji desktopowych, gier komputerowych, aplikacji mobilnych oraz aplikacji internetowych. C++ jest nadal bardzo popularnym językiem programowania, zwłaszcza w środowisku programistów systemowych i aplikacji wymagających wydajności.
-						</p>
+		<div class="opacity-function padding-content">
+			<div class="content">
+				<div class="text-centered text-padding">
+					<div class="section-with-image">
 						<div>
-								<img style="width: 300px; float: right;" src="/img/cplusplus-logo.png" alt="">
+							<h1>Czym Jest C++</h1>
+							<p>
+								C++ jest językiem programowania wysokiego poziomu, który umożliwia programistom pisanie złożonych programów komputerowych, w tym systemów operacyjnych, aplikacji desktopowych, gier komputerowych, aplikacji mobilnych oraz aplikacji internetowych. C++ jest nadal bardzo popularnym językiem programowania, zwłaszcza w środowisku programistów systemowych i aplikacji wymagających wydajności.
+							</p>
 						</div>
+						<div>
+							<img style="width: 300px; float: right;" src="/img/cplusplus-logo.png" alt="">
+						</div>
+					</div>
 				</div>
-				<h1>Dlaczego Warto Nauczyć Się C++</h1>
-				<p class="text-content-500width">
-						Nauka C++ pozwala na tworzenie zaawansowanych aplikacji, zwiększa zrozumienie działania komputera i systemów operacyjnych oraz zwiększa szanse na znalezienie pracy w branży IT, ponieważ C++ jest popularnym językiem programowania zastosowanym w wielu dziedzinach, oferuje wiele zaawansowanych funkcjonalności i jest językiem kompilowanym.
-				</p>
-				<div class="big-page-header"></div>
-				<h1>Kluczowe Cechy C++</h1>
 				<div class="page-header"></div>
-				<ul>
+				<div class="text-centered text-padding">
+					<h1>Dlaczego Warto Nauczyć Się C++</h1>
+					<p class="text-content-500width">
+						Nauka C++ pozwala na tworzenie zaawansowanych aplikacji, zwiększa zrozumienie działania komputera i systemów operacyjnych oraz zwiększa szanse na znalezienie pracy w branży IT, ponieważ C++ jest popularnym językiem programowania zastosowanym w wielu dziedzinach, oferuje wiele zaawansowanych funkcjonalności i jest językiem kompilowanym.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="text-padding">
+					<h1 class="text-centered">Kluczowe Cechy C++</h1>
+					<div class="page-header"></div>
+					<ul>
 						<li>C++ jest językiem obiektowym</li>
 						<li>C++ oferuje mechanizm szablonów</li>
 						<li>Niskopoziomowe operacje na pamięci</li>
 						<li>C++ jest językiem kompilowanym</li>
 						<li>Pozwala to na tworzenie aplikacji optymalizowanych pod względem wydajności</li>
-				</ul>
+					</ul>
+				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="Quick_start.html"><button>Dalej</button></a>
+					<a href="Quick_start.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
 </div>
 </body>

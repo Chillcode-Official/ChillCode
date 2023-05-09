@@ -4,93 +4,484 @@
 		<meta charset="UTF-8">
 		<title>JSON C#</title>
 		<link rel="stylesheet" href="../Basic.css"/>
+	<link rel="icon" href="/img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Highlight JS init: -->
-		<link rel="stylesheet" href="/Highlight/styles/vs2015.min.css">
-		<script src="/Highlight/highlight.min.js"></script>
-		<script>hljs.highlightAll();</script>
+	<!-- Highlight JS init: -->
+	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
 </head>
 <body>
 
 <div class="page-content">
 		<div class="navbar">
-				<section>
-						<ul>
-								<button><li><a href="../EduBear.html">Home</a></li></button>
-								<button><li><a href="/Motivation/Motivation.html">Motivation</a></li></button>
-								<button><li><a href="/Blog/Blog.html">Blog</a></li></button>
-								<button><li><a href="/About/About.html">About me</a></li></button>
-						</ul>
-				</section>
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Csharp.html"><img class="icon-img-navbar" src="/img/c-sharp.png" alt=""> C#</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/c-sharp.png" alt="">C#</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a> </li>
+						<li><a href="Comments.html">Komentarze</a> </li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
+						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+						<li><a href="Interfaces.html">Interfejsy</a></li>
+						<li><a href="Static_classes.html">Klasy statyczne</a></li>
+						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="is-selected"><a href="JSON.html">JSON</a></li>
+						<li><a href="XML.html">XML</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
+	</div>
 
-		<div class="roadmap-list">
+		<div class="roadmap-list hide-roadmaplist">
 				<ol>
 						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="First_program.html">Pierwszy program</a> </li>
 						<li><a href="Comments.html">Komentarze</a> </li>
-						<li><a href="Data_types.html">Typy danych</a></li>
-						<li><a href="Variables.html">Zmienne</a></li>
-						<li><a href="Fields.html">Pola</a></li>
-						<li><a href="Properties.html">Właściwości</a></li>
-						<li><a href="Constant.html">Stałe</a></li>
-						<li><a href="Methods.html">Metody</a></li>
-						<li><a href="Conditional_statements.html">Instrukcje warunkowe</a></li>
-						<li><a href="Loops.html">Pętle</a></li>
-						<li><a href="Tables.html">Tablice</a></li>
-						<li><a href="Collections.html">Kolekcje</a></li>
-						<li><a href="Classes.html">Klasy</a></li>
-						<li><a href="Inheritance.html">Dziedziczenie</a></li>
-						<li><a href="Polymorphism.html">Polimorfizm</a></li>
-						<li><a href="Type_conversion.html">Konwersja typów</a></li>
-						<li><a href="String_types.html">Typy łańcuchowe</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
 						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
 						<li><a href="Interfaces.html">Interfejsy</a></li>
 						<li><a href="Static_classes.html">Klasy statyczne</a></li>
 						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
-						<li><a href="Namespaces.html">Przestrzenie nazw</a></li>
-						<li><a href="Exceptions.html">Wyjątki</a></li>
-						<li><a href="Generic_types.html">Typy generyczne</a></li>
-						<li><a href="JSON.html">JSON</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="is-selected"><a href="JSON.html">JSON</a></li>
 						<li><a href="XML.html">XML</a></li>
 						<li><a href="Summary.html">Podsumowanie</a></li>
 				</ol>
 		</div>
 
-		<div class="content">
-				<h1>JSON W Języku C#</h1>
+		<div class="opacity-function padding-content">
+			<div class="content">
 				<div class="section-with-image">
+					<div class="text-centered">
+						<h1>JSON</h1>
 						<p>
-								W języku C# istnieje kilka bibliotek, które umożliwiają pracę z danymi JSON. Jedną z
-								najpopularniejszych jest Newtonsoft.Json, która zapewnia funkcje do serializacji i deserializacji
-								danych JSON. Można ją łatwo zaimportować za pomocą narzędzia NuGet. Innymi popularnymi bibliotekami
-								są System.Text.Json oraz Json.NET.
+							W języku C# istnieje kilka bibliotek, które umożliwiają pracę z danymi JSON. Jedną z
+							najpopularniejszych jest Newtonsoft.Json, która zapewnia funkcje do serializacji i deserializacji
+							danych JSON. Można ją łatwo zaimportować za pomocą narzędzia NuGet. Innymi popularnymi bibliotekami
+							są System.Text.Json oraz Json.NET.
 						</p>
-						<img src="/img/vector50.png" alt="">
+					</div>
+					<img src="/img/vector50.png" alt="">
 				</div>
-				<p class="text-container gray-container article tooltip">
-						<code><a pro-tip="">Newtonsoft.Json</a></code> to biblioteka, która jest szeroko stosowana w języku C# do pracy z danymi JSON.
-						Umożliwia ona łatwą <code><a pro-tip="">serializacje</a></code> i
-						<code><a pro-tip="">deserializacje</a></code> obiektów C# do formatu JSON oraz odwrotnie.
+				<p class="text-container gray-container article tooltip no-margin-top line-height-plus">
+					<code><a pro-tip="">Newtonsoft.Json</a></code> to biblioteka, która jest szeroko stosowana w języku C# do pracy z danymi JSON.
+					Umożliwia ona łatwą <code><a pro-tip="">serializacje</a></code> i
+					<code><a pro-tip="">deserializacje</a></code> obiektów C# do formatu JSON oraz odwrotnie.
 				</p>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
-						<b>Uwaga</b>
-						<p>
-								Aby użyć tej biblioteki, należy ją najpierw zaimportować za pomocą narzędzia NuGet. Następnie,
-								w celu zserializowania obiektu do formatu JSON, można użyć metody JsonConvert.SerializeObject()
-								i podać obiekt jako argument. Analogicznie, aby zdeserializować dane JSON do obiektu C#, można
-								użyć metody JsonConvert.DeserializeObject() i podać typ obiektu docelowego oraz dane JSON jako
-								argumenty.
-						</p>
+					<img src="/img/note.png" alt="">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						Aby użyć tej biblioteki, należy ją najpierw zaimportować za pomocą narzędzia NuGet. Następnie,
+						w celu zserializowania obiektu do formatu JSON, można użyć metody JsonConvert.SerializeObject()
+						i podać obiekt jako argument. Analogicznie, aby zdeserializować dane JSON do obiektu C#, można
+						użyć metody JsonConvert.DeserializeObject() i podać typ obiektu docelowego oraz dane JSON jako
+						argumenty.
+					</p>
 				</div>
-				<p class="text-container  gray-container">
-						Oto przykład serializacji obiektu C# do formatu JSON za pomocą biblioteki Newtonsoft.Json:
+				<div class="big-page-header"></div>
+				<p class="text-container gray-container">
+					Oto przykład serializacji obiektu C# do formatu JSON za pomocą biblioteki Newtonsoft.Json:
 				</p>
-				<div class="code-block">
+				<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 using System;
 using Newtonsoft.Json;
 
@@ -119,27 +510,34 @@ class Program
 				Console.WriteLine(json);
 		}
 }
-
-
-//output:  {"Imie":"Jan", "Nazwisko":"Kowalski", "Wiek":20}
 								</code>
 						</pre>
 				</div>
-				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
-						<b>Wyjasnienie</b>
-						<p>
-								Kod powyżej tworzy obiekt typu Student i przypisuje mu odpowiednie wartości. Następnie,
-								obiekt ten jest serializowany do formatu JSON za pomocą metody JsonConvert.SerializeObject()
-								i wynik jest wyświetlany na konsoli.
-						</p>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>{"Imie":"Jan", "Nazwisko":"Kowalski", "Wiek":20}</p>
+						</div>
+					</div>
 				</div>
+				<div class="alert-card alert-card-gray">
+					<img src="/img/robotic-hand.png" alt="">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						Kod powyżej tworzy obiekt typu Student i przypisuje mu odpowiednie wartości. Następnie,
+						obiekt ten jest serializowany do formatu JSON za pomocą metody JsonConvert.SerializeObject()
+						i wynik jest wyświetlany na konsoli.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
 				<p class="text-container gray-container">
-						Oto przykład deserializacji danych JSON do obiektu C# za pomocą biblioteki Newtonsoft.Json:
+					Oto przykład deserializacji danych JSON do obiektu C# za pomocą biblioteki Newtonsoft.Json:
 				</p>
-				<div class="code-block">
+				<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 using System;
 using Newtonsoft.Json;
 
@@ -167,31 +565,37 @@ class Program
 				Console.WriteLine("Wiek: " + student.Wiek);
 		}
 }
-
-
-//output:
-
-Imie: Jan
-Nazwisko: Kowalski
-Wiek: 20
 								</code>
 						</pre>
 				</div>
-				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
-						<b>Wyjasnienie</b>
-						<p>
-								W powyższym przykładzie, dane JSON są przypisane do zmiennej json. Następnie,
-								dane te są deserializowane do obiektu typu Student za pomocą metody JsonConvert.DeserializeObject().
-								Obiekt ten jest następnie wykorzystywany do wyświetlenia poszczególnych właściwości na konsoli.
-						</p>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>Imie: Jan</p>
+							<p>Nazwisko: Kowalski</p>
+							<p>Wiek: 20</p>
+						</div>
+					</div>
 				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card-gray">
+					<img src="/img/robotic-hand.png" alt="">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W powyższym przykładzie, dane JSON są przypisane do zmiennej json. Następnie,
+						dane te są deserializowane do obiektu typu Student za pomocą metody JsonConvert.DeserializeObject().
+						Obiekt ten jest następnie wykorzystywany do wyświetlenia poszczególnych właściwości na konsoli.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
 				<p class="text-container gray-container">
-						Poniżej przedstawiam kolejny przykład użycia biblioteki Newtonsoft.Json do serializacji i deserializacji danych JSON w języku C#:
+					Poniżej przedstawiam kolejny przykład użycia biblioteki Newtonsoft.Json do serializacji i deserializacji danych JSON w języku C#:
 				</p>
-				<div class="code-block">
+				<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -233,94 +637,48 @@ class Produkt
 
 		public double Cena { get; set; }
 }
-
-//output:
-
-[{"Nazwa":"Jablko","Cena":2.5}, {"Nazwa":"Banan","Cena":1.5}, {"Nazwa":"Pomarańcza","Cena":3.5}]
-
-Jablko - 2,5
-Banan - 1,5
-Pomarańcza - 3,5
-
 								</code>
 						</pre>
 				</div>
-				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
-						<b>Wyjasnienie</b>
-						<p>
-								W powyższym przykładzie tworzymy listę obiektów klasy Produkt z kilkoma właściwościami.
-								Następnie korzystając z metody JsonConvert.SerializeObject() serializujemy listę do formatu
-								JSON i wyświetlamy ją na konsoli. Potem za pomocą metody JsonConvert.DeserializeObject&ltT&gt()
-								deserializujemy dane JSON do listy obiektów C# i wyświetlamy informacje o każdym produkcie.
-						</p>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>[{"Nazwa":"Jablko","Cena":2.5}, {"Nazwa":"Banan","Cena":1.5}, {"Nazwa":"Pomarańcza","Cena":3.5}]</p>
+
+							<p>Jablko - 2,5</p>
+							<p>Banan - 1,5</p>
+							<p>Pomarańcza - 3,5</p>
+						</div>
+					</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card-gray">
+					<img src="/img/robotic-hand.png" alt="">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W powyższym przykładzie tworzymy listę obiektów klasy Produkt z kilkoma właściwościami.
+						Następnie korzystając z metody JsonConvert.SerializeObject() serializujemy listę do formatu
+						JSON i wyświetlamy ją na konsoli. Potem za pomocą metody JsonConvert.DeserializeObject&ltT&gt()
+						deserializujemy dane JSON do listy obiektów C# i wyświetlamy informacje o każdym produkcie.
+					</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
-						<b>Uwaga</b>
-						<p>
-								Json.NET to kolejna popularna biblioteka do pracy z danymi JSON w języku C#. Podobnie jak Newtonsoft.Json,
-								umożliwia ona łatwą serializację i deserializację obiektów C# do formatu JSON oraz odwrotnie. Biblioteka
-								ta oferuje również dodatkowe funkcje takie jak obsługa linii typów, kontrola formatowania, a także możliwość
-								dostosowywania procesu serializacji i deserializacji za pomocą atrybutów i konwerterów.
-						</p>
+					<img src="/img/note.png" alt="">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						Json.NET to kolejna popularna biblioteka do pracy z danymi JSON w języku C#. Podobnie jak Newtonsoft.Json,
+						umożliwia ona łatwą serializację i deserializację obiektów C# do formatu JSON oraz odwrotnie. Biblioteka
+						ta oferuje również dodatkowe funkcje takie jak obsługa linii typów, kontrola formatowania, a także możliwość
+						dostosowywania procesu serializacji i deserializacji za pomocą atrybutów i konwerterów.
+					</p>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="btn">
-						<a href="XML.html"><button>Dalej</button></a>
+					<a href="XML.html"><button>Dalej</button></a>
 				</div>
+			</div>
 		</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
