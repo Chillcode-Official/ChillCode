@@ -18,6 +18,11 @@
 
 .text-gray span{
     font-weight: 600;
+    color: #232222;
+}
+
+.text-color-gray span{
+    font-weight: 600;
     color: #4f4a4a;
 }
 

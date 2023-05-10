@@ -69,3 +69,9 @@
     background-color: #73696a;
     border-color: #73696a;
 }
+
+.bmc-btn-container{
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 13px;
+}
