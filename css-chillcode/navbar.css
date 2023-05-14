@@ -29,6 +29,11 @@
     display: flex;
     gap: 0 10px;
     justify-content: center;
+    margin-top: -3px;
+}
+
+.navbar-logo{
+    margin-top: -5px;
 }
 
 .navbar-item.socials > * img {

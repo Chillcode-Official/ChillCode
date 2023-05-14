@@ -26,7 +26,7 @@
 .dropdown {
     position: relative;
     display: block;
-    margin-top: -3px;
+    margin-top: -1px;
 }
 .output{
     background-color: #f2e9e9; /*#eae5e5;*/

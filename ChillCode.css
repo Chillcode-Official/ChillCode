@@ -6,6 +6,7 @@
 @import url('css/images.css');
 @import url('css/text_container.css');
 @import url('css/tooltip.css');
+@import url('css/padding.css');
 
 /*ChillCode css import*/
 @import url('css-chillcode/blog-container.css');
@@ -29,6 +30,11 @@
 @import url('css-chillcode/text-color.css');
 @import url('css-chillcode/text-formated.css');
 @import url('css-chillcode/video.css');
+@import url('css-chillcode/search-bar.css');
+@import url('css-chillcode/help-card.css');
+@import url('css-chillcode/start_now_elements.css');
+@import url('css-chillcode/form.css');
+@import url('css-chillcode/development_assistance_elements.css');
 
 
 
@@ -36,7 +42,7 @@
 /* Main Elements html && body - Ustawienie koloru tła */
 html, body {
 	margin: 0;
-	background-color: #212122;  /*#27282c;*/
+	background-color: #1c1c1c;  /*#212122;*/
 	font-size: 16px;
 	font-family: "Be Vietnam Pro", sans-serif;
 }

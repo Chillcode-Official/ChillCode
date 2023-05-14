@@ -4,15 +4,24 @@
 
 
 .flex-link{
-    display: flex;
+    display: grid;
     justify-content: center;
     margin-top: 18px;
     column-gap: 20px;
-    font-size: 20px;
+    font-size: 1rem;
+    row-gap: 20px;
 }
 .flex-link a{
-    color: #0a58ca;
+    color: #5b6abe;
 }
 .flex-link a:hover{
     color: #2323b2;
+}
+
+@media only screen and (min-width: 568px) {
+    .flex-link{
+        grid-template-columns: auto auto;
+        row-gap: 0;
+        font-size: 1.3rem;
+    }
 }

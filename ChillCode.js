@@ -99,3 +99,9 @@ function rotateTriangle(element) {
 	triangle.classList.toggle('active');
 }
 
+/*/!*search bar focus when you click "lope"*!/
+document.querySelector(".search-bar button").addEventListener("click", function() {
+	document.getElementById("searchInput").focus();
+});*/
+
+

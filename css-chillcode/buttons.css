@@ -13,14 +13,16 @@
     text-decoration: none;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin-top: 50px;
-    font-size: 16px;
-    width: 170px;
+    font-size: 1.2rem;
+    width: 200px;
 }
 
 .btn3:hover {
     background-color: #978cc5;
     border-color: #978cc5;
 }
+
+
 .btn2 {
     background-color: #fdd100;
     border-radius: 0.5rem;
@@ -31,7 +33,8 @@
     text-align: center;
     text-decoration: none;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    font-size: 18px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .btn2:hover {
@@ -74,4 +77,17 @@
     margin-top: 50px;
     border: 2px solid black;
     border-radius: 13px;
+}
+
+@media only screen and (min-width: 568px) {
+    .btn3{
+        width: 250px;
+        font-size: 1.3rem;
+    }
+
+    .btn2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
 }

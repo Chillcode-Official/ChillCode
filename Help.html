@@ -122,37 +122,111 @@
 				</div>
 			</div>
 		</nav>
-		<div class="bodyContainer">
-			<div class="double-elements section-main-header">
-				<div class="magicText text-gray magicPadding">
-					<h1>Nasze centrum pomocy będzie niedługo działać</h1>
-					<p>
-						Jesteśmy w trakcie przygotowywania naszego centrum pomocy, wkrótce będzie ono gotowe i udostępnione dla wszystkich zainteresowanych. Będziemy informować na bieżąco o postępach i niebawem udostępnimy wszystkie potrzebne informacje.
-					</p>
-				</div>
-				<div class="display-center">
-					<img class="crazy-img" src="/img/vector218.png" alt="">
+		<div>
+			<div class="bodyContainer">
+				<div class="help-section">
+					<div class="magicText text-gray magicPadding">
+						<h2>Jak możemy ci pomóc?</h2>
+					</div>
+					<div class="help-card-padding">
+						<div class="search-bar">
+							<button>
+								<img src="/img/icon_loupe(2).png" alt="">
+							</button>
+							<label for="searchInput">
+								<input type="text" id="searchInput" placeholder="Opisz swój problem">
+							</label>
+						</div>
+					</div>
+					<script>
+						document.querySelector(".search-bar button").addEventListener("click", function() {
+							document.getElementById("searchInput").focus();
+						});
+					</script>
+					<div class="double-help-card">
+						<div class="color-inherit link-unDecoration">
+							<a href="StartNow.html">
+								<div class="help-card">
+									<div class="display-center">
+										<img src="/img/icon_leader.png" alt="">
+									</div>
+									<div>
+										<h3>Pierwsze kroki</h3>
+										<p>
+											Dowiedz się, jak rozpocząć
+											korzystanie z ChillCode
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="color-inherit link-unDecoration">
+							<a href="ContactUs.html">
+								<div class="help-card">
+									<div class="display-center">
+										<img src="/img/icon_customer-support.png" alt="">
+									</div>
+									<div>
+										<h3>Kontakt</h3>
+										<p>
+											Skontaktuj się z nami w sprawie problemów, zapytań lub porad
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="color-inherit link-unDecoration">
+							<a href="DevelopmentAssistance.html">
+								<div class="help-card">
+									<div class="display-center">
+										<img src="/img/icon_help(5).png" alt="">
+									</div>
+									<div>
+										<h3>Pomoc w rozwoju</h3>
+										<p>
+											Chcesz pomóc w rozwoju naszej platformy, kliknij i dowiedz się więcej
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="color-inherit link-unDecoration">
+							<a href="Error_section.html">
+								<div class="help-card">
+									<div class="display-center">
+										<img src="/img/icon_warning(1).png" alt="">
+									</div>
+									<div>
+										<h3>Błędy</h3>
+										<p>
+											Jeśli napotkałeś błąd na stronie zgłoś go do nas lub zobacz jak go rozwiązać
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
+			<div class="line"></div>
+			<footer>
+				<div class="footer-logo">
+					<h2><img src="/img/white_buckles.png" alt="">ChillCode</h2>
+				</div>
+				<div class="footer-links">
+					<ul>
+						<li><a href="Blog.html">Blog</a></li>
+						<li><a href="About.html">O nas</a></li>
+						<li><a href="Help.html">Centrum pomocy</a></li>
+						<li><a href="Support.html">Wesprzyj</a></li>
+						<li><a href="Resources.html">Zasoby</a></li>
+					</ul>
+				</div>
+				<div class="footer-copyright">
+					<p class="color-text-white">&copy; 2023 ChillCode. All rights reserved.</p>
+				</div>
+			</footer>
 		</div>
-		<div class="line"></div>
-		<footer>
-			<div class="footer-logo">
-				<h2><img src="/img/white_buckles.png" alt="">ChillCode</h2>
-			</div>
-			<div class="footer-links">
-				<ul>
-					<li><a href="Blog.html">Blog</a></li>
-					<li><a href="About.html">O nas</a></li>
-					<li><a href="Help.html">Centrum pomocy</a></li>
-					<li><a href="Support.html">Wesprzyj</a></li>
-					<li><a href="Resources.html">Zasoby</a></li>
-				</ul>
-			</div>
-			<div class="footer-copyright">
-				<p class="color-text-white">&copy; 2023 ChillCode. All rights reserved.</p>
-			</div>
-		</footer>
 	</div>
 </div>
 </body>

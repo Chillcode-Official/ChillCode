@@ -23,18 +23,21 @@
 }
 @media only screen and (max-width: 610px) {
     .magicText h1 {
-        font-size: 2.75rem;
+        font-size: 2.3rem;
+    }
+    .magicText.header-Text h1{
+        font-size: 3rem;
     }
 
-    .magicText p {
-        line-height: 1.5em;
-        font-size: 17px;
-    }
     .magicText h2 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         font-weight: 800;
         line-height: 44px;
         text-align: center;
+    }
+
+    .magicText.small-size-h2 h2{
+        font-size: 1.7rem;
     }
 }
 
@@ -45,6 +48,10 @@
     .magicText.magicPadding{
         padding: 20px;
     }
+    .magicText p {
+        line-height: 1.5em;
+        font-size: 1rem;
+    }
 }
 
 
@@ -52,7 +59,8 @@
     color: rgb(40, 40, 42);
 }
 .magicText span{
-    color: #7631b9;
+    font-weight: 600;
+    color: #4f4a4a;
 }
 .magicText button{
     margin-top: 20px;

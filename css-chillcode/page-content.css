@@ -41,3 +41,26 @@
         font-size: 1.875rem;
     }
 }
+
+.help-section{
+    max-width: 85%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 568px) {
+    .help-section{
+        max-width: 32rem;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .help-section{
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .help-section{
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+}

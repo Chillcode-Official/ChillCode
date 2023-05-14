@@ -1,0 +1,45 @@
+
+.column{
+	padding: .75rem;
+}
+.column p{
+	color: #292424;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 22px;
+	max-width: 300px;
+}
+
+.column h3{
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.column-container{
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+	row-gap: 50px;
+	padding: 40px 0;
+}
+
+
+@media only screen and (min-width: 568px) {
+	.column-container{
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 50px;
+		padding: 40px 100px 50px 100px;
+	}
+}
+
+
+@media only screen and (min-width: 1200px) {
+	.column-container{
+		grid-template-columns: repeat(4, 1fr);
+		row-gap: 50px;
+		padding: 40px 100px 50px 100px;
+	}
+}
