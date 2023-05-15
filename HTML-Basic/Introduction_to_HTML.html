@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML {Szybki start}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,21 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> HTML</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar" src="/img/Icons/icon_line-white.png">
+				</div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar" src="/img/Icons/html-5.png"> HTML</a></span>
+				</div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/html-5.png" alt="">HTML</button></div>
+				<div class="hide-e">
+					<button class="navbar-button"><img alt="" class="icon-img-navbar-toggle" src="/img/Icons/html-5.png">HTML
+					</button>
+				</div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -32,10 +41,13 @@
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Paragraph.html">Paragraf</a>
+									</li>
 									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 								</ul>
@@ -47,7 +59,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
@@ -58,10 +71,15 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
-									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="List.html">Lista
+										uporządkowana</a></li>
+									<li><a class="navbar-drop-text" href="List_unordered.html">Lista
+										nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a>
+									</li>
+									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -69,9 +87,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Links.html">Linki</a></li>
 									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
-									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -79,9 +99,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
-									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
-									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Images.html">Obrazy</a></li>
+									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i
+										Wysokość</a></li>
+									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i
+										Podpis</a></li>
 								</ul>
 							</div>
 						</li>
@@ -89,10 +112,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
 									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
-									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -101,7 +126,9 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																					  href="Quotations.html">Cytaty</a>
+									</li>
 									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 								</ul>
 							</div>
@@ -115,11 +142,33 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/">
+					<div class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+																					 class="icon-img-navbar hide-e" src="/img/Icons/home.png"> Strona główna</span>
+						<img alt="" class="right-arrow-icon hide-e" src="/img/Icons/right-arrow.png"></div>
+				</a>
+				<a class="navbar-link" href="../Blog.html">
+					<div class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+																					 class="icon-img-navbar hide-e" src="/img/Icons/icon_blog.png"> Blog</span>
+						<img alt="" class="right-arrow-icon hide-e" src="/img/Icons/right-arrow.png"></div>
+				</a>
+				<a class="navbar-link" href="../About.html">
+					<div class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+																					 class="icon-img-navbar hide-e"
+																					 src="/img/Icons/icon_about_us.png"> O nas</span> <img
+							alt="" class="right-arrow-icon hide-e" src="/img/Icons/right-arrow.png"></div>
+				</a>
+				<a class="navbar-link" href="../Help.html">
+					<div class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+																					 class="icon-img-navbar hide-e" src="/img/Icons/help-icon.png"> Centrum pomocy</span>
+						<img alt="" class="right-arrow-icon hide-e" src="/img/Icons/right-arrow.png"></div>
+				</a>
+				<a class="navbar-link margin-bottom" href="../Support.html">
+					<div class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+																					 class="icon-img-navbar hide-e"
+																					 src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+							alt="" class="right-arrow-icon hide-e" src="/img/Icons/right-arrow.png"></div>
+				</a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -138,7 +187,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																		  href="Paragraph.html">Paragraf</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 					</ul>
@@ -150,7 +200,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a>
+						</li>
 						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
 						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 					</ul>
@@ -161,7 +212,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista
+							uporządkowana</a></li>
 						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
 						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
 						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
@@ -172,7 +224,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a>
+						</li>
 						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
 						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
 					</ul>
@@ -182,8 +235,10 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
-						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a>
+						</li>
+						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a>
+						</li>
 						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 					</ul>
 				</div>
@@ -192,7 +247,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a>
+						</li>
 						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
 						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
 						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
@@ -204,7 +260,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+																		  href="Quotations.html">Cytaty</a></li>
 						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 					</ul>
 				</div>
@@ -225,15 +282,19 @@
 				<div class="section-with-image">
 					<div>
 						<p>
-							HTML (Hypertext Markup Language) to język znaczników, który jest używany do tworzenia i struktury stron
-							internetowych. Jest to język, który pozwala na umieszczanie tekstu, obrazów, linków i innych elementów na
-							stronie, a także na określenie ich wzajemnego położenia i relacji. HTML jest używany w połączeniu z CSS
-							i JavaScript, aby dodać styl i interakcję do strony. HTML jest jednym z podstawowych języków tworzenia
+							HTML (Hypertext Markup Language) to język znaczników, który jest używany do tworzenia i
+							struktury stron
+							internetowych. Jest to język, który pozwala na umieszczanie tekstu, obrazów, linków i innych
+							elementów na
+							stronie, a także na określenie ich wzajemnego położenia i relacji. HTML jest używany w
+							połączeniu z CSS
+							i JavaScript, aby dodać styl i interakcję do strony. HTML jest jednym z podstawowych języków
+							tworzenia
 							stron internetowych i jest obsługiwany przez wszystkie przeglądarki internetowe.
 						</p>
 					</div>
 					<div>
-						<img style="width: 300px; float: right;" src="/img/html-5.png" alt="">
+						<img alt="" src="/img/Icons/html-5.png" style="width: 300px; float: right;">
 					</div>
 				</div>
 			</div>
@@ -261,7 +322,9 @@
 			</div>
 			<div class="big-page-header"></div>
 			<div class="btn">
-				<a href="Quick_start.html"><button>Dalej</button></a>
+				<a href="Quick_start.html">
+					<button>Dalej</button>
+				</a>
 			</div>
 		</div>
 	</div>
