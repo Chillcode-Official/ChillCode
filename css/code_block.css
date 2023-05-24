@@ -1,31 +1,34 @@
-
 /*Code-Block elements*/
-.code-block{
+.code-block {
 	max-width: 100%;
 	overflow-x: hidden;
 }
 
 .code-block pre code {
-		font-size: 14px;
-		border: 3px solid #0e0d0d;
-		border-radius: 5px;
-		background-color: #1e1e1e;
+	font-size: 14px;
+	border: 3px solid #0e0d0d;
+	border-radius: 5px;
+	background-color: #1e1e1e;
 }
-.code-block pre{
-		margin: 0;
+
+.code-block pre {
+	margin: 0;
 }
-.code-block.code-block-medium{
-		max-width: 430px;
+
+.code-block.code-block-medium {
+	max-width: 430px;
 }
-.code-block.code-block-margin-top{
-		margin-top: -20px;
+
+.code-block.code-block-margin-top {
+	margin-top: -20px;
 }
 
 
 @media only screen and (max-width: 568px) {
-	.code-block.code-block-medium{
+	.code-block.code-block-medium {
 		width: 300px;
 	}
+
 	.code-block pre code {
 		font-size: 12px;
 		border: 3px solid #0e0d0d;
@@ -36,40 +39,49 @@
 
 /* <code></code> and article elements */
 .article code {
-		background-color: #1e1e1e;
-		font-size: 16px;
-		color: #e4e4e4;
-		padding: 4px 7px 4px;
-		line-height: 160%;
-		margin: 3px;
-		border-radius: 5px;
-		z-index: 1;
-		position: relative;
-}
-.article.tooltip-nowrap{
-		white-space: nowrap;
-}
-.article p{
-		word-wrap: break-word;
-		line-height: 50px;
-}
-.article.line-height-normal p{
-	line-height: 25px;
-}
-.article li{
-		line-height: 40px;
+	background-color: #1e1e1e;
+	font-size: 16px;
+	color: #e4e4e4;
+	padding: 4px 7px 4px;
+	line-height: 160%;
+	margin: 3px;
+	border-radius: 5px;
+	z-index: 1;
+	position: relative;
 }
 
-.code-block.hidden-overflow code{
+.article.tooltip-nowrap {
+	white-space: nowrap;
+}
+
+.article p {
+	word-wrap: break-word;
+	line-height: 50px;
+}
+
+.article.line-height-normal p {
+	line-height: 25px;
+}
+
+.article li {
+	line-height: 40px;
+}
+
+.code-block.hidden-overflow code {
 	overflow-x: hidden;
 }
 
 
 @media only screen and (max-width: 568px) {
-	.article li{
+	.article li {
 		line-height: 35px;
 	}
-	.article ul{
+
+	.article ul {
 		padding: 0;
+	}
+
+	.code-block.hidden-overflow code {
+		overflow-x: auto;
 	}
 }

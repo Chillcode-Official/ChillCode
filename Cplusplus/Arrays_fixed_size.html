@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>Cpp {Tablice}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tablice stałowymiarowe — Kurs C++ | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Cpp.html"><img class="icon-img-navbar" src="/img/cplusplus-logo.png" alt=""> C++</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_Cpp.html"><img alt=""
+				                                             class="icon-img-navbar"
+				                                             src="/img/Icons/icon_cplusplus-logo.png"> C++</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/cplusplus-logo.png" alt="">C++</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_cplusplus-logo.png">C++</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -39,7 +47,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conditional_statements.html">Instrukcja (if)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
@@ -50,9 +59,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Loops.html">Pętla (for)</a></li>
 									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
-									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Loops_do_while.html">Pętla (do..while)</a></li>
 									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
 								</ul>
 							</div>
@@ -64,17 +75,20 @@
 									<li><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
 									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
 									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
-									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
 									<li class="is-selected"><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="Functions.html">Funkcje</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Argumenty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Arguments.html">Argumenty</a></li>
 									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
 								</ul>
 							</div>
@@ -83,7 +97,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Return_values.html">Wartości zwracane</a></li>
 									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
 									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
 									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
@@ -91,10 +106,12 @@
 							</div>
 						</li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Wskaźniki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Indicators.html">Wskaźniki</a></li>
 									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
 								</ul>
 							</div>
@@ -103,11 +120,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -130,7 +165,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conditional_statements.html">Instrukcja (if)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conditional_statements.html">Instrukcja (if)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_else.html">Instrukcja (else)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_else_if.html">Instrukcja (else-if)</a></li>
 									<li><a class="navbar-drop-text" href="Conditional_statements_switch.html">Instrukcja (switch)</a></li>
@@ -141,9 +177,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Loops.html">Pętla (for)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Loops.html">Pętla (for)</a></li>
 									<li><a class="navbar-drop-text" href="Loops_while.html">Pętla (while)</a></li>
-									<li><a class="navbar-drop-text" href="Loops_do_while.html">Pętla (do..while)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Loops_do_while.html">Pętla (do..while)</a></li>
 									<li><a class="navbar-drop-text" href="Loops_foreach.html">Pętla (foreach)</a></li>
 								</ul>
 							</div>
@@ -155,17 +193,20 @@
 									<li><a class="navbar-drop-text" href="Arrays.html">Tablice</a></li>
 									<li><a class="navbar-drop-text" href="Arrays_one_dimensional.html">Tablice jednowymiarowe</a></li>
 									<li><a class="navbar-drop-text" href="Arrays_multidimensional.html">Tablice wielowymiarowe</a></li>
-									<li><a class="navbar-drop-text" href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Arrays_dynamic.html">Tablice dynamiczne</a></li>
 									<li class="is-selected"><a class="navbar-drop-text" href="Arrays_fixed_size.html">Tablice stałowymiarowe</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="Functions.html">Funkcje</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Argumenty</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Argumenty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Arguments.html">Argumenty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Arguments.html">Argumenty</a></li>
 									<li><a class="navbar-drop-text" href="Arguments_use.html">Użycie Argumentów</a></li>
 								</ul>
 							</div>
@@ -174,7 +215,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wartości zwracane</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Return_values.html">Wartości zwracane</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Return_values.html">Wartości zwracane</a></li>
 									<li><a class="navbar-drop-text" href="Return_values_types.html">Typy wartości zwracanych</a></li>
 									<li><a class="navbar-drop-text" href="Returning_multiple_values.html">Zwracanie wielu wartości</a></li>
 									<li><a class="navbar-drop-text" href="Returning_value_by_reference.html">Zwracanie wartości przez referencję</a></li>
@@ -182,10 +224,12 @@
 							</div>
 						</li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wskaźniki</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Wskaźniki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Indicators.html">Wskaźniki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Indicators.html">Wskaźniki</a></li>
 									<li><a class="navbar-drop-text" href="Other_pointer_operations.html">Inne operacje na Wskaźnikach</a></li>
 								</ul>
 							</div>
@@ -203,10 +247,12 @@
 						Tablice stałowymiarowe to struktury danych, które pozwalają na przechowywanie elementów tego samego typu w jednym lub więcej wymiarach. Rozmiar tablicy stałowymiarowej musi być określony w trakcie kompilacji i nie może być zmieniany w czasie działania programu.
 					</p>
 				</div>
-				<img src="/img/vector194.png" alt="">
+				<img alt="" src="/img/Vectors/vector194.png">
 			</div>
 			<p class="text-container lightGreen-container no-margin-top article tooltip">
-				W C++ można zadeklarować <code><a pro-tip="">tablicę stałowymiarową <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> używając składni:
+				W C++ można zadeklarować <code><a
+					pro-tip="Tablica stałowymiarowa jest podobna do zwykłej tablicy, ale jej rozmiar musi być znany w czasie kompilacji i nie może być zmieniany w trakcie działania programu. Rozmiar takiej tablicy jest wyrażony za pomocą stałej lub wyrażenia stałego, na przykład const int size = 5 Tablica stałowymiarowa może być inicjalizowana podczas deklaracji">tablicę stałowymiarową <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> używając składni:
 			</p>
 			<div class="code-block code-block-margin-top">
 						<pre>
@@ -243,29 +289,32 @@ tablica[0][0] = 10;  // przypisanie wartości 10 do pierwszego elementu
 								<code class="language-cpp">
 #include &lt;iostream&gt;
 using namespace std;
+
 int main() {
 
-		const int rozmiar = 5;
-		int tablica[rozmiar] = {1, 2, 3, 4, 5}; // deklaracja i inicjalizacja tablicy stałowymiarowej
+  const int rozmiar = 5;
+  int tablica[rozmiar] = {1, 2, 3, 4, 5}; // deklaracja i inicjalizacja tablicy stałowymiarowej
 
-		cout << "Wartość elementu 3: " << tablica[2] << endl; // wyświetla wartość elementu o indeksie 2
+  cout << "Wartość elementu 1: " << tablica[1] << endl; // wyświetla wartość elementu o indeksie 1
 
-		return 0;
+  return 0;
 }
 								</code>
 						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-padding output-content">
-						Wartość elementu 3: 3
+						Wartość elementu 1: 2
 					</div>
 				</div>
 			</div>
 			<div class="page-header"></div>
 			<div class="alert-card ">
-				<img src="/img/note.png" alt="">
+				<img alt="" src="/img/Icons/icon_note.png">
 				<b>Notatka</b>
 				<div class="line"></div>
 				<p>

@@ -1,66 +1,68 @@
 /* Page content and Grid - Zawartość strony i siatka Grid */
-.page-content{
-    overflow-X: hidden;
-    margin: 0 auto;
-    width: 100%
-    /*width: 100%;
+.page-content {
+	overflow-X: hidden;
+	margin: 0 auto;
+	width: 100% /*width: 100%;
     padding: 0 30px;
     box-sizing: border-box;*/
 }
 
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.main-content{
-    width: 100%;
-    max-width: 100%;
+.main-content {
+	width: 100%;
+	max-width: 100%;
 }
 
-.content-card{
-    margin: 0 auto;
-    max-width: 1400px;
-    display: flex;
+.content-card {
+	margin: 0 auto;
+	max-width: 1400px;
+	display: flex;
 }
 
-.header{
-    padding: 30px 30px;
-    text-align: center;
+.header {
+	padding: 30px 30px;
+	text-align: center;
 }
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1400px;
-    color: white;
-    font-size: 1.5rem;
+	margin: 0 auto;
+	max-width: 1400px;
+	color: white;
+	font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 1400px) {
-    .wrapper {
-        font-size: 1.875rem;
-    }
+	.wrapper {
+		font-size: 1.875rem;
+	}
 }
 
-.help-section{
-    max-width: 85%;
-    margin: 0 auto;
+.help-section {
+	max-width: 85%;
+	margin: 0 auto;
 }
+
 @media only screen and (min-width: 568px) {
-    .help-section{
-        max-width: 32rem;
-        margin: 0 auto;
-    }
+	.help-section {
+		max-width: 32rem;
+		margin: 0 auto;
+	}
 }
+
 @media only screen and (min-width: 768px) {
-    .help-section{
-        max-width: 40rem;
-        margin: 0 auto;
-    }
+	.help-section {
+		max-width: 40rem;
+		margin: 0 auto;
+	}
 }
+
 @media only screen and (min-width: 992px) {
-    .help-section{
-        max-width: 48rem;
-        margin: 0 auto;
-    }
+	.help-section {
+		max-width: 48rem;
+		margin: 0 auto;
+	}
 }

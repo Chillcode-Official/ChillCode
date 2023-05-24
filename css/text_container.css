@@ -1,91 +1,114 @@
 /*text-container*/
-.text-container{
-		width: 100%;
-		border-radius: 10px;
-		padding: 15px 25px;
-		box-sizing: border-box;
-		background-position: center;
-		text-align: left;
-		letter-spacing: 1px;
-		font-size: 16px;
-		line-height: 25px;
-		background-color: #6f5103;
-		border: 3px solid black ;
-		box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+.text-container {
+	width: 100%;
+	border-radius: 10px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	background-position: center;
+	text-align: left;
+	letter-spacing: 1px;
+	font-size: 16px;
+	line-height: 25px;
+	background-color: #6f5103;
+	border: 3px solid black;
+	box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
 }
-.text-container.fit-content{
-		height: fit-content;
+
+.text-container.fit-content {
+	height: fit-content;
 }
-.text-container-medium{
-		width: 430px;
+
+.text-container-medium {
+	width: 430px;
 }
-.text-container.blue-container{
-		background-color: #254388;
+
+.text-container.blue-container {
+	background-color: #254388;
 }
-.text-container.green-container{
-		background-color: #024113;
+
+.text-container.green-container {
+	background-color: #024113;
 }
-.text-container.red-container{
-		background-color: #733232;
+
+.text-container.red-container {
+	background-color: #733232;
 }
-.text-container.brown-container{
-		background-color: #4a2309;
+
+.text-container.brown-container {
+	background-color: #4a2309;
 }
-.text-container.cream-container{
-		background-color: #342921;
+
+.text-container.cream-container {
+	background-color: #342921;
 }
-.text-container.gray-container{
-		background-color: #29343a;
+
+.text-container.gray-container {
+	background-color: #29343a;
 }
-.text-container.lightGray-container{
-		background-color: #35464f;
+
+.text-container.lightGray-container {
+	background-color: #35464f;
 }
-.text-container.black-container{
-		background-color: #161818;
+
+.text-container.black-container {
+	background-color: #161818;
 }
-.text-container.pink-container{
-		background-color: #601f35;
+
+.text-container.pink-container {
+	background-color: #601f35;
 }
-.text-container.purple-container{
-		background-color: #4a2e79;
+
+.text-container.purple-container {
+	background-color: #4a2e79;
 }
-.text-container.orange-container{
-		background-color: #622c17;
+
+.text-container.orange-container {
+	background-color: #622c17;
 }
-.text-container.lightGreen-container{
-		background-color: #175d2c;
+
+.text-container.lightGreen-container {
+	background-color: #175d2c;
 }
-.text-container.azure-container{
-		background-color: #4c4e81;
+
+.text-container.azure-container {
+	background-color: #4c4e81;
 }
-.text-container.lightBrown-container{
-		background-color: #523224;
+
+.text-container.lightBrown-container {
+	background-color: #523224;
 }
-.text-container.white-container{
-		background-color: #574f34;
+
+.text-container.white-container {
+	background-color: #574f34;
 }
-.text-container.lightPink-container{
-		background-color: #73374c;
+
+.text-container.lightPink-container {
+	background-color: #73374c;
 }
-.text-container.lightWhite-container{
-		background-color: #bdacac;
+
+.text-container.lightWhite-container {
+	background-color: #bdacac;
 }
-.text-container.lightOrange-container{
-		background-color: #73422f;
+
+.text-container.lightOrange-container {
+	background-color: #73422f;
 }
-.text-container.light-container{
-		background-color: #bb9c9c
+
+.text-container.light-container {
+	background-color: #bb9c9c
 }
 
 /*line height elements*/
-.text-container.line-height-plus{
+.text-container.line-height-plus {
 	line-height: 35px; /*40px*/
 }
-.text-container.line-height-medium{
+
+.text-container.line-height-medium {
 	line-height: 30px;
 }
+
 @media only screen and (max-width: 568px) {
-	.text-container{
+	.text-container {
 		letter-spacing: 0;
 	}
 }

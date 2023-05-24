@@ -1,33 +1,61 @@
 /*blue button elements*/
-.btn{
-		display: grid;
-		justify-content: end;
-		margin-right: 30px;
-		/*margin: 60px 30px;*/
+.btn {
+	display: grid;
+	justify-content: end;
+	margin-right: 30px;
+	/*margin: 60px 30px;*/
 }
-.btn button{
-		height: 50px;
-		width: 100px;
-		cursor: pointer;
-		padding: 8px;
-		background-color: #74b5e5; /*#262626*/
-		border-radius: 5px;
-		font-size: 20px;
-		border-color: transparent;
-		color: #262626;
+
+.btn button {
+	height: 50px;
+	width: 100px;
+	cursor: pointer;
+	padding: 8px;
+	background-color: #74b5e5; /*#262626*/
+	border-radius: 5px;
+	font-size: 20px;
+	border-color: transparent;
+	color: #262626;
 }
-.btn button a{
-		text-decoration: none;
-		color: black;
+
+.btn button a {
+	text-decoration: none;
+	color: black;
 }
-.btn button:hover{
-		background-color: #538cb6;
-		cursor: pointer;
+
+.btn button:hover {
+	background-color: #538cb6;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {
-	.btn{
+	.btn {
 		justify-content: center;
 		margin: 0;
 	}
+}
+
+
+.btn-primary {
+	color: #fff;
+	background-color: #286090;
+	border-color: #204d74;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }

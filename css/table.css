@@ -1,51 +1,57 @@
-
 /* Table elements */
-.Table{
-		position: relative;
+.Table {
+	position: relative;
 }
-.Table table{
-		z-index: 2;
-		left: 50%;
-		top: 50%;
-		border-collapse: collapse;
-		border-spacing: 0;
-		border-radius: 12px 12px 0 0;
-		overflow: hidden;
-		box-shadow: 0 2px 12px rgb(16, 16, 16);
-		text-align: center;
-		width: 100%;
+
+.Table table {
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-radius: 12px 12px 0 0;
+	overflow: hidden;
+	box-shadow: 0 2px 12px rgb(16, 16, 16);
+	text-align: center;
+	width: 100%;
 }
-.Table td,th{
-		padding: 13px 10px;
-		text-align: center;
-		color: white;
+
+.Table td, th {
+	padding: 13px 10px;
+	text-align: center;
+	color: white;
 }
+
 @media only screen and (min-width: 568px) {
-	.Table td,th{
+	.Table td, th {
 		padding: 13px 20px;
 		text-align: center;
 		color: white;
 	}
 }
-.Table th{
-		background-color: #c33f3f;
-		color: black;
-		font-weight: 200;
-		text-transform: uppercase;
+
+.Table th {
+	background-color: #c33f3f;
+	color: black;
+	font-weight: 200;
+	text-transform: uppercase;
 }
-.Table tr{
-		width: 100%;
-		background-color: #2a2828;
+
+.Table tr {
+	width: 100%;
+	background-color: #2a2828;
 
 }
-.Table tr:nth-child(even){
-		background-color: #1f1f1f;
+
+.Table tr:nth-child(even) {
+	background-color: #1f1f1f;
 }
-.Table td pre{
-		font-size: 12px;
-		color: white;
-		white-space: pre-wrap;
-		margin: 0;
+
+.Table td pre {
+	font-size: 12px;
+	color: white;
+	white-space: pre-wrap;
+	margin: 0;
 }
 
 /*Table Example Elements*/
@@ -56,13 +62,15 @@
 	margin-top: 15px;
 	margin-bottom: 30px;
 }
+
 .tableExample th, td {
 	padding: 5px;
 	text-align: center;
 	border: 1px solid black;
 	/*background-color: gray;*/
 }
-.tableExample.background-gray td{
+
+.tableExample.background-gray td {
 	background-color: gray;
 }
 
@@ -78,32 +86,36 @@
 	background-color: #894bcb;
 	color: white;
 }
-.simple-Table-with-only-td td{
-		border: 3px solid black;
-		background-color: #cbc1c1;
+
+.simple-Table-with-only-td td {
+	border: 3px solid black;
+	background-color: #cbc1c1;
 }
-.listExample ul{
-		list-style: square inside url("/img/warning.png");
-		padding-left: 40px;
-		margin: 20px 0;
+
+.listExample ul {
+	list-style: square inside url("/img/warning.png");
+	padding-left: 40px;
+	margin: 20px 0;
 }
 
 #background {
-		position: absolute;
-		z-index: -1;
+	position: absolute;
+	z-index: -1;
 }
 
 #content {
-		position: relative;
-		z-index: 1;
+	position: relative;
+	z-index: 1;
 }
-.vertical-element-position{
-		content: "";
-		display: table;
-		clear: both;
+
+.vertical-element-position {
+	content: "";
+	display: table;
+	clear: both;
 }
+
 .tooltip-example {
-		position: relative;
-		display: inline-block;
-		border-bottom: 1px dotted black;
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
 }

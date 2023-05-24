@@ -1,0 +1,27 @@
+.Congratulations_section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 50px 20px;
+	margin: 0 auto;
+	max-width: 1400px;
+	padding: 0 2rem;
+}
+
+.Congratulations_section.margin-hide {
+	margin-top: 0;
+}
+
+@media only screen and (min-width: 568px) {
+	.margin-hide {
+		margin-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.Congratulations_section {
+		grid-template-areas:
+"firstElement secondElement";
+		grid-template-columns: 1fr 1fr;
+		padding: 0;
+	}
+}

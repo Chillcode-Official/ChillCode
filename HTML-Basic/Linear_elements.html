@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>HTML {Linear elements}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elementy liniowe — Kurs HTML | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> HTML</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar"
+				                                              src="/img/Icons/icon_html-5.png"> HTML</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/html-5.png" alt="">HTML</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_html-5.png">HTML</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -32,10 +40,12 @@
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Paragraph.html">Paragraf</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 								</ul>
@@ -47,7 +57,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
@@ -58,10 +69,14 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
-									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Lista uporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_unordered.html">Lista nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Lists_nesting.html">Zagnieżdżanie list</a></li>
 								</ul>
 							</div>
 						</li>
@@ -69,9 +84,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Links.html">Linki</a></li>
 									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
-									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+									<li><a class="navbar-drop-text"
+									       href="Link_sitelink.html">Linki do podstron </a></li>
 								</ul>
 							</div>
 						</li>
@@ -79,7 +96,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Images.html">Obrazy</a></li>
 									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 								</ul>
@@ -89,10 +107,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
 									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
-									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Table_attributes.html">Atrybuty tabeli</a></li>
 								</ul>
 							</div>
 						</li>
@@ -101,7 +121,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Quotations.html">Cytaty</a></li>
 									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 								</ul>
 							</div>
@@ -115,11 +136,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -138,7 +177,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Paragraph.html">Paragraf</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 					</ul>
@@ -183,7 +223,8 @@
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
-						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 					</ul>
 				</div>
@@ -204,7 +245,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Quotations.html">Cytaty</a></li>
 						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 					</ul>
 				</div>
@@ -222,12 +264,12 @@
 		<div class="content">
 			<div class="section-with-image">
 				<div class="text-centered text-padding">
-					<h1>Elementy Liniowe</h1>
+					<h1>Elementy liniowe</h1>
 					<p>
 						Elementy liniowe to elementy, które mają domyślnie ustawioną szerokość na długość zawartości i nie powodują przejścia do nowej linii. Oznacza to, że element liniowy zajmuje tylko tyle miejsca, ile potrzebuje do wyświetlenia swojej zawartości.
 					</p>
 				</div>
-				<img src="/img/vector180.png" alt="">
+				<img alt="" src="/img/Vectors/vector180.png">
 			</div>
 			<div class="text-container lightWhite-container black-list article tooltip">
 				<div class="text-centered text-padding">
@@ -236,68 +278,103 @@
 				<div class="line"></div>
 				<div>
 					<ul>
-						<li><code><a pro-tip="pozwala na dodanie hiperłącza, które umożliwia przeniesienie użytkownika do innej strony lub do innego miejsca na obecnej stronie.">&lta&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy łącze do innej strony lub do innego miejsca na obecnej stronie.</li>
-						<li><code><a pro-tip="pozwala na zdefiniowanie skrótu dla słowa lub frazy, który jest wyświetlany jako podkreślony tekst. Po najechaniu na skrót, wyświetla się pełna nazwa.">&lt;abbr&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje skrót.</li>
-						<li><code><a pro-tip="służy do wstawienia przerwy w tekście, bez tworzenia nowego akapitu.">&lt;br&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- wstawia pojedynczą przerwę w linii.</li>
-						<li><code><a pro-tip="służy do tworzenia przycisków, które można kliknąć i wywołać w ten sposób określoną akcję.">&lt;button&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy przycisk, który można kliknąć.</li>
-						<li><code><a pro-tip="służy do definiowania cytowanej pracy, takiej jak książka, artykuł lub strona internetowa.">&lt;cite&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje cytowaną pracę.</li>
-						<li><code><a pro-tip="służy do definiowania kodu komputerowego lub fragmentu kodu, który powinien być wyświetlany w specjalnym stylu.">&lt;code&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje kod komputerowy lub fragment kodu.</li>
-						<li><code><a pro-tip="służy do wyróżnienia tekstu, na przykład przez jego pochylenie.">&lt;em&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- wyróżnia tekst (np. pochylając go).</li>
-						<li><code><a pro-tip="element używany do wstawiania obrazków na stronę internetową.">&lt;img&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- wstawia obrazek.</li>
-						<li><code><a pro-tip="element używany do tworzenia różnych formularzy, takich jak pole tekstowe, pole wyboru lub przycisk do wysłania formularza.">&lt;input&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy pole do wprowadzania tekstu lub przycisk.</li>
-						<li><code><a pro-tip="element używany do zapewnienia opisu dla elementów formularza, takich jak pole tekstowe lub pole wyboru.">&lt;label&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje etykietę dla elementu formularza.</li>
-						<li><code><a pro-tip="element służący do umieszczania krótkich cytatów w treści strony internetowej. Element <q> powinien być używany tylko w przypadku, gdy cytat jest naprawdę krótki i nie wymaga wyróżnienia go w inny sposób.">&lt;q&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje krótki cytat.</li>
-						<li><code><a pro-tip="element <span> jest powszechnie używany do wyodrębniania fragmentów tekstu, które wymagają specjalnego formatowania, takiego jak kolorowanie, podkreślenie lub wyróżnienie.">&lt;span&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje fragment tekstu, który można stylować za pomocą CSS.</li>
-						<li><code><a pro-tip="element <strong> jest używany do wyróżnienia ważnego tekstu w treści strony. Zazwyczaj przeglądarki wyświetlają tekst w elemencie <strong> wytłuszczony, ale stylowanie może być zmienione za pomocą CSS.">&lt;strong&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- wyróżnia ważny tekst.</li>
-						<li><code><a pro-tip="Ten element służy do tworzenia indeksu dolnego, czyli tekstu wyświetlanego poniżej lini tekstu bazowego. ">&lt;sub&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy indeks dolny.</li>
-						<li><code><a pro-tip="Element <sup> jest używany do tworzenia indeksu górnego, czyli tekstu wyświetlanego powyżej lini tekstu bazowego.">&lt;sup&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy indeks górny.</li>
-						<li><code><a pro-tip="Ten element służy do tworzenia pola tekstowego, w którym użytkownik może wprowadzać wiele linii tekstu, takiego jak formularz kontaktowy lub pole komentarza.">&lt;textarea&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- tworzy pole do wprowadzania wielowierszowego tekstu.</li>
-						<li><code><a pro-tip="Element <var> jest używany w HTML do definiowania zmiennej matematycznej lub argumentu funkcji. Element ten jest zazwyczaj stosowany wraz z elementami matematycznymi, takimi jak <sup> i <sub>, aby określić wartości lub symbole matematyczne.">&lt;var&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- definiuje zmienną lub argument matematyczny.</li>
+						<li><code><a
+								pro-tip="pozwala na dodanie hiperłącza, które umożliwia przeniesienie użytkownika do innej strony lub do innego miejsca na obecnej stronie.">&lta&gt <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy łącze do innej strony lub do innego miejsca na obecnej stronie.</li>
+						<li><code><a
+								pro-tip="pozwala na zdefiniowanie skrótu dla słowa lub frazy, który jest wyświetlany jako podkreślony tekst. Po najechaniu na skrót, wyświetla się pełna nazwa.">&lt;abbr&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje skrót.</li>
+						<li><code><a pro-tip="służy do wstawienia przerwy w tekście, bez tworzenia nowego akapitu.">&lt;br&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- wstawia pojedynczą przerwę w linii.</li>
+						<li><code><a
+								pro-tip="służy do tworzenia przycisków, które można kliknąć i wywołać w ten sposób określoną akcję.">&lt;button&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy przycisk, który można kliknąć.</li>
+						<li><code><a
+								pro-tip="służy do definiowania cytowanej pracy, takiej jak książka, artykuł lub strona internetowa.">&lt;cite&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje cytowaną pracę.</li>
+						<li><code><a
+								pro-tip="służy do definiowania kodu komputerowego lub fragmentu kodu, który powinien być wyświetlany w specjalnym stylu.">&lt;code&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje kod komputerowy lub fragment kodu.</li>
+						<li><code><a pro-tip="służy do wyróżnienia tekstu, na przykład przez jego pochylenie.">&lt;em&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- wyróżnia tekst (np. pochylając go).</li>
+						<li><code><a pro-tip="element używany do wstawiania obrazków na stronę internetową.">&lt;img&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- wstawia obrazek.</li>
+						<li><code><a
+								pro-tip="element używany do tworzenia różnych formularzy, takich jak pole tekstowe, pole wyboru lub przycisk do wysłania formularza.">&lt;input&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy pole do wprowadzania tekstu lub przycisk.</li>
+						<li><code><a
+								pro-tip="element używany do zapewnienia opisu dla elementów formularza, takich jak pole tekstowe lub pole wyboru.">&lt;label&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje etykietę dla elementu formularza.</li>
+						<li><code><a
+								pro-tip="element służący do umieszczania krótkich cytatów w treści strony internetowej. Element <q> powinien być używany tylko w przypadku, gdy cytat jest naprawdę krótki i nie wymaga wyróżnienia go w inny sposób.">&lt;q&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje krótki cytat.</li>
+						<li><code><a
+								pro-tip="element <span> jest powszechnie używany do wyodrębniania fragmentów tekstu, które wymagają specjalnego formatowania, takiego jak kolorowanie, podkreślenie lub wyróżnienie.">&lt;span&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje fragment tekstu, który można stylować za pomocą CSS.</li>
+						<li><code><a
+								pro-tip="element <strong> jest używany do wyróżnienia ważnego tekstu w treści strony. Zazwyczaj przeglądarki wyświetlają tekst w elemencie <strong> wytłuszczony, ale stylowanie może być zmienione za pomocą CSS.">&lt;strong&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- wyróżnia ważny tekst.</li>
+						<li><code><a
+								pro-tip="Ten element służy do tworzenia indeksu dolnego, czyli tekstu wyświetlanego poniżej lini tekstu bazowego. ">&lt;sub&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy indeks dolny.</li>
+						<li><code><a
+								pro-tip="Element <sup> jest używany do tworzenia indeksu górnego, czyli tekstu wyświetlanego powyżej lini tekstu bazowego.">&lt;sup&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy indeks górny.</li>
+						<li><code><a
+								pro-tip="Ten element służy do tworzenia pola tekstowego, w którym użytkownik może wprowadzać wiele linii tekstu, takiego jak formularz kontaktowy lub pole komentarza.">&lt;textarea&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- tworzy pole do wprowadzania wielowierszowego tekstu.</li>
+						<li><code><a
+								pro-tip="Element <var> jest używany w HTML do definiowania zmiennej matematycznej lub argumentu funkcji. Element ten jest zazwyczaj stosowany wraz z elementami matematycznymi, takimi jak <sup> i <sub>, aby określić wartości lub symbole matematyczne.">&lt;var&gt; <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- definiuje zmienną lub argument matematyczny.</li>
 					</ul>
 				</div>
 			</div>
 			<div class="big-page-header"></div>
 			<p class="text-container lightOrange-container article tooltip">
-				U&zdot;ycie elementu <code><a pro-tip="element używany do tworzenia różnych formularzy, takich jak pole tekstowe, pole wyboru lub przycisk do wysłania formularza.">&lt;input&gt; <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> do tworzenia formularza
+				U&zdot;ycie elementu <code><a
+					pro-tip="element używany do tworzenia różnych formularzy, takich jak pole tekstowe, pole wyboru lub przycisk do wysłania formularza.">&lt;input&gt; <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> do tworzenia formularza
 			</p>
 			<div class="code-block code-block-margin-top">
 								<pre>
 										<code>
-		&lt;form&gt;
-			&lt;label for=&quot;name&quot;&gt;Imi&eogon;:&lt;/label&gt;
-			&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
-			&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-			&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
-			&lt;input type=&quot;submit&quot; value=&quot;Wy&sacute;lij&quot;&gt;
-		&lt;/form&gt;
+&lt;form&gt;
+    &lt;label for="name"&gt;Imię:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;input type="submit" value="Wyślij"&gt;
+&lt;/form&gt;
 										</code>
 								</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-content">
 						<form>
 							<label for="name">Imię:</label>
-							<input type="text" id="name" name="name">
+							<input id="name" name="name" type="text">
 							<label for="email">Email:</label>
-							<input type="email" id="email" name="email">
+							<input id="email" name="email" type="email">
 							<input type="submit" value="Wyślij">
 						</form>
 					</div>
 				</div>
 			</div>
 			<div class="page-header"></div>
-			<div class="alert-card  alert-card-gray">
-				<img src="/img/robotic-hand.png" alt="">
+			<div class="alert-card  alert-card-gray highlight-container highlight-container-gray">
+				<img alt="" src="/img/Icons/icon_robotic-hand.png">
 				<b>Wyjaśnienie</b>
 				<div class="line"></div>
 				<p>
-					W powy&zdot;szym przyk&lstrok;adzie elementy &lt;label&gt; i &lt;input&gt; s&aogon; u&zdot;yte do tworzenia prostego formularza, w kt&oacute;rym u&zdot;ytkownik mo&zdot;e wprowadzi&cacute; swoje imi&eogon; i adres e-mail. Elementy &lt;label&gt; s&aogon; u&zdot;ywane do opisania p&oacute;l formularza, a elementy &lt;input&gt; s&aogon; u&zdot;ywane do pobierania danych od u&zdot;ytkownika.
+					W powy&zdot;szym przyk&lstrok;adzie elementy <span>&lt;label&gt;</span> i <span>&lt;input&gt;</span> s&aogon; u&zdot;yte do tworzenia prostego formularza, w kt&oacute;rym u&zdot;ytkownik mo&zdot;e wprowadzi&cacute; swoje imi&eogon; i adres e-mail. Elementy <span>&lt;label&gt;</span> s&aogon; u&zdot;ywane do opisania p&oacute;l formularza, a elementy <span>&lt;input&gt;</span> s&aogon; u&zdot;ywane do pobierania danych od u&zdot;ytkownika.
 				</p>
 			</div>
 			<div class="alert-card ">
-				<img src="/img/note.png" alt="">
+				<img alt="" src="/img/Icons/icon_note.png">
 				<b>Notatka</b>
 				<div class="line"></div>
 				<p>

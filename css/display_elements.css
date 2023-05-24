@@ -1,51 +1,58 @@
-
 /*Display Elements*/
-.child{
-		display: inline-block;
-		padding: .5em 1em;
-		background-color: #fff;
-		border: 1px solid #c7b8b8;
-		color: black;
-		box-sizing: border-box;
-}
-.block-element {
-		display: block;
-		width: 50%;
-		margin: 0 auto;
-		padding: 8px;
-		background-color: lightblue;
-}
-.block-element.inline-element{
-		display: inline;
-}
-.block-element.inline-block-element{
-		display: inline-block;
-}
-.block-element.flex-element{
-		display: flex;
-}
-.visible{
-		visibility: visible;
-}
-.hidden{
-		visibility: hidden;
+.child {
+	display: inline-block;
+	padding: .5em 1em;
+	background-color: #fff;
+	border: 1px solid #c7b8b8;
+	color: black;
+	box-sizing: border-box;
 }
 
-.overflow-x code{
+.block-element {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	padding: 8px;
+	background-color: lightblue;
+}
+
+.block-element.inline-element {
+	display: inline;
+}
+
+.block-element.inline-block-element {
+	display: inline-block;
+}
+
+.block-element.flex-element {
+	display: flex;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.overflow-x code {
 	overflow-x: auto;
 }
 
-.display-flex{
+.display-flex {
 	display: flex;
 }
-.display-grid{
+
+.display-grid {
 	display: grid;
 }
-.display-inline-grid{
+
+.display-inline-grid {
 	display: inline-grid;
 }
 
-.item-centered{
+.item-centered {
 	display: grid;
 	justify-content: center;
 }
@@ -70,26 +77,25 @@
 	}
 }
 
-.opacity-function{
+.opacity-function {
 	opacity: 1;
 }
 
 @media only screen and (min-width: 1200px) {
-	.opacity-function{
+	.opacity-function {
 		opacity: 1 !important;
 	}
 }
 
-.cursor-pointer{
+.cursor-pointer {
 	cursor: pointer;
 }
 
 
-.double-code-block{
+.double-code-block {
 	display: flex;
 	gap: 40px;
 }
-
 
 
 /*Double Elements*/
@@ -167,7 +173,7 @@
 	color: #b46969;
 }
 
-.section-with-image img{
+.section-with-image img {
 	max-width: 100%;
 }
 
@@ -181,11 +187,12 @@
 	line-height: 2em;
 }
 
-.gap-zero{
+.gap-zero {
 	gap: 0;
 }
+
 @media only screen and (min-width: 768px) {
-	.gap-zero{
+	.gap-zero {
 		gap: 40px;
 	}
 }

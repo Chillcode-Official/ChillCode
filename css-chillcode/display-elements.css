@@ -1,27 +1,27 @@
 .lg-display {
-    display: none;
+	display: none;
 }
 
 .xlg-display {
-    display: none;
+	display: none;
 }
 
 
 @media only screen and (max-width: 568px) {
-    .lg-display {
-        display: block;
-    }
+	.lg-display {
+		display: block;
+	}
 
-    .lg-hide {
-        display: none;
-    }
+	.lg-hide {
+		display: none;
+	}
 }
 
-.display-center{
-    display: grid;
-    justify-items: center;
+.display-center {
+	display: grid;
+	justify-items: center;
 }
 
-.display-grid{
-    display: grid;
+.display-grid {
+	display: grid;
 }

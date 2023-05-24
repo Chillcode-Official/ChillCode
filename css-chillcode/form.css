@@ -1,24 +1,24 @@
 
-.form{
+.form {
 
 }
 
-.form textarea{
+.form textarea {
 	height: 96px;
 	resize: none;
 }
 
-.form label{
+.form label {
 	font-size: 1rem;
 	line-height: 20px;
 	width: 100%;
 	margin-bottom: 8px;
 	display: block;
-	color: rgba(37,38,94,.7);
+	color: rgba(37, 38, 94, .7);
 	font-weight: 600;
 }
 
-.form input, textarea, select{
+.form input, textarea, select {
 	border: 1px solid #aab9cb !important;
 	border-radius: 4px !important;
 	padding: 14px 16px;
@@ -32,17 +32,17 @@
 
 
 input, textarea, button {
-	font-family: "euclid_circular_a","Arial","Source Sans Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-family: "euclid_circular_a", "Arial", "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-.double-input{
+.double-input {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 0;
 }
 
 @media only screen and (min-width: 568px) {
-	.double-input{
+	.double-input {
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
 	}

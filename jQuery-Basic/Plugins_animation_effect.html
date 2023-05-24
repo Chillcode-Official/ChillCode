@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>jQuery {Wtyczki}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wtyczki do efektów animacji — Kurs jQuery | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,22 +19,32 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> jQuery</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_jQuery.html"><img alt=""
+				                                                class="icon-img-navbar"
+				                                                src="/img/Icons/icon_jquery(1).png"> jQuery</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/jquery(1).png" alt="">jQuery</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_jquery(1).png">jQuery</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 								</ul>
 							</div>
@@ -44,7 +54,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 									<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 								</ul>
 							</div>
@@ -55,10 +66,13 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="AJAX.html">AJAX jQuery</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_load()_method.html">Metoda .load()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_post()_method.html">Metoda .post()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 								</ul>
 							</div>
@@ -69,7 +83,8 @@
 								<ul class="navbar-list-none display-inline-grid">
 									<li><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
-									<li class="is-selected"><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+									<li class="is-selected"><a class="navbar-drop-text"
+									                           href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 								</ul>
 							</div>
 						</li>
@@ -79,7 +94,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 									<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 								</ul>
 							</div>
@@ -88,11 +104,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -110,7 +144,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 					</ul>
 				</div>
@@ -120,7 +155,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 					</ul>
 				</div>
@@ -135,7 +171,8 @@
 						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
-						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+						<li><a class="navbar-drop-text"
+						       href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 					</ul>
 				</div>
 			</li>
@@ -144,7 +181,8 @@
 				<div class="dropdown-content show">
 					<ul class="navbar-list-none display-inline-grid">
 						<li><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
-						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
 						<li class="is-selected"><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 					</ul>
 				</div>
@@ -152,10 +190,12 @@
 			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
 			<li><a href="Debug_code.html">Debugowanie kodu</a></li>
 			<li onclick="rotateTriangle(this)">
-				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<a class="dropdown" onclick="toggleDropdown(this)"><span
+						class="triangle"></span>jQuery VS JavaScript</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 					</ul>
 				</div>
@@ -172,7 +212,7 @@
 					<p>
 						Wtyczki jQuery do efektów animacji umożliwiają tworzenie efektów wizualnych na stronie internetowej, takich jak przesuwające się elementy, rozwijane menu, podświetlanie elementów po najechaniu kursorem myszy i wiele innych. Dzięki nim można zwiększyć atrakcyjność strony i zrobić wrażenie na użytkownikach.
 					</p>
-					<img src="/img/vector8.png" alt="">
+					<img alt="" src="/img/Vectors/vector7.png">
 				</div>
 			</div>
 			<div class="text-container light-container black-list article tooltip no-margin-top">
@@ -183,17 +223,29 @@
 				</div>
 				<div class="line"></div>
 				<ul>
-					<li><code><a pro-tip="to wtyczka, która umożliwia animowanie elementów na stronie internetowej. Można animować różne właściwości elementów, takie jak np. kolor, rozmiar, pozycję czy przezroczystość. Umożliwia to tworzenie dynamicznych efektów, które przyciągają uwagę użytkowników.">jQuery Animate <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- pozwala na animowanie różnych właściwości CSS</li>
-					<li><code><a pro-tip="to wtyczka, która umożliwia tworzenie prezentacji zdjęć i slajdów na stronie internetowej. Umożliwia dostosowanie przejść między slajdami, czasu trwania prezentacji, dodanie napisów, miniatur i wiele innych.">jQuery Cycle2 <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie efektów przejścia slajdów</li>
-					<li><code><a pro-tip="to wtyczka, która umożliwia dodanie efektów przejść między animowanymi elementami. Umożliwia dostosowanie szybkości animacji, łagodzenie przejść i wiele innych.">jQuery Easing <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia dodanie animacji, które łagodnie zmieniają prędkość lub tempo</li>
-					<li><code><a pro-tip="to wtyczka, która umożliwia dodanie efektów najechania myszą na elementy na stronie internetowej. Umożliwia dostosowanie wyglądu elementów, animacji i wiele innych.">jQuery Hover <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia dodanie animacji do elementów, które są wywoływane</li>
-					<li><code><a pro-tip="to wtyczka, która umożliwia dodanie efektu paralaksy na stronie internetowej. Umożliwia tworzenie efektów 3D, gdzie elementy na stronie internetowej poruszają się z różnymi prędkościami, co daje wrażenie głębi.">jQuery Parallax <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie efektów paralaksy</li>
-					<li><code><a pro-tip="to wtyczka, która umożliwia tworzenie wykresów na stronie internetowej. Umożliwia dostosowanie typu wykresu, kolorów, stylu i wiele innych. Wykresy te są bardzo przydatne w wizualizacji danych na stronie internetowej.">jQuery Sparklines <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>- umożliwia tworzenie małych wykresów lub grafik</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia animowanie elementów na stronie internetowej. Można animować różne właściwości elementów, takie jak np. kolor, rozmiar, pozycję czy przezroczystość. Umożliwia to tworzenie dynamicznych efektów, które przyciągają uwagę użytkowników.">jQuery Animate <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- pozwala na animowanie różnych właściwości CSS</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia tworzenie prezentacji zdjęć i slajdów na stronie internetowej. Umożliwia dostosowanie przejść między slajdami, czasu trwania prezentacji, dodanie napisów, miniatur i wiele innych.">jQuery Cycle2 <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- umożliwia tworzenie efektów przejścia slajdów</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia dodanie efektów przejść między animowanymi elementami. Umożliwia dostosowanie szybkości animacji, łagodzenie przejść i wiele innych.">jQuery Easing <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- umożliwia dodanie animacji, które łagodnie zmieniają prędkość lub tempo</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia dodanie efektów najechania myszą na elementy na stronie internetowej. Umożliwia dostosowanie wyglądu elementów, animacji i wiele innych.">jQuery Hover <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- umożliwia dodanie animacji do elementów, które są wywoływane</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia dodanie efektu paralaksy na stronie internetowej. Umożliwia tworzenie efektów 3D, gdzie elementy na stronie internetowej poruszają się z różnymi prędkościami, co daje wrażenie głębi.">jQuery Parallax <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- umożliwia tworzenie efektów paralaksy</li>
+					<li><code><a
+							pro-tip="to wtyczka, która umożliwia tworzenie wykresów na stronie internetowej. Umożliwia dostosowanie typu wykresu, kolorów, stylu i wiele innych. Wykresy te są bardzo przydatne w wizualizacji danych na stronie internetowej.">jQuery Sparklines <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>- umożliwia tworzenie małych wykresów lub grafik</li>
 				</ul>
 			</div>
 			<div class="big-page-header"></div>
 			<div class="text-centered">
-				<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_animate.png" alt=""> Wtyczka Animate, przesuwająca element w prawo:</h3>
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_animate.png"> Wtyczka Animate, przesuwająca element w prawo:</h3>
 			</div>
 			<div class="code-block code-block-margin-top">
 						<pre>
@@ -201,40 +253,40 @@
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-	&lt;meta charset=&quot;utf-8&quot;&gt;
-	&lt;title&gt;Przyk&lstrok;ad u&zdot;ycia wtyczki jQuery Animate&lt;/title&gt;
-	&lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
-	&lt;style&gt;
-		#box {
-			position: absolute;
-			width: 100px;
-			height: 100px;
-			background-color: blue;
-			left: 0;
-			top: 0;
-		}
-	&lt;/style&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Przykład użycia wtyczki jQuery Animate&lt;/title&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        #box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            left: 0;
+            top: 0;
+        }
+    &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
-	&lt;script&gt;
-		$(function() {
-			$(&quot;#box&quot;).click(function() {
-				$(this).animate({ left: &quot;+=200px&quot; }, 1000);
-			});
-		});
-	&lt;/script&gt;
+    &lt;div id="box"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        $(function() {
+            $("#box").click(function() {
+                $(this).animate({ left: "+=200px" }, 1000);
+            });
+        });
+    &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 								</code>
 						</pre>
 			</div>
-			<div class="alert-card  alert-card-gray">
-				<img src="/img/robotic-hand.png" alt="">
+			<div class="alert-card  alert-card-gray highlight-container highlight-container-gray">
+				<img alt="" src="/img/Icons/icon_robotic-hand.png">
 				<b>Wyjaśnienie</b>
 				<div class="line"></div>
 				<p>
-					W powyższym przykładzie po kliknięciu na element o id "box", używamy funkcji animate() do przesunięcia elementu w prawo o 200 pikseli. Animacja trwa 1000 milisekund (czyli 1 sekundę). Dzięki temu użytkownik może łatwo interaktywnie przesuwać elementy na stronie internetowej.
+					W powyższym przykładzie po kliknięciu element o id "<span>box</span>", używamy funkcji <span>animate()</span> do przesunięcia elementu w prawo o 200 pikseli. Animacja trwa 1000 milisekund (czyli 1 sekundę). Dzięki temu użytkownik może łatwo interaktywnie przesuwać elementy na stronie internetowej.
 				</p>
 			</div>
 			<div class="big-page-header"></div>

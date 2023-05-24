@@ -1,84 +1,93 @@
 /*drop tutorials elements*/
 
-.drop-tuto1{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #71667B;
-    box-shadow: rgba(0, 0, 0, 0.07) 0 5px 40px;
-    display: flex;
+.drop-tuto1 {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 0;
+	align-items: center;
+	padding: 10px 15px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #71667B;
+	box-shadow: rgba(0, 0, 0, 0.07) 0 5px 40px;
+	display: flex;
 }
-.drop-tuto2{
-    box-sizing: border-box;
-    margin: 0 15px 0 0;
-    min-width: 0;
-    max-width: 100%;
-    width: 50px;
-    height: 50px;
-    transition: filter 0.5s ease 0s;
-    filter: grayscale(0%);
+
+.drop-tuto2 {
+	box-sizing: border-box;
+	margin: 0 15px 0 0;
+	min-width: 0;
+	max-width: 100%;
+	width: 50px;
+	height: 50px;
+	transition: filter 0.5s ease 0s;
+	filter: grayscale(0%);
 }
-.drop-tuto3{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    font-size: 18px;
-    font-weight: 400;
-    color: #100F11;
+
+.drop-tuto3 {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 0;
+	font-size: 18px;
+	font-weight: 400;
+	color: #100F11;
 }
-.drop-tuto4{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    flex: 1 1 0;
-    padding-left: 30px;
+
+.drop-tuto4 {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 0;
+	flex: 1 1 0;
+	padding-left: 30px;
 }
-.drop-tuto5{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    animation: 0.5s ease 0s 1 normal backwards running fade-in;
-    flex-wrap: wrap;
-    display: flex;
+
+.drop-tuto5 {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 0;
+	animation: 0.5s ease 0s 1 normal backwards running fade-in;
+	flex-wrap: wrap;
+	display: flex;
 }
-.drop-tuto6{
-    box-sizing: border-box;
-    margin: 22px 60px 22px 0;
-    min-width: 0;
+
+.drop-tuto6 {
+	box-sizing: border-box;
+	margin: 22px 60px 22px 0;
+	min-width: 0;
 }
-.drop-tuto7{
-    box-sizing: border-box;
-    min-width: 0;
-    align-items: center;
-    text-decoration: none;
-    display: flex;
-    margin-bottom: 15px;
-    transform: translateX(0);
-    transition: transform 0.2s ease;
+
+.drop-tuto7 {
+	box-sizing: border-box;
+	min-width: 0;
+	align-items: center;
+	text-decoration: none;
+	display: flex;
+	margin-bottom: 15px;
+	transform: translateX(0);
+	transition: transform 0.2s ease;
 }
+
 .drop-tuto7:hover {
-    transform: translateX(10px);
+	transform: translateX(10px);
 }
-.drop-tuto8{
-    box-sizing: border-box;
-    margin: 0 12px 0 0;
-    min-width: 0;
-    max-width: 100%;
-    width: 28px;
-    height: 28px;
+
+.drop-tuto8 {
+	box-sizing: border-box;
+	margin: 0 12px 0 0;
+	min-width: 0;
+	max-width: 100%;
+	width: 28px;
+	height: 28px;
 }
-.drop-tuto9{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    font-size: 14px;
-    font-weight: 400;
-    transition: color 0.3s ease 0s;
-    width: 112px;
-    color: #242222;
+
+.drop-tuto9 {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 0;
+	font-size: 14px;
+	font-weight: 400;
+	transition: color 0.3s ease 0s;
+	width: 112px;
+	color: #242222;
 }

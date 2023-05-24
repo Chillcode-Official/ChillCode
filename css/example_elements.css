@@ -1,189 +1,197 @@
 /*Example tooltip for pseudo-class*/
 .tooltip-example .tooltip-example-text {
-		visibility: hidden;
-		width: 200px;
-		background-color: black;
-		color: #fff;
-		text-align: center;
-		border-radius: 6px;
-		padding: 5px 0;
-		position: absolute;
-		z-index: 1;
-		bottom: 125%;
-		left: 50%;
-		margin-left: -60px;
-		opacity: 0;
-		transition: opacity 0.3s;
+	visibility: hidden;
+	width: 200px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .tooltip-example:hover .tooltip-example-text {
-		visibility: visible;
-		opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
+
 /*Example button for pseudo-class*/
-.btn-example{
-		background-color: lightgray;
-		color: black;
-		padding: 10px 20px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
+.btn-example {
+	background-color: lightgray;
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .btn-example:active {
-		background-color: gray;
-		color: white;
+	background-color: gray;
+	color: white;
 }
+
 /* ::after Pseudo-Elements */
 .cta-example {
-		display: inline-block;
-		padding: 10px 20px;
-		background-color: #9d4d4d;
-		color: white;
-		text-align: center;
-		position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #9d4d4d;
+	color: white;
+	text-align: center;
+	position: relative;
 }
 
 .cta-example::after {
-		content: "";
-		position: absolute;
-		bottom: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		border-width: 20px 20px 0;
-		border-style: solid;
-		border-color: #f39696 transparent;
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 20px 20px 0;
+	border-style: solid;
+	border-color: #f39696 transparent;
 }
 
 /* ::before  Pseudo-Elements*/
 .highlighted-text-example {
-		background-color: yellow;
-		padding: 5px 10px;
-		display: inline-block;
-		position: relative;
+	background-color: yellow;
+	padding: 5px 10px;
+	display: inline-block;
+	position: relative;
 }
 
 .highlighted-text-example::before {
-		content: "";
-		position: absolute;
-		top: -10px;
-		left: 0;
-		right: 0;
-		height: 10px;
-		background-color: yellow;
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 0;
+	right: 0;
+	height: 10px;
+	background-color: yellow;
 }
 
 /* ::first-letter Pseudo-Elements */
 .p-example::first-letter {
-		font-size: 32px;
-		font-weight: bold;
-		color: blue;
-		float: left;
-		margin-right: 10px;
+	font-size: 32px;
+	font-weight: bold;
+	color: blue;
+	float: left;
+	margin-right: 10px;
 }
 
 /* ::first-line Pseudo-Elements */
 .highlighted-text-example {
-		font-size: 20px;
-		font-weight: bold;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .highlighted-text-example::first-line {
-		color: red;
+	color: red;
 }
 
 /* ::marker Pseudo-Elements */
-.ol-example{
-		list-style-type: none;
-		padding: 0;
-		color: #7e7c7c;
+.ol-example {
+	list-style-type: none;
+	padding: 0;
+	color: #7e7c7c;
 }
-.li-example li::marker{
-		display: inline-block;
-		width: 30px;
-		text-align: center;
-		color: white;
-		background-color: blue;
-		margin-right: 10px;
-		padding: 5px 0;
-		content: counter(item);
-		counter-increment: item;
+
+.li-example li::marker {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: white;
+	background-color: blue;
+	margin-right: 10px;
+	padding: 5px 0;
+	content: counter(item);
+	counter-increment: item;
 }
+
 /*Nav Example Elements*/
-.nav-example{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px;
-		border-bottom: 4px solid #494646;
+.nav-example {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	border-bottom: 4px solid #494646;
 }
 
 .nav-example a {
-		text-decoration: none;
-		color: white;
-		margin-right: 20px;
+	text-decoration: none;
+	color: white;
+	margin-right: 20px;
 }
+
 /*Form Example Elements*/
 .form-example form {
-		padding: 30px;
-		background-color: lightgray;
-		border-radius: 10px;
-		box-shadow: 2px 2px 10px #7800ff;
+	padding: 30px;
+	background-color: lightgray;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px #7800ff;
 }
 
 .form-example h2 {
-		text-align: center;
-		margin-bottom: 30px;
-		color: black;
+	text-align: center;
+	margin-bottom: 30px;
+	color: black;
 }
 
 .form-group {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
 }
 
 .form-example label {
-		font-weight: bold;
-		margin-bottom: 10px;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .form-example input[type="text"], input[type="email"], textarea {
-		padding: 10px;
-		border: 2px solid gray;
-		border-radius: 5px;
-		font-size: 16px;
+	padding: 10px;
+	border: 2px solid gray;
+	border-radius: 5px;
+	font-size: 16px;
 }
 
 .form-example button[type="submit"] {
-		background-color: #454581;
-		color: white;
-		padding: 10px 20px;
-		border: none;
-		border-radius: 5px;
-		font-size: 16px;
-		cursor: pointer;
+	background-color: #454581;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
 }
 
 .form-example button[type="submit"]:hover {
-		background-color: #2e2eff;
+	background-color: #2e2eff;
 }
+
 /*Counters-liczniki Example*/
 .counters ol {
-		counter-reset: li;
+	counter-reset: li;
 }
+
 .counters li {
-		list-style: none;
-		counter-increment: li;
-		position: relative;
-		margin-bottom: 10px;
-		padding-left: 25px;
+	list-style: none;
+	counter-increment: li;
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 25px;
 }
+
 .counters li:before {
-		content: counter(li) ".";
-		position: absolute;
-		left: 0;
-		top: 0;
+	content: counter(li) ".";
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .Example-table {
@@ -195,24 +203,29 @@
 	border: 1px solid black;
 	border-spacing: 0;
 }
+
 .Example-caption {
 	font-size: 24px;
 	text-align: center;
 	padding: 10px;
 	font-weight: bold;
 }
+
 .Example-row {
 	display: table-row;
 }
+
 .Example-cell {
 	display: table-cell;
 	border: 1px solid black;
 	padding: 5px;
 }
+
 .Example-header {
 	font-weight: bold;
 	background-color: #ccc;
 }
+
 .Example-color-text-gray {
 	color: gray;
 }

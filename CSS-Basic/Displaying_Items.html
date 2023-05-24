@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>CSS {Displaying items}</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wyświetlanie elementów — Kurs CSS | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,26 +19,38 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_CSS.html"><img alt="" class="icon-img-navbar"
+				                                             src="/img/Icons/icon_css(2).png"> CSS</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_css(2).png">CSS</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory elementu</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
 								</ul>
 							</div>
 						</li>
@@ -47,7 +59,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
 							</div>
@@ -62,7 +75,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Border.html">Obramowanie</a></li>
 									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 								</ul>
 							</div>
@@ -71,7 +85,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Outline.html">Zarys</a></li>
 									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 								</ul>
 							</div>
@@ -84,7 +99,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 								</ul>
 							</div>
@@ -93,8 +109,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
-									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_properties.html">Właściwości Listy</a></li>
 								</ul>
 							</div>
 						</li>
@@ -103,8 +121,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
-									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Clear_property.html">Właściwości clear</a></li>
 								</ul>
 							</div>
 						</li>
@@ -113,7 +133,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 								</ul>
 							</div>
@@ -129,11 +150,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -151,7 +190,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
@@ -220,7 +260,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
 				</div>
@@ -230,7 +271,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
 				</div>
@@ -249,18 +291,20 @@
 	<div class="opacity-function padding-content">
 		<div class="content">
 			<div class="text-centered text-padding">
-				<h1>Wyświetlanie Elementów CSS</h1>
+				<h1>Wyświetlanie elementów</h1>
 				<div class="section-with-image highlight-container">
 					<p>
 						Display jest jedną z najważniejszych właściwości w CSS, ponieważ kontroluje sposób, w jaki
 						elementy HTML są wyświetlane na stronie. Wartości "<span>display</span>" pozwalają na precyzyjne kontrolowanie układu elementów na stronie.
 					</p>
-					<img src="/img/vector58.png" alt="">
+					<img alt="" src="/img/Vectors/vector58.png">
 				</div>
 			</div>
 			<p class="text-container white-container no-margin-top article tooltip">
 				Właściwość
-				<code><a pro-tip="Ustawia element na tryb blokowy, co oznacza, że element wypełni całą dostępną przestrzeń poziomo i będzie wyświetlany w następnej linii. ">block <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Ustawia element na tryb blokowy, co oznacza, że element wypełni całą dostępną przestrzeń poziomo i będzie wyświetlany w następnej linii. ">block <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ustawienie bloku na stronie:
 			</p>
 			<div class="double-elements gap-zero">
@@ -292,7 +336,9 @@ div {
 								</pre>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+						                                                                  class="icon-img-little"
+						                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 						<div class="dropdown-content">
 							<div class="output">
 								<div style="margin: 10px; padding: 20px; border: 1px solid #000;">
@@ -308,7 +354,9 @@ div {
 			<div class="big-page-header"></div>
 			<p class="text-container gray-container no-margin-top article tooltip">
 				Właściwość
-				<code><a pro-tip="Ustawia element na tryb liniowy, co oznacza, że element będzie wyświetlany w tej samej linii co inne elementy typu inline lub tekst.">inline <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Ustawia element na tryb liniowy, co oznacza, że element będzie wyświetlany w tej samej linii co inne elementy typu inline lub tekst.">inline <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ustawienie elementu jako inline:
 			</p>
 			<div class="double-elements gap-zero">
@@ -334,7 +382,9 @@ span {
 								</pre>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+						                                                                  class="icon-img-little"
+						                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 						<div class="dropdown-content">
 							<div class="output">
 								<p>To <span style="display: inline">tekst</span> z elementem inline.</p>
@@ -347,7 +397,9 @@ span {
 			<div class="big-page-header"></div>
 			<p class="text-container white-container no-margin-top article tooltip">
 				Właściwość
-				<code><a pro-tip="Łączy cechy elementów inline i block. Element ten może mieć ustawiony margines, padding oraz szerokość i wysokość, ale zachowuje się jak element inline.">inline-block <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Łączy cechy elementów inline i block. Element ten może mieć ustawiony margines, padding oraz szerokość i wysokość, ale zachowuje się jak element inline.">inline-block <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ustawienie elementu jako inline-block:
 			</p>
 			<div class="double-elements gap-zero">
@@ -377,7 +429,9 @@ button {
 								</pre>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+						                                                                  class="icon-img-little"
+						                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 						<div class="dropdown-content">
 							<div class="output">
 								<div style="display: inline-block; margin: 10px; padding: 10px;">
@@ -393,7 +447,9 @@ button {
 			<div class="big-page-header"></div>
 			<p class="text-container gray-container no-margin-top article tooltip">
 				Właściwość
-				<code><a pro-tip="Ustawia element na tryb elastycznego kontenera, który pozwala na łatwe zarządzanie układem elementów wewnątrz.">flex <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Ustawia element na tryb elastycznego kontenera, który pozwala na łatwe zarządzanie układem elementów wewnątrz.">flex <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ustawienie elementu jako kontenera flex:
 			</p>
 			<div class="double-elements gap-zero">
@@ -425,7 +481,9 @@ button {
 								</pre>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+						<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+						                                                                  class="icon-img-little"
+						                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 						<div class="dropdown-content">
 							<div class="output">
 								<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
@@ -442,7 +500,9 @@ button {
 			<div class="big-page-header"></div>
 			<p class="text-container white-container no-margin-top article tooltip">
 				Właściwość
-				<code><a pro-tip="Całkowicie ukrywa element i przestrzeń, którą zajmował, nie zostaje zajęta przez inne elementy.">none <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Całkowicie ukrywa element i przestrzeń, którą zajmował, nie zostaje zajęta przez inne elementy.">none <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ukrycie elementu:
 			</p>
 			<div class="code-block code-block-margin-top">
@@ -455,7 +515,9 @@ button {
 								</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-content output-clear">
 
@@ -473,10 +535,12 @@ button {
 						umieszczony, więc pozostawia swoje miejsce, a inne elementy na stronie są przesunięte w to miejsce.
 					</p>
 				</div>
-				<img src="/img/vector112.png" alt="">
+				<img alt="" src="/img/Vectors/vector112.png">
 			</div>
 			<p class="text-container gray-container article tooltip no-margin-top">
-				<code><a pro-tip="Ukrywa element, ale zachowuje jego przestrzeń, która może zostać zajęta przez inne elementy">visibility <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a
+						pro-tip="Ukrywa element, ale zachowuje jego przestrzeń, która może zostać zajęta przez inne elementy">visibility <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				Ukrycie oraz Pokazanie elementu:
 			</p>
 			<!--
@@ -492,10 +556,10 @@ button {
 					</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/Icons/icon_syntax.png" alt=""> Uruchom kod</button>
 					<div class="dropdown-content">
 							<div class="output output-content output-clear">
-									<img id="element" src="/img/winter.jpg" alt="" style="visibility: visible;" >
+									<img id="element" src="/img/Others/winter.jpg" alt="" style="visibility: visible;" >
 
 									<button class="btn-example" onclick="document.getElementById('element').style.visibility = 'hidden'">Ukryj element</button>
 
@@ -506,12 +570,15 @@ button {
 			 -->
 			<div class="double-elements gap-zero">
 				<div class="page-header">
-					<img id="element" src="/img/sunset.jpg" alt="" style="visibility: visible;" >
-					<button class="btn-example" style="display: flex; padding: 5px; width: 100px; margin-bottom: 8px; margin-right: 100px;" onclick="document.getElementById('element').style.visibility = 'hidden'">Ukryj element</button>
-					<button class="btn-example" style="display: flex; padding: 5px; width: 100px" onclick="document.getElementById('element').style.visibility = 'visible'">Pokaż element</button>
+					<img alt="" id="element" src="/img/Others/sunset.jpg" style="visibility: visible;">
+					<button class="btn-example"
+					        onclick="document.getElementById('element').style.visibility = 'hidden'"
+					        style="display: flex; padding: 5px; width: 100px; margin-bottom: 8px; margin-right: 100px;">Ukryj element</button>
+					<button class="btn-example" onclick="document.getElementById('element').style.visibility = 'visible'"
+					        style="display: flex; padding: 5px; width: 100px">Pokaż element</button>
 				</div>
 				<div class="code-block">
-					<code><img class="icon-img-small" src="/img/icon_html.png" alt="">Html</code>
+					<code><img alt="" class="icon-img-small" src="/img/Icons/icon_html.png">Html</code>
 					<pre>
 										<code>
 &lt;img id=&quot;element&quot; src=&quot;/img/podroz3.jpg&quot; alt=&quot;&quot; style=&quot;visibility: visible;&quot; &gt;

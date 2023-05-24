@@ -1,10 +1,9 @@
-
 /* Tool-tip elements */
 .tooltip a {
-		position: relative;
-		font-size: inherit;
-		color: #e4e4e4;
-		text-decoration: none;
+	position: relative;
+	font-size: inherit;
+	color: #e4e4e4;
+	text-decoration: none;
 }
 
 .tooltip a:after {
@@ -31,13 +30,15 @@
 
 
 .tooltip a:before, .tooltip a:after {
-		display: none;
+	display: none;
 }
+
 .tooltip a:hover:before, .tooltip a:hover:after {
-		display: block;
-		z-index: 1;
-		white-space: break-spaces; /* --możliwość popsucia*/
+	display: block;
+	z-index: 1;
+	white-space: break-spaces; /* --możliwość popsucia*/
 }
+
 /*.miniTooltip a:after{
 	width: auto;
 }*/

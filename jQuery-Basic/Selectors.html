@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>jQuery {Szybki start}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selektory — Kurs jQuery | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> jQuery</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_jQuery.html"><img alt=""
+				                                                class="icon-img-navbar"
+				                                                src="/img/Icons/icon_jquery(1).png"> jQuery</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/jquery(1).png" alt="">jQuery</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_jquery(1).png">jQuery</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -34,7 +42,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Selektory</a>
 							<div class="dropdown-content show">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 								</ul>
 							</div>
@@ -44,7 +53,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 									<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 								</ul>
 							</div>
@@ -55,10 +65,13 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="AJAX.html">AJAX jQuery</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_load()_method.html">Metoda .load()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_post()_method.html">Metoda .post()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 								</ul>
 							</div>
@@ -67,7 +80,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Plugins.html">Wtyczki jQuery</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 								</ul>
@@ -79,7 +93,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 									<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 								</ul>
 							</div>
@@ -88,11 +103,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -110,7 +143,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Selektory</a>
 							<div class="dropdown-content show">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 								</ul>
 							</div>
@@ -120,7 +154,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 									<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 								</ul>
 							</div>
@@ -131,10 +166,13 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="AJAX.html">AJAX jQuery</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_load()_method.html">Metoda .load()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_post()_method.html">Metoda .post()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 								</ul>
 							</div>
@@ -143,7 +181,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Plugins.html">Wtyczki jQuery</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 								</ul>
@@ -155,7 +194,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 									<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 								</ul>
 							</div>
@@ -174,11 +214,14 @@
 						podstawie ich nazw, klas, atrybutów, relacji z innymi elementami, a nawet na podstawie ich pozycji w drzewie DOM. Oto kilka przykładów selektorów w jQuery:
 					</p>
 				</div>
-				<img class="margin-top" src="/img/vector100.png" alt="">
+				<img alt="" class="margin-top" src="/img/Vectors/vector100.png">
 			</div>
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container lightPink-container article tooltip no-margin-top">Wybierz wszystkie elementy <code><a pro-tip="tag używany do definiowania akapitu w HTML.">&ltp&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></p>
+					<p class="text-container lightPink-container article tooltip no-margin-top">Wybierz wszystkie elementy <code><a
+							pro-tip="tag używany do definiowania akapitu w HTML.">&ltp&gt <img alt=""
+					                                                                           class="icon-img-tooltip"
+					                                                                           src="/img/Icons/icon_tooltip.png"></a></code></p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -188,7 +231,7 @@ $("p")
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container lightGray-container article tooltip no-margin-top">Wybierz elementy o klasie intro</p>
+					<p class="text-container lightGray-container article tooltip no-margin-top highlight-container highlight-container-gray">Wybierz elementy o klasie <span>intro</span></p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -200,7 +243,11 @@ $(".intro")
 			</div>
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container lightPink-container article tooltip line-height-plus">Wybierz elementy o atrybucie <code><a pro-tip="atrybut używany z tagiem <a> do określenia adresu URL linku.">href <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zaczynającym się od <code><a pro-tip="protokół używany do bezpiecznej komunikacji przez internet.">https <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code></p>
+					<p class="text-container lightPink-container article tooltip line-height-plus">Wybierz elementy o atrybucie <code><a
+							pro-tip="atrybut używany z tagiem <a> do określenia adresu URL linku.">href <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> zaczynającym się od <code><a
+							pro-tip="protokół używany do bezpiecznej komunikacji przez internet.">https <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code></p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -210,7 +257,12 @@ $("[href^='https']")
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container lightGray-container article tooltip line-height-plus">Wybierz elementy <code><a pro-tip="tag używany do tworzenia hiperłącza w HTML.">&lta&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> znajdujące się w elemencie <code><a pro-tip="tag używany do tworzenia blokowego kontenera dla elementów HTML.">&ltdiv&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> o id "main"</p>
+					<p class="text-container lightGray-container article tooltip line-height-plus highlight-container highlight-container-gray">Wybierz elementy <code><a
+							pro-tip="tag używany do tworzenia hiperłącza w HTML.">&lta&gt <img alt=""
+					                                                                           class="icon-img-tooltip"
+					                                                                           src="/img/Icons/icon_tooltip.png"></a></code> znajdujące się w elemencie <code><a
+							pro-tip="tag używany do tworzenia blokowego kontenera dla elementów HTML.">&ltdiv&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> o id "<span>main</span>"</p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -222,7 +274,9 @@ $("#main a")
 			</div>
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container lightPink-container article tooltip line-height-plus">Wybierz elementy <code><a pro-tip="tag używany do tworzenia interaktywnego elementu kontrolnego, takiego jak pole tekstowe lub pole wyboru.">&ltinput&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> typu text znajdujące się w formularzu o id "myForm"</p>
+					<p class="text-container lightPink-container article tooltip line-height-plus highlight-container highlight-container-lightPink">Wybierz elementy <code><a
+							pro-tip="tag używany do tworzenia interaktywnego elementu kontrolnego, takiego jak pole tekstowe lub pole wyboru.">&ltinput&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> typu text znajdujące się w formularzu o id "<span>myForm</span>"</p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -232,7 +286,9 @@ $("#myForm input[type='text']")
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container lightGray-container article tooltip">Wybierz elementy <code><a pro-tip="tag używany do tworzenia elementu listy w HTML. Jest używany wewnątrz tagów <ul> lub <ol> do definiowania list nieuporządkowanych lub uporządkowanych.">&ltli&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> znajdujące się w elemencie o klasie "menu" i mające dzieci elementu &lta&gt</p>
+					<p class="text-container lightGray-container article tooltip highlight-container highlight-container-gray">Wybierz elementy <code><a
+							pro-tip="tag używany do tworzenia elementu listy w HTML. Jest używany wewnątrz tagów <ul> lub <ol> do definiowania list nieuporządkowanych lub uporządkowanych.">&ltli&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> znajdujące się w elemencie o klasie "<span>menu</span>" i mające dzieci elementu <span>&lta&gt</span></p>
 					<div class="code-block code-block-margin-top  hidden-overflow">
 								<pre>
 										<code>
@@ -243,10 +299,10 @@ $(".menu li:has(a)")
 				</div>
 			</div>
 			<div class="big-page-header"></div>
-			<p class="text-container gray-container article tooltip">
+			<p class="text-container gray-container article tooltip highlight-container highlight-container-gray">
 				W jQuery selektory można łączyć ze sobą, aby uzyskać bardziej skomplikowane zapytania. Przykładowo,
-				aby wybrać wszystkie elementy &ltli&gt znajdujące się w elemencie &ltul&gt o klasie "menu" oraz mające atrybut
-				"data-price" większy niż 10, można użyć następującego zapytania:
+				aby wybrać wszystkie elementy <span>&ltli&gt</span> znajdujące się w elemencie <span>&ltul&gt</span> o klasie "<span>menu</span>" oraz mające atrybut
+				"<span>data-price</span>" większy niż 10, można użyć następującego zapytania:
 			</p>
 			<div class="code-block code-block-margin-top">
  						<pre>
@@ -256,7 +312,8 @@ $("ul.menu li[data-price > '10']")
  						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+				<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+						alt="" src="/img/Icons/icon_robotic-hand.png" style="width: 30px; margin-bottom: -10px;">  Wyjaśnienie</button>
 				<div class="dropdown-content">
 					<div class="alert-card  alert-card-gray">
 						<p>
@@ -267,10 +324,10 @@ $("ul.menu li[data-price > '10']")
 				</div>
 			</div>
 			<div class="big-page-header"></div>
-			<p class="text-container gray-container">
+			<p class="text-container gray-container highlight-container highlight-container-gray">
 				jQuery posiada wiele selektorów wbudowanych, ale również można tworzyć własne selektory. Do tego celu
-				można wykorzystać metodę $.expr.createSelector(). Przykładowo, aby stworzyć własny selektor wybierający
-				elementy &lta&gt z atrybutem "target" o wartości "_blank", można użyć następującego kodu:
+				można wykorzystać metodę <span>$.expr.createSelector()</span>. Przykładowo, aby stworzyć własny selektor wybierający
+				elementy &lta&gt z atrybutem "<span>target</span>" o wartości "<span>_blank</span>", można użyć następującego kodu:
 			</p>
 			<div class="code-block code-block-margin-top">
 						<pre>
@@ -283,7 +340,8 @@ $.expr.createSelector( "targetBlankA", function( elem ) {
 						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img style="width: 30px; margin-bottom: -10px;" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+				<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+						alt="" src="/img/Icons/icon_robotic-hand.png" style="width: 30px; margin-bottom: -10px;">  Wyjaśnienie</button>
 				<div class="dropdown-content">
 					<div class="alert-card  alert-card-gray">
 						<p>
@@ -294,7 +352,7 @@ $.expr.createSelector( "targetBlankA", function( elem ) {
 			</div>
 			<div class="page-header"></div>
 			<div class="alert-card ">
-				<img src="/img/note.png" alt="">
+				<img alt="" src="/img/Icons/icon_note.png">
 				<b>Notatka</b>
 				<div class="line"></div>
 				<p>

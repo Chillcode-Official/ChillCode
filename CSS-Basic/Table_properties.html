@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>Tabele-CSS</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Właściwości tabeli — Kurs CSS | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,26 +19,38 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_CSS.html"><img alt="" class="icon-img-navbar"
+				                                             src="/img/Icons/icon_css(2).png"> CSS</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_css(2).png">CSS</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory elementu</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
 								</ul>
 							</div>
 						</li>
@@ -47,7 +59,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
 							</div>
@@ -62,7 +75,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Border.html">Obramowanie</a></li>
 									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 								</ul>
 							</div>
@@ -71,7 +85,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Outline.html">Zarys</a></li>
 									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 								</ul>
 							</div>
@@ -93,8 +108,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
-									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_properties.html">Właściwości Listy</a></li>
 								</ul>
 							</div>
 						</li>
@@ -103,8 +120,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
-									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Clear_property.html">Właściwości clear</a></li>
 								</ul>
 							</div>
 						</li>
@@ -113,7 +132,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 								</ul>
 							</div>
@@ -129,11 +149,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -151,7 +189,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
@@ -220,7 +259,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
 				</div>
@@ -230,7 +270,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
 				</div>
@@ -249,13 +290,15 @@
 	<div class="opacity-function padding-content">
 		<div class="content">
 			<div class="text-centered">
-				<h1><img class="icon-img-small" src="/img/icon_table.png" alt=""> Właściwości Tabeli CSS</h1>
+				<h1><img alt="" class="icon-img-small" src="/img/Icons/icon_table.png"> Właściwości tabeli</h1>
 			</div>
 			<div class="page-header"></div>
 			
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip="Właściwość border ustawia grubość, styl oraz kolor obramowania elementu. Przykład: border: 1px solid black; stworzy obramowanie o grubości 1 piksela, czarnej kolorystyce i stylu solid wokół elementu.">border <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa grubość obramowania</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip="Właściwość border ustawia grubość, styl oraz kolor obramowania elementu. Przykład: border: 1px solid black; stworzy obramowanie o grubości 1 piksela, czarnej kolorystyce i stylu solid wokół elementu.">border <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - określa grubość obramowania</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -267,7 +310,11 @@ td, th {
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip="Właściwość width ustawia szerokość elementu. Przykład: width: 200px; ustawi szerokość elementu na 200 pikseli.">width <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i <code><a pro-tip="Właściwość height ustawia wysokość elementu. Przykład: height: 100px; ustawi wysokość elementu na 100 pikseli.">height <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - szerokość i wysokość</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip="Właściwość width ustawia szerokość elementu. Przykład: width: 200px; ustawi szerokość elementu na 200 pikseli.">width <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> i <code><a
+							pro-tip="Właściwość height ustawia wysokość elementu. Przykład: height: 100px; ustawi wysokość elementu na 100 pikseli.">height <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - szerokość i wysokość</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -282,7 +329,9 @@ td, th {
 			</div>
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip="Właściwość text-align ustawia poziome wyrównanie tekstu wewnątrz elementu. Przykład: text-align: center; wyśrodkuje tekst wewnątrz elementu.">text-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wyrównanie tekstu w komórkach tabeli</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip="Właściwość text-align ustawia poziome wyrównanie tekstu wewnątrz elementu. Przykład: text-align: center; wyśrodkuje tekst wewnątrz elementu.">text-align <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - określa wyrównanie tekstu w komórkach tabeli</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -294,7 +343,9 @@ td, th {
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip="Właściwość vertical-align ustawia pionowe wyrównanie elementów w linii (takich jak obrazy lub tekst) wewnątrz bloku liniowego. Przykład: vertical-align: middle; wyśrodkuje element w pionie na środku linii.">vertical-align <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa wyrównanie pionowe zawartości komórek tabeli</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip="Właściwość vertical-align ustawia pionowe wyrównanie elementów w linii (takich jak obrazy lub tekst) wewnątrz bloku liniowego. Przykład: vertical-align: middle; wyśrodkuje element w pionie na środku linii.">vertical-align <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - określa wyrównanie pionowe zawartości komórek tabeli</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -308,7 +359,9 @@ td, th {
 			</div>
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip=" Właściwość background-color ustawia kolor tła elementu.">background-color <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa kolor tła tabeli</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip=" Właściwość background-color ustawia kolor tła elementu.">background-color <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - określa kolor tła tabeli</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -320,7 +373,9 @@ td, th {
 					</div>
 				</div>
 				<div class="display-grid">
-					<p class="text-container purple-container article tooltip"><code><a pro-tip="Właściwość padding ustawia odstęp między zawartością elementu a jego obramowaniem. Przykład: padding: 10px; stworzy odstęp o szerokości 10 pikseli między zawartością elementu a jego obramowaniem. Można także ustawić odstęp dla każdej strony osobno używając następującej składni: padding-top, padding-right, padding-bottom i padding-left.">padding <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> - określa odstęp od komórek tabeli</p>
+					<p class="text-container purple-container article tooltip"><code><a
+							pro-tip="Właściwość padding ustawia odstęp między zawartością elementu a jego obramowaniem. Przykład: padding: 10px; stworzy odstęp o szerokości 10 pikseli między zawartością elementu a jego obramowaniem. Można także ustawić odstęp dla każdej strony osobno używając następującej składni: padding-top, padding-right, padding-bottom i padding-left.">padding <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> - określa odstęp od komórek tabeli</p>
 					<div class="code-block code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
@@ -333,15 +388,21 @@ td, th {
 				</div>
 			</div>
 			<div class="alert-card  tooltip">
-				<img src="/img/note.png" alt="">
+				<img alt="" src="/img/Icons/icon_note.png">
 				<b>Notatka</b>
 				<div class="line"></div>
 				<p>
 					Pamiętaj, że te reguły dotyczą tylko wybranych komórek w tabeli. Aby dostosować wygląd całej
 					tabeli, reguły te należy dostosować do
-					<code><a pro-tip="">table <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> zamiast do
-					<code><a pro-tip="">td <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> i
-					<code><a pro-tip="">th <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a
+							pro-tip="table - Jest to selektor używany do stylizacji całej tabeli HTML. Można go zastosować, aby zmieniać wygląd tabeli jako całości, takie jak tło, obramowanie, odstępy między komórkami itp.">table <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> zamiast do
+					<code><a
+							pro-tip="td - Jest to selektor używany do stylizacji komórek danych (cell data) w tabeli. Komórki danych są miejscami, w których umieszczane są właściwe dane wewnątrz tabeli. Można zastosować selektor td, aby zmieniać wygląd pojedynczych komórek, takie jak tło, obramowanie, marginesy, wypełnienie, kolor tekstu itp.">td <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> i
+					<code><a
+							pro-tip="th - Jest to selektor używany do stylizacji komórek nagłówków (table header) w tabeli. Komórki nagłówków służą do opisywania lub identyfikowania kolumn tabeli. Często mają wyższą wagę semantyczną niż komórki danych. Można zastosować selektor th, aby zmieniać wygląd pojedynczych komórek nagłówków, takie jak tło, obramowanie, marginesy, wypełnienie, kolor tekstu itp.">th <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				</p>
 			</div>
 			<div class="big-page-header"></div>

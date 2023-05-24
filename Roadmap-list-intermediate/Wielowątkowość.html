@@ -3,12 +3,12 @@
 <head>
 		<meta charset="UTF-8">
 		<title>Wielowątkowość</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -51,7 +51,7 @@
 								która będzie wykonywana przez nowo utworzony wątek. W celu synchronizacji wątków, można użyć
 								klas Monitor, Mutex lub Semaphore.
 						</p>
-						<img src="/img/vector88.png" alt="">
+						<img alt="" src="/img/Vectors/vector88.png">
 				</div>
 				<p class="text-container no-margin-top">
 						Wielowątkowość pozwala na równoległe wykonywanie wielu zadań przez różne wątki, co może przyspieszyć działanie programu.
@@ -80,7 +80,7 @@
 								jest tworzony automatycznie przez system operacyjny w momencie uruchomienia programu i jest
 								odpowiedzialny za wykonywanie kodu z metody Main() lub innego punktu wejścia do programu.
 						</p>
-						<img src="/img/vector95.png" alt="">
+						<img alt="" src="/img/Vectors/vector95.png">
 				</div>
 				<p class="text-container gray-container no-margin-top">
 						Aby uzyskać dostęp do obecnie działającego wątku, można użyć statycznej właściwości CurrentThread
@@ -114,7 +114,7 @@ class Program
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, pobieramy referencję do obecnie działającego wątku przy pomocy właściwości
@@ -132,7 +132,7 @@ class Program
 								rozdzielenie pracy na kilka niezależnych od siebie części, co pozwala na równoległe wykonywanie
 								różnych zadań.
 						</p>
-						<img src="/img/vector14.png" alt="">
+						<img alt="" src="/img/Vectors/vector14.png">
 				</div>
 				<div class="text-container cream-container">
 				<p>
@@ -212,7 +212,7 @@ class Program
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym kodzie tworzymy 10 wątków, każdy z nich wykonuje metodę Calculate z indeksem i. Wszystkie
@@ -228,7 +228,7 @@ class Program
 								Zarządzanie wątkami polega na kontrolowaniu i koordynowaniu działania wątków w programie.
 								Może to obejmować tworzenie, uruchamianie, zatrzymywanie i zabijanie wątków.
 						</p>
-						<img src="/img/vector40.png" alt="">
+						<img alt="" src="/img/Vectors/vector40.png">
 				</div>
 				<p class="text-container blue-container no-margin-top">
 						Pozwala na koordynację i synchronizację działań wielu wątków.
@@ -334,7 +334,7 @@ Silnia liczby 5 wynosi 120
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W tym przykładzie, główny wątek wysyła dane do wątku workerThread poprzez ustawienie wartości
@@ -351,7 +351,7 @@ Silnia liczby 5 wynosi 120
 								Ta metoda przerywa działanie wątku, jednak jest to niezalecane ze względu na potencjalne
 								problemy związane z bezpieczeństwem i stabilnością programu.
 						</p>
-						<img src="/img/vector85.png" alt="">
+						<img alt="" src="/img/Vectors/vector85.png">
 				</div>
 				<p class="text-container lightPink-container no-margin-top">
 						Zamiast tego zaleca się użycie metody Join() lub Wait() w celu oczekiwania na
@@ -424,7 +424,7 @@ Program zakończył działanie.
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, główny wątek programu tworzy nowy wątek workerThread, który jest uruchamiany
@@ -442,7 +442,7 @@ Program zakończył działanie.
 								Klasa Thread w języku C# pozwala na tworzenie i uruchamianie nowych wątków w programie.
 								Posiada ona następujące ważniejsze właściwości:
 						</p>
-						<img src="/img/vector72.png" alt="">
+						<img alt="" src="/img/Vectors/vector72.png">
 				</div>
 				<p class="text-container article tooltip">
 						Właściwość <code><a pro-tip="ustawia wątek jako w tle lub w przodzie">IsBackground</a></code>
@@ -544,7 +544,8 @@ Console.WriteLine("Bieżąca kultura: " + Thread.CurrentThread.CurrentCulture);
 						</pre>
 				</div>
 				<p class="text-container article tooltip">
-						Właściwość <code><a pro-tip="ustawia lub zwraca kulturę interfejsu użytkownika dla bieżącego wątku">CurrentUICulture</a></code>
+						Właściwość <code><a
+						pro-tip="ustawia lub zwraca kulturę interfejsu użytkownika dla bieżącego wątku">CurrentUICulture</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -561,7 +562,7 @@ Console.WriteLine("Bieżąca kultura interfejsu użytkownika: " + Thread.Current
 								Klasa Thread w języku c# służy do tworzenia i zarządzania wątkami. Zawiera ona różne
 								metody pozwalające na kontrolowanie działania wątków, takie jak:
 						</p>
-						<img src="/img/vector34.png" alt="">
+						<img alt="" src="/img/Vectors/vector34.png">
 				</div>
 				<p class="text-container purple-container article tooltip no-margin-top">
 						Metoda <code><a pro-tip="przerywa działanie wątku.">Abort()</a></code>
@@ -635,7 +636,8 @@ Console.WriteLine("Wątek wstrzymany.");
 						</pre>
 				</div>
 				<p class="text-container purple-container article tooltip">
-						Metoda <code><a pro-tip="przerywa działanie wątku, który jest w trakcie wykonywania wywołania metody Sleep, Join lub Wait.">Interrupt()</a></code>
+						Metoda <code><a
+						pro-tip="przerywa działanie wątku, który jest w trakcie wykonywania wywołania metody Sleep, Join lub Wait.">Interrupt()</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -658,7 +660,8 @@ Thread.Sleep(1000); // zatrzymuje działanie wątku na 1 sekundę.
 						</pre>
 				</div>
 				<p class="text-container purple-container article tooltip">
-						Metoda <code><a pro-tip="powoduje, że procesor przetwarza instrukcje w pętli określoną liczbę razy.">SpinWait(int iterations)</a></code>
+						Metoda <code><a
+						pro-tip="powoduje, że procesor przetwarza instrukcje w pętli określoną liczbę razy.">SpinWait(int iterations)</a></code>
 				</p>
 				<div class="code-block">
 						<pre>

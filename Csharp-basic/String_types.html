@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>Typy-Referencyjne C#</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Właściwości i Metody klasy String — Kurs C# | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 		<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_Csharp.html"><img class="icon-img-navbar" src="/img/c-sharp.png" alt=""> C#</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_Csharp.html"><img alt=""
+				                                                class="icon-img-navbar" src="/img/Icons/icon_c-sharp.png"> C#</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/c-sharp.png" alt="">C#</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_c-sharp.png">C#</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -36,8 +44,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
-									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Reference_types.html">Typy referencyjne</a></li>
 									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
 								</ul>
 							</div>
@@ -46,7 +56,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Variables.html">Zmienne</a></li>
 									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
 									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
 									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
@@ -57,7 +68,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Fields.html">Pola</a></li>
 									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
 									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
 								</ul>
@@ -67,7 +79,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Properties.html">Właściwości</a></li>
 									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
 									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
 								</ul>
@@ -77,7 +90,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Constant.html">Stałe</a></li>
 									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
 								</ul>
 							</div>
@@ -86,8 +100,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
-									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Calling_methods.html">Wywoływanie metod</a></li>
 									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
 									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
 								</ul>
@@ -97,9 +113,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
-									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
-									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_if_statement.html">Instrukcja (else if)</a></li>
 									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
@@ -110,7 +129,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="For_loops.html">Pętla (for)</a></li>
 									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
 									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
@@ -124,20 +144,25 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tables.html">Tablice</a></li>
 									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
-									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
-									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Parametric_arrays.html">Tablice parametryczne</a></li>
 									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
 									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
 								</ul>
 							</div>
 						</li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Kolekcje</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Collections.html">Kolekcje</a></li>
 									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
 									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
 									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
@@ -149,12 +174,16 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_declaration.html">Deklaracja klasy</a></li>
 									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
 									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_destructor.html">Destruktor klasy</a></li>
 								</ul>
 							</div>
 						</li>
@@ -162,7 +191,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
 									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
 								</ul>
 							</div>
@@ -171,7 +201,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
 									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
 									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
 								</ul>
@@ -181,7 +212,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conversion_implicit.html">Niejawna konwersja</a></li>
 									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
 									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
 								</ul>
@@ -196,8 +228,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
-									<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text"
+									       href="The_using_keyword.html">Słowo kluczowe using</a></li>
 									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
 								</ul>
 							</div>
@@ -206,7 +240,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Exceptions.html">Wyjątki</a></li>
 									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
 									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
 								</ul>
@@ -216,9 +251,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
-									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
-									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_delegates.html">Delegaty generyczne</a></li>
 								</ul>
 							</div>
 						</li>
@@ -228,11 +266,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -252,8 +308,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Value_types.html">Typy wartościowe</a></li>
-									<li><a class="navbar-drop-text" href="Reference_types.html">Typy referencyjne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Reference_types.html">Typy referencyjne</a></li>
 									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
 								</ul>
 							</div>
@@ -262,7 +320,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Variables.html">Zmienne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Variables.html">Zmienne</a></li>
 									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
 									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
 									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
@@ -273,7 +332,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Fields.html">Pola</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Fields.html">Pola</a></li>
 									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
 									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
 								</ul>
@@ -283,7 +343,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Properties.html">Właściwości</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Properties.html">Właściwości</a></li>
 									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
 									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
 								</ul>
@@ -293,7 +354,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Constant.html">Stałe</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Constant.html">Stałe</a></li>
 									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
 								</ul>
 							</div>
@@ -302,8 +364,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Methods.html">Metody</a></li>
-									<li><a class="navbar-drop-text" href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Calling_methods.html">Wywoływanie metod</a></li>
 									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
 									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
 								</ul>
@@ -313,9 +377,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="If_statement.html">Instrukcja (if)</a></li>
-									<li><a class="navbar-drop-text" href="Else_statement.html">Instrukcja (else)</a></li>
-									<li><a class="navbar-drop-text" href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_if_statement.html">Instrukcja (else if)</a></li>
 									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
@@ -326,7 +393,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="For_loops.html">Pętla (for)</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="For_loops.html">Pętla (for)</a></li>
 									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
 									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
 									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
@@ -340,20 +408,25 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tables.html">Tablice</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tables.html">Tablice</a></li>
 									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
-									<li><a class="navbar-drop-text" href="Jagged_arrays.html">Tablice postrzępione</a></li>
-									<li><a class="navbar-drop-text" href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Parametric_arrays.html">Tablice parametryczne</a></li>
 									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
 									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
 								</ul>
 							</div>
 						</li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolekcje</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Kolekcje</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Collections.html">Kolekcje</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Collections.html">Kolekcje</a></li>
 									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
 									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
 									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
@@ -365,12 +438,16 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Classes.html">Klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_declaration.html">Deklaracja klasy</a></li>
 									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
 									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
-									<li><a class="navbar-drop-text" href="Class_destructor.html">Destruktor klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_destructor.html">Destruktor klasy</a></li>
 								</ul>
 							</div>
 						</li>
@@ -378,7 +455,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
 									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
 								</ul>
 							</div>
@@ -387,7 +465,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
 									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
 									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
 								</ul>
@@ -397,7 +476,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conversion_implicit.html">Niejawna konwersja</a></li>
 									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
 									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
 								</ul>
@@ -412,8 +492,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Namespaces.html">Przestrzenie nazw</a></li>
-									<li><a class="navbar-drop-text" href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text"
+									       href="The_using_keyword.html">Słowo kluczowe using</a></li>
 									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
 								</ul>
 							</div>
@@ -422,7 +504,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Exceptions.html">Wyjątki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Exceptions.html">Wyjątki</a></li>
 									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
 									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
 								</ul>
@@ -432,9 +515,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Generic_types.html">Typy generyczne</a></li>
-									<li><a class="navbar-drop-text" href="Generic_methods.html">Metody generyczne</a></li>
-									<li><a class="navbar-drop-text" href="Generic_delegates.html">Delegaty generyczne</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_delegates.html">Delegaty generyczne</a></li>
 								</ul>
 							</div>
 						</li>
@@ -448,20 +534,23 @@
 			<div class="content">
 				<div class="section-with-image">
 					<div class="text-centered text-padding article tooltip">
-						<h1>Właściwości I Metody Klasy String</h1>
+						<h1>Właściwości i Metody klasy String</h1>
 						<p>
-							Klasa <code><a pro-tip="hej">System.String</a></code> w języku C# posiada dwie
+							Klasa <code><a
+								pro-tip="Klasa System.String reprezentuje ciąg znaków. Zapewnia wiele przydatnych metod do manipulacji i operacji na ciągach, Obiekty typu string są niemutowalne, co oznacza, że operacje na ciągach zazwyczaj tworzą nowe obiekty ciągów, zamiast zmieniać istniejący obiekt.">System.String <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> w języku C# posiada dwie
 							główne właściwości oraz wiele Metod.
 						</p>
 					</div>
-					<img src="/img/vector75.png" alt="">
+					<img alt="" src="/img/Vectors/vector75.png">
 				</div>
 
 				<div class="double-elements">
 					 <div>
 						 <div class="display-grid">
 							 <p class="text-container lightPink-container article tooltip no-margin-top">
-								 Właściwość <code><a pro-tip="zwraca liczbę znaków w ciągu. ">Length</a></code>
+								 Właściwość <code><a pro-tip="zwraca liczbę znaków w ciągu. ">Length <img
+									 alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							 </p>
 							 <div class="code-block code-block-margin-top">
 						<pre>
@@ -474,7 +563,9 @@ int length = str.Length; // length zawiera wartość 12
 							 </div>
 						 </div>
 						 <div class="dropdown minus-margin-top">
-							 <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							 <button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                   class="icon-img-little"
+							                                                                   src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							 <div class="dropdown-content">
 								 <div class="output output-padding output-content">
 									 12
@@ -485,7 +576,8 @@ int length = str.Length; // length zawiera wartość 12
 					 <div>
 						 <div class="display-grid">
 							 <p class="text-container lightPink-container article tooltip no-margin-top">
-								 Właściwość <code><a pro-tip="pozwala na dostęp do poszczególnych znaków w ciągu. ">Chars[]</a></code>
+								 Właściwość <code><a pro-tip="pozwala na dostęp do poszczególnych znaków w ciągu. ">Chars[] <img
+									 alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							 </p>
 							 <div class="code-block code-block-margin-top">
 						<pre>
@@ -498,7 +590,9 @@ char firstChar = str[0]; // firstChar zawiera wartość 'H'
 							 </div>
 						 </div>
 						 <div class="dropdown minus-margin-top">
-							 <button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							 <button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                   class="icon-img-little"
+							                                                                   src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							 <div class="dropdown-content">
 								 <div class="output output-padding output-content">
 									 H
@@ -513,7 +607,8 @@ char firstChar = str[0]; // firstChar zawiera wartość 'H'
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="łączy dwa lub więcej ciągów.">Concat</a></code>
+								Metoda <code><a pro-tip="łączy dwa lub więcej ciągów.">Concat <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -529,7 +624,9 @@ string str3 = string.Concat(str1, str2); // str3 zawiera wartość "Hello World"
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello World
@@ -540,7 +637,9 @@ string str3 = string.Concat(str1, str2); // str3 zawiera wartość "Hello World"
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="porównuje dwa ciągi i zwraca wartość 0, jeśli są równe, liczbę ujemną, jeśli pierwszy jest mniejszy, lub liczbę dodatnią, jeśli pierwszy jest większy.">Compare</a></code>
+								Metoda <code><a
+									pro-tip="porównuje dwa ciągi i zwraca wartość 0, jeśli są równe, liczbę ujemną, jeśli pierwszy jest mniejszy, lub liczbę dodatnią, jeśli pierwszy jest większy.">Compare <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -555,7 +654,9 @@ int result = string.Compare(str1, str2); // result zawiera wartość -15
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									-15
@@ -570,7 +671,8 @@ int result = string.Compare(str1, str2); // result zawiera wartość -15
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="sprawdza, czy ciąg zawiera podciąg. ">Contains</a></code>
+								Metoda <code><a pro-tip="sprawdza, czy ciąg zawiera podciąg. ">Contains <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -583,7 +685,9 @@ bool result = str.Contains("World"); // result zawiera wartość true
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									true
@@ -594,7 +698,9 @@ bool result = str.Contains("World"); // result zawiera wartość true
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="zwraca podciąg ciągu.">Substring</a></code>
+								Metoda <code><a pro-tip="zwraca podciąg ciągu.">Substring <img alt=""
+								                                                               class="icon-img-tooltip"
+								                                                               src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -607,7 +713,9 @@ string result = str.Substring(6); // result zawiera wartość "World"
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									World
@@ -622,7 +730,8 @@ string result = str.Substring(6); // result zawiera wartość "World"
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="zamienia ciąg na małe litery. ">ToLower</a></code>
+								Metoda <code><a pro-tip="zamienia ciąg na małe litery. ">ToLower <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -635,7 +744,9 @@ string result = str.ToLower(); // result zawiera wartość "hello world"
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									hello world
@@ -646,7 +757,8 @@ string result = str.ToLower(); // result zawiera wartość "hello world"
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="zamienia wszystkie wystąpienia jednego podciągu na inny.">Replace</a></code>
+								Metoda <code><a pro-tip="zamienia wszystkie wystąpienia jednego podciągu na inny.">Replace <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -659,7 +771,9 @@ string result = str.Replace("World", "Universe"); // result zawiera wartość "H
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello Universe
@@ -674,7 +788,9 @@ string result = str.Replace("World", "Universe"); // result zawiera wartość "H
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="dzieli ciąg na tablicę podciągów, korzystając z podanego separatora.">Split</a></code>
+								Metoda <code><a
+									pro-tip="dzieli ciąg na tablicę podciągów, korzystając z podanego separatora.">Split <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -687,7 +803,9 @@ string[] result = str.Split(' '); // result zawiera tablicę zawierającą "Hell
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello <br>
@@ -699,7 +817,8 @@ string[] result = str.Split(' '); // result zawiera tablicę zawierającą "Hell
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="usuwa białe znaki z początku i końca ciągu.">Trim</a></code>
+								Metoda <code><a pro-tip="usuwa białe znaki z początku i końca ciągu.">Trim <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -712,7 +831,9 @@ string result = str.Trim();
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 
@@ -727,7 +848,8 @@ string result = str.Trim();
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="usuwa określoną liczbę znaków od danego indeksu.">Remove</a></code>
+								Metoda <code><a pro-tip="usuwa określoną liczbę znaków od danego indeksu.">Remove <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -740,7 +862,9 @@ string result = str.Remove(6, 5); // result zawiera wartość "Hello"
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello
@@ -751,7 +875,8 @@ string result = str.Remove(6, 5); // result zawiera wartość "Hello"
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="zwraca indeks pierwszego wystąpienia podciągu w ciągu. ">IndexOf</a></code>
+								Metoda <code><a pro-tip="zwraca indeks pierwszego wystąpienia podciągu w ciągu. ">IndexOf <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -764,7 +889,9 @@ int result = str.IndexOf("World"); // result zawiera wartość 6
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									6
@@ -779,7 +906,8 @@ int result = str.IndexOf("World"); // result zawiera wartość 6
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="zwraca indeks ostatniego wystąpienia podciągu w ciągu. ">LastIndexOf</a></code>
+								Metoda <code><a pro-tip="zwraca indeks ostatniego wystąpienia podciągu w ciągu. ">LastIndexOf <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -792,7 +920,9 @@ int result = str.LastIndexOf("World"); // result zawiera wartość 13
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									13
@@ -803,7 +933,8 @@ int result = str.LastIndexOf("World"); // result zawiera wartość 13
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="wstawia podciąg w ciągu na określonym indeksie.">Insert</a></code>
+								Metoda <code><a pro-tip="wstawia podciąg w ciągu na określonym indeksie.">Insert <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -816,7 +947,9 @@ string result = str.Insert(5, " World"); // result zawiera wartość "Hello Worl
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello World
@@ -831,7 +964,8 @@ string result = str.Insert(5, " World"); // result zawiera wartość "Hello Worl
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="łączy elementy tablicy ciągów za pomocą separatora.">Join</a></code>
+								Metoda <code><a pro-tip="łączy elementy tablicy ciągów za pomocą separatora.">Join <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -844,7 +978,9 @@ string result = string.Join(" ", strArray); // result zawiera wartość "Hello W
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									Hello World
@@ -855,7 +991,9 @@ string result = string.Join(" ", strArray); // result zawiera wartość "Hello W
 					<div>
 						<div class="display-grid">
 							<p class="text-container pink-container article tooltip">
-								Metoda <code><a pro-tip="dodaje znaki z lewej strony ciągu, aby osiągnąć określoną długość.">PadLeft</a></code>
+								Metoda <code><a
+									pro-tip="dodaje znaki z lewej strony ciągu, aby osiągnąć określoną długość.">PadLeft <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							</p>
 							<div class="code-block code-block-margin-top">
 						<pre>
@@ -868,7 +1006,9 @@ string result = str.PadLeft(10, '*'); // result zawiera wartość "****Hello"
 							</div>
 						</div>
 						<div class="dropdown minus-margin-top">
-							<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+							<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+							                                                                  class="icon-img-little"
+							                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 							<div class="dropdown-content">
 								<div class="output output-padding output-content">
 									****Hello
@@ -879,7 +1019,8 @@ string result = str.PadLeft(10, '*'); // result zawiera wartość "****Hello"
 				</div>
 				<div class="big-page-header"></div>
 				<p class="text-container pink-container article tooltip">
-					Metoda <code><a pro-tip="dodaje znaki z prawej strony ciągu, aby osiągnąć określoną długość.">PadRight</a></code>
+					Metoda <code><a pro-tip="dodaje znaki z prawej strony ciągu, aby osiągnąć określoną długość.">PadRight <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				</p>
 				<div class="code-block code-block-margin-top">
 						<pre>
@@ -891,7 +1032,9 @@ string result = str.PadRight(10, '*'); // result zawiera wartość "Hello****"
 						</pre>
 				</div>
 				<div class="dropdown minus-margin-top">
-					<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+					<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+					                                                                  class="icon-img-little"
+					                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 					<div class="dropdown-content">
 						<div class="output output-padding output-content">
 							Hello****

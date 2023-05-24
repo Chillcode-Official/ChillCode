@@ -1,33 +1,39 @@
 /*All margin Elements*/
 .no-margin-top {
-		margin-top: 0;
+	margin-top: 0;
 }
-.no-margin-bottom{
-		margin-bottom: 0;
+
+.no-margin-bottom {
+	margin-bottom: 0;
 }
-.minus-margin-top{
-		margin-top: -30px;
+
+.minus-margin-top {
+	margin-top: -30px;
 }
-.margin-top{
-		margin-top: 30px;
+
+.margin-top {
+	margin-top: 30px;
 }
-.margin-top-mini{
+
+.margin-top-mini {
 	margin-top: 10px;
 }
-.margin-bottom{
+
+.margin-bottom {
 	margin-bottom: 30px;
 }
 
 /* page header elements*/
-.page-header{
-		margin-bottom: 30px;
+.page-header {
+	margin-bottom: 30px;
 }
-.big-page-header{
-		margin-bottom: 60px;
+
+.big-page-header {
+	margin-bottom: 60px;
 }
 
 @media only screen and (min-width: 1200px) {
-	.margin-bottom{
+	.margin-bottom {
 		margin-bottom: 0;
 	}
 }

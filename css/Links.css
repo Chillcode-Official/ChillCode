@@ -1,15 +1,15 @@
 /*Links <a> Elements*/
 
-.simple-link a{
-    color: #1a1ac9;
-    text-decoration: none;
+.simple-link a {
+	color: #1a1ac9;
+	text-decoration: none;
 }
 
 .simple-link a:hover {
-    color: #570e57;
-    border-bottom: 1px solid #570e57;
+	color: #570e57;
+	border-bottom: 1px solid #570e57;
 }
 
-.link-unDecoration a{
-    text-decoration: none;
+.link-unDecoration a {
+	text-decoration: none;
 }

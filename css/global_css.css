@@ -1,26 +1,30 @@
 /* Main change */
-h1{
-		color: white;
-		margin: 0;
-}
-p{
-		color: #d5d0d0;
-		line-height: 2em;
-}
-h2{
-		color: #ece9e9;
+h1 {
+	color: white;
+	margin: 0;
 }
 
-strong{
-		color: #894bcb;
+p {
+	color: #d5d0d0;
+	line-height: 2em;
 }
-ul li{
-		color: #ab7ddf;
-		padding-bottom: 9px;
-		list-style-type: disc;
+
+h2 {
+	color: #ece9e9;
 }
-code{
-		color: white;
-		font-size: 20px;
-		white-space: pre; /*--- możliwość popsucia*/
+
+strong {
+	color: #894bcb;
+}
+
+ul li {
+	color: #d1d1d1;
+	padding-bottom: 9px;
+	list-style-type: disc;
+}
+
+code {
+	color: white;
+	font-size: 20px;
+	white-space: pre; /*--- możliwość popsucia*/
 }

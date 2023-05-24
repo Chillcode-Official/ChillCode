@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>HTML {Lista nieuporządkowana}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lista nieuporządkowana — Kurs HTML | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> HTML</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar"
+				                                              src="/img/Icons/icon_html-5.png"> HTML</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/html-5.png" alt="">HTML</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_html-5.png">HTML</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -32,10 +40,12 @@
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Paragraph.html">Paragraf</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 								</ul>
@@ -47,7 +57,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
@@ -60,8 +71,10 @@
 								<ul class="navbar-list-none display-inline-grid">
 									<li><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
 									<li class="is-selected"><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
-									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Lists_nesting.html">Zagnieżdżanie list</a></li>
 								</ul>
 							</div>
 						</li>
@@ -69,9 +82,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Links.html">Linki</a></li>
 									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
-									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+									<li><a class="navbar-drop-text"
+									       href="Link_sitelink.html">Linki do podstron </a></li>
 								</ul>
 							</div>
 						</li>
@@ -79,7 +94,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Images.html">Obrazy</a></li>
 									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 								</ul>
@@ -89,10 +105,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
 									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
-									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Table_attributes.html">Atrybuty tabeli</a></li>
 								</ul>
 							</div>
 						</li>
@@ -101,7 +119,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Quotations.html">Cytaty</a></li>
 									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 								</ul>
 							</div>
@@ -115,11 +134,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -138,7 +175,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Paragraph.html">Paragraf</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 					</ul>
@@ -183,7 +221,8 @@
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
-						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 					</ul>
 				</div>
@@ -204,7 +243,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Quotations.html">Cytaty</a></li>
 						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 					</ul>
 				</div>
@@ -222,15 +262,19 @@
 		<div class="content">
 			<div class="section-with-image">
 				<div class="text-centered text-padding">
-					<h1>Lista Nieuporządkowana</h1>
+					<h1>Lista nieuporządkowana</h1>
 					<p>
 						HTML Lista Nieuporządkowana to lista, która składa się z elementów nieuporządkowanych, czyli bez określonej kolejności. Elementy te zazwyczaj wyświetlane są w postaci wypunktowania.
 					</p>
 				</div>
-				<img src="/img/vector176.png" alt="">
+				<img alt="" src="/img/Vectors/vector176.png">
 			</div>
 			<p class="text-container lightPink-container no-margin-top article tooltip">
-				Do utworzenia listy nieuporządkowanej w HTML używa się znacznika <code><a pro-tip="Służy do tworzenia listy wypunktowanej (czyli z kropkami, kwadratami lub kołami jako punktami)">&ltul&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> oraz dla każdego elementu listy, znacznika <code><a pro-tip="Znacznik służący do tworzenia pojedynczego punktu na liście, zarówno w przypadku listy numerowanej, jak i wypunktowanej">&ltli&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>.
+				Do utworzenia listy nieuporządkowanej w HTML używa się znacznika <code><a
+					pro-tip="Służy do tworzenia listy wypunktowanej (czyli z kropkami, kwadratami lub kołami jako punktami)">&ltul&gt <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> oraz dla każdego elementu listy, znacznika <code><a
+					pro-tip="Znacznik służący do tworzenia pojedynczego punktu na liście, zarówno w przypadku listy numerowanej, jak i wypunktowanej">&ltli&gt <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>.
 			</p>
 			<div class="code-block code-block-margin-top">
 						<pre>
@@ -246,7 +290,9 @@
 						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-list">
 						<ul>
@@ -260,67 +306,78 @@
 
 			<div class="page-header"></div>
 			<p class="text-container lightPink-container article tooltip line-height-plus">
-				<code><a pro-tip="Właściwość CSS, która określa rodzaj punktów w liście. Można jej użyć do zmiany wyglądu punktów, które są domyślnie ustawione przez przeglądarkę.">list-style-type <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code> pozwala na określenie rodzaju punktu
+				<code><a
+						pro-tip="Właściwość CSS, która określa rodzaj punktów w liście. Można jej użyć do zmiany wyglądu punktów, które są domyślnie ustawione przez przeglądarkę.">list-style-type <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> pozwala na określenie rodzaju punktu
 				przed każdym elementem nieuporządkowanej listy HTML. Wyróżniamy
-				<code><a pro-tip="standardowy rodzaj punktu (domyślnie ustawiony)">disc <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				<code><a pro-tip="rodzaj punktu w postaci kółka">circle <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				<code><a pro-tip="rodzaj punktu w postaci kwadratu">square <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-				<code><a pro-tip="ukrycie punktu">none <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+				<code><a pro-tip="standardowy rodzaj punktu (domyślnie ustawiony)">disc <img alt=""
+				                                                                             class="icon-img-tooltip"
+				                                                                             src="/img/Icons/icon_tooltip.png"></a></code>
+				<code><a pro-tip="rodzaj punktu w postaci kółka">circle <img alt=""
+				                                                             class="icon-img-tooltip"
+				                                                             src="/img/Icons/icon_tooltip.png"></a></code>
+				<code><a pro-tip="rodzaj punktu w postaci kwadratu">square <img alt=""
+				                                                                class="icon-img-tooltip"
+				                                                                src="/img/Icons/icon_tooltip.png"></a></code>
+				<code><a pro-tip="ukrycie punktu">none <img alt="" class="icon-img-tooltip"
+				                                            src="/img/Icons/icon_tooltip.png"></a></code>
 			</p>
 			<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
-&#x3C;ul style=&#x22;list-style-type:disc;&#x22;&#x3E;
-	&#x3C;li&#x3E;mleko &lt;img src=&quot;milk.png&quot;&gt;&#x3C;/li&#x3E;
-	&#x3C;li&#x3E;miód &lt;img src=&quot;honey.png&quot;&gt;&#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
+&lt;ul style=&quot;list-style-type:disc;&quot;&gt;
+  &lt;li&gt;mleko &lt;img src=&quot;milk.png&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;mi&oacute;d &lt;img src=&quot;honey.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
-&#x3C;ul style=&#x22;list-style-type:circle;&#x22;&#x3E;
-	&#x3C;li&#x3E;kawa &lt;img src=&quot;coffee.png&quot;&gt;&#x3C;/li&#x3E;
-	&#x3C;li&#x3E;herbata &lt;img src=&quot;tea.png&quot;&gt;&#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
+&lt;ul style=&quot;list-style-type:circle;&quot;&gt;
+  &lt;li&gt;kawa &lt;img src=&quot;coffee.png&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;herbata &lt;img src=&quot;tea.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
-&#x3C;ul style=&#x22;list-style-type:square;&#x22;&#x3E;
-	&#x3C;li&#x3E;Lays &lt;img src=&quot;chips.png&quot;&gt;&#x3C;/li&#x3E;
-	&#x3C;li&#x3E;piwo &lt;img src=&quot;beer.png&quot;&gt;&#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
+&lt;ul style=&quot;list-style-type:square;&quot;&gt;
+  &lt;li&gt;Lays &lt;img src=&quot;chips.png&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;piwo &lt;img src=&quot;beer.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
-&#x3C;ul style=&#x22;list-style-type:none;&#x22;&#x3E;
-	&#x3C;li&#x3E;wódka &lt;img src=&quot;vodka.png&quot;&gt;&#x3C;/li&#x3E;
-	&#x3C;li&#x3E;pepsi &lt;img src=&quot;pepsi.png&quot;&gt;&#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
+&lt;ul style=&quot;list-style-type:none;&quot;&gt;
+  &lt;li&gt;w&oacute;dka &lt;img src=&quot;vodka.png&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;pepsi &lt;img src=&quot;pepsi.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
 								</code>
 						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-list">
 						<div class="list-disc">
 							<ul>
-								<li>mleko <img style="width: 30px;" src="/img/icon_milk.png" alt=""></li>
-								<li>miód <img style="width: 30px;" src="/img/icon_honey.png" alt=""></li>
+								<li>mleko <img alt="" src="/img/Icons/icon_milk.png" style="width: 30px;"></li>
+								<li>miód <img alt="" src="/img/Icons/icon_honey.png" style="width: 30px;"></li>
 							</ul>
 						</div>
 						<div class="list-circle">
 							<ul>
-								<li>kawa <img style="width: 30px;" src="/img/icon_coffee-cup.png" alt=""></li>
-								<li>herbata <img style="width: 30px;" src="/img/icon_tea.png" alt=""></li>
+								<li>kawa <img alt="" src="/img/Icons/icon_coffee-cup.png" style="width: 30px;"></li>
+								<li>herbata <img alt="" src="/img/Icons/icon_tea.png" style="width: 30px;"></li>
 							</ul>
 						</div>
 						<div class="list-square">
 							<ul>
-								<li>Lays <img style="width: 30px;" src="/img/icon_lays.png" alt=""></li>
-								<li>piwo <img style="width: 30px;" src="/img/icon_beer.png" alt=""></li>
+								<li>Lays <img alt="" src="/img/Icons/icon_lays.png" style="width: 30px;"></li>
+								<li>piwo <img alt="" src="/img/Icons/icon_beer.png" style="width: 30px;"></li>
 							</ul>
 						</div>
 						<div class="list-none">
 							<ul>
-								<li>pepsi <img style="width: 30px;" src="/img/icon_pepsi.png" alt=""></li>
-								<li>Whisky <img style="width: 30px;" src="/img/icon_whisky.png" alt=""></li>
+								<li>pepsi <img alt="" src="/img/Icons/icon_pepsi.png" style="width: 30px;"></li>
+								<li>Whisky <img alt="" src="/img/Icons/icon_whisky.png" style="width: 30px;"></li>
 							</ul>
 						</div>
 					</div>

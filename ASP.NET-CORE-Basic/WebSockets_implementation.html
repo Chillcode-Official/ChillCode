@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>ASP.NET {Implementacja WebSocketów}</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Implementajca WebSocketów — Kurs ASP.NET | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,19 @@
 		<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_ASP.NET-Core.html"><img class="icon-img-navbar" src="/img/NET_Core_Logo.png" alt=""> ASP.NET</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_ASP.NET-Core.html"><img alt=""
+				                                                      class="icon-img-navbar" src="/img/Icons/icon_NET_Core_Logo.png"> ASP.NET</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/NET_Core_Logo.png" alt="">ASP.NET</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_NET_Core_Logo.png">ASP.NET</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -37,7 +44,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
 									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
 								</ul>
 							</div>
@@ -46,7 +54,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
 									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
 								</ul>
 							</div>
@@ -57,7 +66,8 @@
 						<li><a href="Error_handling.html">Obsługa błędów</a></li>
 						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
 						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-						<li class="is-selected"><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li class="is-selected"><a
+								href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
 						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
 						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
 						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
@@ -66,11 +76,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -91,7 +119,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
 									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
 								</ul>
 							</div>
@@ -100,7 +129,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
 									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
 								</ul>
 							</div>
@@ -111,7 +141,8 @@
 						<li><a href="Error_handling.html">Obsługa błędów</a></li>
 						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
 						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
-						<li class="is-selected"><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li class="is-selected"><a
+								href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
 						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
 						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
 						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
@@ -129,7 +160,7 @@
 							WebSocket to technologia pozwalająca na dwukierunkową komunikację pomiędzy przeglądarką internetową a serwerem, która umożliwia niskopoziomowe przesyłanie danych w czasie rzeczywistym. W przypadku ASP.NET Core, WebSockety można zaimplementować w celu umożliwienia komunikacji pomiędzy przeglądarką a serwerem za pomocą protokołu WebSocket.
 						</p>
 					</div>
-					<img src="/img/vector43.png" alt="">
+					<img alt="" src="/img/Vectors/vector43.png">
 				</div>
 				<div class="text-container lightWhite-container black-list no-margin-top">
 					<div class="text-centered">
@@ -145,9 +176,9 @@
 												<code>
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-		// ...
-		app.UseWebSockets();
-		// ...
+    // ...
+    app.UseWebSockets();
+    // ...
 }
 												</code>
 										</pre>
@@ -164,8 +195,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 [HttpGet("/ws")]
 public async Task WebSocketHandler()
 {
-		var webSocket = await HttpContext.WebSockets.AcceptAsync();
-		// Obsługa połączenia WebSocket.
+    var webSocket = await HttpContext.WebSockets.AcceptAsync();
+    // Obsługa połączenia WebSocket.
 }
 												</code>
 										</pre>
@@ -182,25 +213,25 @@ public async Task WebSocketHandler()
 [HttpGet("/ws")]
 public async Task WebSocketHandler()
 {
-		var webSocket = await HttpContext.WebSockets.AcceptAsync();
+  var webSocket = await HttpContext.WebSockets.AcceptAsync();
 
-		while (webSocket.State == WebSocketState.Open)
-		{
-				var buffer = new ArraySegment&ltbyte&gt(new byte[1024]);
-				var result = await webSocket.ReceiveAsync(buffer, CancellationToken.None);
+  while (webSocket.State == WebSocketState.Open)
+  {
+    var buffer = new ArraySegment&ltbyte&gt(new byte[1024]);
+    var result = await webSocket.ReceiveAsync(buffer, CancellationToken.None);
 
-				if (result.MessageType == WebSocketMessageType.Text)
-				{
-						var message = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, result.Count);
-						var responseMessage = $"You sent {result.Count} bytes: {message}";
-						var responseBuffer = new ArraySegment&ltbyte&gt(Encoding.UTF8.GetBytes(responseMessage));
-						await webSocket.SendAsync(responseBuffer, WebSocketMessageType.Text, true, CancellationToken.None);
-				}
-				else if (result.MessageType == WebSocketMessageType.Close)
-				{
-						await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
-				}
-		}
+    if (result.MessageType == WebSocketMessageType.Text)
+    {
+      var message = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, result.Count);
+      var responseMessage = $"You sent {result.Count} bytes: {message}";
+      var responseBuffer = new ArraySegment&ltbyte&gt(Encoding.UTF8.GetBytes(responseMessage));
+      await webSocket.SendAsync(responseBuffer, WebSocketMessageType.Text, true, CancellationToken.None);
+    }
+    else if (result.MessageType == WebSocketMessageType.Close)
+    {
+      await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
+    }
+  }
 }
 												</code>
 										</pre>
@@ -216,10 +247,10 @@ public async Task WebSocketHandler()
 												<code>
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-		// ...
-		app.UseWebSockets();
-		app.MapWebSocketManager&ltMyWebSocketHandler&gt("/ws");
-		// ...
+    // ...
+    app.UseWebSockets();
+    app.MapWebSocketManager&ltMyWebSocketHandler&gt("/ws");
+    // ...
 }
 												</code>
 										</pre>
@@ -230,20 +261,20 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 												<code>
 public class MyWebSocketHandler : WebSocketHandler
 {
-		public MyWebSocketHandler(WebSocketManager webSocketManager) : base(webSocketManager)
-		{
-		}
+  public MyWebSocketHandler(WebSocketManager webSocketManager) : base(webSocketManager)
+  {
+  }
 
-		public override async Task OnConnectedAsync(WebSocket socket)
-		{
-				await base.OnConnectedAsync(socket);
-				// Obsługa nowego połączenia WebSocket.
-		}
+  public override async Task OnConnectedAsync(WebSocket socket)
+  {
+    await base.OnConnectedAsync(socket);
+    // Obsługa nowego połączenia WebSocket.
+  }
 
-		public override async Task ReceiveAsync(WebSocket socket, WebSocketReceiveResult result, byte[] buffer)
-		{
-				// Obsługa otrzymanej wiadomości.
-		}
+  public override async Task ReceiveAsync(WebSocket socket, WebSocketReceiveResult result, byte[] buffer)
+  {
+    // Obsługa otrzymanej wiadomości.
+  }
 }
 												</code>
 										</pre>
@@ -252,7 +283,7 @@ public class MyWebSocketHandler : WebSocketHandler
 					<div class="minus-margin-top"></div>
 				</div>
 				<div class="alert-card ">
-					<img src="/img/note.png" alt="">
+					<img alt="" src="/img/Icons/icon_note.png">
 					<b>Notatka</b>
 					<div class="line"></div>
 					<p>
@@ -260,7 +291,7 @@ public class MyWebSocketHandler : WebSocketHandler
 					</p>
 				</div>
 				<div class="alert-card  alert-card-blue">
-					<img style="width: 50px;" src="/img/emergency.png" alt="">
+					<img alt="" src="/img/Icons/icon_emergency.png">
 					<b>Ważne</b>
 					<div class="line"></div>
 					<p>

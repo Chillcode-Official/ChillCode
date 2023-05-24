@@ -1,24 +1,26 @@
-.bodyContainer{
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px 0 50px 0;
-    background: linear-gradient(to bottom, #ffffff 0%, #d7d1d1 100%);
+.bodyContainer {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px 0 50px 0;
+	background: linear-gradient(to bottom, #ffffff 0%, #d7d1d1 100%);
 }
+
 /*Container block - blok kontener o różnych kolorach*/
 
-.containerBlock{
-    position: relative;
-    width: 100%;
-    display: block;
+.containerBlock {
+	position: relative;
+	width: 100%;
+	display: block;
 }
-.containerBlock-White{
-    background-color: #fdeee3;
+
+.containerBlock-White {
+	background-color: #fdeee3;
 }
 
 @media only screen and (min-width: 992px) {
-    .bodyContainer{
-        padding: 50px 0;
-    }
+	.bodyContainer {
+		padding: 50px 0;
+	}
 }

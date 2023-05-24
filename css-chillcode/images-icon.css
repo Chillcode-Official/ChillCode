@@ -1,18 +1,18 @@
 /*images and icon elements*/
 
-.icon-img-big{
-    width: 70px;
-    margin-bottom: -20px;
+.icon-img-big {
+	width: 70px;
+	margin-bottom: -20px;
 }
 
-.logo-img{
-    width: 30px;
-    margin-bottom: -5px;
-    margin-right: 5px;
+.logo-img {
+	width: 30px;
+	margin-bottom: -5px;
+	margin-right: 5px;
 }
 
-.main-sites-full-img{
-    max-width: 100%;
-    position: relative;
-    top: 50px;
+.main-sites-full-img {
+	max-width: 100%;
+	position: relative;
+	top: 50px;
 }

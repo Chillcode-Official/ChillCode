@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>HTML {Layout}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Układ strony — Kurs HTML | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,20 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_HTML.html"><img class="icon-img-navbar" src="/img/html-5.png" alt=""> HTML</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar"
+				                                              src="/img/Icons/icon_html-5.png"> HTML</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/html-5.png" alt="">HTML</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_html-5.png">HTML</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -32,10 +40,12 @@
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Paragraph.html">Paragraf</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 								</ul>
@@ -47,7 +57,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
@@ -58,10 +69,14 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
-									<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
-									<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Lista uporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_unordered.html">Lista nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Lists_nesting.html">Zagnieżdżanie list</a></li>
 								</ul>
 							</div>
 						</li>
@@ -69,9 +84,11 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Links.html">Linki</a></li>
 									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
-									<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+									<li><a class="navbar-drop-text"
+									       href="Link_sitelink.html">Linki do podstron </a></li>
 								</ul>
 							</div>
 						</li>
@@ -79,7 +96,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Images.html">Obrazy</a></li>
 									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 								</ul>
@@ -89,10 +107,12 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
 									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
-									<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Table_attributes.html">Atrybuty tabeli</a></li>
 								</ul>
 							</div>
 						</li>
@@ -101,7 +121,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Quotations.html">Cytaty</a></li>
 									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 								</ul>
 							</div>
@@ -115,11 +136,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -138,7 +177,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Paragraph.html">Paragraf</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Paragraph.html">Paragraf</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
 						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
 					</ul>
@@ -183,7 +223,8 @@
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
-						<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
 						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
 					</ul>
 				</div>
@@ -204,7 +245,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Quotations.html">Cytaty</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Quotations.html">Cytaty</a></li>
 						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
 					</ul>
 				</div>
@@ -231,7 +273,7 @@
 						na stronie. Układ strony jest ważny, ponieważ wpływa na wygląd i funkcjonalność strony, a także
 						ułatwia użytkownikom znalezienie potrzebnych informacji.
 					</p>
-					<img src="/img/vector122.png" alt="">
+					<img alt="" src="/img/Vectors/vector122.png">
 				</div>
 			</div>
 			<div class="text-container lightWhite-container black-list no-margin-top list-spacing">
@@ -248,71 +290,93 @@
 				</div>
 			</div>
 			<div class="alert-card  article tooltip ">
-				<img src="/img/note.png" alt="">
+				<img alt="" src="/img/Icons/icon_note.png">
 				<b>Notatka</b>
 				<div class="line"></div>
 
 				<p>
 					W każdym z tych elementów używa się różnych znaczników HTML, takich jak:
-					<code><a pro-tip="element nadrzędny dla całej strony internetowej i znajduje się na początku kodu HTML. Określa on, że zawartość kodu HTML jest dokumentem HTML.">&lthtml&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					<code><a pro-tip="zawiera informacje o dokumencie, takie jak tytuł strony, linki do stylów CSS, skrypty JavaScript i meta tagi.">&lthead&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					<code><a pro-tip="zawiera główną zawartość strony internetowej, tzn. tekst, obrazy, formularze i inne elementy, które mają zostać wyświetlone na stronie.">&ltbody&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					<code><a pro-tip="służy do definiowania nagłówka strony internetowej. Zazwyczaj zawiera logo strony, nagłówek strony oraz inne elementy, takie jak menu nawigacyjne.">&ltheader&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					<code><a pro-tip="służy do definiowania głównej treści strony internetowej. Zazwyczaj zawiera ona artykuły, posty, produkty lub inne informacje, które są najważniejsze na stronie.">&ltmain&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
-					<code><a pro-tip="służy do definiowania stopki strony internetowej. Zazwyczaj zawiera ona informacje kontaktowe, linki do mediów społecznościowych, prawa autorskie i inne informacje, które są związane z końcem strony.">&ltfooter&gt <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+					<code><a
+							pro-tip="element nadrzędny dla całej strony internetowej i znajduje się na początku kodu HTML. Określa on, że zawartość kodu HTML jest dokumentem HTML.">&lthtml&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+					<code><a
+							pro-tip="zawiera informacje o dokumencie, takie jak tytuł strony, linki do stylów CSS, skrypty JavaScript i meta tagi.">&lthead&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+					<code><a
+							pro-tip="zawiera główną zawartość strony internetowej, tzn. tekst, obrazy, formularze i inne elementy, które mają zostać wyświetlone na stronie.">&ltbody&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+					<code><a
+							pro-tip="służy do definiowania nagłówka strony internetowej. Zazwyczaj zawiera logo strony, nagłówek strony oraz inne elementy, takie jak menu nawigacyjne.">&ltheader&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+					<code><a
+							pro-tip="służy do definiowania głównej treści strony internetowej. Zazwyczaj zawiera ona artykuły, posty, produkty lub inne informacje, które są najważniejsze na stronie.">&ltmain&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+					<code><a
+							pro-tip="służy do definiowania stopki strony internetowej. Zazwyczaj zawiera ona informacje kontaktowe, linki do mediów społecznościowych, prawa autorskie i inne informacje, które są związane z końcem strony.">&ltfooter&gt <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 				</p>
 			</div>
 			<div class="big-page-header"></div>
 			<div class="text-centered text-padding">
-				<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_layout(2).png" alt=""> Strona tworząca układ strony</h3>
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_layout(2).png"> Strona tworząca układ strony</h3>
 			</div>
 			<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
-&lt;h1&gt;M&oacute;j pierwszy uk&lstrok;ad strony&lt;/h1&gt;
-&lt;header&gt;
-&lt;nav&gt;
-	&lt;ul&gt;
-			&lt;li&gt;&lt;a href=&quot;#about&quot;&gt;O nas&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Us&lstrok;ugi&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/nav&gt;
-&lt;/header&gt;
-&lt;main&gt;
-&lt;section id=&quot;about&quot;&gt;
-	&lt;h1&gt;O nas&lt;/h1&gt;
-	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. A pulvinar ipsum pulvinar ac.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id=&quot;services&quot;&gt;
-	&lt;h1&gt;Us&lstrok;ugi&lt;/h1&gt;
-	&lt;ul&gt;
-			&lt;li&gt;Us&lstrok;uga 1&lt;/li&gt;
-			&lt;li&gt;Us&lstrok;uga 2&lt;/li&gt;
-			&lt;li&gt;Us&lstrok;uga 3&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&quot;contact&quot;&gt;
-	&lt;h1&gt;Kontakt&lt;/h1&gt;
-	&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
-			&lt;label for=&quot;name&quot;&gt;Imi&eogon;:&lt;/label&gt;
-			&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
-			&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-			&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
-			&lt;label for=&quot;message&quot;&gt;Wiadomo&sacute;&cacute;:&lt;/label&gt;
-			&lt;textarea id=&quot;message&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;
-			&lt;input type=&quot;submit&quot; value=&quot;Wy&sacute;lij&quot;&gt;
-	&lt;/form&gt;
-&lt;/section&gt;
-&lt;/main&gt;
-&lt;footer&gt;
-&lt;p&gt;&amp;copy; 2023 Moja firma&lt;/p&gt;
-&lt;/footer&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Układ strony&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Mój pierwszy układ strony&lt;/h1&gt;
+    &lt;header&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#about"&gt;O nas&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#services"&gt;Usługi&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contact"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;section id="about"&gt;
+        &lt;h1&gt;O nas&lt;/h1&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. A pulvinar ipsum pulvinar ac.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section id="services"&gt;
+        &lt;h1&gt;Usługi&lt;/h1&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Usługa 1&lt;/li&gt;
+          &lt;li&gt;Usługa 2&lt;/li&gt;
+          &lt;li&gt;Usługa 3&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+      &lt;section id="contact"&gt;
+        &lt;h1&gt;Kontakt&lt;/h1&gt;
+        &lt;form action="" method="post"&gt;
+          &lt;label for="name"&gt;Imię:&lt;/label&gt;
+          &lt;input type="text" id="name" name="name"&gt;
+          &lt;label for="email"&gt;Email:&lt;/label&gt;
+          &lt;input type="email" id="email" name="email"&gt;
+          &lt;label for="message"&gt;Wiadomość:&lt;/label&gt;
+          &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+          &lt;input type="submit" value="Wyślij"&gt;
+        &lt;/form&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;&amp;copy; 2023 Moja firma&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 								</code>
 						</pre>
 			</div>
 			<div class="dropdown minus-margin-top">
-				<button class="output-button" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/icon_syntax.png" alt=""> Uruchom kod</button>
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
 				<div class="dropdown-content">
 					<div class="output output-content output-list">
 						<h1>Mój pierwszy układ strony</h1>
@@ -339,14 +403,14 @@
 								</ul>
 							</section>
 							<section id="contact">
-								<h1><img style="width: 50px;" src="/img/icon_developer.png" alt=""> Kontakt</h1>
-								<form action="" method="post">
+								<h1><img alt="" class="icon-img-50px" src="/img/Icons/icon_developer.png"> Kontakt</h1>
+								<form method="post">
 									<label for="name">Imię:</label>
-									<input type="text" id="name" name="name">
+									<input id="name" name="name" type="text">
 									<label for="email">Email:</label>
-									<input type="email" id="email" name="email">
+									<input id="email" name="email" type="email">
 									<label for="message">Wiadomość:</label>
-									<textarea id="message" name="message"></textarea>
+									<textarea id="message" name="message" style="resize: none;"></textarea>
 									<input type="submit" value="Wyślij">
 								</form>
 							</section>

@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>jQuery {Debugowanie kodu}</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Debugowanie kodu — Kurs jQuery | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,22 +19,32 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> jQuery</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_jQuery.html"><img alt=""
+				                                                class="icon-img-navbar"
+				                                                src="/img/Icons/icon_jquery(1).png"> jQuery</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/jquery(1).png" alt="">jQuery</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_jquery(1).png">jQuery</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 								</ul>
 							</div>
@@ -44,7 +54,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 									<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 								</ul>
 							</div>
@@ -55,10 +66,13 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="AJAX.html">AJAX jQuery</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_load()_method.html">Metoda .load()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_post()_method.html">Metoda .post()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 								</ul>
 							</div>
@@ -67,7 +81,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Plugins.html">Wtyczki jQuery</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 								</ul>
@@ -79,7 +94,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 									<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 								</ul>
 							</div>
@@ -88,11 +104,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -110,7 +144,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 					</ul>
 				</div>
@@ -120,7 +155,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 					</ul>
 				</div>
@@ -135,7 +171,8 @@
 						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
-						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+						<li><a class="navbar-drop-text"
+						       href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 					</ul>
 				</div>
 			</li>
@@ -144,18 +181,22 @@
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
-						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
-						<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 					</ul>
 				</div>
 			</li>
 			<li><a href="Creating_web_applications.html">Tworzenie aplikacji webowych</a></li>
 			<li class="is-selected"><a href="Debug_code.html">Debugowanie kodu</a></li>
 			<li onclick="rotateTriangle(this)">
-				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>jQuery VS JavaScript</a>
+				<a class="dropdown" onclick="toggleDropdown(this)"><span
+						class="triangle"></span>jQuery VS JavaScript</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
 						<li><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 					</ul>
 				</div>
@@ -175,15 +216,17 @@
 						znalezieniu błędów, wyeliminowaniu ich i przetestowaniu kodu, aby upewnić się, że działa poprawnie.
 					</p>
 				</div>
-				<img src="/img/vector54.png" alt="">
+				<img alt="" src="/img/Vectors/vector54.png">
 			</div>
 			<p class="text-container black-container no-margin-top">
 				Debugowanie kodu w jQuery można przeprowadzić na kilka sposobów.
 			</p>
 			<div class="big-page-header"></div>
-			<code><img class="icon-img-small margin-bottom-more-minus" src="/img/icon_console(1).png" alt=""> console.log()</code>
+			<code><img alt="" class="icon-img-small margin-bottom-more-minus" src="/img/Icons/icon_console(1).png"> console.log()</code>
 			<p class="text-container gray-container article tooltip">
-				<code><a pro-tip="console.log() to funkcja, która pozwala programiście wyświetlać informacje na konsoli przeglądarki lub terminalu, co może być bardzo przydatne podczas debugowania aplikacji. Przykładowo, jeśli programista chce sprawdzić wartości zmiennych w trakcie działania kodu, może umieścić console.log() w odpowiednim miejscu swojego kodu, aby wyświetlić informacje na konsoli.">console.log() <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>-
+				<code><a
+						pro-tip="console.log() to funkcja, która pozwala programiście wyświetlać informacje na konsoli przeglądarki lub terminalu, co może być bardzo przydatne podczas debugowania aplikacji. Przykładowo, jeśli programista chce sprawdzić wartości zmiennych w trakcie działania kodu, może umieścić console.log() w odpowiednim miejscu swojego kodu, aby wyświetlić informacje na konsoli.">console.log() <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>-
 				Możesz dodać metode console.log() w kodzie jQuery, aby wyświetlić wartości zmiennych, które Cię interesują. W ten sposób możesz zobaczyć, co dzieje się w kodzie i czy wartości zmiennych są poprawne. Na przykład:
 			</p>
 			<div class="code-block code-block-margin-top hidden-overflow">
@@ -197,26 +240,29 @@ $(document).ready(function() {
 						</pre>
 			</div>
 			<div class="page-header"></div>
-			<code><img class="icon-img-small" src="/img/icon_software.png" alt=""> Debugger</code>
+			<code><img alt="" class="icon-img-small" src="/img/Icons/icon_software.png"> Debugger</code>
 			<p class="text-container light-container color-text-gray article tooltip">
-				<code><a pro-tip="debugger to instrukcja, która zatrzymuje wykonywanie kodu w momencie jej wykonania, umożliwiając programiście przejrzenie i analizę aktualnego stanu programu. Przy użyciu debuggera programista może krok po kroku wykonywać kod i sprawdzać wartości zmiennych, co ułatwia znajdowanie i rozwiązywanie błędów w kodzie.">debugger <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>-
+				<code><a
+						pro-tip="debugger to instrukcja, która zatrzymuje wykonywanie kodu w momencie jej wykonania, umożliwiając programiście przejrzenie i analizę aktualnego stanu programu. Przy użyciu debuggera programista może krok po kroku wykonywać kod i sprawdzać wartości zmiennych, co ułatwia znajdowanie i rozwiązywanie błędów w kodzie.">debugger <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>-
 				Możesz użyć debuggera, aby zatrzymać wykonanie kodu jQuery w danym punkcie i obejrzeć wartości zmiennych w czasie rzeczywistym. Aby użyć debuggera, umieść słowo kluczowe debugger w miejscu, w którym chcesz zatrzymać wykonanie kodu. Następnie otwórz narzędzia developerskie w przeglądarce i przejdź do zakładki "Debugger". Wybierz plik z kodem jQuery i znajdź miejsce, w którym umieściłeś słowo kluczowe debugger. Po wykonaniu kodu jQuery zatrzyma się w tym miejscu, a Ty będziesz mógł obejrzeć wartości zmiennych.
 			</p>
-			<a href="/img/google-debugger1.png" target="_blank">
-				<img style="width: 100%;" src="/img/google-debugger1.png" alt="">
+			<a href="/img/Others/google-debugger1.png" target="_blank">
+				<img alt="" src="/img/Others/google-debugger1.png" style="width: 100%;">
 			</a>
 			<div class="big-page-header"></div>
-			<code><img class="icon-img-small" src="/img/icon_developTools.png" alt=""> Narzędzia deweloperskie</code>
+			<code><img alt="" class="icon-img-small"
+			           src="/img/Icons/icon_developTools.png"> Narzędzia deweloperskie</code>
 			<p class="text-container lightGray-container article tooltip">
 				Narzędzia deweloperskie w przeglądarce mogą również pomóc w debugowaniu kodu jQuery. Możesz użyć zakładki "Console", aby wyświetlić błędy lub wyświetlić wartości zmiennych. Możesz również użyć zakładki "Sources", aby przejrzeć kod jQuery i zobaczyć, co się dzieje.
 			</p>
 			<div class="big-page-header"></div>
-			<code><img class="icon-img-small margin-bottom-more-minus" src="/img/icon_syntax.png" alt=""> Sprawdź składnię kodu</code>
+			<code><img alt="" class="icon-img-small margin-bottom-more-minus" src="/img/Icons/icon_syntax.png"> Sprawdź składnię kodu</code>
 			<p class="text-container lightGray-container article tooltip">
 				Jeśli Twój kod jQuery nie działa poprawnie, sprawdź, czy nie ma w nim błędów składniowych. Często błędy składniowe są łatwe do znalezienia i można je naprawić szybko.
 			</p>
 			<div class="big-page-header"></div>
-			<code><img class="icon-img-small" src="/img/icon_software(1).png" alt=""> Przetestuj kod</code>
+			<code><img alt="" class="icon-img-small" src="/img/Icons/icon_software(1).png"> Przetestuj kod</code>
 			<p class="text-container lightGray-container">
 				Jeśli wszystkie inne sposoby zawiodą, możesz przetestować swój kod jQuery na prostym pliku HTML. Umieść kod jQuery na stronie HTML i sprawdź, czy działa poprawnie. Jeśli nie działa, możesz sprawdzić, czy Twój kod działa na innej przeglądarce lub czy używasz poprawnej wersji jQuery.
 			</p>

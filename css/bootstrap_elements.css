@@ -2,193 +2,193 @@
 
 /*Navbar*/
 .navbar-brand {
-		margin-right: 1rem;
-		font-size: 1.25rem;
-		line-height: inherit;
-		white-space: nowrap;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	line-height: inherit;
+	white-space: nowrap;
 }
 
 .navbar-nav {
-		display: flex;
-		flex-direction: column;
-		padding-left: 0;
-		margin-bottom: 0;
-		list-style: none;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
 }
 
 .navbar-nav .nav-link {
-		padding-right: 0;
-		padding-left: 0;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:hover {
-		color: #0056b3;
+	color: #0056b3;
 }
 
 /* Button */
 .my-button {
-		display: inline-block;
-		padding: 0.5rem 1rem;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1.5;
-		color: #fff;
-		background-color: #0d6efd;
-		border-color: #0d6efd;
-		border-radius: 0.25rem;
-		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #fff;
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
 .my-button:hover {
-		background-color: #0b5ed7;
-		border-color: #0a58ca;
+	background-color: #0b5ed7;
+	border-color: #0a58ca;
 }
+
 .my-button:focus {
-		box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
 }
 
 /* Spinner */
 .my-spinner {
-		display: inline-block;
-		width: 2rem;
-		height: 2rem;
-		vertical-align: text-bottom;
-		border: 0.25em solid currentColor;
-		border-right-color: transparent;
-		border-radius: 50%;
-		animation: spinner-border 0.75s linear infinite;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	vertical-align: text-bottom;
+	border: 0.25em solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: spinner-border 0.75s linear infinite;
 }
 
 @keyframes spinner-border {
-		to {
-				transform: rotate(360deg);
-		}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 /* Dropdown */
 .dropdown {
-		position: relative;
-		display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-toggle {
-		padding: 0.5rem 1rem;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1.5;
-		color: #212529;
-		background-color: #f8f9fa;
-		border: 1px solid #dee2e6;
-		border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-radius: 0.25rem;
 }
 
 .dropdown-menu {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		z-index: 1000;
-		display: none;
-		float: left;
-		min-width: 10rem;
-		padding: 0.5rem 0;
-		margin: 0.125rem 0 0;
-		font-size: 1rem;
-		color: #212529;
-		text-align: left;
-		list-style: none;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid rgba(0,0,0,0.15);
-		border-radius: 0.25rem;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 10rem;
+	padding: 0.5rem 0;
+	margin: 0.125rem 0 0;
+	font-size: 1rem;
+	color: #212529;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.25rem;
 }
 
 .dropdown-menu a {
-		display: block;
-		padding: 0.25rem 1.5rem;
-		clear: both;
-		font-weight: 400;
-		color: #212529;
-		text-align: inherit;
-		white-space: nowrap;
-		background-color: transparent;
-		border: 0;
+	display: block;
+	padding: 0.25rem 1.5rem;
+	clear: both;
+	font-weight: 400;
+	color: #212529;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
 }
 
 .dropdown-menu a:hover, .dropdown-menu a:focus {
-		color: #fff;
-		text-decoration: none;
-		background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	background-color: #007bff;
 }
 
 .dropdown:hover .dropdown-menu {
-		display: block;
+	display: block;
 }
 
 .dropdown-menu-right {
-		right: 0;
-		left: auto;
+	right: 0;
+	left: auto;
 }
 
 /*card*/
 .card {
-		width: 18rem;
-		border: 1px solid #e9ecef;
-		border-radius: 0.25rem;
-		margin-bottom: 1.25rem;
+	border-radius: 0.25rem;
+	margin-bottom: 1.25rem;
 }
 
 .card-body {
-		padding: 1.25rem;
+	padding: 1.25rem;
 }
 
 .card-title {
-		margin-bottom: 0.75rem;
-		font-size: 1.25rem;
+	margin-bottom: 0.75rem;
+	font-size: 1.25rem;
 }
 
 .card-text {
-		margin-bottom: 1.25rem;
-		color: #6c757d;
+	margin-bottom: 1.25rem;
+	color: #6c757d;
 }
 
 .btn2 {
-		color: #fff;
-		background-color: #007bff;
-		border-color: #007bff;
-		border-radius: 0.25rem;
-		padding: 0.375rem 0.75rem;
-		font-size: 1rem;
-		line-height: 1.5;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	border-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn2:hover {
-		background-color: #0069d9;
-		border-color: #0062cc;
+	background-color: #0069d9;
+	border-color: #0062cc;
 }
 
 /* btn custom */
 .btn-custom {
-		color: #fff;
-		background-color: #007bff;
-		border-color: #007bff;
-		border-radius: 0.25rem;
-		padding: 0.375rem 0.75rem;
-		font-size: 1rem;
-		line-height: 1.5;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-weight: 400;
-		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	border-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: 400;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-custom:hover {
-		color: #fff;
-		background-color: #0069d9;
-		border-color: #0062cc;
+	color: #fff;
+	background-color: #0069d9;
+	border-color: #0062cc;
 }

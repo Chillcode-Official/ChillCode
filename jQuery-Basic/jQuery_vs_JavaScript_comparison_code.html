@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>jQuery {jQuery VS JavaScript}</title>
-	<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Porównanie kodu jQuery i JavaScript — Kurs jQuery | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,22 +19,32 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_jQuery.html"><img class="icon-img-navbar" src="/img/jquery(1).png" alt=""> jQuery</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_jQuery.html"><img alt=""
+				                                                class="icon-img-navbar"
+				                                                src="/img/Icons/icon_jquery(1).png"> jQuery</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/jquery(1).png" alt="">jQuery</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_jquery(1).png">jQuery</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_jQuery.html">Wprowadzenie do jQuery</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 								</ul>
 							</div>
@@ -44,7 +54,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 									<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 								</ul>
 							</div>
@@ -55,10 +66,13 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>AJAX</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="AJAX.html">AJAX jQuery</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="AJAX.html">AJAX jQuery</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_load()_method.html">Metoda .load()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
-									<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
+									<li><a class="navbar-drop-text"
+									       href="AJAX_post()_method.html">Metoda .post()</a></li>
 									<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 								</ul>
 							</div>
@@ -67,7 +81,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wtyczki</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Plugins.html">Wtyczki jQuery</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
 									<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 								</ul>
@@ -80,7 +95,8 @@
 							<div class="dropdown-content show">
 								<ul class="navbar-list-none display-inline-grid">
 									<li><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
-									<li class="is-selected"><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+									<li class="is-selected"><a class="navbar-drop-text"
+									                           href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 								</ul>
 							</div>
 						</li>
@@ -88,11 +104,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -110,7 +144,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_more_examples.html">Więcej przykładów użycia selektorów</a></li>
 					</ul>
 				</div>
@@ -120,7 +155,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Manipulacja stylami CSS</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
 						<li><a class="navbar-drop-text" href="CSS_style_manipulation_examples.html">Przykłady manipulacji stylami CSS</a></li>
 					</ul>
 				</div>
@@ -135,7 +171,8 @@
 						<li><a class="navbar-drop-text" href="AJAX_load()_method.html">Metoda .load()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_get()_method.html">Metoda .get()</a></li>
 						<li><a class="navbar-drop-text" href="AJAX_post()_method.html">Metoda .post()</a></li>
-						<li><a class="navbar-drop-text" href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
+						<li><a class="navbar-drop-text"
+						       href="AJAX_practical_use.html">Praktyczne użycie AJAX w jQuery</a></li>
 					</ul>
 				</div>
 			</li>
@@ -144,8 +181,10 @@
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
 						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Plugins.html">Wtyczki jQuery</a></li>
-						<li><a class="navbar-drop-text" href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
-						<li><a class="navbar-drop-text" href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Plugins_UI.html">Wtyczki do interfejsu użytkownika</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Plugins_animation_effect.html">Wtyczki do efektów animacji</a></li>
 					</ul>
 				</div>
 			</li>
@@ -156,7 +195,8 @@
 				<div class="dropdown-content show">
 					<ul class="navbar-list-none display-inline-grid">
 						<li><a class="navbar-drop-text" href="jQuery_VS_JavaScript.html">jQuery VS JavaScript</a></li>
-						<li class="is-selected"><a class="navbar-drop-text" href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
+						<li class="is-selected"><a class="navbar-drop-text"
+						                           href="jQuery_vs_JavaScript_comparison_code.html">Porównanie kodu jQuery i JavaScript</a></li>
 					</ul>
 				</div>
 			</li>
@@ -173,7 +213,8 @@
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_selection(1).png" alt=""> Selekcja elementów - jQuery</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_selection(1).png"> Selekcja elementów - jQuery</h3>
 					</div>
 					<div class="code-block  code-block-margin-top hidden-overflow">
 								<pre>
@@ -193,19 +234,20 @@ $('.myClass').hide();
 				</div>
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_selection(2).png" alt=""> Selekcja elementów - JavaScript</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_selection(2).png"> Selekcja elementów - JavaScript</h3>
 					</div>
 					<div class="code-block  code-block-margin-top">
 								<pre>
 										<code>
 // selekcja elementu o id 'myElement' i zmiana jego tekstu
-var element = document.getElementById('myElement');
+let element = document.getElementById('myElement');
 element.textContent = 'Nowy tekst';
 
 // selekcja elementów z klasą 'myClass' i ukrycie ich
-var elements = document.querySelectorAll('.myClass');
+let elements = document.querySelectorAll('.myClass');
 elements.forEach(function(element) {
-		element.style.display = 'none';
+    element.style.display = 'none';
 });
 										</code>
 								</pre>
@@ -215,14 +257,15 @@ elements.forEach(function(element) {
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_event(2).png" alt=""> Obsługa zdarzeń - jQuery</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_event(2).png"> Obsługa zdarzeń - jQuery</h3>
 					</div>
 					<div class="code-block  code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 // obsługa kliknięcia na element o id 'myButton'
 $('#myButton').on('click', function() {
-		alert('Kliknięto przycisk!');
+    alert('Kliknięto przycisk!');
 });
 
 										</code>
@@ -231,15 +274,16 @@ $('#myButton').on('click', function() {
 				</div>
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_event(1).png" alt=""> Obsługa zdarzeń - JavaScript</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_event(1).png"> Obsługa zdarzeń - JavaScript</h3>
 					</div>
 					<div class="code-block  code-block-margin-top hidden-overflow">
 								<pre>
 										<code>
 // obsługa kliknięcia na element o id 'myButton'
-var button = document.getElementById('myButton');
+let button = document.getElementById('myButton');
 button.addEventListener('click', function() {
-		alert('Kliknięto przycisk!');
+    alert('Kliknięto przycisk!');
 });
 										</code>
 								</pre>
@@ -249,7 +293,8 @@ button.addEventListener('click', function() {
 			<div class="double-elements gap-zero">
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_animation(3).png" alt=""> Animacja elementów jQuery</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_animation(3).png"> Animacja elementów jQuery</h3>
 					</div>
 					<div class="code-block  code-block-margin-top hidden-overflow">
 								<pre>
@@ -263,7 +308,10 @@ $('#myElement').toggle('slow');
 // elementu o id 'myElement'
 
 $('#myElement').animate({backgroundColor:
+
 '#000000'}, 'slow');
+
+
 
 
 										</code>
@@ -272,21 +320,25 @@ $('#myElement').animate({backgroundColor:
 				</div>
 				<div class="display-grid">
 					<div class="text-centered">
-						<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_animation(4).png" alt=""> Animacja elementów JavaScript</h3>
+						<h3 class="color-text-white"><img alt="" class="icon-img-small"
+						                                  src="/img/Icons/icon_animation(4).png"> Animacja elementów JavaScript</h3>
 					</div>
 					<div class="code-block  code-block-margin-top">
 								<pre>
 										<code>
 // animacja ukrywania i pokazywania elementu o id 'myElement'
-var element = document.getElementById('myElement');
+let element = document.getElementById('myElement');
+
 if (element.style.display === 'none') {
-		element.style.display = 'block';
-} else {
-		element.style.display = 'none';
+    element.style.display = 'block';
+}
+
+else {
+    element.style.display = 'none';
 }
 
 // animacja zmiany koloru tła elementu o id 'myElement'
-var element = document.getElementById('myElement');
+let element = document.getElementById('myElement');
 element.style.transition = 'background-color 0.5s ease-in-out';
 element.style.backgroundColor = '#000000';
 										</code>

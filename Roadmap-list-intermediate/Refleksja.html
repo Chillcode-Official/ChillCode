@@ -3,12 +3,12 @@
 <head>
 		<meta charset="UTF-8">
 		<title>Refleksja</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -52,7 +52,7 @@
 										obiektów o ich typy i właściwości w czasie wykonywania.
 								</p>
 						</div>
-						<img src="/img/vector86.png" alt="">
+						<img alt="" src="/img/Vectors/vector86.png">
 				</div>
 				<p class="text-container lightPink-container no-margin-top">
 						Refleksja jest szczególnie przydatna przy tworzeniu uniwersalnych narzędzi, które muszą działać z
@@ -138,7 +138,7 @@ Methods count: 4
 								(np. polach, metodach, konstruktorach) i atrybutach (np. adnotacjach) znajdujących
 								się w programie w czasie jego wykonywania.
 						</p>
-						<img src="/img/vector76.png" alt="">
+						<img alt="" src="/img/Vectors/vector76.png">
 				</div>
 				<p class="text-container lightGreen-container no-margin-top article tooltip">
 						Metoda <code><a pro-tip="pozwala na pobranie informacji o typie na podstawie jego nazwy">Type.GetType()</a></code>
@@ -173,7 +173,8 @@ Type myType = myObject.GetType();
 						</pre>
 				</div>
 				<p class="text-container lightGreen-container article tooltip">
-						Metoda <code><a pro-tip="zwraca informacje o właściwościach typu">Type.GetProperties()</a></code>
+						Metoda <code><a
+						pro-tip="zwraca informacje o właściwościach typu">Type.GetProperties()</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -218,7 +219,8 @@ foreach (FieldInfo field in myType.GetFields())
 						</pre>
 				</div>
 				<p class="text-container lightGreen-container article tooltip">
-						Metoda <code><a pro-tip="zwraca informacje o konstruktorach typu">Type.GetConstructors()</a></code>
+						Metoda <code><a
+						pro-tip="zwraca informacje o konstruktorach typu">Type.GetConstructors()</a></code>
 				</p>
 				<div class="code-block">
 						<pre>
@@ -250,7 +252,7 @@ foreach (MyAttribute attribute in attributes)
 						</pre>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Oczywiście, te przykłady są najprostszymi i najogólniejszymi przykładami użycia tych metod,
@@ -265,7 +267,7 @@ foreach (MyAttribute attribute in attributes)
 								tej klasy. Tworzenie instancji klasy polega na wykonaniu operacji "new", która tworzy nowy
 								obiekt w pamięci i przypisuje mu odpowiednie wartości początkowe.
 						</p>
-						<img src="/img/vector74.png" alt="">
+						<img alt="" src="/img/Vectors/vector74.png">
 				</div>
 				<p class="text-container red-container">
 						W języku C#, możemy utworzyć instancję klasy za pomocą operatora "new" i wywołania konstruktora, np:

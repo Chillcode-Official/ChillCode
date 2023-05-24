@@ -1,97 +1,123 @@
 /* HTML browser elements*/
 
-.browser{
-		background-color: #d9cece;
-		box-sizing: border-box;
-		padding: 5px;
-		border: 4px solid black;
-		font-size: 17px;
-		width: 364px;
-		margin-top: 20px;
-		margin-bottom: 10px;
+.browser {
+	background-color: #d9cece;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 4px solid black;
+	font-size: 17px;
+	width: 364px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
-.browser.highlight h1{
-		background-color: yellow;
-}.browser.red-text p{
- 		color: #ad1515;
- }
-.browser.intro h2{
-		font-size: 18px;
-		font-style: italic;
-		color: black;
+.browser.highlight h1 {
+	background-color: yellow;
 }
-.browser a{
-		color: blue;
+
+.browser.red-text p {
+	color: #ad1515;
 }
-.browser ul li{
-		color: black;
+
+.browser.intro h2 {
+	font-size: 18px;
+	font-style: italic;
+	color: black;
 }
-.browser.long-browser{
+
+.browser a {
+	color: blue;
+}
+
+.browser ul li {
+	color: black;
+}
+
+.browser.long-browser {
 	width: 100%;
 }
-.browser.medium-browser{
-		width: 430px;
-}
-.browser.small-browser{
-		width: 100%;
-		margin-bottom: 41px;
-}
-.browser.medium-browser h2{
-		text-align: center;
-}
-.browser b{
-		color: black;
-		margin-left: 41px;
-}
-.browser table th{
-		color: black;
-}
-.browser table tr th td{
-		margin-left: 20px;
-}
-.browser h1{
-		color: #1e1c1c;
-}.browser.gray-container h2{
- 		color: gray;
- }.browser p{
-			color: #3f3e3e;
-	}
 
+.browser.medium-browser {
+	width: 430px;
+}
+
+.browser.small-browser {
+	width: 100%;
+	margin-bottom: 41px;
+}
+
+.browser.medium-browser h2 {
+	text-align: center;
+}
+
+.browser b {
+	color: black;
+	margin-left: 41px;
+}
+
+.browser table th {
+	color: black;
+}
+
+.browser table tr th td {
+	margin-left: 20px;
+}
+
+.browser h1 {
+	color: #1e1c1c;
+}
+
+.browser.gray-container h2 {
+	color: gray;
+}
+
+.browser p {
+	color: #3f3e3e;
+}
 
 
 /*browser color elements*/
 
-.browser.pink-container{
-		background-color: pink;
+.browser.pink-container {
+	background-color: pink;
 }
-.browser.indianred-container{
-		background-color: indianred;
+
+.browser.indianred-container {
+	background-color: indianred;
 }
-.browser.blueviolet-container{
-		background-color: blueviolet;
+
+.browser.blueviolet-container {
+	background-color: blueviolet;
 }
-.browser.darkslategray{
-		background-color: darkslategray;
+
+.browser.darkslategray {
+	background-color: darkslategray;
 }
-.browser.aquamarine-container{
-		background-color: mediumaquamarine;
+
+.browser.aquamarine-container {
+	background-color: mediumaquamarine;
 }
-.browser.slateblue-container{
-		background-color: slateblue;
+
+.browser.slateblue-container {
+	background-color: slateblue;
 }
-.browser.coral-container{
-		background-color: coral;
+
+.browser.coral-container {
+	background-color: coral;
 }
-.browser.sandybrown-container{
-		background-color: sandybrown;
+
+.browser.sandybrown-container {
+	background-color: sandybrown;
 }
-.browser.hotpink-container{
-		background-color: hotpink;
+
+.browser.hotpink-container {
+	background-color: hotpink;
 }
-.browser.green-container{
-		background-color: green;
+
+.browser.green-container {
+	background-color: green;
 }
-.browser.hsl-color{
-		background-color: hsla(9, 100%, 64%, 0.6);
+
+.browser.hsl-color {
+	background-color: hsla(9, 100%, 64%, 0.6);
 }

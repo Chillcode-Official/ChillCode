@@ -35,14 +35,13 @@
 @import url('css-chillcode/start_now_elements.css');
 @import url('css-chillcode/form.css');
 @import url('css-chillcode/development_assistance_elements.css');
-
-
+@import url('css-chillcode/Congratulations_elements.css');
 
 
 /* Main Elements html && body - Ustawienie koloru tła */
 html, body {
 	margin: 0;
-	background-color: #1c1c1c;  /*#212122;*/
+	background-color: #1c1c1c; /*#212122;*/
 	font-size: 16px;
 	font-family: "Be Vietnam Pro", sans-serif;
 }

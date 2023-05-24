@@ -32,7 +32,7 @@
 @import url('css-chillcode/text-formated.css');
 
 
-html,body{
+html, body {
 	left: 0;
 	right: 0;
 	top: 0;
@@ -42,7 +42,8 @@ html,body{
 	background-color: #27282c;
 	/*background-color: #1f2223;*/
 }
-body{
+
+body {
 	min-height: 100vh;
 	flex-direction: column;
 	display: flex;
@@ -51,7 +52,7 @@ body{
 /* to może być do zmiany w body overflow-x: hidden; */
 
 @media only screen and (min-width: 1200px) {
-	html{
+	html {
 		position: relative !important;
 	}
 }

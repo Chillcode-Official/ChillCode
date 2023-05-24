@@ -3,12 +3,12 @@
 <head>
 		<meta charset="UTF-8">
 		<title>Atrybuty</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -52,7 +52,7 @@
 								dostępność, sposób serializacji, itp. Atrybuty są definiowane jako klasy i mogą być używane
 								przez narzędzia programistyczne, takie jak narzędzia do generowania dokumentacji, narzędzia do testowania jednostkowego itp.
 						</p>
-						<img src="/img/vector81.png" alt="">
+						<img alt="" src="/img/Vectors/vector81.png">
 				</div>
 				<p class="text-container orange-container no-margin-top">
 						Definiowanie atrybutów w języku C# polega na stworzeniu nowej klasy, która dziedziczy po klasie bazowej
@@ -87,15 +87,20 @@ class MojaKlasa
 				</div>
 				<p class="text-container orange-container article tooltip">
 						W języku C# istnieje kilka predefiniowanych atrybutów, które mogą być używane bez konieczności ich definiowania. Są to m.in.:
-						<code><a pro-tip="oznacza, że dany element programu jest przestarzały i powinien być zastąpiony przez inny. Jest on przydatny, gdy chcemy poinformować programistów o tym, że dany element jest już nieaktualny i nie powinien być już używany.">[Obsolete]</a></code>
-						<code><a pro-tip="pozwala na kompilowanie kodu warunkowo, na podstawie wartości zdefiniowanej w parametrze. Jest on przydatny, gdy chcemy, aby pewne fragmenty kodu były kompilowane tylko w określonych warunkach, np. na różnych platformach lub przy użyciu różnych zmiennych kompilacji.">[Conditional]</a></code>
-						<code><a pro-tip="służy do określenia, na jakie elementy programu może być przypisany dany atrybut. Jest on przydatny, gdy chcemy ograniczyć, gdzie dany atrybut może być użyty, aby uniknąć błędów w kodzie lub niezamierzonych skutków.">[AttributeUsage]</a></code>
-						<code><a pro-tip="oznacza, że dana klasa lub struct jest serializowalny, co oznacza, że jej stan może być zapisany do pliku lub przesłany przez sieć. Serializacja pozwala na zapisanie stanu obiektu do pliku lub przesłanie go przez sieć, a następnie na odtworzenie tego stanu w innym miejscu lub czasie.">[Serializable]</a></code>
-						<code><a pro-tip="pozwala na użycie funkcji z biblioteki dynamicznej DLL (Dynamic Link Library) w kodzie C#. Jest to przydatne, gdy chcemy użyć funkcji, które nie są dostępne w bibliotekach C# natywnych, lub gdy chcemy użyć funkcji z biblioteki, która jest napisana w innym języku, np. C++.">[DllImport]</a></code>
+						<code><a
+								pro-tip="oznacza, że dany element programu jest przestarzały i powinien być zastąpiony przez inny. Jest on przydatny, gdy chcemy poinformować programistów o tym, że dany element jest już nieaktualny i nie powinien być już używany.">[Obsolete]</a></code>
+						<code><a
+								pro-tip="pozwala na kompilowanie kodu warunkowo, na podstawie wartości zdefiniowanej w parametrze. Jest on przydatny, gdy chcemy, aby pewne fragmenty kodu były kompilowane tylko w określonych warunkach, np. na różnych platformach lub przy użyciu różnych zmiennych kompilacji.">[Conditional]</a></code>
+						<code><a
+								pro-tip="służy do określenia, na jakie elementy programu może być przypisany dany atrybut. Jest on przydatny, gdy chcemy ograniczyć, gdzie dany atrybut może być użyty, aby uniknąć błędów w kodzie lub niezamierzonych skutków.">[AttributeUsage]</a></code>
+						<code><a
+								pro-tip="oznacza, że dana klasa lub struct jest serializowalny, co oznacza, że jej stan może być zapisany do pliku lub przesłany przez sieć. Serializacja pozwala na zapisanie stanu obiektu do pliku lub przesłanie go przez sieć, a następnie na odtworzenie tego stanu w innym miejscu lub czasie.">[Serializable]</a></code>
+						<code><a
+								pro-tip="pozwala na użycie funkcji z biblioteki dynamicznej DLL (Dynamic Link Library) w kodzie C#. Jest to przydatne, gdy chcemy użyć funkcji, które nie są dostępne w bibliotekach C# natywnych, lub gdy chcemy użyć funkcji z biblioteki, która jest napisana w innym języku, np. C++.">[DllImport]</a></code>
 
 				</p>
 				<div class="alert-card  article tooltip">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Atrybuty mają swoje klasy bazowe zdefiniowane w przestrzeni nazw <code><a pro-tip="">System</a></code>
@@ -106,7 +111,7 @@ class MojaKlasa
 				</div>
 				<div class="big-page-header"></div>
 				<h2>Atrybut [Obsolete]</h2>
-				<p class= text-content-500width>
+				<p class=text-content-500width>
 						Przykład jak używać atrybutu <b>[Obsolete]</b> wraz z kilkoma różnymi opcjami w celu
 						oznaczenia przestarzałej metody i poinformowania programistów o tym, że powinni oni używać nowszej
 						wersji tej metody:
@@ -145,7 +150,7 @@ class MojaKlasa
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, metoda StaraMetoda jest oznaczona jako przestarzała za pomocą atrybutu
@@ -154,7 +159,7 @@ class MojaKlasa
 						</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Atrybut [Obsolete] jest bardzo przydatny w procesie rozwoju oprogramowania, ponieważ pozwala
@@ -165,7 +170,7 @@ class MojaKlasa
 				</div>
 				<div class="big-page-header"></div>
 				<h2>Atrybut [Conditional]</h2>
-				<p class= text-content-500width>
+				<p class=text-content-500width>
 						Przykład pokazuje, jak używać atrybutu <b>[Conditional]</b> w celu oznaczenia metody, która ma
 						być wykonywana tylko w przypadku, gdy zdefiniowane są określone stałe preprocesora:
 				</p>
@@ -193,7 +198,7 @@ class MojaKlasa
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, metoda DebugMethod jest oznaczona atrybutem [Conditional("DEBUG")]
@@ -202,7 +207,7 @@ class MojaKlasa
 						</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Atrybut [Conditional] pozwala na warunkowe wykonywanie kodu w zależności od stałych preprocesora,
@@ -212,7 +217,7 @@ class MojaKlasa
 				</div>
 				<div class="big-page-header"></div>
 				<h2>Atrybut [AttributeUsage]</h2>
-				<p class= text-content-500width>
+				<p class=text-content-500width>
 						przykład pokazuje, jak używać atrybutu <b>[AttributeUsage]</b> w celu określenia, jakiego typu elementy
 						mogą być oznaczone przez nasz niestandardowy atrybut:
 				</p>
@@ -246,7 +251,7 @@ class MojaKlasa
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, atrybut MojeAtrybuty jest oznaczony atrybutem [attributeUsage] z parametrem
@@ -256,7 +261,7 @@ class MojaKlasa
 						</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Dzięki atrybutowi [attributeUsage] możemy określić, jakiego typu elementy mogą być
@@ -266,7 +271,7 @@ class MojaKlasa
 				</div>
 				<div class="big-page-header"></div>
 				<h2>Atrybut [Serializable]</h2>
-				<p class= text-content-500width>
+				<p class=text-content-500width>
 						Przykład pokazuje, jak używać atrybutu <b>[Serializable]</b> w celu oznaczenia klasy, która będzie
 						możliwa do serializacji, czyli przekształcenia na strumień danych:
 				</p>
@@ -292,7 +297,7 @@ class MojaKlasa
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, klasa MojaKlasa jest oznaczona atrybutem [Serializable], co oznacza,
@@ -301,7 +306,7 @@ class MojaKlasa
 						</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Atrybut [Serializable] jest wykorzystywany przez narzędzia serializacji, takie jak
@@ -312,7 +317,7 @@ class MojaKlasa
 				</div>
 				<div class="big-page-header"></div>
 				<h2>Atrybut [DllImport]</h2>
-				<p class= text-content-500width>
+				<p class=text-content-500width>
 						Przykład pokazuje, jak używać atrybutu <b>[DllImport]</b> w celu oznaczenia metody, która będzie wywoływana
 						z zewnętrznej biblioteki DLL:
 				</p>
@@ -334,7 +339,7 @@ class MojaKlasa
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, metoda MessageBox jest oznaczona atrybutem [DllImport("user32.dll")],
@@ -344,7 +349,7 @@ class MojaKlasa
 						</p>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Dzięki atrybutowi [DllImport] możemy określić, jakie metody z zewnętrznych bibliotek DLL mogą
@@ -359,7 +364,7 @@ class MojaKlasa
 								przez platformę .NET. Aby utworzyć niestandardowy atrybut, trzeba stworzyć klasę dziedziczącą po
 								klasie System.Attribute lub jednej z pochodnych.
 						</p>
-						<img src="/img/vector103.png" alt="">
+						<img alt="" src="/img/Vectors/vector103.png">
 				</div>
 				<p class="text-container azure-container no-margin-top">
 						Następnie, tą klasę używamy jako atrybut dla innych elementów kodu, takich jak klasy, metody, pola itp.
@@ -476,7 +481,7 @@ Wersja metody: 3
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W powyższym przykładzie, stworzyliśmy niestandardowy atrybut o nazwie MojeAtrybuty, który posiada
@@ -571,7 +576,7 @@ Data modyfikacji tarczy: 2022-02-15
 						</pre>
 				</div>
 				<div class="text-container gray-container">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Wyjasnienie</b>
 						<p>
 								W tym przykładzie, tworzymy atrybut DebugInfo, który posiada dwa pola: Developer i LastModified.
@@ -583,7 +588,7 @@ Data modyfikacji tarczy: 2022-02-15
 				</div>
 				<div class="page-header"></div>
 				<div class="alert-card tooltip">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Atrybuty można odczytywać za pomocą <code><a pro-tip="">reflection</a></code>

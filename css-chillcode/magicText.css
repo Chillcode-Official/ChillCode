@@ -1,78 +1,89 @@
 /* Personalized fonts - Spersonalizowane czcionki*/
 .magicText h1 {
-    font-size: 3.75rem;
-    text-align: center;
+	font-size: 3.75rem;
+	text-align: center;
 }
 
 .magicText h2 {
-    font-size: 2.7rem;
-    font-weight: 800;
-    line-height: 44px;
-    text-align: center;
+	font-size: 2.7rem;
+	font-weight: 800;
+	line-height: 44px;
+	text-align: center;
 }
-.magicText.magicText-black h1, p{
-    color: black;
+
+.magicText.magicText-black h1, p {
+	color: black;
 }
+
 .magicText p {
-    max-width: 700px;
-    line-height: 2em;
-    margin: 20px auto 0;
-    font-size: 20px;
-    color: rgb(84, 91, 100);
-    text-align: center;
+	max-width: 700px;
+	line-height: 2em;
+	margin: 20px auto 0;
+	font-size: 20px;
+	color: rgb(84, 91, 100);
+	text-align: center;
 }
+
 @media only screen and (max-width: 610px) {
-    .magicText h1 {
-        font-size: 2.3rem;
-    }
-    .magicText.header-Text h1{
-        font-size: 3rem;
-    }
+	.magicText h1 {
+		font-size: 2.3rem;
+	}
 
-    .magicText h2 {
-        font-size: 2.2rem;
-        font-weight: 800;
-        line-height: 44px;
-        text-align: center;
-    }
+	.magicText.header-Text h1 {
+		font-size: 3rem;
+	}
 
-    .magicText.small-size-h2 h2{
-        font-size: 1.7rem;
-    }
+	.magicText h2 {
+		font-size: 2.2rem;
+		font-weight: 800;
+		line-height: 44px;
+		text-align: center;
+	}
+
+	.magicText.small-size-h2 h2 {
+		font-size: 1.7rem;
+	}
 }
 
-.magicText.magicPadding{
-    padding: 10px;
+.magicText.magicPadding {
+	padding: 10px;
 }
+
 @media only screen and (max-width: 768px) {
-    .magicText.magicPadding{
-        padding: 20px;
-    }
-    .magicText p {
-        line-height: 1.5em;
-        font-size: 1rem;
-    }
+	.magicText.magicPadding {
+		padding: 20px;
+	}
+
+	.magicText p {
+		line-height: 1.5em;
+		font-size: 1rem;
+	}
 }
 
 
-.magicText.color-black p{
-    color: rgb(40, 40, 42);
+.magicText.color-black p {
+	color: rgb(40, 40, 42);
 }
-.magicText span{
-    font-weight: 600;
-    color: #4f4a4a;
+
+.magicText span {
+	font-weight: 600;
+	color: #4f4a4a;
 }
-.magicText button{
-    margin-top: 20px;
+
+.magicText button {
+	margin-top: 20px;
 }
-.magicText a{
-    text-decoration: none;
+
+.magicText a {
+	text-decoration: none;
 }
-.magicImg{
-    width: 100%;
+
+.magicImg {
+	width: 100%;
 }
+
 @media only screen and (min-width: 568px) {
-    .magicImg{
-        width: auto;
-    }
+	.magicImg {
+		width: auto;
+	}
 }

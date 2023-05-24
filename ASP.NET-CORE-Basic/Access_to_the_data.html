@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>ASP.NET {Dostęp-do-danych)}</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Entity Framework Core i SQL Server — Kurs ASP.NET | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,12 +19,19 @@
 		<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_ASP.NET-Core.html"><img class="icon-img-navbar" src="/img/NET_Core_Logo.png" alt=""> ASP.NET</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_ASP.NET-Core.html"><img alt=""
+				                                                      class="icon-img-navbar" src="/img/Icons/icon_NET_Core_Logo.png"> ASP.NET</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/NET_Core_Logo.png" alt="">ASP.NET</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_NET_Core_Logo.png">ASP.NET</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
@@ -37,7 +44,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
 									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
 								</ul>
 							</div>
@@ -46,7 +54,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
 									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
 								</ul>
 							</div>
@@ -66,11 +75,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -91,7 +118,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Data_modeling.html">Modelowanie danych</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
 									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
 								</ul>
 							</div>
@@ -100,7 +128,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
 									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
 								</ul>
 							</div>
@@ -128,30 +157,31 @@
 						<p>
 							Aby uzyskać dostęp do danych w aplikacji ASP.NET Core, można wykorzystać Entity Framework Core i bazę danych SQL Server. Entity Framework Core to narzędzie ORM (Object-Relational Mapping), które umożliwia łatwe mapowanie obiektów C# na rekordy w bazie danych. W połączeniu z bazą danych SQL Server można uzyskać łatwy i wydajny dostęp do danych z poziomu aplikacji.
 						</p>
-						<img src="/img/vector211.png" alt="">
+						<img alt="" src="/img/Vectors/vector211.png">
 					</div>
 				</div>
 				<div class="big-page-header"></div>
 				<div class="text-centered">
-					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_cloudService.png" alt=""> Kroki do rozpoczęcia korzystania z Entity Framework Core:</h3>
+					<h3 class="color-text-white"><img alt="" class="icon-img-small"
+					                                  src="/img/Icons/icon_cloudService.png"> Kroki do rozpoczęcia korzystania z Entity Framework Core:</h3>
 				</div>
 				<div class="text-container lightWhite-container black-list no-margin-top text-centered">
 					<div>
 						<p><b>1.</b> Zainstaluj bibliotekę Entity Framework Core za pomocą menedżera pakietów NuGet:</p>
 						<div class="code-block code-block-margin-top">
 										<pre>
-												<code>
+												<code class="language-csharp">
 Install-Package Microsoft.EntityFrameworkCore
 												</code>
  										</pre>
 						</div>
 					</div>
-					<div  class="minus-margin-top"></div>
+					<div class="minus-margin-top"></div>
 					<div>
 						<p><b>2.</b> Zainstaluj bibliotekę dla bazy danych SQL Server za pomocą menedżera pakietów NuGet:</p>
 						<div class="code-block code-block-margin-top">
 						<pre>
-								<code>
+								<code class="language-csharp">
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 								</code>
 						</pre>
@@ -163,15 +193,15 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer
 						<p><b>3.</b> Utwórz klasę dziedziczącą po klasie DbContext, która będzie reprezentować kontekst bazy danych. Kontekst bazy danych zawiera definicje tabel i relacji między nimi.</p>
 						<div class="code-block code-block-margin-top">
 										<pre>
-												<code>
+												<code class="language-csharp">
 public class MyDbContext : DbContext
 {
-		public MyDbContext(DbContextOptions&ltMyDbContext&gt options) : base(options)
-		{
-				/..
-		}
+  public MyDbContext(DbContextOptions&ltMyDbContext&gt options) : base(options)
+  {
+          /..
+  }
 
-		public DbSet&ltProduct&gt Products { get; set; }
+  public DbSet&ltProduct&gt Products { get; set; }
 }
 												</code>
  										</pre>
@@ -183,9 +213,9 @@ public class MyDbContext : DbContext
 						<p><b>4.</b> Skonfiguruj połączenie z bazą danych w pliku appsettings.json:</p>
 						<div class="code-block code-block-margin-top">
 								<pre>
- 										<code>
+ 										<code class="language-csharp">
 "ConnectionStrings": {
-		"MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;"
+    "MyDbContext": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;"
 }
  										</code>
 								</pre>
@@ -200,8 +230,8 @@ public class MyDbContext : DbContext
 								<code>
 public void ConfigureServices(IServiceCollection services)
 {
-		services.AddDbContext&ltMyDbContext&gt(options =>
-				options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
+  services.AddDbContext&ltMyDbContext&gt(options =>
+      options.UseSqlServer(Configuration.GetConnectionString("MyDbContext")));
 }
 								</code>
 						</pre>
@@ -216,41 +246,41 @@ public void ConfigureServices(IServiceCollection services)
 								<code>
 public class ProductRepository
 {
-		private readonly MyDbContext _dbContext;
+  private readonly MyDbContext _dbContext;
 
-		public ProductRepository(MyDbContext dbContext)
-		{
-				_dbContext = dbContext;
-		}
+  public ProductRepository(MyDbContext dbContext)
+  {
+      _dbContext = dbContext;
+  }
 
-		public async Task&ltList&ltProduct&gt&gt GetAll()
-		{
-				return await _dbContext.Products.ToListAsync();
-		}
+  public async Task&ltList&ltProduct&gt&gt GetAll()
+  {
+      return await _dbContext.Products.ToListAsync();
+  }
 
-		public async Task&ltProduct&gt GetById(int id)
-		{
-				return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
-		}
+  public async Task&ltProduct&gt GetById(int id)
+  {
+      return await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+  }
 
-		public async Task Add(Product product)
-		{
-				await _dbContext.Products.AddAsync(product);
-				await _dbContext.SaveChangesAsync();
-		}
+  public async Task Add(Product product)
+  {
+      await _dbContext.Products.AddAsync(product);
+      await _dbContext.SaveChangesAsync();
+  }
 
-		public async Task Update(Product product)
-		{
-				_dbContext.Products.Update(product);
-				await _dbContext.SaveChangesAsync();
-		}
+  public async Task Update(Product product)
+  {
+      _dbContext.Products.Update(product);
+      await _dbContext.SaveChangesAsync();
+  }
 
-		public async Task Delete(int id)
-		{
-				var product = await GetById(id);
-				_dbContext.Products.Remove(product);
-				await _dbContext.SaveChangesAsync();
-		}
+  public async Task Delete(int id)
+  {
+      let product = await GetById(id);
+      _dbContext.Products.Remove(product);
+      await _dbContext.SaveChangesAsync();
+  }
 }
 								</code>
 						</pre>
@@ -260,50 +290,51 @@ public class ProductRepository
 				</div>
 				<div class="big-page-header"></div>
 				<div class="text-centered">
-					<h3 class="color-text-white"><img class="icon-img-small" src="/img/icon_configure(2).png" alt=""> Kod do podstawowych operacji CRUD w Entity Framework Core z bazą danych SQL Server:</h3>
+					<h3 class="color-text-white"><img alt="" class="icon-img-small"
+					                                  src="/img/Icons/icon_configure(2).png"> Kod do podstawowych operacji CRUD w Entity Framework Core z bazą danych SQL Server:</h3>
 				</div>
 				<div class="code-block code-block-margin-top">
 						<pre>
 								<code>
 // utworzenie nowego obiektu DbContext
-using var context = new MyDbContext();
+using let context = new MyDbContext();
 
 
 // dodanie nowego obiektu do bazy danych
-var newEntity = new MyEntity { Name = "John", Age = 30 };
+let newEntity = new MyEntity { Name = "Saly", Age = 30 };
 context.MyEntities.Add(newEntity);
 context.SaveChanges();
 
 
 // pobranie danych z bazy danych
-var entities = context.MyEntities.Where(e => e.Age > 25).ToList();
+let entities = context.MyEntities.Where(e => e.Age > 25).ToList();
 
 
 // edycja istniejącego obiektu
-var entityToUpdate = context.MyEntities.FirstOrDefault(e => e.Name == "John");
+let entityToUpdate = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
 if (entityToUpdate != null)
 {
-		entityToUpdate.Age = 31;
-		context.SaveChanges();
+    entityToUpdate.Age = 31;
+    context.SaveChanges();
 }
 
 
 // usunięcie istniejącego obiektu
-var entityToDelete = context.MyEntities.FirstOrDefault(e => e.Name == "John");
+let entityToDelete = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
 if (entityToDelete != null)
 {
-		context.MyEntities.Remove(entityToDelete);
-		context.SaveChanges();
+    context.MyEntities.Remove(entityToDelete);
+    context.SaveChanges();
 }
 								</code>
 						</pre>
 				</div>
-				<div class="alert-card  alert-card-gray">
-					<img src="/img/robotic-hand.png" alt="">
+				<div class="alert-card  alert-card-gray highlight-container highlight-container-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
 					<b>Wyjaśnienie</b>
 					<div class="line"></div>
 					<p>
-						W powyższym kodzie MyDbContext jest klasą dziedziczącą z DbContext, a MyEntity to klasa reprezentująca tabelę w bazie danych. Zapytania do bazy danych są wykonywane za pomocą LINQ, a metoda SaveChanges służy do zapisywania zmian w bazie danych.
+						W powyższym kodzie <span>MyDbContext</span> jest klasą dziedziczącą z <span>DbContext</span>, a <span>MyEntity</span> to klasa reprezentująca tabelę w bazie danych. Zapytania do bazy danych są wykonywane za pomocą LINQ, a metoda <span>SaveChanges</span> służy do zapisywania zmian w bazie danych.
 					</p>
 				</div>
 				<div class="big-page-header"></div>

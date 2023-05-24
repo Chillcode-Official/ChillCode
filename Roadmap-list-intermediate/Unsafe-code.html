@@ -3,12 +3,12 @@
 <head>
 		<meta charset="UTF-8">
 		<title>Unsafe-code</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -51,7 +51,7 @@
 								dostęp do elementów systemu, które nie są dostępne z poziomu kodu bezpiecznego. Należy jednak uważać,
 								ponieważ kod niebezpieczny jest bardziej podatny na błędy i może prowadzić do niestabilności aplikacji.
 						</p>
-						<img src="/img/vector102.png" alt="">
+						<img alt="" src="/img/Vectors/vector102.png">
 				</div>
 				<p class="text-container azure-container no-margin-top">
 						Aby używać kodu niebezpiecznego, trzeba oznaczyć metodę lub blok kodu za pomocą słowa kluczowego "unsafe".
@@ -65,7 +65,7 @@
 								w kodzie niebezpiecznym, ponieważ można bezpośrednio uzyskać dostęp do elementu tablicy
 								poprzez jego adres pamięci.
 						</p>
-						<img src="/img/vector93.png" alt="">
+						<img alt="" src="/img/Vectors/vector93.png">
 				</div>
 				<p class="text-container blue-container no-margin-top">
 						W przypadku korzystania z indeksów tablicy, system języka musi przeliczyć indeks na adres
@@ -162,7 +162,7 @@ unsafe int Partition(int* array, int left, int right)
 						</pre>
 				</div>
 				<div class="alert-card ">
-						<img src="/img/warning.png" alt="">
+						<img alt="" src="/img/warning.png">
 						<b>Uwaga</b>
 						<p>
 								Należy uważać podczas pracy z wskaźnikami i dokładnie przestrzegać zasad bezpieczeństwa,

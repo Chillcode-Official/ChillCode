@@ -1,9 +1,9 @@
 
-.help-card{
+.help-card {
 	display: block;
 	position: relative;
 	height: 300px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 0 2px rgba(0,0,0,0.08);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.08);
 	padding: 1.5rem;
 	max-width: 100%;
 	border-radius: 3rem;
@@ -11,7 +11,7 @@
 	cursor: pointer;
 }
 
-.double-help-card{
+.double-help-card {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 0 20px;
@@ -21,46 +21,48 @@
 }
 
 @media only screen and (min-width: 992px) {
-	.double-help-card{
+	.double-help-card {
 		grid-template-areas:
 "firstElement secondElement";
 		grid-template-columns: 1fr 1fr;
 		padding: 0;
 	}
-	.help-card-padding{
+
+	.help-card-padding {
 		padding: 0 !important;
 	}
 }
 
-.help-card-padding{
+.help-card-padding {
 	padding: 0 2rem;
 }
 
-.help-card img{
+.help-card img {
 	max-width: 150px;
 	padding: 1rem;
 }
 
-.help-card p{
+.help-card p {
 	line-height: 100%;
 	color: #575555;
 	padding: 1rem 1rem 1rem 0;
 }
 
-.help-card h3{
+.help-card h3 {
 	font-weight: 800;
 	color: #000000;
 }
 
-.help-card:hover{
+.help-card:hover {
 	outline: 2px solid gray;
 }
 
 @media only screen and (min-width: 568px) {
-	.help-card p{
+	.help-card p {
 		line-height: 150%;
 	}
-	.help-card{
+
+	.help-card {
 		padding: 2rem;
 	}
 

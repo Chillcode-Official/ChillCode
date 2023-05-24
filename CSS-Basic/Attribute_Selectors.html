@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
 		<meta charset="UTF-8">
-		<title>Selektory-Atrybutów-CSS</title>
-		<link rel="stylesheet" href="../Basic.css"/>
-	<link rel="icon" href="/img/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Selektory atrybutów — Kurs CSS | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 
 	<!-- Highlight JS init: -->
-	<link rel="stylesheet" href="/Highlight/styles/atom-one-dark.min.css">
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
 	<script src="/Highlight/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
 	<script src="/ChillCode.js"></script>
@@ -19,26 +19,38 @@
 	<div class="navbar">
 		<div class="navbar-container link-unDecoration">
 			<div class="display-flex opacity-function mini-gap">
-				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img class="icon-img-navbar" src="/img/white_buckles.png" alt=""> <span class="text-logo-first-white">Chill<span class="text-logo-second-white">Code</span></span></a></span></div>
-				<div class="hide-on-small-screens"><img class="icon-img-navbar" src="/img/icon_line-white.png" alt=""></div>
-				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a href="Introduction_to_CSS.html"><img class="icon-img-navbar" src="/img/css.png" alt=""> CSS</a></span></div>
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_CSS.html"><img alt="" class="icon-img-navbar"
+				                                             src="/img/Icons/icon_css(2).png"> CSS</a></span></div>
 			</div>
 			<div class="navbar-menu">
-				<div class="hide-e"><button class="navbar-button"><img class="icon-img-navbar-toggle" src="/img/css.png" alt="">CSS</button></div>
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_css(2).png">CSS</button></div>
 				<div class="line line-gray hide-e"></div>
 				<div class="roadmap-list hide-e">
 					<ol>
 						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
 						<li><a href="Quick_start.html">Szybki start</a></li>
 						<li onclick="rotateTriangle(this)">
-							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory elementu</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
-									<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
 								</ul>
 							</div>
 						</li>
@@ -47,7 +59,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
 									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
 								</ul>
 							</div>
@@ -62,7 +75,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obramowanie</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Border.html">Obramowanie</a></li>
 									<li><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
 								</ul>
 							</div>
@@ -71,7 +85,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Outline.html">Zarys</a></li>
 									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
 								</ul>
 							</div>
@@ -84,7 +99,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
 									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
 								</ul>
 							</div>
@@ -93,8 +109,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
-									<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_properties.html">Właściwości Listy</a></li>
 								</ul>
 							</div>
 						</li>
@@ -103,8 +121,10 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
-									<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Clear_property.html">Właściwości clear</a></li>
 								</ul>
 							</div>
 						</li>
@@ -113,7 +133,8 @@
 							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 							<div class="dropdown-content">
 								<ul class="navbar-list-none display-inline-grid">
-									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 								</ul>
 							</div>
@@ -129,11 +150,29 @@
 					</ol>
 				</div>
 				<div class="line line-gray hide-e"></div>
-				<a href="https://www.chillcode.org/" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/home.png" alt=""> Strona główna</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Blog.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_blog.png" alt=""> Blog</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../About.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_about_us.png" alt=""> O nas</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Help.html" class="navbar-link"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/help-icon.png" alt=""> Centrum pomocy</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
-				<a href="../Support.html" class="navbar-link margin-bottom"><div class="navbar-item text-nowrap navbar-menu-item"><span><img class="icon-img-navbar hide-e" src="/img/icon_donation.png" alt=""> Wsparcie</span> <img class="right-arrow-icon hide-e" src="/img/right-arrow.png" alt=""></div></a>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
 			</div>
 			<div class="navbar-toggle">
 				<span></span>
@@ -151,7 +190,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Selectors.html">Selektory elementu</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory elementu</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
 						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
@@ -220,7 +260,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Float_property.html">Właściwość float</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Float_property.html">Właściwość float</a></li>
 						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
 					</ul>
 				</div>
@@ -230,7 +271,8 @@
 				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
 				<div class="dropdown-content">
 					<ul class="navbar-list-none display-inline-grid">
-						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
 						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
 					</ul>
 				</div>
@@ -249,15 +291,15 @@
 	<div class="opacity-function padding-content">
 		<div class="content">
 			<div class="text-centered text-padding">
-				<h1>Selektory Atrybutów CSS</h1>
+				<h1>Selektory atrybutów</h1>
 				<div class="section-with-image">
 					<p>
-						Selektory atrybutów CSS umożliwiają wybieranie elementów HTML na podstawie ich atrybutów i wartości
+						Selektory atrybutów w CSS umożliwiają wybieranie elementów HTML na podstawie ich atrybutów i wartości
 						tych atrybutów. Są one zapisywane w nawiasach kwadratowych po nazwie selektora.elektory atrybutów są
 						przydatne w sytuacjach, gdy potrzebujemy zastosować styl do elementów o określonym atrybucie lub
 						wartości atrybutu. Przykłady selektorów atrybutów:
 					</p>
-					<img src="/img/vector146.png" alt="">
+					<img alt="" src="/img/Vectors/vector146.png">
 				</div>
 			</div>
 
@@ -266,15 +308,17 @@
 				<div class="page-header">
 					 <div class="display-grid">
 						 <p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							 <code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut, niezależnie od jego wartości.">[attribute] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							 <code><a
+									 pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut, niezależnie od jego wartości.">[attribute] <img
+									 alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							 Wybieranie elementów o określonym atrybucie
 						 </p>
 						 <div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type] {
-	padding: 10px;
-	margin: 20px;
+  padding: 10px;
+  margin: 20px;
 
 }
 										</code>
@@ -282,7 +326,9 @@ input[type] {
 						 </div>
 					 </div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card   alert-card-gray">
 								<p>
@@ -296,23 +342,27 @@ input[type] {
 				<div class="page-header">
 					<div class="display-grid">
 						<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości dokładnie równej podanej wartości.">[attribute = value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							<code><a
+									pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości dokładnie równej podanej wartości.">[attribute = value] <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							Wybieranie elementów z określoną wartością atrybutu
 						</p>
 						<div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type="text"] {
-	width: 300px;
-	height: 40px;
-	font-size: 16px;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
 }
 										</code>
 								</pre>
 						</div>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card   alert-card-gray">
 								<p>
@@ -329,21 +379,25 @@ input[type="text"] {
 				<div class="page-header">
 					<div class="display-grid">
 						<p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podane słowo.">[attribute ~= value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							<code><a
+									pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podane słowo.">[attribute ~= value] <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							Wybieranie elementów, których wartość atrybutu zawiera określony ciąg znaków
 						</p>
 						<div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type~="text"] {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 										</code>
 								</pre>
 						</div>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card   alert-card-gray">
 								<p>
@@ -357,22 +411,26 @@ input[type~="text"] {
 				<div class="page-header">
 					<div class="display-grid">
 						<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podany ciąg znaków.">[attribute *= value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							<code><a
+									pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zawierającej podany ciąg znaków.">[attribute *= value] <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							Wybieranie elementów, których wartość atrybutu zawiera określony ciąg znaków
 						</p>
 						<div class="code-block code-block-margin-top hidden-overflow">
 						<pre>
 								<code>
 input[type*="text"] {
-	border-radius: 10px;
-	box-shadow: 2px 2px 5px gray;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
 }
 								</code>
 						</pre>
 						</div>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card  alert-card-gray">
 								<p>
@@ -389,21 +447,25 @@ input[type*="text"] {
 				<div class="page-header">
 					<div class="display-grid">
 						<p class="text-container lightPink-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków.">[attribute ^= value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							<code><a
+									pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków.">[attribute ^= value] <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							Wybieranie elementów, których wartość atrybutu zaczyna się od określonego ciągu znaków
 						</p>
 						<div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type^="text"] {
-	text-align: center;
+  text-align: center;
 }
 										</code>
 								</pre>
 						</div>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card   alert-card-gray">
 								<p>
@@ -417,21 +479,25 @@ input[type^="text"] {
 				<div class="page-header">
 					<div class="display-grid">
 						<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-							<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości kończącej się podanym ciągiem znaków.">[attribute $= value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+							<code><a
+									pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości kończącej się podanym ciągiem znaków.">[attribute $= value] <img
+									alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 							Wybieranie elementów, których wartość atrybutu kończy się określonym ciągiem znaków
 						</p>
 						<div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type$="text"] {
-	font-weight: bold;
+  font-weight: bold;
 }
 										</code>
 								</pre>
 						</div>
 					</div>
 					<div class="dropdown minus-margin-top">
-						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+						<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+								alt="" class="icon-img-little"
+								src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 						<div class="dropdown-content">
 							<div class="alert-card   alert-card-gray">
 								<p>
@@ -447,21 +513,24 @@ input[type$="text"] {
 			<div class="page-header">
 				<div class="display-grid">
 					<p class="text-container azure-container no-margin-top article tooltip highlight-container highlight-container-lightPink">
-						<code><a pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków, a następnie myślnikiem lub kończącej się na tym ciągu.">[attribute |= value] <img class="icon-img-tiny" src="/img/icon_tooltip.png" alt=""></a></code>
+						<code><a
+								pro-tip="Wybiera wszystkie elementy, które posiadają określony atrybut o wartości zaczynającej się podanym ciągiem znaków, a następnie myślnikiem lub kończącej się na tym ciągu.">[attribute |= value] <img
+								alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
 						Wybieranie elementów, których wartość atrybutu zaczyna się od określonego ciągu znaków lub jest równa temu ciągowi znaków z podanym znakiem separatora (np. "-")
 					</p>
 					<div class="code-block code-block-margin-top  hidden-overflow ">
 								<pre>
 										<code>
 input[type|="text"] {
-	background-color: lightgray;
+  background-color: lightgray;
 }
 										</code>
 								</pre>
 					</div>
 				</div>
 				<div class="dropdown minus-margin-top">
-					<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img class="icon-img-little" src="/img/robotic-hand.png" alt="">  Wyjaśnienie</button>
+					<button class="output-button output-button-gray" onclick="toggleDropdown(this)"><img
+							alt="" class="icon-img-little" src="/img/Icons/icon_robotic-hand.png">  Wyjaśnienie</button>
 					<div class="dropdown-content">
 						<div class="alert-card   alert-card-gray">
 							<p>
