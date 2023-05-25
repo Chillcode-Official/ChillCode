@@ -192,14 +192,14 @@ public class ProductsController : ControllerBase
   [HttpGet]
   public IActionResult GetAll()
   {
-    let products = _repository.GetAll();
+    var products = _repository.GetAll();
     return Ok(products);
   }
 
   [HttpGet("{id}")]
   public IActionResult GetById(int id)
   {
-    let product = _repository.GetById(id);
+    var product = _repository.GetById(id);
     if (product == null)
     {
       return NotFound();
@@ -229,7 +229,7 @@ public class ProductsController : ControllerBase
   [HttpDelete("{id}")]
   public IActionResult Delete(int id)
   {
-    let product = _repository.GetById(id);
+    var product = _repository.GetById(id);
     if (product == null)
     {
       return NotFound();

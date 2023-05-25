@@ -277,7 +277,7 @@ public class ProductRepository
 
   public async Task Delete(int id)
   {
-      let product = await GetById(id);
+      var product = await GetById(id);
       _dbContext.Products.Remove(product);
       await _dbContext.SaveChangesAsync();
   }
@@ -297,21 +297,21 @@ public class ProductRepository
 						<pre>
 								<code>
 // utworzenie nowego obiektu DbContext
-using let context = new MyDbContext();
+using var context = new MyDbContext();
 
 
 // dodanie nowego obiektu do bazy danych
-let newEntity = new MyEntity { Name = "Saly", Age = 30 };
+var newEntity = new MyEntity { Name = "Saly", Age = 30 };
 context.MyEntities.Add(newEntity);
 context.SaveChanges();
 
 
 // pobranie danych z bazy danych
-let entities = context.MyEntities.Where(e => e.Age > 25).ToList();
+var entities = context.MyEntities.Where(e => e.Age > 25).ToList();
 
 
 // edycja istniejącego obiektu
-let entityToUpdate = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
+var entityToUpdate = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
 if (entityToUpdate != null)
 {
     entityToUpdate.Age = 31;
@@ -320,7 +320,7 @@ if (entityToUpdate != null)
 
 
 // usunięcie istniejącego obiektu
-let entityToDelete = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
+var entityToDelete = context.MyEntities.FirstOrDefault(e => e.Name == "Saly");
 if (entityToDelete != null)
 {
     context.MyEntities.Remove(entityToDelete);
