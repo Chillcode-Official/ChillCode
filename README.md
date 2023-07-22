@@ -1,16 +1,13 @@
-<a target="_blank" href="https://www.chillcode.org/"><img src="https://www.chillcode.org/img/Others/white_buckles.png" /></a>
+# <a target="_blank" href="https://www.chillcode.org/"><img width="35" height="30" src="https://www.chillcode.org/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
+<a target="_blank" href="https://www.chillcode.org/"><img src="https://www.chillcode.org/img/Others/blog-img(1).png" /></a>
 
+ChillCode is a revolutionary and inclusive learning platform designed to provide aspiring programmers and coding enthusiasts with a comprehensive resource to learn the art of programming at their own pace. Offering a wide array of beginner-friendly tutorials and practical examples, ChillCode aims to empower individuals with the knowledge and skills <br><br>
 
-# ChillCode
-
-ChillCode is a revolutionary and inclusive learning platform designed to provide aspiring programmers and coding enthusiasts with a comprehensive resource to learn the art of programming at their own pace. Offering a wide array of beginner-friendly tutorials and practical examples, ChillCode aims to empower individuals with the knowledge and skills
-
-
-## ⚡ Features
+## 💎 Features
 
 - Running code
 - Tooltips
-- A rich database of tutorials
+- A rich database of tutorials <br><br>
 
 ## 📝 Blog
 <div>
@@ -25,12 +22,29 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
 </div>
 <br>
 
-## 🔥🤖 All Tutorials
+## ⌛️ 1000 hours for ChillCode
+- The ChillCode project is the result of a huge commitment and passion for programming. More than 1,000 hours were devoted to create this platform from scratch. Every aspect of the application has been carefully thought out and developed to provide the best possible user experience. The commitment to this project is the result of a belief in the importance of learning programming and a desire to support others in acquiring these valuable skills.
+<br><br><br>
+
+
+## ⚡ Application Performance
+- Our application was created from scratch, without the use of ready-made libraries such as Bootstrap or similar, which was not a small challenge, but allowed us to achieve the highest efficiency.
+
+- Thanks to careful design and optimization, the ChillCode app achieves performance at a very high level. Tests on the GTmetrix website confirm that the app scores above 90% in terms of performance. As a result, users can enjoy fast page load times and a smooth interface, resulting in an excellent user experience.
+https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
+<div align="center">
+  <img width="500" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/ChillCode-Performance.png"/>
+  <img width="500" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/ChillCode-Performance-tutorial.png"/>
+</div>
+<br><br><br><br>
+
+
+## 🔥🤖 All available Tutorials
 <a target="_blank" href="https://www.chillcode.org/Tutorial_hub.html"><img src="https://www.chillcode.org/img/Others/blog_img(6).png" /></a>
 <!--https://www.chillcode.org/Tutorial_hub.html-->
 
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_html(1).png"> Html</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_html(1).png"/></a> Html</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html">Introduction to HTML</a></li>
@@ -72,7 +86,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_css(1).png"> CSS</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_css(1).png"/></a> CSS</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html">Introduction to CSS</a></li>
@@ -80,7 +94,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_javaScript-icon.png"> JavaScript</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_javaScript-icon.png"/></a> JavaScript</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html">Introduction to JavaScript</a></li>
@@ -88,7 +102,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_jquery(1).png"> jQuery</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_jquery(1).png"/></a> jQuery</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html">Introduction to jQuery</a></li>
@@ -96,7 +110,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_bootstrap.png"> Bootstrap</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_bootstrap.png"/></a> Bootstrap</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html">Introduction to Bootstrap</a></li>
@@ -104,7 +118,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_cplusplus-logo.png"> C++</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_cplusplus-logo.png"/></a> C++</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html">Introduction to C++</a></li>
@@ -112,7 +126,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_c-sharp.png"> C#</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_c-sharp.png"/></a> C#</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html">Introduction to C#</a></li>
@@ -120,7 +134,7 @@ ChillCode is a revolutionary and inclusive learning platform designed to provide
   </div>
 </details>
 <details>
-  <summary><h4><img width="25" height="25" src="https://www.chillcode.org/img/Icons/icon_NET_Core_Logo.png"> ASP.NET</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_NET_Core_Logo.png"/></a> ASP.NET</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Introduction to ASP.NET</a></li>
