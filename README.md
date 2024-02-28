@@ -1,7 +1,7 @@
 # <a target="_blank" href="https://www.chillcode.org/"><img width="35" height="30" src="https://www.chillcode.org/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
 <a target="_blank" href="https://www.chillcode.org/"><img src="https://www.chillcode.org/img/Others/blog-img(1).png" /></a>
 
-# 🌎👨🏻‍💻 ChillCode already has over 1,000 users
+# 🌎👨🏻‍💻 ChillCode already has over 2,000 users
 ChillCode is a revolutionary and inclusive learning platform designed to provide aspiring programmers and coding enthusiasts with a comprehensive resource to learn the art of programming at their own pace. Offering a wide array of beginner-friendly tutorials and practical examples, ChillCode aims to empower individuals with the knowledge and skills <br><br>
 
 ## 💎 Features
