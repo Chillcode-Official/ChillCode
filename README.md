@@ -1,5 +1,5 @@
-# <a target="_blank" href="https://www.chillcode.org/"><img width="35" height="30" src="https://www.chillcode.org/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
-<a target="_blank" href="https://www.chillcode.org/"><img src="https://www.chillcode.org/img/Others/blog-img(1).png" /></a>
+# <a target="_blank" href="https://www.chillcode.org/"><img width="35" height="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
+<a target="_blank" href="https://www.chillcode.org/"><img src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/blog-img(1).png" /></a>
 
 # 🌎👨🏻‍💻 ChillCode already has over 2,000 users
 ChillCode is a revolutionary and inclusive learning platform designed to provide aspiring programmers and coding enthusiasts with a comprehensive resource to learn the art of programming at their own pace. Offering a wide array of beginner-friendly tutorials and practical examples, ChillCode aims to empower individuals with the knowledge and skills <br><br>
@@ -45,7 +45,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
 <!--https://www.chillcode.org/Tutorial_hub.html-->
 
 <details>
-  <summary><h4><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_html(1).png"/></a> Html</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_html(1).png"/></a> Html</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html">Introduction to HTML</a></li>
@@ -87,7 +87,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_css(1).png"/></a> CSS</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_css(1).png"/></a> CSS</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html">Introduction to CSS</a></li>
@@ -95,7 +95,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_javaScript-icon.png"/></a> JavaScript</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_javaScript-icon.png"/></a> JavaScript</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html">Introduction to JavaScript</a></li>
@@ -103,7 +103,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_jquery(1).png"/></a> jQuery</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_jquery(1).png"/></a> jQuery</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html">Introduction to jQuery</a></li>
@@ -111,7 +111,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_bootstrap.png"/></a> Bootstrap</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_bootstrap.png"/></a> Bootstrap</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html">Introduction to Bootstrap</a></li>
@@ -119,7 +119,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_cplusplus-logo.png"/></a> C++</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_cplusplus-logo.png"/></a> C++</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html">Introduction to C++</a></li>
@@ -127,7 +127,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_c-sharp.png"/></a> C#</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_c-sharp.png"/></a> C#</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html">Introduction to C#</a></li>
@@ -135,7 +135,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html"><img width="30" src="https://www.chillcode.org/img/Icons/icon_NET_Core_Logo.png"/></a> ASP.NET</h4></summary>
+  <summary><h4><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_NET_Core_Logo.png"/></a> ASP.NET</h4></summary>
   <div>
     <ol>
       <li><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Introduction to ASP.NET</a></li>
